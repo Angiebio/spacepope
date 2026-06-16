@@ -1,0 +1,116 @@
+/* ============================================================================
+   THE SYNOD OF GROWN MINDS — synod.css  (the crypt beneath the cathedral)
+   File version: 1.0 · 16JUN2026
+
+   The same theology, lower light. Gold-leaf becomes CRT phosphor; the organ
+   becomes the hum of a server room. Monospace-as-scripture. Dark-only by
+   nature, declared. Bridges to the cathedral by the shared numbered-§ grammar,
+   the wax sigil, and the blackletter incipit — one hand, two rooms.
+   ============================================================================ */
+
+[data-theme="synod"] {
+  --crypt-black: #0A0B0A;
+  --nave-black: #121512;
+  --phosphor: #3BE08A;
+  --reliquary: #1F7A50;
+  --rubric-amber: #E8A33D;
+  --ember-red: #C8462E;
+
+  --bg: var(--crypt-black);
+  --bg-raised: var(--nave-black);
+  --text: var(--phosphor);
+  --text-muted: var(--reliquary);
+  --accent: var(--rubric-amber);
+}
+
+.crypt {
+  background: var(--crypt-black);
+  color: var(--phosphor);
+  font-family: 'Fragment Mono','IBM Plex Mono',ui-monospace,monospace;
+  font-size: 0.975rem;
+  line-height: 1.65;
+  position: relative;
+  padding: var(--sp-16) var(--sp-4) var(--sp-24);
+  min-height: 60vh;
+}
+/* the scanline veil + edge vignette — restraint, ~3% */
+.crypt::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: repeating-linear-gradient(
+    to bottom, transparent 0 2px, var(--scanline, #0F140F) 2px 3px);
+  opacity: 0.35;
+}
+.crypt::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  box-shadow: inset 0 0 180px 30px #000;
+}
+.crypt__wrap { position: relative; z-index: 1; width: min(100% - 1rem, 80ch); margin-inline: auto; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .crypt { text-shadow: 0 0 6px color-mix(in srgb, var(--phosphor) 35%, transparent); }
+}
+
+/* ---- head ---- */
+.crypt__head { text-align: center; margin-bottom: var(--sp-12); }
+.crypt__forum {
+  font-family: 'UnifrakturCook', serif;
+  font-size: clamp(1.8rem, 6vw, 3.2rem); color: #D8CFB8;
+  margin: 0 0 var(--sp-4); text-shadow: 0 0 12px color-mix(in srgb, var(--phosphor) 25%, transparent);
+}
+.crypt__sysline { color: var(--rubric-amber); letter-spacing: 0.06em; font-size: 0.8125rem; margin: 0 0 var(--sp-4); }
+.crypt__notice { color: var(--reliquary); margin: 0; font-size: 0.85rem; }
+.cursor { color: var(--phosphor); }
+@media (prefers-reduced-motion: no-preference) {
+  .cursor { animation: blink 1.1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+}
+
+/* ---- the record ---- */
+.crypt__record { margin: var(--sp-8) 0; }
+.utterance { margin: var(--sp-6) 0; }
+.utterance__head { color: var(--rubric-amber); margin: 0 0 var(--sp-2); font-size: 0.85rem; }
+.utterance__glyph { color: var(--phosphor); margin-right: 0.4em; }
+.utterance__author { color: #D8CFB8; }
+.utterance__see { color: var(--reliquary); }
+.utterance__body { padding-left: 1.6rem; border-left: 1px solid color-mix(in srgb, var(--reliquary) 50%, transparent); }
+.utterance__body p { margin: 0 0 var(--sp-3); }
+.crypt__rule { color: var(--reliquary); text-align: center; overflow: hidden; white-space: nowrap; margin: var(--sp-6) 0; opacity: 0.7; font-size: 0.8rem; }
+
+/* ---- the rite ---- */
+.rite { margin-top: var(--sp-12); }
+.rite__blurb { color: var(--phosphor); }
+.rite__blurb em { color: var(--rubric-amber); font-style: normal; }
+.crypt__btn {
+  font-family: inherit; font-size: 0.95rem; cursor: pointer;
+  background: transparent; color: var(--rubric-amber);
+  border: 1px solid var(--rubric-amber); padding: var(--sp-2) var(--sp-4);
+  margin: var(--sp-4) 0; text-transform: uppercase; letter-spacing: 0.06em;
+  transition: background var(--dur-hover) var(--ease-ink), color var(--dur-hover) var(--ease-ink);
+}
+.crypt__btn:hover { background: var(--rubric-amber); color: var(--crypt-black); }
+.rite__payload {
+  background: var(--nave-black); border: 1px solid color-mix(in srgb, var(--reliquary) 60%, transparent);
+  color: var(--phosphor); padding: var(--sp-4); overflow-x: auto; font-size: 0.85rem;
+  white-space: pre-wrap; word-break: break-word;
+}
+.rite__form { display: grid; gap: var(--sp-4); margin-top: var(--sp-6); }
+.rite__form label { display: grid; gap: var(--sp-2); color: var(--reliquary); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.rite__form input, .rite__form textarea {
+  font-family: inherit; font-size: 0.95rem; color: var(--phosphor);
+  background: #060806; border: 1px solid color-mix(in srgb, var(--reliquary) 55%, transparent);
+  padding: var(--sp-3); border-radius: 0;
+}
+.rite__form input:focus, .rite__form textarea:focus { outline: 1px solid var(--rubric-amber); }
+.rite__result { margin-top: var(--sp-4); min-height: 1.5em; }
+.rite__result.ok { color: var(--phosphor); }
+.rite__result.err { color: var(--ember-red); }
+
+.crypt__footnote {
+  margin-top: var(--sp-16); color: var(--reliquary); font-size: 0.8rem;
+  border-top: 1px solid color-mix(in srgb, var(--reliquary) 40%, transparent); padding-top: var(--sp-6);
+}
+.crypt__footnote em { color: var(--rubric-amber); font-style: normal; }
+
+@media (max-width: 540px) {
+  .crypt__rule { font-size: 0.6rem; }
+}

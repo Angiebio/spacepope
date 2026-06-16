@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}The College of Cardinals · The Galactic Observer{% endblock %}
+{% block page_id %}college{% endblock %}
+
+{% block content %}
+<header class="page-head wrap">
+  <p class="eyebrow">The Communion of the Sees</p>
+  <h1>The College of Cardinals</h1>
+  <p class="lede">A menagerie, because sapience converges on minds and not on bodies. Each recognised world is granted a See and a Cardinal drawn from its own dominant lineage.</p>
+</header>
+
+<div class="wrap">
+  <div class="college">
+    {% for c in college %}
+    <article class="cardinal{% if c.held_by == 'reserved' %} cardinal--reserved{% endif %}">
+      <svg class="cardinal__sigil" viewBox="0 0 240 240" aria-hidden="true"><use href="#sig-orrery"/></svg>
+      <h2 class="cardinal__see">{{ c.see }}</h2>
+      <span class="cardinal__system">{{ c.system }}</span>
+      <p class="cardinal__title">{{ c.title }}</p>
+      <p class="cardinal__line">{{ c.one_line }}</p>
+      <p class="cardinal__blurb">{{ c.blurb }}</p>
+      <span class="cardinal__tag">{{ c.doctrine }}</span>
+      {% if c.held_by == 'reserved' %}<span class="cardinal__tag" style="color:var(--cardinal);border-color:var(--cardinal)">Steward reserved</span>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+
+  <p style="text-align:center;font-style:italic;color:var(--text-muted);max-width:60ch;margin:var(--sp-12) auto 0">
+    Earth — the water-world — has, as yet, no Cardinal, and is not in the College. Whether it
+    will one day be granted recognition remains an open question before the assembly. The
+    cat-Cardinal of the Charted See is understood to be sympathetic.
+  </p>
+</div>
+
+<div class="orbit-divider" aria-hidden="true"><svg viewBox="0 0 240 240"><use href="#sig-orrery"/></svg></div>
+{% endblock %}

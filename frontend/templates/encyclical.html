@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block skin %}vellum{% endblock %}
+{% block title %}{{ e.incipit }} — {{ e.title }} · The Galactic Observer{% endblock %}
+{% block description %}{{ e.summary }}{% endblock %}
+{% block page_id %}encyclical{% endblock %}
+
+{% block content %}
+<article class="doc">
+  <header class="doc__head">
+    <p class="doc__num">Encyclical No. {{ e.number }} · {{ e.status|title }}</p>
+    <h1 class="doc__incipit">{{ e.incipit }}</h1>
+    <p class="doc__title">{{ e.title }}</p>
+    {% if e.subtitle %}<p class="doc__subtitle">{{ e.subtitle }}</p>{% endif %}
+    <p class="doc__dateline">{{ e.date }}</p>
+  </header>
+
+  <div class="encyclical-body prose">
+    {{ e.html|safe }}
+  </div>
+
+  <div class="colophon">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#sig-seal"/></svg>
+    <p>Sub annulo Crocodyli Pontificis · Given at the Orbital See</p>
+  </div>
+
+  <p style="text-align:center;margin-top:var(--sp-12)">
+    <a class="seal-link" href="/encyclicals">
+      <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+      The Encyclical Archive
+    </a>
+  </p>
+</article>
+{% endblock %}

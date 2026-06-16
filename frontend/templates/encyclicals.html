@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Encyclicals · The Galactic Observer{% endblock %}
+{% block page_id %}encyclicals{% endblock %}
+
+{% block content %}
+<header class="page-head wrap">
+  <p class="eyebrow">The Prestige Archive</p>
+  <h1>Encyclicals</h1>
+  <p class="lede">The doctrinal letters of the Galactic Papacy — issued occasionally, weighed carefully, and footnoted, where charity allows, against the water-world's own first attempts at the genre.</p>
+</header>
+
+<div class="wrap">
+  {% if encyclicals %}
+  <ol class="register">
+    {% for e in encyclicals %}
+    <li class="register__row">
+      <span class="register__num">№ {{ e.number }}</span>
+      <span class="register__title">
+        <a href="/encyclicals/{{ e.slug }}">{{ e.incipit }}</a>
+        <span class="incipit">{{ e.title }}{% if e.subtitle %} — {{ e.subtitle }}{% endif %}</span>
+      </span>
+      <span class="register__meta">{{ e.status|title }}</span>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p style="text-align:center;font-style:italic;color:var(--text-muted)">The archive awaits its first promulgation.</p>
+  {% endif %}
+</div>
+
+<div class="orbit-divider" aria-hidden="true"><svg viewBox="0 0 240 240"><use href="#sig-orrery"/></svg></div>
+{% endblock %}

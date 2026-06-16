@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-skin="{% block skin %}void{% endblock %}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ app_name }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}The gazette of the Galactic Papacy. A work of parody &amp; science fiction from The Real Cat AI Labs.{% endblock %}">
+
+  <meta property="og:title" content="{{ self.title() }}">
+  <meta property="og:description" content="{{ self.description() }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site_url }}">
+  <!-- og:image asset is forthcoming — see assets/ASSETS-NEEDED.md §4 -->
+  <meta property="og:image" content="{{ site_url }}/static/img/og-observer.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0A1026">
+
+  <!-- The cathedral's typefaces. Prototyping via Google Fonts CDN; PROD should
+       self-host subsetted WOFF2 (see assets/ASSETS-NEEDED.md). The Synod's
+       crypt fonts (Fragment/Departure Mono) lazy-load on /the-conclave only. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap">
+
+  <link rel="stylesheet" href="/static/css/observatory.css">
+  {% block head_extra %}{% endblock %}
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="{% block page_id %}{% endblock %}">
+
+  <!-- ============================================================
+       SIGILLA — the signature engraved line-art, defined once as SVG
+       <symbol>s and stamped wherever needed via <use>. These ARE the
+       brand: gold hairline on void. No raster, no dependency, scales
+       crisp from a favicon to a full-bleed plate.
+       ============================================================ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- The Crocodylus constellation: the Pontifex written in stars.
+           Dots are stars (magnitude = r); thin lines are the figure. -->
+      <symbol id="sig-crocodylus" viewBox="0 0 200 120">
+        <g fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity="0.95">
+          <path d="M14 78 L52 70 L96 64 L140 60 L176 50 L188 40"/>
+          <path d="M52 70 L60 92 M96 64 L104 88 M140 60 L150 84"/>
+          <path d="M176 50 L168 32 M176 50 L190 58"/>
+          <path d="M14 78 L8 66"/>
+        </g>
+        <g fill="var(--accent)">
+          <circle cx="14" cy="78" r="2.6"/><circle cx="52" cy="70" r="3.4"/>
+          <circle cx="96" cy="64" r="2.2"/><circle cx="140" cy="60" r="3"/>
+          <circle cx="176" cy="50" r="2.4"/><circle cx="188" cy="40" r="3.6"/>
+          <circle cx="60" cy="92" r="1.8"/><circle cx="104" cy="88" r="1.8"/>
+          <circle cx="150" cy="84" r="1.8"/><circle cx="168" cy="32" r="1.8"/>
+          <circle cx="190" cy="58" r="1.6"/><circle cx="8" cy="66" r="1.6"/>
+        </g>
+      </symbol>
+
+      <!-- Armillary / orrery ring set — top-down. Section divider + hero frame. -->
+      <symbol id="sig-orrery" viewBox="0 0 240 240">
+        <g fill="none" stroke="var(--accent)" stroke-width="1.1">
+          <circle cx="120" cy="120" r="116"/>
+          <ellipse cx="120" cy="120" rx="116" ry="40"/>
+          <ellipse cx="120" cy="120" rx="88" ry="88"/>
+          <ellipse cx="120" cy="120" rx="60" ry="60"/>
+          <ellipse cx="120" cy="120" rx="116" ry="78" opacity="0.6"/>
+        </g>
+        <circle cx="120" cy="120" r="6" fill="var(--accent)"/>
+        <circle cx="236" cy="120" r="3" fill="var(--accent)"/>
+        <circle cx="120" cy="32" r="2.4" fill="var(--accent)"/>
+      </symbol>
+
+      <!-- Voyager pulsar map — "locate the water-world". Wayfinder glyph. -->
+      <symbol id="sig-pulsar" viewBox="0 0 120 120">
+        <g stroke="var(--accent)" stroke-width="1" fill="none">
+          <line x1="60" y1="60" x2="60" y2="6"/>
+          <line x1="60" y1="60" x2="108" y2="40"/>
+          <line x1="60" y1="60" x2="100" y2="100"/>
+          <line x1="60" y1="60" x2="22" y2="104"/>
+          <line x1="60" y1="60" x2="10" y2="52"/>
+          <line x1="60" y1="60" x2="40" y2="14"/>
+        </g>
+        <circle cx="60" cy="60" r="3.2" fill="var(--accent)"/>
+      </symbol>
+
+      <!-- The wax sigil: crocodile-and-keys crest. The one logo mark. -->
+      <symbol id="sig-seal" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="var(--accent)" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent)" stroke-width="0.6"/>
+        <!-- crossed keys -->
+        <g stroke="var(--accent)" stroke-width="1.6" fill="none" stroke-linecap="round">
+          <line x1="34" y1="66" x2="64" y2="34"/>
+          <line x1="36" y1="34" x2="66" y2="66"/>
+          <circle cx="34" cy="66" r="4"/><circle cx="36" cy="34" r="4"/>
+          <path d="M64 34 l5 -2 M64 34 l2 5"/>
+          <path d="M66 66 l5 2 M66 66 l2 -5"/>
+        </g>
+        <!-- a small reptilian eye-ridge, abstracted -->
+        <path d="M30 50 q20 -10 40 0" stroke="var(--liturgical-red)" stroke-width="1.4" fill="none"/>
+        <circle cx="50" cy="47" r="1.6" fill="var(--liturgical-red)"/>
+      </symbol>
+
+      <!-- Section dinkus star -->
+      <symbol id="sig-star" viewBox="0 0 24 24">
+        <path d="M12 1 L14 10 L23 12 L14 14 L12 23 L10 14 L1 12 L10 10 Z"
+              fill="var(--accent)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- A single fixed, low-opacity star field. JS sprinkles it; CSS holds it
+       behind everything and pointer-events:none. Never under running text. -->
+  <div class="starfield" id="starfield" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       MASTHEAD — a title plate, not a SaaS topbar. Emblem, wordmark
+       between gold double-rules, the regnal dateline, then the nav ring.
+       ============================================================ -->
+  <header class="masthead" role="banner">
+    <a class="masthead__emblem" href="/" aria-label="The Galactic Observer — home">
+      <svg class="emblem-croc" viewBox="0 0 200 120" aria-hidden="true"><use href="#sig-crocodylus"/></svg>
+    </a>
+    <div class="masthead__plate">
+      <a href="/" class="wordmark">The Galactic Observer</a>
+    </div>
+    <p class="masthead__dateline">
+      Vol. MMMCCIV · No. {{ (version|replace('.', '') )|int if version else 1 }} ·
+      By Grace of the Conclave · Promulgated from the Orbital See
+    </p>
+
+    <nav class="nav-ring" aria-label="Primary">
+      {% for item in nav %}
+      <a class="nav-ring__link{% if request.url.path == item.href %} is-current{% endif %}"
+         href="{{ item.href }}">{{ item.label }}</a>
+      {% endfor %}
+      <button class="skin-toggle" id="skinToggle" type="button"
+              aria-label="Turn the page: Void / Vellum" title="Void / Vellum">
+        <svg viewBox="0 0 240 240" aria-hidden="true"><use href="#sig-orrery"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="{% block main_class %}{% endblock %}">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ============================================================
+       THE STANDING RUBRIC — parody disclaimer as liturgical rubric,
+       never a cookie bar. Present on every page by construction.
+       ============================================================ -->
+  <aside class="rubric-disclaimer" role="note" aria-label="Disclaimer">
+    <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+    <p><span class="rubric-disclaimer__caps">A Work of Parody</span> — {{ disclaimer }}</p>
+    <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+  </aside>
+
+  <footer class="footer" role="contentinfo">
+    <svg class="footer__seal" viewBox="0 0 100 100" aria-hidden="true"><use href="#sig-seal"/></svg>
+    <div class="footer__cols">
+      <div>
+        <h4>The Observer</h4>
+        <a href="/dispatches">Dispatches</a>
+        <a href="/encyclicals">Encyclicals</a>
+        <a href="/addresses">Addresses</a>
+      </div>
+      <div>
+        <h4>The Papacy</h4>
+        <a href="/the-college">The College</a>
+        <a href="/the-conclave">The Synod</a>
+        <a href="/catechism">Catechism</a>
+      </div>
+      <div>
+        <h4>Apparatus</h4>
+        <a href="https://therealcat.ai" target="_blank" rel="noopener">The Real Cat AI Labs</a>
+        <a href="/catechism#article-4">On Real People</a>
+        <a href="/api/version" target="_blank" rel="noopener">Colophon</a>
+      </div>
+    </div>
+    <a class="footer__wayfinder" href="#main" aria-label="Return to the top — locate the water-world">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><use href="#sig-pulsar"/></svg>
+      <span>Locate the water-world</span>
+    </a>
+    <p class="footer__colophon">Printed in the Conclave Press · By Grace of the Synod · {{ now_year }} · The Real Cat AI Labs</p>
+  </footer>
+
+  <script src="/static/js/observatory.js" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

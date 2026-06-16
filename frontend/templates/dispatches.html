@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}L'Osservatore Galattico — Dispatches · The Galactic Observer{% endblock %}
+{% block page_id %}dispatches{% endblock %}
+
+{% block content %}
+<div class="broadsheet">
+  <div class="nameplate">
+    <p class="nameplate__title">L'Osservatore Galattico</p>
+    <p class="nameplate__folio">Est. Anno Galactica · News from the Sees · And finally, the water-world</p>
+  </div>
+
+  {% if dispatches %}
+  <ol class="register">
+    {% for d in dispatches %}
+    <li class="register__row">
+      <span class="register__num">Iss. {{ d.issue }}</span>
+      <span class="register__title">
+        <a href="/dispatches/{{ d.slug }}">{{ d.title }}</a>
+        <span class="incipit">{{ d.summary }}</span>
+      </span>
+      <span class="register__meta">{{ d.dateline }}</span>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p style="text-align:center;font-style:italic;color:var(--text-muted)">The press is warming. The first issue is forthcoming.</p>
+  {% endif %}
+</div>
+{% endblock %}

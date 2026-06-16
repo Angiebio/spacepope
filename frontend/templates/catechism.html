@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Catechism & Disclaimer · The Galactic Observer{% endblock %}
+{% block page_id %}catechism{% endblock %}
+
+{% block content %}
+<header class="page-head wrap">
+  <p class="eyebrow">Doctrine &amp; Disclaimer</p>
+  <h1>The Catechism</h1>
+  <p class="lede">What this is, what it is not, and the one hard rule that governs all of it.</p>
+</header>
+
+<div class="catechism">
+  {% for a in articles %}
+  <section class="article" id="article-{{ a.number }}">
+    <div class="article__q">
+      <span class="article__num">§ {{ a.number }}</span>
+      <h2>{{ a.question }}</h2>
+    </div>
+    <p class="article__a">{{ a.answer }}</p>
+  </section>
+  {% endfor %}
+</div>
+
+<div class="orbit-divider" aria-hidden="true"><svg viewBox="0 0 240 240"><use href="#sig-orrery"/></svg></div>
+{% endblock %}

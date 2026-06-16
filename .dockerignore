@@ -1,0 +1,40 @@
+# Keep the image small and free of secrets.
+
+# Secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Git
+.git
+.gitignore
+.github
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv
+venv
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.coverage
+
+# IDE / OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.swp
+
+# Docs & scratch (content/ is NOT a doc — it ships)
+*.md
+!backend/README.md
+
+# Fly.io state
+.fly

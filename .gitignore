@@ -1,0 +1,36 @@
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Fly.io
+.fly/
+
+# Node (only if we ever add a build step; none today)
+node_modules/
+
+# Rendered media drops — the heavy Hedra films live in object storage, not git.
+# Keep the lightweight poster stubs; ignore real renders dropped locally.
+frontend/static/video/*.mp4
+frontend/static/video/*.webm

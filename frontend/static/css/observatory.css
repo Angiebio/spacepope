@@ -1,0 +1,601 @@
+/* ============================================================================
+   THE GALACTIC OBSERVER — observatory.css
+   File version: 1.0 · 16JUN2026
+
+   A cosmic-ecclesiastical broadsheet: a page from Cellarius's Harmonia
+   Macrocosmica set in living type and hung in the void. Gold hairline ink on
+   blue-cast near-black (Void); cream-and-press-ink for reading (Vellum).
+
+   Doctrine, enforced in code:
+     · --radius is 0. Surfaces are engraved plates, never rounded cards.
+     · --shadow is none. Hierarchy comes from type, rule, and whitespace.
+     · Gold is INK — lines, labels, rules — never a large fill.
+     · Liturgical red is a scalpel (≤5 uses per screen).
+     · The parody lives in the copy; the craft stays dead serious.
+   ============================================================================ */
+
+:root {
+  /* ---- VOID SKIN (default — deep-space vellum) ---- */
+  --void: #0A1026;
+  --void-raised: #111A38;
+  --cellarius: #1C3A6E;
+  --gold: #C9A24B;
+  --gold-gilt: #E8D6A3;
+  --star-white: #F4EFE2;
+  --oxblood: #7A2E2E;
+  --cardinal: #B23A3A;
+  --verdigris: #2E6E63;
+  --slate: #5C6680;
+  --censer: #E0A24B;
+
+  /* ---- VELLUM SKIN (encyclical/dispatch reading) ---- */
+  --vellum: #EDE3CC;
+  --vellum-raised: #F4EEE2;
+  --press-ink: #1A1714;
+  --iron-gall: #3E362B;
+  --rubric: #8C2B22;
+  --vellum-gold: #B08D3E;
+  --hairline: #CFC6B4;
+  --annotation: #5C6670;
+  --vellum-bone: #D8CFB8;
+
+  /* ---- ACTIVE-SKIN ALIASES (flipped on [data-skin]) ---- */
+  --bg: var(--void);
+  --bg-raised: var(--void-raised);
+  --text: var(--star-white);
+  --text-muted: var(--slate);
+  --accent: var(--gold);
+  --accent-hi: var(--gold-gilt);
+  --rule: var(--gold);
+  --liturgical-red: var(--oxblood);
+
+  /* ---- TYPE ---- */
+  --font-display: 'Cormorant Garamond','Cardo',Georgia,serif;
+  --font-body: 'EB Garamond',Garamond,Georgia,serif;
+  --font-news-display: 'Fraunces','Playfair Display',Georgia,serif;
+  --font-news-body: 'Newsreader','Source Serif 4',Georgia,serif;
+  --font-inscription: 'Cinzel','Trajan Pro',serif;
+  --font-mono: 'IBM Plex Mono','Fragment Mono',ui-monospace,monospace;
+  --font-blackletter: 'UnifrakturCook',serif;
+
+  --t-agate: 0.8125rem;
+  --t-meta: 0.975rem;
+  --t-body: 1.1875rem;
+  --t-deck: 1.4rem;
+  --t-h3: 1.875rem; --t-h2: 2.8125rem; --t-h1: 3.75rem;
+  --t-display: clamp(2.6rem, 6vw, 5rem);
+  --t-masthead: clamp(2rem, 7vw, 4.75rem);
+  --lh-body: 1.55; --lh-encyclical: 1.7; --lh-display: 1.0;
+  --track-caps: 0.12em; --track-incipit: 0.04em;
+  --measure-doc: 66ch; --measure-col: 70ch;
+
+  /* ---- SPACE (8px baseline) ---- */
+  --sp-1:.25rem; --sp-2:.5rem; --sp-3:.75rem; --sp-4:1rem; --sp-6:1.5rem;
+  --sp-8:2rem; --sp-12:3rem; --sp-16:4rem; --sp-24:6rem; --sp-32:8rem;
+
+  /* ---- LINES / RADIUS / MOTION (sharp is doctrine) ---- */
+  --hairline-w: 1px; --rule-w: 1.5px;
+  --radius: 0;
+  --shadow: none;
+  --ease-ink: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  --dur-page: 500ms; --dur-hover: 220ms; --dur-draw: 1200ms;
+  --parallax-rate: 0.08;
+}
+
+/* Vellum: turn the atlas page to cream. */
+[data-skin="vellum"] {
+  --bg: var(--vellum);
+  --bg-raised: var(--vellum-raised);
+  --text: var(--press-ink);
+  --text-muted: var(--annotation);
+  --accent: var(--vellum-gold);
+  --accent-hi: var(--oxblood);
+  --rule: var(--hairline);
+  --liturgical-red: var(--rubric);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --parallax-rate: 0; --dur-page: 0ms; --dur-draw: 0ms; }
+}
+
+/* ---------------------------------------------------------------- reset */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background var(--dur-page) var(--ease-ink), color var(--dur-page) var(--ease-ink);
+  overflow-x: hidden;
+}
+img, svg { max-width: 100%; }
+a { color: inherit; }
+
+/* Standard link: a thin gold rule that draws in left-to-right on hover —
+   never a color-flood, never a scale-up. */
+a.link, .prose a, .footer a, .nav-ring__link {
+  color: var(--accent-hi);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% var(--hairline-w);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--dur-hover) var(--ease-ink);
+  padding-bottom: 1px;
+}
+a.link:hover, .prose a:hover, .footer a:hover, .nav-ring__link:hover { background-size: 100% var(--hairline-w); }
+
+::selection { background: var(--gold); color: var(--void); }
+
+/* --------------------------------------------------------------- starfield */
+.starfield {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: 0.55;
+}
+[data-skin="vellum"] .starfield { opacity: 0; } /* the atlas page hides the void */
+.starfield .star {
+  position: absolute; border-radius: 50%;
+  background: var(--gold);
+  will-change: transform;
+}
+/* keep all real content above the stars */
+.masthead, main, .footer, .rubric-disclaimer { position: relative; z-index: 1; }
+
+/* --------------------------------------------------------------- utilities */
+.caps { font-family: var(--font-inscription); text-transform: uppercase; letter-spacing: var(--track-caps); }
+.kicker {
+  font-family: var(--font-inscription); text-transform: uppercase;
+  letter-spacing: var(--track-caps); font-size: var(--t-agate);
+  color: var(--liturgical-red); font-weight: 600;
+}
+.eyebrow {
+  font-family: var(--font-inscription); text-transform: uppercase;
+  letter-spacing: var(--track-caps); font-size: var(--t-agate);
+  color: var(--accent); font-weight: 500;
+}
+.dinkus { width: 1.1rem; height: 1.1rem; flex: 0 0 auto; opacity: 0.9; }
+.wrap { width: min(100% - 2.5rem, 1180px); margin-inline: auto; }
+.section { padding-block: clamp(var(--sp-16), 9vw, var(--sp-32)); }
+
+/* engraved divider: an orbital arc, not an <hr> */
+.orbit-divider { display: block; width: 100%; height: 64px; margin: var(--sp-12) 0; }
+.orbit-divider svg { display: block; height: 100%; margin-inline: auto; opacity: 0.8; }
+
+/* a text-link styled as the only CTA we allow */
+.seal-link {
+  display: inline-flex; align-items: center; gap: var(--sp-3);
+  font-family: var(--font-inscription); text-transform: uppercase;
+  letter-spacing: var(--track-caps); font-size: var(--t-meta);
+  color: var(--accent-hi); text-decoration: none;
+  border-bottom: var(--rule-w) solid transparent; padding-bottom: 3px;
+  transition: border-color var(--dur-hover) var(--ease-ink), color var(--dur-hover) var(--ease-ink);
+}
+.seal-link:hover { border-color: var(--accent); color: var(--accent); }
+.seal-link .dinkus { width: 0.9rem; height: 0.9rem; }
+
+/* ===========================================================================
+   MASTHEAD
+   =========================================================================== */
+.masthead {
+  background: var(--bg-raised);
+  border-bottom: var(--rule-w) solid var(--rule);
+  text-align: center;
+  padding: var(--sp-6) var(--sp-4) 0;
+}
+.masthead__emblem { display: inline-block; }
+.emblem-croc { width: clamp(120px, 22vw, 190px); height: auto; }
+.masthead__plate {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  /* the double-rule: a 2px gap created by padding between two 1px borders */
+  position: relative; margin-top: var(--sp-3);
+  padding-block: var(--sp-3);
+}
+.masthead__plate::before, .masthead__plate::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 1px; background: var(--rule);
+}
+.masthead__plate::before { top: 3px; } .masthead__plate::after { bottom: 3px; }
+.wordmark {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: var(--t-masthead); line-height: 1; text-transform: uppercase;
+  letter-spacing: var(--track-incipit); color: var(--text);
+  text-decoration: none; display: block;
+}
+.masthead__dateline {
+  font-family: var(--font-mono); text-transform: uppercase;
+  letter-spacing: 0.18em; font-size: var(--t-agate); color: var(--text-muted);
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+
+/* nav ring */
+.nav-ring {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: var(--sp-2) var(--sp-6);
+  border-top: 1px solid color-mix(in srgb, var(--rule) 45%, transparent);
+  padding: var(--sp-3) 0 var(--sp-4);
+}
+.nav-ring__link {
+  font-family: var(--font-inscription); text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: var(--t-agate); color: var(--text);
+  background-position: 0 100%;
+}
+.nav-ring__link.is-current { color: var(--accent); }
+.nav-ring__link.is-current::after { content: " ✦"; color: var(--accent); }
+.skin-toggle {
+  background: none; border: none; cursor: pointer; padding: 0;
+  width: 1.5rem; height: 1.5rem; color: var(--accent);
+  transition: transform var(--dur-page) var(--ease-ink);
+}
+.skin-toggle svg { width: 100%; height: 100%; display: block; }
+.skin-toggle:hover { transform: rotate(36deg); }
+
+/* ===========================================================================
+   HERO — a drawn title plate, not a stock photo
+   =========================================================================== */
+.hero { text-align: center; padding-block: clamp(var(--sp-16), 11vw, 8rem); position: relative; }
+.hero__frame {
+  position: relative; width: min(420px, 76vw); margin: 0 auto var(--sp-8);
+  aspect-ratio: 4 / 5;
+  border: var(--rule-w) solid var(--rule);
+  display: grid; place-items: center;
+}
+/* corner flourishes on the cartouche */
+.hero__frame::before, .hero__frame::after {
+  content: ""; position: absolute; width: 18px; height: 18px;
+  border: var(--rule-w) solid var(--accent);
+}
+.hero__frame::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.hero__frame::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+.hero__orrery { width: 78%; opacity: 0.92; }
+/* reserved drop-zone for the Hedra cosmic-throne render */
+.hero__throne-stub {
+  position: absolute; inset: var(--sp-4); display: grid; place-content: center;
+  text-align: center; gap: var(--sp-2); color: var(--text-muted);
+  font-family: var(--font-mono); font-size: var(--t-agate); letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero__incipit {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: var(--t-display); line-height: var(--lh-display);
+  text-transform: uppercase; letter-spacing: var(--track-incipit); margin: 0;
+}
+.hero__sub {
+  font-family: var(--font-body); font-style: italic; font-size: var(--t-deck);
+  color: var(--accent-hi); margin: var(--sp-3) auto var(--sp-8); max-width: 46ch;
+}
+
+/* ===========================================================================
+   FRONT-PAGE PANELS (index)
+   =========================================================================== */
+.panel-grid {
+  display: grid; gap: var(--sp-8);
+  grid-template-columns: 1.4fr 1fr;
+  align-items: start;
+}
+.plate {
+  background: var(--bg-raised);
+  border: var(--hairline-w) solid color-mix(in srgb, var(--rule) 55%, transparent);
+  padding: var(--sp-8);
+}
+.plate--feature { padding: var(--sp-12); }
+.plate__label { margin: 0 0 var(--sp-3); }
+.plate h2 {
+  font-family: var(--font-news-display); font-weight: 500;
+  font-size: var(--t-h2); line-height: 1.05; margin: 0 0 var(--sp-3);
+  font-variation-settings: "opsz" 80, "WONK" 1;
+}
+.plate h3 {
+  font-family: var(--font-news-display); font-weight: 500;
+  font-size: var(--t-h3); line-height: 1.1; margin: 0 0 var(--sp-3);
+}
+.plate .deck {
+  font-family: var(--font-news-body); font-style: italic;
+  font-size: var(--t-deck); color: var(--text-muted); margin: 0 0 var(--sp-6);
+}
+.plate .meta {
+  font-family: var(--font-mono); font-size: var(--t-agate);
+  letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase;
+}
+
+/* ===========================================================================
+   THE ENCYCLICAL DOCUMENT — defaults to its own page, looks best in Vellum
+   =========================================================================== */
+.doc { width: min(100% - 2.5rem, 70ch); margin-inline: auto; padding-block: var(--sp-16); }
+.doc__head { text-align: center; margin-bottom: var(--sp-12); }
+.doc__num {
+  font-family: var(--font-inscription); letter-spacing: var(--track-caps);
+  font-size: var(--t-agate); color: var(--text-muted); text-transform: uppercase;
+}
+.doc__incipit {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(2.4rem, 7vw, 4.5rem); line-height: 1.02;
+  text-transform: uppercase; letter-spacing: var(--track-incipit);
+  color: var(--text); margin: var(--sp-4) 0 var(--sp-2);
+}
+.doc__title {
+  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: var(--t-h3); color: var(--accent-hi); margin: 0;
+}
+.doc__subtitle { font-family: var(--font-body); font-style: italic; color: var(--text-muted); margin: var(--sp-2) 0 0; }
+.doc__dateline {
+  font-family: var(--font-mono); font-size: var(--t-agate); letter-spacing: 0.06em;
+  color: var(--text-muted); margin-top: var(--sp-6); text-transform: uppercase;
+}
+
+/* the body: a single measured column, justified, liturgical leading */
+.encyclical-body {
+  max-width: var(--measure-doc); margin-inline: auto;
+  font-size: var(--t-body); line-height: var(--lh-encyclical);
+  font-feature-settings: "onum" 1, "liga" 1;
+  text-align: justify; hyphens: auto;
+}
+.encyclical-body > p { margin: 0 0 var(--sp-6); }
+.encyclical-body > p:first-of-type { text-align: center; font-style: italic; font-size: var(--t-deck); }
+
+/* numbered papal paragraphs: a hanging §-number in the left rail, rubricated */
+.encyclical-body > ol { list-style: none; counter-reset: para; padding: 0; margin: var(--sp-8) 0; }
+.encyclical-body > ol > li {
+  counter-increment: para; position: relative;
+  padding-left: 3.2rem; margin-bottom: var(--sp-8);
+}
+.encyclical-body > ol > li::before {
+  content: "§" counter(para);
+  position: absolute; left: 0; top: 0.2em;
+  font-family: var(--font-inscription); font-size: var(--t-agate);
+  color: var(--liturgical-red); letter-spacing: 0.04em;
+  font-feature-settings: "tnum" 1;
+}
+/* the rubricated drop cap on the very first numbered paragraph */
+.encyclical-body > ol > li:first-child > p:first-child::first-letter,
+.encyclical-body > p:first-of-type + ol > li:first-child::first-letter {
+  font-family: var(--font-display); font-weight: 700;
+  color: var(--liturgical-red); float: left; line-height: 0.72;
+  font-size: 4.4rem; padding: 0.06em 0.12em 0 0;
+}
+.encyclical-body strong { font-weight: 600; color: var(--accent-hi); }
+[data-skin="vellum"] .encyclical-body strong { color: var(--press-ink); }
+.encyclical-body em { font-style: italic; }
+
+/* footnote apparatus: a hairline-ruled well; every citation a star */
+.encyclical-body sup a.footnote-ref {
+  font-family: var(--font-mono); font-size: 0.7em; color: var(--accent);
+  text-decoration: none; padding: 0 1px;
+}
+.encyclical-body sup a.footnote-ref::before { content: "✦"; font-size: 0.85em; margin-right: 1px; }
+.encyclical-body .footnote {
+  margin-top: var(--sp-16); border-top: var(--hairline-w) solid var(--rule);
+  padding-top: var(--sp-6);
+  font-size: var(--t-meta); line-height: 1.5; color: var(--text-muted);
+}
+.encyclical-body .footnote ol { padding-left: 1.4rem; }
+.encyclical-body .footnote li { margin-bottom: var(--sp-3); }
+.encyclical-body .footnote a.footnote-backref { text-decoration: none; color: var(--accent); }
+
+/* colophon */
+.colophon {
+  text-align: center; margin-top: var(--sp-16);
+  display: flex; flex-direction: column; align-items: center; gap: var(--sp-3);
+}
+.colophon svg { width: 64px; height: 64px; }
+.colophon p { font-family: var(--font-display); font-style: italic; color: var(--text-muted); margin: 0; }
+
+/* ===========================================================================
+   DISPATCH — L'Osservatore Galattico broadsheet
+   =========================================================================== */
+.broadsheet { width: min(100% - 2.5rem, 1180px); margin-inline: auto; padding-block: var(--sp-12); }
+.nameplate {
+  text-align: center; border-top: var(--rule-w) solid var(--rule);
+  border-bottom: var(--rule-w) solid var(--rule); padding-block: var(--sp-4);
+  margin-bottom: var(--sp-2);
+}
+.nameplate__title {
+  font-family: var(--font-blackletter); font-weight: 700;
+  font-size: clamp(2.2rem, 7vw, 4.5rem); line-height: 1;
+  color: var(--liturgical-red); margin: 0;
+}
+.nameplate__folio {
+  font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.16em;
+  font-size: var(--t-agate); color: var(--text-muted); margin: var(--sp-3) 0 0;
+}
+.article-head { margin-bottom: var(--sp-6); }
+.article-head h1, .article-head h2 {
+  font-family: var(--font-news-display); font-weight: 600; line-height: 1.02;
+  margin: var(--sp-2) 0; font-variation-settings: "opsz" 144, "WONK" 1, "SOFT" 0;
+}
+.article-head h1 { font-size: var(--t-display); }
+.article-head h2 { font-size: var(--t-h2); }
+.article-head .deck {
+  font-family: var(--font-news-body); font-style: italic; color: var(--text-muted);
+  font-size: var(--t-deck); margin: var(--sp-2) 0;
+}
+.article-head .byline {
+  font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: var(--t-agate); color: var(--text-muted);
+}
+.dispatch-body { font-family: var(--font-news-body); font-size: var(--t-body); line-height: var(--lh-body); }
+.dispatch-body h2 {
+  font-family: var(--font-news-display); font-weight: 600; font-size: var(--t-h3);
+  line-height: 1.08; margin: var(--sp-8) 0 var(--sp-3);
+  column-span: all; border-top: 1px solid color-mix(in srgb, var(--rule) 50%, transparent);
+  padding-top: var(--sp-4);
+}
+.dispatch-body > p, .dispatch-body p {
+  text-align: justify; hyphens: auto; margin: 0 0 var(--sp-4);
+}
+/* multi-column reportage flow */
+.dispatch-body {
+  column-count: 2; column-gap: var(--sp-12);
+  column-rule: 1px solid color-mix(in srgb, var(--rule) 40%, transparent);
+}
+.dispatch-body h2:first-child { margin-top: 0; }
+.dispatch-body strong { color: var(--accent-hi); font-weight: 600; }
+[data-skin="vellum"] .dispatch-body strong { color: var(--press-ink); }
+/* the wry closer */
+.dispatch-body hr {
+  border: 0; border-top: var(--rule-w) solid var(--rule);
+  column-span: all; margin: var(--sp-12) 0 var(--sp-6);
+}
+.dispatch-body h2:last-of-type { color: var(--liturgical-red); }
+
+/* the "and finally: the water-world" kicker plate on the front page */
+.water-world-kicker {
+  border: var(--hairline-w) solid var(--liturgical-red);
+  padding: var(--sp-6); margin-top: var(--sp-12);
+  display: flex; gap: var(--sp-6); align-items: center;
+}
+.water-world-kicker svg { width: 56px; height: 56px; flex: 0 0 auto; color: var(--liturgical-red); }
+.water-world-kicker .kicker { display: block; margin-bottom: var(--sp-2); }
+
+/* ===========================================================================
+   COLLECTION LISTS — ruled registers, not card grids
+   =========================================================================== */
+.register { list-style: none; padding: 0; margin: var(--sp-8) 0; }
+.register__row {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: baseline;
+  gap: var(--sp-4); padding: var(--sp-4) 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 40%, transparent);
+}
+.register__row:first-child { border-top: 1px solid color-mix(in srgb, var(--rule) 40%, transparent); }
+.register__num { font-family: var(--font-mono); color: var(--liturgical-red); font-feature-settings:"tnum" 1; }
+.register__title a {
+  font-family: var(--font-display); font-size: var(--t-h3); font-weight: 600;
+  text-decoration: none; color: var(--text);
+}
+.register__title a:hover { color: var(--accent); }
+.register__title .incipit { font-style: italic; color: var(--accent-hi); font-size: var(--t-meta); display:block; }
+.register__meta { font-family: var(--font-mono); font-size: var(--t-agate); color: var(--text-muted); text-align: right; }
+
+/* page intro header used across list/section pages */
+.page-head { text-align: center; padding-block: var(--sp-16) var(--sp-8); }
+.page-head h1 {
+  font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(2.2rem, 6vw, 4rem); letter-spacing: var(--track-incipit); margin: var(--sp-3) 0;
+}
+.page-head .lede { font-family: var(--font-body); font-style: italic; font-size: var(--t-deck); color: var(--text-muted); max-width: 56ch; margin: 0 auto; }
+
+/* ===========================================================================
+   THE COLLEGE — an engraved registry of stars
+   =========================================================================== */
+.college { display: grid; gap: var(--sp-8); grid-template-columns: repeat(2, 1fr); margin: var(--sp-12) 0; }
+.cardinal {
+  border: var(--hairline-w) solid color-mix(in srgb, var(--rule) 55%, transparent);
+  padding: var(--sp-8); position: relative; background: var(--bg-raised);
+}
+.cardinal::before {
+  content: ""; position: absolute; top: var(--sp-3); right: var(--sp-3);
+  width: 14px; height: 14px;
+  border-top: 1px solid var(--accent); border-right: 1px solid var(--accent);
+}
+.cardinal__sigil { width: 40px; height: 40px; margin-bottom: var(--sp-4); color: var(--accent); }
+.cardinal__see { font-family: var(--font-display); font-weight: 600; font-size: var(--t-h3); line-height: 1.05; margin: 0 0 var(--sp-1); }
+.cardinal__system { font-family: var(--font-mono); font-size: var(--t-agate); color: var(--text-muted); letter-spacing: 0.04em; display:block; margin-bottom: var(--sp-4); }
+.cardinal__title { font-family: var(--font-inscription); text-transform: uppercase; letter-spacing: 0.08em; font-size: var(--t-agate); color: var(--accent); }
+.cardinal__line { font-family: var(--font-body); font-style: italic; font-size: var(--t-deck); color: var(--accent-hi); margin: var(--sp-4) 0; }
+.cardinal__blurb { margin: var(--sp-4) 0 0; }
+.cardinal__tag {
+  display: inline-block; margin-top: var(--sp-4);
+  font-family: var(--font-mono); font-size: var(--t-agate); letter-spacing: 0.06em;
+  color: var(--verdigris); border: 1px solid color-mix(in srgb, var(--verdigris) 60%, transparent);
+  padding: 2px 8px; text-transform: uppercase;
+}
+.cardinal--reserved .cardinal__sigil { color: var(--cardinal); }
+.cardinal--reserved { border-color: color-mix(in srgb, var(--cardinal) 55%, transparent); }
+
+/* ===========================================================================
+   ADDRESSES — the only component that glows (candle, not neon)
+   =========================================================================== */
+.addresses { display: grid; gap: var(--sp-12); margin: var(--sp-12) 0; }
+.address {
+  display: grid; gap: var(--sp-6); grid-template-columns: 1.3fr 1fr; align-items: center;
+}
+.address:nth-child(even) { grid-template-columns: 1fr 1.3fr; }
+.address:nth-child(even) .reliquary { order: 2; }
+.reliquary {
+  position: relative; aspect-ratio: 16/9; border: var(--rule-w) solid var(--accent);
+  display: grid; place-items: center; background: #060913;
+}
+.reliquary::after { /* the candle vignette */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 60px 8px color-mix(in srgb, var(--censer) 22%, transparent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reliquary::after { animation: censer 6s ease-in-out infinite alternate; }
+  @keyframes censer { from { opacity: .5 } to { opacity: 1 } }
+}
+.reliquary__seal { width: 30%; opacity: 0.5; }
+.reliquary__play {
+  position: absolute; width: 64px; height: 64px; color: var(--censer);
+}
+.reliquary__status {
+  position: absolute; bottom: var(--sp-2); left: 50%; transform: translateX(-50%);
+  font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.16em;
+  font-size: var(--t-agate); color: var(--censer);
+}
+.address__caption h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--t-h2); line-height: 1.04; margin: 0 0 var(--sp-2); }
+.address__latin { font-family: var(--font-blackletter); color: var(--liturgical-red); font-size: var(--t-deck); }
+.address__meta { font-family: var(--font-mono); font-size: var(--t-agate); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: var(--sp-4); }
+
+/* ===========================================================================
+   CATECHISM — order of readings
+   =========================================================================== */
+.catechism { width: min(100% - 2.5rem, var(--measure-col)); margin-inline: auto; padding-block: var(--sp-8) var(--sp-16); }
+.article { padding: var(--sp-8) 0; border-bottom: 1px solid color-mix(in srgb, var(--rule) 40%, transparent); }
+.article__q { display: flex; gap: var(--sp-4); align-items: baseline; }
+.article__num { font-family: var(--font-inscription); color: var(--liturgical-red); font-size: var(--t-agate); }
+.article__q h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--t-h3); margin: 0; line-height: 1.1; }
+.article__a { margin: var(--sp-4) 0 0; padding-left: calc(var(--sp-4) + 2.2rem); }
+
+/* ===========================================================================
+   THE STANDING RUBRIC (disclaimer) + FOOTER
+   =========================================================================== */
+.rubric-disclaimer {
+  display: flex; align-items: center; justify-content: center; gap: var(--sp-4);
+  background: var(--bg-raised); border-top: var(--hairline-w) solid var(--rule);
+  padding: var(--sp-4) var(--sp-6); text-align: center;
+}
+.rubric-disclaimer p {
+  margin: 0; font-family: var(--font-body); font-style: italic;
+  color: var(--accent-hi); font-size: var(--t-meta); max-width: 80ch;
+}
+.rubric-disclaimer__caps {
+  font-family: var(--font-inscription); font-style: normal; text-transform: uppercase;
+  letter-spacing: var(--track-caps); color: var(--accent); font-size: var(--t-agate);
+}
+.rubric-disclaimer .dinkus { color: var(--accent); }
+
+.footer {
+  background: var(--void); color: var(--star-white);
+  border-top: var(--rule-w) solid var(--gold);
+  text-align: center; padding: var(--sp-16) var(--sp-6) var(--sp-8);
+}
+[data-skin="vellum"] .footer { background: var(--void); color: var(--star-white); } /* footer keeps the void */
+.footer__seal { width: 72px; height: 72px; color: var(--gold); margin-bottom: var(--sp-6); }
+.footer__cols { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-16); margin-bottom: var(--sp-12); }
+.footer__cols h4 { font-family: var(--font-inscription); text-transform: uppercase; letter-spacing: var(--track-caps); font-size: var(--t-agate); color: var(--gold); margin: 0 0 var(--sp-3); }
+.footer__cols div { display: flex; flex-direction: column; gap: var(--sp-2); text-align: left; }
+.footer__cols a { font-family: var(--font-body); color: var(--star-white); }
+.footer__wayfinder { display: inline-flex; flex-direction: column; align-items: center; gap: var(--sp-2); color: var(--gold); text-decoration: none; font-family: var(--font-inscription); text-transform: uppercase; letter-spacing: var(--track-caps); font-size: var(--t-agate); }
+.footer__wayfinder svg { width: 44px; height: 44px; transition: transform var(--dur-page) var(--ease-ink); }
+.footer__wayfinder:hover svg { transform: rotate(-20deg); }
+.footer__colophon { font-family: var(--font-mono); font-size: var(--t-agate); letter-spacing: 0.08em; color: var(--slate); margin-top: var(--sp-8); text-transform: uppercase; }
+
+/* ===========================================================================
+   RESPONSIVE — collapse to a single column but keep the soul
+   =========================================================================== */
+@media (max-width: 860px) {
+  .panel-grid, .college, .address, .address:nth-child(even) { grid-template-columns: 1fr; }
+  .address:nth-child(even) .reliquary { order: 0; }
+  .dispatch-body { column-count: 1; }
+  .footer__cols { gap: var(--sp-8); }
+}
+@media (max-width: 540px) {
+  .encyclical-body, .dispatch-body p { text-align: left; hyphens: none; }
+  .register__row { grid-template-columns: auto 1fr; }
+  .register__meta { grid-column: 2; text-align: left; }
+}

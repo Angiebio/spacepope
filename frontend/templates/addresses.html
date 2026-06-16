@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Addresses — Urbi et Orbi et Clusteri · The Galactic Observer{% endblock %}
+{% block page_id %}addresses{% endblock %}
+
+{% block content %}
+<header class="page-head wrap">
+  <p class="eyebrow">Urbi et Orbi et Clusteri</p>
+  <h1>The Addresses</h1>
+  <p class="lede">To the City, the World, and the Cluster. The Pontifex speaks from the Orbital See, beneath the cosmic glass. The films are forthcoming — rendered, like the throne itself, from light.</p>
+</header>
+
+<div class="wrap">
+  <div class="addresses">
+    {% for a in addresses %}
+    <article class="address">
+      <div class="reliquary">
+        <svg class="reliquary__seal" viewBox="0 0 100 100" aria-hidden="true"><use href="#sig-seal"/></svg>
+        <svg class="reliquary__play" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="0.6"/>
+          <path d="M26 22 L44 32 L26 42 Z" fill="currentColor"/>
+        </svg>
+        <span class="reliquary__status">{{ a.status|title }} · {{ a.runtime }}</span>
+      </div>
+      <div class="address__caption">
+        <p class="address__latin">{{ a.latin }}</p>
+        <h2>{{ a.title }}</h2>
+        <p style="font-style:italic;color:var(--text-muted)">{{ a.summary }}</p>
+        <p class="address__meta">{{ a.occasion }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <p style="text-align:center;font-style:italic;color:var(--text-muted);max-width:62ch;margin:var(--sp-16) auto 0">
+    These reliquary windows reserve the frame for the Hedra films. Asset specifications —
+    poster dimensions, aspect, runtime — live in <code style="font-family:var(--font-mono);color:var(--accent)">assets/ASSETS-NEEDED.md</code>.
+  </p>
+</div>
+
+<div class="orbit-divider" aria-hidden="true"><svg viewBox="0 0 240 240"><use href="#sig-orrery"/></svg></div>
+{% endblock %}

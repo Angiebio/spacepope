@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block skin %}vellum{% endblock %}
+{% block title %}{{ d.title }} — L'Osservatore Galattico Iss. {{ d.issue }}{% endblock %}
+{% block description %}{{ d.summary }}{% endblock %}
+{% block page_id %}dispatch{% endblock %}
+
+{% block content %}
+<article class="broadsheet">
+  <div class="nameplate">
+    <p class="nameplate__title">L'Osservatore Galattico</p>
+    <p class="nameplate__folio">Issue {{ d.issue }} · {{ d.date }} · {{ d.dateline }}</p>
+  </div>
+
+  <header class="article-head" style="text-align:center">
+    <p class="kicker">From the Orbital See</p>
+    <h1>{{ d.title }}</h1>
+    <p class="deck">{{ d.summary }}</p>
+  </header>
+
+  <div class="dispatch-body">
+    {{ d.html|safe }}
+  </div>
+
+  <p style="text-align:center;margin-top:var(--sp-12)">
+    <a class="seal-link" href="/dispatches">
+      <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+      All Dispatches
+    </a>
+  </p>
+</article>
+{% endblock %}

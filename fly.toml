@@ -1,0 +1,44 @@
+# fly.toml — The Galactic Observer (spacepope.ai)
+# See https://fly.io/docs/reference/configuration/
+#
+# No volume mount: the site is stateless in v1. Content ships in the image;
+# the Synod is in-memory and ephemeral by design. When the Synod becomes data,
+# add a [[mounts]] block + SQLite exactly as trialcat does.
+
+app = 'spacepope'
+primary_region = 'ewr'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  APP_ENV = 'production'
+  APP_PORT = '8000'
+  LOG_LEVEL = 'INFO'
+  SITE_URL = 'https://spacepope.ai'
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+  [http_service.concurrency]
+    type = 'requests'
+    hard_limit = 250
+    soft_limit = 200
+
+  [[http_service.checks]]
+    interval = '30s'
+    timeout = '5s'
+    grace_period = '10s'
+    method = 'GET'
+    path = '/health'
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 512

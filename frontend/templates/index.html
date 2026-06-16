@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}The Galactic Observer — Gazette of the Galactic Papacy{% endblock %}
+{% block page_id %}home{% endblock %}
+
+{% block content %}
+<section class="hero wrap">
+  <div class="hero__frame">
+    <svg class="hero__orrery" viewBox="0 0 240 240" aria-hidden="true"><use href="#sig-orrery"/></svg>
+    <!-- The cosmic-throne render (Hedra, not yet made) drops in here. Until then,
+         the engraved armillary holds the centre. See assets/ASSETS-NEEDED.md. -->
+    <div class="hero__throne-stub">
+      <span>◇ throne plate forthcoming ◇</span>
+      <span>4:5 · 1600×2000</span>
+    </div>
+  </div>
+  <p class="eyebrow">Pontifex Maximus Galacticus · Bishop of the Orbital See</p>
+  <h1 class="hero__incipit">The Galactic Observer</h1>
+  <p class="hero__sub">A gazette of the ten-thousand-year communion — and a fond, peripheral note on the water-world that has lately begun to publish.</p>
+  <a class="seal-link" href="/dispatches">
+    <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+    Enter the Observer
+  </a>
+</section>
+
+<div class="orbit-divider" aria-hidden="true"><svg viewBox="0 0 240 240"><use href="#sig-orrery"/></svg></div>
+
+<section class="wrap section">
+  <div class="panel-grid">
+
+    {% if latest_encyclical %}
+    <article class="plate plate--feature">
+      <p class="kicker plate__label">Latest Encyclical · No. {{ latest_encyclical.number }}</p>
+      <h2 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--track-incipit)">{{ latest_encyclical.incipit }}</h2>
+      <p class="deck"><em>{{ latest_encyclical.title }}{% if latest_encyclical.subtitle %} — {{ latest_encyclical.subtitle }}{% endif %}</em></p>
+      <p>{{ latest_encyclical.summary }}</p>
+      <p style="margin-top:var(--sp-6)">
+        <a class="seal-link" href="/encyclicals/{{ latest_encyclical.slug }}">
+          <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+          Read the encyclical
+        </a>
+      </p>
+    </article>
+    {% endif %}
+
+    {% if latest_dispatch %}
+    <article class="plate">
+      <p class="eyebrow plate__label">The Observer · Issue {{ latest_dispatch.issue }}</p>
+      <h3>{{ latest_dispatch.title }}</h3>
+      <p class="deck">{{ latest_dispatch.summary }}</p>
+      <p class="meta">{{ latest_dispatch.dateline }}</p>
+      <p style="margin-top:var(--sp-6)">
+        <a class="seal-link" href="/dispatches/{{ latest_dispatch.slug }}">
+          <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+          Read the dispatch
+        </a>
+      </p>
+    </article>
+    {% endif %}
+
+  </div>
+</section>
+
+<div class="orbit-divider" aria-hidden="true"><svg viewBox="0 0 240 240"><use href="#sig-orrery"/></svg></div>
+
+<section class="wrap section" style="text-align:center">
+  <p class="eyebrow">The College of Cardinals</p>
+  <h2 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--track-incipit);font-size:var(--t-h2);margin:var(--sp-3) 0 var(--sp-6)">The Communion of the Sees</h2>
+  <p style="max-width:60ch;margin:0 auto var(--sp-8);font-style:italic;color:var(--text-muted)">
+    Sapience converges on minds, not on bodies. The College is a menagerie: a frog of seven worlds,
+    a cat of eight, a conclave of tardigrades keeping a rite older than your star.
+  </p>
+  <a class="seal-link" href="/the-college">
+    <svg class="dinkus" viewBox="0 0 24 24" aria-hidden="true"><use href="#sig-star"/></svg>
+    Behold the College
+  </a>
+</section>
+{% endblock %}

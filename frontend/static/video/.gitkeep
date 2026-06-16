@@ -1,0 +1,2 @@
+# Heavy Hedra films live in object storage, not git (see assets/ASSETS-NEEDED.md).
+# This keeps the dir present so the static mount never 404s.
