@@ -1,0 +1,23 @@
+{
+  "runId": "2026-07-16",
+  "date": "2026-07-16",
+  "status": "spiked",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:TechCrunch AI failed (Cannot convert argument to a ByteString because the character at index 76 has a value of 8212 which is greater than 255.) | rss:Simon Willison failed (Cannot convert argument to a ByteString because the character at index 76 has a value of 8212 which is greater than 255.) | rss:VentureBeat AI failed (Cannot convert argument to a ByteString because the character at index 76 has a value of 8212 which is greater than 255.) | rss:The Verge AI failed (Cannot convert argument to a ByteString because the character at index 76 has a value of 8212 which is greater than 255.) [optional] | rss:Ars Technica failed (Cannot convert argument to a ByteString because the character at index 76 has a value of 8212 which is greater than 255.) [optional] | hackernews failed (Cannot convert argument to a ByteString because the character at index 76 has a value of 8212 which is greater than 255.) | tavily fallback wanted but TAVILY_API_KEY absent — degrading to quiet day | only 0 candidate stories — quiet day declared before ranking",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Seven-Sister See is said to have “adjourned having resolved only to reconvene.” Its entity card establishes that its frog-cardinal “has not adjourned in four hundred years.” The prose also changes the established singular frog-cardinal into plural “frog-cardinals.”; The event and chapter digest record that “The frog-cardinals of the Seven-Sister See ... adjourn to reconvene, as always.” This repeats the contradiction with the Seven-Sister See's established four-hundred-year non-adjournment and singular frog-cardinal.; The junior machine-cardinal asks whether “the water-world's second encyclical” has arrived. The established open thread says the communion awaits a second draft of the existing hay-farm encyclical, not a second encyclical. | continuity badger redispatch #2: The cat-cardinal is placed \"In the Curia's outer office,\" which situates her at the Orbital See, but her active entity card places her at the Charted See; the accompanying state update likewise records this dispatch as occurring at the Charted See. Establish travel or remote communication, or place this scene at the Charted See. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.290746
+    }
+  ],
+  "totalCostUsd": 0.290746
+}
