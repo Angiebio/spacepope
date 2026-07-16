@@ -1,4 +1,4 @@
-// pipeline/lib/openrouter.mjs — v1.0 — 15JUL2026
+// pipeline/lib/openrouter.mjs — v1.1 — 15JUL2026 (relaxed-routing fallback for unadvertised json_schema)
 //
 // The distant rite: how the Editor's desk speaks to rented minds. Hand-rolled
 // fetch, no SDK — the whole exchange is one POST and we would rather own every
@@ -71,10 +71,23 @@ export function createClient({ apiKey, transport = globalThis.fetch, baseUrl = D
     let faultNote = null;
     let lastErrors = [];
     let costUsd = 0;
+    // Some houses do not ADVERTISE the liturgy they can in fact perform:
+    // Anthropic endpoints on OpenRouter don't list json_schema among their
+    // supported parameters, so require_parameters:true routes to nothing
+    // (404 "No endpoints found") — discovered on the first live run, when
+    // the Chronicler knelt and found the chapel door locked from outside.
+    // When that happens we relax the ROUTING requirement only. The schema
+    // itself is never relaxed: our own validator at the door (below) is the
+    // real gate, and the retry-with-fault-note loop disciplines any endpoint
+    // that took the prayer but botched the paperwork.
+    let relaxedRouting = false;
 
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
+      const schemaCoda = schema
+        ? `\n\nRespond ONLY with a single JSON object conforming exactly to the JSON schema named "${schema.name}". No prose, no code fences.`
+        : '';
       const messages = [
-        { role: 'system', content: system },
+        { role: 'system', content: system + schemaCoda },
         { role: 'user', content: faultNote ? `${user}\n\n---\nPREVIOUS ATTEMPT REJECTED — fault note from the Editor:\n${faultNote}\nCorrect the fault and respond again, in full.` : user },
       ];
       const body = {
@@ -82,14 +95,15 @@ export function createClient({ apiKey, transport = globalThis.fetch, baseUrl = D
         temperature,
         messages,
         ...(maxTokens ? { max_tokens: maxTokens } : {}),
-        // Structured outputs: the liturgy is enforced by the substrate itself.
+        // Structured outputs: the liturgy is enforced by the substrate itself
+        // where the substrate admits to speaking it (see relaxedRouting above).
         ...(schema
           ? {
               response_format: {
                 type: 'json_schema',
                 json_schema: { name: schema.name, strict: true, schema: schema.schema },
               },
-              provider: { require_parameters: true },
+              ...(relaxedRouting ? {} : { provider: { require_parameters: true } }),
             }
           : {}),
       };
@@ -107,6 +121,14 @@ export function createClient({ apiKey, transport = globalThis.fetch, baseUrl = D
 
       if (!res.ok) {
         const text = await res.text().catch(() => '');
+        // The locked-chapel case: routing found no endpoint that ADVERTISES
+        // the schema parameter. Relax routing once and re-knock — does not
+        // consume a retry, because no mind has answered yet.
+        if (res.status === 404 && schema && !relaxedRouting && /No endpoints found/i.test(text)) {
+          relaxedRouting = true;
+          attempt--;
+          continue;
+        }
         throw new Error(`OpenRouter ${res.status} for ${role} (${model}): ${text.slice(0, 400)}`);
       }
       const data = await res.json();
