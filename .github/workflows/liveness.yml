@@ -1,0 +1,65 @@
+# .github/workflows/liveness.yml — v1.0 — 15JUL2026
+#
+# The weekly roll call (ROADMAP-02 §3 casting rules). Slugs are pinned; the
+# failure mode is a model quietly leaving the catalog. When a cast member
+# 404s, that See is sede vacante and a human must reseat the chair — so each
+# vacancy opens an issue titled "Sede vacante: <cardinal>".
+
+name: college-roll-call
+
+on:
+  schedule:
+    - cron: "37 9 * * 1"   # Mondays, before the week leans on the cast
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  roll-call:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Call the roll
+        id: roll
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set +e
+          node pipeline/liveness.mjs | tee roll-call.txt
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Open an issue per vacant see
+        if: steps.roll.outputs.exit == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # liveness.mjs prints one JSON line per vacancy.
+          grep '^{' roll-call.txt | while read -r line; do
+            member=$(echo "$line" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).sedeVacante))")
+            model=$(echo "$line" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).model))")
+            title="Sede vacante: ${member}"
+            if gh issue list --state open --search "\"$title\" in:title" --json title --jq '.[].title' | grep -Fxq "$title"; then
+              echo "issue already open: $title"
+            else
+              gh issue create --title "$title" \
+                --body "The pinned model \`${model}\` no longer answers the OpenRouter catalog. Reseat the chair in \`pipeline/casting.json\` (and update \`pipeline/lib/prices.json\` in the same commit)." \
+                --label pipeline
+            fi
+          done
+
+      - name: Roll call machinery failure
+        if: steps.roll.outputs.exit == '2'
+        run: echo "::error::liveness check itself failed (network or auth)" && exit 1

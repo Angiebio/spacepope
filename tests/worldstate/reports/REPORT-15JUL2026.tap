@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: chapter ref round-trip
+ok 1 - chapter ref round-trip
+  ---
+  duration_ms: 1.7596
+  type: 'test'
+  ...
+# Subtest: lint: every rule fires on the crafted state, at chapter 11
+ok 2 - lint: every rule fires on the crafted state, at chapter 11
+  ---
+  duration_ms: 13.8705
+  type: 'test'
+  ...
+# Subtest: lint: payoff_before_setup and ref_integrity fire
+ok 3 - lint: payoff_before_setup and ref_integrity fire
+  ---
+  duration_ms: 8.6347
+  type: 'test'
+  ...
+# Subtest: lint: a clean, current state stays silent
+ok 4 - lint: a clean, current state stays silent
+  ---
+  duration_ms: 8.6296
+  type: 'test'
+  ...
+# Subtest: injection: whole-word alias match, no substring hits
+ok 5 - injection: whole-word alias match, no substring hits
+  ---
+  duration_ms: 8.494
+  type: 'test'
+  ...
+# Subtest: injection: exactly ONE recursion pass
+ok 6 - injection: exactly ONE recursion pass
+  ---
+  duration_ms: 7.0041
+  type: 'test'
+  ...
+# Subtest: injection: hard character budget is enforced and flagged
+ok 7 - injection: hard character budget is enforced and flagged
+  ---
+  duration_ms: 7.6063
+  type: 'test'
+  ...
+# Subtest: merge: the full STATE_UPDATE files correctly, diff not rewrite
+ok 8 - merge: the full STATE_UPDATE files correctly, diff not rewrite
+  ---
+  duration_ms: 15.6848
+  type: 'test'
+  ...
+# Subtest: merge: timeline accumulates across merges (append-only)
+ok 9 - merge: timeline accumulates across merges (append-only)
+  ---
+  duration_ms: 19.0411
+  type: 'test'
+  ...
+# Subtest: merge: anomalies become notes, never silent skips
+ok 10 - merge: anomalies become notes, never silent skips
+  ---
+  duration_ms: 8.9399
+  type: 'test'
+  ...
+# Subtest: ladder: digest written; arc from digests at ch % 10; saga from arcs
+ok 11 - ladder: digest written; arc from digests at ch % 10; saga from arcs
+  ---
+  duration_ms: 23.0961
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 236.2059

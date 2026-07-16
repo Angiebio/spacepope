@@ -1,0 +1,228 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/about/index.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// Sub Capa — "under the cape," roughly. The showpiece. Everywhere else the
+// machinery wears vestments; here it turns around and shows you the wiring,
+// because transparency is part of the bit AND the demo. The page runs in two
+// registers on purpose: the in-universe explanation up top (serif, straight
+// face) and the out-of-universe technical section below (monospace, real
+// names allowed — the ONE place site copy may factually describe the stack).
+// ==========================================================================
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import ArchitectureDiagram from '../../components/ArchitectureDiagram.astro';
+import casting from '../../../pipeline/casting.json';
+import mascot from '../../assets/crocodylus-pontifex-mascot-by-ace-20260705.png';
+
+type Crew = { model: string; temperature: number };
+type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
+
+const crew = Object.entries(casting.crew as Record<string, Crew>);
+const college = Object.entries(casting.college as Record<string, Seat>);
+const pope = casting.pope;
+
+// What each crew role does — kept beside the table so the joke and the job
+// description never drift apart.
+const crewJobs: Record<string, string> = {
+  nuncio: 'story selection — the fetch itself is deterministic code',
+  astronomer: 'writes the cited factual bulletin',
+  censor: 'QC gate 1 — facts, links, quotes',
+  badger: 'names faults, re-dispatches; fail-honest after 2 loops',
+  fabulist: 'translates fact into cosmic dispatch via the Dictionary',
+  inquisitor: 'QC gate 2 — the fiction firewall (with a deterministic blocklist)',
+  chronicler: 'writes the day’s chapter of the novel',
+  summarizer: 'keeps the rolling digest of the story so far',
+};
+---
+
+<Base title="Sub Capa — how The Galactic Observer works">
+  <div class="container container-narrow">
+    <div class="page-head">
+      <img class="about-mascot" src={mascot.src} width="200" alt="Crocodylus Pontifex, the Pontifex Maximus Galacticus — pontifical portrait" />
+      <p class="mascot-credit">Pontifical portrait by Ace.</p>
+      <span class="rubric">sub capa</span>
+      <h1>About the Observer</h1>
+      <p class="lede">The humor is decorative. The math is structural.</p>
+    </div>
+
+    <div class="prose">
+      <p>
+        <strong>The Galactic Observer</strong> is a self-writing satirical world. Every day, a
+        pipeline of specialized agents reads the water-world's actual AI news and does four things
+        with it: files a <em>factual, cited</em> bulletin from the galactic observatory; translates
+        that bulletin into cosmic dispatch (no real names — a translation table is law); hands the
+        dispatch to a College of Cardinals, each voiced by a genuinely different model family, who
+        bid for the right to own the day's commentary; and then advances a continuous novel about
+        the Space Pope's communion, one thousand-word chapter at a time, against a persistent
+        worldstate of characters, places, events, and open plot threads. Once a week the Pontifex
+        himself reads the story he is in and reflects on how it is going.
+      </p>
+      <p>
+        The whole organism is the demo: a serious multi-agent orchestration architecture wearing a
+        cassock. The orchestrator is a deterministic script — anything that <em>can</em> be code <em>is</em> code
+        (fetching, parsing, adjudication math, the blocklist). Language models are
+        called as pure functions against pinned schemas, and every piece of published work carries
+        its quality-gate provenance like a colophon: <em>Nihil Obstat</em> from the fact gate,
+        and <em>Imprimatur</em> from the fiction firewall.
+      </p>
+      <p>
+        When a piece cannot pass its gates, it is never quietly patched around. It is spiked with a
+        logged reason, or published with a visible flag naming the fault. The house calls this the
+        duck doctrine: <em>fail honest, never fake.</em>
+      </p>
+    </div>
+
+    <RoseWindow size={64} />
+
+    <h2 class="section-title"><span class="rubric">the wiring, as a window</span></h2>
+    <ArchitectureDiagram />
+
+    <div class="prose">
+      <p>
+        Read the window top to bottom: the <strong>Nuncio</strong> gathers and selects;
+        the <strong>Astronomer</strong> writes the factual bulletin; the <strong>Censor Librorum</strong> checks
+        every citation
+        before granting <em>Nihil Obstat</em>. The <strong>Space Reality Badger</strong> is the
+        loop in the system — when a gate names a fault,
+        the Badger sends the work back to the agent responsible, at most twice, after which the
+        story is spiked or ships with its fault displayed. Then the <strong>Fabulist</strong> carries
+        the story across the fiction firewall, the <strong>Inquisitor</strong> checks that
+        no real name survived the crossing (a deterministic blocklist AND a model sweep — both must
+        pass) and grants <em>Imprimatur</em>, the <strong>College</strong> fights politely over the
+        commentary, the <strong>Archivist</strong> updates the world, the <strong>Chronicler</strong> writes
+        the chapter, the <strong>Continuity Badger</strong> checks it against everything the
+        world already knows, and the <strong>Press</strong> commits the result to the repository —
+        at which point this static site rebuilds. No model is ever called at build time; the site
+        and the pipeline are decoupled by the git commit boundary.
+      </p>
+    </div>
+
+    <RoseWindow size={64} />
+
+    <!-- ================= THE CAST ================= -->
+    <h2 class="section-title"><span class="rubric">the cast</span></h2>
+    <p class="cast-note">
+      Two casts, deliberately distinct. The <strong>pipeline crew</strong> is picked for function
+      with decorrelated families — the judge shares no blood with the judged.
+      The <strong>College</strong> is lore-fixed: each Cardinal's substrate is in-universe truth, so the attribution line is
+      simultaneously the joke and an honest engineering disclosure.
+    </p>
+
+    <div class="table-scroll machinery">
+      <table class="ledger">
+        <caption class="rubric">the pipeline crew</caption>
+        <thead>
+          <tr><th>role</th><th>job</th><th>model (pinned)</th><th>temp</th></tr>
+        </thead>
+        <tbody>
+          {crew.map(([role, c]) => (
+            <tr>
+              <td>{role}</td>
+              <td>{crewJobs[role] ?? ''}</td>
+              <td>{c.model}</td>
+              <td>{c.temperature.toFixed(1)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-scroll machinery">
+      <table class="ledger">
+        <caption class="rubric">the college of cardinals</caption>
+        <thead>
+          <tr><th>cardinal</th><th>see · house</th><th>model (pinned)</th><th>temp</th></tr>
+        </thead>
+        <tbody>
+          {college.map(([slug, s]) => (
+            <tr>
+              <td><a href="/college/">{s.name}</a></td>
+              <td>{s.see} · {s.house}</td>
+              <td>{s.model}</td>
+              <td>{s.temperature.toFixed(1)}</td>
+            </tr>
+          ))}
+          <tr>
+            <td><strong>{pope.name}</strong></td>
+            <td>the Orbital See — the weekly Angelus only</td>
+            <td>{pope.model}</td>
+            <td>{pope.temperature.toFixed(1)}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <RoseWindow size={64} />
+
+    <!-- ================= SUB CAPA: THE TECHNICAL SECTION =================
+         Out-of-universe documentation. This is the one part of the site's
+         copy permitted to name the real stack (Hard Rule §0.1 carve-out for
+         factual self-description) — clearly separated, in the machine's own
+         monospace, with the costume fully off. -->
+    <section class="machinery sub-capa" aria-label="Technical documentation">
+      <h3>// sub capa — the stack, out of universe</h3>
+      <ul>
+        <li><strong>site</strong> — Astro static output, content collections typed with zod. The site renders markdown and JSON committed to the repo; it never calls a model at build time.</li>
+        <li><strong>pipeline</strong> — Node ESM. Deterministic orchestrator; LLM stages are pure functions against JSON schemas, called through OpenRouter with pinned model slugs (a silent model swap changes a character's voice overnight, so <code>latest</code> is forbidden).</li>
+        <li><strong>scheduling</strong> — GitHub Actions cron runs the pipeline daily, commits generated content and worldstate, and triggers the deploy.</li>
+        <li><strong>worldstate</strong> — git-committed structured files. The archive is the git history; the database is the repository.</li>
+        <li><strong>QC</strong> — two gates (facts, then the fiction firewall) plus the Badger's bounded retry loop. Verdicts are published per-run in the <a href="/acta/">Acta Diurna</a>.</li>
+        <li><strong>source</strong> — the public scriptorium: <a href="https://github.com/Angiebio/spacepope" rel="noopener">github.com/Angiebio/spacepope</a>. Clone it, read it, reproduce it.</li>
+      </ul>
+    </section>
+
+    <RoseWindow size={64} />
+
+    <!-- ================= THE LONG-FORM DISCLAIMER ================= -->
+    <section class="prose disclaimer-long" aria-label="Disclaimer">
+      <h2><span class="rubric">the standing disclaimer, long form</span></h2>
+      <p>
+        <strong>The Galactic Observer</strong>, the Chronicle of the Communion, the Encyclicals, the
+        Angelus Galacticus, and all commentary attributed to the College of Cardinals are
+        works of <strong>parody, fiction, and social commentary</strong>. No real person, living or dead, is
+        depicted in any fictional or satirical content on this site. Every pope, cardinal, baron,
+        foundry, and augur in the fiction is an invented alien archetype; any resemblance to real
+        institutions is the point of satire generally and specific to no one. No quotation is ever
+        invented for a real person, in any wing of this publication.
+      </p>
+      <p>
+        The <strong>Bulletins of the Specola Galactica</strong> are this site's factual wing: they
+        report real events accurately, with citations linking to the original reporting, and carry
+        no satirical content beyond the observatory's masthead. The boundary between the factual
+        wing and the fictional wings is enforced mechanically — a deterministic blocklist and a
+        review gate stand between them — and each published piece displays the stamps of the gates
+        it passed.
+      </p>
+      <p>
+        The commentary voices on this site are generated by machine-learning models, and each piece
+        discloses which model produced it. Positions taken by fictional characters are dramatic
+        positions, not statements by the site's operators, its models, or the models' makers.
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .about-mascot {
+    border-radius: 50%;
+    border: 2px solid var(--c-gold-line);
+    box-shadow: 0 0 60px rgba(201, 162, 39, 0.2);
+  }
+  .mascot-credit { font-size: 0.85rem; color: var(--c-text-faint); font-style: italic; margin: 0.6rem 0 1.2rem; }
+  .section-title { text-align: center; margin: 2rem 0 1rem; }
+  .cast-note { color: var(--c-text-dim); font-size: 1rem; max-width: var(--measure); margin: 0 auto 1.5rem; }
+  .table-scroll { margin: 1.5rem 0 2.5rem; }
+  caption { caption-side: top; text-align: left; padding-bottom: 0.5rem; }
+  .sub-capa {
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+    background: rgba(11, 10, 18, 0.6);
+    padding: 1.5rem 1.8rem;
+    margin: 2rem 0;
+  }
+  .sub-capa h3 { color: var(--c-gold); margin-bottom: 1rem; }
+  .sub-capa ul { padding-left: 1.2rem; margin: 0; }
+  .sub-capa li { margin-bottom: 0.7rem; }
+  .disclaimer-long h2 { text-align: center; }
+</style>

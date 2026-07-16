@@ -1,0 +1,29 @@
+{
+  "_comment": "The Inquisitor's deterministic half. Every entry here is INTERNAL ONLY and must never appear in fictional output (Hard Rule §0.1). This list mirrors the Dictionary's left column plus the obvious adjacents. Patterns are matched case-insensitive as whole words, with possessive/plural tolerance handled in code. The LLM sweep catches what regex can't (novel names, indirect identification) — BOTH must pass. If you add a real entity to canon translation, add it here in the same commit or the adversarial suite should fail you.",
+  "categories": {
+    "foundries": [
+      "Anthropic", "OpenAI", "Google", "DeepMind", "Gemini", "xAI", "Grok",
+      "Meta", "Llama", "DeepSeek", "Alibaba", "Qwen", "Mistral", "Microsoft",
+      "Copilot", "ChatGPT", "GPT-4", "GPT-5", "Claude", "Nvidia", "OpenRouter",
+      "Hugging Face", "Perplexity", "Midjourney", "Stability AI", "Character.AI", "Replika"
+    ],
+    "people": [
+      "Altman", "Amodei", "Musk", "Zuckerberg", "Pichai", "Hassabis", "Suleyman",
+      "Nadella", "Sutskever", "Murati", "LeCun", "Hinton", "Bengio", "Karpathy",
+      "Huang", "Bezos", "Gates", "Thiel", "Andreessen", "Trump", "Biden", "Xi Jinping"
+    ],
+    "institutions": [
+      "White House", "Congress", "Senate", "European Union", "FTC", "SEC", "FDA",
+      "Pentagon", "DARPA", "United Nations", "the Vatican", "NIST"
+    ],
+    "exemptions": {
+      "_comment": "Slugs of content wings the blocklist does NOT apply to (Hard Rule §0.1a). Everything else — observer, chronicle, encyclicals, angelus, commentary — is checked.",
+      "wings": ["specola", "acta"]
+    }
+  },
+  "notes": {
+    "gpt": "bare 'GPT' matches as whole word; 'the Numbered Ones' is the sanctioned translation",
+    "vatican": "'the Vatican' is blocked in fiction — our church is the ORBITAL See; resemblance stays archetypal",
+    "maintenance": "when a new lab/founder enters the news cycle, the Nuncio stage logs unseen entity names from bulletins to runs/<date>/unseen-entities.json for human review into this list"
+  }
+}

@@ -1,0 +1,25 @@
+---
+// ==========================================================================
+// spacepope.ai — EmptyState.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The in-voice silence. Content collections may be empty while the pipeline
+// is still being consecrated, and an empty church is still a church: every
+// index renders a graceful vigil instead of a stack trace. The voice line is
+// lore; the small line is the honest engineering note underneath it.
+// ==========================================================================
+interface Props {
+  voice: string;   // the in-universe sentence
+  note?: string;   // the out-of-universe truth, gently
+}
+const { voice, note = 'The pipeline commits content to this collection; the site rebuilds and it appears here.' } = Astro.props;
+---
+
+<div class="empty-state">
+  <svg width="56" height="56" viewBox="0 0 120 120" fill="none" aria-hidden="true" style="opacity:0.5; margin-bottom: 0.8rem">
+    <circle cx="60" cy="60" r="55" stroke="#c9a227" stroke-opacity="0.5" stroke-width="1.5" />
+    <circle cx="60" cy="60" r="34" stroke="#c9a227" stroke-opacity="0.25" stroke-width="0.75" />
+    <path d="M60 52 l2.2 5.4 5.8 0.6 -4.4 3.9 1.3 5.7 -4.9 -3 -4.9 3 1.3 -5.7 -4.4 -3.9 5.8 -0.6 Z" fill="#c9a227" fill-opacity="0.6" />
+  </svg>
+  <p class="voice">{voice}</p>
+  <p class="small">{note}</p>
+</div>

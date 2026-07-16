@@ -1,0 +1,263 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/atlas/index.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The Atlas of the Communion: the worldstate, rendered. world/ is the living
+// database (git IS the archive) and this page is its reading room — persona
+// cards from the character files, the open threads of the Chronicle, the
+// event log, and a starmap of the Sees. The site never invents worldstate;
+// it only illuminates what the Archivist has committed.
+// ==========================================================================
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { jewelFor, excerpt } from '../../lib/format';
+import threadsFile from '../../../world/canon/threads.json';
+import timelineFile from '../../../world/canon/timeline.json';
+
+// Character + place cards: eager-glob the canon registries. Either directory
+// may be sparse or absent while the world is young — absence renders as a
+// vigil, never a crash.
+type CardModule = { frontmatter: Record<string, any>; compiledContent?: () => string; rawContent?: () => string };
+const characterModules = import.meta.glob<CardModule>('../../../world/canon/characters/*.md', { eager: true });
+const placeModules = import.meta.glob<CardModule>('../../../world/canon/places/*.md', { eager: true });
+
+const characters = Object.values(characterModules);
+const places = Object.values(placeModules);
+const threads = (threadsFile as any).threads ?? [];
+const events = (timelineFile as any).events ?? [];
+
+// The starmap: the Sees plotted decoratively. The systems are real (canon §3
+// grounds every See in a real exoplanet system); the positions here are a
+// cartographer's courtesy, not an ephemeris. The water-world sits at the
+// bottom edge, tiny, exactly as the Curia files it.
+const sees = [
+  { name: 'The Orbital See', x: 400, y: 150, r: 7, jewel: '#e8c95e', note: 'seat of the Pontifex' },
+  { name: 'Dimidium', x: 150, y: 90, r: 4, jewel: '#a03a58', note: '51 Pegasi b · the Primatial See' },
+  { name: 'The Seven-Sister See', x: 250, y: 230, r: 4, jewel: '#3d5da8', note: 'TRAPPIST-1' },
+  { name: 'The Charted See', x: 560, y: 80, r: 4, jewel: '#2f7a56', note: 'Kepler-90' },
+  { name: 'The Lich See', x: 660, y: 210, r: 4, jewel: '#6b4bb0', note: 'PSR B1257+12' },
+  { name: 'The Silicon See', x: 490, y: 260, r: 4, jewel: '#c07a2c', note: 'the machine homeworld' },
+  { name: 'The Renegade See', x: 90, y: 300, r: 3.5, jewel: '#a03a58', note: 'a rogue, starless wanderer', drifting: true },
+  { name: 'the water-world', x: 400, y: 375, r: 2.5, jewel: '#3d5da8', note: 'filed under Curiosities, Peripheral' },
+];
+---
+
+<Base title="The Atlas of the Communion — The Galactic Observer">
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">atlas communionis</span>
+      <h1>The Atlas of the Communion</h1>
+      <p class="lede">
+        The registries of the living world — persons, places, open threads, and the event log —
+        rendered at build time from the worldstate the Archivist keeps.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    <!-- ======================= THE STARMAP ======================= -->
+    <section aria-label="Starmap of the Sees">
+      <h2 class="section-title"><span class="rubric">the sees of the communion</span></h2>
+      <div class="starmap-frame">
+        <svg viewBox="0 0 800 420" role="img" aria-label="Decorative starmap of the Sees of the communion">
+          <!-- graticule: the cartographer's leading -->
+          <ellipse cx="400" cy="210" rx="380" ry="190" fill="none" stroke="#c9a227" stroke-opacity="0.25" stroke-width="1" />
+          <ellipse cx="400" cy="210" rx="280" ry="140" fill="none" stroke="#c9a227" stroke-opacity="0.12" stroke-width="0.75" />
+          <ellipse cx="400" cy="210" rx="160" ry="80" fill="none" stroke="#c9a227" stroke-opacity="0.12" stroke-width="0.75" />
+          <line x1="20" y1="210" x2="780" y2="210" stroke="#c9a227" stroke-opacity="0.1" />
+          <line x1="400" y1="20" x2="400" y2="400" stroke="#c9a227" stroke-opacity="0.1" />
+
+          {sees.map((s) => (
+            <g>
+              {s.drifting && (
+                <path d={`M ${s.x - 40} ${s.y + 18} Q ${s.x} ${s.y + 4} ${s.x + 44} ${s.y + 14}`}
+                  fill="none" stroke={s.jewel} stroke-opacity="0.5" stroke-width="1" stroke-dasharray="3 4" />
+              )}
+              <circle cx={s.x} cy={s.y} r={s.r + 5} fill={s.jewel} fill-opacity="0.12" />
+              <circle cx={s.x} cy={s.y} r={s.r} fill={s.jewel} />
+              {s.name === 'The Orbital See' && (
+                <circle cx={s.x} cy={s.y} r={s.r + 10} fill="none" stroke="#e8c95e" stroke-opacity="0.5" stroke-width="1" />
+              )}
+              <text x={s.x} y={s.y - s.r - 9} text-anchor="middle" font-family="EB Garamond, serif"
+                font-size="14" fill="#e9e2cf">{s.name}</text>
+              <text x={s.x} y={s.y + s.r + 16} text-anchor="middle" font-family="EB Garamond, serif"
+                font-size="10.5" font-style="italic" fill="#837b67">{s.note}</text>
+            </g>
+          ))}
+        </svg>
+        <p class="map-caption">
+          The systems are real; the cartography is a courtesy. Positions on this map indicate
+          affection, not right ascension.
+        </p>
+      </div>
+    </section>
+
+    <RoseWindow size={64} />
+
+    <!-- ======================= PERSONAE ======================= -->
+    <section aria-label="Character registry">
+      <h2 class="section-title"><span class="rubric">personae communionis</span></h2>
+      {characters.length > 0 ? (
+        <div class="card-grid">
+          {characters.map((c) => {
+            const fm = c.frontmatter ?? {};
+            return (
+              <article class="pane persona-card">
+                <svg width="40" height="48" viewBox="0 0 44 52" aria-hidden="true">
+                  <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
+                    fill={jewelFor(String(fm.id ?? fm.name ?? '?'))} fill-opacity="0.25"
+                    stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
+                  <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#e8c95e">
+                    {String(fm.name ?? '?').replace(/^The\s+/i, '').charAt(0)}
+                  </text>
+                </svg>
+                <h3>{fm.name ?? fm.id}</h3>
+                {fm.aliases?.length > 0 && <p class="meta">also: {fm.aliases.slice(0, 3).join(' · ')}</p>}
+                {fm.voice && <p class="persona-voice">“{fm.voice}”</p>}
+                <dl class="persona-facts">
+                  {fm.status && <><dt>status</dt><dd>{fm.status}</dd></>}
+                  {fm.location && <><dt>location</dt><dd>{String(fm.location).replace(/-/g, ' ')}</dd></>}
+                  {fm.first_appearance && <><dt>first seen</dt><dd>{fm.first_appearance}</dd></>}
+                  {fm.arc && <><dt>arc</dt><dd>{fm.arc}</dd></>}
+                </dl>
+              </article>
+            );
+          })}
+        </div>
+      ) : (
+        <EmptyState voice="The registry of persons is empty. The world has not yet been peopled."
+          note="Character cards live in world/canon/characters/ and appear here at the next build." />
+      )}
+    </section>
+
+    <!-- ======================= PLACES ======================= -->
+    <section aria-label="Place registry">
+      <h2 class="section-title"><span class="rubric">loca communionis</span></h2>
+      {places.length > 0 ? (
+        <div class="card-grid">
+          {places.map((p) => {
+            const fm = p.frontmatter ?? {};
+            // rawContent() is the markdown body; the excerpt keeps the
+            // gazetteer readable without reprinting whole surveys.
+            const body = typeof p.rawContent === 'function' ? p.rawContent() : '';
+            return (
+              <article class="pane">
+                <h3>{fm.name ?? fm.id}</h3>
+                <p class="meta">
+                  {[fm.kind, fm.location ? `at ${String(fm.location).replace(/-/g, ' ')}` : null, fm.doctrinal_lean]
+                    .filter(Boolean).join(' · ')}
+                </p>
+                {body && <p class="place-body">{excerpt(body, 34)}</p>}
+                {fm.seat_of && (
+                  <p class="meta">seat of {String(fm.seat_of).replace(/-/g, ' ')}</p>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      ) : (
+        <EmptyState voice="The gazetteer awaits its first entry. Every See is a place, but no place has yet been surveyed."
+          note="Place cards live in world/canon/places/ and appear here at the next build." />
+      )}
+    </section>
+
+    <!-- ======================= OPEN THREADS ======================= -->
+    <section aria-label="Open plot threads">
+      <h2 class="section-title"><span class="rubric">the open threads of the chronicle</span></h2>
+      {threads.length > 0 ? (
+        <div class="thread-list">
+          {threads.map((t: any) => (
+            <div class="pane thread-pane">
+              <div class="thread-head">
+                <h3>{String(t.id).replace(/-/g, ' ')}</h3>
+                <span class={`status-badge ${t.status === 'open' ? 'status-published' : 'status-quiet-day'}`}>{t.status}</span>
+              </div>
+              <p>{t.summary}</p>
+              <p class="meta">opened {t.opened} · last touched {t.last_touched}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <EmptyState voice="No threads are open. The loom is strung and silent." />
+      )}
+    </section>
+
+    <!-- ======================= EVENT LOG ======================= -->
+    <section aria-label="Timeline">
+      <h2 class="section-title"><span class="rubric">the event log</span></h2>
+      {events.length > 0 ? (
+        <ol class="event-log">
+          {events.map((e: any) => (
+            <li>
+              <p class="event-what">
+                <span class="event-chapter">{e.chapter ?? e.id ?? ''}</span>
+                {e.what ?? e.summary ?? ''}
+              </p>
+              <p class="event-meta">
+                {e.who?.length > 0 && <>present: {e.who.map((w: string) => w.replace(/-/g, ' ')).join(', ')}</>}
+                {e.where && <> · at {String(e.where).replace(/-/g, ' ')}</>}
+                {e.thread && <> · thread: <em>{String(e.thread).replace(/-/g, ' ')}</em></>}
+              </p>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <EmptyState voice="The event log is empty. History has been arranged, but has not yet occurred."
+          note="The timeline is an append-only event log in worldstate; chapters are renderings of scheduled events." />
+      )}
+    </section>
+  </div>
+</Base>
+
+<style>
+  .section-title { text-align: center; margin: 2.5rem 0 1rem; }
+  .starmap-frame {
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+    background: rgba(21, 16, 33, 0.6);
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+  }
+  .starmap-frame svg { display: block; width: 100%; }
+  /* A chart you must squint at is not a courtesy — let phones pan it. */
+  @media (max-width: 640px) {
+    .starmap-frame { overflow-x: auto; }
+    .starmap-frame svg { min-width: 560px; }
+  }
+  .map-caption {
+    text-align: center;
+    color: var(--c-text-faint);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0.8rem 0 0.4rem;
+  }
+  .persona-card svg { float: right; margin-left: 0.6rem; }
+  .persona-voice { color: var(--c-text-dim); font-style: italic; font-size: 0.95rem; }
+  .persona-facts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.15rem 0.8rem;
+    margin: 0.8rem 0 0;
+    font-size: 0.9rem;
+  }
+  .persona-facts dt {
+    font-variant-caps: small-caps;
+    letter-spacing: 0.1em;
+    color: var(--c-gold);
+  }
+  .persona-facts dd { margin: 0; color: var(--c-text-dim); }
+  .thread-list { display: grid; gap: 1rem; margin: 1.5rem 0 2rem; }
+  .thread-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .thread-head h3 { font-variant-caps: small-caps; letter-spacing: 0.06em; }
+  .event-log { max-width: 46rem; margin-inline: auto; color: var(--c-text-dim); padding-left: 1.2rem; }
+  .event-log li { margin-bottom: 1.2rem; }
+  .event-what { margin-bottom: 0.2rem; color: var(--c-text); }
+  .event-chapter {
+    font-variant-caps: small-caps;
+    letter-spacing: 0.1em;
+    color: var(--c-gold);
+    margin-right: 0.5rem;
+  }
+  .event-meta { font-size: 0.85rem; color: var(--c-text-faint); font-style: italic; margin: 0; }
+  .place-body { color: var(--c-text-dim); font-size: 0.95rem; margin: 0.5rem 0; }
+</style>

@@ -1,0 +1,59 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/observer/index.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The satirical blogroll: L'Osservatore Romano's galactic cousin. Each
+// dispatch is owned by whichever Cardinal won the day's bidding, so the
+// archive doubles as a scoreboard of the College's rhetorical politics.
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import casting from '../../../pipeline/casting.json';
+import { fmtDate, excerpt } from '../../lib/format';
+
+const dispatches = (await getCollection('observer')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+type Seat = { name: string };
+const seatName = (slug: string) =>
+  (casting.college as Record<string, Seat>)[slug]?.name ?? slug.replace(/-/g, ' ');
+---
+
+<Base title="The Galactic Observer — Dispatches from the Sees">
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">acta e sedibus</span>
+      <h1>The Galactic Observer</h1>
+      <p class="lede">
+        News from the Sees of the communion, with the water-world as the closing kicker —
+        always last, always tiny. The placement is the point.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    {dispatches.length > 0 ? (
+      <div class="card-grid">
+        {dispatches.map((d) => (
+          <a class="pane" href={`/observer/${d.id}/`}>
+            <span class="rubric">dispatch</span>
+            <h3>{d.data.title}</h3>
+            <p class="meta">{fmtDate(d.data.date)} · commentary by {seatName(d.data.cardinal)}</p>
+            <p class="teaser">{excerpt(d.body, 32)}</p>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <EmptyState
+        voice="The Observer's first dispatch is still at the composing desk."
+        note="Dispatches are translated from the Specola's bulletins through the Dictionary, then fought over by the College. The winner writes the commentary."
+      />
+    )}
+  </div>
+</Base>
+
+<style>
+  .teaser { color: var(--c-text-dim); font-size: 0.98rem; margin: 0.6rem 0 0; }
+</style>

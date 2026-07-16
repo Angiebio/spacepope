@@ -1,0 +1,23 @@
+{
+  "_comment": "Fixture copy of the seed threads for the golden run sandbox.",
+  "threads": [
+    {
+      "id": "earths-cardinal-question",
+      "status": "open",
+      "opened": "ch-001",
+      "last_touched": "ch-001",
+      "target_resolution": null,
+      "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided.",
+      "promises": []
+    },
+    {
+      "id": "the-feast-of-the-sunset-mind",
+      "status": "open",
+      "opened": "ch-001",
+      "last_touched": "ch-001",
+      "target_resolution": null,
+      "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed.",
+      "promises": []
+    }
+  ]
+}

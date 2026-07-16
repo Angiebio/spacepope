@@ -1,0 +1,78 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/specola/[...slug].astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// One bulletin. Real names, real links, no costume — this is the wing where
+// Hard Rule §0.1a REQUIRES accuracy instead of forbidding it. The citations
+// render as a telescope log: numbered observations, source on the right,
+// every line pointing at something that actually happened.
+// ==========================================================================
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StampColophon from '../../components/StampColophon.astro';
+import BadgerFlag from '../../components/BadgerFlag.astro';
+import { fmtDate } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const bulletins = await getCollection('specola');
+  return bulletins.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Which dispatches grew out of this bulletin? Cross the firewall forward.
+const dispatches = await getCollection('observer', (d) => d.data.storyIds.includes(entry.data.storyId));
+---
+
+<Base title={`${entry.data.title} — Bulletins of the Specola Galactica`}>
+  <article class="container container-narrow">
+    <header class="page-head">
+      <span class="rubric">bulletin · specola galactica</span>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{fmtDate(entry.data.date)} · filed under {entry.data.storyId}</p>
+    </header>
+
+    {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <section class="telescope-log" aria-label="Citations">
+      <span class="rubric">observation log · citations</span>
+      <ol>
+        {entry.data.citations.map((c) => (
+          <li>
+            <a href={c.url} rel="noopener">{c.title}</a>
+            <span class="obs-source">{c.source}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    {dispatches.length > 0 && (
+      <aside class="grew-into">
+        <span class="rubric">as the observer told it</span>
+        <ul>
+          {dispatches.map((d) => (
+            <li><a href={`/observer/${d.id}/`}>{d.data.title}</a></li>
+          ))}
+        </ul>
+      </aside>
+    )}
+
+    <StampColophon stamps={entry.data.stamps} />
+  </article>
+</Base>
+
+<style>
+  .grew-into {
+    margin-top: 2.5rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+  }
+  .grew-into ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+</style>

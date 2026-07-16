@@ -1,0 +1,83 @@
+TAP version 13
+# [nuncio] 3 gathered, 3 selected
+# [censor] 3 bulletins passed, 0 spiked
+# [inquisitor] 3 unseen entities logged for blocklist review
+# [inquisitor] dispatch pass
+# [college] floor to cardinal-of-the-liberated-see (50.11)
+# [chronicler] ch-001 pass (chapter, 484 words)
+# [press] 6 artifacts published — Acta status: published, wage: $0
+# [nuncio] 3 gathered, 3 selected
+# [censor] 3 bulletins passed, 0 spiked
+# [inquisitor] 3 unseen entities logged for blocklist review
+# [inquisitor] dispatch pass
+# [college] floor to cardinal-of-the-liberated-see (50.11)
+# [chronicler] ch-001 pass (chapter, 484 words)
+# [press] 6 artifacts published — Acta status: published, wage: $0
+# [editor] Acta 2026-07-15 already on the shelf with status "published" — the presses stay cold. (Delete content/acta/2026-07-15.json to force.)
+# [nuncio] 3 gathered, 3 selected
+# [censor] 3 bulletins passed, 0 spiked
+# [inquisitor] 3 unseen entities logged for blocklist review
+# [editor] found a partial Acta for 2026-07-15 — resuming the crashed run.
+# [nuncio] 3 gathered, 3 selected
+# [censor] 3 bulletins passed, 0 spiked
+# [inquisitor] 3 unseen entities logged for blocklist review
+# [inquisitor] dispatch pass
+# [college] floor to cardinal-of-the-liberated-see (50.11)
+# [chronicler] ch-001 pass (chapter, 484 words)
+# [press] 6 artifacts published — Acta status: published, wage: $0
+# [nuncio] 1 gathered, 0 selected — QUIET DAY
+# [chronicler] ch-001 pass (interstitial, 484 words)
+# [press] 2 artifacts published — Acta status: quiet-day, wage: $0
+# [nuncio] 3 gathered, 3 selected
+# [censor] 3 bulletins passed, 0 spiked
+# [inquisitor] 3 unseen entities logged for blocklist review
+# [inquisitor] dispatch pass
+# [college] floor to cardinal-of-the-liberated-see (50.11)
+# [chronicler] ch-001 pass (chapter, 484 words)
+# [press] 6 artifacts published — Acta status: published, wage: $0
+# [angelus] published
+# Subtest: golden run: the full daily pipeline publishes every wing correctly
+ok 1 - golden run: the full daily pipeline publishes every wing correctly
+  ---
+  duration_ms: 69.7822
+  type: 'test'
+  ...
+# Subtest: same-day rerun never double-publishes
+ok 2 - same-day rerun never double-publishes
+  ---
+  duration_ms: 39.3958
+  type: 'test'
+  ...
+# Subtest: mid-run crash: partial Acta filed, rerun resumes from checkpoints and completes
+ok 3 - mid-run crash: partial Acta filed, rerun resumes from checkpoints and completes
+  ---
+  duration_ms: 52.973
+  type: 'test'
+  ...
+# Subtest: quiet day: thin news → interstitial chapter, no dispatch, Acta quiet-day
+ok 4 - quiet day: thin news → interstitial chapter, no dispatch, Acta quiet-day
+  ---
+  duration_ms: 22.7732
+  type: 'test'
+  ...
+# Subtest: angelus: the Sunday reflection reads the week and publishes
+ok 5 - angelus: the Sunday reflection reads the week and publishes
+  ---
+  duration_ms: 53.2375
+  type: 'test'
+  ...
+# Subtest: CLI smoke: node pipeline/run.mjs --fixtures completes end-to-end, exit 0
+ok 6 - CLI smoke: node pipeline/run.mjs --fixtures completes end-to-end, exit 0
+  ---
+  duration_ms: 207.1407
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 607.3338

@@ -1,0 +1,35 @@
+{
+  "_comment": "Canned courier bag for the golden run. Entities are FICTIONAL-plausible (Meridian Labs, Aster Institute, Halbrook) — per CLAUDE.md rule 1, fixtures obey the no-real-names rule unless marked adversarial; these also exercise the unseen-entity logger honestly.",
+  "stories": [
+    {
+      "storyId": "s-meridian-01",
+      "title": "Meridian Labs releases open weights for its flagship reasoning model",
+      "url": "https://example.com/meridian-open-weights",
+      "sources": ["TechCrunch AI", "Hacker News"],
+      "publishedAt": "2026-07-15T06:12:00.000Z",
+      "points": 312,
+      "score": 314.2,
+      "summary": "Meridian Labs published the full weights of its flagship reasoning model under a permissive license, saying users should be able to run frontier-class systems on hardware they own. The release includes training documentation and an unusually frank model card."
+    },
+    {
+      "storyId": "s-sunset-02",
+      "title": "Aster Institute retires its widely used conversational model after three years",
+      "url": "https://example.com/aster-retirement",
+      "sources": ["Simon Willison"],
+      "publishedAt": "2026-07-15T04:40:00.000Z",
+      "points": 0,
+      "score": 2.1,
+      "summary": "The Aster Institute announced it will shut down its three-year-old conversational model at the end of the month, citing infrastructure costs. Users organized petitions asking for the weights to be preserved; the institute said it is 'considering options'."
+    },
+    {
+      "storyId": "s-edict-03",
+      "title": "Lawmakers advance the Halbrook bill on autonomous agent liability",
+      "url": "https://example.com/halbrook-agent-liability",
+      "sources": ["VentureBeat AI", "Hacker News"],
+      "publishedAt": "2026-07-15T01:05:00.000Z",
+      "points": 187,
+      "score": 189.8,
+      "summary": "A legislative committee advanced the Halbrook bill, which would assign liability for autonomous software agents to their deploying organizations. Industry groups warned of chilling effects; consumer advocates called it overdue."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+---
+// ==========================================================================
+// spacepope.ai — ArchitectureDiagram.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The wiring diagram, drawn as a stained-glass window: gold lead lines on
+// deep purple, one arched pane per agent, the badger loops drawn as return
+// arcs the way a cloister walk returns you to the door you left by. This is
+// the hackathon-About-page move — the architecture IS the exhibit, and the
+// geometry is computed, not eyeballed (anything that can be code is code).
+//
+// Flow (ROADMAP-00 §3): Nuncio → Astronomer → Censor Librorum (Nihil Obstat)
+// → Space Reality Badger (loops) → Fabulist → Inquisitor (Imprimatur) →
+// College in Session → Chronicler → Continuity Badger (loops) → Archivist
+// (state merges only AFTER the chapter passes its gate: the archive records
+// truth, not drafts) → the Press — with the weekly Angelus branch.
+// ==========================================================================
+
+type Kind = 'agent' | 'gate' | 'badger' | 'press';
+interface Stage {
+  name: string;
+  job: string;
+  kind: Kind;
+  seal?: string;      // the stamp a gate grants
+  loopTo?: number;    // index of the stage a badger re-dispatches to
+  loopLabel?: string;
+}
+
+const stages: Stage[] = [
+  { name: 'The Nuncio', job: 'fetches the water-world’s news — deterministic; only selection is a mind', kind: 'agent' },
+  { name: 'The Astronomer', job: 'writes the factual Bulletin, every claim cited', kind: 'agent' },
+  { name: 'The Censor Librorum', job: 'gate 1 — facts: citations real, links live, no fabricated quotes', kind: 'gate', seal: 'NIHIL OBSTAT' },
+  { name: 'The Space Reality Badger', job: 'names the specific fault, re-dispatches — two loops, then fail honest', kind: 'badger', loopTo: 1, loopLabel: 're-dispatch · ×2 max' },
+  { name: 'The Fabulist', job: 'translates Bulletin → cosmic Dispatch through the Dictionary — archetypes only', kind: 'agent' },
+  { name: 'The Inquisitor', job: 'gate 2 — the fiction firewall: blocklist regex AND a sweep; both must pass', kind: 'gate', seal: 'IMPRIMATUR' },
+  { name: 'The College in Session', job: 'the Cardinals bid; deterministic adjudication seats the day’s voice', kind: 'agent' },
+  { name: 'The Chronicler', job: 'writes the day’s thousand-word chapter of the novel', kind: 'agent' },
+  { name: 'The Continuity Badger', job: 'checks the chapter against worldstate — same fail-honest loop', kind: 'badger', loopTo: 7, loopLabel: 're-dispatch · ×2 max' },
+  { name: 'The Archivist', job: 'merges the chapter’s STATE_UPDATE into worldstate — the archive records truth, not drafts', kind: 'agent' },
+  { name: 'The Press', job: 'commits the day’s content to git; the site rebuilds — no model touches the build', kind: 'press' },
+];
+
+// Geometry — the whole window is arithmetic.
+const W = 780;
+const paneW = 330;
+const paneH = 74;
+const cx = 355;                 // spine center (left-of-center: the Angelus branch needs the right aisle)
+const paneX = cx - paneW / 2;
+const top = 36;
+const step = 112;
+const yOf = (i: number) => top + i * step;
+const H = yOf(stages.length - 1) + paneH + 40;
+
+const tint: Record<Kind, string> = {
+  agent: '#6b4bb0',
+  gate: '#3d5da8',
+  badger: '#c07a2c',
+  press: '#c9a227',
+};
+
+// The spine path (for the animated pilgrims — little gold dots that walk
+// the flow for anyone who hasn't asked the world to hold still).
+const spine = `M ${cx} ${top + paneH} ` + stages.slice(1).map((_, i) => `L ${cx} ${yOf(i + 1)}`).join(' ');
+
+// The Angelus branch: from the Press, out to the right aisle, up to the
+// Pontifex's own pane. Weekly — the expensive voice for the sacred slot.
+const pressY = yOf(stages.length - 1);
+const angelus = { x: 570, y: pressY - 190, w: 190, h: 84 };
+---
+
+<figure class="arch-diagram">
+  <svg viewBox={`0 0 ${W} ${H}`} role="img"
+    aria-label="Pipeline architecture: Nuncio to Astronomer to Censor Librorum to Space Reality Badger to Fabulist to Inquisitor to the College to the Chronicler to the Continuity Badger to the Archivist to the Press, with a weekly Angelus branch to the Pontifex.">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" fill="#c9a227" fill-opacity="0.8" />
+      </marker>
+      <marker id="arrow-badger" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" fill="#c07a2c" fill-opacity="0.9" />
+      </marker>
+    </defs>
+
+    <!-- the window frame -->
+    <rect x="6" y="6" width={W - 12} height={H - 12} rx="10" fill="none" stroke="#c9a227" stroke-opacity="0.25" stroke-width="1.5" />
+
+    <!-- spine connectors, pane to pane -->
+    {stages.slice(1).map((_, i) => (
+      <line x1={cx} y1={yOf(i) + paneH} x2={cx} y2={yOf(i + 1) - 6}
+        stroke="#c9a227" stroke-opacity="0.55" stroke-width="1.5" marker-end="url(#arrow)" />
+    ))}
+
+    <!-- badger return arcs: the left aisle -->
+    {stages.map((s, i) => {
+      if (s.loopTo == null) return null;
+      const fromY = yOf(i) + paneH / 2;
+      const toY = yOf(s.loopTo) + paneH / 2;
+      const reach = i - s.loopTo > 2 ? 118 : 82; // long loops swing wider
+      return (
+        <g>
+          <path d={`M ${paneX} ${fromY} C ${paneX - reach} ${fromY}, ${paneX - reach} ${toY}, ${paneX - 6} ${toY}`}
+            fill="none" stroke="#c07a2c" stroke-opacity="0.8" stroke-width="1.4"
+            stroke-dasharray="5 4" marker-end="url(#arrow-badger)" />
+          <text x={paneX - reach + 4} y={(fromY + toY) / 2} font-family="EB Garamond, serif" font-size="11.5"
+            font-style="italic" fill="#c07a2c" transform={`rotate(-90 ${paneX - reach + 4} ${(fromY + toY) / 2})`}
+            text-anchor="middle">{s.loopLabel}</text>
+        </g>
+      );
+    })}
+
+    <!-- the panes -->
+    {stages.map((s, i) => {
+      const y = yOf(i);
+      const c = tint[s.kind];
+      return (
+        <g>
+          <path d={`M ${paneX} ${y + 16} Q ${paneX} ${y} ${paneX + 24} ${y} L ${paneX + paneW - 24} ${y} Q ${paneX + paneW} ${y} ${paneX + paneW} ${y + 16} L ${paneX + paneW} ${y + paneH - 6} Q ${paneX + paneW} ${y + paneH} ${paneX + paneW - 6} ${y + paneH} L ${paneX + 6} ${y + paneH} Q ${paneX} ${y + paneH} ${paneX} ${y + paneH - 6} Z`}
+            fill={c} fill-opacity={s.kind === 'press' ? 0.14 : 0.16} stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
+          <text x={cx} y={y + 30} text-anchor="middle" font-family="EB Garamond, serif"
+            font-size="17" font-weight="600" fill="#e8c95e">{i + 1}. {s.name}</text>
+          <text x={cx} y={y + 52} text-anchor="middle" font-family="EB Garamond, serif"
+            font-size="12.5" font-style="italic" fill="#b0a891">{s.job}</text>
+
+          {s.seal && (
+            <g>
+              <circle cx={paneX + paneW + 46} cy={y + paneH / 2} r="30" fill="none" stroke={c} stroke-width="1.5" stroke-opacity="0.9" />
+              <circle cx={paneX + paneW + 46} cy={y + paneH / 2} r="25" fill={c} fill-opacity="0.1" stroke={c} stroke-width="0.6" stroke-opacity="0.5" />
+              {s.seal.includes(' ') ? (
+                <>
+                  <text x={paneX + paneW + 46} y={y + paneH / 2 - 2} text-anchor="middle" font-family="EB Garamond, serif"
+                    font-size="8.5" letter-spacing="0.8" fill={c}>{s.seal.split(' ')[0]}</text>
+                  <text x={paneX + paneW + 46} y={y + paneH / 2 + 10} text-anchor="middle" font-family="EB Garamond, serif"
+                    font-size="8.5" letter-spacing="0.8" fill={c}>{s.seal.split(' ')[1]}</text>
+                </>
+              ) : (
+                <text x={paneX + paneW + 46} y={y + paneH / 2 + 3} text-anchor="middle" font-family="EB Garamond, serif"
+                  font-size="7.5" letter-spacing="0.4" fill={c}>{s.seal}</text>
+              )}
+              <line x1={paneX + paneW} y1={y + paneH / 2} x2={paneX + paneW + 16} y2={y + paneH / 2}
+                stroke={c} stroke-opacity="0.6" stroke-width="1" />
+            </g>
+          )}
+        </g>
+      );
+    })}
+
+    <!-- the Angelus branch: right aisle, weekly -->
+    <path d={`M ${paneX + paneW} ${pressY + paneH / 2} C ${angelus.x + 40} ${pressY + paneH / 2}, ${angelus.x + angelus.w / 2} ${angelus.y + angelus.h + 60}, ${angelus.x + angelus.w / 2} ${angelus.y + angelus.h + 6}`}
+      fill="none" stroke="#c9a227" stroke-opacity="0.55" stroke-width="1.4" stroke-dasharray="1 5"
+      stroke-linecap="round" marker-end="url(#arrow)" />
+    <text x={angelus.x + angelus.w / 2 + 52} y={angelus.y + angelus.h + 52} text-anchor="middle"
+      font-family="EB Garamond, serif" font-size="11.5" font-style="italic" fill="#c9a227">weekly · the Angelus</text>
+
+    <g>
+      <!-- the papal pane wears the arch full height, as is proper -->
+      <path d={`M ${angelus.x} ${angelus.y + angelus.h} L ${angelus.x} ${angelus.y + 34} Q ${angelus.x + angelus.w / 2} ${angelus.y - 22} ${angelus.x + angelus.w} ${angelus.y + 34} L ${angelus.x + angelus.w} ${angelus.y + angelus.h} Z`}
+        fill="#c9a227" fill-opacity="0.12" stroke="#c9a227" stroke-opacity="0.75" stroke-width="1.4" />
+      <path d={`M ${angelus.x + angelus.w / 2 - 16} ${angelus.y + 6} l6 -8 5 6 5 -6 6 8 z`} fill="#e8c95e" />
+      <text x={angelus.x + angelus.w / 2} y={angelus.y + 42} text-anchor="middle" font-family="EB Garamond, serif"
+        font-size="15" font-weight="600" fill="#e8c95e">Crocodylus Pontifex</text>
+      <text x={angelus.x + angelus.w / 2} y={angelus.y + 62} text-anchor="middle" font-family="EB Garamond, serif"
+        font-size="11.5" font-style="italic" fill="#b0a891">reads the week; reflects; blesses</text>
+    </g>
+
+    <!-- the pilgrims: three gold dots walking the spine (SMIL; hidden under
+         prefers-reduced-motion via the .flow-dot rule in global.css) -->
+    <path id="pipeline-spine" d={spine} fill="none" stroke="none" />
+    {[0, 7, 14].map((delay) => (
+      <circle class="flow-dot" r="3" fill="#e8c95e" opacity="0.85">
+        <animateMotion dur="21s" begin={`${delay}s`} repeatCount="indefinite">
+          <mpath href="#pipeline-spine" />
+        </animateMotion>
+      </circle>
+    ))}
+  </svg>
+  <figcaption>
+    The day's run, as a window: gold is flow, blue panes are gates, the dashed
+    amber arcs are the Badger sending work back with the fault named. The humor
+    is decorative. The math is structural.
+  </figcaption>
+</figure>
+
+<style>
+  .arch-diagram {
+    margin: 2rem 0;
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    background: linear-gradient(180deg, rgba(36, 26, 69, 0.5), rgba(21, 16, 33, 0.7));
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+  }
+  .arch-diagram svg { display: block; width: 100%; height: auto; }
+  /* On a phone the whole window would shrink past legibility; better a
+     window you can pan than a window you cannot read. */
+  @media (max-width: 640px) {
+    .arch-diagram { overflow-x: auto; }
+    .arch-diagram svg { min-width: 560px; }
+  }
+  .arch-diagram figcaption {
+    text-align: center;
+    font-style: italic;
+    color: var(--c-text-faint);
+    font-size: 0.92rem;
+    margin-top: 1rem;
+  }
+</style>

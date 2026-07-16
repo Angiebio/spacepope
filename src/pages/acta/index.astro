@@ -1,0 +1,64 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/acta/index.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// Acta Diurna — "the daily acts," the actual gazette of ancient Rome. Here
+// the machinery drops the costume and speaks in monospace: one entry per
+// pipeline run, with verdicts, retries, and the day's wage in dollars.
+// Transparency is part of the bit AND the demo — anyone can watch the
+// machine think, including the machine.
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { fmtDate } from '../../lib/format';
+
+const runs = (await getCollection('acta')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Base title="Acta Diurna — published run-logs">
+  <div class="container container-narrow machinery">
+    <div class="page-head">
+      <span class="rubric">acta diurna · the machine, uncostumed</span>
+      <h1>Acta Diurna</h1>
+      <p class="lede">
+        One entry per pipeline run: agent trace, gate verdicts, badger interventions,
+        and the day's wage. The orchestration is visible on purpose.
+      </p>
+    </div>
+
+    {runs.length > 0 ? (
+      <div class="table-scroll">
+        <table class="ledger">
+          <thead>
+            <tr>
+              <th>run</th>
+              <th>date</th>
+              <th>status</th>
+              <th>stages</th>
+              <th>cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            {runs.map((r) => (
+              <tr>
+                <td><a href={`/acta/${r.id}/`}>{r.data.runId}</a></td>
+                <td>{fmtDate(r.data.date)}</td>
+                <td><span class={`status-badge status-${r.data.status}`}>{r.data.status}</span></td>
+                <td>{r.data.stages.length}</td>
+                <td>{r.data.totalCostUsd != null ? `$${r.data.totalCostUsd.toFixed(4)}` : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    ) : (
+      <EmptyState
+        voice="No acts have yet been recorded. The machine has not yet prayed."
+        note="Each pipeline run commits its own trace here as JSON; the site renders it verbatim. No runs, no acts — that's the honest state."
+      />
+    )}
+  </div>
+</Base>

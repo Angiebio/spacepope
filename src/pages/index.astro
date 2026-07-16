@@ -1,0 +1,97 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/index.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The front page IS the novel. The Chronicle of the Communion leads the site
+// the way the nave leads the cathedral: the latest chapter as the hero, the
+// archive as the aisle behind it. The news wings hang off the masthead; the
+// story is what you walk into first. (ROADMAP-01 §2.)
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import RoseWindow from '../components/RoseWindow.astro';
+import EmptyState from '../components/EmptyState.astro';
+import { fmtDate, toRoman, excerpt } from '../lib/format';
+
+const chapters = (await getCollection('chronicle')).sort((a, b) => b.data.n - a.data.n);
+const latest = chapters[0];
+const archive = chapters.slice(1);
+---
+
+<Base title="The Chronicle of the Communion — The Galactic Observer">
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">chronica communionis</span>
+      <h1>The Chronicle of the Communion</h1>
+      <p class="lede">
+        The continuous novel of the Pontifex Maximus Galacticus and his communion of worlds —
+        advanced daily, seeded by the water-world's own news in cosmic translation.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    {latest ? (
+      <>
+      <section aria-label="Latest chapter">
+        <a class="pane hero-chapter" href={`/chronicle/${latest.data.n}/`}>
+          <span class="rubric">
+            {latest.data.kind === 'interstitial' ? 'interstitial · a quiet day in the communion' : `capitulum ${toRoman(latest.data.n)}`}
+          </span>
+          <h2>{latest.data.title}</h2>
+          <p class="meta">{fmtDate(latest.data.date)} · {latest.data.wordCount} words</p>
+          <p class="hero-excerpt">{excerpt(latest.body, 70)}</p>
+          <p class="read-on">Read the chapter →</p>
+        </a>
+      </section>
+
+      {archive.length > 0 && (
+        <section aria-label="Chapter archive">
+          <h2 class="archive-title"><span class="rubric">the archive</span></h2>
+          <ol class="chapter-list" reversed>
+            {archive.map((ch) => (
+              <li>
+                <a href={`/chronicle/${ch.data.n}/`}>
+                  <span class="ch-num">{ch.data.kind === 'interstitial' ? '❧' : toRoman(ch.data.n)}</span>
+                  <span class="ch-title">{ch.data.title}</span>
+                  <span class="ch-date">{fmtDate(ch.data.date)}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+      </>
+    ) : (
+      <EmptyState
+        voice="The presses have not yet turned. The first chapter of the Chronicle awaits the day's news."
+        note="The Chronicler writes one chapter per day from the dispatch and the open threads; the first run will seed this page."
+      />
+    )}
+  </div>
+</Base>
+
+<style>
+  .hero-chapter { padding: clamp(1.5rem, 4vw, 2.8rem); }
+  .hero-chapter h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-top: 0.4rem; }
+  .hero-excerpt { color: var(--c-text-dim); font-size: 1.08rem; margin-top: 1rem; }
+  .read-on { color: var(--c-gold-hi); font-style: italic; margin: 0.6rem 0 0; }
+
+  .archive-title { text-align: center; margin: 2.5rem 0 1rem; }
+  .chapter-list { list-style: none; padding: 0; margin: 0 auto 2rem; max-width: 46rem; }
+  .chapter-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 0.4rem;
+    border-bottom: 1px dotted rgba(201, 162, 39, 0.18);
+    color: var(--c-text);
+  }
+  .chapter-list a:hover { text-decoration: none; background: rgba(201, 162, 39, 0.05); }
+  .ch-num { flex: 0 0 3.6rem; color: var(--c-gold); font-variant-caps: small-caps; letter-spacing: 0.08em; }
+  .ch-title { flex: 1; }
+  .ch-date { color: var(--c-text-faint); font-style: italic; font-size: 0.9rem; white-space: nowrap; }
+  @media (max-width: 640px) {
+    .ch-date { display: none; }
+  }
+</style>

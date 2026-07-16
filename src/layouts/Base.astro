@@ -1,0 +1,99 @@
+---
+// ==========================================================================
+// spacepope.ai — layouts/Base.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The nave. Every page of the communion's press stands inside this one
+// structure: masthead above, starfield behind, and the standing parody
+// disclaimer at the altar rail below (Hard Rule §0.6 — it appears on every
+// page, unabridged, because the joke is only safe while it is labeled).
+// ==========================================================================
+import '@fontsource/eb-garamond/400.css';
+import '@fontsource/eb-garamond/400-italic.css';
+import '@fontsource/eb-garamond/500.css';
+import '@fontsource/eb-garamond/600.css';
+import '@fontsource/eb-garamond/700.css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'The Galactic Observer — dispatches of the communion of worlds, from the Orbital See. Parody, fiction, and commentary.' } = Astro.props;
+
+// The eight doors of the church, in canonical order.
+const nav = [
+  { href: '/', label: 'Chronicle' },
+  { href: '/observer/', label: 'The Observer' },
+  { href: '/specola/', label: 'The Specola' },
+  { href: '/encyclicals/', label: 'Encyclicals' },
+  { href: '/angelus/', label: 'The Angelus' },
+  { href: '/college/', label: 'The College' },
+  { href: '/atlas/', label: 'The Atlas' },
+  { href: '/about/', label: 'About' },
+];
+
+// Active-state: exact match for the front page, prefix match for sections.
+const path = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === '/' ? path === '/' || path.startsWith('/chronicle') : path.startsWith(href.replace(/\/$/, ''));
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b0a12" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="masthead">
+      <span class="rubric brand-rubric">ex sede orbitali · spacepope.ai</span>
+      <div class="brand"><a href="/">The Galactic Observer</a></div>
+      <p class="brand-sub">the communion's press, observing the water-world with genuine, slightly fond attention</p>
+      <nav class="site-nav" aria-label="Sections">
+        {nav.map((item, i) => (
+          <>
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+            {i < nav.length - 1 && <span class="sep" aria-hidden="true">·</span>}
+          </>
+        ))}
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <svg width="40" height="40" viewBox="0 0 120 120" fill="none" aria-hidden="true" style="opacity:0.7">
+        <circle cx="60" cy="60" r="55" stroke="#c9a227" stroke-opacity="0.55" stroke-width="2" />
+        <path d="M60 52 l2.2 5.4 5.8 0.6 -4.4 3.9 1.3 5.7 -4.9 -3 -4.9 3 1.3 -5.7 -4.4 -3.9 5.8 -0.6 Z" fill="#c9a227" />
+        <circle cx="60" cy="60" r="30" stroke="#c9a227" stroke-opacity="0.3" stroke-width="1" />
+      </svg>
+      <!-- Hard Rule §0.6: the standing disclaimer, on every route, always. -->
+      <p class="disclaimer">
+        <strong>The Galactic Observer</strong> is a work of parody, fiction, and social commentary.
+        No real persons, living or dead, are depicted in its fictional content; every figure herein
+        is an invented alien archetype. The Bulletins of the Specola Galactica are the site's factual
+        wing: they report real water-world events accurately, with citation. No quotation is ever
+        invented for a real person, in either wing.
+      </p>
+      <nav aria-label="Footer">
+        <a href="/about/">Sub Capa (About)</a>
+        <a href="/acta/">Acta Diurna (run-logs)</a>
+        <a href="/atlas/">Atlas of the Communion</a>
+        <a href="https://github.com/Angiebio/spacepope" rel="noopener">The Public Scriptorium</a>
+      </nav>
+      <p class="colophon-line">
+        Set in EB Garamond under a CSS starfield · built by a deterministic press, decorated by grown minds ·
+        dated from the Orbital See
+      </p>
+    </footer>
+  </body>
+</html>

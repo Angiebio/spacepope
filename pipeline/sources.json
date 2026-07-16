@@ -1,0 +1,28 @@
+{
+  "_comment": "The Nuncio's routes. Three graceful-degradation tiers; every layer can die and the pipeline still files. Source list is config, not code — add a feed, not a deploy. Verified live JUL2026.",
+  "rss": [
+    { "name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "weight": 1.0 },
+    { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "weight": 1.2 },
+    { "name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/", "weight": 0.8, "notes": "serves stale caches — dedupe by GUID, never sole source" },
+    { "name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "weight": 0.9, "optional": true, "notes": "bot-filtered; needs real User-Agent" },
+    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 0.9, "optional": true, "notes": "bot-filtered; needs real User-Agent" }
+  ],
+  "weekly": [
+    { "name": "Import AI", "url": "https://importai.substack.com/feed", "notes": "weekly digest — feeds the Angelus, not the daily" }
+  ],
+  "hackernews": {
+    "endpoint": "https://hn.algolia.com/api/v1/search_by_date",
+    "query": "AI",
+    "minPoints": 50,
+    "windowHours": 24,
+    "hitsPerPage": 20,
+    "_comment": "The popularity signal AND the resilience layer. Free, keyless."
+  },
+  "fallback": {
+    "provider": "tavily",
+    "fireWhenFewerThan": 3,
+    "_comment": "1000 free credits/mo; only fires on a thin-news day. Requires TAVILY_API_KEY."
+  },
+  "userAgent": "Mozilla/5.0 (compatible; SpecolaGalactica/1.0; +https://spacepope.ai/about) — the observatory announces itself honestly",
+  "selection": { "min": 3, "max": 5, "quietDayThreshold": 2, "_comment": "fewer than quietDayThreshold viable stories → interstitial chapter, no dispatch" }
+}

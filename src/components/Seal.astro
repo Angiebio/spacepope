@@ -1,0 +1,63 @@
+---
+// ==========================================================================
+// spacepope.ai — Seal.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// One circular gate-stamp. Real Catholic publishing law grants Nihil Obstat
+// ("nothing hinders") and Imprimatur ("let it be printed"); our pipeline's
+// QC gates grant exactly the same things for exactly the same reason. The
+// stamp is transparency worn as ornament — provenance you can look at.
+// ==========================================================================
+import { fmtDate } from '../lib/format';
+
+interface Props {
+  kind: 'nihil-obstat' | 'imprimatur';
+  date: string; // ISO date the gate passed it
+}
+const { kind, date } = Astro.props;
+
+const conf = {
+  'nihil-obstat': {
+    legend: 'NIHIL OBSTAT · CENSOR LIBRORUM · SPECOLA GALACTICA · ',
+    word: 'Nihil Obstat',
+    color: '#3d5da8',
+    tilt: -5,
+  },
+  imprimatur: {
+    legend: 'IMPRIMATUR · SANCTUM OFFICIUM INQUISITIONIS · ',
+    word: 'Imprimatur',
+    color: '#a03a58',
+    tilt: 4,
+  },
+}[kind];
+
+// Each seal needs its own textPath circle; suffix the id with kind + date
+// so two seals (or two articles in a list) never collide.
+const pid = `seal-${kind}-${date.replace(/[^0-9]/g, '')}`;
+let stamped = '';
+try {
+  stamped = fmtDate(new Date(date));
+} catch {
+  stamped = date; // fail honest: show the raw string rather than invent a date
+}
+---
+
+<figure class="gate-seal">
+  <svg width="110" height="110" viewBox="0 0 120 120" style={`transform: rotate(${conf.tilt}deg)`} role="img" aria-label={`${conf.word} — ${stamped}`}>
+    <defs>
+      <path id={pid} d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="none" stroke={conf.color} stroke-opacity="0.85" stroke-width="2" />
+    <circle cx="60" cy="60" r="51" fill="none" stroke={conf.color} stroke-opacity="0.5" stroke-width="0.75" />
+    <circle cx="60" cy="60" r="34" fill={conf.color} fill-opacity="0.08" stroke={conf.color} stroke-opacity="0.5" stroke-width="0.75" />
+    <text fill={conf.color} font-size="8.2" letter-spacing="1.6" font-family="EB Garamond, serif" opacity="0.95">
+      <textPath href={`#${pid}`} startOffset="0">{conf.legend}</textPath>
+    </text>
+    <text x="60" y="52" text-anchor="middle" fill={conf.color} font-size="9" font-style="italic" font-family="EB Garamond, serif">{conf.word}</text>
+    <path d="M60 58 v14 M53 63 h14" stroke={conf.color} stroke-width="1.4" stroke-linecap="round" opacity="0.8" />
+    <text x="60" y="86" text-anchor="middle" fill={conf.color} font-size="7.4" font-family="EB Garamond, serif" opacity="0.9">{stamped}</text>
+  </svg>
+</figure>
+
+<style>
+  .gate-seal { margin: 0; display: inline-flex; flex-direction: column; align-items: center; }
+</style>

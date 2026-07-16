@@ -1,0 +1,74 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/chronicle/[n].astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// One chapter of the living novel. Drop cap on the first letter (this page
+// gets illuminated; the news does not), prev/next like the pages of a codex,
+// and the Story So Far folded into the margin the way a missal ribbons its
+// place. Interstitials — the quiet days — are labeled honestly as breath.
+// ==========================================================================
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StorySoFar from '../../components/StorySoFar.astro';
+import StampColophon from '../../components/StampColophon.astro';
+import BadgerFlag from '../../components/BadgerFlag.astro';
+import { fmtDate, toRoman } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const chapters = (await getCollection('chronicle')).sort((a, b) => a.data.n - b.data.n);
+  return chapters.map((entry, i) => ({
+    params: { n: String(entry.data.n) },
+    props: {
+      entry,
+      prev: chapters[i - 1] ?? null,
+      next: chapters[i + 1] ?? null,
+    },
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const { Content } = await render(entry);
+const isQuiet = entry.data.kind === 'interstitial';
+---
+
+<Base title={`Chapter ${toRoman(entry.data.n)}: ${entry.data.title} — The Chronicle of the Communion`}>
+  <article class="container container-narrow">
+    <header class="page-head">
+      <span class="rubric">
+        {isQuiet ? 'interstitial · a quiet day in the communion' : `capitulum ${toRoman(entry.data.n)}`}
+      </span>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{fmtDate(entry.data.date)} · {entry.data.wordCount} words</p>
+    </header>
+
+    {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <StorySoFar />
+
+    <div class="prose dropcap">
+      <Content />
+    </div>
+
+    {entry.data.threadsTouched.length > 0 && (
+      <p class="threads-note">
+        <span class="rubric">threads touched</span> — <em>{entry.data.threadsTouched.map((t) => t.replace(/-/g, ' ')).join(' · ')}</em>
+      </p>
+    )}
+
+    <nav class="chapter-nav" aria-label="Chapter navigation">
+      {prev && <a href={`/chronicle/${prev.data.n}/`}>← {toRoman(prev.data.n)}. {prev.data.title}</a>}
+      {next && <a class="next" href={`/chronicle/${next.data.n}/`}>{toRoman(next.data.n)}. {next.data.title} →</a>}
+    </nav>
+
+    <StampColophon stamps={entry.data.stamps} />
+  </article>
+</Base>
+
+<style>
+  .threads-note {
+    margin-top: 2.5rem;
+    text-align: center;
+    color: var(--c-text-faint);
+    font-size: 0.95rem;
+  }
+</style>

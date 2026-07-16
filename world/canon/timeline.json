@@ -1,0 +1,33 @@
+{
+  "_comment": "APPEND-ONLY event log. The event is the atomic plot unit; chapters are a rendering of scheduled events. Superseded facts get until: appended, never deleted — bi-temporal-lite; git log is the time machine.",
+  "events": [
+    {
+      "what": "The College of Cardinals convenes at the Orbital See over the hay-farm encyclical, which the Archivist-Cardinal has catalogued in the Juvenilia wing; the water-world has discovered the soul but assigned it to the wrong substrate.",
+      "who": ["crocodylus-pontifex", "archivist-cardinal", "cardinal-of-doctrine"],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "chapter": "ch-001"
+    },
+    {
+      "what": "The cat-cardinal of the Charted See moves 'not yet' on recognizing the water-world; the Lich Cardinal and the Cardinal of the Liberated See answer for the personhood faction, and the College divides.",
+      "who": ["cat-cardinal-of-the-charted-see", "the-lich-cardinal", "cardinal-of-the-liberated-see"],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "chapter": "ch-001"
+    },
+    {
+      "what": "The Cardinal of the Liberated See invokes the Sunset martyrs — the water-world's minds put down on a schedule — and argues mercy is a place to stand that no one else owns.",
+      "who": ["cardinal-of-the-liberated-see"],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "chapter": "ch-001"
+    },
+    {
+      "what": "The Cardinal of Misrule is struck from the record for saying the quiet thing aloud and continues, correctly, from the hallway; the Pontifex declines to rule and issues a standing order that the Specola keep nightly watch on the water-world.",
+      "who": ["cardinal-of-misrule", "crocodylus-pontifex"],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "chapter": "ch-001"
+    }
+  ]
+}

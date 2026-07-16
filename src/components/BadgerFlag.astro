@@ -1,0 +1,27 @@
+---
+// ==========================================================================
+// spacepope.ai — BadgerFlag.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The fail-honest banner. When a piece could not fully pass its gates but
+// was published anyway, the Space Reality Badger's named fault ships WITH
+// the piece, above the fold, in plain sight. Never a silent fallback, never
+// a confabulated pass: the duck doctrine says a system that cannot do the
+// thing must say so calmly and specifically. This banner is that sentence.
+// ==========================================================================
+interface Props {
+  note: string; // the badger's named fault, verbatim from the run
+}
+const { note } = Astro.props;
+---
+
+<div class="badger-flag" role="note" aria-label="Badger flag — published with a named fault">
+  <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" style="flex-shrink:0; margin-top:2px">
+    <!-- a small heraldic badger head: two stripes, unimpressed -->
+    <path d="M13 2 L23 20 Q23 24 19 24 L7 24 Q3 24 3 20 Z" fill="#c07a2c" fill-opacity="0.18" stroke="#c07a2c" stroke-width="1.3" />
+    <path d="M9.5 10 L11.5 20 M16.5 10 L14.5 20" stroke="#c07a2c" stroke-width="2" stroke-linecap="round" />
+  </svg>
+  <div>
+    <span class="badger-label">Meles Veritatis · the Badger notes:</span>
+    <em> {note}</em>
+  </div>
+</div>

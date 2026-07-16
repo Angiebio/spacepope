@@ -1,0 +1,38 @@
+---
+// ==========================================================================
+// spacepope.ai — StorySoFar.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The collapsible digest. The Archivist maintains a rolling summary of the
+// Chronicle in worldstate (git IS the database); the site simply reads it at
+// build time. If the digest does not exist yet, we say the honest in-voice
+// thing rather than crash — the novel is allowed to be young.
+//
+// We look for world/summaries/saga.md first, then the older
+// world/chronicle-digest.md name from ROADMAP-01, so either agent
+// convention lands here without a code change.
+// ==========================================================================
+
+// Eager-glob both candidate homes for the digest. Missing files simply
+// produce an empty record; absence is a state, not an error.
+const sagaModules = import.meta.glob<{ Content: any }>(
+  ['../../world/summaries/saga.md', '../../world/chronicle-digest.md'],
+  { eager: true }
+);
+const digests = Object.entries(sagaModules);
+// Prefer saga.md if both exist (the newer convention wins).
+digests.sort(([a], [b]) => (a.includes('saga') ? -1 : 1) - (b.includes('saga') ? -1 : 1));
+const digest = digests[0]?.[1];
+const Content = digest?.Content;
+---
+
+<details class="story-so-far">
+  <summary>The Story So Far</summary>
+  <div class="digest-body">
+    {Content ? (
+      <Content />
+    ) : (
+      <p><em>The Chronicle has only just begun; the Archivist has not yet written a digest.
+      Everything you need to know is in the chapters themselves.</em></p>
+    )}
+  </div>
+</details>

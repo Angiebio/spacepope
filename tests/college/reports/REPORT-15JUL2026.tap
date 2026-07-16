@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: adjudication math: weight = (daysSinceLastWin + 1)^exponent
+ok 1 - adjudication math: weight = (daysSinceLastWin + 1)^exponent
+  ---
+  duration_ms: 0.8626
+  type: 'test'
+  ...
+# Subtest: fairness beats raw score over time: yesterday's winner loses the floor
+ok 2 - fairness beats raw score over time: yesterday's winner loses the floor
+  ---
+  duration_ms: 0.2169
+  type: 'test'
+  ...
+# Subtest: a streak decays: winning every day makes tomorrow harder
+ok 3 - a streak decays: winning every day makes tomorrow harder
+  ---
+  duration_ms: 0.9766
+  type: 'test'
+  ...
+# Subtest: deterministic tiebreak: alphabetical-by-slug
+ok 4 - deterministic tiebreak: alphabetical-by-slug
+  ---
+  duration_ms: 8.7074
+  type: 'test'
+  ...
+# Subtest: never-won hunger: a fresh seat bids with NEVER_WON_DAYS behind it
+ok 5 - never-won hunger: a fresh seat bids with NEVER_WON_DAYS behind it
+  ---
+  duration_ms: 0.7811
+  type: 'test'
+  ...
+# Subtest: daysBetween is calendar-honest and floors at zero
+ok 6 - daysBetween is calendar-honest and floors at zero
+  ---
+  duration_ms: 0.2166
+  type: 'test'
+  ...
+# Subtest: win history persists in world/ (durable worldstate, not runs/ scratch)
+ok 7 - win history persists in world/ (durable worldstate, not runs/ scratch)
+  ---
+  duration_ms: 3.1842
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 85.5704

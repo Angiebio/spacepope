@@ -1,0 +1,96 @@
+# .github/workflows/daily.yml — v1.0 — 15JUL2026
+#
+# The daily bell (ROADMAP-02 §5). ONE job, on purpose: GITHUB_TOKEN pushes
+# don't trigger other workflows, so a pipeline→deploy split silently never
+# deploys. Odd-minute cron because :00 crons queue behind the whole world's
+# crons (18-min+ jitter); "the Angelus rings when the bell-ringer wakes."
+# The on-failure issue step is the tripwire against the 60-day inactivity
+# auto-disable dying silently.
+
+name: daily-dispatch
+
+on:
+  schedule:
+    - cron: "37 10 * * *"   # odd minute — never promise exact publish times
+  workflow_dispatch:          # the manual re-run button, always
+
+permissions:
+  contents: write
+  issues: write               # the on-failure bell
+
+concurrency:
+  group: the-press-room       # two Editors at one desk publish twice; forbid it
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Run the pipeline
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: node pipeline/run.mjs
+
+      - name: Leak check — no secrets in generated output
+        run: |
+          # Grep the day's output for anything shaped like a key. Belt, braces.
+          if grep -rE "sk-or-[A-Za-z0-9-]{20,}|tvly-[A-Za-z0-9-]{16,}" content/ world/ 2>/dev/null; then
+            echo "::error::leaked credential pattern found in generated output" && exit 1
+          fi
+
+      - name: Commit the day's publications
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/ world/
+          if git diff --cached --quiet; then
+            echo "nothing to commit (already published or quiet failure upstream)"
+          else
+            git commit -m "Acta Diurna: $(date -u +%F) — the day's publications"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push
+          fi
+
+      - name: Build the site
+        run: npm run build
+
+      # Deploy is guarded behind the secret's presence so the workflow is
+      # green before Fly is wired. Secrets can't be read in `if:` directly;
+      # the presence check goes through a step output.
+      - name: Check for Fly token
+        id: fly
+        run: echo "have=${{ secrets.FLY_API_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup flyctl
+        if: steps.fly.outputs.have == 'true'
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: Deploy
+        if: steps.fly.outputs.have == 'true'
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: flyctl deploy --remote-only
+
+      # A silent 60-day death cannot happen if failure makes noise.
+      - name: Open an issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Daily run failed: $(date -u +%F)" \
+            --body "The daily-dispatch workflow failed. The Acta (if written) has the crash note in content/acta/. Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --label pipeline

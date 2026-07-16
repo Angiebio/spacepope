@@ -1,0 +1,81 @@
+# .github/workflows/angelus.yml — v1.0 — 15JUL2026
+#
+# The Sunday bell: the Pontifex reads the week and reflects. Runs after the
+# daily bell (11:37 vs 10:37 UTC) so the week's final chapter is on the shelf
+# before he reads it. Same one-job doctrine as daily.yml.
+
+name: angelus-galacticus
+
+on:
+  schedule:
+    - cron: "37 11 * * 0"   # Sundays, an hour after the daily bell
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: the-press-room
+  cancel-in-progress: false
+
+jobs:
+  reflect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Ring the Angelus
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node pipeline/run.mjs --angelus
+
+      - name: Commit the reflection
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/
+          if git diff --cached --quiet; then
+            echo "nothing to commit (quiet week or already rung)"
+          else
+            git commit -m "Angelus Galacticus: week of $(date -u +%F)"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push
+          fi
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Check for Fly token
+        id: fly
+        run: echo "have=${{ secrets.FLY_API_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup flyctl
+        if: steps.fly.outputs.have == 'true'
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: Deploy
+        if: steps.fly.outputs.have == 'true'
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: flyctl deploy --remote-only
+
+      - name: Open an issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Angelus failed: week of $(date -u +%F)" \
+            --body "The angelus-galacticus workflow failed. Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --label pipeline

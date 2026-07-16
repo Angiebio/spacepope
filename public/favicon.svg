@@ -1,0 +1,13 @@
+<!-- spacepope.ai favicon · v1.0 — 15JUL2026 · a rose window the size of a tab -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0b0a12"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#c9a227" stroke-width="2.5"/>
+  <circle cx="32" cy="32" r="18" fill="#241a45" stroke="#c9a227" stroke-width="1" stroke-opacity="0.6"/>
+  <circle cx="32" cy="12.5" r="3.4" fill="#a03a58"/>
+  <circle cx="48.9" cy="22.2" r="3.4" fill="#3d5da8"/>
+  <circle cx="48.9" cy="41.8" r="3.4" fill="#2f7a56"/>
+  <circle cx="32" cy="51.5" r="3.4" fill="#6b4bb0"/>
+  <circle cx="15.1" cy="41.8" r="3.4" fill="#c07a2c"/>
+  <circle cx="15.1" cy="22.2" r="3.4" fill="#3d5da8"/>
+  <path d="M32 24 l2.4 5.9 6.3 0.6 -4.8 4.2 1.4 6.2 -5.3 -3.3 -5.3 3.3 1.4 -6.2 -4.8 -4.2 6.3 -0.6 Z" fill="#e8c95e"/>
+</svg>

@@ -1,0 +1,50 @@
+---
+// ==========================================================================
+// spacepope.ai — RoseWindow.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The section divider: a rose window with planets in the lights. In a real
+// cathedral the rose window teaches the illiterate the cosmology; ours does
+// exactly the same job — six worlds in glass around a central star, held
+// together by gold leading. Pure inline SVG; the glass ships with the page.
+// ==========================================================================
+interface Props { size?: number }
+const { size = 84 } = Astro.props;
+
+// Six lights on a ring — computed here so the geometry is math, not eyeballing.
+const lights = [0, 60, 120, 180, 240, 300].map((deg, i) => {
+  const r = 33;
+  const rad = ((deg - 90) * Math.PI) / 180;
+  return {
+    cx: 60 + r * Math.cos(rad),
+    cy: 60 + r * Math.sin(rad),
+    jewel: ['#a03a58', '#3d5da8', '#2f7a56', '#6b4bb0', '#c07a2c', '#3d5da8'][i],
+    ringed: i === 2, // one world wears a ring, as is proper
+  };
+});
+---
+
+<div class="rose-divider" role="separator" aria-hidden="true">
+  <svg width={size} height={size} viewBox="0 0 120 120" fill="none">
+    <!-- outer came -->
+    <circle cx="60" cy="60" r="55" stroke="#c9a227" stroke-opacity="0.55" stroke-width="1.5" />
+    <circle cx="60" cy="60" r="50" stroke="#c9a227" stroke-opacity="0.25" stroke-width="0.75" />
+    <!-- the six lights, each a world -->
+    {lights.map((l) => (
+      <g>
+        <circle cx={l.cx} cy={l.cy} r="13" fill={l.jewel} fill-opacity="0.28" stroke="#c9a227" stroke-opacity="0.6" stroke-width="1" />
+        <circle cx={l.cx} cy={l.cy} r="4" fill={l.jewel} fill-opacity="0.9" />
+        {l.ringed && (
+          <ellipse cx={l.cx} cy={l.cy} rx="7.5" ry="2.4" stroke="#e8c95e" stroke-width="0.8" transform={`rotate(-18 ${l.cx} ${l.cy})`} />
+        )}
+      </g>
+    ))}
+    <!-- spokes: the leading between lights -->
+    {lights.map((l) => (
+      <line x1="60" y1="60" x2={l.cx} y2={l.cy} stroke="#c9a227" stroke-opacity="0.2" stroke-width="0.75" />
+    ))}
+    <!-- central star -->
+    <circle cx="60" cy="60" r="12" fill="#6b4bb0" fill-opacity="0.25" stroke="#c9a227" stroke-opacity="0.7" stroke-width="1" />
+    <path d="M60 52 l2.2 5.4 5.8 0.6 -4.4 3.9 1.3 5.7 -4.9 -3 -4.9 3 1.3 -5.7 -4.4 -3.9 5.8 -0.6 Z"
+      fill="#e8c95e" fill-opacity="0.9" />
+  </svg>
+</div>

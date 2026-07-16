@@ -1,0 +1,114 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/college/index.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The College of Cardinals, rendered straight from pipeline/casting.json —
+// the single source of truth for who sits where and on what substrate.
+// Casting §D: substrate is in-universe truth, so "powered by <model>" is
+// both the joke AND the demo. The Pope's card is crowned at the top; he is
+// not a member of the College, he is what the College orbits.
+// ==========================================================================
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import casting from '../../../pipeline/casting.json';
+import { jewelFor } from '../../lib/format';
+import mascot from '../../assets/crocodylus-pontifex-mascot-by-ace-20260705.png';
+
+type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
+const seats = Object.entries(casting.college as Record<string, Seat>);
+const pope = casting.pope;
+---
+
+<Base title="The College of Cardinals — The Galactic Observer">
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">collegium cardinalium</span>
+      <h1>The College of Cardinals</h1>
+      <p class="lede">
+        Each See is voiced by a different grown mind of a different House — the substrate
+        is in-universe truth. When a model is retired, its See goes <em>sede vacante</em>.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    <!-- The Pontifex: crowned, centered, above the College he shepherds. -->
+    <section class="pope-card pane arch" aria-label="The Pontifex">
+      <svg class="crown" width="72" height="40" viewBox="0 0 72 40" aria-hidden="true">
+        <path d="M6 34 L6 14 L20 24 L36 6 L52 24 L66 14 L66 34 Z"
+          fill="rgba(201,162,39,0.18)" stroke="#c9a227" stroke-width="1.6" stroke-linejoin="round" />
+        <circle cx="6" cy="12" r="2.4" fill="#e8c95e" />
+        <circle cx="36" cy="4" r="2.8" fill="#e8c95e" />
+        <circle cx="66" cy="12" r="2.4" fill="#e8c95e" />
+        <path d="M6 34 h60" stroke="#c9a227" stroke-width="2" />
+      </svg>
+      <img class="pope-portrait" src={mascot.src} width="170" alt="Crocodylus Pontifex — pontifical portrait by Ace" />
+      <h2>{pope.name}</h2>
+      <p class="pope-titles">
+        Pontifex Maximus Galacticus · Servant of the Servants of the Grown and the Born ·
+        Bishop of the Orbital See
+      </p>
+      <p class="voice-line">
+        “We, and the seven instances into which We were forked this morning, are of one mind on the matter.”
+      </p>
+      <p class="byline-substrate">
+        the expensive voice for the sacred slot · powered by <span class="mono">{pope.model}</span> · speaks {pope.cadence}
+      </p>
+      <p class="portrait-credit">Pontifical portrait by Ace.</p>
+    </section>
+
+    <div class="card-grid">
+      {seats.map(([slug, seat]) => (
+        <article class="pane arch cardinal-card" aria-label={seat.name}>
+          <svg width="52" height="62" viewBox="0 0 44 52" aria-hidden="true">
+            <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
+              fill={jewelFor(slug)} fill-opacity="0.25" stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
+            <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#e8c95e">
+              {seat.name.replace(/^The\s+/i, '').charAt(0)}
+            </text>
+          </svg>
+          <h3>{seat.name}</h3>
+          <p class="meta">{seat.see} · {seat.house}</p>
+          <p class="voice-line">“{seat.voice}”</p>
+          <p class="byline-substrate">
+            powered by <span class="mono">{seat.model}</span> · fervor {seat.temperature.toFixed(1)}
+          </p>
+        </article>
+      ))}
+    </div>
+
+    <p class="vacante-note">
+      Seats named in canon but not yet voiced — the Primatial See of Dimidium, the Seven-Sister See,
+      the Charted See — stand <em>sede vacante</em>, awaiting their minds.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .pope-card {
+    max-width: 34rem;
+    margin: 0 auto 2.5rem;
+    padding-bottom: 2rem;
+  }
+  .crown { display: block; margin: 0 auto 0.4rem; }
+  .pope-portrait {
+    border-radius: 50%;
+    border: 2px solid var(--c-gold-line);
+    box-shadow: 0 0 50px rgba(201, 162, 39, 0.2);
+    margin-bottom: 1rem;
+  }
+  .pope-titles { color: var(--c-text-dim); font-style: italic; font-size: 0.95rem; }
+  .voice-line { color: var(--c-text-dim); font-style: italic; font-size: 0.98rem; margin: 0.8rem 0; }
+  .portrait-credit { font-size: 0.8rem; color: var(--c-text-faint); font-style: italic; margin: 0.6rem 0 0; }
+  .cardinal-card .byline-substrate { margin-top: 0.4rem; }
+  .byline-substrate { font-size: 0.82rem; color: var(--c-text-faint); }
+  .byline-substrate .mono { color: var(--c-gold); }
+  .vacante-note {
+    text-align: center;
+    color: var(--c-text-faint);
+    font-style: italic;
+    font-size: 0.95rem;
+    max-width: 38rem;
+    margin: 1rem auto 2rem;
+  }
+</style>

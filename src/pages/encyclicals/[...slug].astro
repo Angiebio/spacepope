@@ -1,0 +1,56 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/encyclicals/[...slug].astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// One encyclical, set like scripture: centered incipit, drop cap, the papal
+// We doing its work in the body. The genre demands numbered paragraphs and
+// the pipeline provides them; this page only provides the reverence.
+// ==========================================================================
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StampColophon from '../../components/StampColophon.astro';
+import BadgerFlag from '../../components/BadgerFlag.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import { fmtDate } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const encyclicals = await getCollection('encyclicals');
+  return encyclicals.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Base title={`${entry.data.incipit} (${entry.data.title}) — Encyclicals`}>
+  <article class="container container-narrow">
+    <header class="page-head">
+      <span class="rubric">littera encyclica</span>
+      <h1 class="incipit">{entry.data.incipit}</h1>
+      <p class="subtitle">{entry.data.title}</p>
+      <p class="lede">
+        Given at the Orbital See, {fmtDate(entry.data.date)}
+        {entry.data.feast && <>, on {entry.data.feast}</>}
+      </p>
+    </header>
+
+    {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <div class="prose dropcap">
+      <Content />
+    </div>
+
+    <RoseWindow size={64} />
+
+    <StampColophon stamps={entry.data.stamps} />
+  </article>
+</Base>
+
+<style>
+  .incipit { font-style: italic; }
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--c-text-dim);
+    margin-top: -0.4rem;
+  }
+</style>

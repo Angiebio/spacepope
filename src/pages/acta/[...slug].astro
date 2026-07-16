@@ -1,0 +1,80 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/acta/[...slug].astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// One run, stage by stage. This is the confessional transcript: which agent
+// did what, which gate said no, how many times the Badger sent work back,
+// and what it all cost. A retry count > 0 is not a failure — it's the
+// fail-honest loop doing its one job in public.
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { fmtDate } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const runs = await getCollection('acta');
+  return runs.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const run = entry.data;
+const totalRetries = run.stages.reduce((n, s) => n + s.retries, 0);
+---
+
+<Base title={`Run ${run.runId} — Acta Diurna`}>
+  <div class="container container-narrow machinery">
+    <div class="page-head">
+      <span class="rubric">acta diurna · run record</span>
+      <h1>{run.runId}</h1>
+      <p class="lede">
+        {fmtDate(run.date)} ·
+        <span class={`status-badge status-${run.status}`}>{run.status}</span>
+        {totalRetries > 0 && <> · {totalRetries} badger re-dispatch{totalRetries === 1 ? '' : 'es'}</>}
+      </p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>stage</th>
+            <th>model</th>
+            <th>verdict</th>
+            <th>retries</th>
+            <th>notes</th>
+            <th>cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          {run.stages.map((s, i) => (
+            <tr>
+              <td>{String(i + 1).padStart(2, '0')}</td>
+              <td>{s.stage}</td>
+              <td>{s.model ?? '—'}</td>
+              <td>{s.verdict ?? '—'}</td>
+              <td>{s.retries > 0 ? s.retries : '—'}</td>
+              <td>{s.notes ?? ''}</td>
+              <td>{s.costUsd != null ? `$${s.costUsd.toFixed(4)}` : '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+        {run.totalCostUsd != null && (
+          <tfoot>
+            <tr>
+              <td colspan="6" style="text-align:right"><em>the day's wage</em></td>
+              <td>${run.totalCostUsd.toFixed(4)}</td>
+            </tr>
+          </tfoot>
+        )}
+      </table>
+    </div>
+
+    <p class="back-link"><a href="/acta/">← all recorded acts</a></p>
+  </div>
+</Base>
+
+<style>
+  .back-link { margin-top: 2rem; }
+  tfoot td { border-top: 1px solid var(--c-gold-line); color: var(--c-gold); }
+</style>

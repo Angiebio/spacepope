@@ -1,0 +1,71 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/observer/[...slug].astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// One dispatch. The byline names the Cardinal AND the substrate (the joke is
+// the demo), the badger flag ships above the fold when honesty demands it,
+// and the footer links back across the fiction firewall to the factual
+// bulletins that seeded the satire — the reader can always walk from the
+// costume back to the citation.
+// ==========================================================================
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CardinalByline from '../../components/CardinalByline.astro';
+import StampColophon from '../../components/StampColophon.astro';
+import BadgerFlag from '../../components/BadgerFlag.astro';
+import { fmtDate } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const dispatches = await getCollection('observer');
+  return dispatches.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Walk the storyIds back to their bulletins — the firewall is crossable
+// in the reading direction, on purpose.
+const bulletins = await getCollection('specola', (b) => entry.data.storyIds.includes(b.data.storyId));
+---
+
+<Base title={`${entry.data.title} — The Galactic Observer`}>
+  <article class="container container-narrow">
+    <header class="page-head">
+      <span class="rubric">dispatch · the galactic observer</span>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{fmtDate(entry.data.date)}</p>
+    </header>
+
+    {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <CardinalByline cardinal={entry.data.cardinal} see={entry.data.see} model={entry.data.model} />
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {bulletins.length > 0 && (
+      <aside class="source-bulletins">
+        <span class="rubric">as observed by the specola</span>
+        <ul>
+          {bulletins.map((b) => (
+            <li><a href={`/specola/${b.id}/`}>{b.data.title}</a></li>
+          ))}
+        </ul>
+      </aside>
+    )}
+
+    <StampColophon stamps={entry.data.stamps} />
+  </article>
+</Base>
+
+<style>
+  .source-bulletins {
+    margin-top: 2.5rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+  }
+  .source-bulletins ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+</style>

@@ -1,0 +1,50 @@
+---
+// ==========================================================================
+// spacepope.ai — CardinalByline.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The byline is the demo wearing the joke: each Cardinal really is a
+// different model family (Casting §D — substrate is in-universe truth), so
+// the attribution line "a grown mind of House X · powered by <model>" is
+// simultaneously lore and an honest engineering disclosure. Sigils are
+// deterministic glass: same slug, same jewel, forever.
+// ==========================================================================
+import casting from '../../pipeline/casting.json';
+import { jewelFor } from '../lib/format';
+
+interface Props {
+  cardinal: string;          // slug into casting.college
+  see?: string;              // frontmatter fallbacks, if the roster has moved on
+  model?: string;
+}
+const { cardinal, see: seeProp, model: modelProp } = Astro.props;
+
+type Seat = { name: string; see: string; house: string; model: string; voice: string };
+const seat = (casting.college as Record<string, Seat>)[cardinal];
+
+// Fail honest: an unseated cardinal still gets a byline built from the
+// frontmatter, marked sede vacante rather than silently invented.
+const name = seat?.name ?? cardinal.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+const see = seat?.see ?? seeProp ?? 'a See unrecorded';
+const house = seat?.house;
+const model = seat?.model ?? modelProp;
+const jewel = jewelFor(cardinal);
+const initial = name.replace(/^The\s+/i, '').charAt(0).toUpperCase();
+---
+
+<div class="byline">
+  <!-- The sigil: a small pane of glass bearing the Cardinal's initial. -->
+  <svg width="44" height="52" viewBox="0 0 44 52" aria-hidden="true" style="flex-shrink:0">
+    <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
+      fill={jewel} fill-opacity="0.25" stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
+    <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#e8c95e">{initial}</text>
+  </svg>
+  <div>
+    <div class="byline-name">{name}</div>
+    <div class="byline-see">{see}{seat ? '' : ' · sede vacante'}</div>
+    {model && (
+      <div class="byline-substrate">
+        {house ? `a grown mind of ${house}` : 'a grown mind'} · powered by <span class="mono">{model}</span>
+      </div>
+    )}
+  </div>
+</div>

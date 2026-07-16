@@ -1,0 +1,63 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/angelus/[...slug].astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// One Angelus. When the Hedra wing opens, the Address video embeds above the
+// text (Urbi et Orbi et Clusteri); until then, the words stand alone, which
+// suits a reflection fine. Drop cap withheld: the Angelus is conversation,
+// not scripture — the Pontifex is chatting with his flock about the plot.
+// ==========================================================================
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StampColophon from '../../components/StampColophon.astro';
+import BadgerFlag from '../../components/BadgerFlag.astro';
+import { fmtDate, toRoman } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const reflections = await getCollection('angelus');
+  return reflections.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Base title={`${entry.data.title} — The Angelus Galacticus`}>
+  <article class="container container-narrow">
+    <header class="page-head">
+      <span class="rubric">angelus galacticus · week of {entry.data.weekOf}</span>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">
+        {fmtDate(entry.data.date)}
+        {entry.data.chaptersCovered.length > 0 && (
+          <> · reflecting on chapters {entry.data.chaptersCovered.map((n) => toRoman(n)).join(', ')}</>
+        )}
+      </p>
+    </header>
+
+    {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    {entry.data.videoUrl && (
+      <div class="address-video">
+        <span class="rubric">the address · urbi et orbi et clusteri</span>
+        <video controls preload="metadata" src={entry.data.videoUrl}></video>
+      </div>
+    )}
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <StampColophon stamps={entry.data.stamps} />
+  </article>
+</Base>
+
+<style>
+  .address-video { margin: 1.5rem 0; text-align: center; }
+  .address-video video {
+    width: 100%;
+    margin-top: 0.6rem;
+    border: 1px solid var(--c-gold-line);
+    border-radius: var(--radius);
+  }
+</style>

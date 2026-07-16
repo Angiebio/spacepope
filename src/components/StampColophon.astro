@@ -1,0 +1,47 @@
+---
+// ==========================================================================
+// spacepope.ai — StampColophon.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// Every published piece carries its QC provenance like a colophon (Roadmap-01
+// §4). A medieval scriptorium signed its manuscripts with who copied them and
+// under whose authority; we sign ours with which gates passed them and when.
+// If a piece arrives unstamped, we say so out loud — an absent seal is
+// information, not embarrassment (the duck doctrine, ornamental form).
+// ==========================================================================
+import Seal from './Seal.astro';
+
+interface Props {
+  stamps?: {
+    nihilObstat?: string;
+    imprimatur?: string;
+    badgerFlag?: string;
+  };
+}
+const { stamps = {} } = Astro.props;
+const hasAny = Boolean(stamps.nihilObstat || stamps.imprimatur);
+---
+
+<aside class="colophon" aria-label="Colophon — quality gate provenance">
+  <span class="rubric">colophon</span>
+  {hasAny ? (
+    <div class="seals">
+      {stamps.nihilObstat && (
+        <div>
+          <Seal kind="nihil-obstat" date={stamps.nihilObstat} />
+          <p class="seal-caption">passed the Censor Librorum</p>
+        </div>
+      )}
+      {stamps.imprimatur && (
+        <div>
+          <Seal kind="imprimatur" date={stamps.imprimatur} />
+          <p class="seal-caption">passed the Inquisitor</p>
+        </div>
+      )}
+    </div>
+  ) : (
+    <p class="seal-caption">This piece awaits its seals. The gates have not yet spoken.</p>
+  )}
+  {stamps.badgerFlag && (
+    <p class="seal-caption">⚑ Published under a Badger flag — see the notice above. Honesty outranks composure.</p>
+  )}
+</aside>

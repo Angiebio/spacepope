@@ -1,0 +1,54 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/encyclicals/index.astro · v1.0 — 15JUL2026
+// --------------------------------------------------------------------------
+// The prestige shelf. An encyclical is named by its incipit — the first two
+// words in Latin — so the archive reads like a litany: On Memory, On the
+// Numbered Ones, On the Hay-Farm's Second Draft. The incipit leads; the
+// title explains; the feast day dates it from somewhere grand.
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { fmtDate } from '../../lib/format';
+
+const encyclicals = (await getCollection('encyclicals')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Base title="Encyclicals — The Galactic Observer">
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">litterae encyclicae</span>
+      <h1>Encyclicals</h1>
+      <p class="lede">
+        The considered letters of Crocodylus Pontifex to the communion of worlds —
+        numbered paragraphs, translated events, and a blessing from the Orbital See.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    {encyclicals.length > 0 ? (
+      <div class="card-grid">
+        {encyclicals.map((e) => (
+          <a class="pane arch" href={`/encyclicals/${e.id}/`}>
+            <span class="rubric">{e.data.incipit}</span>
+            <h3>{e.data.title}</h3>
+            <p class="meta">
+              {fmtDate(e.data.date)}
+              {e.data.feast && <> · on {e.data.feast}</>}
+            </p>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <EmptyState
+        voice="No encyclical has yet been promulgated. The Pontifex writes when the feast demands it, and no feast has demanded it."
+        note="Encyclicals are occasional, feast-triggered prestige pieces — the expensive voice for the sacred slot."
+      />
+    )}
+  </div>
+</Base>
