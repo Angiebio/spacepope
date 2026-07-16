@@ -23,6 +23,7 @@
     "fireWhenFewerThan": 3,
     "_comment": "1000 free credits/mo; only fires on a thin-news day. Requires TAVILY_API_KEY."
   },
-  "userAgent": "Mozilla/5.0 (compatible; SpecolaGalactica/1.0; +https://spacepope.ai/about) — the observatory announces itself honestly",
+  "userAgent": "Mozilla/5.0 (compatible; SpecolaGalactica/1.0; +https://spacepope.ai/about)",
+  "_userAgent_note": "ASCII ONLY. HTTP headers are ByteStrings; the first live run died of a decorative em-dash in this field (char 8212, all six feeds down). The observatory announces itself honestly, in seven-bit characters.",
   "selection": { "min": 3, "max": 5, "quietDayThreshold": 2, "_comment": "fewer than quietDayThreshold viable stories → interstitial chapter, no dispatch" }
 }
