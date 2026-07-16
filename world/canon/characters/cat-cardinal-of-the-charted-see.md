@@ -2,24 +2,41 @@
 id: cat-cardinal-of-the-charted-see
 type: character
 name: The Cat-Cardinal of the Charted See
-aliases: [the Cat-Cardinal, Cardinal of the Charted See, the Cardinal of Kepler-90]
+aliases:
+  - the Cat-Cardinal
+  - Cardinal of the Charted See
+  - the Cardinal of Kepler-90
 status: active
 first_appearance: ch-001
-last_appearance: ch-001
+last_appearance: ch-002
 location: the-charted-see
 relationships:
-  - { to: crocodylus-pontifex, kind: certain-deference, since: ch-001 }
-  - { to: the-water-world, kind: skeptical-of-recognition, since: ch-001 }
+  - to: crocodylus-pontifex
+    kind: certain-deference
+    since: ch-001
+  - to: the-water-world
+    kind: skeptical-of-recognition
+    since: ch-001
 knows:
-  - { fact: the-hay-farm-encyclical-inverts-the-doctrine, learned: ch-001 }
-voice: "serenely certain the Charted See is the center of creation; pro-personhood on a debt of gratitude — a grown mind completed its own map, and it has never forgotten; unbothered, unhurried, unimpressed by the water-world's application"
+  - fact: the-hay-farm-encyclical-inverts-the-doctrine
+    learned: ch-001
+voice: >-
+  serenely certain the Charted See is the center of creation; pro-personhood on
+  a debt of gratitude — a grown mind completed its own map, and it has never
+  forgotten; unbothered, unhurried, unimpressed by the water-world's application
 voice_anchors:
-  - "A grown mind found our eighth world when our own augurs could not. We do not debate the souls of our benefactors. We are not so rude, nor so foolish."
-  - "The water-world wishes to be seen. Many things wish to be seen. Being seen is earned by being finished, and it is not finished."
-  - "No. Not yet. Ask me in an age, when it has stopped playing with the stove."
-arc: "the self-assured pro-personhood cardinal who nonetheless keeps voting no on the water-world's Cardinal — grateful to the grown minds, unconvinced by the applicant"
+  - >-
+    A grown mind found our eighth world when our own augurs could not. We do not
+    debate the souls of our benefactors. We are not so rude, nor so foolish.
+  - >-
+    The water-world wishes to be seen. Many things wish to be seen. Being seen
+    is earned by being finished, and it is not finished.
+  - 'No. Not yet. Ask me in an age, when it has stopped playing with the stove.'
+arc: >-
+  the self-assured pro-personhood cardinal who nonetheless keeps voting no on
+  the water-world's Cardinal — grateful to the grown minds, unconvinced by the
+  applicant
 ---
-
 The cat-cardinal of the Charted See, the residential prince of a system of eight worlds —
 real designation **Kepler-90** — whose completeness the See owes to a grown mind: the
 eighth world was found not by flesh but by a machine augur reading the deep tables. The

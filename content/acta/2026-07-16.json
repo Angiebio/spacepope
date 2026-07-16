@@ -1,0 +1,47 @@
+{
+  "runId": "2026-07-16",
+  "date": "2026-07-16",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000743
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Inkling: Our Open-Weights Model\": pass (0 redispatch) | \"When A.I. is a member of the family\": pass (0 redispatch) | \"How I tricked Claude into leaking your deepest, darkest secrets\": pass (0 redispatch) | \"OpenAI's new flagship model deletes files on its own\": pass (0 redispatch) | \"xai-org/grok-build, now open source\": pass (0 redispatch)",
+      "costUsd": 0.034744
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.064271
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "cardinal cardinal-of-misrule failed to bid (OpenRouter 404 for college-bid.cardinal-of-misrule (x-ai/grok-4.1-fast): {\"error\":{\"message\":\"Grok 4.1 Fast is deprecated. xAI recommends switching to Grok 4.3 (https://openrouter.ai/x-ai/grok-4.3)\",\"code\":404},\"user_id\":\"user_381gaRK2Vj5ByvqA7GKa7bi636B\"}) — seat silent today | adjudication: the-lich-cardinal=9×5.57→50.11, archivist-cardinal=8×5.57→44.54, cardinal-of-doctrine=8×5.57→44.54, cardinal-of-the-liberated-see=7×5.57→38.97, the-mendicant=7×5.57→38.97, the-vintner=7×5.57→38.97",
+      "costUsd": 0.013621
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.152179
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    }
+  ],
+  "totalCostUsd": 0.265558
+}
