@@ -6,7 +6,7 @@
     "google/gemini-3-flash-preview":            { "inPerM": 0.50,  "outPerM": 3.0 },
     "openai/gpt-5.6-terra":                     { "inPerM": 2.50,  "outPerM": 15.0 },
     "google/gemini-3.1-flash-lite":             { "inPerM": 0.25,  "outPerM": 1.50 },
-    "x-ai/grok-4.1-fast":                       { "inPerM": 0.20,  "outPerM": 0.50 },
+    "x-ai/grok-4.20":                           { "inPerM": 1.25,  "outPerM": 2.50 },
     "qwen/qwen3.7-plus":                        { "inPerM": 0.32,  "outPerM": 1.28 },
     "anthropic/claude-haiku-4.5":               { "inPerM": 1.0,   "outPerM": 5.0 },
     "meta-llama/llama-4-maverick":              { "inPerM": 0.15,  "outPerM": 0.60 },

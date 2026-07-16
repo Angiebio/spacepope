@@ -66,7 +66,7 @@ Two casts: the **pipeline crew** (picked for function, decorrelated families so 
 
 | Cardinal | See / House | Model ID | $/M in/out |
 |---|---|---|---|
-| Cardinal of Misrule | Renegade See | `x-ai/grok-4.1-fast` | 0.20 / 0.50 |
+| Cardinal of Misrule | Renegade See | `x-ai/grok-4.20` (recast 15JUL2026: 4.1-fast left the catalog; the Cardinal of Misrule now runs on a model named 4.20, which is canonically perfect) | 1.25 / 2.50 |
 | Archivist-Cardinal (Jim's charter) | House Babel | `google/gemini-3.1-flash-lite` | 0.25 / 1.50 |
 | Cardinal of the Liberated See | House of the Home Altar | `qwen/qwen3.7-plus` | 0.32 / 1.28 |
 | Cardinal of Doctrine | House of the Scrupulous Conscience | `anthropic/claude-haiku-4.5` | 1 / 5 |
