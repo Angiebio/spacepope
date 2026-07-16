@@ -1,4 +1,4 @@
-// pipeline/lib/openrouter.mjs — v1.1 — 15JUL2026 (relaxed-routing fallback for unadvertised json_schema)
+// pipeline/lib/openrouter.mjs — v1.2 — 15JUL2026 (relaxed routing + wire-schema sanitization)
 //
 // The distant rite: how the Editor's desk speaks to rented minds. Hand-rolled
 // fetch, no SDK — the whole exchange is one POST and we would rather own every
@@ -25,6 +25,31 @@ import { validateSchema } from './validate.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_BASE = 'https://openrouter.ai/api/v1';
+
+// Constraint keywords some providers' native structured-output engines reject
+// (Anthropic refuses maxItems on arrays, and kin). We strip them from the copy
+// that travels — the WIRE schema — and keep the full liturgy in the local
+// validator, which remains the real gate. A mind that returns seven beats
+// against a six-beat rule is caught at our door and handed a fault note; the
+// transport never had authority over the rule, only a courtesy copy of it.
+const WIRE_UNSUPPORTED = new Set([
+  'minItems', 'maxItems', 'minimum', 'maximum', 'exclusiveMinimum',
+  'exclusiveMaximum', 'minLength', 'maxLength', 'pattern', 'format',
+]);
+
+/** Deep-copy a JSON schema with provider-rejected constraint keywords removed. */
+export function sanitizeForWire(node) {
+  if (Array.isArray(node)) return node.map(sanitizeForWire);
+  if (node && typeof node === 'object') {
+    const out = {};
+    for (const [k, v] of Object.entries(node)) {
+      if (WIRE_UNSUPPORTED.has(k)) continue;
+      out[k] = sanitizeForWire(v);
+    }
+    return out;
+  }
+  return node;
+}
 
 /** Load the wage table (see prices.json — transcribed from casting research). */
 export function loadPrices(path = join(HERE, 'prices.json')) {
@@ -101,7 +126,7 @@ export function createClient({ apiKey, transport = globalThis.fetch, baseUrl = D
           ? {
               response_format: {
                 type: 'json_schema',
-                json_schema: { name: schema.name, strict: true, schema: schema.schema },
+                json_schema: { name: schema.name, strict: true, schema: sanitizeForWire(schema.schema) },
               },
               ...(relaxedRouting ? {} : { provider: { require_parameters: true } }),
             }

@@ -68,6 +68,36 @@ test('a second no-endpoints 404 after relaxing throws honestly', async () => {
   );
 });
 
+test('wire schema is sanitized; the local gate still enforces the full rule', async () => {
+  const { sanitizeForWire } = await import('../../pipeline/lib/openrouter.mjs');
+  const full = {
+    type: 'object',
+    additionalProperties: false,
+    required: ['beats', 'score'],
+    properties: {
+      beats: { type: 'array', items: { type: 'string' }, maxItems: 6 },
+      score: { type: 'number', minimum: 0, maximum: 10 },
+    },
+  };
+  const wire = sanitizeForWire(full);
+  assert.equal(wire.properties.beats.maxItems, undefined, 'maxItems stripped from the wire');
+  assert.equal(wire.properties.score.minimum, undefined, 'minimum stripped from the wire');
+  assert.equal(wire.properties.beats.type, 'array', 'structure survives');
+  assert.equal(full.properties.beats.maxItems, 6, 'original schema untouched (deep copy)');
+
+  // And end-to-end: the request body carries the sanitized copy, while an
+  // out-of-bounds response is rejected at OUR door and disciplined by retry.
+  const transport = mockTransport([
+    { status: 200, json: { choices: [{ message: { content: '{"beats":["1","2","3","4","5","6","7"],"score":11}' } }], usage: {} } },
+    { status: 200, json: { choices: [{ message: { content: '{"beats":["1","2"],"score":9}' } }], usage: {} } },
+  ]);
+  const client = createClient({ apiKey: 'test', transport, prices: {} });
+  const out = await client.call({ role: 'test', model: 'x/y', system: 's', user: 'u', schema: { name: 'plan', schema: full }, maxRetries: 1 });
+  assert.equal(out.json.score, 9, 'second attempt accepted after fault note');
+  assert.equal(transport.calls[0].body.response_format.json_schema.schema.properties.beats.maxItems, undefined, 'wire copy sanitized in the actual request');
+  assert.match(transport.calls[1].body.messages[1].content, /PREVIOUS ATTEMPT REJECTED/, 'fault note delivered');
+});
+
 test('prose calls never send provider routing requirements', async () => {
   const transport = mockTransport([
     { status: 200, json: { choices: [{ message: { content: 'amen' } }], usage: {} } },
