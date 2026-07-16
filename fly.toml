@@ -1,0 +1,24 @@
+# ==========================================================================
+# spacepope.ai — fly.toml · v1.0 — 15JUL2026
+# --------------------------------------------------------------------------
+# The Orbital See's physical address: a static site in a tiny nginx cell.
+# The machines sleep when no pilgrim visits (auto_stop) and wake on the
+# first knock — a hermitage, not a cathedral complex. The pipeline lives
+# in GitHub Actions; this box only ever serves what was already blessed.
+# ==========================================================================
+app = "spacepope"
+primary_region = "ewr"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[http_service]
+  internal_port = 80
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"

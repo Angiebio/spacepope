@@ -56,7 +56,7 @@ Two casts: the **pipeline crew** (picked for function, decorrelated families so 
 | Nuncio (ranking only) | `deepseek/deepseek-v4-flash` | cheapest competent ranker | 0.084 / 0.168 |
 | Astronomer of the Specola | `anthropic/claude-sonnet-5` | factual prose + citations | 2 / 10 |
 | Censor Librorum | `google/gemini-3-flash-preview` | different family than the writer it checks | 0.50 / 3 |
-| Space Reality Badger (both vocations) | `openai/gpt-5.4-mini` | third family — the judge shares no blood with the judged | 0.75 / 4.50 |
+| Space Reality Badger (both vocations) | `openai/gpt-5.6-terra` | third family — the judge shares no blood with the judged (upgraded 15JUL2026: 5.6 mid tier; Luna is the cheap fallback, Sol the heavy) | 2.50 / 15 |
 | Fabulist | `anthropic/claude-sonnet-5` | the stylist slot | 2 / 10 |
 | Inquisitor (LLM half) | `google/gemini-3.1-flash-lite` | decorrelated from Fabulist; regex half is free | 0.25 / 1.50 |
 | Chronicler | `anthropic/claude-sonnet-5` | best prose-per-dollar for the 1000-word chapter | 2 / 10 |

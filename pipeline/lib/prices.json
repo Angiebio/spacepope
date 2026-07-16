@@ -4,7 +4,7 @@
     "deepseek/deepseek-v4-flash":               { "inPerM": 0.084, "outPerM": 0.168 },
     "anthropic/claude-sonnet-5":                { "inPerM": 2.0,   "outPerM": 10.0 },
     "google/gemini-3-flash-preview":            { "inPerM": 0.50,  "outPerM": 3.0 },
-    "openai/gpt-5.4-mini":                      { "inPerM": 0.75,  "outPerM": 4.50 },
+    "openai/gpt-5.6-terra":                     { "inPerM": 2.50,  "outPerM": 15.0 },
     "google/gemini-3.1-flash-lite":             { "inPerM": 0.25,  "outPerM": 1.50 },
     "x-ai/grok-4.1-fast":                       { "inPerM": 0.20,  "outPerM": 0.50 },
     "qwen/qwen3.7-plus":                        { "inPerM": 0.32,  "outPerM": 1.28 },
