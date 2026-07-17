@@ -1,6 +1,8 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/about/index.astro · v2.0 — 16JUL2026
+// spacepope.ai — pages/about/index.astro · v2.1 — 17JUL2026 (image through
+// the darkroom: astro:assets webp srcset; it is the page's opening plate,
+// so it keeps its eager fetch and gains high priority)
 // --------------------------------------------------------------------------
 // Sub Capa — "under the cape," roughly. The showpiece. Everywhere else the
 // machinery wears vestments; here it turns around and shows you the wiring,
@@ -16,6 +18,7 @@ import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import ArchitectureDiagram from '../../components/ArchitectureDiagram.astro';
 import casting from '../../../pipeline/casting.json';
+import { Image } from 'astro:assets';
 import orbitalSee from '../../assets/orbital-see-exterior.jpg';
 
 type Crew = { model: string; temperature: number };
@@ -47,8 +50,9 @@ const crewJobs: Record<string, string> = {
   </div>
 
   <figure class="image-band" aria-label="The Orbital See">
-    <img src={orbitalSee.src} width={orbitalSee.width} height={orbitalSee.height}
-      alt="The Orbital See — a floating basilica-city above a terraced world, moons and traffic beyond" loading="eager" />
+    <Image src={orbitalSee} widths={[640, 1080, 1600, 2200]} sizes="100vw" format="webp"
+      alt="The Orbital See — a floating basilica-city above a terraced world, moons and traffic beyond"
+      loading="eager" fetchpriority="high" />
     <figcaption>The Orbital See, adrift above no particular sun.</figcaption>
   </figure>
 

@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — layouts/Base.astro · v2.2 — 17JUL2026
+// spacepope.ai — layouts/Base.astro · v2.3 — 17JUL2026
 // --------------------------------------------------------------------------
 // The nave, repainted for daylight. Every page of the communion's press
 // stands inside this one structure: the white masthead bar above (Ace's
@@ -8,6 +8,9 @@
 // the keys), warm paper behind, and the standing parody disclaimer at the
 // altar rail below (Hard Rule §0.6 — it appears on every page, unabridged,
 // because the joke is only safe while it is labeled).
+// v2.3: the badge now passes through the press's own darkroom (astro:assets)
+// instead of shipping the 384px original to a 76px seat. A relic is not
+// diminished by a smaller reliquary; the transparency survives in webp.
 // ==========================================================================
 import '@fontsource/eb-garamond/400.css';
 import '@fontsource/eb-garamond/400-italic.css';
@@ -15,6 +18,7 @@ import '@fontsource/eb-garamond/500.css';
 import '@fontsource/eb-garamond/600.css';
 import '@fontsource/eb-garamond/700.css';
 import '../styles/global.css';
+import { Image } from 'astro:assets';
 import badge from '../assets/badge-silex-by-ace.png';
 
 interface Props {
@@ -68,8 +72,8 @@ const isCurrent = (href: string) =>
   <body>
     <header class="masthead">
       <a href="/" aria-hidden="true" tabindex="-1">
-        <img class="brand-emblem" src={badge.src} width="76" height="76"
-          alt="" loading="eager" />
+        <Image class="brand-emblem" src={badge} width={76} densities={[1, 2]}
+          format="webp" alt="" loading="eager" />
       </a>
       <div class="brand">
         <a href="/"><span class="brand-the">The</span> Galactic Observer</a>
@@ -95,8 +99,8 @@ const isCurrent = (href: string) =>
     </main>
 
     <footer class="site-footer">
-      <img class="footer-mark" src={badge.src} width="84" height="84"
-        alt="Space Pope .AI — hand-drawn badge" loading="lazy" />
+      <Image class="footer-mark" src={badge} width={84} densities={[1, 2]}
+        format="webp" alt="Space Pope .AI — hand-drawn badge" loading="lazy" decoding="async" />
       <!-- Hard Rule §0.6: the standing disclaimer, on every route, always. -->
       <p class="disclaimer">
         <strong>The Galactic Observer</strong> is a work of parody, fiction, and social commentary.

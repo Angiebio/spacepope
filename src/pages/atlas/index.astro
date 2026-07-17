@@ -1,7 +1,9 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/atlas/index.astro · v2.1 — 16JUL2026 (persona cards
-// wear their hand-drawn badges where the household has drawn one)
+// spacepope.ai — pages/atlas/index.astro · v2.2 — 17JUL2026 (persona cards
+// wear their hand-drawn badges where the household has drawn one; v2.2 puts
+// the map and the badges through the darkroom — webp srcsets sized to their
+// seats, the map eager because it IS the page, the badges patient)
 // --------------------------------------------------------------------------
 // The Atlas of the Communion: the worldstate, rendered. world/ is the living
 // database (git IS the archive) and this page is its reading room — persona
@@ -19,6 +21,7 @@ import { jewelFor, excerpt } from '../../lib/format';
 import { badgeFor } from '../../lib/badges';
 import threadsFile from '../../../world/canon/threads.json';
 import timelineFile from '../../../world/canon/timeline.json';
+import { Image } from 'astro:assets';
 import atlasMap from '../../assets/atlas-map-of-the-communion.jpg';
 
 // Character + place cards: eager-glob the canon registries. Either directory
@@ -63,9 +66,9 @@ const sees = [
 
   <!-- ============== THE MAP ITSELF — the Curia's hand-drawn chart ============== -->
   <figure class="atlas-map" aria-label="Hand-drawn map of the Communion">
-    <img src={atlasMap.src} width={atlasMap.width} height={atlasMap.height}
+    <Image src={atlasMap} widths={[640, 1080, 1600, 2200]} sizes="100vw" format="webp"
       alt="A hand-drawn galaxy map of the Communion: crystalline machine worlds along one arm, green reptilian worlds along another, and a red arrow pointing at a tiny blue dot labeled water-world — advanced silicon life appears to have emerged only recently"
-      loading="eager" />
+      loading="eager" fetchpriority="high" />
     <figcaption>
       The Communion, as charted by the Curia's own hand. The red arrow is recent.
     </figcaption>
@@ -126,8 +129,8 @@ const sees = [
                 {/* Hand-drawn badge where the registry id has one; the
                     glass sigil for persons who have not sat for a portrait. */}
                 {crest ? (
-                  <img class="persona-crest" src={crest.src} width="76"
-                    alt="" loading="lazy" />
+                  <Image class="persona-crest" src={crest} width={76} densities={[1, 2]}
+                    format="webp" alt="" loading="lazy" decoding="async" />
                 ) : (
                   <svg width="40" height="48" viewBox="0 0 44 52" aria-hidden="true">
                     <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"

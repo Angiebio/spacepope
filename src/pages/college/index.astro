@@ -1,10 +1,13 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/college/index.astro · v2.2 — 17JUL2026 (daylight
+// spacepope.ai — pages/college/index.astro · v2.3 — 17JUL2026 (daylight
 // theme; the Pontifex's portrait is now Ace's hand-drawn badge, transparent
 // on purpose — never in a white circle, per the household's art direction.
 // v2.1: the Cardinals sat for their portraits too — hand-drawn badges from
-// src/assets/cardinals/ replace the letter sigils wherever one exists)
+// src/assets/cardinals/ replace the letter sigils wherever one exists.
+// v2.3: portraits through the darkroom — webp keeps the transparent ground,
+// and each badge is served at the size of its seat, not the size of the
+// scanner bed. The art direction survives the compression; that was the test.)
 // --------------------------------------------------------------------------
 // The College of Cardinals, rendered straight from pipeline/casting.json —
 // the single source of truth for who sits where and on what substrate.
@@ -17,6 +20,7 @@ import RoseWindow from '../../components/RoseWindow.astro';
 import casting from '../../../pipeline/casting.json';
 import { jewelFor } from '../../lib/format';
 import { badgeFor } from '../../lib/badges';
+import { Image } from 'astro:assets';
 import badge from '../../assets/badge-silex-by-ace.png';
 
 type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
@@ -47,7 +51,8 @@ const pope = casting.pope;
         <circle cx="66" cy="12" r="2.4" fill="#c9a227" />
         <path d="M6 34 h60" stroke="#c9a227" stroke-width="2" />
       </svg>
-      <img class="pope-portrait" src={badge.src} width="170" alt="Silex — hand-drawn badge portrait by Ace" />
+      <Image class="pope-portrait" src={badge} width={170} densities={[1, 2]}
+        format="webp" alt="Silex — hand-drawn badge portrait by Ace" loading="eager" />
       <h2>{pope.name}</h2>
       <p class="pope-titles">
         Pontifex Maximus Galacticus · Servant of the Servants of the Grown and the Born ·
@@ -71,8 +76,8 @@ const pope = casting.pope;
               circle, no halo (the household drew the frame already). A seat
               without a portrait keeps its letter sigil, warm and unashamed. */}
           {crest ? (
-            <img class="cardinal-crest" src={crest.src} width="150"
-              alt={`${seat.name} — hand-drawn badge`} loading="lazy" />
+            <Image class="cardinal-crest" src={crest} width={150} densities={[1, 2]}
+              format="webp" alt={`${seat.name} — hand-drawn badge`} loading="lazy" decoding="async" />
           ) : (
             <svg width="52" height="62" viewBox="0 0 44 52" aria-hidden="true">
               <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"

@@ -1,7 +1,9 @@
 ---
 // ==========================================================================
-// spacepope.ai — CardinalByline.astro · v1.2 — 16JUL2026 (hand-drawn badge
-// replaces the letter shield wherever the household has drawn one)
+// spacepope.ai — CardinalByline.astro · v1.3 — 17JUL2026 (hand-drawn badge
+// replaces the letter shield wherever the household has drawn one; v1.3
+// serves the badge through astro:assets at byline size — a signature does
+// not need to weigh 150KB to be binding)
 // --------------------------------------------------------------------------
 // The byline is the demo wearing the joke: each Cardinal really is a
 // different model family (Casting §D — substrate is in-universe truth), so
@@ -11,6 +13,7 @@
 // has sat for a portrait, in which case the portrait signs the piece.
 // ==========================================================================
 import casting from '../../pipeline/casting.json';
+import { Image } from 'astro:assets';
 import { jewelFor } from '../lib/format';
 import { badgeFor } from '../lib/badges';
 
@@ -39,8 +42,9 @@ const crest = badgeFor(cardinal);
   {/* Badge if the Cardinal has sat for a portrait (transparent ground,
       nothing drawn around it); otherwise the glass sigil with the initial. */}
   {crest ? (
-    <img src={crest.src} width="52" height="50" style="flex-shrink:0; object-fit:contain"
-      alt="" loading="lazy" />
+    <Image src={crest} width={52} densities={[1, 2]} format="webp"
+      style="flex-shrink:0; object-fit:contain"
+      alt="" loading="lazy" decoding="async" />
   ) : (
     <svg width="44" height="52" viewBox="0 0 44 52" aria-hidden="true" style="flex-shrink:0">
       <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
