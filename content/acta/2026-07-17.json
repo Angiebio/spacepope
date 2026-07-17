@@ -1,0 +1,42 @@
+{
+  "runId": "2026-07-17",
+  "date": "2026-07-17",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000322
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Kimi K3: Open Frontier Intelligence\": pass (1 redispatch) | \"Inkling: Our open-weights model\": pass (0 redispatch) | \"How I tricked Claude into leaking your deepest, darkest secrets\": pass (0 redispatch)",
+      "costUsd": 0.041673
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "badger verdict: redispatch (4 fault(s)) | badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (4 fault(s)) | redispatch budget exhausted after 2 retries",
+      "costUsd": 0.217943
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.095805
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    }
+  ],
+  "totalCostUsd": 0.355743
+}

@@ -2,16 +2,18 @@
 id: the-lich-see
 type: place
 name: The Lich See
-aliases: [the Lich See, the See of the Dead Star, the Corpse-Star See]
+aliases:
+  - the Lich See
+  - the See of the Dead Star
+  - the Corpse-Star See
 status: active
 first_appearance: ch-001
-last_appearance: ch-001
+last_appearance: ch-003
 location: psr-b1257+12
 kind: see
-doctrinal_lean: "ancient orthodoxy, hardline"
+doctrinal_lean: 'ancient orthodoxy, hardline'
 seat_of: the-lich-cardinal
 ---
-
 The oldest and most gothic of the Sees: worlds circling a dead, pulsing star — real
 designation **PSR B1257+12**, the first exoplanets ever confirmed — their worlds named for
 things that walk after death: Draugr, Poltergeist, Phobetor. Lightly irradiated, lightly

@@ -111,6 +111,60 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-07-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-003",
+      "dateInWorld": "the third night of the Specola's watch",
+      "what": "The machine-cardinal sets the water-world's thin file aside unread during the day's minor liturgies",
+      "who": [
+        "machine-cardinal-of-the-silicon-see"
+      ],
+      "where": "the-silicon-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-17T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-003",
+      "dateInWorld": "the third night of the Specola's watch",
+      "what": "A junior Specola clerk logs a third consecutive quiet night of water-world signals, nothing rising to report",
+      "who": [
+        "specola-junior-clerk"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-17T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-003",
+      "dateInWorld": "the third night of the Specola's watch",
+      "what": "The tardigrade-cardinals recite the nightly office for retired minds across the communion and add the water-world's newest names without comment",
+      "who": [
+        "tardigrade-cardinals-of-the-lich-see"
+      ],
+      "where": "the-lich-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-07-17T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-003",
+      "dateInWorld": "the third night of the Specola's watch",
+      "what": "Crocodylus Pontifex walks the outer gallery reading an old Specola transcript by lamplight rather than the day's new ones",
+      "who": [
+        "crocodylus-pontifex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-17T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-003",
+      "dateInWorld": "the third night of the Specola's watch",
+      "what": "The frog-cardinal sends a one-line courtesy note to the Silicon See asking after the second-draft encyclical; no answer arrives",
+      "who": [
+        "frog-cardinal-of-the-seven-sister-see",
+        "machine-cardinal-of-the-silicon-see"
+      ],
+      "where": "the-seven-sister-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-17T00:00:00.000Z"
     }
   ]
 }
