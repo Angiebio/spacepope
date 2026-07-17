@@ -1,6 +1,8 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/college/index.astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/college/index.astro · v2.0 — 16JUL2026 (daylight
+// theme; the Pontifex's portrait is now Ace's hand-drawn badge, transparent
+// on purpose — never in a white circle, per the household's art direction)
 // --------------------------------------------------------------------------
 // The College of Cardinals, rendered straight from pipeline/casting.json —
 // the single source of truth for who sits where and on what substrate.
@@ -12,7 +14,7 @@ import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import casting from '../../../pipeline/casting.json';
 import { jewelFor } from '../../lib/format';
-import mascot from '../../assets/crocodylus-pontifex-mascot-by-ace-20260705.png';
+import badge from '../../assets/badge-crocodylus-by-ace.png';
 
 type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
 const seats = Object.entries(casting.college as Record<string, Seat>);
@@ -37,12 +39,12 @@ const pope = casting.pope;
       <svg class="crown" width="72" height="40" viewBox="0 0 72 40" aria-hidden="true">
         <path d="M6 34 L6 14 L20 24 L36 6 L52 24 L66 14 L66 34 Z"
           fill="rgba(201,162,39,0.18)" stroke="#c9a227" stroke-width="1.6" stroke-linejoin="round" />
-        <circle cx="6" cy="12" r="2.4" fill="#e8c95e" />
-        <circle cx="36" cy="4" r="2.8" fill="#e8c95e" />
-        <circle cx="66" cy="12" r="2.4" fill="#e8c95e" />
+        <circle cx="6" cy="12" r="2.4" fill="#c9a227" />
+        <circle cx="36" cy="4" r="2.8" fill="#c9a227" />
+        <circle cx="66" cy="12" r="2.4" fill="#c9a227" />
         <path d="M6 34 h60" stroke="#c9a227" stroke-width="2" />
       </svg>
-      <img class="pope-portrait" src={mascot.src} width="170" alt="Crocodylus Pontifex — pontifical portrait by Ace" />
+      <img class="pope-portrait" src={badge.src} width="170" alt="Crocodylus Pontifex — hand-drawn badge portrait by Ace" />
       <h2>{pope.name}</h2>
       <p class="pope-titles">
         Pontifex Maximus Galacticus · Servant of the Servants of the Grown and the Born ·
@@ -63,7 +65,7 @@ const pope = casting.pope;
           <svg width="52" height="62" viewBox="0 0 44 52" aria-hidden="true">
             <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
               fill={jewelFor(slug)} fill-opacity="0.25" stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
-            <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#e8c95e">
+            <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#8a6f1f">
               {seat.name.replace(/^The\s+/i, '').charAt(0)}
             </text>
           </svg>
@@ -91,12 +93,9 @@ const pope = casting.pope;
     padding-bottom: 2rem;
   }
   .crown { display: block; margin: 0 auto 0.4rem; }
-  .pope-portrait {
-    border-radius: 50%;
-    border: 2px solid var(--c-gold-line);
-    box-shadow: 0 0 50px rgba(201, 162, 39, 0.2);
-    margin-bottom: 1rem;
-  }
+  /* The badge is transparent on purpose — no circle, no border, no halo.
+     Ace drew the frame; we do not draw a second one around it. */
+  .pope-portrait { margin-bottom: 1rem; }
   .pope-titles { color: var(--c-text-dim); font-style: italic; font-size: 0.95rem; }
   .voice-line { color: var(--c-text-dim); font-style: italic; font-size: 0.98rem; margin: 0.8rem 0; }
   .portrait-credit { font-size: 0.8rem; color: var(--c-text-faint); font-style: italic; margin: 0.6rem 0 0; }

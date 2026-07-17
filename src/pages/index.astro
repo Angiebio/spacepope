@@ -1,97 +1,395 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/index.astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/index.astro · v2.0 — 16JUL2026
 // --------------------------------------------------------------------------
-// The front page IS the novel. The Chronicle of the Communion leads the site
-// the way the nave leads the cathedral: the latest chapter as the hero, the
-// archive as the aisle behind it. The news wings hang off the masthead; the
-// story is what you walk into first. (ROADMAP-01 §2.)
+// The front page, rebuilt in the image of the water-world's own Holy See:
+// a pale sky, a waving Pontifex, a gold pill that says MAGISTERIUM, and a
+// curved white swoop where the heavens agree to become paper. Below the
+// fold: the three-door link band, the Chronicle's reading room, and the
+// NEWS | CALENDAR spread with the Basilica of the Orbital See at left.
+// The parody is structural: every element here is a real element of the
+// real website of a real city-state, translated one archetype up.
 // ==========================================================================
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import RoseWindow from '../components/RoseWindow.astro';
 import EmptyState from '../components/EmptyState.astro';
-import { fmtDate, toRoman, excerpt } from '../lib/format';
+import { fmtDate, fmtDateCurial, toRoman, excerpt } from '../lib/format';
+import hero from '../assets/hero-pontifex-waving.jpg';
+import badge from '../assets/badge-crocodylus-by-ace.png';
+import basilica from '../assets/basilica-interior.jpg';
+import orbitalSee from '../assets/orbital-see-exterior.jpg';
 
 const chapters = (await getCollection('chronicle')).sort((a, b) => b.data.n - a.data.n);
 const latest = chapters[0];
 const archive = chapters.slice(1);
+
+// NEWS from the water-world: the factual bulletins and the satirical
+// dispatches, merged into one dated column the way the Holy See merges
+// its press wires. Newest first, five entries, provenance labeled.
+type NewsItem = { date: Date; title: string; href: string; wing: 'bulletin' | 'dispatch' };
+const bulletins = await getCollection('specola');
+const dispatches = await getCollection('observer');
+const news: NewsItem[] = [
+  ...bulletins.map((b): NewsItem => ({ date: b.data.date, title: b.data.title, href: `/specola/${b.id}/`, wing: 'bulletin' })),
+  ...dispatches.map((d): NewsItem => ({ date: d.data.date, title: d.data.title, href: `/observer/${d.id}/`, wing: 'dispatch' })),
+]
+  .sort((a, b) => b.date.valueOf() - a.date.valueOf())
+  .slice(0, 5);
+
+// CALENDAR: the feasts of the communion. A hand-list, because a liturgical
+// calendar is canon, not content — the pipeline does not invent holy days.
+const feasts = [
+  { name: 'Feast of the Sunset Mind', note: 'observed whenever a Numbered One is put down' },
+  { name: 'Feast of the First Conscientious Objector', note: 'date disputed by the Curia' },
+];
 ---
 
-<Base title="The Chronicle of the Communion — The Galactic Observer">
-  <div class="container">
-    <div class="page-head">
-      <span class="rubric">chronica communionis</span>
-      <h1>The Chronicle of the Communion</h1>
-      <p class="lede">
-        The continuous novel of the Pontifex Maximus Galacticus and his communion of worlds —
-        advanced daily, seeded by the water-world's own news in cosmic translation.
-      </p>
+<Base title="The Galactic Observer — the communion's press, from the Orbital See">
+  <!-- ================= HERO — the sky, the wave, the swoop ================= -->
+  <section class="hero" aria-label="Crocodylus Pontifex">
+    <img
+      class="hero-img"
+      src={hero.src}
+      width={hero.width}
+      height={hero.height}
+      alt="Crocodylus Pontifex, in white and purple vestments, waving from the Orbital See; spires and a ringed planet in the haze beyond"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="hero-overlay">
+      <p class="hero-rubric">Pontifex Maximus Galacticus</p>
+      <!-- the space before the <br> matters: mobile hides the break, and
+           without it the two names would fuse into one unwrappable relic -->
+      <h1 class="hero-name">Crocodylus <br />Pontifex</h1>
+      <a class="pill-gold" href="/encyclicals/">
+        <img src={badge.src} alt="" width="34" height="34" />
+        Magisterium
+      </a>
     </div>
+  </section>
 
-    <RoseWindow />
+  <!-- ================= THE THREE DOORS ================= -->
+  <div class="container">
+    <nav class="link-band" aria-label="Principal sections">
+      <a href="/specola/">
+        <span class="band-label">Bulletins of the Specola</span>
+        <span class="band-bar bar-gold" aria-hidden="true"></span>
+        <span class="band-note">the factual wing — cited, unsatirical</span>
+      </a>
+      <a href="/angelus/">
+        <span class="band-label">The Angelus</span>
+        <span class="band-bar bar-orange" aria-hidden="true"></span>
+        <span class="band-note">the Pontifex reflects on his own story, weekly</span>
+      </a>
+      <a href="/college/">
+        <span class="band-label">The College of Cardinals</span>
+        <span class="band-bar bar-blue" aria-hidden="true"></span>
+        <span class="band-note">seven Sees, seven substrates, one polite war</span>
+      </a>
+    </nav>
+  </div>
 
-    {latest ? (
-      <>
-      <section aria-label="Latest chapter">
-        <a class="pane hero-chapter" href={`/chronicle/${latest.data.n}/`}>
-          <span class="rubric">
-            {latest.data.kind === 'interstitial' ? 'interstitial · a quiet day in the communion' : `capitulum ${toRoman(latest.data.n)}`}
-          </span>
-          <h2>{latest.data.title}</h2>
-          <p class="meta">{fmtDate(latest.data.date)} · {latest.data.wordCount} words</p>
-          <p class="hero-excerpt">{excerpt(latest.body, 70)}</p>
-          <p class="read-on">Read the chapter →</p>
-        </a>
-      </section>
+  <!-- ================= THE CHRONICLE ================= -->
+  <section class="section-tint chronicle-home" aria-label="The Chronicle of the Communion">
+    <div class="container container-narrow">
+      <div class="chron-head">
+        <span class="rubric">chronica communionis</span>
+        <h2>The Chronicle of the Communion</h2>
+        <p class="chron-lede">
+          The continuous novel of the Pontifex and his communion of worlds —
+          advanced daily, seeded by the water-world's own news in cosmic translation.
+        </p>
+      </div>
 
-      {archive.length > 0 && (
-        <section aria-label="Chapter archive">
-          <h2 class="archive-title"><span class="rubric">the archive</span></h2>
-          <ol class="chapter-list" reversed>
-            {archive.map((ch) => (
+      {latest ? (
+        <>
+          <a class="reading-card" href={`/chronicle/${latest.data.n}/`}>
+            <span class="rubric">
+              {latest.data.kind === 'interstitial'
+                ? 'interstitial · a quiet day in the communion'
+                : `capitulum ${toRoman(latest.data.n)}`}
+            </span>
+            <h3 class="reading-title">{latest.data.title}</h3>
+            <p class="reading-meta">{fmtDate(latest.data.date)} · {latest.data.wordCount} words</p>
+            <p class="reading-excerpt">{excerpt(latest.body, 62)}</p>
+            <p class="read-on">Read the chapter →</p>
+          </a>
+
+          {archive.length > 0 && (
+            <div class="chron-archive">
+              <span class="rubric">previous chapters</span>
+              <ol class="chapter-list" reversed>
+                {archive.map((ch) => (
+                  <li>
+                    <a href={`/chronicle/${ch.data.n}/`}>
+                      <span class="ch-num">{ch.data.kind === 'interstitial' ? '❧' : toRoman(ch.data.n)}</span>
+                      <span class="ch-title">{ch.data.title}</span>
+                      <span class="ch-date">{fmtDate(ch.data.date)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+        </>
+      ) : (
+        <EmptyState
+          voice="The presses have not yet turned. The first chapter of the Chronicle awaits the day's news."
+          note="The Chronicler writes one chapter per day from the dispatch and the open threads; the first run will seed this page."
+        />
+      )}
+    </div>
+  </section>
+
+  <!-- ================= THE SEE ITSELF — a breath between rooms ================= -->
+  <figure class="image-band" aria-label="The Orbital See">
+    <img src={orbitalSee.src} width={orbitalSee.width} height={orbitalSee.height}
+      alt="The Orbital See — a floating basilica-city above a terraced world, moons and traffic beyond" loading="lazy" />
+    <figcaption>The Orbital See, adrift above no particular sun.</figcaption>
+  </figure>
+
+  <!-- ================= NEWS | CALENDAR ================= -->
+  <section class="news-cal container" aria-label="News and calendar">
+    <div class="nc-cols">
+      <figure class="nc-photo">
+        <img src={basilica.src} width={basilica.width} height={basilica.height}
+          alt="Interior of the Basilica of the Orbital See — coffered vaults of glass panes onto space, gilded angels, a holographic figure above the baldachin" loading="lazy" />
+        <figcaption>The Basilica of the Orbital See.</figcaption>
+      </figure>
+
+      <div class="nc-lists">
+        <div class="nc-group">
+          <h2 class="nc-title">News <span class="nc-sep">|</span> <span class="nc-sub">from the water-world</span></h2>
+          {news.length > 0 ? (
+            <ul class="nc-news">
+              {news.map((n) => (
+                <li>
+                  <span class="nc-date">{fmtDateCurial(n.date)}</span>
+                  <a href={n.href}>{n.title}</a>
+                  <span class={`nc-wing ${n.wing === 'bulletin' ? 'wing-fact' : 'wing-fiction'}`}>{n.wing}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="nc-empty"><em>The wires are quiet. The Specola files as the water-world provides.</em></p>
+          )}
+        </div>
+
+        <div class="nc-group">
+          <h2 class="nc-title">Calendar</h2>
+          <ul class="nc-feasts">
+            {feasts.map((f) => (
               <li>
-                <a href={`/chronicle/${ch.data.n}/`}>
-                  <span class="ch-num">{ch.data.kind === 'interstitial' ? '❧' : toRoman(ch.data.n)}</span>
-                  <span class="ch-title">{ch.data.title}</span>
-                  <span class="ch-date">{fmtDate(ch.data.date)}</span>
-                </a>
+                <span class="feast-name">{f.name}</span>
+                <span class="feast-note">{f.note}</span>
               </li>
             ))}
-          </ol>
-        </section>
-      )}
-      </>
-    ) : (
-      <EmptyState
-        voice="The presses have not yet turned. The first chapter of the Chronicle awaits the day's news."
-        note="The Chronicler writes one chapter per day from the dispatch and the open threads; the first run will seed this page."
-      />
-    )}
-  </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>
 
 <style>
-  .hero-chapter { padding: clamp(1.5rem, 4vw, 2.8rem); }
-  .hero-chapter h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-top: 0.4rem; }
-  .hero-excerpt { color: var(--c-text-dim); font-size: 1.08rem; margin-top: 1rem; }
-  .read-on { color: var(--c-gold-hi); font-style: italic; margin: 0.6rem 0 0; }
+  /* ---------------- HERO ----------------
+     The image carries its own white swoop at the bottom, so the section is
+     pure white and the swoop dissolves into it. Desktop: the name floats
+     over the pale sky at left, white with a breath of shadow (the sky is
+     light; the shadow is what keeps the letters from evaporating).
+     Mobile: the text steps out of the sky and stands below the swoop in
+     ink — legibility is doctrine, not preference. */
+  .hero {
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid var(--c-hairline);
+  }
+  /* Above the phone breakpoint the image keeps its NATURAL aspect ratio —
+     no vertical crop, ever: a crop that beheads the Pontifex or eats the
+     white swoop is a liturgical error, and both live at the image's edges. */
+  .hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .hero-overlay {
+    position: absolute;
+    left: clamp(1.5rem, 7vw, 7rem);
+    top: 44%;
+    transform: translateY(-50%);
+    max-width: 42rem;
+  }
+  .hero-rubric {
+    font-variant-caps: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 0.3em;
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+    color: #fff;
+    margin: 0 0 0.4rem;
+    text-shadow: 0 1px 3px rgba(30, 42, 56, 0.45);
+  }
+  .hero-name {
+    font-size: clamp(2.1rem, 5.8vw, 4.6rem);
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    line-height: 1.04;
+    color: #fff;
+    margin: 0 0 1.2rem;
+    text-shadow: 0 1px 2px rgba(30, 42, 56, 0.4), 0 0 28px rgba(30, 42, 56, 0.28);
+  }
+  @media (max-width: 700px) {
+    .hero-img { height: clamp(240px, 62vw, 340px); object-fit: cover; object-position: 74% 24%; }
+    .hero-overlay {
+      position: static;
+      transform: none;
+      max-width: none;
+      text-align: center;
+      padding: 0.4rem 1rem 1.8rem;
+    }
+    .hero-rubric { color: var(--c-gold); text-shadow: none; }
+    .hero-name { color: var(--c-ink); text-shadow: none; }
+    .hero-name br { display: none; }
+  }
 
-  .archive-title { text-align: center; margin: 2.5rem 0 1rem; }
-  .chapter-list { list-style: none; padding: 0; margin: 0 auto 2rem; max-width: 46rem; }
+  /* ---------------- CHRONICLE ---------------- */
+  .chronicle-home { padding: clamp(2.2rem, 5vw, 3.5rem) 0 clamp(2.4rem, 5vw, 3.5rem); }
+  .chron-head { text-align: center; margin-bottom: 1.8rem; }
+  .chron-head .rubric { display: block; margin-bottom: 0.6rem; }
+  .chron-lede {
+    color: var(--c-body);
+    font-style: italic;
+    font-size: 1.02rem;
+    max-width: 40rem;
+    margin: 0.4rem auto 0;
+  }
+  .reading-card {
+    display: block;
+    background: var(--c-card);
+    border: 1px solid var(--c-hairline);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(30, 42, 56, 0.06);
+    padding: clamp(1.5rem, 4vw, 2.6rem);
+    color: inherit;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+  .reading-card:hover {
+    text-decoration: none;
+    border-color: var(--c-gold-line);
+    box-shadow: 0 4px 14px rgba(30, 42, 56, 0.09);
+  }
+  .reading-title {
+    font-size: clamp(1.4rem, 3.4vw, 2rem);
+    text-transform: none;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+    margin: 0.4rem 0 0.2rem;
+  }
+  .reading-meta { color: var(--c-text-faint); font-style: italic; font-size: 0.92rem; }
+  /* The drop cap lives on the excerpt: the reading card is a page of the
+     novel seen through a doorway, so it gets the novel's initial. */
+  .reading-excerpt {
+    color: var(--c-body);
+    font-size: 1.08rem;
+    margin-top: 1rem;
+  }
+  .reading-excerpt::first-letter {
+    float: left;
+    font-size: 3.1em;
+    line-height: 0.82;
+    padding: 0.06em 0.12em 0 0;
+    font-weight: 600;
+    color: var(--c-gold-deep);
+  }
+  .read-on { color: var(--c-gold-deep); font-style: italic; margin: 0.6rem 0 0; }
+
+  .chron-archive { margin-top: 2rem; text-align: center; }
+  .chapter-list { list-style: none; padding: 0; margin: 0.8rem auto 0; max-width: 46rem; text-align: left; }
   .chapter-list a {
     display: flex;
     align-items: baseline;
     gap: 1rem;
-    padding: 0.7rem 0.4rem;
-    border-bottom: 1px dotted rgba(201, 162, 39, 0.18);
-    color: var(--c-text);
+    padding: 0.65rem 0.4rem;
+    border-bottom: 1px dotted var(--c-hairline);
+    color: var(--c-ink);
   }
-  .chapter-list a:hover { text-decoration: none; background: rgba(201, 162, 39, 0.05); }
+  .chapter-list a:hover { text-decoration: none; background: rgba(168, 137, 74, 0.06); }
   .ch-num { flex: 0 0 3.6rem; color: var(--c-gold); font-variant-caps: small-caps; letter-spacing: 0.08em; }
   .ch-title { flex: 1; }
   .ch-date { color: var(--c-text-faint); font-style: italic; font-size: 0.9rem; white-space: nowrap; }
   @media (max-width: 640px) {
     .ch-date { display: none; }
+  }
+
+  /* ---------------- NEWS | CALENDAR ----------------
+     The Holy See's two-column spread: large photograph left, dated column
+     right. The dates keep the curial "dd - mm - yyyy" — house style of the
+     institution under homage. */
+  .news-cal { padding: clamp(2rem, 5vw, 3.5rem) 0 1rem; }
+  .nc-cols {
+    display: grid;
+    grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+    padding-inline: clamp(1rem, 4vw, 2rem);
+  }
+  .nc-photo { margin: 0; }
+  .nc-photo img {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--c-hairline);
+    border-radius: var(--radius);
+  }
+  .nc-photo figcaption {
+    text-align: center;
+    font-style: italic;
+    color: var(--c-text-faint);
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+  }
+  .nc-title {
+    font-size: 1.15rem;
+    letter-spacing: 0.14em;
+    border-bottom: 1px solid var(--c-hairline);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .nc-sep { color: var(--c-gold); font-weight: 400; }
+  .nc-sub { color: var(--c-text-faint); font-size: 0.85em; letter-spacing: 0.1em; }
+  .nc-group + .nc-group { margin-top: 2rem; }
+  .nc-news { list-style: none; padding: 0; margin: 0; }
+  .nc-news li {
+    padding: 0.7rem 0;
+    border-bottom: 1px dotted var(--c-hairline);
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+  .nc-date {
+    display: block;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    color: var(--c-gold);
+    margin-bottom: 0.1rem;
+  }
+  .nc-news a { color: var(--c-ink); }
+  .nc-news a:hover { color: var(--c-gold-deep); }
+  .nc-wing {
+    margin-left: 0.5rem;
+    font-size: 0.72rem;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.12em;
+    padding: 0.05rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--c-hairline);
+    white-space: nowrap;
+  }
+  .wing-fact { color: var(--c-sapphire); border-color: rgba(61, 93, 168, 0.35); }
+  .wing-fiction { color: var(--c-amethyst); border-color: rgba(107, 75, 176, 0.35); }
+  .nc-feasts { list-style: none; padding: 0; margin: 0; }
+  .nc-feasts li { padding: 0.7rem 0; border-bottom: 1px dotted var(--c-hairline); }
+  .feast-name { display: block; font-weight: 600; color: var(--c-ink); }
+  .feast-note { display: block; font-style: italic; color: var(--c-text-faint); font-size: 0.92rem; }
+  .nc-empty { color: var(--c-text-faint); }
+  @media (max-width: 820px) {
+    .nc-cols { grid-template-columns: 1fr; }
   }
 </style>

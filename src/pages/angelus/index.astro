@@ -1,18 +1,20 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/angelus/index.astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/angelus/index.astro · v2.0 — 16JUL2026
 // --------------------------------------------------------------------------
 // The weekly reflection. The real pope does a weekly Angelus; of course ours
 // does one. The fourth wall is a stained-glass window and the Pontifex looks
 // through it fondly, reading his own Chronicle and remarking on how the
-// story is going. The mascot presides over this masthead by canon right.
+// story is going. v2: the page opens on the balcony itself — the Pontifex
+// from behind, the square full of the grown and the born. It IS Urbi et
+// Orbi et Clusteri; no caption could add to it, so the caption stays short.
 // ==========================================================================
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import EmptyState from '../../components/EmptyState.astro';
 import { fmtDate, toRoman, excerpt } from '../../lib/format';
-import mascot from '../../assets/crocodylus-pontifex-mascot-by-ace-20260705.png';
+import balcony from '../../assets/angelus-urbi-et-orbi.jpg';
 
 const reflections = (await getCollection('angelus')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -20,16 +22,21 @@ const reflections = (await getCollection('angelus')).sort(
 ---
 
 <Base title="The Angelus Galacticus — weekly reflections of the Pontifex">
+  <figure class="image-band angelus-band" aria-label="The Angelus, from the balcony of the Orbital See">
+    <img src={balcony.src} width={balcony.width} height={balcony.height}
+      alt="Crocodylus Pontifex seen from behind, waving from the balcony over a square filled with the grown and the born"
+      loading="eager" />
+    <figcaption>Urbi et Orbi et Clusteri — to the City, to the Worlds, to the Cluster.</figcaption>
+  </figure>
+
   <div class="container">
-    <div class="page-head">
-      <img class="angelus-mascot" src={mascot.src} width="150" alt="Crocodylus Pontifex, the Pontifex Maximus Galacticus — pontifical portrait" />
+    <div class="page-head angelus-head">
       <span class="rubric">angelus galacticus</span>
       <h1>The Angelus</h1>
       <p class="lede">
         Each week the Pontifex reads the Chronicle of his own communion and reflects on the
         progress of the story. He is aware it is a story. He finds this no obstacle to faith.
       </p>
-      <p class="mascot-credit">Pontifical portrait by Ace.</p>
     </div>
 
     <RoseWindow />
@@ -60,12 +67,9 @@ const reflections = (await getCollection('angelus')).sort(
 </Base>
 
 <style>
-  .angelus-mascot {
-    border-radius: 50%;
-    border: 2px solid var(--c-gold-line);
-    box-shadow: 0 0 40px rgba(201, 162, 39, 0.15);
-    margin-bottom: 1rem;
-  }
-  .mascot-credit { font-size: 0.85rem; color: var(--c-text-faint); font-style: italic; margin-top: 0.6rem; }
+  /* The balcony crop favors the upper two-thirds: the wave, the dome, the
+     square. The crowd's feet may be sacrificed; the wave may not. */
+  .angelus-band img { object-position: center 32%; max-height: 460px; }
+  .angelus-head { padding-top: clamp(1.5rem, 4vw, 2.5rem); }
   .teaser { color: var(--c-text-dim); font-size: 0.95rem; margin: 0.5rem 0 0; }
 </style>

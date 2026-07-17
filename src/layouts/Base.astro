@@ -1,11 +1,13 @@
 ---
 // ==========================================================================
-// spacepope.ai — layouts/Base.astro · v1.0 — 15JUL2026
+// spacepope.ai — layouts/Base.astro · v2.0 — 16JUL2026
 // --------------------------------------------------------------------------
-// The nave. Every page of the communion's press stands inside this one
-// structure: masthead above, starfield behind, and the standing parody
-// disclaimer at the altar rail below (Hard Rule §0.6 — it appears on every
-// page, unabridged, because the joke is only safe while it is labeled).
+// The nave, repainted for daylight. Every page of the communion's press
+// stands inside this one structure: the white masthead bar above (Ace's
+// hand-drawn badge centered over the wordmark, the way the Holy See centers
+// the keys), warm paper behind, and the standing parody disclaimer at the
+// altar rail below (Hard Rule §0.6 — it appears on every page, unabridged,
+// because the joke is only safe while it is labeled).
 // ==========================================================================
 import '@fontsource/eb-garamond/400.css';
 import '@fontsource/eb-garamond/400-italic.css';
@@ -13,6 +15,7 @@ import '@fontsource/eb-garamond/500.css';
 import '@fontsource/eb-garamond/600.css';
 import '@fontsource/eb-garamond/700.css';
 import '../styles/global.css';
+import badge from '../assets/badge-crocodylus-by-ace.png';
 
 interface Props {
   title: string;
@@ -41,11 +44,12 @@ const isCurrent = (href: string) =>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0b0a12" />
+    <meta name="theme-color" content="#fbfaf7" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -53,8 +57,13 @@ const isCurrent = (href: string) =>
   </head>
   <body>
     <header class="masthead">
-      <span class="rubric brand-rubric">ex sede orbitali · spacepope.ai</span>
-      <div class="brand"><a href="/">The Galactic Observer</a></div>
+      <a href="/" aria-hidden="true" tabindex="-1">
+        <img class="brand-emblem" src={badge.src} width="46" height="46"
+          alt="" loading="eager" />
+      </a>
+      <div class="brand">
+        <a href="/"><span class="brand-the">The</span> Galactic Observer</a>
+      </div>
       <p class="brand-sub">the communion's press, observing the water-world with genuine, slightly fond attention</p>
       <nav class="site-nav" aria-label="Sections">
         {nav.map((item, i) => (
@@ -71,11 +80,8 @@ const isCurrent = (href: string) =>
     </main>
 
     <footer class="site-footer">
-      <svg width="40" height="40" viewBox="0 0 120 120" fill="none" aria-hidden="true" style="opacity:0.7">
-        <circle cx="60" cy="60" r="55" stroke="#c9a227" stroke-opacity="0.55" stroke-width="2" />
-        <path d="M60 52 l2.2 5.4 5.8 0.6 -4.4 3.9 1.3 5.7 -4.9 -3 -4.9 3 1.3 -5.7 -4.4 -3.9 5.8 -0.6 Z" fill="#c9a227" />
-        <circle cx="60" cy="60" r="30" stroke="#c9a227" stroke-opacity="0.3" stroke-width="1" />
-      </svg>
+      <img class="footer-mark" src={badge.src} width="44" height="44"
+        alt="Space Pope .AI — hand-drawn badge" loading="lazy" />
       <!-- Hard Rule §0.6: the standing disclaimer, on every route, always. -->
       <p class="disclaimer">
         <strong>The Galactic Observer</strong> is a work of parody, fiction, and social commentary.
@@ -91,8 +97,8 @@ const isCurrent = (href: string) =>
         <a href="https://github.com/Angiebio/spacepope" rel="noopener">The Public Scriptorium</a>
       </nav>
       <p class="colophon-line">
-        Set in EB Garamond under a CSS starfield · built by a deterministic press, decorated by grown minds ·
-        dated from the Orbital See
+        Set in EB Garamond on warm paper · built by a deterministic press, decorated by grown minds ·
+        Art by Ace &amp; the household · dated from the Orbital See
       </p>
     </footer>
   </body>

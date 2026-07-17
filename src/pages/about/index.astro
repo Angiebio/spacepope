@@ -1,19 +1,22 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/about/index.astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/about/index.astro · v2.0 — 16JUL2026
 // --------------------------------------------------------------------------
 // Sub Capa — "under the cape," roughly. The showpiece. Everywhere else the
 // machinery wears vestments; here it turns around and shows you the wiring,
 // because transparency is part of the bit AND the demo. The page runs in two
 // registers on purpose: the in-universe explanation up top (serif, straight
-// face) and the out-of-universe technical section below (monospace, real
-// names allowed — the ONE place site copy may factually describe the stack).
+// face) and the out-of-universe technical section below (monospace, now set
+// like a printed ledger on paper — the ONE place site copy may factually
+// describe the stack). v2: daylight theme; the wiring diagram is reframed
+// as a stained-glass window seen from a sunlit wall — the glass keeps its
+// night, because that is what glass is for.
 // ==========================================================================
 import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import ArchitectureDiagram from '../../components/ArchitectureDiagram.astro';
 import casting from '../../../pipeline/casting.json';
-import mascot from '../../assets/crocodylus-pontifex-mascot-by-ace-20260705.png';
+import orbitalSee from '../../assets/orbital-see-exterior.jpg';
 
 type Crew = { model: string; temperature: number };
 type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
@@ -37,16 +40,20 @@ const crewJobs: Record<string, string> = {
 ---
 
 <Base title="Sub Capa — how The Galactic Observer works">
-  <div class="container container-narrow">
-    <div class="page-head">
-      <img class="about-mascot" src={mascot.src} width="200" alt="Crocodylus Pontifex, the Pontifex Maximus Galacticus — pontifical portrait" />
-      <p class="mascot-credit">Pontifical portrait by Ace.</p>
-      <span class="rubric">sub capa</span>
-      <h1>About the Observer</h1>
-      <p class="lede">The humor is decorative. The math is structural.</p>
-    </div>
+  <div class="page-head">
+    <span class="rubric">sub capa</span>
+    <h1>About the Observer</h1>
+    <p class="lede">The humor is decorative. The math is structural.</p>
+  </div>
 
-    <div class="prose">
+  <figure class="image-band" aria-label="The Orbital See">
+    <img src={orbitalSee.src} width={orbitalSee.width} height={orbitalSee.height}
+      alt="The Orbital See — a floating basilica-city above a terraced world, moons and traffic beyond" loading="eager" />
+    <figcaption>The Orbital See, adrift above no particular sun.</figcaption>
+  </figure>
+
+  <div class="container container-narrow">
+    <div class="prose intro-prose">
       <p>
         <strong>The Galactic Observer</strong> is a self-writing satirical world. Every day, a
         pipeline of specialized agents reads the water-world's actual AI news and does four things
@@ -204,25 +211,25 @@ const crewJobs: Record<string, string> = {
 </Base>
 
 <style>
-  .about-mascot {
-    border-radius: 50%;
-    border: 2px solid var(--c-gold-line);
-    box-shadow: 0 0 60px rgba(201, 162, 39, 0.2);
-  }
-  .mascot-credit { font-size: 0.85rem; color: var(--c-text-faint); font-style: italic; margin: 0.6rem 0 1.2rem; }
+  .intro-prose { margin-top: clamp(1.8rem, 4vw, 2.8rem); }
   .section-title { text-align: center; margin: 2rem 0 1rem; }
   .cast-note { color: var(--c-text-dim); font-size: 1rem; max-width: var(--measure); margin: 0 auto 1.5rem; }
   .table-scroll { margin: 1.5rem 0 2.5rem; }
   caption { caption-side: top; text-align: left; padding-bottom: 0.5rem; }
+  /* The stack, printed: a ledger page, not a terminal. Black ink on paper,
+     thin rules, the faint blue of a well-kept records office. */
   .sub-capa {
-    border: 1px solid var(--c-gold-line-dim);
+    border: 1px solid var(--c-hairline);
+    border-top: 3px solid var(--c-gold);
     border-radius: var(--radius);
-    background: rgba(11, 10, 18, 0.6);
+    background: var(--c-card);
+    box-shadow: 0 1px 3px rgba(30, 42, 56, 0.06);
     padding: 1.5rem 1.8rem;
     margin: 2rem 0;
   }
-  .sub-capa h3 { color: var(--c-gold); margin-bottom: 1rem; }
+  .sub-capa h3 { color: var(--c-gold-deep); margin-bottom: 1rem; }
   .sub-capa ul { padding-left: 1.2rem; margin: 0; }
-  .sub-capa li { margin-bottom: 0.7rem; }
+  .sub-capa li { margin-bottom: 0.7rem; border-bottom: 1px dotted var(--c-hairline); padding-bottom: 0.7rem; }
+  .sub-capa li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .disclaimer-long h2 { text-align: center; }
 </style>

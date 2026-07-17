@@ -1,46 +1,66 @@
 /* ==========================================================================
-   spacepope.ai — global.css · v1.0 — 15JUL2026
+   spacepope.ai — global.css · v2.0 — 16JUL2026
    --------------------------------------------------------------------------
-   The design system: "cosmic stained glass." The Vatican observing the
-   galaxy — illuminated-manuscript gravity laid over deep space. Everything
-   here is slightly too formal for its own content on purpose: the design
-   plays it perfectly straight so the words can be funny. If the CSS ever
-   winks, delete the wink.
+   The design system, second edition: "the Holy See at daylight." Where v1
+   was a night sky seen through a rose window, v2 is the same church at ten
+   in the morning — warm white stone, pale sky, gold used the way a sacristan
+   uses it: sparingly, and only on things that matter. The design language is
+   borrowed with a straight face from the real Holy See's website, because
+   the deadest deadpan available to a parody is to look exactly like the
+   institution it is fond of. If the CSS ever winks, delete the wink.
 
-   No external requests. The starfield is gradients; the noise is a data-URI;
-   the fonts are self-hosted via @fontsource (imported in the base layout).
-   The cathedral carries its own candles.
+   No external requests. The fonts are self-hosted via @fontsource (imported
+   in the base layout). The daylight carries its own candles.
+
+   NOTE ON TOKEN NAMES: several legacy variable names (--c-text-dim,
+   --c-gold-line, --c-panel …) survive from v1 with NEW light values, so the
+   scoped styles across two dozen pages keep working without a schism. The
+   names are the contract; the values are the conversion.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   TOKENS — the palette is a night sky seen through a rose window:
-   near-black space, cathedral purple, and gold leaf. The jewel tones exist
-   only as glass — small, saturated, and always behind gold lead lines.
+   TOKENS — warm white paper, deep blue-slate ink, gold leaf demoted to
+   gilding. Cathedral purple survives only as a relic: thread tags, small
+   details, and the dark glass inside the About page's window.
    -------------------------------------------------------------------------- */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  /* space + stone */
-  --c-space: #0b0a12;
-  --c-space-2: #100e1a;
-  --c-vault: #151021;
-  --c-panel: #191330;
-  --c-cathedral: #241a45;
+  /* paper + sky */
+  --c-paper: #fbfaf7;        /* the page — warm white */
+  --c-paper-2: #f6f4ee;      /* a slightly older sheet of the same paper */
+  --c-card: #ffffff;         /* cards sit a half-step brighter than the page */
+  --c-tint: #eef3f8;         /* the pale-blue section wash — indoor sky */
+  --c-parchment: #f4ead8;    /* the Atlas map's backing board */
+
+  /* ink */
+  --c-ink: #1e2a38;          /* deep blue-slate — headlines and body ink */
+  --c-body: #44505e;         /* muted body text */
+
+  /* gold leaf, daylight grade */
+  --c-gold: #a8894a;         /* the working gold — legible on paper */
+  --c-gold-deep: #8a6f1f;    /* pressed harder — hovers, drop caps */
+  --c-gold-bright: #c9a227;  /* v1's gold, kept for continuity in ornament */
+
+  /* hairlines */
+  --c-hairline: #d8d5cc;
+
+  /* legacy names, converted (the contract holds; the values turned the lights on) */
+  --c-space: #fbfaf7;
+  --c-space-2: #f6f4ee;
+  --c-vault: #ffffff;
+  --c-panel: #ffffff;
+  --c-cathedral: #241a45;    /* still dark: this is the GLASS, and glass keeps its night */
   --c-cathedral-2: #2e2158;
+  --c-text: #1e2a38;
+  --c-text-dim: #44505e;
+  --c-text-faint: #7d8694;
+  --c-gold-hi: #8a6f1f;      /* on paper, "brighter" gold means DARKER gold */
+  --c-gold-lo: #b7a06a;
+  --c-gold-line: rgba(168, 137, 74, 0.5);
+  --c-gold-line-dim: rgba(168, 137, 74, 0.25);
 
-  /* gold leaf */
-  --c-gold: #c9a227;
-  --c-gold-hi: #e8c95e;
-  --c-gold-lo: #8a6f1f;
-  --c-gold-line: rgba(201, 162, 39, 0.28);
-  --c-gold-line-dim: rgba(201, 162, 39, 0.14);
-
-  /* parchment (text) */
-  --c-text: #e9e2cf;
-  --c-text-dim: #b0a891;
-  --c-text-faint: #837b67;
-
-  /* the glass — jewel lights for sigils, stamps, and window panes */
+  /* the glass — jewel tones survive daylight; they were always pigment */
   --c-ruby: #a03a58;
   --c-sapphire: #3d5da8;
   --c-emerald: #2f7a56;
@@ -61,7 +81,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html {
-  background: var(--c-space);
+  background: var(--c-paper);
   scroll-behavior: smooth;
 }
 
@@ -71,82 +91,58 @@ body {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   line-height: 1.65;
-  color: var(--c-text);
-  background-color: var(--c-space);
-  /* The firmament: two nebular glows, then three tiled star layers.
-     Pure CSS — the heavens do not phone home. */
-  background-image:
-    radial-gradient(ellipse 90rem 46rem at 70% -12rem, rgba(107, 75, 176, 0.16), transparent 60%),
-    radial-gradient(ellipse 70rem 40rem at 12% 110%, rgba(61, 93, 168, 0.10), transparent 60%),
-    radial-gradient(1.2px 1.2px at 22% 18%, rgba(255, 250, 235, 0.55), transparent 100%),
-    radial-gradient(1px 1px at 68% 44%, rgba(255, 250, 235, 0.40), transparent 100%),
-    radial-gradient(1.6px 1.6px at 42% 78%, rgba(232, 201, 94, 0.45), transparent 100%),
-    radial-gradient(1px 1px at 86% 12%, rgba(255, 250, 235, 0.35), transparent 100%),
-    radial-gradient(1.1px 1.1px at 8% 56%, rgba(255, 250, 235, 0.42), transparent 100%),
-    radial-gradient(0.8px 0.8px at 54% 8%, rgba(255, 250, 235, 0.30), transparent 100%);
-  background-size:
-    100% 100%,
-    100% 100%,
-    520px 520px,
-    380px 380px,
-    640px 640px,
-    440px 440px,
-    560px 560px,
-    300px 300px;
-  background-attachment: fixed;
+  color: var(--c-ink);
+  background-color: var(--c-paper);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-/* Vellum grain over the whole nave — a whisper of texture, data-URI only. */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.35;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.79 0 0 0 0 0.64 0 0 0 0 0.15 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-body > * { position: relative; z-index: 1; }
-
 img, svg { max-width: 100%; height: auto; }
 
 /* --------------------------------------------------------------------------
-   TYPE — encyclical energy. Headlines carry gold; labels carry Latin.
+   TYPE — the Holy See's flavor: wide-tracked ALL-CAPS serif headings over
+   generous whitespace, small-caps Latin rubrics, restrained body sizes.
+   The caps do the ceremony so the words can stay dry.
    -------------------------------------------------------------------------- */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  font-weight: 600;
-  line-height: 1.15;
-  color: var(--c-text);
+  font-weight: 500;
+  line-height: 1.18;
+  color: var(--c-ink);
   margin: 0 0 0.5em;
   text-wrap: balance;
 }
 
-h1 { font-size: clamp(2rem, 5.5vw, 3.4rem); }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
-h3 { font-size: 1.3rem; }
+h1 {
+  font-size: clamp(1.7rem, 4.2vw, 2.6rem);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+h2 {
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+h3 { font-size: 1.25rem; font-weight: 600; }
 
 p { margin: 0 0 1em; }
 
 a {
-  color: var(--c-gold-hi);
+  color: var(--c-gold-deep);
   text-decoration: none;
   text-underline-offset: 3px;
   transition: color 120ms ease;
 }
-a:hover { color: #f5dd8a; text-decoration: underline; }
+a:hover { color: var(--c-ink); text-decoration: underline; }
 
 hr {
   border: none;
-  border-top: 1px solid var(--c-gold-line-dim);
+  border-top: 1px solid var(--c-hairline);
   margin: 2.5rem auto;
   max-width: 24rem;
 }
 
-::selection { background: rgba(201, 162, 39, 0.30); color: #fff8e6; }
+::selection { background: rgba(201, 162, 39, 0.28); color: var(--c-ink); }
 
 /* The rubric: a small-caps Latin label. Where the church would print red,
    we print gold — same job, different apse. */
@@ -158,7 +154,6 @@ hr {
   color: var(--c-gold);
   font-weight: 500;
 }
-/* Fallback rendering path when the face lacks true small caps */
 @supports not (font-variant-caps: small-caps) {
   .rubric { text-transform: uppercase; font-size: 0.72rem; }
 }
@@ -180,46 +175,55 @@ hr {
 
 .page-head {
   text-align: center;
-  padding: clamp(2.5rem, 6vw, 4.5rem) 0 1.5rem;
+  padding: clamp(2.5rem, 6vw, 4rem) 0 1.5rem;
 }
 .page-head .rubric { display: block; margin-bottom: 0.75rem; }
 .page-head p.lede {
-  color: var(--c-text-dim);
+  color: var(--c-body);
   max-width: 42rem;
-  margin: 0.5rem auto 0;
+  margin: 0.75rem auto 0;
   font-style: italic;
   font-size: 1.05rem;
 }
 
 /* --------------------------------------------------------------------------
-   MASTHEAD — the front of the church. The nav is a newspaper's section
-   rule: small caps separated by middots, wrapping gracefully on mobile.
+   MASTHEAD — the white bar. Emblem centered above the wordmark, the way
+   the Holy See centers the keys: quiet, symmetrical, unhurried.
    -------------------------------------------------------------------------- */
 .masthead {
-  border-bottom: 1px solid var(--c-gold-line);
-  background:
-    linear-gradient(180deg, rgba(36, 26, 69, 0.55), rgba(11, 10, 18, 0) 90%);
+  background: var(--c-card);
+  border-bottom: 1px solid var(--c-hairline);
   text-align: center;
-  padding: 1.6rem 1rem 0;
+  padding: 1.4rem 1rem 0;
 }
-.masthead .brand-rubric {
+.masthead .brand-emblem {
   display: block;
-  margin-bottom: 0.35rem;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 0.5rem;
+  object-fit: contain;
 }
 .masthead .brand {
-  font-size: clamp(1.7rem, 5vw, 2.6rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--c-text);
+  font-size: clamp(1.45rem, 4.4vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-ink);
   line-height: 1.1;
 }
-.masthead .brand a { color: inherit; }
-.masthead .brand a:hover { text-decoration: none; color: var(--c-gold-hi); }
-.masthead .brand-sub {
-  color: var(--c-text-dim);
+.masthead .brand .brand-the {
+  text-transform: none;
   font-style: italic;
-  font-size: 0.95rem;
-  margin: 0.3rem 0 1rem;
+  letter-spacing: 0.02em;
+  margin-right: 0.15em;
+}
+.masthead .brand a { color: inherit; }
+.masthead .brand a:hover { text-decoration: none; color: var(--c-gold-deep); }
+.masthead .brand-sub {
+  color: var(--c-text-faint);
+  font-style: italic;
+  font-size: 0.92rem;
+  margin: 0.35rem 0 0.9rem;
 }
 
 .site-nav {
@@ -228,38 +232,120 @@ hr {
   justify-content: center;
   align-items: baseline;
   gap: 0.15rem 0;
-  padding: 0.6rem 0 0.9rem;
-  border-top: 1px solid var(--c-gold-line-dim);
+  padding: 0.55rem 0 0.8rem;
+  border-top: 1px solid var(--c-hairline);
 }
 .site-nav a {
   font-variant-caps: small-caps;
   text-transform: lowercase;
   letter-spacing: 0.14em;
   font-size: 0.92rem;
-  color: var(--c-text-dim);
+  color: var(--c-body);
   padding: 0.15rem 0.65rem;
   white-space: nowrap;
 }
-.site-nav a:hover { color: var(--c-gold-hi); text-decoration: none; }
-.site-nav a[aria-current='page'] { color: var(--c-gold); }
-.site-nav .sep { color: var(--c-gold-lo); user-select: none; }
+.site-nav a:hover { color: var(--c-gold-deep); text-decoration: none; }
+.site-nav a[aria-current='page'] { color: var(--c-gold-deep); }
+.site-nav .sep { color: var(--c-hairline); user-select: none; }
 
 /* --------------------------------------------------------------------------
-   CARDS + PANES — every card is a pane of glass in a lead came:
-   a hairline of gold, a depth of purple, an arch if it's holy.
+   THE GOLD PILL — the MAGISTERIUM button. One per page, at most. A pill of
+   actual gold with a crest inside it; everything else on the site earns
+   attention by hairline, this one thing is allowed to be a jewel.
+   -------------------------------------------------------------------------- */
+.pill-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.5rem 0.55rem 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #c9a75e, #a8894a);
+  border: 1px solid #93763a;
+  box-shadow: 0 1px 3px rgba(30, 42, 56, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.22em;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pill-gold:hover { color: #fff; text-decoration: none; filter: brightness(1.06); }
+.pill-gold img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 1px rgba(30, 42, 56, 0.3));
+}
+
+/* --------------------------------------------------------------------------
+   SECTION LINK BAND — three short serif labels over thin colored underline
+   bars (gold / orange / blue), exactly the Holy See's front-hall gesture.
+   -------------------------------------------------------------------------- */
+.link-band {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  padding: clamp(2rem, 5vw, 3.2rem) 0;
+  text-align: center;
+}
+/* Flex column with the label pinned to the bottom of its slot: when one
+   label wraps to two lines and its neighbors don't, the underline bars
+   still land on one shared rail — the Holy See does not tolerate a
+   crooked lintel, and neither do we. */
+.link-band a {
+  display: flex;
+  flex-direction: column;
+  color: var(--c-ink);
+}
+.link-band a:hover { text-decoration: none; }
+.link-band .band-label { margin-top: auto; }
+.link-band .band-note { min-height: 2.7em; }
+.link-band .band-label {
+  display: block;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.link-band .band-bar {
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 0.6rem auto 0.7rem;
+  border-radius: 2px;
+}
+.link-band .bar-gold { background: var(--c-gold); }
+.link-band .bar-orange { background: var(--c-topaz); }
+.link-band .bar-blue { background: var(--c-sapphire); }
+.link-band .band-note {
+  display: block;
+  color: var(--c-text-faint);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+.link-band a:hover .band-label { color: var(--c-gold-deep); }
+@media (max-width: 640px) {
+  .link-band { grid-template-columns: 1fr; gap: 1.6rem; }
+}
+
+/* --------------------------------------------------------------------------
+   CARDS — the lead came melted off; what's left is paper, a hairline, and
+   a shadow shallow enough to pass for humility.
    -------------------------------------------------------------------------- */
 .pane {
-  background: linear-gradient(180deg, var(--c-panel), var(--c-vault) 85%);
-  border: 1px solid var(--c-gold-line-dim);
+  background: var(--c-card);
+  border: 1px solid var(--c-hairline);
   border-radius: var(--radius);
   padding: 1.4rem 1.5rem;
-  transition: border-color 150ms ease, transform 150ms ease;
+  box-shadow: 0 1px 2px rgba(30, 42, 56, 0.05);
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
 }
 a.pane { display: block; color: inherit; }
 a.pane:hover {
   text-decoration: none;
   border-color: var(--c-gold-line);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 42, 56, 0.08);
 }
 .pane h3 { margin-bottom: 0.25rem; }
 .pane .meta {
@@ -283,53 +369,55 @@ a.pane:hover {
 }
 
 /* --------------------------------------------------------------------------
-   ARTICLE PROSE — the illuminated column.
+   ARTICLE PROSE — the column, now printed instead of illuminated.
    -------------------------------------------------------------------------- */
 .prose {
   max-width: var(--measure);
   margin-inline: auto;
+  color: var(--c-body);
 }
-.prose h2, .prose h3 { margin-top: 1.6em; }
+.prose h2, .prose h3 { margin-top: 1.6em; color: var(--c-ink); }
 .prose blockquote {
   margin: 1.5em 0;
   padding: 0.2em 0 0.2em 1.2em;
   border-left: 2px solid var(--c-gold-line);
-  color: var(--c-text-dim);
+  color: var(--c-body);
   font-style: italic;
 }
 .prose ul, .prose ol { padding-left: 1.4em; }
-.prose em { color: var(--c-text); }
+.prose em { color: var(--c-ink); }
+.prose strong { color: var(--c-ink); }
 .prose code {
   font-family: var(--font-mono);
   font-size: 0.85em;
-  background: rgba(201, 162, 39, 0.08);
+  background: rgba(168, 137, 74, 0.1);
   padding: 0.1em 0.35em;
   border-radius: 3px;
 }
 
-/* The drop cap: gold leaf on the first letter. Chronicle chapters and
-   Encyclicals only — the Chronicle is a novel and the Encyclical is scripture;
-   the news does not get illuminated initials. */
+/* The drop cap: gold leaf pressed into paper. Chronicle chapters and
+   Encyclicals only — the novel and the scripture get illuminated initials;
+   the news does not. */
 .dropcap > p:first-of-type::first-letter {
   float: left;
   font-size: 3.4em;
   line-height: 0.82;
   padding: 0.06em 0.12em 0 0;
   font-weight: 600;
-  color: var(--c-gold-hi);
-  text-shadow: 0 0 18px rgba(201, 162, 39, 0.35);
+  color: var(--c-gold-deep);
 }
 
 /* --------------------------------------------------------------------------
-   MACHINERY VOICE — monospace lives ONLY in About (Sub Capa) and the
-   Acta Diurna. Everywhere else the machine wears vestments; here it is
-   allowed to be a terminal, because transparency is part of the rite.
+   MACHINERY VOICE — monospace lives ONLY in About (Sub Capa) and the Acta
+   Diurna, and in daylight it reads as a printed ledger: black ink, thin
+   rules, paper the color of a well-run archive. The machine no longer
+   glows; it files.
    -------------------------------------------------------------------------- */
 .machinery {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   line-height: 1.6;
-  color: #cfc8b4;
+  color: #2a3340;
 }
 .machinery h3, .machinery h4 { font-family: var(--font-mono); }
 
@@ -338,24 +426,25 @@ table.ledger {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95em;
+  background: var(--c-card);
 }
 table.ledger th {
   text-align: left;
   font-variant-caps: small-caps;
   text-transform: lowercase;
   letter-spacing: 0.12em;
-  font-weight: 500;
-  color: var(--c-gold);
+  font-weight: 600;
+  color: var(--c-gold-deep);
   border-bottom: 1px solid var(--c-gold-line);
   padding: 0.5rem 0.75rem;
   white-space: nowrap;
 }
 table.ledger td {
-  border-bottom: 1px solid rgba(201, 162, 39, 0.08);
+  border-bottom: 1px solid var(--c-hairline);
   padding: 0.5rem 0.75rem;
   vertical-align: top;
 }
-table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
+table.ledger tr:hover td { background: rgba(168, 137, 74, 0.05); }
 
 /* --------------------------------------------------------------------------
    THE TELESCOPE LOG — the Specola's citations, ruled like an observation
@@ -378,7 +467,7 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
   gap: 0.9rem;
   align-items: baseline;
   padding: 0.55rem 0;
-  border-bottom: 1px dotted rgba(201, 162, 39, 0.18);
+  border-bottom: 1px dotted var(--c-hairline);
 }
 .telescope-log li::before {
   content: 'obs. ' counter(obs, decimal-leading-zero);
@@ -402,15 +491,16 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
 .empty-state {
   text-align: center;
   padding: 4rem 1.5rem;
-  border: 1px dashed var(--c-gold-line-dim);
+  border: 1px dashed var(--c-hairline);
   border-radius: var(--radius);
+  background: var(--c-card);
   margin: 2.5rem auto;
   max-width: 40rem;
 }
 .empty-state p.voice {
   font-size: 1.3rem;
   font-style: italic;
-  color: var(--c-text-dim);
+  color: var(--c-body);
   margin-bottom: 0.4rem;
 }
 .empty-state p.small {
@@ -420,26 +510,27 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
 }
 
 /* --------------------------------------------------------------------------
-   BADGER FLAG — fail honest, never fake. The one banner allowed to
-   interrupt the liturgy, because honesty outranks composure. (The duck
-   doctrine: when the work cannot pass, the fault ships visibly.)
+   BADGER FLAG — fail honest, never fake. In daylight the banner is amber
+   paper — a notice pinned to the door, not a siren. (The duck doctrine:
+   when the work cannot pass, the fault ships visibly.)
    -------------------------------------------------------------------------- */
 .badger-flag {
   display: flex;
   gap: 0.8rem;
   align-items: flex-start;
-  border: 1px solid rgba(192, 122, 44, 0.5);
+  border: 1px solid rgba(176, 110, 36, 0.45);
   border-left: 4px solid var(--c-topaz);
-  background: rgba(192, 122, 44, 0.08);
+  background: #fdf3e3;
   border-radius: var(--radius);
   padding: 0.9rem 1.1rem;
   margin: 1.5rem 0;
   font-size: 0.98rem;
+  color: #5c4520;
 }
 .badger-flag .badger-label {
   font-variant-caps: small-caps;
   letter-spacing: 0.14em;
-  color: var(--c-topaz);
+  color: #9a5f1c;
   white-space: nowrap;
 }
 
@@ -447,9 +538,9 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
    STORY SO FAR — the digest folds away like a bookmark ribbon.
    -------------------------------------------------------------------------- */
 .story-so-far {
-  border: 1px solid var(--c-gold-line-dim);
+  border: 1px solid var(--c-hairline);
   border-radius: var(--radius);
-  background: rgba(36, 26, 69, 0.35);
+  background: var(--c-paper-2);
   margin: 0 0 2rem;
 }
 .story-so-far summary {
@@ -457,25 +548,25 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
   padding: 0.8rem 1.1rem;
   font-variant-caps: small-caps;
   letter-spacing: 0.14em;
-  color: var(--c-gold);
+  color: var(--c-gold-deep);
   list-style: none;
 }
 .story-so-far summary::-webkit-details-marker { display: none; }
 .story-so-far summary::before { content: '❧ '; color: var(--c-gold-lo); }
-.story-so-far[open] summary { border-bottom: 1px solid var(--c-gold-line-dim); }
+.story-so-far[open] summary { border-bottom: 1px solid var(--c-hairline); }
 .story-so-far .digest-body {
   padding: 1rem 1.2rem;
   font-size: 0.98rem;
-  color: var(--c-text-dim);
+  color: var(--c-body);
 }
 
 /* --------------------------------------------------------------------------
-   COLOPHON + SEALS
+   COLOPHON + SEALS — rubber stamps on paper now, not neon in the dark.
    -------------------------------------------------------------------------- */
 .colophon {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--c-gold-line-dim);
+  border-top: 1px solid var(--c-hairline);
   text-align: center;
 }
 .colophon .seals {
@@ -501,14 +592,15 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
   gap: 0.9rem;
   margin: 1.2rem 0;
   padding: 0.8rem 1rem;
-  border-block: 1px solid var(--c-gold-line-dim);
+  border-block: 1px solid var(--c-hairline);
+  background: var(--c-card);
 }
 .byline .byline-name {
   font-weight: 600;
-  color: var(--c-text);
+  color: var(--c-ink);
 }
 .byline .byline-see {
-  color: var(--c-text-dim);
+  color: var(--c-body);
   font-style: italic;
   font-size: 0.95rem;
 }
@@ -517,7 +609,7 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
   color: var(--c-text-faint);
   letter-spacing: 0.04em;
 }
-.byline .byline-substrate .mono { color: var(--c-gold); }
+.byline .byline-substrate .mono { color: var(--c-gold-deep); }
 
 /* --------------------------------------------------------------------------
    CHAPTER NAVIGATION
@@ -533,7 +625,7 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
 .chapter-nav .next { margin-left: auto; text-align: right; }
 
 /* --------------------------------------------------------------------------
-   DIVIDER — the rose window between sections.
+   DIVIDER — the rose window between sections, seen from outside in daylight.
    -------------------------------------------------------------------------- */
 .rose-divider {
   display: flex;
@@ -555,17 +647,47 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
 }
 
 /* --------------------------------------------------------------------------
-   FOOTER — every page ends at the same altar rail: the standing disclaimer.
+   SECTION TINTS + IMAGE BANDS — the pale-blue wash the Holy See uses to
+   change rooms without changing buildings, and full-width art bands.
+   -------------------------------------------------------------------------- */
+.section-tint {
+  background: var(--c-tint);
+  border-block: 1px solid var(--c-hairline);
+}
+
+.image-band { margin: 0; }
+.image-band img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+.image-band figcaption {
+  text-align: center;
+  font-style: italic;
+  color: var(--c-text-faint);
+  font-size: 0.92rem;
+  padding: 0.7rem 1rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER — white, one hairline, the standing disclaimer at the altar rail.
    Hard Rule §0.6 lives here and is never abbreviated away.
    -------------------------------------------------------------------------- */
 .site-footer {
   margin-top: clamp(3rem, 8vw, 6rem);
-  border-top: 1px solid var(--c-gold-line);
-  background: linear-gradient(0deg, rgba(36, 26, 69, 0.5), rgba(11, 10, 18, 0));
+  border-top: 1px solid var(--c-hairline);
+  background: var(--c-card);
   text-align: center;
   padding: 2.5rem 1.25rem 2rem;
   font-size: 0.9rem;
-  color: var(--c-text-dim);
+  color: var(--c-body);
+}
+.site-footer .footer-mark {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  opacity: 0.9;
 }
 .site-footer .disclaimer {
   max-width: 46rem;
@@ -582,12 +704,12 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
   margin: 1rem 0 0.5rem;
 }
 .site-footer nav a {
-  color: var(--c-text-dim);
+  color: var(--c-body);
   font-variant-caps: small-caps;
   letter-spacing: 0.12em;
   font-size: 0.85rem;
 }
-.site-footer nav a:hover { color: var(--c-gold-hi); }
+.site-footer nav a:hover { color: var(--c-gold-deep); }
 .site-footer .colophon-line {
   margin-top: 1.2rem;
   font-size: 0.8rem;
@@ -595,7 +717,7 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
 }
 
 /* --------------------------------------------------------------------------
-   STATUS BADGES (Acta) — the machine's own vocabulary, uncostumed.
+   STATUS BADGES (Acta) — the machine's own vocabulary, printed in ledger ink.
    -------------------------------------------------------------------------- */
 .status-badge {
   font-family: var(--font-mono);
@@ -606,11 +728,12 @@ table.ledger tr:hover td { background: rgba(201, 162, 39, 0.04); }
   border-radius: 999px;
   border: 1px solid;
   white-space: nowrap;
+  background: var(--c-card);
 }
-.status-published { color: #7fce9e; border-color: rgba(47, 122, 86, 0.6); }
-.status-partial { color: #e0b45c; border-color: rgba(192, 122, 44, 0.6); }
-.status-spiked { color: #d97383; border-color: rgba(160, 58, 88, 0.6); }
-.status-quiet-day { color: #9d90c8; border-color: rgba(107, 75, 176, 0.6); }
+.status-published { color: #256a47; border-color: rgba(47, 122, 86, 0.55); }
+.status-partial { color: #96601c; border-color: rgba(192, 122, 44, 0.55); }
+.status-spiked { color: #8f3450; border-color: rgba(160, 58, 88, 0.55); }
+.status-quiet-day { color: #5a3f96; border-color: rgba(107, 75, 176, 0.55); }
 
 /* --------------------------------------------------------------------------
    MOTION — the animated pilgrims on the About diagram walk only for those

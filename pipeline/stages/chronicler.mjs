@@ -240,10 +240,19 @@ export async function runChronicler(ctx, { dispatch = null, quietDay = false }) 
     }
   }
 
-  // Deterministic title from the plan's first beat; the Editor sets the type.
+  // The chapter's name: the Planner titles its own work (schema-required),
+  // with a word-boundary fallback from the first beat. Never cut mid-word —
+  // the first published chapter of history lost "the Pontifex" to a blunt
+  // slice(0,80) and shipped as "...to the P". Titles are not firewood.
+  const titleAtWordBoundary = (s, max = 72) => {
+    const clean = (s ?? '').replace(/\.$/, '').trim();
+    if (clean.length <= max) return clean;
+    const cut = clean.slice(0, max);
+    return `${cut.slice(0, cut.lastIndexOf(' '))}…`;
+  };
   const title = plan.kind === 'interstitial'
     ? `A Quiet Day in the Communion`
-    : (plan.beats[0] ?? `Chapter ${n}`).replace(/\.$/, '').slice(0, 80);
+    : (plan.title?.trim() || titleAtWordBoundary(plan.beats[0] ?? `Chapter ${n}`));
 
   return {
     status, n, title, prose, update, plan, lintFindings,

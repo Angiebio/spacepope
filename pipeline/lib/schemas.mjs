@@ -177,9 +177,10 @@ export const CHAPTER_PLAN = {
   schema: {
     type: 'object',
     additionalProperties: false,
-    required: ['kind', 'beats', 'threadsToTouch'],
+    required: ['kind', 'title', 'beats', 'threadsToTouch'],
     properties: {
       kind: { type: 'string', enum: ['chapter', 'interstitial'] },
+      title: { type: 'string', maxLength: 60, description: 'the chapter title — short, evocative, like a chapter heading in a novel' },
       beats: { type: 'array', items: { type: 'string' }, maxItems: 6 },
       threadsToTouch: { type: 'array', items: { type: 'string' } },
       lintResponses: {

@@ -1,11 +1,14 @@
 ---
 // ==========================================================================
-// spacepope.ai — Seal.astro · v1.0 — 15JUL2026
+// spacepope.ai — Seal.astro · v2.0 — 16JUL2026
 // --------------------------------------------------------------------------
 // One circular gate-stamp. Real Catholic publishing law grants Nihil Obstat
 // ("nothing hinders") and Imprimatur ("let it be printed"); our pipeline's
 // QC gates grant exactly the same things for exactly the same reason. The
 // stamp is transparency worn as ornament — provenance you can look at.
+// v2: pressed in ink and gold on paper — the chancery's actual rubber
+// stamps, not the neon they became after dark. Ink for the fact gate,
+// gold for the letter that may be printed.
 // ==========================================================================
 import { fmtDate } from '../lib/format';
 
@@ -19,13 +22,13 @@ const conf = {
   'nihil-obstat': {
     legend: 'NIHIL OBSTAT · CENSOR LIBRORUM · SPECOLA GALACTICA · ',
     word: 'Nihil Obstat',
-    color: '#3d5da8',
+    color: '#34496e',
     tilt: -5,
   },
   imprimatur: {
     legend: 'IMPRIMATUR · SANCTUM OFFICIUM INQUISITIONIS · ',
     word: 'Imprimatur',
-    color: '#a03a58',
+    color: '#8a6f1f',
     tilt: 4,
   },
 }[kind];

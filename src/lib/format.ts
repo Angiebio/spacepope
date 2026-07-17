@@ -1,5 +1,5 @@
 // ==========================================================================
-// spacepope.ai — lib/format.ts · v1.0 — 15JUL2026
+// spacepope.ai — lib/format.ts · v1.1 — 16JUL2026
 // --------------------------------------------------------------------------
 // Small deterministic conveniences shared by the pages. The site's spine is
 // code (Hard Build Rule #2): dates, numerals, and excerpts are math, not
@@ -15,6 +15,17 @@ export function fmtDate(d: Date): string {
     year: 'numeric',
     timeZone: 'UTC', // frontmatter dates are calendar dates, not moments — pin the zone
   });
+}
+
+/**
+ * Format a Date the way the Holy See's news column does: "16 - 07 - 2026".
+ * The spaced hyphens are not a typo; they are the house style of the
+ * institution we are impersonating, reproduced with curatorial care.
+ */
+export function fmtDateCurial(d: Date): string {
+  const dd = String(d.getUTCDate()).padStart(2, '0');
+  const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+  return `${dd} - ${mm} - ${d.getUTCFullYear()}`;
 }
 
 /** Roman numerals for chapter headings — the genre demands it. */

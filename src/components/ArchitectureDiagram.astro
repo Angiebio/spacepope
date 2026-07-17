@@ -1,12 +1,18 @@
 ---
 // ==========================================================================
-// spacepope.ai — ArchitectureDiagram.astro · v1.0 — 15JUL2026
+// spacepope.ai — ArchitectureDiagram.astro · v2.0 — 16JUL2026
 // --------------------------------------------------------------------------
 // The wiring diagram, drawn as a stained-glass window: gold lead lines on
 // deep purple, one arched pane per agent, the badger loops drawn as return
 // arcs the way a cloister walk returns you to the door you left by. This is
 // the hackathon-About-page move — the architecture IS the exhibit, and the
 // geometry is computed, not eyeballed (anything that can be code is code).
+//
+// v2, daylight edition: the site went light but the window did not — a
+// stained-glass window seen from inside a sunlit nave keeps its own night
+// and glows against the pale wall. The dark purple here is deliberate
+// contrast, not a leftover: the one dark thing on a light site is how you
+// know it's glass.
 //
 // Flow (ROADMAP-00 §3): Nuncio → Astronomer → Censor Librorum (Nihil Obstat)
 // → Space Reality Badger (loops) → Fabulist → Inquisitor (Imprimatur) →
@@ -179,14 +185,27 @@ const angelus = { x: 570, y: pressY - 190, w: 190, h: 84 };
 </figure>
 
 <style>
+  /* The pale-blue wall the window is set into… */
   .arch-diagram {
     margin: 2rem 0;
-    padding: clamp(0.5rem, 2vw, 1.5rem);
-    background: linear-gradient(180deg, rgba(36, 26, 69, 0.5), rgba(21, 16, 33, 0.7));
-    border: 1px solid var(--c-gold-line-dim);
+    padding: clamp(1rem, 3vw, 2.2rem) clamp(0.75rem, 3vw, 2.2rem) 0.8rem;
+    background: var(--c-tint);
+    border: 1px solid var(--c-hairline);
     border-radius: var(--radius);
   }
-  .arch-diagram svg { display: block; width: 100%; height: auto; }
+  /* …and the glass itself: a rounded arch, lit from within. */
+  .arch-diagram svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(107, 75, 176, 0.35), transparent 70%),
+      linear-gradient(180deg, #241a45, #151021 80%);
+    border: 3px solid #93763a;
+    box-shadow: inset 0 0 40px rgba(11, 10, 18, 0.55), 0 2px 8px rgba(30, 42, 56, 0.18);
+    border-radius: 260px 260px 8px 8px / 200px 200px 8px 8px;
+    padding: clamp(1.2rem, 3vw, 2rem) clamp(0.4rem, 1.5vw, 1rem) 0.6rem;
+  }
   /* On a phone the whole window would shrink past legibility; better a
      window you can pan than a window you cannot read. */
   @media (max-width: 640px) {
