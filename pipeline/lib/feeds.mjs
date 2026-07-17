@@ -1,4 +1,4 @@
-// pipeline/lib/feeds.mjs — v1.0 — 15JUL2026
+// pipeline/lib/feeds.mjs — v1.1 — 17JUL2026 (the Nuncio learns to read its own newspaper)
 //
 // The Nuncio's deterministic half: the legwork before the judgment. Walking
 // the wire services is plumbing, not perception — so it is code, not a model
@@ -16,6 +16,9 @@
 
 import Parser from 'rss-parser';
 import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import matter from 'gray-matter';
 
 /**
  * Canonicalize a URL for dedupe: two criers shouting the same address should
@@ -43,6 +46,75 @@ export function canonicalUrl(raw) {
 /** Stable story id: a short hash of the canonical URL. */
 export function storyId(url) {
   return createHash('sha1').update(canonicalUrl(url)).digest('hex').slice(0, 12);
+}
+
+/**
+ * Normalize a headline for cross-day matching: lowercase, strip punctuation,
+ * collapse whitespace. The same story returns on day two wearing a different
+ * URL and a different capitalization; the title underneath is the same face.
+ */
+export function normalizeTitle(t) {
+  return String(t ?? '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * The covered-stories ledger — built from the Specola's own published archive.
+ * No new state file: the newspaper IS the memory. Every bulletin's frontmatter
+ * carries its storyId and citation URLs; before the Nuncio rides out, it reads
+ * what the See already printed. (Found the hard way on 17JUL2026, when the
+ * Specola solemnly reported the same two stories on consecutive days and the
+ * Chronicle went hungry for want of fresh news.)
+ *
+ * @param {string} specolaDir  content/specola directory
+ * @returns {{ids: Set<string>, urls: Set<string>, titles: Set<string>}}
+ */
+export function loadCoveredLedger(specolaDir) {
+  const ledger = { ids: new Set(), urls: new Set(), titles: new Set() };
+  let files = [];
+  try {
+    files = readdirSync(specolaDir).filter((f) => f.endsWith('.md'));
+  } catch {
+    return ledger; // no archive yet — a young See has covered nothing
+  }
+  for (const f of files) {
+    try {
+      const fm = matter(readFileSync(join(specolaDir, f), 'utf8')).data;
+      if (fm.storyId) ledger.ids.add(String(fm.storyId));
+      if (fm.title) ledger.titles.add(normalizeTitle(fm.title));
+      for (const c of fm.citations ?? []) {
+        if (c?.url) {
+          ledger.urls.add(canonicalUrl(c.url));
+          ledger.ids.add(storyId(c.url));
+        }
+      }
+    } catch {
+      // an unreadable bulletin does not stop the presses; it is just not remembered
+    }
+  }
+  return ledger;
+}
+
+/**
+ * Drop gathered stories the Specola has already covered. Three nets, because
+ * the same fish swims back in three disguises: same id (same URL re-picked),
+ * same canonical URL under a fresh id path, same headline under a new URL.
+ * @returns {{fresh: Array, covered: Array}}
+ */
+export function filterCovered(stories, ledger) {
+  const fresh = [];
+  const covered = [];
+  for (const s of stories) {
+    const isCovered =
+      ledger.ids.has(s.storyId) ||
+      ledger.urls.has(canonicalUrl(s.url)) ||
+      ledger.titles.has(normalizeTitle(s.title));
+    (isCovered ? covered : fresh).push(s);
+  }
+  return { fresh, covered };
 }
 
 /**

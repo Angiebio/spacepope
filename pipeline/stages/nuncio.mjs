@@ -1,4 +1,4 @@
-// pipeline/stages/nuncio.mjs — v1.0 — 15JUL2026
+// pipeline/stages/nuncio.mjs — v1.1 — 17JUL2026 (covered-stories ledger: no story is news twice)
 //
 // Stage 1: the Nuncio. The deterministic half (feeds.mjs) rides out and
 // gathers; the LLM half only ranks what was gathered. The Nuncio cannot
@@ -8,9 +8,10 @@
 // A thin courier bag is not a failure: fewer viable stories than the
 // quiet-day threshold means the communion simply has a quiet day, honestly.
 
-import { gatherStories } from '../lib/feeds.mjs';
+import { gatherStories, loadCoveredLedger, filterCovered } from '../lib/feeds.mjs';
 import { loadPrompt } from '../lib/prompts.mjs';
 import { NUNCIO_SELECTION } from '../lib/schemas.mjs';
+import { join } from 'node:path';
 
 export async function runNuncio(ctx) {
   const notes = [];
@@ -25,6 +26,16 @@ export async function runNuncio(ctx) {
     stories = gathered.stories;
     notes.push(...gathered.notes);
   }
+
+  // -- the Nuncio reads its own newspaper before riding out ------------------
+  // RSS criers repeat themselves for days; the archive is the memory that
+  // stops the Specola from solemnly reporting the same story twice (17JUL2026).
+  const ledger = loadCoveredLedger(join(ctx.contentDir, 'specola'));
+  const { fresh, covered } = filterCovered(stories, ledger);
+  if (covered.length > 0) {
+    notes.push(`${covered.length} gathered stories already covered by the Specola — excluded: ${covered.map((s) => `"${s.title}"`).join(', ')}`);
+  }
+  stories = fresh;
 
   const { quietDayThreshold, min, max } = ctx.sources.selection;
   if (stories.length < quietDayThreshold) {
