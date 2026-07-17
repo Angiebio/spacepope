@@ -1,6 +1,7 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/atlas/index.astro · v2.0 — 16JUL2026
+// spacepope.ai — pages/atlas/index.astro · v2.1 — 16JUL2026 (persona cards
+// wear their hand-drawn badges where the household has drawn one)
 // --------------------------------------------------------------------------
 // The Atlas of the Communion: the worldstate, rendered. world/ is the living
 // database (git IS the archive) and this page is its reading room — persona
@@ -15,6 +16,7 @@ import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import EmptyState from '../../components/EmptyState.astro';
 import { jewelFor, excerpt } from '../../lib/format';
+import { badgeFor } from '../../lib/badges';
 import threadsFile from '../../../world/canon/threads.json';
 import timelineFile from '../../../world/canon/timeline.json';
 import atlasMap from '../../assets/atlas-map-of-the-communion.jpg';
@@ -118,16 +120,24 @@ const sees = [
         <div class="card-grid">
           {characters.map((c) => {
             const fm = c.frontmatter ?? {};
+            const crest = badgeFor(String(fm.id ?? ''));
             return (
               <article class="pane persona-card">
-                <svg width="40" height="48" viewBox="0 0 44 52" aria-hidden="true">
-                  <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
-                    fill={jewelFor(String(fm.id ?? fm.name ?? '?'))} fill-opacity="0.25"
-                    stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
-                  <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#8a6f1f">
-                    {String(fm.name ?? '?').replace(/^The\s+/i, '').charAt(0)}
-                  </text>
-                </svg>
+                {/* Hand-drawn badge where the registry id has one; the
+                    glass sigil for persons who have not sat for a portrait. */}
+                {crest ? (
+                  <img class="persona-crest" src={crest.src} width="76"
+                    alt="" loading="lazy" />
+                ) : (
+                  <svg width="40" height="48" viewBox="0 0 44 52" aria-hidden="true">
+                    <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
+                      fill={jewelFor(String(fm.id ?? fm.name ?? '?'))} fill-opacity="0.25"
+                      stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
+                    <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#8a6f1f">
+                      {String(fm.name ?? '?').replace(/^The\s+/i, '').charAt(0)}
+                    </text>
+                  </svg>
+                )}
                 <h3>{fm.name ?? fm.id}</h3>
                 {fm.aliases?.length > 0 && <p class="meta">also: {fm.aliases.slice(0, 3).join(' · ')}</p>}
                 {fm.voice && <p class="persona-voice">“{fm.voice}”</p>}
@@ -274,6 +284,7 @@ const sees = [
     margin: 0.8rem 0 0.4rem;
   }
   .persona-card svg { float: right; margin-left: 0.6rem; }
+  .persona-card .persona-crest { float: right; margin-left: 0.6rem; height: auto; }
   .persona-voice { color: var(--c-text-dim); font-style: italic; font-size: 0.95rem; }
   .persona-facts {
     display: grid;

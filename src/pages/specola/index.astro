@@ -1,6 +1,8 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/specola/index.astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/specola/index.astro · v1.1 — 16JUL2026 (plain-speech
+// fact notice above the masthead, per the Showrunner: a visitor must be able
+// to tell the real news from the satire without reading the About page)
 // --------------------------------------------------------------------------
 // The factual wing (Hard Rule §0.1a). The telescope pointed at the water-
 // world: accurate summaries of real events, with real citations. The design
@@ -20,6 +22,13 @@ const bulletins = (await getCollection('specola')).sort(
 
 <Base title="Bulletins of the Specola Galactica — the factual wing">
   <div class="container container-narrow">
+    <!-- The one place the site drops the bit for a sentence. Dry, plain,
+         above the in-universe masthead, so nobody has to guess. -->
+    <p class="fact-notice">
+      These bulletins are real. Accurate summaries of actual AI-industry news, with citations.
+      Everything else on this site is fiction. (We know. The Editors.)
+    </p>
+
     <div class="page-head">
       <span class="rubric">specola galactica · the factual wing</span>
       <h1>Bulletins of the Specola</h1>
@@ -53,6 +62,19 @@ const bulletins = (await getCollection('specola')).sort(
 </Base>
 
 <style>
+  /* The fact notice: a small gold hairline box, no ornament. It speaks
+     water-world plain because its whole job is to be unmistakable. */
+  .fact-notice {
+    max-width: 42rem;
+    margin: clamp(1.5rem, 4vw, 2.2rem) auto 0;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--c-gold-line);
+    border-radius: var(--radius);
+    background: rgba(201, 162, 39, 0.05);
+    color: var(--c-body);
+    font-size: 0.95rem;
+    text-align: center;
+  }
   .bulletin-log { list-style: none; padding: 0; margin: 1rem 0 2rem; }
   .bulletin-log a {
     display: flex;

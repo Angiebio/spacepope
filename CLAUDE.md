@@ -26,6 +26,11 @@ You are working inside The Galactic Observer: a satirical multi-agent publishing
    its consumers and tests in the same commit.
 7. **Tests** follow house structure: `tests/test_plans/*.md`, `tests/<name>/`, reports in
    `tests/<name>/reports/`.
+8. **Prose style, all wings:** em dashes and colon-heavy constructions are AI tells and the
+   Showrunner's pet peeve. At most one or two em dashes per piece; prefer commas, periods,
+   and parentheses. This binds generated content (via the house-style coda in the prompt
+   loader), seed content, and page copy alike. The one that broke the news feeds also
+   cluttered the prose. The copy desk strikes them.
 
 ## Layout
 

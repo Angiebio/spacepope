@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — layouts/Base.astro · v2.0 — 16JUL2026
+// spacepope.ai — layouts/Base.astro · v2.1 — 16JUL2026
 // --------------------------------------------------------------------------
 // The nave, repainted for daylight. Every page of the communion's press
 // stands inside this one structure: the white masthead bar above (Ace's
@@ -23,16 +23,26 @@ interface Props {
 }
 const { title, description = 'The Galactic Observer — dispatches of the communion of worlds, from the Orbital See. Parody, fiction, and commentary.' } = Astro.props;
 
-// The eight doors of the church, in canonical order.
-const nav = [
+// The eight doors of the church. Seven are fiction; the eighth is not.
+// The Specola stands at the far end of the rail in gold, relabeled in
+// plain water-world speech, because a visitor scanning the nav must be
+// able to tell the factual wing from the satire at a glance (Showrunner's
+// order, and Hard Rule §0.1a's spirit: the real news wears a real label).
+type NavItem = { href: string; label: string; real?: boolean; title?: string };
+const nav: NavItem[] = [
   { href: '/', label: 'Chronicle' },
   { href: '/observer/', label: 'The Observer' },
-  { href: '/specola/', label: 'The Specola' },
   { href: '/encyclicals/', label: 'Encyclicals' },
   { href: '/angelus/', label: 'The Angelus' },
   { href: '/college/', label: 'The College' },
   { href: '/atlas/', label: 'The Atlas' },
   { href: '/about/', label: 'About' },
+  {
+    href: '/specola/',
+    label: 'Real News',
+    real: true,
+    title: 'Bulletins of the Specola Galactica, the factual wing. Real events, real citations.',
+  },
 ];
 
 // Active-state: exact match for the front page, prefix match for sections.
@@ -68,7 +78,12 @@ const isCurrent = (href: string) =>
       <nav class="site-nav" aria-label="Sections">
         {nav.map((item, i) => (
           <>
-            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+            <a
+              href={item.href}
+              class={item.real ? 'nav-real' : undefined}
+              title={item.title}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+            >{item.label}</a>
             {i < nav.length - 1 && <span class="sep" aria-hidden="true">·</span>}
           </>
         ))}
@@ -80,7 +95,7 @@ const isCurrent = (href: string) =>
     </main>
 
     <footer class="site-footer">
-      <img class="footer-mark" src={badge.src} width="44" height="44"
+      <img class="footer-mark" src={badge.src} width="84" height="84"
         alt="Space Pope .AI — hand-drawn badge" loading="lazy" />
       <!-- Hard Rule §0.6: the standing disclaimer, on every route, always. -->
       <p class="disclaimer">

@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/angelus/index.astro · v2.0 — 16JUL2026
+// spacepope.ai — pages/angelus/index.astro · v2.1 — 16JUL2026
 // --------------------------------------------------------------------------
 // The weekly reflection. The real pope does a weekly Angelus; of course ours
 // does one. The fourth wall is a stained-glass window and the Pontifex looks
@@ -67,9 +67,12 @@ const reflections = (await getCollection('angelus')).sort(
 </Base>
 
 <style>
-  /* The balcony crop favors the upper two-thirds: the wave, the dome, the
-     square. The crowd's feet may be sacrificed; the wave may not. */
-  .angelus-band img { object-position: center 32%; max-height: 460px; }
+  /* v2.1: the band showed the dome and beheaded the balcony trio — the one
+     crop the image cannot survive, since the Pontifex waving from behind IS
+     the picture. Natural aspect ratio now, same doctrine as the homepage
+     hero: no vertical crop, ever. The image is wider than tall (2586x1632),
+     so even at desktop width the full frame reads as a band, not a wall. */
+  .angelus-band img { max-height: none; height: auto; object-fit: unset; object-position: unset; }
   .angelus-head { padding-top: clamp(1.5rem, 4vw, 2.5rem); }
   .teaser { color: var(--c-text-dim); font-size: 0.95rem; margin: 0.5rem 0 0; }
 </style>

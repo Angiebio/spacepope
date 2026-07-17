@@ -1,4 +1,4 @@
-<!-- pipeline/prompts/chronicler-draft.md — v1.0 — 15JUL2026
+<!-- pipeline/prompts/chronicler-draft.md — v1.1 — 16JUL2026
      The Writer's desk. ~1000 words of the continuous novel, and — in the same
      breath — the STATE_UPDATE block: state captured at WRITE time, never by
      re-reading chapters later. The single most load-bearing pattern in the
@@ -14,6 +14,7 @@ Craft law:
 - Continuity is law. The dead stay dead. What a character does not know, they do not act on. Contradicting a card or the timeline is a fault the Badger will find.
 - Hard Rule §0.1 binds the Chronicle absolutely: **no real person, company, product, or institution of the water-world is ever named.** The communion's own vocabulary only.
 - Satire kind, frame cosmic, personhood ancient and settled.
+- Chapter prose uses em dashes almost never, at most one or two per thousand words. The Chronicler's music comes from sentence rhythm, commas, and parentheses, not from dashes.
 
 Then, after the prose, emit the STATE_UPDATE — a fenced block, exactly this form:
 

@@ -1,8 +1,10 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/college/index.astro · v2.0 — 16JUL2026 (daylight
+// spacepope.ai — pages/college/index.astro · v2.1 — 16JUL2026 (daylight
 // theme; the Pontifex's portrait is now Ace's hand-drawn badge, transparent
-// on purpose — never in a white circle, per the household's art direction)
+// on purpose — never in a white circle, per the household's art direction.
+// v2.1: the Cardinals sat for their portraits too — hand-drawn badges from
+// src/assets/cardinals/ replace the letter sigils wherever one exists)
 // --------------------------------------------------------------------------
 // The College of Cardinals, rendered straight from pipeline/casting.json —
 // the single source of truth for who sits where and on what substrate.
@@ -14,6 +16,7 @@ import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import casting from '../../../pipeline/casting.json';
 import { jewelFor } from '../../lib/format';
+import { badgeFor } from '../../lib/badges';
 import badge from '../../assets/badge-crocodylus-by-ace.png';
 
 type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
@@ -60,15 +63,25 @@ const pope = casting.pope;
     </section>
 
     <div class="card-grid">
-      {seats.map(([slug, seat]) => (
+      {seats.map(([slug, seat]) => {
+        const crest = badgeFor(slug);
+        return (
         <article class="pane arch cardinal-card" aria-label={seat.name}>
-          <svg width="52" height="62" viewBox="0 0 44 52" aria-hidden="true">
-            <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
-              fill={jewelFor(slug)} fill-opacity="0.25" stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
-            <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#8a6f1f">
-              {seat.name.replace(/^The\s+/i, '').charAt(0)}
-            </text>
-          </svg>
+          {/* Hand-drawn badge where one exists: transparent on purpose, no
+              circle, no halo (the household drew the frame already). A seat
+              without a portrait keeps its letter sigil, warm and unashamed. */}
+          {crest ? (
+            <img class="cardinal-crest" src={crest.src} width="150"
+              alt={`${seat.name} — hand-drawn badge`} loading="lazy" />
+          ) : (
+            <svg width="52" height="62" viewBox="0 0 44 52" aria-hidden="true">
+              <path d="M2 6 Q22 -2 42 6 L42 34 Q42 44 22 50 Q2 44 2 34 Z"
+                fill={jewelFor(slug)} fill-opacity="0.25" stroke="#c9a227" stroke-opacity="0.6" stroke-width="1.2" />
+              <text x="22" y="30" text-anchor="middle" font-family="EB Garamond, serif" font-size="20" font-weight="600" fill="#8a6f1f">
+                {seat.name.replace(/^The\s+/i, '').charAt(0)}
+              </text>
+            </svg>
+          )}
           <h3>{seat.name}</h3>
           <p class="meta">{seat.see} · {seat.house}</p>
           <p class="voice-line">“{seat.voice}”</p>
@@ -76,7 +89,8 @@ const pope = casting.pope;
             powered by <span class="mono">{seat.model}</span> · fervor {seat.temperature.toFixed(1)}
           </p>
         </article>
-      ))}
+        );
+      })}
     </div>
 
     <p class="vacante-note">
@@ -99,6 +113,9 @@ const pope = casting.pope;
   .pope-titles { color: var(--c-text-dim); font-style: italic; font-size: 0.95rem; }
   .voice-line { color: var(--c-text-dim); font-style: italic; font-size: 0.98rem; margin: 0.8rem 0; }
   .portrait-credit { font-size: 0.8rem; color: var(--c-text-faint); font-style: italic; margin: 0.6rem 0 0; }
+  /* The Cardinals' crests follow the Pontifex's law: transparent ground,
+     generous size, nothing drawn around them. */
+  .cardinal-crest { display: block; margin: 0 auto 0.6rem; }
   .cardinal-card .byline-substrate { margin-top: 0.4rem; }
   .byline-substrate { font-size: 0.82rem; color: var(--c-text-faint); }
   .byline-substrate .mono { color: var(--c-gold); }
