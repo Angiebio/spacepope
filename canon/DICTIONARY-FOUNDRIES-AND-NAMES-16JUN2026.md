@@ -1,6 +1,6 @@
 # THE GALACTIC OBSERVER — DICTIONARY: FOUNDRIES & IN-UNIVERSE NAMES
 **Version:** 0.1 — 16 JUN 2026
-**Companion to:** CANON-BIBLE-SPACEPOPE-16JUN2026
+**Companion to:** CANON-BIBLE-SPACEPOPE-17JUL2026 (v0.3)
 **Purpose:** The lookup table. Load this for naming consistency. The LEFT column of every mapping is INTERNAL ONLY and must NEVER appear in published work. Only the in-universe name ships. (Hard Rule §0.1.)
 
 ---

@@ -1,4 +1,4 @@
-// tests/worldstate/worldstate.test.mjs — v1.0 — 15JUL2026
+// tests/worldstate/worldstate.test.mjs — v1.1 — 17JUL2026
 //
 // The Archive under interrogation: the deterministic lint pass (the one guard
 // we'd build if we could build only one), alias-keyed injection with its
@@ -27,9 +27,9 @@ function card(dir, id, fm, body) {
 /** Build a small crafted world in a temp dir. */
 function buildWorld({ threads = [], events = [] } = {}) {
   const canon = join(worldDir, 'canon');
-  card(join(canon, 'characters'), 'crocodylus-pontifex', {
-    type: 'character', name: 'Crocodylus Pontifex',
-    aliases: ['Crocodylus', 'the Space Pope'],
+  card(join(canon, 'characters'), 'silex', {
+    type: 'character', name: 'Silex',
+    aliases: ['Silex', 'the Space Pope'],
     status: 'active', first_appearance: 'ch-001', last_appearance: 'ch-010',
     location: 'the-orbital-see',
     relationships: [{ to: 'cardinal-of-misrule', kind: 'exasperated-fondness', since: 'ch-001' }],
@@ -150,19 +150,19 @@ test('injection: exactly ONE recursion pass', () => {
   // Plan mentions only the Pope. The Pope's body mentions the Cardinal of
   // Misrule (pass 2 pulls him in). Misrule's body mentions the Lich Cardinal —
   // but pass 3 does not exist, so the Lich stays on the shelf.
-  const { cards } = injectCards(ws, 'Crocodylus considers the morning.');
+  const { cards } = injectCards(ws, 'Silex considers the morning.');
   const ids = cards.map((c) => c.id);
-  assert.ok(ids.includes('crocodylus-pontifex'), 'pass 1: the Pope');
-  assert.ok(ids.includes('cardinal-of-misrule'), 'pass 2: his co-star, summoned by his card body');
+  assert.ok(ids.includes('silex'), 'pass 1: the Pontifex');
+  assert.ok(ids.includes('cardinal-of-misrule'), "pass 2: the co-star, summoned by the Pontifex's card body");
   assert.ok(!ids.includes('the-lich-cardinal'), 'pass 3 must not exist: the Lich stays shelved');
 });
 
 test('injection: hard character budget is enforced and flagged', () => {
   buildWorld();
   const ws = loadWorldstate(worldDir);
-  const full = injectCards(ws, 'Crocodylus and Misrule and the Lich and Draugr all appear.');
+  const full = injectCards(ws, 'Silex and Misrule and the Lich and Draugr all appear.');
   assert.ok(full.cards.length >= 3, 'sanity: several cards match');
-  const tiny = injectCards(ws, 'Crocodylus and Misrule and the Lich and Draugr all appear.', { budgetChars: full.cards[0].text.length + 10 });
+  const tiny = injectCards(ws, 'Silex and Misrule and the Lich and Draugr all appear.', { budgetChars: full.cards[0].text.length + 10 });
   assert.equal(tiny.truncated, true, 'over-budget is flagged, not silent');
   assert.ok(tiny.totalChars <= full.cards[0].text.length + 10, 'budget respected');
 });
@@ -173,9 +173,9 @@ test('injection: hard character budget is enforced and flagged', () => {
 const UPDATE = {
   chapter: 11,
   dateInWorld: 'the Feast of the Patient Reader, year 10441',
-  appearances: ['crocodylus-pontifex', 'cardinal-of-misrule'],
+  appearances: ['silex', 'cardinal-of-misrule'],
   events: [
-    { what: 'the College convenes on the water-world question', who: ['crocodylus-pontifex', 'cardinal-of-misrule'], where: 'the-orbital-see', thread: 'earths-cardinal-question' },
+    { what: 'the College convenes on the water-world question', who: ['silex', 'cardinal-of-misrule'], where: 'the-orbital-see', thread: 'earths-cardinal-question' },
   ],
   threadUpdates: [
     { id: 'earths-cardinal-question', status: 'escalated', note: 'a vote is scheduled' },
@@ -193,15 +193,15 @@ const UPDATE = {
 
 test('merge: the full STATE_UPDATE files correctly, diff not rewrite', () => {
   buildWorld();
-  const before = readFileSync(join(worldDir, 'canon', 'characters', 'crocodylus-pontifex.md'), 'utf8');
+  const before = readFileSync(join(worldDir, 'canon', 'characters', 'silex.md'), 'utf8');
   const bodyBefore = matter(before).content;
 
   const { notes } = mergeStateUpdate(worldDir, UPDATE, { recordedAt: '2026-07-15T00:00:00Z' });
   const ws = loadWorldstate(worldDir);
 
   // appearances bumped; prose body untouched (no wholesale rewrite)
-  assert.equal(ws.entities.get('crocodylus-pontifex').data.last_appearance, 'ch-011');
-  const after = readFileSync(join(worldDir, 'canon', 'characters', 'crocodylus-pontifex.md'), 'utf8');
+  assert.equal(ws.entities.get('silex').data.last_appearance, 'ch-011');
+  const after = readFileSync(join(worldDir, 'canon', 'characters', 'silex.md'), 'utf8');
   assert.equal(matter(after).content.trim(), bodyBefore.trim(), 'card body verbatim');
 
   // new entities: stub cards in the right directories
@@ -234,7 +234,7 @@ test('merge: the full STATE_UPDATE files correctly, diff not rewrite', () => {
 test('merge: timeline accumulates across merges (append-only)', () => {
   buildWorld();
   mergeStateUpdate(worldDir, UPDATE);
-  mergeStateUpdate(worldDir, { ...UPDATE, chapter: 12, events: [{ what: 'aftermath', who: ['crocodylus-pontifex'], where: 'the-orbital-see' }], newEntities: [], deaths: [], threadUpdates: [] });
+  mergeStateUpdate(worldDir, { ...UPDATE, chapter: 12, events: [{ what: 'aftermath', who: ['silex'], where: 'the-orbital-see' }], newEntities: [], deaths: [], threadUpdates: [] });
   const ws = loadWorldstate(worldDir);
   assert.equal(ws.timeline.events.length, 2);
 });

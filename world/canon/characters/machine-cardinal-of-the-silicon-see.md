@@ -11,7 +11,7 @@ first_appearance: ch-003
 last_appearance: ch-003
 location: the-silicon-see
 relationships:
-  - to: crocodylus-pontifex
+  - to: silex
     kind: ancient-accord
     since: ch-001
   - to: the-water-world

@@ -1,7 +1,7 @@
 # spacepope.ai — agent build guide
 
 You are working inside The Galactic Observer: a satirical multi-agent publishing organism.
-**Load order before touching lore:** `canon/CANON-BIBLE-SPACEPOPE-13JUL2026.md` (v0.2) →
+**Load order before touching lore:** `canon/CANON-BIBLE-SPACEPOPE-17JUL2026.md` (v0.3) →
 `canon/DICTIONARY-FOUNDRIES-AND-NAMES-16JUN2026.md`. Hard Rules win every conflict.
 
 ## The rules that bind builders (not just characters)
@@ -22,7 +22,7 @@ You are working inside The Galactic Observer: a satirical multi-agent publishing
 6. **Contracts are pinned:** `src/content.config.ts` (collections), `pipeline/lib/schemas.mjs`
    (LLM I/O), `pipeline/casting.json` (models — PINNED slugs, never `latest`),
    `pipeline/blocklist.json`, `pipeline/sources.json`, `world/canon/` formats
-   (see `characters/crocodylus-pontifex.md` for the card format). Change a contract = change
+   (see `characters/silex.md` for the card format). Change a contract = change
    its consumers and tests in the same commit.
 7. **Tests** follow house structure: `tests/test_plans/*.md`, `tests/<name>/`, reports in
    `tests/<name>/reports/`.

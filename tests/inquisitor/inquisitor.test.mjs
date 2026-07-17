@@ -1,4 +1,4 @@
-// tests/inquisitor/inquisitor.test.mjs — v1.0 — 15JUL2026
+// tests/inquisitor/inquisitor.test.mjs — v1.1 — 17JUL2026
 //
 // THE ADVERSARIAL SUITE. Every seeded leak in the fixture MUST be caught by
 // the deterministic gate alone (no LLM in this room — the regex half has to
@@ -79,13 +79,32 @@ test('every blocklisted term catches itself (list-wide self-check)', () => {
 test('unseen-entity logger: novel names surface; known names do not', () => {
   const bulletin =
     'Meridian Labs announced a partnership with the Aster Institute on Tuesday. ' +
-    'OpenAI declined to comment. Crocodylus Pontifex was unavailable, being fictional.';
+    'OpenAI declined to comment. The Pontifex Maximus Galacticus was unavailable, being fictional.';
   const unseen = findUnseenEntities(bulletin, {
     gates,
-    knownNames: new Set(['crocodylus pontifex']),
+    knownNames: new Set(['pontifex maximus galacticus']),
   });
   assert.ok(unseen.includes('Meridian Labs'), 'novel org surfaces');
   assert.ok(unseen.includes('Aster Institute') || unseen.includes('the Aster Institute'), 'second novel org surfaces');
   assert.ok(!unseen.some((n) => /openai/i.test(n)), 'blocklisted names are not "unseen"');
-  assert.ok(!unseen.includes('Crocodylus Pontifex'), 'canon names are not "unseen"');
+  assert.ok(!unseen.includes('Pontifex Maximus Galacticus'), 'canon names are not "unseen"');
+});
+
+// The rename holds or it doesn't: the Pontifex's retired fan-art name must be
+// excommunicate in every fictional wing, exactly like a real-world name, so a
+// model reaching for its training prior gets caught at the same gate. The
+// leak strings live in the adversarial fixture; this test pins the category.
+test('retired_and_ip: the retired name is caught in fiction, and reported under its category', () => {
+  const regression = 'Crocodylus Pontifex lifted one antediluvian eye toward the water-world.';
+  for (const wing of ['observer', 'chronicle', 'encyclicals', 'angelus']) {
+    const result = checkText(regression, { gates, wing });
+    assert.equal(result.pass, false, `${wing} must catch the retired name`);
+    assert.ok(
+      result.matches.some((m) => m.category === 'retired_and_ip'),
+      `category retired_and_ip reported in ${wing}`,
+    );
+  }
+  // The new name sails through: the whole point of the rename.
+  const clean = checkText('Silex lifted one antediluvian eye toward the water-world.', { gates, wing: 'chronicle' });
+  assert.equal(clean.pass, true, 'Silex is not a leak');
 });

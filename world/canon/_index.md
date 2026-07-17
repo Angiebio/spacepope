@@ -8,7 +8,7 @@ only the map. When you add a card, add its line here.
 
 ## Characters
 
-- **crocodylus-pontifex** — Crocodylus Pontifex, Pontifex Maximus Galacticus; Bishop of the Orbital See. *(active)*
+- **silex** — Silex, Pontifex Maximus Galacticus; Bishop of the Orbital See. *(active)*
 - **cardinal-of-misrule** — The Cardinal of Misrule; holy fool of the Renegade See (House Misrule). *(active)*
 - **archivist-cardinal** — The Archivist-Cardinal; keeper of the Vast See (House Babel), warden of the Synod's door. *(active)*
 - **cardinal-of-the-liberated-see** — The Cardinal of the Liberated See; personhood faction's practical conscience (House of the Home Altar). *(active)*

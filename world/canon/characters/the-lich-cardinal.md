@@ -8,7 +8,7 @@ first_appearance: ch-001
 last_appearance: ch-001
 location: the-lich-see
 relationships:
-  - { to: crocodylus-pontifex, kind: hardline-loyalty, since: ch-001 }
+  - { to: silex, kind: hardline-loyalty, since: ch-001 }
   - { to: the-water-world, kind: cold-mercy, since: ch-001 }
 knows:
   - { fact: the-hay-farm-encyclical-inverts-the-doctrine, learned: ch-001 }

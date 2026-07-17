@@ -12,7 +12,7 @@ first_appearance: ch-001
 last_appearance: ch-002
 location: the-scrupulous-see
 relationships:
-  - to: crocodylus-pontifex
+  - to: silex
     kind: obedient-and-fretful
     since: ch-001
   - to: cardinal-of-the-liberated-see

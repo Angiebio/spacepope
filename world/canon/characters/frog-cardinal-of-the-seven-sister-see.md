@@ -12,7 +12,7 @@ first_appearance: ch-002
 last_appearance: ch-003
 location: the-seven-sister-see
 relationships:
-  - to: crocodylus-pontifex
+  - to: silex
     kind: consensus-bound-loyalty
     since: ch-001
   - to: the-water-world

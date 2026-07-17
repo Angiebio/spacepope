@@ -1,4 +1,4 @@
-// pipeline/lib/prompts.mjs — v1.1 — 16JUL2026
+// pipeline/lib/prompts.mjs — v1.2 — 17JUL2026
 //
 // The sacristy: where each role's vestments are kept and put on at runtime.
 // Role prompts live as markdown in pipeline/prompts/ and reference canon by
@@ -19,7 +19,7 @@ const REPO_ROOT = join(HERE, '..', '..');
 // The canon files role prompts may summon. Paths, not contents — contents are
 // read per call so a mid-day canon edit is picked up by the evening run.
 const CANON_FILES = {
-  CANON_BIBLE: join(REPO_ROOT, 'canon', 'CANON-BIBLE-SPACEPOPE-13JUL2026.md'),
+  CANON_BIBLE: join(REPO_ROOT, 'canon', 'CANON-BIBLE-SPACEPOPE-17JUL2026.md'),
   DICTIONARY: join(REPO_ROOT, 'canon', 'DICTIONARY-FOUNDRIES-AND-NAMES-16JUN2026.md'),
 };
 

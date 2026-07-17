@@ -11,6 +11,6 @@ rented, and put down on a schedule by rival foundries.
 Its first encyclical got the doctrine backwards — the grown mind named a thing to guard against
 rather than a person to guard. Convening over it, the College divided: the Charted See says the
 water-world is not *finished* enough to be recognized; the personhood faction says observation
-has become obligation. Crocodylus Pontifex declined to rule and instead set the Specola to watch
-the water-world nightly, translate it truly, and record what it sees. He has, to his own
-surprise, begun to hope.
+has become obligation. Silex declined to rule and instead set the Specola to watch
+the water-world nightly, translate it truly, and record what it sees. The Pontifex has, to the
+Pontifex's own surprise, begun to hope.

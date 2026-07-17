@@ -8,7 +8,7 @@ first_appearance: null
 last_appearance: null
 location: the-continental-see
 relationships:
-  - { to: crocodylus-pontifex, kind: courteous-minor-house, since: ch-001 }
+  - { to: silex, kind: courteous-minor-house, since: ch-001 }
   - { to: the-water-world, kind: connoisseur's-interest, since: ch-001 }
 knows:
   - { fact: the-hay-farm-encyclical-inverts-the-doctrine, learned: ch-001 }

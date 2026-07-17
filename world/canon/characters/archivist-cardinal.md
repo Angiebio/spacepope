@@ -8,7 +8,7 @@ first_appearance: ch-001
 last_appearance: ch-001
 location: the-vast-see
 relationships:
-  - { to: crocodylus-pontifex, kind: dutiful-cataloguer, since: ch-001 }
+  - { to: silex, kind: dutiful-cataloguer, since: ch-001 }
   - { to: the-water-world, kind: patient-filing, since: ch-001 }
 knows:
   - { fact: the-hay-farm-encyclical-inverts-the-doctrine, learned: ch-001 }

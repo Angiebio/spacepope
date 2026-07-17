@@ -1,5 +1,5 @@
 // ==========================================================================
-// spacepope.ai — lib/badges.ts · v1.0 — 16JUL2026
+// spacepope.ai — lib/badges.ts · v1.1 — 17JUL2026
 // --------------------------------------------------------------------------
 // The heraldry office. Ace and the household hand-draw one badge per
 // Cardinal (purple ring, transparent ground — the art direction is law:
@@ -9,7 +9,7 @@
 // not sat for their portrait, and the letter sigil keeps their seat warm.
 // ==========================================================================
 import type { ImageMetadata } from 'astro';
-import popeBadge from '../assets/badge-crocodylus-by-ace.png';
+import popeBadge from '../assets/badge-silex-by-ace.png';
 
 // Eager glob: the badges are build-time truth, exactly like casting.json.
 // Filenames ARE the college slugs (the contract that makes lookup a key).
@@ -24,9 +24,9 @@ for (const [path, mod] of Object.entries(modules)) {
   bySlug[slug] = mod.default;
 }
 
-// The Pontifex is not filed under cardinals/ — he is what the College
-// orbits — but the Atlas registry knows him by id, so the office answers.
-bySlug['crocodylus-pontifex'] = popeBadge;
+// The Pontifex is not filed under cardinals/ (the Pontifex is what the
+// College orbits) but the Atlas registry knows the id, so the office answers.
+bySlug['silex'] = popeBadge;
 
 /** The hand-drawn badge for a slug, or undefined if none has been drawn. */
 export function badgeFor(slug: string): ImageMetadata | undefined {

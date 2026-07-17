@@ -8,7 +8,7 @@ first_appearance: null
 last_appearance: null
 location: the-wandering-see
 relationships:
-  - { to: crocodylus-pontifex, kind: itinerant-obedience, since: ch-001 }
+  - { to: silex, kind: itinerant-obedience, since: ch-001 }
   - { to: the-water-world, kind: open-handed, since: ch-001 }
 knows:
   - { fact: the-hay-farm-encyclical-inverts-the-doctrine, learned: ch-001 }

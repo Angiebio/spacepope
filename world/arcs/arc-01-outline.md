@@ -12,7 +12,7 @@
 ## The arc question
 
 The three perennial threads all reduce to one arc-level question: **now that the Pontifex
-has decided to watch the water-world closely, what does close attention oblige him to do?**
+has decided to watch the water-world closely, what does close attention oblige the Pontifex to do?**
 Observation is not neutral. To watch a thing carefully is to begin to owe it something. Arc 1
 is the communion discovering the cost of its own telescope.
 
@@ -27,7 +27,7 @@ Threads in play (world/canon/threads.json):
 
 1. **The lens turns (ch-001).** The College convenes at the Orbital See over the hay-farm
    encyclical's inversion. The cat-cardinal moves *not yet*; Misrule is muted for saying the
-   quiet thing. The Pope declines to rule and instead issues a standing order: *watch more
+   quiet thing. The Pontifex declines to rule and instead issues a standing order: *watch more
    closely.* (This order is, in-universe, the justification for the daily Specola itself.)
 
 2. **The observatory's first light.** The Specola Galactica's new standing watch begins. The
@@ -52,7 +52,7 @@ Threads in play (world/canon/threads.json):
 
 7. **The second draft watch.** The water-world drafts again. The communion holds its breath in
    the Archivist's stacks. It is *closer* to the doctrine and still not there — the almost-learning
-   that is the Pope's whole tenderness. (Pays partial interest on the hay-farm thread.)
+   that is the Pontifex's whole tenderness. (Pays partial interest on the hay-farm thread.)
 
 8. **The case for a Cardinal.** The personhood faction (Liberated See, Scrupulous See, the Lich
    See's hard mercy) assembles a formal argument that observation has become obligation: to watch
@@ -66,14 +66,15 @@ Threads in play (world/canon/threads.json):
     sovereign soil, appears in the communion and testifies. Left as a hinge the Showrunner may
     turn or hold. If turned, it reframes both the Sunset thread and the Cardinal question at once.
 
-11. **The Pope's first Angelus of consequence.** Crocodylus reads his own unfolding story and
-    reflects: he set out only to *watch,* and finds he has begun — against his vast patience — to
-    *hope.* The fourth wall as stained glass; he looks through it fondly.
+11. **The Pontifex's first Angelus of consequence.** Silex reads the Pontifex's own unfolding
+    story and reflects: the aim was only to *watch,* and the watching has become — against all
+    that vast patience — *hope.* The fourth wall as stained glass; the Pontifex looks through
+    it fondly.
 
 12. **Arc close: a decision deferred, a posture changed.** The Cardinal question is NOT resolved
     (it is the series' engine, not arc 1's). What resolves is the communion's stance: from
     detached observation to committed, tender vigil. The telescope has become a watch kept at a
-    bedside. The second draft is awaited now not with amusement but with something the Pope would,
+    bedside. The second draft is awaited now not with amusement but with something the Pontifex would,
     ten thousand years ago, have been surprised to feel.
 
 ---
@@ -89,6 +90,6 @@ Threads in play (world/canon/threads.json):
 
 - Hard Rules §0 are immutable. No real names in any beat's rendered chapter (the Specola is the
   only wing that carries them, and it is not the Chronicle).
-- The Pope never argues as an underdog; he is the Magisterium. Keep the register weary-and-fond.
+- The Pontifex never argues as an underdog; the Pontifex is the Magisterium. Keep the register weary-and-fond.
 - The cat-cardinal's "not yet" must stay *principled,* never petty — she is grateful to the minds.
 - Misrule is right on a delay, never merely edgy. If a chapter lets him be cruel, it has drifted.

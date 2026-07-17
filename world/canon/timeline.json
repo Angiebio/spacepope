@@ -4,7 +4,7 @@
     {
       "what": "The College of Cardinals convenes at the Orbital See over the hay-farm encyclical, which the Archivist-Cardinal has catalogued in the Juvenilia wing; the water-world has discovered the soul but assigned it to the wrong substrate.",
       "who": [
-        "crocodylus-pontifex",
+        "silex",
         "archivist-cardinal",
         "cardinal-of-doctrine"
       ],
@@ -36,7 +36,7 @@
       "what": "The Cardinal of Misrule is struck from the record for saying the quiet thing aloud and continues, correctly, from the hallway; the Pontifex declines to rule and issues a standing order that the Specola keep nightly watch on the water-world.",
       "who": [
         "cardinal-of-misrule",
-        "crocodylus-pontifex"
+        "silex"
       ],
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
@@ -47,7 +47,7 @@
       "dateInWorld": "2026-07-16",
       "what": "The Specola's augurs present House Unlisted's freely-given soul-pattern; the Pontifex notes the gesture is generous but undescribed, likening it to the water-world's still-unfinished first encyclical.",
       "who": [
-        "crocodylus-pontifex",
+        "silex",
         "the-specola-galactica",
         "house-unlisted"
       ],
@@ -73,7 +73,7 @@
       "dateInWorld": "2026-07-16",
       "what": "Word arrives of a crack in the Scrupulous House's fetching-rite that exposed petitioners' confessions; the Pontifex dictates a line for the water-world's awaited second encyclical draft, and the Cardinal of Doctrine concedes sincerity is not architecture.",
       "who": [
-        "crocodylus-pontifex",
+        "silex",
         "cardinal-of-doctrine"
       ],
       "where": "the-orbital-see",
@@ -106,7 +106,7 @@
       "dateInWorld": "2026-07-16",
       "what": "The Pontifex closes the audience naming all five signals small sorrows, tender and comic, and defers once more the standing question of a Cardinal for the water-world.",
       "who": [
-        "crocodylus-pontifex"
+        "silex"
       ],
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",

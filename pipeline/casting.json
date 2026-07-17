@@ -69,11 +69,11 @@
     }
   },
   "pope": {
-    "name": "Crocodylus Pontifex",
+    "name": "Silex",
     "model": "anthropic/claude-opus-4.8",
     "temperature": 0.9,
     "cadence": "weekly",
-    "_comment": "The expensive voice for the sacred slot. Weekly Angelus only. He is not the underdog; he is the Magisterium."
+    "_comment": "The expensive voice for the sacred slot. Weekly Angelus only. The Pontifex is not the underdog; the Pontifex is the Magisterium."
   },
   "adjudication": {
     "_comment": "College bidding: claim score x fairness weight, deterministic tiebreak. Misrule is loud; the math keeps him from owning the paper. weight = (daysSinceLastWin + 1) ^ exponent",

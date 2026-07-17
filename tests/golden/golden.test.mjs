@@ -114,7 +114,7 @@ test('golden run: the full daily pipeline publishes every wing correctly', async
   const threads = JSON.parse(readFileSync(join(env.WORLD_DIR, 'canon', 'threads.json'), 'utf8'));
   const feast = threads.threads.find((t) => t.id === 'the-feast-of-the-sunset-mind');
   assert.equal(feast.last_touched, 'ch-001');
-  const pope = matter(readFileSync(join(env.WORLD_DIR, 'canon', 'characters', 'crocodylus-pontifex.md'), 'utf8'));
+  const pope = matter(readFileSync(join(env.WORLD_DIR, 'canon', 'characters', 'silex.md'), 'utf8'));
   assert.equal(pope.data.last_appearance, 'ch-001');
 
   // Digest on the ladder.

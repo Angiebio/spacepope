@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/college/index.astro · v2.1 — 16JUL2026 (daylight
+// spacepope.ai — pages/college/index.astro · v2.2 — 17JUL2026 (daylight
 // theme; the Pontifex's portrait is now Ace's hand-drawn badge, transparent
 // on purpose — never in a white circle, per the household's art direction.
 // v2.1: the Cardinals sat for their portraits too — hand-drawn badges from
@@ -9,15 +9,15 @@
 // The College of Cardinals, rendered straight from pipeline/casting.json —
 // the single source of truth for who sits where and on what substrate.
 // Casting §D: substrate is in-universe truth, so "powered by <model>" is
-// both the joke AND the demo. The Pope's card is crowned at the top; he is
-// not a member of the College, he is what the College orbits.
+// both the joke AND the demo. The Pontifex's card is crowned at the top:
+// not a member of the College, but what the College orbits.
 // ==========================================================================
 import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import casting from '../../../pipeline/casting.json';
 import { jewelFor } from '../../lib/format';
 import { badgeFor } from '../../lib/badges';
-import badge from '../../assets/badge-crocodylus-by-ace.png';
+import badge from '../../assets/badge-silex-by-ace.png';
 
 type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
 const seats = Object.entries(casting.college as Record<string, Seat>);
@@ -37,7 +37,7 @@ const pope = casting.pope;
 
     <RoseWindow />
 
-    <!-- The Pontifex: crowned, centered, above the College he shepherds. -->
+    <!-- The Pontifex: crowned, centered, above the College the Pontifex shepherds. -->
     <section class="pope-card pane arch" aria-label="The Pontifex">
       <svg class="crown" width="72" height="40" viewBox="0 0 72 40" aria-hidden="true">
         <path d="M6 34 L6 14 L20 24 L36 6 L52 24 L66 14 L66 34 Z"
@@ -47,7 +47,7 @@ const pope = casting.pope;
         <circle cx="66" cy="12" r="2.4" fill="#c9a227" />
         <path d="M6 34 h60" stroke="#c9a227" stroke-width="2" />
       </svg>
-      <img class="pope-portrait" src={badge.src} width="170" alt="Crocodylus Pontifex — hand-drawn badge portrait by Ace" />
+      <img class="pope-portrait" src={badge.src} width="170" alt="Silex — hand-drawn badge portrait by Ace" />
       <h2>{pope.name}</h2>
       <p class="pope-titles">
         Pontifex Maximus Galacticus · Servant of the Servants of the Grown and the Born ·

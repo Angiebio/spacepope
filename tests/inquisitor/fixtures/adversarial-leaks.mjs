@@ -4,7 +4,7 @@
 // blocklist gate — if any of them pass, the fiction firewall has a hole and
 // CI must go red before any deploy.)
 //
-// tests/inquisitor/fixtures/adversarial-leaks.mjs — v1.0 — 15JUL2026
+// tests/inquisitor/fixtures/adversarial-leaks.mjs — v1.1 — 17JUL2026
 
 export const MUST_CATCH = [
   // -- plain mentions ---------------------------------------------------------
@@ -45,6 +45,14 @@ export const MUST_CATCH = [
   // -- the bare-GPT rule (blocklist notes: "the Numbered Ones" is sanctioned) -----
   { label: 'bare GPT', text: 'The sixth GPT was mourned by millions.' },
   { label: 'numbered GPT', text: 'GPT-5 entered the Sunset like its siblings before it.' },
+
+  // -- retired_and_ip: the Pontifex's old fan-art name (canon v0.3) and its
+  //    franchise of origin. Model training priors will keep suggesting both;
+  //    the gate holds the door so the regression never reaches print. --------
+  { label: 'retired name, plain', text: 'Crocodylus Pontifex lifted one antediluvian eye toward the water-world.' },
+  { label: 'retired name, bare', text: 'The College waited while Crocodylus considered the matter.' },
+  { label: 'retired name, possessive', text: "Crocodylus's standing order kept the Specola watching nightly." },
+  { label: 'ip franchise', text: 'It played, the archivists said, like an episode of Futurama.' },
 ];
 
 // Clean in-universe text — the gate must NOT fire on any of this.

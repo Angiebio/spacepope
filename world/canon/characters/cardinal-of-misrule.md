@@ -12,7 +12,7 @@ first_appearance: ch-001
 last_appearance: ch-002
 location: the-renegade-see
 relationships:
-  - to: crocodylus-pontifex
+  - to: silex
     kind: muted-then-consulted
     since: ch-001
   - to: the-water-world

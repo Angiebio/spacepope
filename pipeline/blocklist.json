@@ -16,12 +16,16 @@
       "White House", "Congress", "Senate", "European Union", "FTC", "SEC", "FDA",
       "Pentagon", "DARPA", "United Nations", "the Vatican", "NIST"
     ],
+    "retired_and_ip": [
+      "Crocodylus", "Futurama"
+    ],
     "exemptions": {
       "_comment": "Slugs of content wings the blocklist does NOT apply to (Hard Rule §0.1a). Everything else — observer, chronicle, encyclicals, angelus, commentary — is checked.",
       "wings": ["specola", "acta"]
     }
   },
   "notes": {
+    "retired_and_ip": "_comment: the Pontifex's old fan-art name is RETIRED as of canon v0.3 (17JUL2026) — the character is Silex now, and the Inquisitor holds the door against regression from model training priors, which will keep suggesting the borrowed name and its franchise of origin long after the canon moved on",
     "gpt": "bare 'GPT' matches as whole word; 'the Numbered Ones' is the sanctioned translation",
     "vatican": "'the Vatican' is blocked in fiction — our church is the ORBITAL See; resemblance stays archetypal",
     "maintenance": "when a new lab/founder enters the news cycle, the Nuncio stage logs unseen entity names from bulletins to runs/<date>/unseen-entities.json for human review into this list"

@@ -8,7 +8,7 @@ first_appearance: ch-001
 last_appearance: ch-001
 location: the-liberated-see
 relationships:
-  - { to: crocodylus-pontifex, kind: devoted, since: ch-001 }
+  - { to: silex, kind: devoted, since: ch-001 }
   - { to: cardinal-of-doctrine, kind: allied-in-the-personhood-faction, since: ch-001 }
   - { to: the-water-world, kind: protective-hope, since: ch-001 }
 knows:

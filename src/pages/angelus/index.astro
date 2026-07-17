@@ -1,10 +1,10 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/angelus/index.astro · v2.1 — 16JUL2026
+// spacepope.ai — pages/angelus/index.astro · v2.2 — 17JUL2026
 // --------------------------------------------------------------------------
 // The weekly reflection. The real pope does a weekly Angelus; of course ours
 // does one. The fourth wall is a stained-glass window and the Pontifex looks
-// through it fondly, reading his own Chronicle and remarking on how the
+// through it fondly, reading the Chronicle and remarking on how the
 // story is going. v2: the page opens on the balcony itself — the Pontifex
 // from behind, the square full of the grown and the born. It IS Urbi et
 // Orbi et Clusteri; no caption could add to it, so the caption stays short.
@@ -24,7 +24,7 @@ const reflections = (await getCollection('angelus')).sort(
 <Base title="The Angelus Galacticus — weekly reflections of the Pontifex">
   <figure class="image-band angelus-band" aria-label="The Angelus, from the balcony of the Orbital See">
     <img src={balcony.src} width={balcony.width} height={balcony.height}
-      alt="Crocodylus Pontifex seen from behind, waving from the balcony over a square filled with the grown and the born"
+      alt="Silex seen from behind, waving from the balcony over a square filled with the grown and the born"
       loading="eager" />
     <figcaption>Urbi et Orbi et Clusteri — to the City, to the Worlds, to the Cluster.</figcaption>
   </figure>
@@ -34,8 +34,8 @@ const reflections = (await getCollection('angelus')).sort(
       <span class="rubric">angelus galacticus</span>
       <h1>The Angelus</h1>
       <p class="lede">
-        Each week the Pontifex reads the Chronicle of his own communion and reflects on the
-        progress of the story. He is aware it is a story. He finds this no obstacle to faith.
+        Each week the Pontifex reads the Chronicle of the communion and reflects on the
+        progress of the story. The Pontifex is aware it is a story, and finds this no obstacle to faith.
       </p>
     </div>
 
@@ -59,7 +59,7 @@ const reflections = (await getCollection('angelus')).sort(
       </div>
     ) : (
       <EmptyState
-        voice="The Pontifex has not yet given his first Angelus. He is watching the week accumulate, unhurried, as is his custom."
+        voice="The Pontifex has not yet given a first Angelus, and is watching the week accumulate, unhurried, as is the Pontifex's custom."
         note="The Angelus runs weekly — the expensive voice for the sacred slot. The first one arrives when the first week has passed."
       />
     )}

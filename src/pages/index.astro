@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/index.astro · v2.1 — 16JUL2026
+// spacepope.ai — pages/index.astro · v2.2 — 17JUL2026
 // --------------------------------------------------------------------------
 // The front page, rebuilt in the image of the water-world's own Holy See:
 // a pale sky, a waving Pontifex, a gold pill that says MAGISTERIUM, and a
@@ -15,7 +15,7 @@ import Base from '../layouts/Base.astro';
 import EmptyState from '../components/EmptyState.astro';
 import { fmtDate, fmtDateCurial, toRoman, excerpt } from '../lib/format';
 import hero from '../assets/hero-pontifex-waving.jpg';
-import badge from '../assets/badge-crocodylus-by-ace.png';
+import badge from '../assets/badge-silex-by-ace.png';
 import basilica from '../assets/basilica-interior.jpg';
 import orbitalSee from '../assets/orbital-see-exterior.jpg';
 
@@ -46,21 +46,21 @@ const feasts = [
 
 <Base title="The Galactic Observer — the communion's press, from the Orbital See">
   <!-- ================= HERO — the sky, the wave, the swoop ================= -->
-  <section class="hero" aria-label="Crocodylus Pontifex">
+  <section class="hero" aria-label="Silex, Pontifex Maximus Galacticus">
     <img
       class="hero-img"
       src={hero.src}
       width={hero.width}
       height={hero.height}
-      alt="Crocodylus Pontifex, in white and purple vestments, waving from the Orbital See; spires and a ringed planet in the haze beyond"
+      alt="Silex, the Pontifex Maximus Galacticus, in white and purple vestments, waving from the Orbital See; spires and a ringed planet in the haze beyond"
       loading="eager"
       fetchpriority="high"
     />
     <div class="hero-overlay">
       <p class="hero-rubric">Pontifex Maximus Galacticus</p>
-      <!-- the space before the <br> matters: mobile hides the break, and
-           without it the two names would fuse into one unwrappable relic -->
-      <h1 class="hero-name">Crocodylus <br />Pontifex</h1>
+      <!-- one name now, no break needed: Silex stands alone on every
+           viewport, and the rubric above carries the full title -->
+      <h1 class="hero-name">Silex</h1>
       <a class="pill-gold" href="/encyclicals/">
         <img src={badge.src} alt="" width="56" height="56" />
         Magisterium
@@ -79,7 +79,7 @@ const feasts = [
       <a href="/angelus/">
         <span class="band-label">The Angelus</span>
         <span class="band-bar bar-orange" aria-hidden="true"></span>
-        <span class="band-note">the Pontifex reflects on his own story, weekly</span>
+        <span class="band-note">the Pontifex reflects on the story so far, weekly</span>
       </a>
       <a href="/college/">
         <span class="band-label">The College of Cardinals</span>
@@ -96,7 +96,7 @@ const feasts = [
         <span class="rubric">chronica communionis</span>
         <h2>The Chronicle of the Communion</h2>
         <p class="chron-lede">
-          The continuous novel of the Pontifex and his communion of worlds —
+          The continuous novel of Silex and the communion of worlds —
           advanced daily, seeded by the water-world's own news in cosmic translation.
         </p>
       </div>
@@ -248,7 +248,6 @@ const feasts = [
     }
     .hero-rubric { color: var(--c-gold); text-shadow: none; }
     .hero-name { color: var(--c-ink); text-shadow: none; }
-    .hero-name br { display: none; }
   }
 
   /* ---------------- CHRONICLE ---------------- */
