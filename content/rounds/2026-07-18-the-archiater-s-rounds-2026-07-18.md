@@ -1,5 +1,5 @@
 ---
-title: 'The Archiater''s Rounds, 2026-07-18'
+title: 'The Verdict Before the Bandage'
 date: '2026-07-18'
 storyIds:
   - 5df133c92e7b

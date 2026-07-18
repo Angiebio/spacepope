@@ -18,6 +18,20 @@ import { loadPrompt } from '../lib/prompts.mjs';
 import { badgerLoop } from './badger.mjs';
 import { inquisitorGate } from './inquisitor.mjs';
 
+/**
+ * Pull Galeno's self-authored title off the first line (TITLE: ...), returning
+ * the title and the body without it. Falls back to the date-stamped heading if
+ * he didn't supply one. The title rode through the same Inquisitor gate as the
+ * body, so it is already firewall-clean.
+ */
+export function extractRoundsTitle(body, fallback) {
+  const m = String(body).match(/^\s*TITLE:\s*(.+?)\s*$/im);
+  if (!m) return { title: fallback, body: String(body).trim() };
+  const title = m[1].replace(/^["']|["']$/g, '').trim().slice(0, 70) || fallback;
+  const stripped = String(body).replace(m[0], '').replace(/^\s+/, '');
+  return { title, body: stripped };
+}
+
 /** Draft the Rounds once (used fresh and on badger redispatch). */
 export async function draftRounds(ctx, dispatch, faultNote = null) {
   const galeno = ctx.casting.lazaretto.galeno;
@@ -65,11 +79,13 @@ export async function runGaleno(ctx, { dispatch }) {
     }),
   });
 
+  // Galeno names his own rounds (a first-line TITLE:); the date-stamped form is
+  // the fallback so the archive is never a wall of identical headings.
+  const { title, body } = extractRoundsTitle(result.artifact.body, `The Archiater's Rounds, ${ctx.date}`);
   return {
     rounds: result.status === 'spiked' ? null : {
-      // Deterministic title: the Editor sets the type, Galeno writes the prose.
-      title: `The Archiater's Rounds, ${ctx.date}`,
-      body: result.artifact.body,
+      title,
+      body,
       storyIds: dispatch.storyIds,
     },
     cardinal: 'galeno',
