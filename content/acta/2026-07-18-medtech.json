@@ -1,0 +1,42 @@
+{
+  "runId": "2026-07-18-medtech",
+  "date": "2026-07-18",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000473
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"GOP blocks effort to end Medicare test of AI prior authorization\": pass (1 redispatch) | \"Brain implant restores the sensation of touch in a person with quadriplegia\": pass (0 redispatch)",
+      "costUsd": 0.027194
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.064491
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.045446
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Archiater's Rounds, 2026-07-18\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.137604
+}
