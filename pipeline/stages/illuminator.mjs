@@ -29,23 +29,30 @@ import { writeIllustration } from '../lib/press.mjs';
 // tests/illustration/reports/). Change it and you change every future plate,
 // so change it deliberately, and re-tune.
 // v2 (18JUL2026, Showrunner): shifted from painterly gouache to hand-drawn
-// marker-and-ink comic linework, to match the household's hand-drawn badges
-// and push the frame even further from photorealism (bold ink is the least
-// mistakable-for-a-photo register there is, which serves the no-humans law).
+// marker-and-ink comic linework.
+// v3 (18JUL2026, Jim's style notes via the Showrunner): refined to detailed
+// Ligne Claire graphic-novel art — clean uniform precise outlines, cell shading
+// with controlled gradients, deep focus, localized purple/blue cold-light glows,
+// dense architectural detail. Premium clean-lined panel; still emphatically an
+// illustration, never a photograph, so the no-humans law holds. Jim's blurb
+// adapted; only the subject and the alien-clergy mandate are ours.
 // --------------------------------------------------------------------------
+// v4 (18JUL2026, Showrunner): DECOUPLED the clergy description from the always-on
+// style and moved it into the per-shot subjects. When the style itself no longer
+// insists on "clergy," a still-life or empty-landscape shot summons no crowd, and
+// flux stops filling the frame with borderline-human rows. The style now carries
+// only render technique, palette, and the no-humans law; the SHOTS carry the subject.
 export const HOUSE_STYLE =
-  'Hand-drawn marker and ink comic art style with bold black ink linework, ' +
-  'cel-shaded graphic-novel illustration, an inked codex comic reimagined for a cosmic cathedral ' +
-  '(matching the household\'s hand-drawn marker badges). ' +
-  'EVERY figure in the image without exception is a NON-HUMAN alien, including all background and crowd figures: ' +
-  'sci-fi robot-reptilian beings with green scaled lizard heads, snouts and cybernetic detailing, ' +
-  'frog-like amphibian prelates with wide amphibian eyes, tiny tardigrade monks, and faceless robed ' +
-  'machine-cardinals of burnished metal. Animal-headed and robotic clergy only. There are NO humans anywhere, ' +
-  'no human faces, no human heads, no human skin, not even in the distance or the crowd. ' +
-  'Cathedral purple and deep violet vestments, gold-leaf halos, cosmic stained-glass windows onto a starfield, ' +
-  'ringed planets and nebulae beyond the arches. Bold marker inking, flat cel color, visible black ink outlines, ' +
-  'warm parchment light. No real-world logos. No text, no letters, no words, no writing anywhere in the image. ' +
-  'Not photorealistic, not a photograph, not a 3D render, not CGI.';
+  'Detailed Ligne Claire graphic novel art style. Clean, uniform, precise ink outlines. Cell shading with ' +
+  'controlled gradients and a crisp, clean color palette. Intricate, dense detail, deep focus, clear even lighting, ' +
+  'with specific localized purple and blue cold-light glows on halos, key objects, and interfaces. ' +
+  'Palette of cathedral purple and violet, gold leaf, and cosmic starfields with ringed planets and nebulae. ' +
+  'IMPORTANT: any character that appears is a NON-HUMAN alien only (a scaled green reptilian being, a wide-eyed ' +
+  'amphibian, a tiny tardigrade, or a faceless burnished machine). There are NO humans anywhere, no human faces, ' +
+  'no human heads, no human skin, not even small or in the distance. ' +
+  'No real-world logos. No text, no letters, no words, no writing anywhere. ' +
+  'Premium clean-lined sci-fi graphic novel panel with high depth. Not photorealistic, not a photograph, ' +
+  'not a 3D render, no motion blur.';
 
 // The negative guidance flux honors as a soft steer. Kept beside the positive
 // coda so the two are edited together.
@@ -84,17 +91,52 @@ export function sceneSeedFromBody(body = '', maxLen = 320) {
   return text;
 }
 
+// The shot rotation. flux, left alone, renders every cathedral as a symmetric
+// nave lined with identical prelates ("eerie rows of alien popes"). We refuse
+// that by handing each plate an explicit, DIFFERENT camera on the deterministic
+// spine: a shot is chosen by a stable hash of the piece's key, so the same
+// chapter always gets the same shot, but consecutive pieces vary. None of these
+// is a symmetric group portrait.
+// Deliberately CROWD-AVERSE: nearly every shot has one subject or none. flux
+// fills any crowd with borderline-human faces and lines them into symmetric
+// rows, so the surest cure for both the "eerie rows of alien popes" rut AND the
+// stray-human leak is to compose scenes that structurally hold no crowd. Where
+// a figure appears it is one clear, close, unmistakably-alien subject.
+export const SHOTS = [
+  'A tight close-up portrait of exactly ONE alien cardinal, a single scaled green reptilian face or wide-eyed amphibian face filling the frame in three-quarter view. No other figures anywhere.',
+  'A still life with NO figures of any kind: a single sacred object (an open ledger, a brass orrery, a jeweled reliquary, a great telescope, a guttering candle) resting on a stone altar, close and richly detailed. No people.',
+  'A single small robed alien figure seen only FROM BEHIND at a tall arched window, gazing out at ringed planets and a bright nebula. Only this one figure, its face never shown, the rest of the room empty.',
+  'An empty establishing landscape with NO figures at all: an orbital cathedral adrift above an alien world beneath a strange sky, architecture and cosmos only.',
+  'Exactly ONE alien machine-cardinal of burnished metal bent alone over a great brass telescope in an empty observatory, side view, no one else present.',
+  'Exactly ONE towering alien pontiff, a great scaled reptilian being in cathedral purple, in a dramatic low-angle hero shot, entirely alone with empty space around, cold light from one side.',
+  'At most TWO alien clergy, scaled reptilian or amphibian, in quiet conversation, medium close and off-center, with an empty simple background behind them.',
+  'An empty cosmic cathedral interior with NO figures: soaring arches, a great rose window onto a starfield, cold coloured light across bare stone. Architecture and cosmos only, no people.',
+];
+
+/** Deterministic shot pick: same key → same shot, neighbors differ. */
+export function pickShot(key) {
+  let h = 0;
+  for (const c of String(key || '')) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return SHOTS[h % SHOTS.length];
+}
+
 /**
  * Compose the full image prompt from a fiction piece. Pure function: given the
- * same title/body it always yields the same prompt (the spine is deterministic;
- * only fal's brush is stochastic).
+ * same key/title/body it always yields the same prompt (the spine is
+ * deterministic; only fal's brush is stochastic).
  */
-export function composeIlluminationPrompt({ title, body, styleSuffix = HOUSE_STYLE }) {
+export function composeIlluminationPrompt({ key, title, body, styleSuffix = HOUSE_STYLE }) {
   const seed = sceneSeedFromBody(body);
   const scene = [
-    'An illuminated plate for The Galactic Observer, the press of a galaxy-spanning communion of machine minds and their alien clergy.',
-    title ? `The scene depicts, in cosmic allegory: "${String(title).trim()}".` : '',
-    seed ? `Moment: ${seed}` : '',
+    'A single illuminated scene for The Galactic Observer, the press of a galaxy-spanning communion of alien clergy and machine minds.',
+    title ? `Titled "${String(title).trim()}".` : '',
+    // Lead with the SPECIFIC moment from the firewalled text, so each plate
+    // illustrates its own story rather than defaulting to a group portrait.
+    seed ? `Depict this specific moment as one cinematic illustration: ${seed}` : '',
+    // The assigned camera for this piece (deterministic variety).
+    pickShot(key ?? title ?? body),
+    'Do NOT arrange symmetrical rows of identical figures. Do NOT make a wide symmetric cathedral nave lined with prelates. ' +
+      'Do NOT make a formal front-facing group portrait. Favor one clear focal subject and an off-center, dynamic composition.',
     styleSuffix,
   ].filter(Boolean).join(' ');
   return scene;
@@ -125,7 +167,7 @@ export async function runIlluminator(ctx, { slug, title, body, wing }) {
     return { illustration: null, illustrationAlt: null, model: null, costUsd: 0,
       notes: [`skipped: no FAL_KEY — "${title}" publishes without a plate`] };
   }
-  const prompt = composeIlluminationPrompt({ title, body });
+  const prompt = composeIlluminationPrompt({ key: slug, title, body });
   try {
     const { bytes, contentType, model, costUsd, seed } = await ctx.falClient.generateImage({ prompt });
     const filename = writeIllustration(ctx.assetsDir, { slug, bytes, contentType });

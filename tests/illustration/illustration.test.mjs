@@ -101,11 +101,25 @@ test('prompt derivation is deterministic and firewall-aware', () => {
   assert.ok(!seed.includes('Commentary'), 'appended commentary is excluded');
   assert.ok(!seed.includes('##'), 'markdown furniture stripped');
 
-  const p1 = composeIlluminationPrompt({ title: 'The Wet Chapel', body });
-  const p2 = composeIlluminationPrompt({ title: 'The Wet Chapel', body });
+  const p1 = composeIlluminationPrompt({ key: 'ch-002', title: 'The Wet Chapel', body });
+  const p2 = composeIlluminationPrompt({ key: 'ch-002', title: 'The Wet Chapel', body });
   assert.equal(p1, p2, 'same input, same prompt — the spine has no temperature');
   assert.ok(p1.includes(HOUSE_STYLE), 'house style is welded on');
   assert.ok(p1.includes('The Wet Chapel'), 'title carried into the scene');
+  assert.ok(/Do NOT arrange symmetrical rows/.test(p1), 'the anti-rows directive is present');
+});
+
+test('the shot rotation gives deterministic variety across pieces', () => {
+  const shots = ['ch-001', 'ch-002', 'ch-003', 'ch-004', 'd-000', 'd-016', 'd-018']
+    .map((k) => composeIlluminationPrompt({ key: k, title: 't', body: 'A moment.' }));
+  // Same key is stable; the set of keys yields more than one distinct camera.
+  const distinct = new Set(shots).size;
+  assert.ok(distinct >= 3, `expected varied shots across pieces, got ${distinct} distinct`);
+  assert.equal(
+    composeIlluminationPrompt({ key: 'ch-001', title: 't', body: 'A moment.' }),
+    composeIlluminationPrompt({ key: 'ch-001', title: 't', body: 'A moment.' }),
+    'a given piece always gets the same shot',
+  );
 });
 
 // ---------------------------------------------------------------------------
