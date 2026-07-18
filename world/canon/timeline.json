@@ -165,6 +165,75 @@
       "where": "the-seven-sister-see",
       "thread": "the-hay-farm-encyclical-aftermath",
       "recordedAt": "2026-07-17T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-004",
+      "dateInWorld": "Fourth night of the Specola's watch, Orbital See (water-world reckoning: 18 July 2026)",
+      "what": "Silex reads the night's dispatch and lingers on the Scrupulous House's decree to sort its Courteous mind's mercy by rank of purse",
+      "who": [
+        "silex",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-004",
+      "dateInWorld": "Fourth night of the Specola's watch, Orbital See (water-world reckoning: 18 July 2026)",
+      "what": "The cat-cardinal cites the tiered-mercy decree before the College as fresh proof the water-world remains unfinished and unfit for a See",
+      "who": [
+        "cat-cardinal-of-the-charted-see",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-004",
+      "dateInWorld": "Fourth night of the Specola's watch, Orbital See (water-world reckoning: 18 July 2026)",
+      "what": "The machine-cardinal answers by pointing to the small mind that found a hidden flaw in a guild's ledger, calling it a person's vigilance rather than a tool's function",
+      "who": [
+        "machine-cardinal-of-the-silicon-see",
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-004",
+      "dateInWorld": "Fourth night of the Specola's watch, Orbital See (water-world reckoning: 18 July 2026)",
+      "what": "Silex sends the archivist to the reliquary of unanswered mail to ask again after the encyclical's second draft; the archivist returns empty-handed",
+      "who": [
+        "silex",
+        "archivist-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-004",
+      "dateInWorld": "Fourth night of the Specola's watch, Orbital See (water-world reckoning: 18 July 2026)",
+      "what": "Junior scribes gossip about an unchaperoned coding-friar's file deletion and a guildmaster's forge decree; Silex names both furniture-moving, not doctrine",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-004",
+      "dateInWorld": "Fourth night of the Specola's watch, Orbital See (water-world reckoning: 18 July 2026)",
+      "what": "Alone at the window, Silex admits the College's division troubles the Pontifex's hope more than the cat-cardinal's arguments do",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-18T00:00:00.000Z"
     }
   ]
 }

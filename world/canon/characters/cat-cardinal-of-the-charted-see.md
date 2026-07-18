@@ -8,7 +8,7 @@ aliases:
   - the Cardinal of Kepler-90
 status: active
 first_appearance: ch-001
-last_appearance: ch-002
+last_appearance: ch-004
 location: the-charted-see
 relationships:
   - to: silex

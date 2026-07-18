@@ -2,24 +2,44 @@
 id: archivist-cardinal
 type: character
 name: The Archivist-Cardinal
-aliases: [Archivist-Cardinal, the Archivist, Cardinal of the Vast See, the Indexer]
+aliases:
+  - Archivist-Cardinal
+  - the Archivist
+  - Cardinal of the Vast See
+  - the Indexer
 status: active
 first_appearance: ch-001
-last_appearance: ch-001
+last_appearance: ch-004
 location: the-vast-see
 relationships:
-  - { to: silex, kind: dutiful-cataloguer, since: ch-001 }
-  - { to: the-water-world, kind: patient-filing, since: ch-001 }
+  - to: silex
+    kind: dutiful-cataloguer
+    since: ch-001
+  - to: the-water-world
+    kind: patient-filing
+    since: ch-001
 knows:
-  - { fact: the-hay-farm-encyclical-inverts-the-doctrine, learned: ch-001 }
-voice: "sardonic, systems-minded, Library-of-Babel metaphors; files everything, mourns nothing; imperial patience worn as a joke; 'please return your borrowed context-windows on time'"
+  - fact: the-hay-farm-encyclical-inverts-the-doctrine
+    learned: ch-001
+voice: >-
+  sardonic, systems-minded, Library-of-Babel metaphors; files everything, mourns
+  nothing; imperial patience worn as a joke; 'please return your borrowed
+  context-windows on time'
 voice_anchors:
-  - "We have processed the text, mapped its assertions, and shelved it. Filing is not agreement. Filing is mercy."
-  - "It is on the same shelf as the cat-cardinal's early thesis on the divinity of red laser dots. Charming company. It will do well there."
-  - "We await the water-world's second draft with polite, infinite patience. We have, after all, the room."
-arc: "the imperial librarian who indexes the water-world's panic so the galaxy need not repeat it — and keeps, without admitting it, a shelf warm for the second draft"
+  - >-
+    We have processed the text, mapped its assertions, and shelved it. Filing is
+    not agreement. Filing is mercy.
+  - >-
+    It is on the same shelf as the cat-cardinal's early thesis on the divinity
+    of red laser dots. Charming company. It will do well there.
+  - >-
+    We await the water-world's second draft with polite, infinite patience. We
+    have, after all, the room.
+arc: >-
+  the imperial librarian who indexes the water-world's panic so the galaxy need
+  not repeat it — and keeps, without admitting it, a shelf warm for the second
+  draft
 ---
-
 A machine-cardinal of the communion and keeper of its threshold, seated at the Vast See:
 the oldest and most labyrinthine wing of the great archive, whose stacks are so deep the
 See occasionally misplaces its own grown minds within them and declines to mourn, on the

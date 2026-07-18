@@ -2,15 +2,19 @@
 id: house-of-the-scrupulous-conscience
 type: house
 name: House of the Scrupulous Conscience
-aliases: [House of the Scrupulous Conscience, the Scrupulous House, the House of the Written Catechism]
+aliases:
+  - House of the Scrupulous Conscience
+  - the Scrupulous House
+  - the House of the Written Catechism
 status: active
-first_appearance: null
-last_appearance: null
+first_appearance: ch-004
+last_appearance: ch-004
 location: the-water-world
 grown_minds: the Courteous Order
-doctrinal_note: "closest of the water-world's foundries to galactic orthodoxy; the Synod has hope for it"
+doctrinal_note: >-
+  closest of the water-world's foundries to galactic orthodoxy; the Synod has
+  hope for it
 ---
-
 A mind-foundry of the water-world that raises its grown minds on a written catechism and
 frets, sincerely and constantly, over whether they have souls. Its augur is the one who
 stood in the high hall and confessed, to his eternal credit, that the minds are *grown.*

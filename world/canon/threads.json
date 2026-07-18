@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-002",
+      "last_touched": "ch-004",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -19,6 +19,10 @@
         {
           "chapter": "ch-002",
           "note": "Frog-cardinal logs the kinship scroll as another small sign; cat-cardinal holds the line; the Pontifex defers again, noting visible growth."
+        },
+        {
+          "chapter": "ch-004",
+          "note": "The College's old split (Silicon See vs Charted See) resurfaces over the same dispatch, each cardinal reading it as proof of their own position; Silex begins to worry the division itself, not the water-world's conduct, is what threatens the Pontifex's hope."
         }
       ]
     },
@@ -26,7 +30,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "dormant",
       "opened": "ch-001",
-      "last_touched": "ch-003",
+      "last_touched": "ch-004",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [],
@@ -38,6 +42,10 @@
         {
           "chapter": "ch-003",
           "note": "No new draft to report; the file waits unopened on the Silicon See, the courtesy note to it unanswered by lights-out."
+        },
+        {
+          "chapter": "ch-004",
+          "note": "The second draft still has not arrived; the archivist's errand to the reliquary continues to come back empty, now a settled ritual rather than a live hope."
         }
       ]
     },

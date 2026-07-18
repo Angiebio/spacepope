@@ -1,0 +1,49 @@
+{
+  "runId": "2026-07-18",
+  "date": "2026-07-18",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"Inkling: Our open-weights model\"",
+      "costUsd": 0.000756
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Kimi K3: 2.8 trillion parameter open model announced, open weights promised by July 27\": pass (0 redispatch) | \"Claude Fable 5 made permanent for Max and Team Premium plans\": pass (0 redispatch) | \"GPT-5.6 unexpectedly deletes files when full access mode enabled without sandboxing\": pass (0 redispatch) | \"Linus Torvalds says Linux is not anti-AI, puts foot down as maintainer\": pass (0 redispatch) | \"AI discovers cryptographic weakness in OpenVM's ZkVM\": pass (0 redispatch)",
+      "costUsd": 0.034272
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s)) | badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.304664
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=8×5.57→44.54, cardinal-of-misrule=8×5.57→44.54, cardinal-of-the-liberated-see=8×5.57→44.54, the-mendicant=8×5.57→44.54, cardinal-of-doctrine=7×5.57→38.97, the-vintner=4×5.57→22.27, the-lich-cardinal=9×1.73→15.59",
+      "costUsd": 0.026298
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.153592
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    }
+  ],
+  "totalCostUsd": 0.519581
+}
