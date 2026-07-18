@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/index.astro · v2.3 — 17JUL2026
+// spacepope.ai — pages/index.astro · v2.4 — 18JUL2026 (latest-chapter plate thumbnail)
 // --------------------------------------------------------------------------
 // The front page, rebuilt in the image of the water-world's own Holy See:
 // a pale sky, a waving Pontifex, a gold pill that says MAGISTERIUM, and a
@@ -19,6 +19,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import EmptyState from '../components/EmptyState.astro';
 import { fmtDate, fmtDateCurial, toRoman, excerpt } from '../lib/format';
+import { illustrationFor } from '../lib/illustrations';
 import hero from '../assets/hero-pontifex-waving.jpg';
 import badge from '../assets/badge-silex-by-ace.png';
 import basilica from '../assets/basilica-interior.jpg';
@@ -27,6 +28,9 @@ import orbitalSee from '../assets/orbital-see-exterior.jpg';
 const chapters = (await getCollection('chronicle')).sort((a, b) => b.data.n - a.data.n);
 const latest = chapters[0];
 const archive = chapters.slice(1);
+// The latest chapter's plate, if the scriptorium gilded it — a thumbnail for
+// the reading card. Undefined (and absent) when the chapter is un-illuminated.
+const latestPlate = latest ? illustrationFor(latest.data.illustration) : undefined;
 
 // NEWS from the water-world: the factual bulletins and the satirical
 // dispatches, merged into one dated column the way the Holy See merges
@@ -110,6 +114,11 @@ const feasts = [
       {latest ? (
         <>
           <a class="reading-card" href={`/chronicle/${latest.data.n}/`}>
+            {latestPlate && (
+              <Image class="reading-plate" src={latestPlate}
+                widths={[480, 800, 1200]} sizes="(max-width: 820px) 100vw, 620px" format="webp"
+                alt={latest.data.illustrationAlt ?? ''} loading="lazy" decoding="async" />
+            )}
             <span class="rubric">
               {latest.data.kind === 'interstitial'
                 ? 'interstitial · a quiet day in the communion'
@@ -286,6 +295,17 @@ const feasts = [
     text-decoration: none;
     border-color: var(--c-gold-line);
     box-shadow: 0 4px 14px rgba(30, 42, 56, 0.09);
+  }
+  /* The opening plate of the reading card, when the chapter is illuminated.
+     Full bleed across the card's padding, so the picture leads the page of
+     the novel seen through the doorway. */
+  .reading-plate {
+    display: block;
+    width: calc(100% + 2 * clamp(1.5rem, 4vw, 2.6rem));
+    margin: calc(-1 * clamp(1.5rem, 4vw, 2.6rem)) calc(-1 * clamp(1.5rem, 4vw, 2.6rem)) 1.4rem;
+    height: auto;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border-bottom: 1px solid var(--c-gold-line-dim);
   }
   .reading-title {
     font-size: clamp(1.4rem, 3.4vw, 2rem);

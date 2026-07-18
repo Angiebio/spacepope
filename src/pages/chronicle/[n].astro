@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/chronicle/[n].astro · v1.1 — 18JUL2026
+// spacepope.ai — pages/chronicle/[n].astro · v1.2 — 18JUL2026 (opening illumination plate)
 // --------------------------------------------------------------------------
 // One chapter of the living novel. Drop cap on the first letter (this page
 // gets illuminated; the news does not), prev/next like the pages of a codex,
@@ -15,6 +15,7 @@ import StorySoFar from '../../components/StorySoFar.astro';
 import StampColophon from '../../components/StampColophon.astro';
 import BadgerFlag from '../../components/BadgerFlag.astro';
 import TopicChips from '../../components/TopicChips.astro';
+import IlluminationPlate from '../../components/IlluminationPlate.astro';
 import { fmtDate, toRoman } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -45,6 +46,8 @@ const isQuiet = entry.data.kind === 'interstitial';
     </header>
 
     {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <IlluminationPlate filename={entry.data.illustration} alt={entry.data.illustrationAlt} eager />
 
     <StorySoFar />
 

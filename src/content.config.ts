@@ -1,5 +1,5 @@
 // ==========================================================================
-// spacepope.ai — src/content.config.ts · v1.1 — 18JUL2026
+// spacepope.ai — src/content.config.ts · v1.2 — 18JUL2026
 // --------------------------------------------------------------------------
 // The registry of publications — every wing of the communion's press, typed.
 // The site never calls an LLM at build time: the pipeline commits markdown/JSON,
@@ -10,6 +10,9 @@
 // It defaults to an empty array, so an untagged piece never breaks the build:
 // the vocabulary is an invitation to be found, not a toll to be published. The
 // slugs it may hold live in pipeline/topics.json, the pinned vocabulary.
+// v1.2: the fiction wings (observer, chronicle) gain optional `illustration` +
+// `illustrationAlt` — the Illuminator's plate. Optional on purpose: the news
+// wing is never illustrated, and an un-illuminated fiction piece still ships.
 // ==========================================================================
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
@@ -58,6 +61,11 @@ const observer = defineCollection({
     cardinal: z.string(),              // slug of the owning cardinal (college.json)
     see: z.string(),
     model: z.string(),                 // the substrate attribution — canon-truthful
+    // The Illuminator's plate (fiction wings only). OPTIONAL: an un-illustrated
+    // dispatch is not an error — the scriptorium may have been dark (no FAL_KEY)
+    // or the pigment ran out. Filename resolves through src/lib/illustrations.ts.
+    illustration: z.string().optional(),
+    illustrationAlt: z.string().optional(),
     topics,                            // controlled vocabulary (pipeline/topics.json)
     stamps,
   }),
@@ -74,6 +82,11 @@ const chronicle = defineCollection({
     dispatchRef: z.string().optional(),
     threadsTouched: z.array(z.string()).default([]),
     wordCount: z.number(),
+    // The Illuminator's plate (fiction wings only). OPTIONAL, same covenant as
+    // the Observer's: the novel gets illuminated, the news never does, and an
+    // un-illuminated chapter still turns the page.
+    illustration: z.string().optional(),
+    illustrationAlt: z.string().optional(),
     topics,                            // controlled vocabulary (pipeline/topics.json)
     stamps,
   }),

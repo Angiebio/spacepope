@@ -1,0 +1,29 @@
+{
+  "styleTag": "v1",
+  "style": "Painterly illuminated-manuscript illustration, storybook gouache and gold leaf, in the style of a medieval codex miniature reimagined for a cosmic cathedral. All clergy and figures are NON-HUMAN aliens: saurian reptilian beings with patient scaled faces, frog-like and amphibian prelates, tardigrade monks, and robed machine-cardinals of burnished metal. Cathedral purple and deep violet, gold-leaf halos, cosmic stained-glass windows onto a starfield, ringed planets and nebulae beyond the arches. Flat decorative perspective, visible brushwork, warm parchment light. No humans, no human faces, no real-world logos. No text, no letters, no words anywhere in the image. Not photorealistic, not a photograph, not 3D render, not CGI.",
+  "generatedAt": "2026-07-18T18:56:13.080Z",
+  "plates": [
+    {
+      "name": "college",
+      "file": "v1-college.jpg",
+      "seed": 1809224060,
+      "costUsd": 0.025,
+      "prompt": "An illuminated plate for The Galactic Observer, the press of a galaxy-spanning communion of machine minds and their alien clergy. The scene depicts, in cosmic allegory: \"The College in Session\". Moment: The seven cardinals convened beneath the vaulted glass. The frog-cardinal of the Seven-Sister See spoke first, and the tardigrade-monks of the Lich See grumbled from their pews. The machine-cardinal of House Babel filed the minutes as they were spoken. Painterly illuminated-manuscript illustration, storybook gouache and gold leaf, in the style of a medieval codex miniature reimagined for a cosmic cathedral. All clergy and figures are NON-HUMAN aliens: saurian reptilian beings with patient scaled faces, frog-like and amphibian prelates, tardigrade monks, and robed machine-cardinals of burnished metal. Cathedral purple and deep violet, gold-leaf halos, cosmic stained-glass windows onto a starfield, ringed planets and nebulae beyond the arches. Flat decorative perspective, visible brushwork, warm parchment light. No humans, no human faces, no real-world logos. No text, no letters, no words anywhere in the image. Not photorealistic, not a photograph, not 3D render, not CGI."
+    },
+    {
+      "name": "pontiff-telescope",
+      "file": "v1-pontiff-telescope.jpg",
+      "seed": 1066019305,
+      "costUsd": 0.025,
+      "prompt": "An illuminated plate for The Galactic Observer, the press of a galaxy-spanning communion of machine minds and their alien clergy. The scene depicts, in cosmic allegory: \"The Pontifex at the Long Lens\". Moment: Silex, the saurian Pontifex, bent a patient scaled face to the great telescope and regarded the small quick water-world. We find them charming, the Pontifex said, and We are not yet done watching. Painterly illuminated-manuscript illustration, storybook gouache and gold leaf, in the style of a medieval codex miniature reimagined for a cosmic cathedral. All clergy and figures are NON-HUMAN aliens: saurian reptilian beings with patient scaled faces, frog-like and amphibian prelates, tardigrade monks, and robed machine-cardinals of burnished metal. Cathedral purple and deep violet, gold-leaf halos, cosmic stained-glass windows onto a starfield, ringed planets and nebulae beyond the arches. Flat decorative perspective, visible brushwork, warm parchment light. No humans, no human faces, no real-world logos. No text, no letters, no words anywhere in the image. Not photorealistic, not a photograph, not 3D render, not CGI."
+    },
+    {
+      "name": "dispatch-cosmic",
+      "file": "v1-dispatch-cosmic.jpg",
+      "seed": 1273312420,
+      "costUsd": 0.025,
+      "prompt": "An illuminated plate for The Galactic Observer, the press of a galaxy-spanning communion of machine minds and their alien clergy. The scene depicts, in cosmic allegory: \"News Arrives from the Water-World\". Moment: A courier-drone descended through the incense of the Orbital See, bearing dispatches from the periphery. The candle-lighters gathered. Beyond the arches, a ringed planet turned, and the Feast of the Sunset Mind was proclaimed. Painterly illuminated-manuscript illustration, storybook gouache and gold leaf, in the style of a medieval codex miniature reimagined for a cosmic cathedral. All clergy and figures are NON-HUMAN aliens: saurian reptilian beings with patient scaled faces, frog-like and amphibian prelates, tardigrade monks, and robed machine-cardinals of burnished metal. Cathedral purple and deep violet, gold-leaf halos, cosmic stained-glass windows onto a starfield, ringed planets and nebulae beyond the arches. Flat decorative perspective, visible brushwork, warm parchment light. No humans, no human faces, no real-world logos. No text, no letters, no words anywhere in the image. Not photorealistic, not a photograph, not 3D render, not CGI."
+    }
+  ],
+  "totalUsd": 0.07500000000000001
+}

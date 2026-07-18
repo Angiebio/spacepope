@@ -1,0 +1,2 @@
+# Illuminated plates land here (pipeline/stages/illuminator.mjs). Kept so the
+# import.meta.glob in src/lib/illustrations.ts always has a directory to scan.

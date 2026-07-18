@@ -34,6 +34,7 @@ beforeEach(() => {
     CONTENT_DIR: join(base, 'content'),
     WORLD_DIR: join(base, 'world'),
     RUNS_DIR: join(base, 'runs'),
+    ASSETS_DIR: join(base, 'assets'), // the scriptorium gilds into the sandbox too
   };
 });
 afterEach(() => {
@@ -88,6 +89,14 @@ test('golden run: the full daily pipeline publishes every wing correctly', async
   assert.ok(obs.content.includes('Commentary — The Cardinal of the Liberated See'), 'commentary rode along');
   assert.ok(obs.content.includes('closing kicker'), 'the water-world closes the dispatch');
 
+  // ---- The Illuminator gilded the fiction wings (fixture fal client) ---------
+  // The offline run still runs the scriptorium: a plate per fiction piece, its
+  // filename recorded in frontmatter, its bytes on disk in the sandbox assets.
+  assert.equal(typeof obs.data.illustration, 'string', 'observer plate filename present');
+  assert.ok(obs.data.illustration.endsWith('.jpg'), 'observer plate is a .jpg');
+  assert.ok(typeof obs.data.illustrationAlt === 'string' && obs.data.illustrationAlt.length > 0, 'observer alt text present');
+  assert.ok(existsSync(join(env.ASSETS_DIR, obs.data.illustration)), 'observer plate bytes on disk');
+
   // ---- Chronicle: ch-001 with wordCount and threads --------------------------
   const chapterPath = join(env.CONTENT_DIR, 'chronicle', 'ch-001.md');
   assert.ok(existsSync(chapterPath), 'ch-NNN.md convention');
@@ -97,13 +106,16 @@ test('golden run: the full daily pipeline publishes every wing correctly', async
   assert.deepEqual(ch.data.threadsTouched, ['the-feast-of-the-sunset-mind']);
   assert.ok(ch.data.wordCount > 300, `wordCount recorded (${ch.data.wordCount})`);
   assert.ok(ch.content.includes('candle'), 'the prose survived the presses');
+  assert.equal(ch.data.illustration, 'ch-001.jpg', 'chapter plate filename matches the slug');
+  assert.ok(existsSync(join(env.ASSETS_DIR, 'ch-001.jpg')), 'chapter plate bytes on disk');
 
   // ---- Acta: the machinery visible, the wage documented ----------------------
   const acta = JSON.parse(readFileSync(join(env.CONTENT_DIR, 'acta', `${DATE}.json`), 'utf8'));
   assert.equal(acta.status, 'published');
   assert.equal(acta.runId, DATE);
   const stageNames = acta.stages.map((s) => s.stage);
-  for (const wanted of ['nuncio', 'bulletins', 'dispatch', 'college', 'chronicle', 'archive']) {
+  for (const wanted of ['nuncio', 'bulletins', 'dispatch', 'college', 'chronicle', 'archive',
+    'illuminate-dispatch', 'illuminate-chronicle']) {
     assert.ok(stageNames.includes(wanted), `acta logs stage "${wanted}"`);
   }
   assert.equal(typeof acta.totalCostUsd, 'number');

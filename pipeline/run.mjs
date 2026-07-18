@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// pipeline/run.mjs — v1.0 — 15JUL2026
+// pipeline/run.mjs — v1.1 — 18JUL2026 (Illuminator wired in: fiction-wing plates via fal.ai)
 //
 // THE EDITOR'S DESK. The Editor is a script, not a model (Hard Rule §0.7 in
 // engineering form): every routing decision, checkpoint, retry budget, and
@@ -32,10 +32,12 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
 import { createClient, createFixtureClient } from './lib/openrouter.mjs';
+import { createFalClient, createFixtureFalClient } from './lib/fal.mjs';
 import { loadWorldstate } from './lib/worldstate.mjs';
 import {
-  writeSpecola, writeObserver, writeChronicle, writeAngelus, writeActa, readActa,
+  writeSpecola, writeObserver, writeChronicle, writeAngelus, writeActa, readActa, slugify,
 } from './lib/press.mjs';
+import { runIlluminator } from './stages/illuminator.mjs';
 import { runNuncio } from './stages/nuncio.mjs';
 import { runAstronomer, draftBulletin } from './stages/astronomer.mjs';
 import { censorBulletin } from './stages/censor.mjs';
@@ -53,7 +55,7 @@ const REPO_ROOT = join(HERE, '..');
 // ---------------------------------------------------------------------------
 // context assembly — the WAKE step
 // ---------------------------------------------------------------------------
-export function buildContext({ date, dryRun = false, fixtures = false, env = process.env, client = null, fixtureData = null } = {}) {
+export function buildContext({ date, dryRun = false, fixtures = false, env = process.env, client = null, fixtureData = null, falClient = null } = {}) {
   const casting = JSON.parse(readFileSync(join(HERE, 'casting.json'), 'utf8'));
   const sources = JSON.parse(readFileSync(join(HERE, 'sources.json'), 'utf8'));
   const blocklist = JSON.parse(readFileSync(join(HERE, 'blocklist.json'), 'utf8'));
@@ -64,6 +66,11 @@ export function buildContext({ date, dryRun = false, fixtures = false, env = pro
   let contentDir = env.CONTENT_DIR ? env.CONTENT_DIR : join(REPO_ROOT, 'content');
   let worldDir = env.WORLD_DIR ? env.WORLD_DIR : join(REPO_ROOT, 'world');
   let runsDir = env.RUNS_DIR ? env.RUNS_DIR : join(REPO_ROOT, 'runs');
+  // The scriptorium writes illuminated plates into the site's committed asset
+  // tree, where import.meta.glob can resolve them at build time — exactly like
+  // the hand-drawn cardinal badges. Overridable (and sandboxed in fixtures) so
+  // a rehearsal never gilds real src/assets/.
+  let assetsDir = env.ASSETS_DIR ? env.ASSETS_DIR : join(REPO_ROOT, 'src', 'assets', 'illustrations');
 
   if (fixtures) {
     // The rehearsal stage: canned news, canned minds, and a sandbox so the
@@ -83,12 +90,22 @@ export function buildContext({ date, dryRun = false, fixtures = false, env = pro
     contentDir = env.CONTENT_DIR ? env.CONTENT_DIR : join(sandbox, 'content');
     worldDir = env.WORLD_DIR ? env.WORLD_DIR : join(sandbox, 'world');
     runsDir = env.RUNS_DIR ? env.RUNS_DIR : join(sandbox, 'runs');
+    assetsDir = env.ASSETS_DIR ? env.ASSETS_DIR : join(sandbox, 'assets');
     if (!existsSync(worldDir) || !existsSync(join(worldDir, 'canon'))) {
       // Seed the sandbox world from the fixture world (never from real world/).
       mkdirSync(worldDir, { recursive: true });
       cpSync(join(fixturesDir, 'world'), worldDir, { recursive: true });
     }
     client = client ?? createFixtureClient(fixtureData.llm);
+  }
+
+  // The Illuminator's pigment supply. In rehearsal it is the canned-bytes
+  // fixture (free, offline). In production it exists only if FAL_KEY was set —
+  // otherwise it is null, and the Illuminator skips honestly (art never blocks
+  // the presses). A caller may also inject one (the falClient param) for tests.
+  if (!falClient) {
+    if (fixtures) falClient = createFixtureFalClient();
+    else if (env.FAL_KEY) falClient = createFalClient({ apiKey: env.FAL_KEY });
   }
 
   const runId = date; // the daily run; --angelus overrides below
@@ -120,8 +137,8 @@ export function buildContext({ date, dryRun = false, fixtures = false, env = pro
   return {
     date, runId, dryRun, fixturesMode: fixtures,
     casting, sources, blocklist,
-    contentDir, worldDir, runsDir, runDir,
-    client, fetchImpl, checkUrl,
+    contentDir, worldDir, runsDir, runDir, assetsDir,
+    client, falClient, fetchImpl, checkUrl,
     fixtures: fixtureData,
     env,
     now: Date.parse(`${date}T10:00:00Z`), // the bell rings at 10:00 UTC, canonically
@@ -326,6 +343,36 @@ export async function runPipeline(ctx) {
       return { status: 'dry-run', acta, published: [] };
     }
 
+    // ---- THE ILLUMINATOR (fiction wings only) ---------------------------------
+    // Run AFTER the gates, BEFORE the press: a plate is derived only from prose
+    // the Inquisitor already blessed, and it is guarded so a missing FAL_KEY (or
+    // a fal error) simply skips — the piece publishes plateless. The fal ledger
+    // is separate from the mind-ledger, so its wage is logged on its own line.
+    let dispatchArt = { illustration: null, illustrationAlt: null };
+    let chapterArt = { illustration: null, illustrationAlt: null };
+    const falCostBefore = ctx.falClient?.ledger.totalUsd ?? 0;
+    if (dispatch) {
+      dispatchArt = await runIlluminator(ctx, {
+        slug: `${ctx.date}-${slugify(dispatch.title)}`,
+        title: dispatch.title, body: dispatch.body, wing: 'observer',
+      });
+      acta.stages.push({ stage: 'illuminate-dispatch', retries: 0,
+        ...(dispatchArt.model ? { model: dispatchArt.model } : {}),
+        costUsd: round6((ctx.falClient?.ledger.totalUsd ?? 0) - falCostBefore),
+        notes: dispatchArt.notes.join(' | ').slice(0, 2000) });
+    }
+    if (chapter.status !== 'spiked') {
+      const falMid = ctx.falClient?.ledger.totalUsd ?? 0;
+      chapterArt = await runIlluminator(ctx, {
+        slug: `ch-${String(chapter.n).padStart(3, '0')}`,
+        title: chapter.title, body: chapter.prose, wing: 'chronicle',
+      });
+      acta.stages.push({ stage: 'illuminate-chronicle', retries: 0,
+        ...(chapterArt.model ? { model: chapterArt.model } : {}),
+        costUsd: round6((ctx.falClient?.ledger.totalUsd ?? 0) - falMid),
+        notes: chapterArt.notes.join(' | ').slice(0, 2000) });
+    }
+
     const stamps = { nihilObstat: ctx.date, imprimatur: ctx.date };
     for (const b of bulletins) {
       published.push(writeSpecola(ctx.contentDir, {
@@ -343,6 +390,8 @@ export async function runPipeline(ctx) {
         cardinal: college?.winner?.slug ?? 'sede-vacante',
         see: college?.winner?.see ?? 'the Orbital See',
         model: college?.winner?.model ?? 'none',
+        illustration: dispatchArt.illustration ?? undefined,
+        illustrationAlt: dispatchArt.illustrationAlt ?? undefined,
         stamps: { imprimatur: ctx.date, ...(dispatchGate?.gate === 'flagged' ? { badgerFlag: faultFlag(dispatchGate.faults) } : {}) },
         body: dispatch.body + commentaryBlock,
       }));
@@ -353,6 +402,8 @@ export async function runPipeline(ctx) {
         n: chapter.n, title: chapter.title, date: ctx.date, kind: chapter.kind,
         dispatchRef: dispatch ? `${ctx.date}` : undefined,
         threadsTouched: chapter.threadsTouched, wordCount: chapter.wordCount,
+        illustration: chapterArt.illustration ?? undefined,
+        illustrationAlt: chapterArt.illustrationAlt ?? undefined,
         stamps: { ...stamps, ...(chapter.badgerFaults?.length ? { badgerFlag: faultFlag(chapter.badgerFaults) } : {}) },
         body: chapter.prose,
       }));

@@ -1,7 +1,8 @@
 ---
-title: "The Observer Turns Its Lens"
-date: 2026-07-15
-storyIds: [story-2026-07-15-001]
+title: The Observer Turns Its Lens
+date: 2026-07-15T00:00:00.000Z
+storyIds:
+  - story-2026-07-15-001
 cardinal: archivist-cardinal
 see: The Vast See
 model: google/gemini-3.1-flash-lite
@@ -9,8 +10,13 @@ topics:
   - personhood
   - industry-and-power
 stamps:
-  nihilObstat: "2026-07-15"
-  imprimatur: "2026-07-15"
+  nihilObstat: '2026-07-15'
+  imprimatur: '2026-07-15'
+illustration: 2026-07-15-dispatch-000-the-observer-turns-its-lens.jpg
+illustrationAlt: >-
+  Illuminated plate for the Observer dispatch "The Observer Turns Its Lens": a
+  stylized, non-photographic scene of the communion's alien clergy.
+  Machine-generated illustration.
 ---
 
 # THE GALACTIC OBSERVER

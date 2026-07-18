@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/observer/[...slug].astro · v1.1 — 18JUL2026
+// spacepope.ai — pages/observer/[...slug].astro · v1.2 — 18JUL2026 (opening illumination plate)
 // --------------------------------------------------------------------------
 // One dispatch. The byline names the Cardinal AND the substrate (the joke is
 // the demo), the badger flag ships above the fold when honesty demands it,
@@ -16,6 +16,7 @@ import CardinalByline from '../../components/CardinalByline.astro';
 import StampColophon from '../../components/StampColophon.astro';
 import BadgerFlag from '../../components/BadgerFlag.astro';
 import TopicChips from '../../components/TopicChips.astro';
+import IlluminationPlate from '../../components/IlluminationPlate.astro';
 import { fmtDate } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -40,6 +41,8 @@ const bulletins = await getCollection('specola', (b) => entry.data.storyIds.incl
     </header>
 
     {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <IlluminationPlate filename={entry.data.illustration} alt={entry.data.illustrationAlt} eager />
 
     <CardinalByline cardinal={entry.data.cardinal} see={entry.data.see} model={entry.data.model} />
 

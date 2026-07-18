@@ -1,4 +1,4 @@
-// pipeline/lib/press.mjs — v1.0 — 15JUL2026
+// pipeline/lib/press.mjs — v1.1 — 18JUL2026 (writeIllustration + fiction-wing illustration frontmatter)
 //
 // The press room: the only door through which anything reaches content/.
 // Every writer here emits frontmatter that satisfies src/content.config.ts
@@ -15,6 +15,28 @@
 import { writeFileSync, mkdirSync, existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import matter from 'gray-matter';
+
+/** Map a fal content-type to the file extension the darkroom will re-encode from. */
+function extForContentType(contentType = 'image/jpeg') {
+  if (/png/i.test(contentType)) return 'png';
+  if (/webp/i.test(contentType)) return 'webp';
+  return 'jpg';
+}
+
+/**
+ * The darkroom's own door: write an illuminated plate's bytes into the site's
+ * asset tree (src/assets/illustrations/ in production, a sandbox in rehearsal).
+ * Filenames match the content slug so a human can pair a picture to its piece
+ * at a glance. Returns the bare filename to store in frontmatter — the site's
+ * import.meta.glob resolves it to a hashed, re-encoded webp at build time, so
+ * the pipeline commits the source plate and the darkroom does the rest.
+ */
+export function writeIllustration(assetsDir, { slug, bytes, contentType = 'image/jpeg' }) {
+  mkdirSync(assetsDir, { recursive: true });
+  const filename = `${slugify(slug, 80)}.${extForContentType(contentType)}`;
+  writeFileSync(join(assetsDir, filename), bytes);
+  return filename;
+}
 
 /** kebab-case a title into a filename-safe slug. */
 export function slugify(title, maxLen = 60) {
@@ -51,21 +73,21 @@ export function writeSpecola(contentDir, { title, date, storyId, citations, stam
 }
 
 /** The Galactic Observer — the satirical dispatch with cardinal commentary. */
-export function writeObserver(contentDir, { title, date, storyIds, cardinal, see, model, stamps = {}, body }) {
+export function writeObserver(contentDir, { title, date, storyIds, cardinal, see, model, illustration, illustrationAlt, stamps = {}, body }) {
   return writeDoc(
     join(contentDir, 'observer'),
     `${date}-${slugify(title)}.md`,
-    clean({ title, date, storyIds, cardinal, see, model, stamps: clean(stamps) }),
+    clean({ title, date, storyIds, cardinal, see, model, illustration, illustrationAlt, stamps: clean(stamps) }),
     body,
   );
 }
 
 /** A chapter of the Chronicle of the Communion. Filename is ch-NNN.md. */
-export function writeChronicle(contentDir, { n, title, date, kind, dispatchRef, threadsTouched = [], wordCount, stamps = {}, body }) {
+export function writeChronicle(contentDir, { n, title, date, kind, dispatchRef, threadsTouched = [], wordCount, illustration, illustrationAlt, stamps = {}, body }) {
   return writeDoc(
     join(contentDir, 'chronicle'),
     `ch-${String(n).padStart(3, '0')}.md`,
-    clean({ n, title, date, kind, dispatchRef, threadsTouched, wordCount, stamps: clean(stamps) }),
+    clean({ n, title, date, kind, dispatchRef, threadsTouched, wordCount, illustration, illustrationAlt, stamps: clean(stamps) }),
     body,
   );
 }

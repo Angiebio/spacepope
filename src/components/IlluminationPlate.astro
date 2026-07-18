@@ -1,0 +1,60 @@
+---
+// ==========================================================================
+// spacepope.ai — IlluminationPlate.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The plate that opens an illuminated fiction piece. It passes through the
+// darkroom (astro:assets → responsive webp) like every other picture on the
+// site, and it labels itself honestly as machine-made — the same transparency
+// ethos as the Acta and the substrate byline. If the piece has no plate on
+// disk, this component renders NOTHING: an un-illuminated page must never show
+// a broken frame. Fail honest, even in the layout.
+// ==========================================================================
+import { Image } from 'astro:assets';
+import { illustrationFor } from '../lib/illustrations';
+
+interface Props {
+  filename?: string;   // frontmatter `illustration`
+  alt?: string;        // frontmatter `illustrationAlt`
+  eager?: boolean;     // above the fold on a detail page → eager
+}
+const { filename, alt, eager = false } = Astro.props;
+const plate = illustrationFor(filename);
+---
+
+{plate && (
+  <figure class="illumination-plate">
+    <Image
+      src={plate}
+      widths={[480, 800, 1200, 1600]}
+      sizes="(max-width: 820px) 100vw, 720px"
+      format="webp"
+      alt={alt ?? 'An illuminated plate of the communion, machine-generated.'}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      fetchpriority={eager ? 'high' : undefined}
+    />
+    <figcaption>Illuminated by the Observer's press (generated)</figcaption>
+  </figure>
+)}
+
+<style>
+  .illumination-plate {
+    margin: 0 0 2rem;
+  }
+  .illumination-plate img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+  }
+  .illumination-plate figcaption {
+    text-align: center;
+    font-style: italic;
+    color: var(--c-text-faint);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.04em;
+  }
+</style>

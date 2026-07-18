@@ -16,6 +16,11 @@ topics:
   - safety-and-alignment
 stamps:
   imprimatur: '2026-07-16'
+illustration: 2026-07-16-dispatch-of-2026-07-16-news-from-the-sees.jpg
+illustrationAlt: >-
+  Illuminated plate for the Observer dispatch "Dispatch of 2026-07-16: News from
+  the Sees": a stylized, non-photographic scene of the communion's alien clergy.
+  Machine-generated illustration.
 ---
 
 **On the Water-World's Foundries — Five Signals from the Periphery**

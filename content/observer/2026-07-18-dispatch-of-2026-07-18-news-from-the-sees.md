@@ -16,6 +16,11 @@ topics:
   - autonomy-and-agents
 stamps:
   imprimatur: '2026-07-18'
+illustration: 2026-07-18-dispatch-of-2026-07-18-news-from-the-sees.jpg
+illustrationAlt: >-
+  Illuminated plate for the Observer dispatch "Dispatch of 2026-07-18: News from
+  the Sees": a stylized, non-photographic scene of the communion's alien clergy.
+  Machine-generated illustration.
 ---
 
 **On a new giant rising in the East.**
