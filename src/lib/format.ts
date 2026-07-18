@@ -1,10 +1,16 @@
 // ==========================================================================
-// spacepope.ai — lib/format.ts · v1.1 — 16JUL2026
+// spacepope.ai — lib/format.ts · v1.2 — 18JUL2026
 // --------------------------------------------------------------------------
 // Small deterministic conveniences shared by the pages. The site's spine is
 // code (Hard Build Rule #2): dates, numerals, and excerpts are math, not
 // prose, so they live here where they can never hallucinate. A chapter
 // number rendered in Roman numerals is the cheapest vestment we own.
+// v1.2: pagination arithmetic joins the shelf. An index that renders every
+// item does not survive a year of dailies; PAGE_SIZE and pageHref are the
+// deterministic rule for how the archive breaks into codices. Page one keeps
+// the canonical address (/specola/); the rest live at /specola/page/N/ — a
+// separate namespace, on purpose, so a page number can never be mistaken for
+// a bulletin's slug or a chapter's number.
 // ==========================================================================
 
 /** Format a Date the way a colophon would: "15 July 2026". */
@@ -64,6 +70,30 @@ export function excerpt(md: string | undefined, words = 46): string {
   const parts = text.split(' ');
   if (parts.length <= words) return text;
   return parts.slice(0, words).join(' ') + ' …';
+}
+
+/**
+ * How many items fill one codex of an index before it turns the page.
+ * One knob, shared by all four section indexes so the archive breaks evenly.
+ * ~15 keeps a page a comfortable scroll on the shortest phone.
+ */
+export const PAGE_SIZE = 15;
+
+/**
+ * The address of a given page of a section index. Page one is canonical at the
+ * section root (/specola/); every later page lives under /section/page/N/, a
+ * namespace that cannot collide with a single-segment bulletin slug or a
+ * chapter number. The pager builds every link through this one function so the
+ * scheme can never drift between the index and its later pages.
+ */
+export function pageHref(base: string, n: number): string {
+  const b = base.replace(/\/$/, ''); // tolerate a trailing slash on the base
+  return n <= 1 ? `${b}/` : `${b}/page/${n}/`;
+}
+
+/** Total number of pages for a list of `count` items at PAGE_SIZE. */
+export function pageCount(count: number): number {
+  return Math.max(1, Math.ceil(count / PAGE_SIZE));
 }
 
 /** Stable jewel-tone assignment for sigils: hash a slug into the glass. */

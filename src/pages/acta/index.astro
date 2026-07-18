@@ -1,21 +1,28 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/acta/index.astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/acta/index.astro · v1.1 — 18JUL2026
 // --------------------------------------------------------------------------
 // Acta Diurna — "the daily acts," the actual gazette of ancient Rome. Here
 // the machinery drops the costume and speaks in monospace: one entry per
 // pipeline run, with verdicts, retries, and the day's wage in dollars.
 // Transparency is part of the bit AND the demo — anyone can watch the
 // machine think, including the machine.
+// v1.1: the ledger paginates (ROADMAP-06 §A2). Page one here; older runs at
+// /acta/page/N/. The table is a shared component so the machine files in one
+// hand on every page.
 // ==========================================================================
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import EmptyState from '../../components/EmptyState.astro';
-import { fmtDate } from '../../lib/format';
+import ActaLedger from '../../components/ActaLedger.astro';
+import Pager from '../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../lib/format';
 
-const runs = (await getCollection('acta')).sort(
+const all = (await getCollection('acta')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+const total = pageCount(all.length);
+const runs = all.slice(0, PAGE_SIZE); // page one
 ---
 
 <Base title="Acta Diurna — published run-logs">
@@ -30,30 +37,10 @@ const runs = (await getCollection('acta')).sort(
     </div>
 
     {runs.length > 0 ? (
-      <div class="table-scroll">
-        <table class="ledger">
-          <thead>
-            <tr>
-              <th>run</th>
-              <th>date</th>
-              <th>status</th>
-              <th>stages</th>
-              <th>cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            {runs.map((r) => (
-              <tr>
-                <td><a href={`/acta/${r.id}/`}>{r.data.runId}</a></td>
-                <td>{fmtDate(r.data.date)}</td>
-                <td><span class={`status-badge status-${r.data.status}`}>{r.data.status}</span></td>
-                <td>{r.data.stages.length}</td>
-                <td>{r.data.totalCostUsd != null ? `$${r.data.totalCostUsd.toFixed(4)}` : '—'}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <>
+        <ActaLedger runs={runs} />
+        <Pager current={1} total={total} base="/acta" />
+      </>
     ) : (
       <EmptyState
         voice="No acts have yet been recorded. The machine has not yet prayed."

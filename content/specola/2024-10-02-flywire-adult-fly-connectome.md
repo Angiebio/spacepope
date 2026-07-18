@@ -9,6 +9,9 @@ citations:
   - title: Complete wiring map of an adult fruit fly brain
     url: https://www.nih.gov/news-events/nih-research-matters/complete-wiring-map-adult-fruit-fly-brain
     source: National Institutes of Health
+topics:
+  - interpretability
+  - embodiment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

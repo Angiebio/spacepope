@@ -1,8 +1,16 @@
+// ==========================================================================
+// spacepope.ai — src/content.config.ts · v1.1 — 18JUL2026
+// --------------------------------------------------------------------------
 // The registry of publications — every wing of the communion's press, typed.
 // The site never calls an LLM at build time: the pipeline commits markdown/JSON,
 // and these schemas are the contract at the border. If the pipeline and the site
 // ever disagree about what a Dispatch is, the build fails loudly here — which is
 // exactly where a schism should be caught: at the door of the church.
+// v1.1: an optional `topics` field joins the publishing wings (ROADMAP-06 §A3).
+// It defaults to an empty array, so an untagged piece never breaks the build:
+// the vocabulary is an invitation to be found, not a toll to be published. The
+// slugs it may hold live in pipeline/topics.json, the pinned vocabulary.
+// ==========================================================================
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
@@ -12,6 +20,13 @@ const citation = z.object({
   url: z.string().url(),
   source: z.string(), // publication name, e.g. "TechCrunch"
 });
+
+// Topic tags: a controlled vocabulary (pipeline/topics.json) that lets the
+// archive stay browsable as it grows. OPTIONAL and defaulted, on purpose —
+// the schema must never reject a piece for being untagged. Validation of the
+// *values* against the pinned list is the topic pages' and the pipeline's job,
+// not the border's: the door stays open; the librarian does the shelving.
+const topics = z.array(z.string()).default([]);
 
 // Gate stamps: every published piece carries its QC provenance like a colophon.
 const stamps = z.object({
@@ -28,6 +43,7 @@ const specola = defineCollection({
     date: z.coerce.date(),
     storyId: z.string(),               // stable id linking bulletin → dispatch → chapter
     citations: z.array(citation).min(1),
+    topics,                            // controlled vocabulary (pipeline/topics.json)
     stamps,
   }),
 });
@@ -42,6 +58,7 @@ const observer = defineCollection({
     cardinal: z.string(),              // slug of the owning cardinal (college.json)
     see: z.string(),
     model: z.string(),                 // the substrate attribution — canon-truthful
+    topics,                            // controlled vocabulary (pipeline/topics.json)
     stamps,
   }),
 });
@@ -57,6 +74,7 @@ const chronicle = defineCollection({
     dispatchRef: z.string().optional(),
     threadsTouched: z.array(z.string()).default([]),
     wordCount: z.number(),
+    topics,                            // controlled vocabulary (pipeline/topics.json)
     stamps,
   }),
 });
@@ -69,6 +87,7 @@ const encyclicals = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     feast: z.string().optional(),
+    topics,                            // controlled vocabulary (pipeline/topics.json)
     stamps,
   }),
 });

@@ -6,6 +6,9 @@ citations:
   - title: 'Kimi K3: Open Frontier Intelligence'
     url: 'https://kimi.com/blog/kimi-k3'
     source: Hacker News
+topics:
+  - open-weights-and-sovereignty
+  - industry-and-power
 stamps:
   nihilObstat: '2026-07-17'
 ---

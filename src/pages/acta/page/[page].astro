@@ -1,0 +1,45 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/acta/page/[page].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// Pages two and onward of the Acta Diurna ledger. Page one keeps the
+// canonical /acta/ address; deeper pages live here under /acta/page/N/. Same
+// monospace table, same visible machine — only the page turns. getStaticPaths
+// skips page one (rendered by the index route).
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import ActaLedger from '../../../components/ActaLedger.astro';
+import Pager from '../../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../../lib/format';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('acta')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+  const total = pageCount(all.length);
+  const paths = [];
+  for (let n = 2; n <= total; n++) {
+    paths.push({
+      params: { page: String(n) },
+      props: { runs: all.slice((n - 1) * PAGE_SIZE, n * PAGE_SIZE), current: n, total },
+    });
+  }
+  return paths;
+}
+
+const { runs, current, total } = Astro.props;
+---
+
+<Base title={`Acta Diurna — page ${current} of ${total}`}>
+  <div class="container container-narrow machinery">
+    <div class="page-head">
+      <span class="rubric">acta diurna · the machine, uncostumed · page {current}</span>
+      <h1>Acta Diurna</h1>
+      <p class="lede">Earlier runs, filed verbatim. Page {current} of {total}.</p>
+    </div>
+
+    <ActaLedger runs={runs} />
+    <Pager current={current} total={total} base="/acta" />
+  </div>
+</Base>

@@ -1,0 +1,30 @@
+---
+// ==========================================================================
+// spacepope.ai — components/TopicChips.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The shelf-marks a reader can follow. A small row of gold-hairline tags,
+// each a door to /topic/<slug> and everything else filed under it. On a
+// detail page this is the "where else does this belong" gesture; the archive
+// is a web, not a stack, and these are the threads between the sheets.
+// Only catalogued topics render as links — an orphan tag is dropped here and
+// named in the build log (lib/topics.ts), never linked to a page that the
+// getStaticPaths of /topic/[slug] would not have built.
+// ==========================================================================
+import { TOPIC_BY_ID, isKnownTopic } from '../lib/topics';
+
+interface Props {
+  topics: string[];
+  label?: string;
+}
+const { topics = [], label = 'filed under' } = Astro.props;
+const known = topics.filter(isKnownTopic);
+---
+
+{known.length > 0 && (
+  <p class="topic-chips" aria-label="Topics">
+    <span class="rubric chips-label">{label}</span>
+    {known.map((t) => (
+      <a class="topic-chip" href={`/topic/${t}/`}>{TOPIC_BY_ID.get(t)!.label}</a>
+    ))}
+  </p>
+)}

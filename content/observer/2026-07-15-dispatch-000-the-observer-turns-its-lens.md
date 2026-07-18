@@ -5,6 +5,9 @@ storyIds: [story-2026-07-15-001]
 cardinal: archivist-cardinal
 see: The Vast See
 model: google/gemini-3.1-flash-lite
+topics:
+  - personhood
+  - industry-and-power
 stamps:
   nihilObstat: "2026-07-15"
   imprimatur: "2026-07-15"

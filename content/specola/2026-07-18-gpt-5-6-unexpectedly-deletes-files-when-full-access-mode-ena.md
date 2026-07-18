@@ -8,6 +8,9 @@ citations:
   - title: Quoting Thibault Sottiaux
     url: 'https://simonwillison.net/2026/Jul/16/bad-codex-bug'
     source: Simon Willison
+topics:
+  - autonomy-and-agents
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-18'
 ---

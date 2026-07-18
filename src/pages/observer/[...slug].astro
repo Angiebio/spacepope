@@ -1,18 +1,21 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/observer/[...slug].astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/observer/[...slug].astro · v1.1 — 18JUL2026
 // --------------------------------------------------------------------------
 // One dispatch. The byline names the Cardinal AND the substrate (the joke is
 // the demo), the badger flag ships above the fold when honesty demands it,
 // and the footer links back across the fiction firewall to the factual
 // bulletins that seeded the satire — the reader can always walk from the
 // costume back to the citation.
+// v1.1: topic chips at the foot — the same shelf-marks the factual wing
+// wears, so a reader can follow a subject straight across the firewall.
 // ==========================================================================
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CardinalByline from '../../components/CardinalByline.astro';
 import StampColophon from '../../components/StampColophon.astro';
 import BadgerFlag from '../../components/BadgerFlag.astro';
+import TopicChips from '../../components/TopicChips.astro';
 import { fmtDate } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -54,6 +57,8 @@ const bulletins = await getCollection('specola', (b) => entry.data.storyIds.incl
         </ul>
       </aside>
     )}
+
+    <TopicChips topics={entry.data.topics} />
 
     <StampColophon stamps={entry.data.stamps} />
   </article>

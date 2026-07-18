@@ -6,6 +6,9 @@ citations:
   - title: Quoting Linus Torvalds
     url: 'https://simonwillison.net/2026/Jul/16/linus-torvalds'
     source: Simon Willison
+topics:
+  - open-weights-and-sovereignty
+  - industry-and-power
 stamps:
   nihilObstat: '2026-07-18'
 ---

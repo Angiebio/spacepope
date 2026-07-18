@@ -9,6 +9,10 @@ citations:
   - title: Pope Leo calls for "disarming" of AI in technology-focused encyclical
     url: https://www.cbsnews.com/news/pope-leo-ai-encyclical-artificial-intelligence/
     source: CBS News
+topics:
+  - the-vatican-thread
+  - safety-and-alignment
+  - industry-and-power
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

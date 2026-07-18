@@ -9,6 +9,9 @@ citations:
   - title: Pope Leo XIV can bring Catholic social teaching into the A.I. age
     url: https://www.americamagazine.org/faith/2025/05/15/pope-leo-rerum-novarum-artificial-intelligence-250689/
     source: America Magazine
+topics:
+  - the-vatican-thread
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

@@ -7,6 +7,8 @@ citations:
     url: >-
       https://newyorker.com/magazine/2026/07/20/when-ai-is-a-member-of-the-family
     source: Hacker News
+topics:
+  - personhood
 stamps:
   nihilObstat: '2026-07-16'
 ---

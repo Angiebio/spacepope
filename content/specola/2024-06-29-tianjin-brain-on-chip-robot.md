@@ -6,6 +6,8 @@ citations:
   - title: Chinese scientists create robot 'brain' made from human stem cells
     url: https://www.scmp.com/news/china/science/article/3268304/chinese-scientists-create-robot-brain-made-human-stem-cells
     source: South China Morning Post
+topics:
+  - embodiment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

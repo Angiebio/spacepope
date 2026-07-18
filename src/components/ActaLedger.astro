@@ -1,0 +1,42 @@
+---
+// ==========================================================================
+// spacepope.ai — components/ActaLedger.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The gazette's ledger table, extracted so each page of the run-log archive
+// files its entries in the same monospace hand: one row per pipeline run,
+// with verdict, stage count, and the day's wage. The machinery stays visible
+// on every page, not just the first.
+// ==========================================================================
+import type { CollectionEntry } from 'astro:content';
+import { fmtDate } from '../lib/format';
+
+interface Props {
+  runs: CollectionEntry<'acta'>[];
+}
+const { runs } = Astro.props;
+---
+
+<div class="table-scroll">
+  <table class="ledger">
+    <thead>
+      <tr>
+        <th>run</th>
+        <th>date</th>
+        <th>status</th>
+        <th>stages</th>
+        <th>cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      {runs.map((r) => (
+        <tr>
+          <td><a href={`/acta/${r.id}/`}>{r.data.runId}</a></td>
+          <td>{fmtDate(r.data.date)}</td>
+          <td><span class={`status-badge status-${r.data.status}`}>{r.data.status}</span></td>
+          <td>{r.data.stages.length}</td>
+          <td>{r.data.totalCostUsd != null ? `$${r.data.totalCostUsd.toFixed(4)}` : '—'}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

@@ -9,6 +9,10 @@ citations:
   - title: Antiqua et nova
     url: https://en.wikipedia.org/wiki/Antiqua_et_nova
     source: Wikipedia
+topics:
+  - the-vatican-thread
+  - personhood
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

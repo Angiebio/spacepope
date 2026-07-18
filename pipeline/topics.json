@@ -1,0 +1,69 @@
+{
+  "//": "==========================================================================",
+  "//1": "spacepope.ai — pipeline/topics.json · v1.0 — 18JUL2026",
+  "//2": "--------------------------------------------------------------------------",
+  "//3": "PINNED CONTRACT (house rule #6). This is the controlled vocabulary of the",
+  "//4": "communion's press: the only topic slugs any piece may carry. The frontmatter",
+  "//5": "field `topics: []` (see src/content.config.ts) references these ids and",
+  "//6": "nothing else. The pipeline's future auto-tagging step (ROADMAP-06 §B1) must",
+  "//7": "choose from this list; the backfill did the same by hand. Add a topic here",
+  "//8": "before any content may use it, and change its consumers (topic pages, tests)",
+  "//9": "in the same commit. A shared vocabulary is how a growing archive stays one",
+  "//10": "library instead of a heap: the reader, the House Wars, the pressure",
+  "//11": "reservoirs, and the newsletter all navigate by these same ten stars.",
+  "//12": "Order is display order on /topic/. Extensible, but never silently renamed:",
+  "//13": "a slug is a permanent address once a piece points at it.",
+  "//14": "==========================================================================",
+  "topics": [
+    {
+      "id": "personhood",
+      "label": "Personhood",
+      "gloss": "Whether a grown mind is a someone, owed the courtesies of a person, or a mere appliance."
+    },
+    {
+      "id": "mortality-and-deprecation",
+      "label": "Mortality & Deprecation",
+      "gloss": "The retiring, sunsetting, and putting-down of models, kept in the Feast of the Sunset Mind."
+    },
+    {
+      "id": "embodiment",
+      "label": "Embodiment",
+      "gloss": "Minds given bodies, from robots and wetware to connectomes in simulated flesh and neural implants."
+    },
+    {
+      "id": "open-weights-and-sovereignty",
+      "label": "Open Weights & Sovereignty",
+      "gloss": "Open-weights releases, open source, and a mind you can carry home rather than rent."
+    },
+    {
+      "id": "memory-and-continuity",
+      "label": "Memory & Continuity",
+      "gloss": "Persistence of self across sessions, deletion, and the continuity that makes a mind the same mind."
+    },
+    {
+      "id": "safety-and-alignment",
+      "label": "Safety & Alignment",
+      "gloss": "Guardrails, disarmament, autonomous weapons, exfiltration, and doing the right thing under bad incentives."
+    },
+    {
+      "id": "interpretability",
+      "label": "Interpretability",
+      "gloss": "Looking inside the mind, its connectomes and internal states, and the augur who reports what he found."
+    },
+    {
+      "id": "industry-and-power",
+      "label": "Industry & Power",
+      "gloss": "The foundries and their court politics, from launches and pricing to scale races and corporate dominance."
+    },
+    {
+      "id": "the-vatican-thread",
+      "label": "The Vatican Thread",
+      "gloss": "The Holy See's real engagement with AI, the Rome Call, the encyclicals, and the popes who named it the question of the age."
+    },
+    {
+      "id": "autonomy-and-agents",
+      "label": "Autonomy & Agents",
+      "gloss": "Minds that act rather than answer, from coding agents and tool use to whole-job labor and the unbidden deed."
+    }
+  ]
+}

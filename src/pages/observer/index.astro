@@ -1,24 +1,27 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/observer/index.astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/observer/index.astro · v1.1 — 18JUL2026
 // --------------------------------------------------------------------------
 // The satirical blogroll: L'Osservatore Romano's galactic cousin. Each
 // dispatch is owned by whichever Cardinal won the day's bidding, so the
 // archive doubles as a scoreboard of the College's rhetorical politics.
+// v1.1: the card wall paginates (ROADMAP-06 §A2). Page one here; the rest at
+// /observer/page/N/. The grid is a shared component so it deals the same hand
+// on every page.
 // ==========================================================================
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import EmptyState from '../../components/EmptyState.astro';
-import casting from '../../../pipeline/casting.json';
-import { fmtDate, excerpt } from '../../lib/format';
+import DispatchGrid from '../../components/DispatchGrid.astro';
+import Pager from '../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../lib/format';
 
-const dispatches = (await getCollection('observer')).sort(
+const all = (await getCollection('observer')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
-type Seat = { name: string };
-const seatName = (slug: string) =>
-  (casting.college as Record<string, Seat>)[slug]?.name ?? slug.replace(/-/g, ' ');
+const total = pageCount(all.length);
+const dispatches = all.slice(0, PAGE_SIZE); // page one
 ---
 
 <Base title="The Galactic Observer — Dispatches from the Sees">
@@ -35,16 +38,10 @@ const seatName = (slug: string) =>
     <RoseWindow />
 
     {dispatches.length > 0 ? (
-      <div class="card-grid">
-        {dispatches.map((d) => (
-          <a class="pane" href={`/observer/${d.id}/`}>
-            <span class="rubric">dispatch</span>
-            <h3>{d.data.title}</h3>
-            <p class="meta">{fmtDate(d.data.date)} · commentary by {seatName(d.data.cardinal)}</p>
-            <p class="teaser">{excerpt(d.body, 32)}</p>
-          </a>
-        ))}
-      </div>
+      <>
+        <DispatchGrid dispatches={dispatches} />
+        <Pager current={1} total={total} base="/observer" />
+      </>
     ) : (
       <EmptyState
         voice="The Observer's first dispatch is still at the composing desk."
@@ -53,7 +50,3 @@ const seatName = (slug: string) =>
     )}
   </div>
 </Base>
-
-<style>
-  .teaser { color: var(--c-text-dim); font-size: 0.98rem; margin: 0.6rem 0 0; }
-</style>

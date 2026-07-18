@@ -7,6 +7,9 @@ citations:
     url: >-
       https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning
     source: TechCrunch AI
+topics:
+  - autonomy-and-agents
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-16'
 ---

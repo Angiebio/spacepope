@@ -1,0 +1,49 @@
+---
+// ==========================================================================
+// spacepope.ai — components/BulletinLog.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The Specola's ledger of observations, extracted so page one of the index
+// and its later pages render the exact same ruled log. A shared component is
+// the only way two routes stay one voice as the archive grows: the codex
+// turns its page without changing its hand.
+// ==========================================================================
+import type { CollectionEntry } from 'astro:content';
+import { fmtDate } from '../lib/format';
+
+interface Props {
+  bulletins: CollectionEntry<'specola'>[];
+}
+const { bulletins } = Astro.props;
+---
+
+<ol class="bulletin-log" aria-label="Bulletin archive">
+  {bulletins.map((b) => (
+    <li>
+      <a href={`/specola/${b.id}/`}>
+        <span class="b-date">{fmtDate(b.data.date)}</span>
+        <span class="b-title">{b.data.title}</span>
+        <span class="b-cites">{b.data.citations.length} citation{b.data.citations.length === 1 ? '' : 's'}</span>
+      </a>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .bulletin-log { list-style: none; padding: 0; margin: 1rem 0 2rem; }
+  .bulletin-log a {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    padding: 0.85rem 0.4rem;
+    border-bottom: 1px dotted rgba(201, 162, 39, 0.18);
+    color: var(--c-text);
+  }
+  .bulletin-log a:hover { text-decoration: none; background: rgba(201, 162, 39, 0.05); }
+  .b-date { flex: 0 0 8.5rem; color: var(--c-text-faint); font-style: italic; font-size: 0.92rem; }
+  .b-title { flex: 1; }
+  .b-cites { color: var(--c-gold); font-size: 0.85rem; white-space: nowrap; font-variant-caps: small-caps; letter-spacing: 0.08em; }
+  @media (max-width: 640px) {
+    .bulletin-log a { flex-wrap: wrap; gap: 0.2rem 1rem; }
+    .b-date { flex-basis: 100%; }
+  }
+</style>

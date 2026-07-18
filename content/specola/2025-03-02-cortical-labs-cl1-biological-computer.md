@@ -9,6 +9,9 @@ citations:
   - title: 'CL1 Biological Computer: Cortical Labs 2025'
     url: https://www.cybernewscentre.com/cl1-biological-computer-cortical-labs-2025/
     source: CyberNews Centre
+topics:
+  - embodiment
+  - industry-and-power
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

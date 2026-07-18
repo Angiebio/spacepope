@@ -1,16 +1,19 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/specola/[...slug].astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/specola/[...slug].astro · v1.1 — 18JUL2026
 // --------------------------------------------------------------------------
 // One bulletin. Real names, real links, no costume — this is the wing where
 // Hard Rule §0.1a REQUIRES accuracy instead of forbidding it. The citations
 // render as a telescope log: numbered observations, source on the right,
 // every line pointing at something that actually happened.
+// v1.1: topic chips at the foot — the shelf-marks that tie this observation
+// to every other on the same subject, across both wings of the press.
 // ==========================================================================
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import StampColophon from '../../components/StampColophon.astro';
 import BadgerFlag from '../../components/BadgerFlag.astro';
+import TopicChips from '../../components/TopicChips.astro';
 import { fmtDate } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -61,6 +64,8 @@ const dispatches = await getCollection('observer', (d) => d.data.storyIds.includ
         </ul>
       </aside>
     )}
+
+    <TopicChips topics={entry.data.topics} />
 
     <StampColophon stamps={entry.data.stamps} />
   </article>

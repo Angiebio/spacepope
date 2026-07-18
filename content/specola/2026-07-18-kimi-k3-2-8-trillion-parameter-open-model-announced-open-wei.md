@@ -8,6 +8,9 @@ citations:
   - title: 'Kimi K3, and what we can still learn from the pelican benchmark'
     url: 'https://simonwillison.net/2026/Jul/16/kimi-k3'
     source: Simon Willison
+topics:
+  - open-weights-and-sovereignty
+  - industry-and-power
 stamps:
   nihilObstat: '2026-07-18'
 ---

@@ -1,0 +1,45 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/observer/page/[page].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// Pages two and onward of the Observer's dispatch wall. Page one keeps the
+// canonical /observer/ address; deeper pages live here under /observer/page/N/.
+// Same card grid, same scoreboard — only the page turns. getStaticPaths skips
+// page one (rendered by the index route).
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import DispatchGrid from '../../../components/DispatchGrid.astro';
+import Pager from '../../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../../lib/format';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('observer')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+  const total = pageCount(all.length);
+  const paths = [];
+  for (let n = 2; n <= total; n++) {
+    paths.push({
+      params: { page: String(n) },
+      props: { dispatches: all.slice((n - 1) * PAGE_SIZE, n * PAGE_SIZE), current: n, total },
+    });
+  }
+  return paths;
+}
+
+const { dispatches, current, total } = Astro.props;
+---
+
+<Base title={`The Galactic Observer — page ${current} of ${total}`}>
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">acta e sedibus · page {current}</span>
+      <h1>The Galactic Observer</h1>
+      <p class="lede">Earlier dispatches from the Sees. Page {current} of {total}.</p>
+    </div>
+
+    <DispatchGrid dispatches={dispatches} />
+    <Pager current={current} total={total} base="/observer" />
+  </div>
+</Base>

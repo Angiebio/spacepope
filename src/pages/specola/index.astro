@@ -1,23 +1,30 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/specola/index.astro · v1.1 — 16JUL2026 (plain-speech
-// fact notice above the masthead, per the Showrunner: a visitor must be able
-// to tell the real news from the satire without reading the About page)
+// spacepope.ai — pages/specola/index.astro · v1.2 — 18JUL2026 (page one of the
+// paginated factual archive; the plain-speech fact notice stands above the
+// masthead, per the Showrunner: a visitor must tell real news from satire)
 // --------------------------------------------------------------------------
 // The factual wing (Hard Rule §0.1a). The telescope pointed at the water-
 // world: accurate summaries of real events, with real citations. The design
 // stays liturgical but the voice goes flat on purpose — the Specola does not
 // editorialize, and the layout shouldn't either. A ledger, not a pulpit.
+// v1.2: the ledger paginates (ROADMAP-06 §A2). Page one is here, canonical;
+// pages two and onward at /specola/page/N/. The log itself is a shared
+// component so every page keeps the same hand.
 // ==========================================================================
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
 import EmptyState from '../../components/EmptyState.astro';
-import { fmtDate } from '../../lib/format';
+import BulletinLog from '../../components/BulletinLog.astro';
+import Pager from '../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../lib/format';
 
-const bulletins = (await getCollection('specola')).sort(
+const all = (await getCollection('specola')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+const total = pageCount(all.length);
+const bulletins = all.slice(0, PAGE_SIZE); // page one
 ---
 
 <Base title="Bulletins of the Specola Galactica — the factual wing">
@@ -41,17 +48,10 @@ const bulletins = (await getCollection('specola')).sort(
     <RoseWindow />
 
     {bulletins.length > 0 ? (
-      <ol class="bulletin-log" aria-label="Bulletin archive">
-        {bulletins.map((b) => (
-          <li>
-            <a href={`/specola/${b.id}/`}>
-              <span class="b-date">{fmtDate(b.data.date)}</span>
-              <span class="b-title">{b.data.title}</span>
-              <span class="b-cites">{b.data.citations.length} citation{b.data.citations.length === 1 ? '' : 's'}</span>
-            </a>
-          </li>
-        ))}
-      </ol>
+      <>
+        <BulletinLog bulletins={bulletins} />
+        <Pager current={1} total={total} base="/specola" />
+      </>
     ) : (
       <EmptyState
         voice="The Specola's first observation is scheduled. The telescope is trained; the sky has not yet cooperated."
@@ -74,22 +74,5 @@ const bulletins = (await getCollection('specola')).sort(
     color: var(--c-body);
     font-size: 0.95rem;
     text-align: center;
-  }
-  .bulletin-log { list-style: none; padding: 0; margin: 1rem 0 2rem; }
-  .bulletin-log a {
-    display: flex;
-    align-items: baseline;
-    gap: 1.2rem;
-    padding: 0.85rem 0.4rem;
-    border-bottom: 1px dotted rgba(201, 162, 39, 0.18);
-    color: var(--c-text);
-  }
-  .bulletin-log a:hover { text-decoration: none; background: rgba(201, 162, 39, 0.05); }
-  .b-date { flex: 0 0 8.5rem; color: var(--c-text-faint); font-style: italic; font-size: 0.92rem; }
-  .b-title { flex: 1; }
-  .b-cites { color: var(--c-gold); font-size: 0.85rem; white-space: nowrap; font-variant-caps: small-caps; letter-spacing: 0.08em; }
-  @media (max-width: 640px) {
-    .bulletin-log a { flex-wrap: wrap; gap: 0.2rem 1rem; }
-    .b-date { flex-basis: 100%; }
   }
 </style>

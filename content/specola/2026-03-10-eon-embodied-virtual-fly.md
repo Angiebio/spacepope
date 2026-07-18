@@ -9,6 +9,9 @@ citations:
   - title: Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly
     url: https://arxiv.org/abs/2602.17997
     source: arXiv
+topics:
+  - embodiment
+  - interpretability
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

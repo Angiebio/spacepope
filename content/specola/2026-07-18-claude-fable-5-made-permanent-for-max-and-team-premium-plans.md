@@ -6,6 +6,8 @@ citations:
   - title: Claude make Fable 5 permanent
     url: 'https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent'
     source: Simon Willison
+topics:
+  - industry-and-power
 stamps:
   nihilObstat: '2026-07-18'
 ---

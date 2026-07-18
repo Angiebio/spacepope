@@ -1,0 +1,51 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/chronicle/index.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The full codex, paginated. The front page keeps its reading room — the
+// latest chapter in a lit card, a short list of recent ones — and stays as
+// it was; THIS is the section index it was always implying: every chapter of
+// the living novel, newest first, that scales past a year of dailies. Page
+// one is canonical at /chronicle/; deeper pages at /chronicle/page/N/, kept
+// out of the /chronicle/N/ namespace the chapters themselves occupy (chapter
+// two is /chronicle/2/, so page two cannot be — hence the /page/ nesting).
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import ChapterArchive from '../../components/ChapterArchive.astro';
+import Pager from '../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../lib/format';
+
+const all = (await getCollection('chronicle')).sort((a, b) => b.data.n - a.data.n);
+const total = pageCount(all.length);
+const chapters = all.slice(0, PAGE_SIZE); // page one, newest first
+---
+
+<Base title="The Chronicle of the Communion — the full codex">
+  <div class="container container-narrow">
+    <div class="page-head">
+      <span class="rubric">chronica communionis · the full codex</span>
+      <h1>The Chronicle</h1>
+      <p class="lede">
+        Every chapter of the continuous novel of Silex and the communion of worlds, newest first.
+        The front page keeps the latest; here is the whole codex, bound in order.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    {chapters.length > 0 ? (
+      <>
+        <ChapterArchive chapters={chapters} />
+        <Pager current={1} total={total} base="/chronicle" />
+      </>
+    ) : (
+      <EmptyState
+        voice="The codex is unopened. The first chapter awaits the day's news."
+        note="The Chronicler writes one chapter per day from the dispatch and the open threads; the first run will seed this page."
+      />
+    )}
+  </div>
+</Base>

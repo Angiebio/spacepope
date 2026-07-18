@@ -9,6 +9,9 @@ citations:
   - title: Russian Startup Hacks Pigeon Brains to Turn Them into Living Drones
     url: https://www.zmescience.com/science/news-science/russian-startup-hacks-pigeon-brains-to-turn-them-into-living-drones/
     source: ZME Science
+topics:
+  - embodiment
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

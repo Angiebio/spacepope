@@ -1,0 +1,76 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/topic/[slug].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// One shelf, pulled. Everything the press has filed under a single subject,
+// gathered across all the wings and run newest-first, each entry wearing the
+// name of the room it came from so a reader following a thread never loses
+// track of whether they are reading fact (the Specola) or fiction (the rest).
+// A page is generated for every catalogued topic, even the empty ones: an
+// empty shelf gets an honest vigil, not a 404 (the duck doctrine, applied to
+// navigation — the absence is reported, not hidden).
+// ==========================================================================
+import Base from '../../layouts/Base.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { fmtDate } from '../../lib/format';
+import { TOPICS, TOPIC_BY_ID, getTaggedPieces } from '../../lib/topics';
+
+export async function getStaticPaths() {
+  const pieces = await getTaggedPieces();
+  // One route per pinned topic. The corpus is filtered per topic at render.
+  return TOPICS.map((t) => ({
+    params: { slug: t.id },
+    props: { items: pieces.filter((p) => p.topics.includes(t.id)) },
+  }));
+}
+
+const { slug } = Astro.params;
+const { items } = Astro.props;
+const topic = TOPIC_BY_ID.get(slug!)!; // getStaticPaths guarantees a known slug
+---
+
+<Base
+  title={`${topic.label} — Topics — The Galactic Observer`}
+  description={`Everything the communion's press files under ${topic.label}. ${topic.gloss}`}
+>
+  <div class="container container-narrow">
+    <div class="page-head">
+      <span class="rubric">filed under</span>
+      <h1>{topic.label}</h1>
+      <p class="lede">{topic.gloss}</p>
+      <p class="topic-tally">
+        <a href="/topic/">← all topics</a>
+        <span class="tally-sep" aria-hidden="true">·</span>
+        {items.length} piece{items.length === 1 ? '' : 's'} on this shelf
+      </p>
+    </div>
+
+    {items.length > 0 ? (
+      <ol class="topic-feed" aria-label={`Pieces filed under ${topic.label}`}>
+        {items.map((p) => (
+          <li>
+            <a class="feed-link" href={p.href}>
+              <span class="feed-date">{fmtDate(p.date)}</span>
+              <span class="feed-title">{p.title}</span>
+              <span class="feed-wing">{p.wingLabel}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <EmptyState
+        voice="Nothing is shelved here yet. The subject is charted; the sky has not yet filed under it."
+        note="Topics are assigned as pieces are published. When the press files something under this theme, it will appear here, newest first."
+      />
+    )}
+  </div>
+</Base>
+
+<style>
+  .topic-tally {
+    margin-top: 1rem;
+    font-size: 0.92rem;
+    color: var(--c-text-faint);
+  }
+  .topic-tally .tally-sep { margin: 0 0.6rem; color: var(--c-hairline); }
+</style>

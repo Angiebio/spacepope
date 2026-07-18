@@ -10,6 +10,10 @@ storyIds:
 cardinal: the-lich-cardinal
 see: The Lich See (PSR B1257+12)
 model: deepseek/deepseek-v4-flash
+topics:
+  - personhood
+  - open-weights-and-sovereignty
+  - safety-and-alignment
 stamps:
   imprimatur: '2026-07-16'
 ---

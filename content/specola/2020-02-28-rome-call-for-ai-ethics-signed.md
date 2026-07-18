@@ -9,6 +9,9 @@ citations:
   - title: Catholic Church joins IBM, Microsoft in ethical A.I. push
     url: https://fortune.com/2020/02/28/ai-ethics-vatican-microsoft-ibm/
     source: Fortune
+topics:
+  - the-vatican-thread
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

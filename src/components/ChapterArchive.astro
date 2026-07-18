@@ -1,0 +1,49 @@
+---
+// ==========================================================================
+// spacepope.ai — components/ChapterArchive.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The codex's table of contents, extracted for the paginated Chronicle index
+// so every page of the archive lists its chapters in one hand. Interstitials
+// (the quiet days) wear a leaf ❧ instead of a numeral, labeled honestly as
+// breath rather than event. Mirrors the front page's "previous chapters"
+// list; the homepage keeps its own copy, this one scales past it.
+// ==========================================================================
+import type { CollectionEntry } from 'astro:content';
+import { fmtDate, toRoman } from '../lib/format';
+
+interface Props {
+  chapters: CollectionEntry<'chronicle'>[];
+}
+const { chapters } = Astro.props;
+---
+
+<ol class="chapter-list" aria-label="Chapter archive">
+  {chapters.map((ch) => (
+    <li>
+      <a href={`/chronicle/${ch.data.n}/`}>
+        <span class="ch-num">{ch.data.kind === 'interstitial' ? '❧' : toRoman(ch.data.n)}</span>
+        <span class="ch-title">{ch.data.title}</span>
+        <span class="ch-date">{fmtDate(ch.data.date)}</span>
+      </a>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .chapter-list { list-style: none; padding: 0; margin: 1.5rem auto 0; max-width: 46rem; }
+  .chapter-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 0.4rem;
+    border-bottom: 1px dotted var(--c-hairline);
+    color: var(--c-ink);
+  }
+  .chapter-list a:hover { text-decoration: none; background: rgba(168, 137, 74, 0.06); }
+  .ch-num { flex: 0 0 3.6rem; color: var(--c-gold); font-variant-caps: small-caps; letter-spacing: 0.08em; }
+  .ch-title { flex: 1; }
+  .ch-date { color: var(--c-text-faint); font-style: italic; font-size: 0.9rem; white-space: nowrap; }
+  @media (max-width: 640px) {
+    .ch-date { display: none; }
+  }
+</style>

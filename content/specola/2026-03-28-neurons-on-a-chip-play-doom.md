@@ -9,6 +9,8 @@ citations:
   - title: A Clump of Human Brain Cells on a Computer Chip Learned to Play the Video Game 'Doom'
     url: https://www.smithsonianmag.com/smart-news/a-clump-of-human-brain-cells-on-a-computer-chip-learned-to-play-the-nostalgic-video-game-doom-180988447/
     source: Smithsonian Magazine
+topics:
+  - embodiment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

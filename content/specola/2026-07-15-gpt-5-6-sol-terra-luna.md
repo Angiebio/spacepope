@@ -12,6 +12,9 @@ citations:
   - title: "OpenAI launches GPT-5.6 Sol, Terra, and Luna on apps and API"
     url: "https://www.testingcatalog.com/openai-launches-gpt-5-6-sol-terra-and-luna-on-apps-and-api/"
     source: "TestingCatalog"
+topics:
+  - industry-and-power
+  - autonomy-and-agents
 stamps:
   nihilObstat: "2026-07-15"
   imprimatur: "2026-07-15"

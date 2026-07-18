@@ -1,0 +1,104 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/search/index.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The reading-room catalogue drawer. Full-text search over the whole archive,
+// served entirely from static files: Pagefind builds a fragmented index at
+// build time (npm run build → `pagefind --site dist`), ships a small client
+// that fetches only the shards a query needs, and never once phones home. No
+// backend, no runtime request off this host — the site's founding vow (never
+// call out at runtime) holds here too. The widget's assets live at /pagefind/,
+// generated AFTER `astro build`, so this page is inert under `astro dev` and
+// comes alive only in the built site. That is not a bug; it is the order of
+// the rites: the manuscript is printed, then the index is compiled from it.
+// The page marks its own body data-pagefind-ignore so the catalogue drawer
+// does not catalogue itself.
+// ==========================================================================
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="Search — The Galactic Observer"
+  description="Search the whole archive of the communion's press, its bulletins, dispatches, chapters, and topics."
+>
+  <div class="container container-narrow" data-pagefind-ignore>
+    <div class="page-head">
+      <span class="rubric">index verborum · the catalogue drawer</span>
+      <h1>Search the Archive</h1>
+      <p class="lede">
+        Every wing of the press, full-text. Try a name, a house, or a theme, say{' '}
+        <em>encyclical</em>, <em>Silex</em>, <em>Doom</em>, or <em>open weights</em>.
+      </p>
+    </div>
+
+    <!-- Pagefind's self-hosted widget. Absolute paths resolve at runtime from
+         the built /pagefind/ directory; Astro leaves is:inline assets alone. -->
+    <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+    <div id="search" class="pf-search"></div>
+
+    <noscript>
+      <p class="pf-noscript">
+        Search needs scripting enabled. Without it, browse by
+        <a href="/topic/">topic</a>, by <a href="/observer/">the Observer</a>,
+        or by the <a href="/specola/">real-news bulletins</a>.
+      </p>
+    </noscript>
+
+    <script src="/pagefind/pagefind-ui.js" is:inline></script>
+    <script is:inline>
+      // Boot the widget once the DOM is up. If a ?q= arrived (a deep link from
+      // a topic page or an external referral), run it immediately so the drawer
+      // opens already pulled to the right shelf.
+      window.addEventListener('DOMContentLoaded', () => {
+        if (typeof PagefindUI === 'undefined') return; // inert under `astro dev`
+        const ui = new PagefindUI({
+          element: '#search',
+          showImages: false,
+          showSubResults: true,
+          pageSize: 8,
+          resetStyles: false, // keep our theme variables, do not fight them
+        });
+        const q = new URLSearchParams(window.location.search).get('q');
+        if (q) {
+          ui.triggerSearch(q);
+          const input = document.querySelector('#search input');
+          if (input) input.value = q;
+        }
+      });
+    </script>
+  </div>
+</Base>
+
+<style is:global>
+  /* Theme the Pagefind UI to the Holy-See-at-daylight palette. Pagefind reads
+     these custom properties off the widget container; we set them there so the
+     search drawer looks like it was always part of the reading room, not a
+     borrowed appliance dropped on the paper. */
+  .pf-search {
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: var(--c-gold-deep);
+    --pagefind-ui-text: var(--c-ink);
+    --pagefind-ui-background: var(--c-card);
+    --pagefind-ui-border: var(--c-hairline);
+    --pagefind-ui-tag: var(--c-paper-2);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: var(--radius);
+    --pagefind-ui-font: var(--font-serif);
+    margin: 1.5rem 0 3rem;
+  }
+  /* A few surfaces Pagefind styles directly rather than via variables: nudge
+     them onto the paper so nothing reads as a stray blue-grey web control. */
+  .pf-search .pagefind-ui__search-input {
+    background: var(--c-card);
+    color: var(--c-ink);
+  }
+  .pf-search .pagefind-ui__result-title a { color: var(--c-ink); }
+  .pf-search .pagefind-ui__result-title a:hover { color: var(--c-gold-deep); }
+  .pf-search .pagefind-ui__result-excerpt { color: var(--c-body); }
+  .pf-search mark {
+    background: rgba(201, 162, 39, 0.28);
+    color: var(--c-ink);
+    padding: 0 0.1em;
+  }
+  .pf-noscript { color: var(--c-body); font-style: italic; }
+</style>

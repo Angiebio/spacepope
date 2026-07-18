@@ -9,6 +9,9 @@ citations:
   - title: World needs urgent political action to guide AI, pope tells G7
     url: https://www.usccb.org/news/2024/world-needs-urgent-political-action-guide-ai-pope-tells-g7
     source: USCCB
+topics:
+  - the-vatican-thread
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-18'
   imprimatur: '2026-07-18'

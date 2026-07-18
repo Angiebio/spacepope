@@ -1,17 +1,20 @@
 ---
 // ==========================================================================
-// spacepope.ai — pages/chronicle/[n].astro · v1.0 — 15JUL2026
+// spacepope.ai — pages/chronicle/[n].astro · v1.1 — 18JUL2026
 // --------------------------------------------------------------------------
 // One chapter of the living novel. Drop cap on the first letter (this page
 // gets illuminated; the news does not), prev/next like the pages of a codex,
 // and the Story So Far folded into the margin the way a missal ribbons its
 // place. Interstitials — the quiet days — are labeled honestly as breath.
+// v1.1: topic chips beneath the threads note — the novel is shelved by
+// subject alongside the news that seeded it.
 // ==========================================================================
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import StorySoFar from '../../components/StorySoFar.astro';
 import StampColophon from '../../components/StampColophon.astro';
 import BadgerFlag from '../../components/BadgerFlag.astro';
+import TopicChips from '../../components/TopicChips.astro';
 import { fmtDate, toRoman } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -55,10 +58,14 @@ const isQuiet = entry.data.kind === 'interstitial';
       </p>
     )}
 
+    <TopicChips topics={entry.data.topics} />
+
     <nav class="chapter-nav" aria-label="Chapter navigation">
       {prev && <a href={`/chronicle/${prev.data.n}/`}>← {toRoman(prev.data.n)}. {prev.data.title}</a>}
       {next && <a class="next" href={`/chronicle/${next.data.n}/`}>{toRoman(next.data.n)}. {next.data.title} →</a>}
     </nav>
+
+    <p class="codex-link"><a href="/chronicle/">Browse the full codex →</a></p>
 
     <StampColophon stamps={entry.data.stamps} />
   </article>
@@ -69,6 +76,13 @@ const isQuiet = entry.data.kind === 'interstitial';
     margin-top: 2.5rem;
     text-align: center;
     color: var(--c-text-faint);
+    font-size: 0.95rem;
+  }
+  .codex-link {
+    text-align: center;
+    margin: 1.2rem 0 0;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.06em;
     font-size: 0.95rem;
   }
 </style>

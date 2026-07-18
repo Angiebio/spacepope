@@ -1,0 +1,46 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/specola/page/[page].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// Pages two and onward of the Specola's ledger. Page one keeps the canonical
+// /specola/ address (and its plain-speech fact notice); the deeper pages live
+// here under /specola/page/N/, a namespace that cannot be mistaken for a
+// bulletin's slug. Same ruled log, same hand — only the page turns.
+// getStaticPaths skips page one, which is rendered by the index route.
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import BulletinLog from '../../../components/BulletinLog.astro';
+import Pager from '../../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../../lib/format';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('specola')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+  const total = pageCount(all.length);
+  const paths = [];
+  for (let n = 2; n <= total; n++) {
+    paths.push({
+      params: { page: String(n) },
+      props: { bulletins: all.slice((n - 1) * PAGE_SIZE, n * PAGE_SIZE), current: n, total },
+    });
+  }
+  return paths; // empty when the whole section fits on page one
+}
+
+const { bulletins, current, total } = Astro.props;
+---
+
+<Base title={`Bulletins of the Specola — page ${current} of ${total}`}>
+  <div class="container container-narrow">
+    <div class="page-head">
+      <span class="rubric">specola galactica · the factual wing · page {current}</span>
+      <h1>Bulletins of the Specola</h1>
+      <p class="lede">Older observations, filed. Page {current} of {total}.</p>
+    </div>
+
+    <BulletinLog bulletins={bulletins} />
+    <Pager current={current} total={total} base="/specola" />
+  </div>
+</Base>

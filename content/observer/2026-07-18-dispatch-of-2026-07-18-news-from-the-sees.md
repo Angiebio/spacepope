@@ -10,6 +10,10 @@ storyIds:
 cardinal: archivist-cardinal
 see: The Vast See
 model: google/gemini-3.1-flash-lite
+topics:
+  - personhood
+  - industry-and-power
+  - autonomy-and-agents
 stamps:
   imprimatur: '2026-07-18'
 ---

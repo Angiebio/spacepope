@@ -6,6 +6,9 @@ citations:
   - title: 'xai-org/grok-build, now open source'
     url: 'https://simonwillison.net/2026/Jul/15/grok-build'
     source: Simon Willison
+topics:
+  - safety-and-alignment
+  - autonomy-and-agents
 stamps:
   nihilObstat: '2026-07-16'
 ---

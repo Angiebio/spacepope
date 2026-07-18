@@ -503,6 +503,113 @@ table.ledger tr:hover td { background: rgba(168, 137, 74, 0.05); }
 }
 
 /* --------------------------------------------------------------------------
+   TOPIC CHIPS + TOPIC PAGES — the shelf-marks and the shelves. A chip is a
+   gold-hairline tag, the same gilding the REAL NEWS door wears, sized down to
+   a footnote; it is the thread that ties one sheet of the archive to every
+   other sheet on the same subject. Shared across detail pages and the topic
+   pages, so the marks look identical wherever a reader meets them.
+   -------------------------------------------------------------------------- */
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+}
+.topic-chips .chips-label { margin-right: 0.2rem; }
+.topic-chip {
+  display: inline-block;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  color: var(--c-gold-deep);
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--c-gold-line);
+  border-radius: 999px;
+  background: rgba(201, 162, 39, 0.06);
+  white-space: nowrap;
+}
+.topic-chip:hover {
+  text-decoration: none;
+  color: var(--c-ink);
+  border-color: var(--c-gold);
+  background: rgba(201, 162, 39, 0.14);
+}
+
+/* The topic directory: a grid of subject cards, each a shelf with its count. */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  gap: 1.1rem;
+  margin: 2rem 0;
+}
+/* Two classes on purpose: `.pane.topic-card` (0,2,0) must out-rank the card
+   base rule `a.pane { display:block }` (0,1,1), or the flex column loses to
+   block and the name/gloss/count collapse onto one inline run. */
+.pane.topic-card { display: flex; flex-direction: column; }
+.topic-card .topic-name {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--c-ink);
+  margin: 0 0 0.3rem;
+  letter-spacing: 0.01em;
+}
+.topic-card .topic-gloss {
+  color: var(--c-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin: 0 0 0.9rem;
+  flex: 1;
+}
+.topic-card .topic-count {
+  font-variant-caps: small-caps;
+  letter-spacing: 0.1em;
+  font-size: 0.82rem;
+  color: var(--c-gold);
+}
+.topic-card.is-empty { opacity: 0.62; }
+.topic-card.is-empty .topic-count { color: var(--c-text-faint); }
+
+/* The topic feed: pieces on one subject, each labeled by the wing it came
+   from, so a reader following a thread always knows which room they are in. */
+.topic-feed { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+.topic-feed > li {
+  padding: 0.85rem 0.4rem;
+  border-bottom: 1px dotted var(--c-hairline);
+}
+.topic-feed a.feed-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem 1.1rem;
+  flex-wrap: wrap;
+  color: var(--c-ink);
+}
+.topic-feed a.feed-link:hover { text-decoration: none; }
+.topic-feed a.feed-link:hover .feed-title { color: var(--c-gold-deep); text-decoration: underline; }
+.topic-feed .feed-date {
+  flex: 0 0 8.5rem;
+  color: var(--c-text-faint);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.topic-feed .feed-title { flex: 1 1 20rem; }
+.topic-feed .feed-wing {
+  color: var(--c-gold);
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .topic-feed .feed-date { flex-basis: 100%; }
+  .topic-feed .feed-wing { flex-basis: 100%; }
+}
+
+/* --------------------------------------------------------------------------
    EMPTY STATES — the in-voice silence. Never a crash; always a vigil.
    -------------------------------------------------------------------------- */
 .empty-state {
@@ -640,6 +747,39 @@ table.ledger tr:hover td { background: rgba(168, 137, 74, 0.05); }
 }
 .chapter-nav a { max-width: 45%; }
 .chapter-nav .next { margin-left: auto; text-align: right; }
+
+/* --------------------------------------------------------------------------
+   PAGER — the section indexes' page-turn. Three seats on one rail: newer at
+   the left margin, the tally in the middle, older at the right, all in the
+   quiet gilt of the rest of the navigation. A disabled edge stays in place,
+   greyed, so the control never jumps as the reader walks the archive.
+   -------------------------------------------------------------------------- */
+.pager {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--c-hairline);
+  font-size: 0.98rem;
+}
+.pager-link {
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  color: var(--c-gold-deep);
+  white-space: nowrap;
+}
+.pager-link.is-disabled { color: var(--c-hairline); cursor: default; }
+.pager-link.is-disabled:hover { text-decoration: none; }
+.pager-next { margin-left: auto; text-align: right; }
+.pager-status {
+  color: var(--c-text-faint);
+  font-style: italic;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
 
 /* --------------------------------------------------------------------------
    DIVIDER — the rose window between sections, seen from outside in daylight.

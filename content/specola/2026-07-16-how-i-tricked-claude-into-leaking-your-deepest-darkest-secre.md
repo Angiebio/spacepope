@@ -6,6 +6,9 @@ citations:
   - title: 'How I tricked Claude into leaking your deepest, darkest secrets'
     url: 'https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration'
     source: Simon Willison
+topics:
+  - safety-and-alignment
+  - autonomy-and-agents
 stamps:
   nihilObstat: '2026-07-16'
 ---

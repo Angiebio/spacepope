@@ -6,6 +6,9 @@ citations:
   - title: 'AI Meets Cryptography 2: What AI Found in OpenVM''s ZkVM'
     url: 'https://blog.zksecurity.xyz/posts/openvm-bugs'
     source: Hacker News
+topics:
+  - autonomy-and-agents
+  - safety-and-alignment
 stamps:
   nihilObstat: '2026-07-18'
 ---

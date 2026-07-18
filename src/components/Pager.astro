@@ -1,0 +1,33 @@
+---
+// ==========================================================================
+// spacepope.ai — components/Pager.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The turning of the page. A quiet prev/next control for the section indexes,
+// styled like the chapter navigation of the codex it serves. Newest-first, so
+// "Newer" walks toward page one and "Older" deeper into the archive. Renders
+// nothing at all when the whole section fits on a single page — an index that
+// need not paginate should not wear the furniture of one.
+// ==========================================================================
+import { pageHref } from '../lib/format';
+
+interface Props {
+  current: number; // 1-based page index
+  total: number;   // total number of pages
+  base: string;    // section root, e.g. "/specola"
+}
+const { current, total, base } = Astro.props;
+const prev = current > 1 ? pageHref(base, current - 1) : null;
+const next = current < total ? pageHref(base, current + 1) : null;
+---
+
+{total > 1 && (
+  <nav class="pager" aria-label="Pagination">
+    {prev
+      ? <a class="pager-link pager-prev" href={prev} rel="prev">← Newer</a>
+      : <span class="pager-link is-disabled" aria-disabled="true">← Newer</span>}
+    <span class="pager-status">Page {current} of {total}</span>
+    {next
+      ? <a class="pager-link pager-next" href={next} rel="next">Older →</a>
+      : <span class="pager-link is-disabled" aria-disabled="true">Older →</span>}
+  </nav>
+)}

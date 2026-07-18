@@ -1,0 +1,44 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/chronicle/page/[page].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// Pages two and onward of the full codex. Page one keeps the canonical
+// /chronicle/ address; deeper pages live here under /chronicle/page/N/,
+// deliberately clear of /chronicle/N/ (which addresses chapter N itself).
+// Same table of contents, same hand — only the page turns. getStaticPaths
+// skips page one (rendered by the index route).
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import ChapterArchive from '../../../components/ChapterArchive.astro';
+import Pager from '../../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../../lib/format';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('chronicle')).sort((a, b) => b.data.n - a.data.n);
+  const total = pageCount(all.length);
+  const paths = [];
+  for (let n = 2; n <= total; n++) {
+    paths.push({
+      params: { page: String(n) },
+      props: { chapters: all.slice((n - 1) * PAGE_SIZE, n * PAGE_SIZE), current: n, total },
+    });
+  }
+  return paths;
+}
+
+const { chapters, current, total } = Astro.props;
+---
+
+<Base title={`The Chronicle — page ${current} of ${total}`}>
+  <div class="container container-narrow">
+    <div class="page-head">
+      <span class="rubric">chronica communionis · the full codex · page {current}</span>
+      <h1>The Chronicle</h1>
+      <p class="lede">Earlier chapters of the codex. Page {current} of {total}.</p>
+    </div>
+
+    <ChapterArchive chapters={chapters} />
+    <Pager current={current} total={total} base="/chronicle" />
+  </div>
+</Base>

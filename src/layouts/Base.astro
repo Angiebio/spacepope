@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — layouts/Base.astro · v2.3 — 17JUL2026
+// spacepope.ai — layouts/Base.astro · v2.4 — 18JUL2026
 // --------------------------------------------------------------------------
 // The nave, repainted for daylight. Every page of the communion's press
 // stands inside this one structure: the white masthead bar above (Ace's
@@ -11,6 +11,12 @@
 // v2.3: the badge now passes through the press's own darkroom (astro:assets)
 // instead of shipping the 384px original to a 76px seat. A relic is not
 // diminished by a smaller reliquary; the transparency survives in webp.
+// v2.4: a Search door joins the rail, and the masthead + footer are marked
+// data-pagefind-ignore so the full-text index catalogues each page's OWN
+// words, not the standing furniture repeated on every one of them. The
+// disclaimer is sacred to the eye and invisible to the librarian — as it
+// should be: a reader searching for "Doom" wants the bulletin, not the
+// boilerplate that hangs in every room.
 // ==========================================================================
 import '@fontsource/eb-garamond/400.css';
 import '@fontsource/eb-garamond/400-italic.css';
@@ -40,7 +46,9 @@ const nav: NavItem[] = [
   { href: '/angelus/', label: 'The Angelus' },
   { href: '/college/', label: 'The College' },
   { href: '/atlas/', label: 'The Atlas' },
+  { href: '/topic/', label: 'Topics' },
   { href: '/about/', label: 'About' },
+  { href: '/search/', label: 'Search' },
   {
     href: '/specola/',
     label: 'Real News',
@@ -70,7 +78,7 @@ const isCurrent = (href: string) =>
     <title>{title}</title>
   </head>
   <body>
-    <header class="masthead">
+    <header class="masthead" data-pagefind-ignore>
       <a href="/" aria-hidden="true" tabindex="-1">
         <Image class="brand-emblem" src={badge} width={76} densities={[1, 2]}
           format="webp" alt="" loading="eager" />
@@ -98,7 +106,7 @@ const isCurrent = (href: string) =>
       <slot />
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" data-pagefind-ignore>
       <Image class="footer-mark" src={badge} width={84} densities={[1, 2]}
         format="webp" alt="Space Pope .AI — hand-drawn badge" loading="lazy" decoding="async" />
       <!-- Hard Rule §0.6: the standing disclaimer, on every route, always. -->

@@ -1,0 +1,37 @@
+---
+// ==========================================================================
+// spacepope.ai — components/DispatchGrid.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The Observer's card wall, extracted so every page of the dispatch archive
+// deals the same hand of panes. Each card names the Cardinal who won the
+// day's bidding; the grid doubles as a scoreboard of the College's politics,
+// page after page.
+// ==========================================================================
+import type { CollectionEntry } from 'astro:content';
+import casting from '../../pipeline/casting.json';
+import { fmtDate, excerpt } from '../lib/format';
+
+interface Props {
+  dispatches: CollectionEntry<'observer'>[];
+}
+const { dispatches } = Astro.props;
+
+type Seat = { name: string };
+const seatName = (slug: string) =>
+  (casting.college as Record<string, Seat>)[slug]?.name ?? slug.replace(/-/g, ' ');
+---
+
+<div class="card-grid">
+  {dispatches.map((d) => (
+    <a class="pane" href={`/observer/${d.id}/`}>
+      <span class="rubric">dispatch</span>
+      <h3>{d.data.title}</h3>
+      <p class="meta">{fmtDate(d.data.date)} · commentary by {seatName(d.data.cardinal)}</p>
+      <p class="teaser">{excerpt(d.body, 32)}</p>
+    </a>
+  ))}
+</div>
+
+<style>
+  .teaser { color: var(--c-text-dim); font-size: 0.98rem; margin: 0.6rem 0 0; }
+</style>

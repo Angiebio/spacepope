@@ -6,6 +6,9 @@ citations:
   - title: 'Inkling: Our Open-Weights Model'
     url: 'https://thinkingmachines.ai/news/introducing-inkling'
     source: Hacker News
+topics:
+  - open-weights-and-sovereignty
+  - industry-and-power
 stamps:
   nihilObstat: '2026-07-16'
 ---
