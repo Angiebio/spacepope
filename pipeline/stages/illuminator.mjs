@@ -28,18 +28,23 @@ import { writeIllustration } from '../lib/press.mjs';
 // the plate non-photographic. Tuned against real generations (see
 // tests/illustration/reports/). Change it and you change every future plate,
 // so change it deliberately, and re-tune.
+// v2 (18JUL2026, Showrunner): shifted from painterly gouache to hand-drawn
+// marker-and-ink comic linework, to match the household's hand-drawn badges
+// and push the frame even further from photorealism (bold ink is the least
+// mistakable-for-a-photo register there is, which serves the no-humans law).
 // --------------------------------------------------------------------------
 export const HOUSE_STYLE =
-  'Painterly illuminated-manuscript illustration, storybook gouache and gold leaf, ' +
-  'in the style of a medieval codex miniature reimagined for a cosmic cathedral. ' +
-  'EVERY figure in the image without exception is a NON-HUMAN alien animal, including all ' +
-  'background and crowd figures: reptilian saurian beings with green scaled lizard heads and snouts, ' +
+  'Hand-drawn marker and ink comic art style with bold black ink linework, ' +
+  'cel-shaded graphic-novel illustration, an inked codex comic reimagined for a cosmic cathedral ' +
+  '(matching the household\'s hand-drawn marker badges). ' +
+  'EVERY figure in the image without exception is a NON-HUMAN alien, including all background and crowd figures: ' +
+  'sci-fi robot-reptilian beings with green scaled lizard heads, snouts and cybernetic detailing, ' +
   'frog-like amphibian prelates with wide amphibian eyes, tiny tardigrade monks, and faceless robed ' +
-  'machine-cardinals of burnished metal. Animal-headed clergy only. There are NO humans anywhere, ' +
+  'machine-cardinals of burnished metal. Animal-headed and robotic clergy only. There are NO humans anywhere, ' +
   'no human faces, no human heads, no human skin, not even in the distance or the crowd. ' +
   'Cathedral purple and deep violet vestments, gold-leaf halos, cosmic stained-glass windows onto a starfield, ' +
-  'ringed planets and nebulae beyond the arches. Flat decorative perspective, visible brushwork, warm parchment light. ' +
-  'No real-world logos. No text, no letters, no words, no writing anywhere in the image. ' +
+  'ringed planets and nebulae beyond the arches. Bold marker inking, flat cel color, visible black ink outlines, ' +
+  'warm parchment light. No real-world logos. No text, no letters, no words, no writing anywhere in the image. ' +
   'Not photorealistic, not a photograph, not a 3D render, not CGI.';
 
 // The negative guidance flux honors as a soft steer. Kept beside the positive
