@@ -302,6 +302,8 @@ const feasts = [
   .reading-plate {
     display: block;
     width: calc(100% + 2 * clamp(1.5rem, 4vw, 2.6rem));
+    max-width: none;  /* override the global img { max-width:100% }, which was
+                         clamping the full-bleed width and leaving a right-edge gap */
     margin: calc(-1 * clamp(1.5rem, 4vw, 2.6rem)) calc(-1 * clamp(1.5rem, 4vw, 2.6rem)) 1.4rem;
     height: auto;
     border-radius: var(--radius) var(--radius) 0 0;
