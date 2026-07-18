@@ -8,10 +8,13 @@
 // A thin courier bag is not a failure: fewer viable stories than the
 // quiet-day threshold means the communion simply has a quiet day, honestly.
 
-import { gatherStories, loadCoveredLedger, filterCovered } from '../lib/feeds.mjs';
+import { gatherStories, loadCoveredLedger, filterCovered, loadSuggestions } from '../lib/feeds.mjs';
 import { loadPrompt } from '../lib/prompts.mjs';
 import { NUNCIO_SELECTION } from '../lib/schemas.mjs';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const PIPELINE_DIR = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 export async function runNuncio(ctx) {
   const notes = [];
@@ -22,7 +25,9 @@ export async function runNuncio(ctx) {
     stories = ctx.fixtures.news.stories;
     notes.push(`fixtures mode: ${stories.length} canned stories`);
   } else {
-    const gathered = await gatherStories({ sources: ctx.sources, fetchImpl: ctx.fetchImpl, now: ctx.now, env: ctx.env });
+    // The Showrunner's suggestion box rides in as Tier 0 (additive, boosted, still gated).
+    const suggestions = loadSuggestions(join(PIPELINE_DIR, 'suggestions.json'));
+    const gathered = await gatherStories({ sources: ctx.sources, fetchImpl: ctx.fetchImpl, now: ctx.now, env: ctx.env, suggestions });
     stories = gathered.stories;
     notes.push(...gathered.notes);
   }
@@ -44,12 +49,15 @@ export async function runNuncio(ctx) {
   }
 
   // -- LLM ranks; the Editor verifies every claimed id against the bag -------
+  // Editorially-suggested stories are marked so the ranker gives them due
+  // weight; the ranker still chooses, and the gates downstream still gate.
   const candidates = stories.slice(0, 20).map((s) => ({
     storyId: s.storyId,
     title: s.title,
     sources: s.sources,
     points: s.points,
     summary: s.summary,
+    ...(s.suggested ? { editoriallySuggested: true, editorNote: s.note || undefined } : {}),
   }));
   const { json } = await ctx.client.call({
     role: 'nuncio',

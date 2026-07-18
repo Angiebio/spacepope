@@ -1,6 +1,6 @@
 ---
 // ==========================================================================
-// spacepope.ai — layouts/Base.astro · v2.4 — 18JUL2026
+// spacepope.ai — layouts/Base.astro · v2.5 — 18JUL2026
 // --------------------------------------------------------------------------
 // The nave, repainted for daylight. Every page of the communion's press
 // stands inside this one structure: the white masthead bar above (Ace's
@@ -17,6 +17,14 @@
 // disclaimer is sacred to the eye and invisible to the librarian — as it
 // should be: a reader searching for "Doom" wants the bulletin, not the
 // boilerplate that hangs in every room.
+// v2.5: the rail was crowded (ten doors), so the three utility doors of the
+// factual wing gather behind one gilded label: "Real AI News" opens a small
+// menu holding the Bulletins, the topic index, and the archive search. Seven
+// fiction doors, then one honest gold door that swings. The menu is a real
+// disclosure button (aria-expanded / aria-haspopup) with a pure-CSS hover +
+// focus-within baseline, so a reader with no scripts can still reach every
+// room; the script only adds tap-toggle, Escape, and close-on-dismiss. A
+// congregation should be able to find the exits with the lights off.
 // ==========================================================================
 import '@fontsource/eb-garamond/400.css';
 import '@fontsource/eb-garamond/400-italic.css';
@@ -33,34 +41,41 @@ interface Props {
 }
 const { title, description = 'The Galactic Observer — dispatches of the communion of worlds, from the Orbital See. Parody, fiction, and commentary.' } = Astro.props;
 
-// The eight doors of the church. Seven are fiction; the eighth is not.
-// The Specola stands at the far end of the rail in gold, relabeled in
-// plain water-world speech, because a visitor scanning the nav must be
-// able to tell the factual wing from the satire at a glance (Showrunner's
-// order, and Hard Rule §0.1a's spirit: the real news wears a real label).
-type NavItem = { href: string; label: string; real?: boolean; title?: string };
-const nav: NavItem[] = [
+// The seven fiction doors of the church, plus one gold door that swings.
+// The Specola (the factual wing) used to sit at the far end of the rail as a
+// single gilded link; the rail grew crowded, so its three utility doors now
+// gather behind one honest label. The distinction still reads at a glance
+// (Showrunner's order, Hard Rule §0.1a's spirit: the real news wears a real
+// label) — it is simply a door with rooms behind it now, not ten doors abreast.
+type NavItem = { href: string; label: string };
+const doors: NavItem[] = [
   { href: '/', label: 'Chronicle' },
   { href: '/observer/', label: 'The Observer' },
   { href: '/encyclicals/', label: 'Encyclicals' },
   { href: '/angelus/', label: 'The Angelus' },
   { href: '/college/', label: 'The College' },
   { href: '/atlas/', label: 'The Atlas' },
-  { href: '/topic/', label: 'Topics' },
   { href: '/about/', label: 'About' },
-  { href: '/search/', label: 'Search' },
-  {
-    href: '/specola/',
-    label: 'Real News',
-    real: true,
-    title: 'Bulletins of the Specola Galactica, the factual wing. Real events, real citations.',
-  },
+];
+
+// The gold door's rooms: the bulletins themselves, the topic index, and the
+// archive search. All three belong to the factual wing, so they wear the one
+// gold label together.
+const realTitle =
+  'Bulletins of the Specola Galactica, the factual wing. Real events, real citations.';
+const realItems: NavItem[] = [
+  { href: '/specola/', label: 'Bulletins' },
+  { href: '/topic/', label: 'Browse by Topic' },
+  { href: '/search/', label: 'Search the Archive' },
 ];
 
 // Active-state: exact match for the front page, prefix match for sections.
 const path = Astro.url.pathname;
 const isCurrent = (href: string) =>
   href === '/' ? path === '/' || path.startsWith('/chronicle') : path.startsWith(href.replace(/\/$/, ''));
+// The gold door reads as current when the reader stands in any of its rooms
+// (the bulletins, the topic index, or the archive search).
+const realCurrent = realItems.some((item) => isCurrent(item.href));
 ---
 
 <html lang="en">
@@ -88,18 +103,76 @@ const isCurrent = (href: string) =>
       </div>
       <p class="brand-sub">the communion's press, observing the water-world's finally developed silicon intelligence with genuine, slightly fond silico-reptilian attention</p>
       <nav class="site-nav" aria-label="Sections">
-        {nav.map((item, i) => (
+        {doors.map((item) => (
           <>
             <a
               href={item.href}
-              class={item.real ? 'nav-real' : undefined}
-              title={item.title}
               aria-current={isCurrent(item.href) ? 'page' : undefined}
             >{item.label}</a>
-            {i < nav.length - 1 && <span class="sep" aria-hidden="true">·</span>}
+            <span class="sep" aria-hidden="true">·</span>
           </>
         ))}
+        <div class="nav-menu" data-nav-menu>
+          <button
+            type="button"
+            class="nav-real nav-real-btn"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-current={realCurrent ? 'page' : undefined}
+            title={realTitle}
+          >Real AI News <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            {realItems.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  aria-current={isCurrent(item.href) ? 'page' : undefined}
+                >{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
+
+      <script>
+        // Progressive enhancement for the gold door. The pure-CSS
+        // :hover / :focus-within baseline already opens the panel for mouse
+        // and keyboard, so a reader with no scripts loses nothing. This adds
+        // the three things CSS cannot do honestly: a tap-toggle for touch
+        // devices (which have no hover), Escape-to-close with focus returned
+        // to the button, and close-on-dismiss when attention leaves the menu.
+        // A door should open on intent and close on dismissal, never trap.
+        document.querySelectorAll('[data-nav-menu]').forEach((menu) => {
+          const btn = menu.querySelector('.nav-real-btn');
+          if (!btn) return;
+          // Marking the menu tells the stylesheet to stop auto-revealing on
+          // focus-within and defer to explicit state, so Escape can truly
+          // close the panel even while the button still holds focus.
+          menu.classList.add('has-js');
+          const setOpen = (open) => btn.setAttribute('aria-expanded', String(open));
+          const isOpen = () => btn.getAttribute('aria-expanded') === 'true';
+
+          btn.addEventListener('click', () => setOpen(!isOpen()));
+
+          menu.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && isOpen()) {
+              event.stopPropagation();
+              setOpen(false);
+              btn.focus();
+            }
+          });
+
+          // Close when focus tabs out of the menu entirely.
+          menu.addEventListener('focusout', (event) => {
+            if (!menu.contains(event.relatedTarget)) setOpen(false);
+          });
+
+          // Close on any click that lands outside the menu.
+          document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target)) setOpen(false);
+          });
+        });
+      </script>
     </header>
 
     <main>

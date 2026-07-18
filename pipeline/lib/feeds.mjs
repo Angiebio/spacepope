@@ -1,4 +1,4 @@
-// pipeline/lib/feeds.mjs — v1.1 — 17JUL2026 (the Nuncio learns to read its own newspaper)
+// pipeline/lib/feeds.mjs — v1.2 — 18JUL2026 (the Showrunner's suggestion box: Tier 0, additive)
 //
 // The Nuncio's deterministic half: the legwork before the judgment. Walking
 // the wire services is plumbing, not perception — so it is code, not a model
@@ -118,6 +118,48 @@ export function filterCovered(stories, ledger) {
 }
 
 /**
+ * Load the Showrunner's suggestion box. A hand-kept inbox of stories the
+ * Editor wants the Nuncio to consider, ADDITIVE to organic finds, never a
+ * replacement (the Showrunner's own instruction). Entries persist until the
+ * covered-ledger retires them, which happens the day they are published, so a
+ * suggestion keeps being offered until it is actually covered.
+ *
+ * The Boost, not the Bypass: a suggested story is scored high enough to be a
+ * near-certain candidate, but it still passes through the ranking Nuncio and
+ * every gate downstream. The Editor can point the telescope; the Editor cannot
+ * fabricate a source or slip a real name past the Inquisitor. Suggestion is not
+ * override.
+ *
+ * @param {string} path  pipeline/suggestions.json
+ * @returns {Array<{url: string, note?: string}>}
+ */
+export function loadSuggestions(path) {
+  try {
+    const parsed = JSON.parse(readFileSync(path, 'utf8'));
+    return (parsed.suggestions ?? []).filter((s) => s && s.url);
+  } catch {
+    return []; // no inbox, or an unreadable one, is simply an empty inbox
+  }
+}
+
+/** Fetch a suggested URL's page title so the Nuncio has something to rank on. */
+async function titleFor(url, fetchImpl, headers) {
+  try {
+    const res = await fetchImpl(url, { headers });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const og = html.match(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i);
+    if (og) return og[1].trim();
+    const t = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+    return t ? t[1].trim() : null;
+  } catch {
+    return null;
+  }
+}
+
+const SUGGESTION_BOOST = 1000; // sorts editorial picks to the top of the candidate slice
+
+/**
  * Gather, merge, dedupe, score. Deterministic end to end.
  *
  * @param {object} opts
@@ -125,11 +167,12 @@ export function filterCovered(stories, ledger) {
  * @param {function} opts.fetchImpl  fetch-compatible (injectable; offline in tests)
  * @param {number} [opts.now]      epoch ms — pinned in tests for determinism
  * @param {object} [opts.env]      env bag (TAVILY_API_KEY); defaults to process.env
+ * @param {Array} [opts.suggestions]  the Showrunner's box (see loadSuggestions)
  * @returns {Promise<{stories: Array, notes: string[]}>}
- *   stories: [{storyId, title, url, sources:[names], publishedAt, points, score, summary}]
+ *   stories: [{storyId, title, url, sources:[names], publishedAt, points, score, summary, suggested?, note?}]
  *   notes:   degradation notes for the Acta (which tiers answered, which died)
  */
-export async function gatherStories({ sources, fetchImpl, now = Date.now(), env = process.env }) {
+export async function gatherStories({ sources, fetchImpl, now = Date.now(), env = process.env, suggestions = [] }) {
   const notes = [];
   const byUrl = new Map(); // canonical url → accumulating story
   const parser = new Parser();
@@ -230,6 +273,40 @@ export async function gatherStories({ sources, fetchImpl, now = Date.now(), env 
     summary: s.summary,
   }));
   stories.sort((a, b) => b.score - a.score || a.storyId.localeCompare(b.storyId));
+
+  // ---- Tier 0: the Showrunner's suggestion box (additive, boosted, gated) ----
+  // Placed after organic scoring so the boost lifts editorial picks above the
+  // day's noise without deleting a single organic find. A suggestion that also
+  // surfaced organically is flagged and boosted in place, never duplicated.
+  for (const sug of suggestions) {
+    const canon = canonicalUrl(sug.url);
+    const id = storyId(canon);
+    const existing = stories.find((s) => s.storyId === id);
+    if (existing) {
+      existing.suggested = true;
+      existing.note = sug.note ?? existing.note;
+      existing.score += SUGGESTION_BOOST;
+      existing.sources = [...new Set([...existing.sources, 'Showrunner'])];
+      continue;
+    }
+    const title = (await titleFor(canon, fetchImpl, headers)) || sug.note || canon;
+    stories.push({
+      storyId: id,
+      title,
+      url: canon,
+      sources: ['Showrunner'],
+      publishedAt: null,
+      points: 0,
+      score: SUGGESTION_BOOST,
+      summary: sug.note ?? '',
+      suggested: true,
+      note: sug.note ?? '',
+    });
+  }
+  if (suggestions.length) {
+    notes.push(`suggestion box: ${suggestions.length} editorial pick(s) added to the pool`);
+    stories.sort((a, b) => b.score - a.score || a.storyId.localeCompare(b.storyId));
+  }
 
   // ---- Tier 3: Tavily fallback — fires ONLY on a thin-news day ----------------
   if (stories.length < sources.fallback.fireWhenFewerThan) {

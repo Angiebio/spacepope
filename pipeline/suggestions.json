@@ -1,0 +1,4 @@
+{
+  "_comment": "The Showrunner's suggestion box. Stories YOU want the Nuncio to consider, additive to its organic finds and never a replacement. Append entries to the 'suggestions' array: { \"url\": \"https://...\", \"note\": \"why it matters / what to emphasize (optional)\" }. Each ride in as a boosted Tier 0 candidate, near-certain to be covered soon, but still ranked and still gated (a story that cannot be sourced honestly is still spiked). No need to remove entries after use: the covered-stories ledger retires a suggestion the day it is published, so it stops being offered on its own. Prune stale picks whenever you like.",
+  "suggestions": []
+}

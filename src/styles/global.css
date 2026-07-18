@@ -1,5 +1,5 @@
 /* ==========================================================================
-   spacepope.ai — global.css · v2.1 — 16JUL2026
+   spacepope.ai — global.css · v2.2 — 18JUL2026
    --------------------------------------------------------------------------
    The design system, second edition: "the Holy See at daylight." Where v1
    was a night sky seen through a rose window, v2 is the same church at ten
@@ -248,20 +248,120 @@ hr {
 .site-nav a[aria-current='page'] { color: var(--c-gold-deep); }
 .site-nav .sep { color: var(--c-hairline); user-select: none; }
 
-/* REAL NEWS — the factual wing's door, set apart at the end of the rail.
-   Same small-caps as its siblings, but gilded and hairlined: a different
-   wing of the same building, visible as such at a glance. */
-.site-nav a.nav-real {
-  color: var(--c-gold-deep);
+/* REAL AI NEWS — the factual wing's door, set apart at the end of the rail
+   and now a menu: the water-world's real bulletins, its topic index, and its
+   archive search gathered behind one gold label. Same small-caps as its
+   siblings, but gilded and hairlined — a different wing of the same building,
+   visible as such at a glance. The panel that swings open is warm paper with
+   a gold seam, so it reads as another room of the masthead, not a generic
+   web dropdown grafted onto the church. */
+.nav-menu { position: relative; display: inline-block; margin-left: 0.35rem; }
+
+.site-nav .nav-real {
+  font: inherit;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.14em;
+  font-size: 0.92rem;
   font-weight: 600;
+  color: var(--c-gold-deep);
+  background: rgba(201, 162, 39, 0.07);
   border: 1px solid var(--c-gold-line);
   border-radius: 999px;
   padding: 0.15rem 0.8rem;
-  margin-left: 0.35rem;
-  background: rgba(201, 162, 39, 0.07);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.32rem;
+  cursor: pointer;
+  white-space: nowrap;
 }
-.site-nav a.nav-real:hover { color: var(--c-ink); border-color: var(--c-gold); }
-.site-nav a.nav-real[aria-current='page'] { background: rgba(201, 162, 39, 0.14); }
+.site-nav .nav-real:hover { color: var(--c-ink); border-color: var(--c-gold); }
+.site-nav .nav-real[aria-current='page'] { background: rgba(201, 162, 39, 0.14); }
+.nav-caret {
+  font-size: 0.7em;
+  color: var(--c-gold);
+  transition: transform 150ms ease;
+}
+.nav-real-btn[aria-expanded='true'] .nav-caret { transform: rotate(180deg); }
+
+/* The panel. Hidden by default; the reveal rules follow just below. */
+.nav-submenu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  margin: 0;
+  padding: 0.32rem;
+  list-style: none;
+  min-width: 12rem;
+  background: var(--c-card);
+  border: 1px solid var(--c-gold-line);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(30, 42, 56, 0.14);
+  text-align: left;
+}
+/* a thin gold seam across the top, so the panel feels minted by the masthead */
+.nav-submenu::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem; right: 0.6rem; top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+  opacity: 0.7;
+}
+.nav-submenu li { margin: 0; }
+.site-nav .nav-submenu a {
+  display: block;
+  padding: 0.42rem 0.7rem;
+  border-radius: 3px;
+  color: var(--c-body);
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.site-nav .nav-submenu a:hover {
+  background: var(--c-tint);
+  color: var(--c-gold-deep);
+  text-decoration: none;
+}
+.site-nav .nav-submenu a[aria-current='page'] {
+  color: var(--c-gold-deep);
+  background: rgba(201, 162, 39, 0.1);
+}
+
+/* Reveal, baseline (no scripts): mouse hover and keyboard focus both open
+   the panel, so every room is reachable with the lights off. */
+.nav-menu:hover > .nav-submenu,
+.nav-menu:focus-within > .nav-submenu { display: block; }
+/* Reveal, enhanced (scripts present): explicit aria-expanded state drives it
+   so Escape can truly close the panel even while the button holds focus.
+   Pointer hover still opens it, for the small pleasure of the gesture. */
+.nav-menu.has-js:focus-within > .nav-submenu { display: none; }
+.nav-menu.has-js .nav-real-btn[aria-expanded='true'] + .nav-submenu { display: block; }
+@media (hover: hover) {
+  .nav-menu.has-js:hover > .nav-submenu { display: block; }
+}
+
+/* MOBILE — the panel stops floating and becomes an accordion block beneath
+   the door, centered in the rail, so it can never overflow the viewport or
+   be clipped at 375px. The masthead wraps to lines; this simply drops open
+   in the flow, tap to expand. */
+@media (max-width: 700px) {
+  .nav-menu { display: block; margin: 0.2rem auto 0; }
+  .nav-submenu {
+    position: static;
+    transform: none;
+    left: auto;
+    margin: 0.45rem auto 0.2rem;
+    min-width: 0;
+    width: max-content;
+    max-width: min(20rem, calc(100vw - 2rem));
+  }
+}
 
 /* --------------------------------------------------------------------------
    THE GOLD PILL — the MAGISTERIUM button. One per page, at most. A pill of
