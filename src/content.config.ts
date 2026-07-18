@@ -137,4 +137,37 @@ const acta = defineCollection({
   }),
 });
 
-export const collections = { specola, observer, chronicle, encyclicals, angelus, acta };
+/** Bulletins of the Lazaretto — the med/biotech factual wing (§0.1a, v0.4).
+    A body-beat mirror of the Specola, quarantined by rite from the sky-beat.
+    Same firewall: real names, real citations, no satire. */
+const lazaretto = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './content/lazaretto' }),
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+    storyId: z.string(),
+    citations: z.array(citation).min(1),
+    topics,
+    stamps,
+  }),
+});
+
+/** The Archiater's Rounds — Cardinal Galeno's satirical ward-notes (v0.4).
+    The Lazaretto's counterpart to the Observer's Dispatch; a fiction wing,
+    so it may carry an Illuminator plate. */
+const rounds = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './content/rounds' }),
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+    storyIds: z.array(z.string()),
+    cardinal: z.string(),              // galeno
+    model: z.string(),                 // substrate attribution, canon-truthful
+    topics,
+    illustration: z.string().optional(),
+    illustrationAlt: z.string().optional(),
+    stamps,
+  }),
+});
+
+export const collections = { specola, observer, chronicle, encyclicals, angelus, acta, lazaretto, rounds };

@@ -1,0 +1,35 @@
+{
+  "_comment": "Canned courier bag for the body-beat (--beat=medtech) golden run. Entities are FICTIONAL-plausible medtech/biotech names (Verdant Biosciences, Helios Therapeutics, the Meridian Health Authority) — per CLAUDE.md rule 1, fixtures obey the no-real-names rule unless marked adversarial; these also exercise the unseen-entity logger honestly. Quarantined from news.json: not one AI story here, all flesh, no minds.",
+  "stories": [
+    {
+      "storyId": "s-organ-chip-01",
+      "title": "Verdant Biosciences grows a functioning kidney organoid on a microfluidic chip",
+      "url": "https://example.com/verdant-kidney-organoid-chip",
+      "sources": ["FierceBiotech", "Hacker News"],
+      "publishedAt": "2026-07-18T05:20:00.000Z",
+      "points": 214,
+      "score": 216.1,
+      "summary": "Verdant Biosciences reported that a kidney organoid cultured on its microfluidic organ-on-a-chip platform filtered a blood analogue for two weeks, a step the company said could reduce reliance on animal testing. Independent researchers called the result promising but early, and noted the device is not a transplantable organ."
+    },
+    {
+      "storyId": "s-gene-edit-02",
+      "title": "Helios Therapeutics reports durable results from an in-vivo gene-editing trial",
+      "url": "https://example.com/helios-in-vivo-gene-editing",
+      "sources": ["Endpoints News", "MedTech Dive"],
+      "publishedAt": "2026-07-18T03:15:00.000Z",
+      "points": 168,
+      "score": 170.4,
+      "summary": "Helios Therapeutics said a single in-vivo gene-editing infusion lowered a disease-linked protein for a year in an early-stage trial of a rare metabolic disorder. The company plans a larger study. Analysts cautioned that long-term safety data remain limited and the eventual price is unknown."
+    },
+    {
+      "storyId": "s-billing-03",
+      "title": "Meridian Health Authority proposes tying new drug prices to measured outcomes",
+      "url": "https://example.com/meridian-outcomes-pricing",
+      "sources": ["Fierce Pharma"],
+      "publishedAt": "2026-07-18T01:40:00.000Z",
+      "points": 96,
+      "score": 97.5,
+      "summary": "The Meridian Health Authority advanced a proposal that would pay for certain expensive therapies only when they achieve pre-agreed clinical outcomes. Industry groups warned the model could slow patient access; patient advocates said it would curb paying full price for treatments that do not work."
+    }
+  ]
+}

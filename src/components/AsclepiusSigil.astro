@@ -1,0 +1,71 @@
+---
+// ==========================================================================
+// spacepope.ai — components/AsclepiusSigil.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The Archiater keeps his seat warm without a portrait. Where a Cardinal of
+// the sky-College has a hand-drawn badge, the physician of the Lazaretto has,
+// for now, a sigil: the rod of Asclepius, a single serpent about a staff, the
+// true old-world sign of the healing art (never the two-snake caduceus, which
+// is commerce wearing medicine's coat — a confusion the Archiater would find
+// diagnostic of the water-world entire). Pure inline SVG, gold on a tinted
+// medallion, so a seat has a face on the day the pigment has not yet dried.
+// If a real badge ever lands at assets/cardinals/cardinal-galeno.png, the
+// pages prefer it and this stands aside. Fail honest, even in heraldry.
+// ==========================================================================
+interface Props {
+  size?: number;     // rendered px width/height of the medallion
+  jewel?: string;    // tint behind the rod (a CSS color)
+  title?: string;    // accessible label; omit → decorative (aria-hidden)
+}
+const { size = 150, jewel = 'var(--c-emerald)', title } = Astro.props;
+const labelled = Boolean(title);
+---
+
+<svg
+  class="asclepius-sigil"
+  width={size}
+  height={size}
+  viewBox="0 0 120 120"
+  role={labelled ? 'img' : undefined}
+  aria-hidden={labelled ? undefined : 'true'}
+  aria-label={labelled ? title : undefined}
+  focusable="false"
+>
+  {labelled && <title>{title}</title>}
+  <!-- the medallion: a gold ring on a jewel-tinted field, the Lazaretto's
+       cool green standing in for the surgeon's cloth -->
+  <circle cx="60" cy="60" r="54" fill={jewel} fill-opacity="0.14"
+    stroke="#c9a227" stroke-opacity="0.55" stroke-width="1.5" />
+  <circle cx="60" cy="60" r="47" fill="none"
+    stroke="#c9a227" stroke-opacity="0.28" stroke-width="0.75" />
+
+  <!-- the staff of Asclepius, upright -->
+  <line x1="60" y1="24" x2="60" y2="96"
+    stroke="#8a6f1f" stroke-width="3.4" stroke-linecap="round" />
+  <!-- the pommel and foot, small brass caps -->
+  <circle cx="60" cy="24" r="3.2" fill="#c9a227" />
+  <circle cx="60" cy="96" r="2.6" fill="#8a6f1f" />
+
+  <!-- the single serpent, coiled three times about the staff. Drawn as an
+       open path so the coils read as a snake, not a spring; the head lifts
+       to the right at the top, where an aria would end. -->
+  <path
+    d="M60 30
+       C 50 33, 50 41, 60 44
+       C 70 47, 70 55, 60 58
+       C 50 61, 50 69, 60 72
+       C 70 75, 70 83, 60 86"
+    fill="none" stroke={jewel} stroke-width="3"
+    stroke-linecap="round" stroke-linejoin="round" />
+  <!-- the serpent's head + tongue at the crown of the staff -->
+  <path d="M60 30 C 65 27, 71 27, 74 31"
+    fill="none" stroke={jewel} stroke-width="3" stroke-linecap="round" />
+  <circle cx="74.4" cy="31" r="1.5" fill={jewel} />
+  <line x1="75.6" y1="30.4" x2="79" y2="29" stroke={jewel} stroke-width="1.1" stroke-linecap="round" />
+</svg>
+
+<style>
+  /* The sigil follows the Cardinals' crests: transparent ground, generous,
+     nothing drawn around it. It centers itself where a badge would sit. */
+  .asclepius-sigil { display: block; margin: 0 auto; }
+</style>

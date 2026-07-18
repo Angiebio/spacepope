@@ -1,4 +1,4 @@
-// pipeline/lib/feeds.mjs — v1.2 — 18JUL2026 (the Showrunner's suggestion box: Tier 0, additive)
+// pipeline/lib/feeds.mjs — v1.3 — 18JUL2026 (beat-aware Tavily query; ledger is beat-scoped by caller)
 //
 // The Nuncio's deterministic half: the legwork before the judgment. Walking
 // the wire services is plumbing, not perception — so it is code, not a model
@@ -339,7 +339,9 @@ async function tavilyFallback({ sources, fetchImpl, env, notes }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         api_key: key,
-        query: 'artificial intelligence news today',
+        // Beat-aware: the body-beat searches for medicine, not minds. Falls back
+        // to the sky-beat's query when a sources file names none.
+        query: sources.fallback.query ?? 'artificial intelligence news today',
         topic: 'news',
         days: 1,
         max_results: 8,

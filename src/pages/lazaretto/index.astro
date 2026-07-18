@@ -1,0 +1,82 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/lazaretto/index.astro · v1.0 — 18JUL2026 (page one of
+// the paginated body-beat archive; the plain-speech fact notice stands above
+// the masthead, per the Showrunner: a visitor must tell real news from satire)
+// --------------------------------------------------------------------------
+// The Lazaretto's factual wing (Hard Rule §0.1a, canon §5b): the communion's
+// observatory of the BODY, quarantined by rite from the Specola's sky-beat.
+// Accurate summaries of real water-world medtech and biotech news, with real
+// citations. The register cools from the cathedral nave to the operating
+// theatre, but the vow is identical to the Specola's: no satire crosses this
+// threshold, and no sky-news crosses the cordon. A ward-ledger, not a pulpit.
+// v1.0: mirrors the Specola exactly (shared BulletinLog + Pager), so the two
+// factual wings turn their pages with one hand while never sharing a table.
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import BulletinLog from '../../components/BulletinLog.astro';
+import Pager from '../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../lib/format';
+
+const all = (await getCollection('lazaretto')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const total = pageCount(all.length);
+const bulletins = all.slice(0, PAGE_SIZE); // page one
+---
+
+<Base title="Bulletins of the Lazaretto — the water-world's medicine, observed">
+  <div class="container container-narrow">
+    <!-- The one place the med beat drops the bit for a sentence. Dry, plain,
+         above the in-universe masthead, so nobody has to guess. -->
+    <p class="fact-notice">
+      These bulletins are real. Accurate summaries of actual medtech and biotech news, with citations.
+      Everything else on this site is fiction. (We know. The Editors.)
+    </p>
+
+    <div class="page-head">
+      <span class="rubric">the lazaretto · the healing order · the factual wing</span>
+      <h1>Bulletins of the Lazaretto</h1>
+      <p class="lede">
+        The communion's quarantine-hospital, its observatory of the body: serious, accurate
+        reportage of how the water-world tends, and fails to tend, its flesh. Real events, real
+        citation. No satire crosses this threshold, and no sky-news crosses the cordon.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    {bulletins.length > 0 ? (
+      <>
+        <BulletinLog bulletins={bulletins} base="/lazaretto" />
+        <Pager current={1} total={total} base="/lazaretto" />
+      </>
+    ) : (
+      <EmptyState
+        voice="The Lazaretto's first bulletin is not yet filed. The ward is prepared; the water-world has not yet been brought in."
+        note="The Archiater's beat files one cited bulletin per selected story on the body-beat; the Censor Librorum stamps it before it appears here."
+      />
+    )}
+  </div>
+</Base>
+
+<style>
+  /* The fact notice: a small gold hairline box, no ornament. It speaks
+     water-world plain because its whole job is to be unmistakable. Shared
+     visual grammar with the Specola's, on purpose: the reader learns one
+     shape for "this part is true," whichever wing they enter. */
+  .fact-notice {
+    max-width: 42rem;
+    margin: clamp(1.5rem, 4vw, 2.2rem) auto 0;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--c-gold-line);
+    border-radius: var(--radius);
+    background: rgba(201, 162, 39, 0.05);
+    color: var(--c-body);
+    font-size: 0.95rem;
+    text-align: center;
+  }
+</style>

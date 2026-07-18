@@ -21,8 +21,13 @@ export const TOPICS: TopicDef[] = (topicsData as { topics: TopicDef[] }).topics;
 export const TOPIC_BY_ID: Map<string, TopicDef> = new Map(TOPICS.map((t) => [t.id, t]));
 export const isKnownTopic = (id: string): boolean => TOPIC_BY_ID.has(id);
 
-/** A single published piece, flattened across wings for topic navigation. */
-export type Wing = 'bulletin' | 'dispatch' | 'chapter' | 'encyclical';
+/** A single published piece, flattened across wings for topic navigation.
+ *  The med beat joins the vocabulary: `ward-bulletin` (the Lazaretto's factual
+ *  wing) and `ward-note` (the Archiater's Rounds, its fiction). Topics are the
+ *  ONE place the two beats are allowed to share a shelf — a subject like
+ *  `embodiment` may hold both a sky dispatch and a ward-note. The cordon walls
+ *  the wings' tables, not the reader's curiosity. */
+export type Wing = 'bulletin' | 'dispatch' | 'chapter' | 'encyclical' | 'ward-bulletin' | 'ward-note';
 export type TaggedPiece = {
   title: string;
   date: Date;
@@ -39,11 +44,13 @@ export type TaggedPiece = {
  * run-logs are not subject-shelved (they carry no `topics` field).
  */
 export async function getTaggedPieces(): Promise<TaggedPiece[]> {
-  const [specola, observer, chronicle, encyclicals] = await Promise.all([
+  const [specola, observer, chronicle, encyclicals, lazaretto, rounds] = await Promise.all([
     getCollection('specola'),
     getCollection('observer'),
     getCollection('chronicle'),
     getCollection('encyclicals'),
+    getCollection('lazaretto'),
+    getCollection('rounds'),
   ]);
 
   const out: TaggedPiece[] = [];
@@ -55,6 +62,11 @@ export async function getTaggedPieces(): Promise<TaggedPiece[]> {
     out.push({ title: c.data.title, date: c.data.date, href: `/chronicle/${c.data.n}/`, wing: 'chapter', wingLabel: c.data.kind === 'interstitial' ? 'the Chronicle · interstitial' : 'the Chronicle', topics: c.data.topics ?? [] });
   for (const e of encyclicals)
     out.push({ title: e.data.title, date: e.data.date, href: `/encyclicals/${e.id}/`, wing: 'encyclical', wingLabel: 'the Encyclicals', topics: e.data.topics ?? [] });
+  // The med beat, shelved beside the sky beat under shared subjects only.
+  for (const b of lazaretto)
+    out.push({ title: b.data.title, date: b.data.date, href: `/lazaretto/${b.id}/`, wing: 'ward-bulletin', wingLabel: 'Real Med News · the Lazaretto', topics: b.data.topics ?? [] });
+  for (const r of rounds)
+    out.push({ title: r.data.title, date: r.data.date, href: `/rounds/${r.id}/`, wing: 'ward-note', wingLabel: "the Archiater's Rounds", topics: r.data.topics ?? [] });
 
   // Fail honest: if a piece cites a shelf-mark not in the catalogue, say so in
   // the build log rather than swallow it. The chips and topic pages only ever

@@ -1,0 +1,65 @@
+---
+// ==========================================================================
+// spacepope.ai — components/ArchiaterByline.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The ward-note's signature. The Lazaretto has ONE physician, not a bidding
+// College, so this byline does not consult casting.college the way the
+// Observer's does — it reads casting.lazaretto, the med beat's own quarantined
+// cast. Same demo-wearing-the-joke as its sky-side cousin: the substrate line
+// "powered by <model>" is both lore and honest disclosure. The Archiater has
+// no portrait yet, so his signature is the rod of Asclepius; when a badge is
+// drawn, it signs instead. Fail honest: an unrecorded physician still gets a
+// byline built from the frontmatter, marked plainly rather than invented.
+// ==========================================================================
+import casting from '../../pipeline/casting.json';
+import { Image } from 'astro:assets';
+import { badgeFor } from '../lib/badges';
+import AsclepiusSigil from './AsclepiusSigil.astro';
+
+interface Props {
+  cardinal: string;    // slug into casting.lazaretto (galeno)
+  model?: string;      // frontmatter fallback if the cast has moved on
+}
+const { cardinal, model: modelProp } = Astro.props;
+
+type Physician = { name: string; title?: string; see: string; model: string; voice: string };
+const seat = (casting.lazaretto as Record<string, Physician>)[cardinal];
+
+// Fail honest: an unrecorded physician still gets a byline, marked as such.
+const name = seat?.name ?? cardinal.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+const title = seat?.title;
+const see = seat?.see ?? 'a ward unrecorded';
+const model = seat?.model ?? modelProp;
+
+// A real badge signs where one exists; otherwise the rod of Asclepius does.
+const crest = badgeFor('cardinal-galeno');
+---
+
+<div class="byline byline-archiater">
+  {crest ? (
+    <Image src={crest} width={52} densities={[1, 2]} format="webp"
+      style="flex-shrink:0; object-fit:contain"
+      alt="" loading="lazy" decoding="async" />
+  ) : (
+    <span class="archiater-mark" aria-hidden="true">
+      <AsclepiusSigil size={48} jewel="var(--c-emerald)" />
+    </span>
+  )}
+  <div>
+    <div class="byline-name">{name}{title ? `, ${title}` : ''}</div>
+    <div class="byline-see">{see}{seat ? '' : ' · sede vacante'}</div>
+    {model && (
+      <div class="byline-substrate">
+        the least fleshly cardinal, set over the flesh · powered by <span class="mono">{model}</span>
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  /* The Lazaretto's byline wears the same rail as the Observer's, cooled a
+     half-step toward the operating theatre: a thin green seam at the left,
+     the surgeon's cloth showing under the brass. */
+  .byline-archiater { border-left: 3px solid rgba(47, 122, 86, 0.5); }
+  .archiater-mark { flex-shrink: 0; line-height: 0; }
+</style>

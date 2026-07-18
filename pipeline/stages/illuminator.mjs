@@ -1,4 +1,4 @@
-// pipeline/stages/illuminator.mjs — v1.0 — 18JUL2026
+// pipeline/stages/illuminator.mjs — v1.1 — 18JUL2026 (alt text knows the Rounds wing)
 //
 // Stage (optional, post-firewall): the Illuminator — the scriptorium's gilder.
 // It illustrates the FICTION wings only: an Observer dispatch or a Chronicle
@@ -113,11 +113,32 @@ export const SHOTS = [
   'An empty cosmic cathedral interior with NO figures: soaring arches, a great rose window onto a starfield, cold coloured light across bare stone. Architecture and cosmos only, no people.',
 ];
 
-/** Deterministic shot pick: same key → same shot, neighbors differ. */
-export function pickShot(key) {
+// The Lazaretto's own shot set (wing === 'rounds'): Cardinal Galeno's beat is
+// the body, not the sky, and his subject is a cyborg physician, not reptilian
+// clergy. Crowd-averse and human-free like the sky shots, but medical: the one
+// figure is a brass automaton of many surgical arms, and "the patient" is never
+// a human on a table but the water-world itself, a small planet under a lamp.
+// Medical scenes are the hardest case: the word "physician" or "anatomy" cues
+// flux to render a HUMAN doctor and a HUMAN body-chart, the one thing we forbid.
+// So these lean figure-free, and where a figure appears it is hammered as a
+// faceless brass automaton — never a man in a coat, never a human patient, never
+// a human anatomy diagram. "The patient" is a planet, an organ, a relic.
+export const ROUNDS_SHOTS = [
+  'A still life with NO figures at all, NO people, NO doctor: one strange medical relic on a stone altar, close and richly detailed. The relic is a glowing organ grown upon a circuit-chip, or a jeweled vial, or an antique brass instrument. No anatomy diagrams, no human body.',
+  'The water-world itself as a small blue-green planet resting on a great operating-theatre table beneath a surgical lamp, examined from above. NO people, NO human, NO body, only the planet as the patient.',
+  'Exactly ONE cyborg physician that is a FACELESS BURNISHED-BRASS AUTOMATON of many delicate surgical arms and built-in lenses, clearly a machine and NOT a human, NOT a man, NOT wearing a coat, bent alone over a tray of brass instruments. No human anywhere, no human patient, no anatomy chart.',
+  'An empty operating theatre of the communion: a vaulted surgical amphitheatre of brass instruments and cold blue light, tiered seats all empty. NO figures at all, no people, no bodies.',
+  'A still life of glowing vials, seed-cultures, and coiled strands of luminous helix on an altar, close and jewel-bright. NO figures, no people, no human body, no anatomy diagram.',
+  'Exactly ONE faceless brass automaton hand, many-jointed and surgical, holding a single glowing seed of light over a dark table. Only the machine hand and the light. No person, no body.',
+];
+
+/** Deterministic shot pick: same key → same shot, neighbors differ. Wing-aware:
+    the Lazaretto's Rounds draw from the medical/cyborg set. */
+export function pickShot(key, wing = 'observer') {
+  const set = wing === 'rounds' ? ROUNDS_SHOTS : SHOTS;
   let h = 0;
   for (const c of String(key || '')) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-  return SHOTS[h % SHOTS.length];
+  return set[h % set.length];
 }
 
 /**
@@ -125,18 +146,26 @@ export function pickShot(key) {
  * same key/title/body it always yields the same prompt (the spine is
  * deterministic; only fal's brush is stochastic).
  */
-export function composeIlluminationPrompt({ key, title, body, styleSuffix = HOUSE_STYLE }) {
+export function composeIlluminationPrompt({ key, title, body, wing = 'observer', styleSuffix = HOUSE_STYLE }) {
   const seed = sceneSeedFromBody(body);
+  const intro = wing === 'rounds'
+    ? "A single illuminated plate for the Lazaretto, the communion's healing order, where a cyborg physician-cardinal watches the water-world's medicine."
+    : 'A single illuminated scene for The Galactic Observer, the press of a galaxy-spanning communion of alien clergy and machine minds.';
+  // The Rounds omit the body-literal seed: medical ward-notes ("a child", "the
+  // blood") drag flux straight to a human patient. Title + shot + style carry it.
+  const useSeed = wing !== 'rounds';
   const scene = [
-    'A single illuminated scene for The Galactic Observer, the press of a galaxy-spanning communion of alien clergy and machine minds.',
+    intro,
     title ? `Titled "${String(title).trim()}".` : '',
     // Lead with the SPECIFIC moment from the firewalled text, so each plate
     // illustrates its own story rather than defaulting to a group portrait.
-    seed ? `Depict this specific moment as one cinematic illustration: ${seed}` : '',
-    // The assigned camera for this piece (deterministic variety).
-    pickShot(key ?? title ?? body),
-    'Do NOT arrange symmetrical rows of identical figures. Do NOT make a wide symmetric cathedral nave lined with prelates. ' +
-      'Do NOT make a formal front-facing group portrait. Favor one clear focal subject and an off-center, dynamic composition.',
+    useSeed && seed ? `Depict this specific moment as one cinematic illustration: ${seed}` : '',
+    // The assigned camera for this piece (deterministic variety; wing-aware).
+    pickShot(key ?? title ?? body, wing),
+    wing === 'rounds'
+      ? 'CRITICAL: there is NO human anywhere, no human patient, no human doctor, no man in a coat, no human anatomy diagram or body chart. The only figure that may appear is a faceless brass cyborg machine. Favor one clear focal subject and an off-center composition.'
+      : 'Do NOT arrange symmetrical rows of identical figures. Do NOT make a wide symmetric cathedral nave lined with prelates. ' +
+        'Do NOT make a formal front-facing group portrait. Favor one clear focal subject and an off-center, dynamic composition.',
     styleSuffix,
   ].filter(Boolean).join(' ');
   return scene;
@@ -144,7 +173,9 @@ export function composeIlluminationPrompt({ key, title, body, styleSuffix = HOUS
 
 /** Honest alt text: names the piece, the style, and that a machine drew it. */
 export function illuminationAlt(title, wing) {
-  const kind = wing === 'chronicle' ? 'chapter of the Chronicle' : 'Observer dispatch';
+  const kind = wing === 'chronicle' ? 'chapter of the Chronicle'
+    : wing === 'rounds' ? "Archiater's Rounds"
+    : 'Observer dispatch';
   return `Illuminated plate for the ${kind} "${String(title).trim()}": a stylized, non-photographic scene of the communion's alien clergy. Machine-generated illustration.`;
 }
 
@@ -157,7 +188,7 @@ export function illuminationAlt(title, wing) {
  * @param {string} piece.slug   basename for the plate (matches the content slug)
  * @param {string} piece.title
  * @param {string} piece.body   the firewalled prose (dispatch body / chapter prose)
- * @param {'observer'|'chronicle'} piece.wing
+ * @param {'observer'|'chronicle'|'rounds'} piece.wing
  * @returns {Promise<{illustration: string|null, illustrationAlt: string|null,
  *   model: string|null, costUsd: number, notes: string[]}>}
  */
@@ -167,7 +198,7 @@ export async function runIlluminator(ctx, { slug, title, body, wing }) {
     return { illustration: null, illustrationAlt: null, model: null, costUsd: 0,
       notes: [`skipped: no FAL_KEY — "${title}" publishes without a plate`] };
   }
-  const prompt = composeIlluminationPrompt({ key: slug, title, body });
+  const prompt = composeIlluminationPrompt({ key: slug, title, body, wing });
   try {
     const { bytes, contentType, model, costUsd, seed } = await ctx.falClient.generateImage({ prompt });
     const filename = writeIllustration(ctx.assetsDir, { slug, bytes, contentType });

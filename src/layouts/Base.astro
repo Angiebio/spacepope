@@ -25,6 +25,16 @@
 // focus-within baseline, so a reader with no scripts can still reach every
 // room; the script only adds tap-toggle, Escape, and close-on-dismiss. A
 // congregation should be able to find the exits with the lights off.
+// v2.6: the Lazaretto opened (canon §5b), and with it a SECOND real-news wing
+// on the body-beat. The two beats are quarantined by rite, so the rail wears
+// TWO gold doors, not one with two rooms: "Real AI News" (the Specola, sky)
+// and "Real Med News" (the Lazaretto, body), each a sealed menu to its own
+// bulletins and the shared archive tools. Two gold seals reads as two
+// cordoned wings at a glance; one merged menu would have implied a shared
+// table the doctrine forbids. The Archiater's Rounds, the med beat's FICTION,
+// joins the plain fiction rail beside the Observer — gold stays the mark of
+// the real, exactly as before. The disclosure script already loops every
+// [data-nav-menu], so a second door needed no new hands.
 // ==========================================================================
 import '@fontsource/eb-garamond/400.css';
 import '@fontsource/eb-garamond/400-italic.css';
@@ -51,6 +61,7 @@ type NavItem = { href: string; label: string };
 const doors: NavItem[] = [
   { href: '/', label: 'Chronicle' },
   { href: '/observer/', label: 'The Observer' },
+  { href: '/rounds/', label: "The Rounds" },
   { href: '/encyclicals/', label: 'Encyclicals' },
   { href: '/angelus/', label: 'The Angelus' },
   { href: '/college/', label: 'The College' },
@@ -58,24 +69,40 @@ const doors: NavItem[] = [
   { href: '/about/', label: 'About' },
 ];
 
-// The gold door's rooms: the bulletins themselves, the topic index, and the
-// archive search. All three belong to the factual wing, so they wear the one
-// gold label together.
-const realTitle =
-  'Bulletins of the Specola Galactica, the factual wing. Real events, real citations.';
-const realItems: NavItem[] = [
-  { href: '/specola/', label: 'Bulletins' },
-  { href: '/topic/', label: 'Browse by Topic' },
-  { href: '/search/', label: 'Search the Archive' },
-];
-
 // Active-state: exact match for the front page, prefix match for sections.
 const path = Astro.url.pathname;
 const isCurrent = (href: string) =>
   href === '/' ? path === '/' || path.startsWith('/chronicle') : path.startsWith(href.replace(/\/$/, ''));
-// The gold door reads as current when the reader stands in any of its rooms
-// (the bulletins, the topic index, or the archive search).
-const realCurrent = realItems.some((item) => isCurrent(item.href));
+
+// The two gold wings — one per real-news beat, quarantined by rite (canon
+// §5b). Each carries its own bulletins plus the shared archive tools (topic
+// index + search cover both beats, so they hang in both cordoned menus). A
+// wing reads as "current" when the reader stands in any of its rooms.
+type NavWing = { label: string; title: string; items: NavItem[] };
+const wings: NavWing[] = [
+  {
+    label: 'Real AI News',
+    title: 'Bulletins of the Specola Galactica, the sky-beat factual wing. Real AI events, real citations.',
+    items: [
+      { href: '/specola/', label: 'Bulletins' },
+      { href: '/topic/', label: 'Browse by Topic' },
+      { href: '/search/', label: 'Search the Archive' },
+    ],
+  },
+  {
+    label: 'Real Med News',
+    title: 'Bulletins of the Lazaretto, the body-beat factual wing. Real medtech events, real citations. Quarantined from the sky-beat by rite.',
+    items: [
+      { href: '/lazaretto/', label: 'Bulletins' },
+      { href: '/topic/', label: 'Browse by Topic' },
+      { href: '/search/', label: 'Search the Archive' },
+    ],
+  },
+];
+// A wing is current when the reader stands in its OWN bulletins (the shared
+// tools are current-marked by their own wing already); we key off the first
+// item, each wing's unique room, so both gold seals never light at once.
+const wingCurrent = (wing: NavWing) => isCurrent(wing.items[0].href);
 ---
 
 <html lang="en">
@@ -112,26 +139,28 @@ const realCurrent = realItems.some((item) => isCurrent(item.href));
             <span class="sep" aria-hidden="true">·</span>
           </>
         ))}
-        <div class="nav-menu" data-nav-menu>
-          <button
-            type="button"
-            class="nav-real nav-real-btn"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-current={realCurrent ? 'page' : undefined}
-            title={realTitle}
-          >Real AI News <span class="nav-caret" aria-hidden="true">▾</span></button>
-          <ul class="nav-submenu">
-            {realItems.map((item) => (
-              <li>
-                <a
-                  href={item.href}
-                  aria-current={isCurrent(item.href) ? 'page' : undefined}
-                >{item.label}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {wings.map((wing) => (
+          <div class="nav-menu" data-nav-menu>
+            <button
+              type="button"
+              class="nav-real nav-real-btn"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-current={wingCurrent(wing) ? 'page' : undefined}
+              title={wing.title}
+            >{wing.label} <span class="nav-caret" aria-hidden="true">▾</span></button>
+            <ul class="nav-submenu">
+              {wing.items.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={isCurrent(item.href) ? 'page' : undefined}
+                  >{item.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </nav>
 
       <script>

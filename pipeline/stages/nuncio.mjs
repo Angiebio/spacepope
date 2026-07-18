@@ -1,4 +1,4 @@
-// pipeline/stages/nuncio.mjs — v1.1 — 17JUL2026 (covered-stories ledger: no story is news twice)
+// pipeline/stages/nuncio.mjs — v1.2 — 18JUL2026 (beat-aware: reads its own beat's ledger + suggestion box)
 //
 // Stage 1: the Nuncio. The deterministic half (feeds.mjs) rides out and
 // gathers; the LLM half only ranks what was gathered. The Nuncio cannot
@@ -26,7 +26,9 @@ export async function runNuncio(ctx) {
     notes.push(`fixtures mode: ${stories.length} canned stories`);
   } else {
     // The Showrunner's suggestion box rides in as Tier 0 (additive, boosted, still gated).
-    const suggestions = loadSuggestions(join(PIPELINE_DIR, 'suggestions.json'));
+    // Beat-scoped: the body-beat never inherits the sky-beat's editorial picks
+    // (a missing box is simply an empty box).
+    const suggestions = loadSuggestions(join(PIPELINE_DIR, ctx.beat.suggestionsFile));
     const gathered = await gatherStories({ sources: ctx.sources, fetchImpl: ctx.fetchImpl, now: ctx.now, env: ctx.env, suggestions });
     stories = gathered.stories;
     notes.push(...gathered.notes);
@@ -34,8 +36,11 @@ export async function runNuncio(ctx) {
 
   // -- the Nuncio reads its own newspaper before riding out ------------------
   // RSS criers repeat themselves for days; the archive is the memory that
-  // stops the Specola from solemnly reporting the same story twice (17JUL2026).
-  const ledger = loadCoveredLedger(join(ctx.contentDir, 'specola'));
+  // stops the wing from solemnly reporting the same story twice (17JUL2026).
+  // Beat-scoped: each beat reads ONLY its own factual archive, so the body-beat
+  // never dedupes a medtech story against a sky-beat bulletin (canon §5b: the
+  // two orders share no ledger).
+  const ledger = loadCoveredLedger(join(ctx.contentDir, ctx.beat.factualCollection));
   const { fresh, covered } = filterCovered(stories, ledger);
   if (covered.length > 0) {
     notes.push(`${covered.length} gathered stories already covered by the Specola — excluded: ${covered.map((s) => `"${s.title}"`).join(', ')}`);

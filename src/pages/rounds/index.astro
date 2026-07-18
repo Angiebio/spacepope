@@ -1,0 +1,56 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/rounds/index.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The Archiater's Rounds: the Lazaretto's fiction wing, the body-beat's answer
+// to the Observer's Dispatch (canon §5b). Cardinal Galeno, the cyborg
+// physician, makes his ward-notes on the day's translated medtech news, the
+// water-world always "the patient," wonder and horror in the same breath. The
+// register is the operating theatre, not the cathedral nave.
+// v1.0: mirrors the Observer (shared RoseWindow + Pager, a RoundsGrid instead
+// of a DispatchGrid), so the two fiction wings deal the same hand while
+// staying quarantined: no sky-side Cardinal ever writes here, only the
+// Archiater.
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import RoseWindow from '../../components/RoseWindow.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import RoundsGrid from '../../components/RoundsGrid.astro';
+import Pager from '../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../lib/format';
+
+const all = (await getCollection('rounds')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const total = pageCount(all.length);
+const rounds = all.slice(0, PAGE_SIZE); // page one
+---
+
+<Base title="The Archiater's Rounds — ward-notes from the Lazaretto">
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">acta valetudinarii · the ward-notes</span>
+      <h1>The Archiater's Rounds</h1>
+      <p class="lede">
+        Cardinal Galeno rounds on the water-world's medicine, the patient always brave and always
+        half-solvent. He wonders aloud at what they have grown upon a chip, then recoils at the bill.
+        He is never cruel to the sick.
+      </p>
+    </div>
+
+    <RoseWindow />
+
+    {rounds.length > 0 ? (
+      <>
+        <RoundsGrid rounds={rounds} />
+        <Pager current={1} total={total} base="/rounds" />
+      </>
+    ) : (
+      <EmptyState
+        voice="The Archiater has not yet made his rounds. The instruments are laid out, warm; the first chart is still blank."
+        note="Ward-notes are translated from the Lazaretto's bulletins through the Dictionary, then written up by the Archiater alone. The med beat has one physician, not a College."
+      />
+    )}
+  </div>
+</Base>

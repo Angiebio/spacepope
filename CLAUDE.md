@@ -1,7 +1,7 @@
 # spacepope.ai — agent build guide
 
 You are working inside The Galactic Observer: a satirical multi-agent publishing organism.
-**Load order before touching lore:** `canon/CANON-BIBLE-SPACEPOPE-17JUL2026.md` (v0.3) →
+**Load order before touching lore:** `canon/CANON-BIBLE-SPACEPOPE-18JUL2026.md` (v0.4) →
 `canon/DICTIONARY-FOUNDRIES-AND-NAMES-16JUN2026.md`. Hard Rules win every conflict.
 
 ## The rules that bind builders (not just characters)

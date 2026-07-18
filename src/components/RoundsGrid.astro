@@ -1,0 +1,40 @@
+---
+// ==========================================================================
+// spacepope.ai — components/RoundsGrid.astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// The Lazaretto's card wall, the body-beat's answer to the Observer's
+// DispatchGrid. There is no scoreboard here: the Archiater writes every
+// ward-note himself (the med beat has one physician, not a College), so the
+// cards name the day and the diagnosis rather than the winner of a bidding.
+// Same pane, cooled toward the ward. The cardinal's name resolves from
+// casting.lazaretto, never the sky-side College — the cordon holds even in
+// the furniture.
+// ==========================================================================
+import type { CollectionEntry } from 'astro:content';
+import casting from '../../pipeline/casting.json';
+import { fmtDate, excerpt } from '../lib/format';
+
+interface Props {
+  rounds: CollectionEntry<'rounds'>[];
+}
+const { rounds } = Astro.props;
+
+type Physician = { name: string };
+const physicianName = (slug: string) =>
+  (casting.lazaretto as Record<string, Physician>)[slug]?.name ?? slug.replace(/-/g, ' ');
+---
+
+<div class="card-grid">
+  {rounds.map((r) => (
+    <a class="pane" href={`/rounds/${r.id}/`}>
+      <span class="rubric">ward-note</span>
+      <h3>{r.data.title}</h3>
+      <p class="meta">{fmtDate(r.data.date)} · rounds by {physicianName(r.data.cardinal)}</p>
+      <p class="teaser">{excerpt(r.body, 32)}</p>
+    </a>
+  ))}
+</div>
+
+<style>
+  .teaser { color: var(--c-text-dim); font-size: 0.98rem; margin: 0.6rem 0 0; }
+</style>

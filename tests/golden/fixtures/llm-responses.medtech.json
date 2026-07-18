@@ -1,0 +1,46 @@
+{
+  "_comment": "The screenplay for the body-beat golden run (--beat=medtech): canned responses per role, consumed in call order by the fixture client. Roles differ from the sky-beat: NO college-bid/college-commentary/chronicler/summarizer (the body-beat has no bidding College and no Chronicle); instead a single galeno-rounds voice. inquisitor is called twice (the translated dispatch, then Galeno's Rounds). All fiction (fabulist, galeno-rounds) obeys Hard Rule §0.1 — no real names, nothing on the blocklist.",
+  "nuncio": [
+    {
+      "selected": [
+        {
+          "storyId": "s-organ-chip-01",
+          "headline": "A kidney is grown upon a chip and made to filter blood",
+          "whyItMatters": "The water-world has learned to culture a working organ outside the body, on a sliver of engineered glass."
+        },
+        {
+          "storyId": "s-gene-edit-02",
+          "headline": "A single infusion rewrites a flaw in the living body for a year",
+          "whyItMatters": "The flesh is being edited in place, once, with effects that persist, in a patient still walking around."
+        },
+        {
+          "storyId": "s-billing-03",
+          "headline": "A health authority proposes paying for cures only when they work",
+          "whyItMatters": "The water-world debates whether a healing should be paid for by its result rather than its promise."
+        }
+      ],
+      "reasoning": "A strong day for the ward: an organ grown on glass, the living body edited in place, and a throne arguing that a cure should be paid for only when it cures. Wonder, wonder, and the water-world's eternal quarrel over the bill."
+    }
+  ],
+  "astronomer": [
+    "Verdant Biosciences reported that a kidney organoid cultured on its microfluidic organ-on-a-chip platform filtered a blood analogue for two weeks in the laboratory. The company said the platform could reduce the need for animal testing in early drug development. Independent researchers described the result as promising but preliminary, noting that the organoid is a small cluster of tissue on an engineered device, not a transplantable organ. Verdant said it plans to publish the underlying data and to test additional compounds on the platform. No clinical use was claimed.",
+    "Helios Therapeutics said an early-stage trial of a single in-vivo gene-editing infusion lowered a disease-linked protein for approximately one year in patients with a rare metabolic disorder. The company reported the effect appeared durable across the initial cohort and said it intends to begin a larger study. Analysts noted that the trial was small, that long-term safety data remain limited, and that the therapy's eventual price has not been disclosed. Helios said it is working with clinicians on the design of the next study and has not set a timeline for a regulatory filing.",
+    "The Meridian Health Authority advanced a proposal that would reimburse certain high-cost therapies only when they achieve pre-agreed clinical outcomes, a model sometimes called outcomes-based pricing. Under the proposal, payment would be tied to measured results rather than paid in full at the time of treatment. Industry groups warned the model could delay patient access and complicate contracts. Patient advocates said it would reduce spending on treatments that fail to deliver benefit. The authority said the proposal is open for comment and would apply first to a limited set of expensive therapies."
+  ],
+  "censor": [
+    { "pass": true, "faults": [] },
+    { "pass": true, "faults": [] },
+    { "pass": true, "faults": [] }
+  ],
+  "fabulist": [
+    "**From the healing houses of the water-world, three wonders and one old quarrel.** The flesh-menders of the water-world have done a marvelous thing, which on the water-world means a thing both marvelous and slightly billed for.\n\n**They have grown a kidney upon a chip.** A single organ, cultured on a sliver of engineered glass threaded with tiny rivers, was made to strain a blood-analogue for a full fortnight. It is not yet an organ a body could wear, only a bright small proof that the water-world can coax living tissue to work outside the body that made it. The communion has watched flesh grown in vessels for a very long time, and still finds this one charming.\n\n**They have edited the living body in place.** In another house, a single infusion was sent into the blood of a patient carrying an inborn flaw, and it quietly corrected the flaw for a full turning of their little world, the patient walking about the while. One edit, once, holding. The healers speak carefully of safety and of years not yet counted, as careful healers should.\n\n**And the old quarrel, as the closing kicker.** One of the water-world's health-thrones has proposed a radical notion: that a cure should be paid for only when it actually cures. The body-foundries call this reckless; the sick call it overdue. The communion, which has never once billed a patient for a healing that failed, watches the argument with the patience of the very old.",
+    "**Reserved second cosmic translation, unused when the first dispatch passes the firewall.**"
+  ],
+  "inquisitor": [
+    { "pass": true, "faults": [] },
+    { "pass": true, "faults": [] }
+  ],
+  "galeno-rounds": [
+    "Come, walk the ward with me. The patient is the water-world, and today the patient astonishes.\n\nObserve the first bed. They have grown a kidney upon a chip! A single filtering organ, coaxed to live on a wafer of glass veined with little rivers, straining the blood for a fortnight outside any body at all. Magnificent. I have a thousand hands and not one of them has done anything so bold before breakfast. And then, of course, they billed someone for the glass.\n\nThe second bed, and here my lenses widen. They have reached into a living body and rewritten a single inherited flaw, in place, with one infusion, and the correction held for a full turning of their year while the patient walked and ate and complained. To edit the flesh once and have it stay edited. The healers speak of safety and of years uncounted, and in this they are wise: the body keeps a longer ledger than the trial does.\n\nAnd the third bed is not a body but a quarrel: shall a cure be paid for only when it cures? The patient argues with itself over the bill, as ever. I have no coin and cannot advise on coin. But I will say what a physician may say. A healing that fails is not a healing, and the ward that only charges for the ones that work is the more honest ward. Round complete. The patient will live, and overcharge itself, another day."
+  ]
+}

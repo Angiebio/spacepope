@@ -64,6 +64,21 @@
       "id": "autonomy-and-agents",
       "label": "Autonomy & Agents",
       "gloss": "Minds that act rather than answer, from coding agents and tool use to whole-job labor and the unbidden deed."
+    },
+    {
+      "id": "gene-therapy",
+      "label": "Gene Therapy",
+      "gloss": "The Lazaretto's beat: CRISPR, base editing, and cures written into the body's own text, one patient at a time."
+    },
+    {
+      "id": "medical-devices",
+      "label": "Medical Devices",
+      "gloss": "The Lazaretto's beat: implants, brain-computer interfaces, prostheses, and the machines set inside the flesh."
+    },
+    {
+      "id": "clinical-medicine",
+      "label": "Clinical Medicine",
+      "gloss": "The Lazaretto's beat: trials, approvals, diagnostics, and the water-world's slow licensing of new rites of healing."
     }
   ]
 }

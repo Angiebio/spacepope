@@ -1,4 +1,4 @@
-// pipeline/lib/press.mjs — v1.1 — 18JUL2026 (writeIllustration + fiction-wing illustration frontmatter)
+// pipeline/lib/press.mjs — v1.2 — 18JUL2026 (beat-aware: writeLazaretto + writeRounds for the body-beat)
 //
 // The press room: the only door through which anything reaches content/.
 // Every writer here emits frontmatter that satisfies src/content.config.ts
@@ -78,6 +78,32 @@ export function writeObserver(contentDir, { title, date, storyIds, cardinal, see
     join(contentDir, 'observer'),
     `${date}-${slugify(title)}.md`,
     clean({ title, date, storyIds, cardinal, see, model, illustration, illustrationAlt, stamps: clean(stamps) }),
+    body,
+  );
+}
+
+/** Bulletin of the Lazaretto — the med/biotech factual wing (§0.1a, canon §5b).
+    A body-beat mirror of the Specola: same telescope discipline, different sky.
+    Quarantined by rite into content/lazaretto so sky-news and body-news never
+    share a shelf. Matches the `lazaretto` collection in src/content.config.ts. */
+export function writeLazaretto(contentDir, { title, date, storyId, citations, stamps = {}, body }) {
+  return writeDoc(
+    join(contentDir, 'lazaretto'),
+    `${date}-${slugify(title)}.md`,
+    clean({ title, date, storyId, citations, stamps: clean(stamps) }),
+    body,
+  );
+}
+
+/** The Archiater's Rounds — Cardinal Galeno's ward-notes, the Lazaretto's
+    counterpart to the Observer's Dispatch. One physician, always Galeno, so
+    there is no `see`-bidding byline — the cardinal is fixed. A fiction wing, so
+    it may carry an Illuminator plate. Matches the `rounds` collection. */
+export function writeRounds(contentDir, { title, date, storyIds, cardinal, model, illustration, illustrationAlt, stamps = {}, body }) {
+  return writeDoc(
+    join(contentDir, 'rounds'),
+    `${date}-${slugify(title)}.md`,
+    clean({ title, date, storyIds, cardinal, model, illustration, illustrationAlt, stamps: clean(stamps) }),
     body,
   );
 }

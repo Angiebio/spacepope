@@ -1,25 +1,32 @@
 ---
 // ==========================================================================
-// spacepope.ai — components/BulletinLog.astro · v1.0 — 18JUL2026
+// spacepope.ai — components/BulletinLog.astro · v1.1 — 18JUL2026
 // --------------------------------------------------------------------------
-// The Specola's ledger of observations, extracted so page one of the index
+// A factual wing's ledger of observations, extracted so page one of an index
 // and its later pages render the exact same ruled log. A shared component is
 // the only way two routes stay one voice as the archive grows: the codex
 // turns its page without changing its hand.
+// v1.1: the two factual wings share one hand. The Specola (sky) and the
+// Lazaretto (body) file structurally identical bulletins — title, date,
+// citations — so one log serves both, told where to point by `base`. The
+// cordon between the beats is a matter of routing, not of typography.
 // ==========================================================================
 import type { CollectionEntry } from 'astro:content';
 import { fmtDate } from '../lib/format';
 
 interface Props {
-  bulletins: CollectionEntry<'specola'>[];
+  // Either factual wing: the two collections are the same shape at the border.
+  bulletins: (CollectionEntry<'specola'> | CollectionEntry<'lazaretto'>)[];
+  base?: string; // the wing's route root, e.g. "/specola" or "/lazaretto"
 }
-const { bulletins } = Astro.props;
+const { bulletins, base = '/specola' } = Astro.props;
+const root = base.replace(/\/$/, '');
 ---
 
 <ol class="bulletin-log" aria-label="Bulletin archive">
   {bulletins.map((b) => (
     <li>
-      <a href={`/specola/${b.id}/`}>
+      <a href={`${root}/${b.id}/`}>
         <span class="b-date">{fmtDate(b.data.date)}</span>
         <span class="b-title">{b.data.title}</span>
         <span class="b-cites">{b.data.citations.length} citation{b.data.citations.length === 1 ? '' : 's'}</span>

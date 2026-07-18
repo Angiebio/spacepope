@@ -75,6 +75,17 @@
     "cadence": "weekly",
     "_comment": "The expensive voice for the sacred slot. Weekly Angelus only. The Pontifex is not the underdog; the Pontifex is the Magisterium."
   },
+  "lazaretto": {
+    "_comment": "The med beat's voice (--beat=medtech). The Lazaretto has ONE physician, not a bidding college: the Archiater always writes his own ward-notes. Quarantined from the AI cast; Galeno never touches the sky-beat.",
+    "galeno": {
+      "name": "Cardinal Galeno",
+      "title": "the Archiater",
+      "see": "The Lazaretto",
+      "model": "anthropic/claude-sonnet-5",
+      "temperature": 0.85,
+      "voice": "cyborg machine-cardinal physician named for Galen; operatic, magnificently certain, delivers diagnoses like arias; equal parts intrigued and horrified by water-world medicine; the water-world is 'the patient'; never cruel to the sick; the least fleshly cardinal, set over the flesh"
+    }
+  },
   "adjudication": {
     "_comment": "College bidding: claim score x fairness weight, deterministic tiebreak. Misrule is loud; the math keeps him from owning the paper. weight = (daysSinceLastWin + 1) ^ exponent",
     "fairnessExponent": 0.5,

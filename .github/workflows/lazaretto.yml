@@ -1,0 +1,98 @@
+# .github/workflows/lazaretto.yml — v1.0 — 18JUL2026
+#
+# The body-beat bell (canon §5b). Same one-job doctrine as daily.yml — a
+# pipeline→deploy split silently never deploys with GITHUB_TOKEN pushes, so the
+# whole run lives in one job. The cron is OFFSET from the daily-dispatch bell
+# (10:47 vs 10:37 UTC) so the two beats don't reach the press room at the same
+# minute; they also share the `the-press-room` concurrency group, so if the sky-
+# beat overruns, the body-beat queues behind it rather than racing its push.
+# The two beats write DIFFERENT wings (content/lazaretto + content/rounds) and a
+# DIFFERENT Acta (runId 2026-07-18-medtech), so nothing they publish collides.
+
+name: lazaretto-rounds
+
+on:
+  schedule:
+    - cron: "47 10 * * *"   # odd minute, offset from the daily bell
+  workflow_dispatch:          # the manual re-run button, always
+
+permissions:
+  contents: write
+  issues: write               # the on-failure bell
+
+concurrency:
+  group: the-press-room       # serialize with the sky-beat: one Editor at the desk
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Run the pipeline (body-beat)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: node pipeline/run.mjs --beat=medtech
+
+      - name: Leak check — no secrets in generated output
+        run: |
+          # Grep the day's output for anything shaped like a key. Belt, braces.
+          if grep -rE "sk-or-[A-Za-z0-9-]{20,}|tvly-[A-Za-z0-9-]{16,}" content/ world/ 2>/dev/null; then
+            echo "::error::leaked credential pattern found in generated output" && exit 1
+          fi
+
+      - name: Commit the ward's publications
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/ world/
+          if git diff --cached --quiet; then
+            echo "nothing to commit (already published or quiet ward upstream)"
+          else
+            git commit -m "Acta Diurna (Lazaretto): $(date -u +%F) — the ward's publications"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push
+          fi
+
+      - name: Build the site
+        run: npm run build
+
+      # Deploy is guarded behind the secret's presence so the workflow is
+      # green before Fly is wired. Secrets can't be read in `if:` directly;
+      # the presence check goes through a step output.
+      - name: Check for Fly token
+        id: fly
+        run: echo "have=${{ secrets.FLY_API_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup flyctl
+        if: steps.fly.outputs.have == 'true'
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: Deploy
+        if: steps.fly.outputs.have == 'true'
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: flyctl deploy --remote-only
+
+      # A silent 60-day death cannot happen if failure makes noise.
+      - name: Open an issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Lazaretto run failed: $(date -u +%F)" \
+            --body "The lazaretto-rounds workflow (--beat=medtech) failed. The Acta (if written) has the crash note in content/acta/*-medtech.json. Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --label pipeline

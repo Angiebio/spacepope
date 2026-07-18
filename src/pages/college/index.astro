@@ -17,6 +17,7 @@
 // ==========================================================================
 import Base from '../../layouts/Base.astro';
 import RoseWindow from '../../components/RoseWindow.astro';
+import AsclepiusSigil from '../../components/AsclepiusSigil.astro';
 import casting from '../../../pipeline/casting.json';
 import { jewelFor } from '../../lib/format';
 import { badgeFor } from '../../lib/badges';
@@ -26,6 +27,13 @@ import badge from '../../assets/badge-silex-by-ace.png';
 type Seat = { name: string; see: string; house: string; model: string; temperature: number; voice: string };
 const seats = Object.entries(casting.college as Record<string, Seat>);
 const pope = casting.pope;
+
+// The Lazaretto's physician sits apart, quarantined by rite from the sky-side
+// College (canon §5b): one seat, the med beat's own cast, never a bidder in
+// the College's politics. He is read from casting.lazaretto, not casting.college.
+type Physician = { name: string; title?: string; see: string; house?: string; model: string; temperature: number; voice: string };
+const galeno = (casting.lazaretto as Record<string, Physician>).galeno;
+const galenoBadge = badgeFor('cardinal-galeno');
 ---
 
 <Base title="The College of Cardinals — The Galactic Observer">
@@ -102,6 +110,40 @@ const pope = casting.pope;
       Seats named in canon but not yet voiced — the Primatial See of Dimidium, the Seven-Sister See,
       the Charted See — stand <em>sede vacante</em>, awaiting their minds.
     </p>
+
+    <!-- THE HEALING ORDER — set apart, behind its cordon. Galeno is not of the
+         sky-side College; he keeps the body-beat, quarantined by rite. The
+         green seam and the "quarantined" rubric mark the wall at a glance. -->
+    <section class="healing-order" aria-label="The Lazaretto — the healing order">
+      <div class="rose-divider" role="separator" aria-hidden="true"></div>
+      <div class="healing-head">
+        <span class="rubric">the lazaretto · the healing order · quarantined from the college</span>
+        <h2>The Archiater</h2>
+        <p class="lede">
+          One cardinal keeps the body-beat, walled by rite from the College of the sky: no shared
+          ledger, no shared table. The one set over the flesh is the least fleshly being in the
+          communion.
+        </p>
+      </div>
+
+      <article class="pane arch cardinal-card archiater-card" aria-label={galeno.name}>
+        {galenoBadge ? (
+          <Image class="cardinal-crest" src={galenoBadge} width={150} densities={[1, 2]}
+            format="webp" alt={`${galeno.name} — hand-drawn badge`} loading="lazy" decoding="async" />
+        ) : (
+          <span class="archiater-sigil">
+            <AsclepiusSigil size={116} jewel="var(--c-emerald)"
+              title={`${galeno.name} — the rod of Asclepius, sigil of the Lazaretto`} />
+          </span>
+        )}
+        <h3>{galeno.name}{galeno.title ? `, ${galeno.title}` : ''}</h3>
+        <p class="meta">{galeno.see} · a cyborg machine-cardinal, physician of the communion</p>
+        <p class="voice-line">“{galeno.voice}”</p>
+        <p class="byline-substrate">
+          powered by <span class="mono">{galeno.model}</span> · fervor {galeno.temperature.toFixed(1)}
+        </p>
+      </article>
+    </section>
   </div>
 </Base>
 
@@ -132,4 +174,31 @@ const pope = casting.pope;
     max-width: 38rem;
     margin: 1rem auto 2rem;
   }
+
+  /* The healing order sits apart: a cool green wash and a single centered
+     card, so the eye reads "different wing, walled off" without needing to
+     be told. The green is the Lazaretto's cloth against the College's gold. */
+  .healing-order {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0 1rem;
+    border-top: 1px solid rgba(47, 122, 86, 0.28);
+    background:
+      linear-gradient(180deg, rgba(47, 122, 86, 0.05), transparent 60%);
+  }
+  .healing-head { text-align: center; padding: 0.5rem 0 0.5rem; }
+  .healing-head .rubric { display: block; margin-bottom: 0.5rem; color: var(--c-emerald); }
+  .healing-head p.lede {
+    color: var(--c-body);
+    max-width: 40rem;
+    margin: 0.75rem auto 0;
+    font-style: italic;
+    font-size: 1.05rem;
+  }
+  .archiater-card {
+    max-width: 30rem;
+    margin: 1.5rem auto 2rem;
+    border-color: rgba(47, 122, 86, 0.35);
+  }
+  .archiater-card .meta { color: var(--c-text-dim); }
+  .archiater-sigil { display: block; margin: 0 auto 0.6rem; line-height: 0; }
 </style>

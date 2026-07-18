@@ -1,0 +1,94 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/lazaretto/[...slug].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// One Lazaretto bulletin. Real names, real links, no costume: this is the
+// body-beat wing where Hard Rule §0.1a REQUIRES accuracy instead of
+// forbidding it. The citations render as a ward ledger, the clinical cousin of
+// the Specola's telescope log: numbered, sourced on the right, every line
+// pointing at real water-world medicine that actually happened.
+//
+// The cordon (canon §5b) holds: this page crosses forward ONLY to the
+// Archiater's Rounds (the med beat's own fiction), never to the Observer or
+// the Specola. Sky and body share no table, even in their cross-links.
+// ==========================================================================
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import StampColophon from '../../components/StampColophon.astro';
+import BadgerFlag from '../../components/BadgerFlag.astro';
+import TopicChips from '../../components/TopicChips.astro';
+import { fmtDate } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const bulletins = await getCollection('lazaretto');
+  return bulletins.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Which ward-notes grew out of this bulletin? Cross the firewall forward, but
+// stay inside the cordon: the body-beat's fiction is the Rounds, and only the
+// Rounds. The Observer never sees the Lazaretto's ledger.
+const rounds = await getCollection('rounds', (r) => r.data.storyIds.includes(entry.data.storyId));
+---
+
+<Base title={`${entry.data.title} — Bulletins of the Lazaretto`}>
+  <article class="container container-narrow">
+    <header class="page-head">
+      <span class="rubric">bulletin · the lazaretto</span>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{fmtDate(entry.data.date)} · filed under {entry.data.storyId}</p>
+    </header>
+
+    {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <section class="telescope-log chart-log" aria-label="Citations">
+      <span class="rubric">ward ledger · citations</span>
+      <ol>
+        {entry.data.citations.map((c) => (
+          <li>
+            <a href={c.url} rel="noopener">{c.title}</a>
+            <span class="obs-source">{c.source}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    {rounds.length > 0 && (
+      <aside class="grew-into">
+        <span class="rubric">as the archiater rounded on it</span>
+        <ul>
+          {rounds.map((r) => (
+            <li><a href={`/rounds/${r.id}/`}>{r.data.title}</a></li>
+          ))}
+        </ul>
+      </aside>
+    )}
+
+    <TopicChips topics={entry.data.topics} />
+
+    <StampColophon stamps={entry.data.stamps} />
+  </article>
+</Base>
+
+<style>
+  /* The ward ledger reuses the Specola's ruled log, relabeled for the body
+     beat: an entry is a citation ("cit."), not a telescope observation. The
+     structure and gilding are shared; only the abbreviation changes rooms. */
+  .chart-log :global(li::before) {
+    content: 'cit. ' counter(obs, decimal-leading-zero);
+  }
+  .grew-into {
+    margin-top: 2.5rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+  }
+  .grew-into ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+</style>

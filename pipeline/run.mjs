@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// pipeline/run.mjs — v1.1 — 18JUL2026 (Illuminator wired in: fiction-wing plates via fal.ai)
+// pipeline/run.mjs — v1.2 — 18JUL2026 (beat-aware: the same spine runs the sky-beat or the body-beat)
 //
 // THE EDITOR'S DESK. The Editor is a script, not a model (Hard Rule §0.7 in
 // engineering form): every routing decision, checkpoint, retry budget, and
@@ -12,6 +12,14 @@
 // ARCHIVIST → PRESS. One documented deviation: the Archivist merges AFTER the
 // Chronicler, because the STATE_UPDATE it merges is emitted at write time
 // (ROADMAP-03 §2 — the engine spec wins; see stages/archivist.mjs).
+//
+// BEATS (canon §5b, 18JUL2026): the same spine points at different news. The
+// default sky-beat (--beat=ai) is unchanged — Specola → Observer → College →
+// Chronicle. The body-beat (--beat=medtech) walks a different cordon: sources,
+// factual wing (Lazaretto), and satire wing (the Archiater's Rounds) all come
+// from the beat registry (beats.mjs), the College is replaced by a single
+// physician (Galeno), and there is no Chronicle. The two beats never share a
+// ledger, an Acta, or a run dir — quarantine by config, not by hope.
 //
 // Discipline:
 //   * Checkpoint per stage to runs/YYYY-MM-DD/ — idempotent, resumable; a
@@ -36,7 +44,9 @@ import { createFalClient, createFixtureFalClient } from './lib/fal.mjs';
 import { loadWorldstate } from './lib/worldstate.mjs';
 import {
   writeSpecola, writeObserver, writeChronicle, writeAngelus, writeActa, readActa, slugify,
+  writeLazaretto, writeRounds,
 } from './lib/press.mjs';
+import { resolveBeat } from './beats.mjs';
 import { runIlluminator } from './stages/illuminator.mjs';
 import { runNuncio } from './stages/nuncio.mjs';
 import { runAstronomer, draftBulletin } from './stages/astronomer.mjs';
@@ -45,6 +55,7 @@ import { badgerLoop, faultFlag } from './stages/badger.mjs';
 import { runFabulist, draftDispatch } from './stages/fabulist.mjs';
 import { inquisitorGate, logUnseenEntities } from './stages/inquisitor.mjs';
 import { runCollege, recordWin } from './stages/college.mjs';
+import { runGaleno } from './stages/galeno.mjs';
 import { runChronicler } from './stages/chronicler.mjs';
 import { runArchivist } from './stages/archivist.mjs';
 import { runAngelus } from './stages/angelus.mjs';
@@ -55,9 +66,13 @@ const REPO_ROOT = join(HERE, '..');
 // ---------------------------------------------------------------------------
 // context assembly — the WAKE step
 // ---------------------------------------------------------------------------
-export function buildContext({ date, dryRun = false, fixtures = false, env = process.env, client = null, fixtureData = null, falClient = null } = {}) {
+export function buildContext({ date, beat: beatId = null, dryRun = false, fixtures = false, env = process.env, client = null, fixtureData = null, falClient = null } = {}) {
+  // WAKE reads the beat first: it decides which routes the Nuncio rides, which
+  // wings the presses set, and (via the runId suffix) which shelf the Acta lands
+  // on. The default is the sky-beat, so an un-flagged run is the run it always was.
+  const beat = resolveBeat(beatId);
   const casting = JSON.parse(readFileSync(join(HERE, 'casting.json'), 'utf8'));
-  const sources = JSON.parse(readFileSync(join(HERE, 'sources.json'), 'utf8'));
+  const sources = JSON.parse(readFileSync(join(HERE, beat.sourcesFile), 'utf8'));
   const blocklist = JSON.parse(readFileSync(join(HERE, 'blocklist.json'), 'utf8'));
 
   date = date ?? new Date().toISOString().slice(0, 10);
@@ -77,9 +92,11 @@ export function buildContext({ date, dryRun = false, fixtures = false, env = pro
     // golden run never pollutes real content/ or world/ (CONTENT_DIR et al.
     // may still override for tests that want to inspect the output).
     const fixturesDir = env.FIXTURES_DIR ?? join(REPO_ROOT, 'tests', 'golden', 'fixtures');
+    // Beat-scoped canned inputs: the body-beat rehearses from its own screenplay
+    // (news.medtech.json / llm-responses.medtech.json), the sky-beat from its.
     fixtureData = fixtureData ?? {
-      news: JSON.parse(readFileSync(join(fixturesDir, 'news.json'), 'utf8')),
-      llm: JSON.parse(readFileSync(join(fixturesDir, 'llm-responses.json'), 'utf8')),
+      news: JSON.parse(readFileSync(join(fixturesDir, beat.fixtureNews), 'utf8')),
+      llm: JSON.parse(readFileSync(join(fixturesDir, beat.fixtureLlm), 'utf8')),
     };
     // Each dir sandboxes INDEPENDENTLY unless explicitly overridden: fixtures
     // mode must never be able to write into real content/ or world/ by
@@ -108,8 +125,11 @@ export function buildContext({ date, dryRun = false, fixtures = false, env = pro
     else if (env.FAL_KEY) falClient = createFalClient({ apiKey: env.FAL_KEY });
   }
 
-  const runId = date; // the daily run; --angelus overrides below
-  const runDir = join(runsDir, dryRun ? `${date}-dry` : date);
+  // The runId (and its run dir) carry the beat suffix so the two beats never
+  // collide: content/acta/2026-07-18.json is the sky-beat, 2026-07-18-medtech
+  // the body-beat, and their checkpoints sit in separate runs/ subdirs.
+  const runId = `${date}${beat.runIdSuffix}`; // --angelus overrides below
+  const runDir = join(runsDir, `${dryRun ? `${date}-dry` : date}${beat.runIdSuffix}`);
 
   const fetchImpl = fixtures
     ? async () => { throw new Error('network fetch attempted in fixtures mode — the rehearsal has no wires'); }
@@ -135,7 +155,7 @@ export function buildContext({ date, dryRun = false, fixtures = false, env = pro
   }
 
   return {
-    date, runId, dryRun, fixturesMode: fixtures,
+    date, beat, runId, dryRun, fixturesMode: fixtures,
     casting, sources, blocklist,
     contentDir, worldDir, runsDir, runDir, assetsDir,
     client, falClient, fetchImpl, checkUrl,
@@ -214,7 +234,9 @@ export async function runPipeline(ctx) {
     let spikedStories = [];
     let dispatch = null;
     let dispatchGate = null;
-    let college = null;
+    let college = null; // sky-beat: the bidding College
+    let rounds = null;  // body-beat: Galeno's published Rounds (or null if spiked)
+    let roundsResult = null;
 
     if (!nuncio.quietDay) {
       // ---- 2+3. ASTRONOMER + CENSOR + BADGER LOOP (reality) ------------------
@@ -229,7 +251,7 @@ export async function runPipeline(ctx) {
           for (const bulletin of drafts) {
             const result = await badgerLoop(ctx, {
               vocation: 'reality',
-              artifactLabel: `specola bulletin "${bulletin.title}"`,
+              artifactLabel: `${ctx.beat.factualCollection} bulletin "${bulletin.title}"`,
               artifact: bulletin,
               render: (b) => b.body,
               judge: (b) => censorBulletin(ctx, b),
@@ -268,10 +290,10 @@ export async function runPipeline(ctx) {
             const { dispatch: draft } = await runFabulist(ctx, { bulletins });
             const result = await badgerLoop(ctx, {
               vocation: 'reality',
-              artifactLabel: 'observer dispatch (cosmic translation)',
+              artifactLabel: `${ctx.beat.satireCollection} dispatch (cosmic translation)`,
               artifact: draft,
               render: (d) => d.body,
-              judge: (d) => inquisitorGate(ctx, d.body, { wing: 'observer' }),
+              judge: (d) => inquisitorGate(ctx, d.body, { wing: ctx.beat.dispatchWing }),
               redispatch: async (d, faults) => ({
                 ...d,
                 body: await draftDispatch(ctx, bulletins, faults.map((f) => f.description).join('\n')),
@@ -288,8 +310,8 @@ export async function runPipeline(ctx) {
           console.log('[inquisitor] dispatch SPIKED at the fiction firewall');
         }
 
-        // ---- 6. COLLEGE --------------------------------------------------------
-        if (dispatch) {
+        // ---- 6. THE FLOOR — beat-dependent: the College bids, or Galeno rounds -
+        if (dispatch && ctx.beat.satireOwner === 'college') {
           college = await stageStep(ctx, acta, {
             name: 'college',
             fn: async () => {
@@ -297,7 +319,7 @@ export async function runPipeline(ctx) {
               if (session.commentary) {
                 // Commentary is fiction; the firewall applies (regex at minimum,
                 // and the sweep). A leaking commentary costs the Cardinal the floor.
-                const gate = await inquisitorGate(ctx, session.commentary, { wing: 'observer' });
+                const gate = await inquisitorGate(ctx, session.commentary, { wing: ctx.beat.dispatchWing });
                 if (!gate.pass) {
                   session.notes.push(`winner's commentary failed the firewall (${gate.faults.map((f) => f.description).join('; ')}) — dispatch runs without commentary`);
                   session.commentary = null;
@@ -308,6 +330,17 @@ export async function runPipeline(ctx) {
             },
           });
           if (college.winner) console.log(`[college] floor to ${college.winner.slug} (${college.winner.weighted.toFixed(2)})`);
+        } else if (dispatch && ctx.beat.satireOwner === 'galeno') {
+          // The body-beat has one physician: no bidding, Galeno always rounds.
+          // His Rounds are the published fiction piece; the translated dispatch
+          // above was only the case-sheet he read from. Gated on the same firewall.
+          roundsResult = await stageStep(ctx, acta, {
+            name: 'rounds',
+            model: ctx.casting.lazaretto.galeno.model,
+            fn: () => runGaleno(ctx, { dispatch }),
+          });
+          rounds = roundsResult.rounds;
+          console.log(`[galeno] the Archiater's Rounds ${roundsResult.status}`);
         }
       } else {
         acta.stages.push({ stage: 'dispatch', retries: 0, notes: `only ${bulletins.length} bulletins survived the gates — below quiet-day threshold; no dispatch` });
@@ -317,27 +350,34 @@ export async function runPipeline(ctx) {
     const quietDay = nuncio.quietDay || !dispatch;
 
     // ---- 8+9. CHRONICLER + FIREWALL + CONTINUITY BADGER -----------------------
-    const chapter = await stageStep(ctx, acta, {
-      name: 'chronicle',
-      model: ctx.casting.crew.chronicler.model,
-      fn: () => runChronicler(ctx, { dispatch, quietDay }),
-    });
-    console.log(`[chronicler] ch-${String(chapter.n).padStart(3, '0')} ${chapter.status}${chapter.kind ? ` (${chapter.kind}, ${chapter.wordCount} words)` : ''}`);
-
-    // ---- 7-as-amended. ARCHIVIST (merge at write time) ------------------------
-    if (chapter.status !== 'spiked' && !ctx.dryRun) {
-      await stageStep(ctx, acta, {
-        name: 'archive',
-        model: ctx.casting.crew.summarizer.model,
-        fn: () => runArchivist(ctx, { update: chapter.update }),
+    // The novel belongs to the sky-beat. The body-beat (canon §5b: Bulletins +
+    // Rounds only) skips the Chronicle and the Archivist entirely — it never
+    // touches world/, so the two beats cannot even brush shoulders in the state.
+    let chapter = null;
+    if (ctx.beat.makesChronicle) {
+      chapter = await stageStep(ctx, acta, {
+        name: 'chronicle',
+        model: ctx.casting.crew.chronicler.model,
+        fn: () => runChronicler(ctx, { dispatch, quietDay }),
       });
-    } else if (chapter.status !== 'spiked' && ctx.dryRun) {
-      acta.stages.push({ stage: 'archive', retries: 0, notes: 'dry-run: state merge skipped (world/ untouched)' });
+      console.log(`[chronicler] ch-${String(chapter.n).padStart(3, '0')} ${chapter.status}${chapter.kind ? ` (${chapter.kind}, ${chapter.wordCount} words)` : ''}`);
+
+      // ---- 7-as-amended. ARCHIVIST (merge at write time) --------------------
+      if (chapter.status !== 'spiked' && !ctx.dryRun) {
+        await stageStep(ctx, acta, {
+          name: 'archive',
+          model: ctx.casting.crew.summarizer.model,
+          fn: () => runArchivist(ctx, { update: chapter.update }),
+        });
+      } else if (chapter.status !== 'spiked' && ctx.dryRun) {
+        acta.stages.push({ stage: 'archive', retries: 0, notes: 'dry-run: state merge skipped (world/ untouched)' });
+      }
     }
+    const chapterOk = chapter ? chapter.status !== 'spiked' : true; // no chapter → nothing to spike
 
     // ---- 10. PRESS ------------------------------------------------------------
     if (ctx.dryRun) {
-      printDryRun({ nuncio, bulletins, spikedStories, dispatch, college, chapter, acta });
+      printDryRun({ nuncio, bulletins, spikedStories, dispatch, college, rounds: roundsResult, chapter, acta });
       acta.status = 'partial';
       acta.stages.push({ stage: 'press', retries: 0, notes: 'dry-run: nothing published' });
       return { status: 'dry-run', acta, published: [] };
@@ -345,23 +385,37 @@ export async function runPipeline(ctx) {
 
     // ---- THE ILLUMINATOR (fiction wings only) ---------------------------------
     // Run AFTER the gates, BEFORE the press: a plate is derived only from prose
-    // the Inquisitor already blessed, and it is guarded so a missing FAL_KEY (or
-    // a fal error) simply skips — the piece publishes plateless. The fal ledger
-    // is separate from the mind-ledger, so its wage is logged on its own line.
+    // the Inquisitor already blessed, and guarded so a missing FAL_KEY (or a fal
+    // error) simply skips — the piece publishes plateless. The fal ledger is
+    // separate from the mind-ledger, so its wage is logged on its own line. The
+    // fiction pieces differ by beat: the sky-beat gilds its Dispatch and Chapter,
+    // the body-beat gilds Galeno's Rounds.
     let dispatchArt = { illustration: null, illustrationAlt: null };
     let chapterArt = { illustration: null, illustrationAlt: null };
-    const falCostBefore = ctx.falClient?.ledger.totalUsd ?? 0;
-    if (dispatch) {
+    let roundsArt = { illustration: null, illustrationAlt: null };
+    if (dispatch && ctx.beat.satireOwner === 'college') {
+      const falBefore = ctx.falClient?.ledger.totalUsd ?? 0;
       dispatchArt = await runIlluminator(ctx, {
         slug: `${ctx.date}-${slugify(dispatch.title)}`,
         title: dispatch.title, body: dispatch.body, wing: 'observer',
       });
       acta.stages.push({ stage: 'illuminate-dispatch', retries: 0,
         ...(dispatchArt.model ? { model: dispatchArt.model } : {}),
-        costUsd: round6((ctx.falClient?.ledger.totalUsd ?? 0) - falCostBefore),
+        costUsd: round6((ctx.falClient?.ledger.totalUsd ?? 0) - falBefore),
         notes: dispatchArt.notes.join(' | ').slice(0, 2000) });
     }
-    if (chapter.status !== 'spiked') {
+    if (rounds) {
+      const falBefore = ctx.falClient?.ledger.totalUsd ?? 0;
+      roundsArt = await runIlluminator(ctx, {
+        slug: `${ctx.date}-${slugify(rounds.title)}`,
+        title: rounds.title, body: rounds.body, wing: 'rounds',
+      });
+      acta.stages.push({ stage: 'illuminate-rounds', retries: 0,
+        ...(roundsArt.model ? { model: roundsArt.model } : {}),
+        costUsd: round6((ctx.falClient?.ledger.totalUsd ?? 0) - falBefore),
+        notes: roundsArt.notes.join(' | ').slice(0, 2000) });
+    }
+    if (chapterOk && chapter) {
       const falMid = ctx.falClient?.ledger.totalUsd ?? 0;
       chapterArt = await runIlluminator(ctx, {
         slug: `ch-${String(chapter.n).padStart(3, '0')}`,
@@ -373,15 +427,19 @@ export async function runPipeline(ctx) {
         notes: chapterArt.notes.join(' | ').slice(0, 2000) });
     }
 
+    // -- the presses: the factual wing, then the satire wing, both beat-scoped --
+    // The factual writer is the beat's own (Specola for the sky, Lazaretto for
+    // the body); the satire path forks on who owns the floor.
     const stamps = { nihilObstat: ctx.date, imprimatur: ctx.date };
+    const writeFactual = ctx.beat.factualCollection === 'lazaretto' ? writeLazaretto : writeSpecola;
     for (const b of bulletins) {
-      published.push(writeSpecola(ctx.contentDir, {
+      published.push(writeFactual(ctx.contentDir, {
         title: b.title, date: ctx.date, storyId: b.storyId, citations: b.citations,
         stamps: { nihilObstat: ctx.date, ...(b.badgerFlag ? { badgerFlag: b.badgerFlag } : {}) },
         body: b.body,
       }));
     }
-    if (dispatch) {
+    if (dispatch && ctx.beat.satireOwner === 'college') {
       const commentaryBlock = college?.commentary
         ? `\n\n---\n\n## Commentary — ${college.winner.name}, ${college.winner.see}\n\n${college.commentary}\n\n*The floor was claimed: "${college.winner.claimLine}"*`
         : '';
@@ -397,7 +455,19 @@ export async function runPipeline(ctx) {
       }));
       if (college?.winner) recordWin(ctx, college.winner.slug); // durable worldstate, committed with world/
     }
-    if (chapter.status !== 'spiked') {
+    if (rounds) {
+      // The Archiater's Rounds: Galeno's ward-notes ARE the published fiction
+      // piece; the translated dispatch above was only his case-sheet.
+      published.push(writeRounds(ctx.contentDir, {
+        title: rounds.title, date: ctx.date, storyIds: rounds.storyIds,
+        cardinal: roundsResult.cardinal, model: roundsResult.model,
+        illustration: roundsArt.illustration ?? undefined,
+        illustrationAlt: roundsArt.illustrationAlt ?? undefined,
+        stamps: { imprimatur: ctx.date, ...(roundsResult.status === 'flagged' ? { badgerFlag: faultFlag(roundsResult.faults) } : {}) },
+        body: rounds.body,
+      }));
+    }
+    if (chapterOk && chapter) {
       published.push(writeChronicle(ctx.contentDir, {
         n: chapter.n, title: chapter.title, date: ctx.date, kind: chapter.kind,
         dispatchRef: dispatch ? `${ctx.date}` : undefined,
@@ -410,14 +480,18 @@ export async function runPipeline(ctx) {
     }
 
     // The day's verdict, honestly computed:
-    //   quiet-day  — thin news; interstitial only, by design
-    //   published  — dispatch + chapter shipped clean
+    //   quiet-day  — thin news; interstitial only (sky-beat) or nothing (body-beat)
+    //   published  — the beat's factual + satire wings shipped clean
     //   partial    — something shipped, something spiked
     //   spiked     — the gates ate everything; nothing shipped
-    const chapterOk = chapter.status !== 'spiked';
-    if (published.length === 0) acta.status = 'spiked';
-    else if (nuncio.quietDay && chapterOk) acta.status = 'quiet-day';
-    else if (dispatch && chapterOk && spikedStories.length === 0) acta.status = 'published';
+    // "the satire shipped" differs by beat: the sky-beat needs a Dispatch, the
+    // body-beat needs Galeno's Rounds (a spiked Rounds → partial, not published).
+    // Quiet-day is checked first so a thin body-beat day (which prints no
+    // interstitial) is reported quiet, not spiked.
+    const satireOk = ctx.beat.satireOwner === 'galeno' ? !!rounds : !!dispatch;
+    if (nuncio.quietDay && chapterOk) acta.status = 'quiet-day';
+    else if (published.length === 0) acta.status = 'spiked';
+    else if (satireOk && chapterOk && spikedStories.length === 0) acta.status = 'published';
     else acta.status = 'partial';
     if (spikedStories.length) {
       acta.stages.push({ stage: 'spikes', retries: 0, notes: spikedStories.map((s) => `SPIKED "${s.title}": ${s.reason}`).join(' | ').slice(0, 2000) });
@@ -497,7 +571,7 @@ export async function runAngelusPipeline(ctx) {
 // ---------------------------------------------------------------------------
 // odds and ends
 // ---------------------------------------------------------------------------
-function printDryRun({ nuncio, bulletins, spikedStories, dispatch, college, chapter, acta }) {
+function printDryRun({ nuncio, bulletins, spikedStories, dispatch, college, rounds, chapter, acta }) {
   const hr = (label) => console.log(`\n===== ${label} =====`);
   hr('DRY RUN — nothing will be published');
   hr('SELECTED STORIES');
@@ -516,6 +590,10 @@ function printDryRun({ nuncio, bulletins, spikedStories, dispatch, college, chap
     hr(`COMMENTARY (${college.winner.slug})`);
     console.log(college.commentary);
   }
+  if (rounds?.rounds) {
+    hr(`THE ARCHIATER'S ROUNDS (${rounds.status})`);
+    console.log(rounds.rounds.body);
+  }
   if (chapter?.prose) {
     hr(`CHAPTER ch-${String(chapter.n).padStart(3, '0')} (${chapter.kind})`);
     console.log(chapter.prose);
@@ -531,12 +609,13 @@ function round6(x) {
 }
 
 function parseArgs(argv) {
-  const args = { dryRun: false, fixtures: false, angelus: false, date: undefined };
+  const args = { dryRun: false, fixtures: false, angelus: false, date: undefined, beat: undefined };
   for (const a of argv.slice(2)) {
     if (a === '--dry-run') args.dryRun = true;
     else if (a === '--fixtures') args.fixtures = true;
     else if (a === '--angelus') args.angelus = true;
     else if (a.startsWith('--date=')) args.date = a.slice('--date='.length);
+    else if (a.startsWith('--beat=')) args.beat = a.slice('--beat='.length);
     else throw new Error(`unknown flag: ${a}`);
   }
   return args;
@@ -548,8 +627,8 @@ function parseArgs(argv) {
 const invokedDirectly = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
 if (invokedDirectly) {
   const args = parseArgs(process.argv);
-  const ctx = buildContext({ date: args.date, dryRun: args.dryRun, fixtures: args.fixtures });
-  console.log(`[editor] run ${args.angelus ? 'ANGELUS ' : ''}${ctx.date}${ctx.dryRun ? ' (dry-run)' : ''}${ctx.fixturesMode ? ' (fixtures)' : ''}`);
+  const ctx = buildContext({ date: args.date, beat: args.beat, dryRun: args.dryRun, fixtures: args.fixtures });
+  console.log(`[editor] run ${args.angelus ? 'ANGELUS ' : ''}${ctx.date} [beat: ${ctx.beat.id}]${ctx.dryRun ? ' (dry-run)' : ''}${ctx.fixturesMode ? ' (fixtures)' : ''}`);
   console.log(`[editor] content: ${ctx.contentDir}\n[editor] world:   ${ctx.worldDir}\n[editor] runs:    ${ctx.runDir}`);
   const runner = args.angelus ? runAngelusPipeline : runPipeline;
   runner(ctx)

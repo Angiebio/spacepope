@@ -21,8 +21,9 @@ interface Props {
   filename?: string;   // frontmatter `illustration`
   alt?: string;        // frontmatter `illustrationAlt`
   eager?: boolean;     // above the fold on a detail page → eager
+  lens?: string;       // which instrument the plate is seen through (quarantine-aware)
 }
-const { filename, alt, eager = false } = Astro.props;
+const { filename, alt, eager = false, lens = "the Specola's lens" } = Astro.props;
 const plate = illustrationFor(filename);
 ---
 
@@ -51,7 +52,7 @@ const plate = illustrationFor(filename);
         </svg>
       </div>
     </div>
-    <figcaption>Observed through the Specola's lens · illuminated by the Observer's press (generated)</figcaption>
+    <figcaption>Observed through {lens} · illuminated by the Observer's press (generated)</figcaption>
   </figure>
 )}
 

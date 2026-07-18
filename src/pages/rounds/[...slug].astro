@@ -1,0 +1,83 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/rounds/[...slug].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// One ward-note. The byline names the Archiater AND the substrate (the joke is
+// the demo, and the joke lands harder here: the one cardinal set over the
+// flesh is the least fleshly being in the College). The opening plate arrives
+// through the Specola's lens like every fiction piece; the badger flag ships
+// above the fold when honesty demands it; and the footer walks back across the
+// firewall to the Lazaretto bulletins that seeded the note.
+//
+// The cordon (canon §5b) holds in the cross-links: a ward-note reaches back
+// ONLY to the Lazaretto, never to the Specola or the Observer. The reader can
+// always walk from the costume to the citation, but only within the med beat.
+// ==========================================================================
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArchiaterByline from '../../components/ArchiaterByline.astro';
+import StampColophon from '../../components/StampColophon.astro';
+import BadgerFlag from '../../components/BadgerFlag.astro';
+import TopicChips from '../../components/TopicChips.astro';
+import IlluminationPlate from '../../components/IlluminationPlate.astro';
+import { fmtDate } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const rounds = await getCollection('rounds');
+  return rounds.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Walk the storyIds back to their bulletins — the firewall is crossable in the
+// reading direction, on purpose, but only within the cordon: the Lazaretto's
+// own bulletins, never the Specola's.
+const bulletins = await getCollection('lazaretto', (b) => entry.data.storyIds.includes(b.data.storyId));
+---
+
+<Base title={`${entry.data.title} — The Archiater's Rounds`}>
+  <article class="container container-narrow">
+    <header class="page-head">
+      <span class="rubric">ward-note · the archiater's rounds</span>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{fmtDate(entry.data.date)}</p>
+    </header>
+
+    {entry.data.stamps?.badgerFlag && <BadgerFlag note={entry.data.stamps.badgerFlag} />}
+
+    <IlluminationPlate filename={entry.data.illustration} alt={entry.data.illustrationAlt} lens="the Lazaretto's glass" eager />
+
+    <ArchiaterByline cardinal={entry.data.cardinal} model={entry.data.model} />
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {bulletins.length > 0 && (
+      <aside class="source-bulletins">
+        <span class="rubric">the chart beneath the note</span>
+        <ul>
+          {bulletins.map((b) => (
+            <li><a href={`/lazaretto/${b.id}/`}>{b.data.title}</a></li>
+          ))}
+        </ul>
+      </aside>
+    )}
+
+    <TopicChips topics={entry.data.topics} />
+
+    <StampColophon stamps={entry.data.stamps} />
+  </article>
+</Base>
+
+<style>
+  .source-bulletins {
+    margin-top: 2.5rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--c-gold-line-dim);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+  }
+  .source-bulletins ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+</style>

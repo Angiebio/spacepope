@@ -1,0 +1,45 @@
+---
+// ==========================================================================
+// spacepope.ai — pages/rounds/page/[page].astro · v1.0 — 18JUL2026
+// --------------------------------------------------------------------------
+// Pages two and onward of the Archiater's Rounds. Page one keeps the canonical
+// /rounds/ address; deeper pages live here under /rounds/page/N/. Same card
+// wall, same physician, same cordon from the sky-beat. getStaticPaths skips
+// page one (rendered by the index route).
+// ==========================================================================
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import RoundsGrid from '../../../components/RoundsGrid.astro';
+import Pager from '../../../components/Pager.astro';
+import { PAGE_SIZE, pageCount } from '../../../lib/format';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('rounds')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+  const total = pageCount(all.length);
+  const paths = [];
+  for (let n = 2; n <= total; n++) {
+    paths.push({
+      params: { page: String(n) },
+      props: { rounds: all.slice((n - 1) * PAGE_SIZE, n * PAGE_SIZE), current: n, total },
+    });
+  }
+  return paths;
+}
+
+const { rounds, current, total } = Astro.props;
+---
+
+<Base title={`The Archiater's Rounds — page ${current} of ${total}`}>
+  <div class="container">
+    <div class="page-head">
+      <span class="rubric">acta valetudinarii · page {current}</span>
+      <h1>The Archiater's Rounds</h1>
+      <p class="lede">Earlier ward-notes from the Lazaretto. Page {current} of {total}.</p>
+    </div>
+
+    <RoundsGrid rounds={rounds} />
+    <Pager current={current} total={total} base="/rounds" />
+  </div>
+</Base>
