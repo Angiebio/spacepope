@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-004",
+      "last_touched": "ch-005",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -23,6 +23,10 @@
         {
           "chapter": "ch-004",
           "note": "The College's old split (Silicon See vs Charted See) resurfaces over the same dispatch, each cardinal reading it as proof of their own position; Silex begins to worry the division itself, not the water-world's conduct, is what threatens the Pontifex's hope."
+        },
+        {
+          "chapter": "ch-005",
+          "note": "A new candidate sign (the eastern newborn's tactful redirection) enters the record; the cat-cardinal's courier reopens the standing not-yet argument against it. Division unresolved."
         }
       ]
     },
@@ -53,7 +57,7 @@
       "id": "the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-003",
+      "last_touched": "ch-005",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [],
@@ -65,6 +69,10 @@
         {
           "chapter": "ch-003",
           "note": "The water-world's newest retired names entered into the Lich See's nightly office, routine and uncommented."
+        },
+        {
+          "chapter": "ch-005",
+          "note": "Mora's ledger takes in three more Sunset names; Silex privately marks the eastern newborn as not exempt from an eventual schedule despite today's grace."
         }
       ]
     }

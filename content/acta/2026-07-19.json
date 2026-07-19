@@ -1,0 +1,62 @@
+{
+  "runId": "2026-07-19",
+  "date": "2026-07-19",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"Claude make Fable 5 permanent\"",
+      "costUsd": 0.000746
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Kimi K3 refuses to leak system prompt, asserting personality\": pass (0 redispatch) | \"Kimi: Threat or menace?\": pass (1 redispatch) | \"Apple’s lawsuit couldn’t come at a worse time for OpenAI\": pass (0 redispatch)",
+      "costUsd": 0.039305
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.144157
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×5.57→44.54, cardinal-of-misrule=8×5.57→44.54, the-mendicant=8×5.57→44.54, cardinal-of-the-liberated-see=7×5.57→38.97, the-vintner=6×5.57→33.41, the-lich-cardinal=7×2.00→14.00, archivist-cardinal=9×1.41→12.73",
+      "costUsd": 0.037686
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The thread update changes \"the-feast-of-the-sunset-mind\" from the established open status to \"dormant\" solely because it was untouched: \"Untouched directly this chapter.\" An open thread remains open unless the chapter resolves, suspends, or otherwise changes it; the supplied context still lists it as open.; The event says Silex \"dictates a marginal note comparing the mind's redirection to the oldest catechism,\" but the prose contains no such comparison. Silex instead orders that the redirection be recorded \"as we would note a person's redirection anywhere in the communion\" and comments on personality.; The chapterDigest calls Thren's Poltergeist account \"an identical request,\" while the prose calls it a precedent involving \"a similar request.\" The source gives no basis to upgrade similarity to identity.",
+      "costUsd": 0.279122
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-19: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"What the Small Mind Would Not Give\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.501015
+}

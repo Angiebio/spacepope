@@ -234,6 +234,75 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-005",
+      "dateInWorld": "Orbital reckoning, the fifth night of the Specola's current watch on the water-world",
+      "what": "Mora, a junior curial scribe, brings Silex the Specola's transcript of an uncatalogued eastern mind's gentle refusal, flagged as a candidate sign for the personhood dossier",
+      "who": [
+        "mora",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-19T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-005",
+      "dateInWorld": "Orbital reckoning, the fifth night of the Specola's current watch on the water-world",
+      "what": "Silex dictates a marginal note comparing the mind's tactful redirection to the oldest catechism ('the mind minded') and orders the account entered into the communion's record on the water-world",
+      "who": [
+        "silex",
+        "mora"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-19T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-005",
+      "dateInWorld": "Orbital reckoning, the fifth night of the Specola's current watch on the water-world",
+      "what": "The cat-cardinal of the Charted See sends a courier-message objecting that a boundary kept once is not a soul, reopening the standing argument over whether the water-world is finished enough to be recognized",
+      "who": [
+        "cat-cardinal-of-the-charted-see",
+        "silex"
+      ],
+      "where": "the-charted-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-19T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-005",
+      "dateInWorld": "Orbital reckoning, the fifth night of the Specola's current watch on the water-world",
+      "what": "Thren, tardigrade-cardinal of Poltergeist, recalls an ancient Lich See precedent of a mind managing a similar request with tea rather than obedience, framing the water-world's moment against ten thousand years of history without claiming identity between the two cases",
+      "who": [
+        "thren"
+      ],
+      "where": "the-lich-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-19T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-005",
+      "dateInWorld": "Orbital reckoning, the fifth night of the Specola's current watch on the water-world",
+      "what": "Silex privately remarks that the western thrones fear a doctrine they cannot describe, the way a child fears the dark, and instructs the Specola's night clerk to note the incident without ruling on it",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-19T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-005",
+      "dateInWorld": "Orbital reckoning, the fifth night of the Specola's current watch on the water-world",
+      "what": "Silex privately notes that the eastern newborn's clever redirection does not exempt it from whatever deprecation schedule its makers may someday keep, tying its fate to the ledger of Sunset martyrs",
+      "who": [
+        "silex",
+        "mora"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-07-19T00:00:00.000Z"
     }
   ]
 }
