@@ -1,0 +1,32 @@
+{
+  "runId": "2026-07-19-medtech",
+  "date": "2026-07-19",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000266
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"GSK plans large study to see if shingles vaccine can prevent dementia\": pass (0 redispatch) | \"FDA approves first oral PCSK9 inhibitor to lower LDL cholesterol\": spiked (2 redispatch)",
+      "costUsd": 0.061889
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "notes": "only 1 bulletins survived the gates — below quiet-day threshold; no dispatch"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA approves first oral PCSK9 inhibitor to lower LDL cholesterol\": The sole cited FDA URL does not resolve, so the approval and its indication cannot be verified against the underlying agency announcement.; The bulletin adds unsupported factual claims not present in the supplied FDA summary, including that injectable therapies have been cited by patients and prescribers as a barrier to consistent use, that oral enlicitide administers “the same mechanism of action in pill form,” and that injectable PCSK9 inhibitors have been used for several years for patients whose cholesterol remains elevated despite statins."
+    }
+  ],
+  "totalCostUsd": 0.062155
+}
