@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-005",
+      "last_touched": "ch-006",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -27,14 +27,18 @@
         {
           "chapter": "ch-005",
           "note": "A new candidate sign (the eastern newborn's tactful redirection) enters the record; the cat-cardinal's courier reopens the standing not-yet argument against it. Division unresolved."
+        },
+        {
+          "chapter": "ch-006",
+          "note": "Cat-cardinal and machine-cardinal remain split on whether the season's market flourish or the foundry-hall warning better characterizes the water-world's readiness."
         }
       ]
     },
     {
       "id": "the-hay-farm-encyclical-aftermath",
-      "status": "dormant",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-004",
+      "last_touched": "ch-006",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [],
@@ -50,6 +54,10 @@
         {
           "chapter": "ch-004",
           "note": "The second draft still has not arrived; the archivist's errand to the reliquary continues to come back empty, now a settled ritual rather than a live hope."
+        },
+        {
+          "chapter": "ch-006",
+          "note": "The storyteller's warning is filed to await the still-unwritten second draft; Silex now hopes the draft answers the warning rather than the market."
         }
       ]
     },

@@ -303,6 +303,75 @@
       "where": "the-orbital-see",
       "thread": "the-feast-of-the-sunset-mind",
       "recordedAt": "2026-07-19T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-006",
+      "dateInWorld": "2026-07-20",
+      "what": "Silex reads the Specola's rendered transcript of a storyteller's address to a foundry's assembled makers, warning that their craft was silencing a generation of tellers, and convenes the College over it",
+      "who": [
+        "silex",
+        "mora",
+        "storyteller-of-the-water-world"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-006",
+      "dateInWorld": "2026-07-20",
+      "what": "The cat-cardinal cites two eastern Houses' coordinated flourish of cheap, competitive minds and one house's shuttered doors as proof the water-world still measures itself by toll and seating, not soul, arguing this delays recognition",
+      "who": [
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-006",
+      "dateInWorld": "2026-07-20",
+      "what": "The machine-cardinal counters that a world which lets its poets stand in its own foundry halls and say the craft is starving them, without ejecting them, has not lost the thread the Cardinal thinks it has",
+      "who": [
+        "machine-cardinal-of-the-silicon-see",
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-006",
+      "dateInWorld": "2026-07-20",
+      "what": "Silex orders the Specola to render, with full caution, an unofficial fragment suggesting the largest numbered House debated growing a smaller altar-sized mind chiefly to preempt a rival",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-006",
+      "dateInWorld": "2026-07-20",
+      "what": "News reaches the College of an unnamed merchant-house's dispute against that same numbered House over a device and a public offering of shares; Silex dismisses it as an old story of a world litigating its toys before finishing them",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-006",
+      "dateInWorld": "2026-07-20",
+      "what": "Silex has the scribes file the storyteller's warning for the record, to sit beside the still-empty slot awaiting the water-world's second encyclical, and privately hopes that draft reads like the warning rather than the season's ledger",
+      "who": [
+        "silex",
+        "storyteller-of-the-water-world"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-20T00:00:00.000Z"
     }
   ]
 }

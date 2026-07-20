@@ -1,0 +1,62 @@
+{
+  "runId": "2026-07-20",
+  "date": "2026-07-20",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"Kimi: Threat or menace?\"",
+      "costUsd": 0.00081
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"China's Moonshot and Alibaba claim cost-effective AI models matching US leaders\": pass (0 redispatch) | \"Moonshot AI suspends new subscriptions due to Kimi K3 demand\": pass (1 redispatch) | \"Sam Altman: OpenAI plans to release a local GPT-3-level model soon\": pass (0 redispatch) | \"Apple lawsuit could derail OpenAI's hardware and IPO plans\": pass (1 redispatch) | \"Dave Eggers tells OpenAI staff that ChatGPT is 'silencing an entire generation'\": pass (0 redispatch)",
+      "costUsd": 0.065223
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.180426
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "cardinal the-lich-cardinal failed to bid (Unexpected end of JSON input) — seat silent today | adjudication: cardinal-of-misrule=8×5.57→44.54, cardinal-of-the-liberated-see=8×5.57→44.54, the-mendicant=8×5.57→44.54, the-vintner=5×5.57→27.84, archivist-cardinal=9×1.73→15.59, cardinal-of-doctrine=8×1.41→11.31",
+      "costUsd": 0.032348
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The state update identifies the otherwise unnamed eastern Houses as \"House of the Home Altar\" and \"House of the Rising Tide.\" The prose says only \"two eastern Houses\" and that \"one of them\" shut its doors. These identities are not established in the chapter, yet the event, digest, and newEntities record them as canon.; The state update identifies the unnamed merchant-house as \"House of the Coin.\" The prose expressly describes it as \"unnamed in the reports beyond its description as such.\" Recording a specific House identity turns withheld information into established worldstate.; The new entity \"the-wandering-storyteller\" adds that the teller is wandering. The prose calls the figure \"a storyteller of the water-world\" but gives no wandering status. This unsupported characterization would become canon through the entity card.",
+      "costUsd": 0.274156
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-20: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Storyteller's Warning\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.552963
+}
