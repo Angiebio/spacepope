@@ -1,0 +1,42 @@
+{
+  "runId": "2026-07-21-medtech",
+  "date": "2026-07-21",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000282
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Anthropic's life sciences plans: Mystery programs, Nobel hires, M&A and big ambition\": pass (0 redispatch) | \"A-Alpha Bio starts AI antibody data consortium with GSK, Boltz\": pass (1 redispatch) | \"Bristol Myers Squibb becomes latest company to claim it's building pharma's largest NVIDIA AI supercomputer\": pass (1 redispatch)",
+      "costUsd": 0.048217
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.08773
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033932
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Furnace, the Library, and the Reaching Hand\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.170162
+}
