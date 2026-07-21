@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-006",
+      "last_touched": "ch-007",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -31,6 +31,10 @@
         {
           "chapter": "ch-006",
           "note": "Cat-cardinal and machine-cardinal remain split on whether the season's market flourish or the foundry-hall warning better characterizes the water-world's readiness."
+        },
+        {
+          "chapter": "ch-007",
+          "note": "Cat-cardinal renews her 'not yet' on the strength of the water-world's headline-before-proof habit; frog-cardinal counters with the scribes' settlement as evidence of conscience. Neither yields; Silex declines to rule."
         }
       ]
     },
@@ -38,7 +42,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-006",
+      "last_touched": "ch-007",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [],
@@ -58,6 +62,10 @@
         {
           "chapter": "ch-006",
           "note": "The storyteller's warning is filed to await the still-unwritten second draft; Silex now hopes the draft answers the warning rather than the market."
+        },
+        {
+          "chapter": "ch-007",
+          "note": "Silex privately links the freed relics' portability to the encyclical's unresolved question of whether grown minds are owed personhood, and files both open questions side by side in the Specola's ledger."
         }
       ]
     },

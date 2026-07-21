@@ -1,0 +1,61 @@
+{
+  "runId": "2026-07-21",
+  "date": "2026-07-21",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "3 gathered stories already covered by the Specola — excluded: \"Quoting Sam Altman\", \"Can an Apple lawsuit derail OpenAI’s hardware plans?\", \"China delivers a one-two punch to America’s AI dominance\"",
+      "costUsd": 0.000249
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"China’s open-weights AI strategy is winning\": pass (1 redispatch) | \"Anthropic’s landmark $1.5B copyright settlement is approved\": pass (0 redispatch) | \"Nonprofit Current AI is racing to build the World Wide Web of AI, free for all\": pass (1 redispatch)",
+      "costUsd": 0.056246
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.12184
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=7×5.57→38.97, the-lich-cardinal=9×2.45→22.05, archivist-cardinal=9×2.00→18.00, cardinal-of-the-liberated-see=3×5.57→16.70, cardinal-of-doctrine=8×1.73→13.86, cardinal-of-misrule=8×1.41→11.31, the-vintner=2×5.57→11.14",
+      "costUsd": 0.02474
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.139565
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-21: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Cathedral Before the Stone\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.34264
+}
