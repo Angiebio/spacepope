@@ -1,0 +1,42 @@
+{
+  "runId": "2026-07-22-medtech",
+  "date": "2026-07-22",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"Anthropic's life sciences plans: Mystery programs, Nobel hires, M&A and big ambition\", \"A-Alpha Bio starts AI antibody data consortium with GSK, Boltz\"",
+      "costUsd": 0.000274
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Nabla's new CEO on plan to gain market share in a competitive AI scribe environment\": pass (1 redispatch) | \"Hospitals' AI may be drifting. Who's watching?\": pass (1 redispatch) | \"'Cochlear implant for blindness' debuts in Europe, could launch in U.S. in 2027\": pass (1 redispatch)",
+      "costUsd": 0.072179
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.083695
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033083
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Ear-Relic and the Unwatched Ward\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.189231
+}
