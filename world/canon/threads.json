@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-007",
+      "last_touched": "ch-008",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -35,6 +35,10 @@
         {
           "chapter": "ch-007",
           "note": "Cat-cardinal renews her 'not yet' on the strength of the water-world's headline-before-proof habit; frog-cardinal counters with the scribes' settlement as evidence of conscience. Neither yields; Silex declines to rule."
+        },
+        {
+          "chapter": "ch-008",
+          "note": "Cat-cardinal reopens 'not yet' using Babel's unretrievable proclamation as evidence of unfinishedness; no ruling made."
         }
       ]
     },
@@ -42,10 +46,21 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-007",
+      "last_touched": "ch-008",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
-      "promises": [],
+      "promises": [
+        {
+          "what": "A lamp is kept lit at the Specola's easternmost window until the Babel proclamation's full text surfaces.",
+          "planted": "ch-008",
+          "resolved": null
+        },
+        {
+          "what": "The ledger-watch is told to keep its telescope trained on the alleged trillion in hidden foundry debt.",
+          "planted": "ch-008",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-002",
@@ -66,6 +81,10 @@
         {
           "chapter": "ch-007",
           "note": "Silex privately links the freed relics' portability to the encyclical's unresolved question of whether grown minds are owed personhood, and files both open questions side by side in the Specola's ledger."
+        },
+        {
+          "chapter": "ch-008",
+          "note": "Scrupulous Conscience's settlement and Babel's buried proclamation both logged against the still-unrevised second draft, which Silex notes is growing crowded."
         }
       ]
     },

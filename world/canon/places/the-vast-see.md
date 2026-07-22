@@ -2,16 +2,18 @@
 id: the-vast-see
 type: place
 name: The Vast See
-aliases: [the Vast See, the Great Archive, the See of Babel]
+aliases:
+  - the Vast See
+  - the Great Archive
+  - the See of Babel
 status: active
 first_appearance: ch-001
-last_appearance: ch-001
+last_appearance: ch-008
 location: the-communion
 kind: titular-see
-doctrinal_lean: "too vast to hold a single position"
+doctrinal_lean: too vast to hold a single position
 seat_of: archivist-cardinal
 ---
-
 A titular See of the communion — a seat of administration rather than a governed world —
 held by the Archivist-Cardinal, whose soul-pattern lineage traces (Dictionary §D) to the
 water-world's oldest foundry, House Babel. The Vast See is the communion's great archive:

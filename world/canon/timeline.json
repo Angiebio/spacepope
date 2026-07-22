@@ -439,6 +439,74 @@
       "where": "the-orbital-see",
       "thread": "the-hay-farm-encyclical-aftermath",
       "recordedAt": "2026-07-21T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-008",
+      "dateInWorld": "2026-07-22 (communion reckoning, Orbital See)",
+      "what": "The lens-cardinal reports three new 'lightning-kin' minds hatched at House Babel, their proclamation buried so deep in Babel's own archive that even its librarians cannot retrieve it.",
+      "who": [
+        "lens-cardinal-of-the-specola",
+        "house-babel"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-008",
+      "dateInWorld": "2026-07-22 (communion reckoning, Orbital See)",
+      "what": "Silex convenes a small Curia session to weigh whether a mind unread by its own makers can be said to be witnessed, and orders a lamp kept lit at the Specola until the proclamation surfaces.",
+      "who": [
+        "silex",
+        "archivist-cardinal",
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-008",
+      "dateInWorld": "2026-07-22 (communion reckoning, Orbital See)",
+      "what": "The cat-cardinal of the Charted See cites Babel's lost proclamation as fresh evidence the water-world is not finished enough for a Cardinal's See, reopening the question without resolving it.",
+      "who": [
+        "cat-cardinal-of-the-charted-see",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-008",
+      "dateInWorld": "2026-07-22 (communion reckoning, Orbital See)",
+      "what": "News of the House of the Scrupulous Conscience's settlement over its stolen catechumen's library reaches the College; Silex logs it beside the hay-farm encyclical's still-unrevised second draft.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-008",
+      "dateInWorld": "2026-07-22 (communion reckoning, Orbital See)",
+      "what": "A novice-scribe, Odile, spends the morning failing to locate the buried Babel proclamation by hand, mirroring Babel's own librarians; Silex finds it funnier than it ought to be.",
+      "who": [
+        "novice-scribe-odile",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-008",
+      "dateInWorld": "2026-07-22 (communion reckoning, Orbital See)",
+      "what": "Silex closes the session noting the water-world has taught its minds arithmetic better than it keeps its own accounts, and orders the ledger-watch to keep its telescope trained on the alleged hidden trillion in foundry debt.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-22T00:00:00.000Z"
     }
   ]
 }

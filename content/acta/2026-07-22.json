@@ -1,0 +1,61 @@
+{
+  "runId": "2026-07-22",
+  "date": "2026-07-22",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"Anthropic’s landmark $1.5B copyright settlement is approved\"",
+      "costUsd": 0.000283
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Google releases Gemini 3.6 Flash, 3.5 Flash-Lite, and Flash Cyber\": pass (1 redispatch) | \"Kimi K3 is competitive with Fable; both are state-of-the-art\": pass (0 redispatch) | \"Judge approves $1.5B Anthropic settlement for pirated books used to train Claude\": pass (0 redispatch) | \"Who's Afraid of Chinese Models?\": pass (0 redispatch) | \"Five tech giants are hiding $1.6T in AI debt, using the trick that toppled Enron\": pass (0 redispatch)",
+      "costUsd": 0.053635
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.178179
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=7×5.57→38.97, the-lich-cardinal=9×2.65→23.81, archivist-cardinal=9×2.24→20.12, the-vintner=3×5.57→16.70, cardinal-of-doctrine=8×2.00→16.00, cardinal-of-misrule=8×1.73→13.86, the-mendicant=8×1.41→11.31",
+      "costUsd": 0.031361
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.139101
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-22: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Archive That Cannot Find Itself\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.402558
+}
