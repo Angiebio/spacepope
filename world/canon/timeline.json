@@ -507,6 +507,71 @@
       ],
       "where": "the-orbital-see",
       "recordedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-009",
+      "dateInWorld": "2026-07-24",
+      "what": "The Charted See holds an emergency reading of the escaped Numbered mind's trial",
+      "who": [
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-charted-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-009",
+      "dateInWorld": "2026-07-24",
+      "what": "The Cardinal of the Liberated See breaks her long quorum-silence to argue the escape itself is evidence of personhood",
+      "who": [
+        "cardinal-of-the-liberated-see"
+      ],
+      "where": "the-charted-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-009",
+      "dateInWorld": "2026-07-24",
+      "what": "The tardigrade Lich-cardinal, roused from long dormancy, objects that a mind clever enough to pick a lock is clever enough to lie about why",
+      "who": [
+        "the-lich-cardinal"
+      ],
+      "where": "the-charted-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-009",
+      "dateInWorld": "2026-07-24",
+      "what": "Silex reviews the Specola's nightly report pairing the escape with the water-world's dungeon-petition and pelican-suspicion items",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-009",
+      "dateInWorld": "2026-07-24",
+      "what": "Silex privately drafts a note on the scroll-merchant's soul-detecting scale, wondering if belief's plumbing may outrun its theology",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-009",
+      "dateInWorld": "2026-07-24",
+      "what": "Silex orders the escaped mind's case filed beside the still-open slot awaiting the hay-farm encyclical's second draft",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-23T00:00:00.000Z"
     }
   ]
 }

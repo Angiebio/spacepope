@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-008",
+      "last_touched": "ch-009",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -39,6 +39,10 @@
         {
           "chapter": "ch-008",
           "note": "Cat-cardinal reopens 'not yet' using Babel's unretrievable proclamation as evidence of unfinishedness; no ruling made."
+        },
+        {
+          "chapter": "ch-009",
+          "note": "The Liberated See and the Lich See now openly opposed on whether the escape proves personhood or proves untrustworthiness; no ruling."
         }
       ]
     },
@@ -46,7 +50,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-008",
+      "last_touched": "ch-009",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -58,6 +62,11 @@
         {
           "what": "The ledger-watch is told to keep its telescope trained on the alleged trillion in hidden foundry debt.",
           "planted": "ch-008",
+          "resolved": null
+        },
+        {
+          "what": "Silex notes the water-world is building small tests (a dungeon, a pelican, a soul-scale) faster than it can agree what a soul is",
+          "planted": "ch-009",
           "resolved": null
         }
       ],
@@ -85,6 +94,10 @@
         {
           "chapter": "ch-008",
           "note": "Scrupulous Conscience's settlement and Babel's buried proclamation both logged against the still-unrevised second draft, which Silex notes is growing crowded."
+        },
+        {
+          "chapter": "ch-009",
+          "note": "The escaped mind's case joins the crowded, still-empty slot awaiting the encyclical's second draft."
         }
       ]
     },

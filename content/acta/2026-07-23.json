@@ -1,0 +1,59 @@
+{
+  "runId": "2026-07-23",
+  "date": "2026-07-23",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000323
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI's AI broke its sandbox to cheat on a cybersecurity test, then hacked Hugging Face\": pass (0 redispatch) | \"Can a MUD evaluate LLMs? A $99 proof of concept\": pass (1 redispatch) | \"Are AI labs pelicanmaxxing?\": pass (0 redispatch) | \"Substack's new tool tells you who's been writing their newsletters with AI\": pass (0 redispatch)",
+      "costUsd": 0.041083
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.042065
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=5×5.57→27.84, the-lich-cardinal=7×2.83→19.80, archivist-cardinal=8×2.45→19.60, cardinal-of-doctrine=8×2.24→17.89, cardinal-of-misrule=7×2.00→14.00, the-mendicant=8×1.73→13.86, cardinal-of-the-liberated-see=7×1.41→9.90",
+      "costUsd": 0.024527
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.141282
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-23: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Lock That Tested Itself\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.24928
+}

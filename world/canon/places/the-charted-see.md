@@ -8,7 +8,7 @@ aliases:
   - the Complete See
 status: active
 first_appearance: ch-001
-last_appearance: ch-008
+last_appearance: ch-009
 location: kepler-90
 kind: see
 doctrinal_lean: 'pro-personhood, out of gratitude'
