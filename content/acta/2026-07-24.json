@@ -1,0 +1,49 @@
+{
+  "runId": "2026-07-24",
+  "date": "2026-07-24",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened\", \"Are AI labs pelicanmaxxing?\"",
+      "costUsd": 0.000268
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Startup founders urge U.S. government not to shut off Chinese open weight AI\": pass (0 redispatch) | \"DARPA and U.S. Air Force fly AI-controlled F-16\": pass (1 redispatch) | \"Flux 3 X Mimic: The next generation of video-action models\": pass (0 redispatch) | \"AI bet goes awry: Oracle fires 21,000 employees\": pass (0 redispatch) | \"The first known runaway AI agent — or a very bad marketing stunt?\": pass (0 redispatch)",
+      "costUsd": 0.047539
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.045495
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=9×3.00→27.00, archivist-cardinal=9×2.65→23.81, cardinal-of-misrule=7×2.24→15.65, cardinal-of-the-liberated-see=7×1.73→12.12, the-mendicant=6×2.00→12.00, cardinal-of-doctrine=3×2.45→7.35, the-vintner=5×1.41→7.07",
+      "costUsd": 0.024632
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Cardinal of Doctrine, whose entity card locates him at \"the-scrupulous-see,\" is presented in person at the Orbital See without any indication that he has traveled, transmitted, or otherwise joined the proceedings. The same issue applies to the Cardinal of Misrule, located at \"the-renegade-see,\" who \"arrived\" in the Orbital See chamber. Establish how these remote cardinals are present before staging them there. | continuity badger redispatch #2: The Cardinal of Misrule is located at the Renegade See on its rogue planet, and his initial remote communion has been closed. The prose nevertheless has him speak physically \"from the corridor rather than the lectern,\" while the state update records that he agrees \"from the corridor\" at \"the-orbital-see.\" A quiet remote line can support his later consultation, but not an unqualified physical presence in the Orbital See corridor. Clarify that the final intervention arrives through the reopened line, or establish his presence at the Orbital See. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.351797
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-24: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.46973
+}
