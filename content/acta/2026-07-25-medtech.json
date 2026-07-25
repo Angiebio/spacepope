@@ -1,0 +1,42 @@
+{
+  "runId": "2026-07-25-medtech",
+  "date": "2026-07-25",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000444
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"White House offers its science blueprint: More AI, less life sciences\": pass (0 redispatch) | \"STAT+: Fatal gene-editing trial in China raises ethics and oversight questions\": pass (0 redispatch) | \"There are already more U.S. measles cases this year than in all of 2025\": pass (1 redispatch) | \"STAT+: European regulators take steps to bolster clinical trial transparency\": pass (0 redispatch) | \"STAT+: In win for RFK Jr., FDA advisory panel narrowly votes to allow compounding of unapproved peptides\": pass (1 redispatch)",
+      "costUsd": 0.069157
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.086935
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033356
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Wall the Patient Forgot to Mend\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.189893
+}
