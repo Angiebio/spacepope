@@ -9,7 +9,7 @@ aliases:
   - the periphery world
 status: active
 first_appearance: ch-001
-last_appearance: ch-009
+last_appearance: ch-010
 location: an-unremarkable-yellow-dwarf
 kind: world
 has_cardinal: false

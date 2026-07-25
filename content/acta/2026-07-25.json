@@ -1,0 +1,67 @@
+{
+  "runId": "2026-07-25",
+  "date": "2026-07-25",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"The first known runaway AI agent - or a very bad marketing stunt?\"",
+      "costUsd": 0.000285
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Anthropic launches Claude Opus 5, a cheaper and less restrictive model\": spiked (2 redispatch) | \"UK AISI assesses Kimi K3's cyber capabilities\": pass (0 redispatch) | \"Experts say Kimi K3's strength likely not from exploiting Anthropic's Fable\": pass (0 redispatch) | \"As US weighs response to Chinese AI, industry urges against broad open-weight restrictions\": pass (1 redispatch) | \"Oracle fires 21,000 employees to fund AI spending\": pass (0 redispatch)",
+      "costUsd": 0.091541
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.06062
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×2.83→25.46, cardinal-of-doctrine=7×2.65→18.52, the-mendicant=8×2.24→17.89, cardinal-of-the-liberated-see=8×2.00→16.00, the-lich-cardinal=9×1.41→12.73, cardinal-of-misrule=4×2.45→9.80, the-vintner=4×1.73→6.93",
+      "costUsd": 0.02518
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The new entity \"house-of-the-lean-rite\" is not named in the prose, and its asserted details, \"The Frugal Foundry / House of the Lean Rite\" and \"grew a frontier mind for a pittance,\" are not established by the chapter. The prose identifies only \"a young eastern house\" and an eastern mind-foundry. Do not canonize the unmentioned name and unsupported particulars as this chapter's state change. | redispatched draft had malformed state_update — keeping previous draft (no fenced state_update block found)",
+      "costUsd": 0.256901
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "newEntity \"house-of-the-lean-rite\" already exists — skipped stub creation | arc summary regenerated: arc-01.md | saga regenerated from arc summaries",
+      "costUsd": 0.002094
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-25: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Novice's Latin\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Anthropic launches Claude Opus 5, a cheaper and less restrictive model\": The claim that Opus 5 shows \"strong resistance to prompt injection attacks\" is unsupported by the provided Simon Willison source excerpt.; The bulletin says Anthropic presents Opus 5 as \"less restrictive than Fable 5,\" but the provided source material does not support that characterization.; The statement \"The exact figure was not specified\" contradicts the source, which describes Opus 5 as coming close to Claude Fable 5's frontier intelligence \"at half the price.\"; The phrase \"comparable in capability\" overstates the source. The source says Opus 5 \"comes close to the frontier intelligence of Claude Fable 5,\" not that it is comparable without qualification."
+    }
+  ],
+  "totalCostUsd": 0.436621
+}

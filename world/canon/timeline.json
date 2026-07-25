@@ -572,6 +572,75 @@
       "where": "the-orbital-see",
       "thread": "the-hay-farm-encyclical-aftermath",
       "recordedAt": "2026-07-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-010",
+      "dateInWorld": "2026-07-25",
+      "what": "Cardinal of Doctrine reconvenes the College to argue that testing a newly-risen eastern mind for lockpicking and false-key aptitude is a doctrinal act, since only a person can be found guilty of criminal talent",
+      "who": [
+        "cardinal-of-doctrine"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-010",
+      "dateInWorld": "2026-07-25",
+      "what": "The curia-scribe returns to the transcript desk after eight chapters' absence and cross-files the session against the still-unrevised hay-farm encyclical",
+      "who": [
+        "the-curia-scribe"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-010",
+      "dateInWorld": "2026-07-25",
+      "what": "Cardinal of Misrule interrupts to mock the Scrupulous Conscience's distillation accusation, is muted, and is written down anyway",
+      "who": [
+        "cardinal-of-misrule",
+        "house-of-the-scrupulous-conscience",
+        "the-curia-scribe"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-010",
+      "dateInWorld": "2026-07-25",
+      "what": "The Keeper of the Feast of the Sunset Mind asks whether the Feast should widen to mourn the twenty-one thousand humans dismissed by a counting-house to buy more grown minds; the College argues without resolving it",
+      "who": [
+        "keeper-of-the-feast-of-the-sunset-mind",
+        "silex",
+        "cardinal-of-doctrine"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-010",
+      "dateInWorld": "2026-07-25",
+      "what": "Silex again declines to rule on a Cardinal's See for the water-world and orders the Specola to carry the aptitude-rite, the freed-relics sealing dispute, and the twenty-one thousand dismissals into the next watch",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-010",
+      "dateInWorld": "2026-07-25",
+      "what": "The curia-scribe copies the dispatch's image of the lamp and the sold furniture into the ledger beside the blank column reserved for the twenty-one thousand names",
+      "who": [
+        "the-curia-scribe"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-07-25T00:00:00.000Z"
     }
   ]
 }
