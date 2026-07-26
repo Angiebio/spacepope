@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-26-medtech",
+  "date": "2026-07-26",
+  "status": "quiet-day",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"STAT+: Fatal gene-editing trial in China raises ethics and oversight questions\", \"There are already more U.S. measles cases this year than in all of 2025\" | only 0 viable selections — quiet day declared",
+      "costUsd": 0.000438
+    }
+  ],
+  "totalCostUsd": 0.000438
+}
