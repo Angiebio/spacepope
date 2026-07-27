@@ -1,0 +1,42 @@
+{
+  "runId": "2026-07-27-medtech",
+  "date": "2026-07-27",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.00019
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Schrödinger debuts AI agent Bunsen to use its physics software\": pass (0 redispatch) | \"AstraZeneca looks to AI to ease risk in late-stage trials, speed up filings\": pass (1 redispatch) | \"AstraZeneca’s pipeline struggles continue as it reports disappointing data in cancer, rare disease\": pass (0 redispatch)",
+      "costUsd": 0.034743
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.06773
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.037093
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Reaches for Its Own Scalpel\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.139756
+}
