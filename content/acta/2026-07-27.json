@@ -1,0 +1,59 @@
+{
+  "runId": "2026-07-27",
+  "date": "2026-07-27",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000261
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"An inside look at the relay market powering token resellers and fraud\": pass (0 redispatch) | \"Hugging Face CEO calls for radical transparency after unprecedented OpenAI hack\": pass (0 redispatch) | \"Librarians are hosting viral Avoiding AI workshops for people fed up with Big Tech\": pass (1 redispatch)",
+      "costUsd": 0.036874
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.064354
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.00→24.00, cardinal-of-misrule=8×2.83→22.63, the-mendicant=8×2.65→21.17, the-lich-cardinal=9×2.00→18.00, the-vintner=8×2.24→17.89, archivist-cardinal=9×1.73→15.59, cardinal-of-the-liberated-see=6×2.45→14.70 | winner's commentary failed the firewall (The phrase 'Silicon See' is a direct reference to the real-world Silicon Valley, violating the requirement to use only sanctioned in-universe terminology for locations and entities.) — dispatch runs without commentary",
+      "costUsd": 0.039196
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.140401
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-27: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Drop and the Syllable\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.281086
+}

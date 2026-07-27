@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-010",
+      "last_touched": "ch-011",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -47,6 +47,10 @@
         {
           "chapter": "ch-010",
           "note": "Silex again declines to rule; the aptitude-rite and freed-relics dispute both sent forward into the next night's watch as further undecided evidence."
+        },
+        {
+          "chapter": "ch-011",
+          "note": "College remains split; grey-market pricing and the lone apostle's act both entered as dueling evidence, resolved neither way."
         }
       ]
     },
@@ -54,7 +58,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-010",
+      "last_touched": "ch-011",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -106,6 +110,10 @@
         {
           "chapter": "ch-010",
           "note": "The curia-scribe's return restores the ledger; the lockpicking-aptitude session is cross-filed as a ninth instance of testing before defining."
+        },
+        {
+          "chapter": "ch-011",
+          "note": "Second-draft ledger gains one more blank line; still unrevised."
         }
       ]
     },
