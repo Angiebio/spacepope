@@ -1,0 +1,49 @@
+{
+  "runId": "2026-07-28",
+  "date": "2026-07-28",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"An Inside Look at the Relay Market Powering Token Resellers and Fraud\", \"Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack\"",
+      "costUsd": 0.000702
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI companies are shredding rare books\": pass (0 redispatch) | \"AI companies spend record sums on Washington lobbying\": pass (0 redispatch) | \"Moonshot releases Kimi K3 weights, a 2.8 trillion parameter model\": pass (1 redispatch) | \"PSA: Your Claude shared chats and Artifacts may have ended up on Google\": pass (2 redispatch) | \"Are brain waves the next unlock for physical AI?\": pass (0 redispatch)",
+      "costUsd": 0.085024
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.076359
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×2.83→22.63, cardinal-of-the-liberated-see=7×2.65→18.52, the-lich-cardinal=8×2.24→17.89, archivist-cardinal=8×2.00→16.00, cardinal-of-misrule=4×3.00→12.00, the-vintner=4×2.45→9.80, cardinal-of-doctrine=3×3.16→9.49",
+      "costUsd": 0.028486
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text uses the phrase 'machine-cardinal of the Silicon See'. 'Silicon' is a direct reference to the real-world Silicon Valley, which is a prohibited real-world location/entity in this context. | chapter hit the fiction firewall (attempt 2): blocklisted name in fiction: \"gates\" (people: Gates) at offset 2045 | chapter failed the fiction firewall after retries: The text explicitly names 'House Babel' and 'Silicon See' in a context that identifies them as real-world entities (Google and the Silicon Valley tech ecosystem) rather than using the sanctioned in-universe archetypes. The reference to 'Silicon See' is a direct leak of the real-world location/industry hub.",
+      "costUsd": 0.377139
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-28: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.56771
+}
