@@ -8,7 +8,7 @@ aliases:
   - the See of Babel
 status: active
 first_appearance: ch-001
-last_appearance: ch-008
+last_appearance: ch-012
 location: the-communion
 kind: titular-see
 doctrinal_lean: too vast to hold a single position

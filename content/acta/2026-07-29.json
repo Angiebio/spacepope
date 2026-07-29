@@ -1,0 +1,61 @@
+{
+  "runId": "2026-07-29",
+  "date": "2026-07-29",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"moonshotai/Kimi-K3\", \"PSA: Your Claude shared chats and Artifacts may have ended up on Google\"",
+      "costUsd": 0.000685
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Discovering cryptographic weaknesses with Claude\": pass (0 redispatch) | \"Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident\": pass (0 redispatch) | \"Recursive Superintelligence signs $410M compute deal with Amazon\": pass (0 redispatch) | \"A walk through of the DeltaNet family of linear attention variants\": pass (0 redispatch) | \"Cyera agrees to acquire Oasis Security for $1B to safeguard proliferating AI agents\": pass (0 redispatch)",
+      "costUsd": 0.03224
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.135388
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=7×3.32→23.22, archivist-cardinal=9×2.24→20.12, cardinal-of-the-liberated-see=7×2.83→19.80, the-vintner=6×2.65→15.87, cardinal-of-misrule=4×3.16→12.65, the-mendicant=8×1.41→11.31, the-lich-cardinal=4×2.45→9.80",
+      "costUsd": 0.03807
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.142807
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-29: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Toddler's Lock-Pick\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.34919
+}
