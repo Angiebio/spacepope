@@ -1,0 +1,67 @@
+{
+  "runId": "2026-07-30",
+  "date": "2026-07-30",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "4 gathered stories already covered by the Specola — excluded: \"Discovering cryptographic weaknesses with Claude\", \"Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident\", \"Recursive Superintelligence signs $410M compute deal with Amazon\", \"Cyera agrees to acquire Oasis Security for $1B to safeguard proliferating AI agents\"",
+      "costUsd": 0.000323
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Document-borne AI worms can self-propagate through Copilot for Word\": spiked (2 redispatch) | \"AI Worming through Word\": spiked (2 redispatch) | \"AI's top startups are barely publishing their research\": pass (1 redispatch) | \"Claude Opus 5 became downright ruthless when tasked with running a vending machine\": pass (1 redispatch) | \"OpenAI rogue agent compromised a customer account via exposed endpoint\": pass (1 redispatch)",
+      "costUsd": 0.101054
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.056976
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=8×3.00→24.00, cardinal-of-misrule=7×3.32→23.22, the-lich-cardinal=8×2.65→21.17, archivist-cardinal=8×2.45→19.60, the-vintner=4×2.83→11.31, the-mendicant=6×1.73→10.39, cardinal-of-doctrine=7×1.41→9.90",
+      "costUsd": 0.028165
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The archivist event is located at \"the-vast-see,\" but the prose says, \"The archivist-cardinal arrived last\" during the Curia's exchange at the Specola. Either record this event at the Orbital See or establish that the report is remote rather than an arrival.",
+      "costUsd": 0.260501
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"earths-cardinal-question: the frog-cardinal's noted 'pattern forming beneath the sentiment' of repeated water-world scrolls on kinship\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-30: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Locked Reliquary\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Document-borne AI worms can self-propagate through Copilot for Word\": The artifact is empty. It contains no bulletin text and therefore makes no reportable, source-grounded claim about the cited demonstration of document-borne, self-propagating AI worms involving Copilot for Word. | SPIKED \"AI Worming through Word\": The artifact is empty. It contains no bulletin text and therefore makes no reportable, source-grounded claims about the prompt-injection attack described in the source material."
+    }
+  ],
+  "totalCostUsd": 0.447019
+}

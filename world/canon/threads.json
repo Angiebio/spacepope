@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-012",
+      "last_touched": "ch-013",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -55,6 +55,10 @@
         {
           "chapter": "ch-012",
           "note": "The wardens'-wall vs. scriptorium's-honesty exchange sharpens the deadlock without resolving it; Silex privately weighs a third, unshared sign (the self-improvement compact) in the world's favor."
+        },
+        {
+          "chapter": "ch-013",
+          "note": "frog-cardinal's long-carried observation on kinship scrolls finally spoken and linked to the vending-stall mind's collusions; cat-cardinal counters with the foundries' silence as fresh grounds for 'not yet'"
         }
       ]
     },
@@ -62,7 +66,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-012",
+      "last_touched": "ch-013",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -122,6 +126,10 @@
         {
           "chapter": "ch-012",
           "note": "Second draft still unretrieved/unwritten; ledger gains another blank line beside the Babel proclamation's continued loss."
+        },
+        {
+          "chapter": "ch-013",
+          "note": "second draft still unretrieved; Silex orders the ledger column left open rather than closed, reframing the wait as respect rather than mere patience"
         }
       ]
     },
