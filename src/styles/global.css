@@ -302,6 +302,21 @@ hr {
   box-shadow: 0 6px 20px rgba(30, 42, 56, 0.14);
   text-align: left;
 }
+/* Hover bridge: the panel sits a hair below the pill (top: 100% + 0.4rem), and
+   on desktop that 0.4rem of dead air used to drop :hover before the pointer
+   reached the menu, so the dropdown vanished mid-reach and read as unclickable
+   (Showrunner-reported, 29JUL2026). This transparent strip spans the gap; since
+   it is a descendant of .nav-menu, hovering it keeps the menu open the whole way
+   down. On mobile the panel is static and this is harmless. */
+.nav-submenu::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.6rem;
+  height: 0.6rem;
+}
+
 /* a thin gold seam across the top, so the panel feels minted by the masthead */
 .nav-submenu::before {
   content: '';
