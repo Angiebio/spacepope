@@ -1,0 +1,32 @@
+{
+  "runId": "2026-07-30-medtech",
+  "date": "2026-07-30",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000676
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Why benchmarking clinical LLMs from OpenEvidence, Doximity is complicated\": pass (1 redispatch) | \"Clinical chatbots are taking medicine by storm, but should doctors trust them?\": spiked (2 redispatch)",
+      "costUsd": 0.074986
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "notes": "only 1 bulletins survived the gates — below quiet-day threshold; no dispatch"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Clinical chatbots are taking medicine by storm, but should doctors trust them?\": The claim that “STAT News describes a trust gap emerging” is not supported by the supplied title or summary. The phrase and the asserted finding should be removed or attributed only if supported by the full report.; “The Specola's log records the item as filed” introduces an unsupported in-universe record and is not factual reportage derived from the source material.; The statement that the coverage “centers on the tension between rapid clinical adoption and the adequacy of current methods” goes beyond the supplied summary, which says only that developers criticize benchmarking for safety and accuracy."
+    }
+  ],
+  "totalCostUsd": 0.075662
+}
