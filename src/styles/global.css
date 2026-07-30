@@ -351,7 +351,17 @@ hr {
    be clipped at 375px. The masthead wraps to lines; this simply drops open
    in the flow, tap to expand. */
 @media (max-width: 700px) {
-  .nav-menu { display: block; margin: 0.2rem auto 0; }
+  /* Each real-news door takes a full-width line and centers, so the two gold
+     pills STACK one above the other instead of one wrapping awkwardly beside
+     the text links (Showrunner's call, 18JUL2026). flex-basis:100% forces the
+     line break in the wrapping nav; column keeps each pill above its own panel. */
+  .nav-menu {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.25rem 0 0;
+  }
   .nav-submenu {
     position: static;
     transform: none;

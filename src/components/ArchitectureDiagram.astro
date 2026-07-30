@@ -206,11 +206,13 @@ const angelus = { x: 570, y: pressY - 190, w: 190, h: 84 };
     border-radius: 260px 260px 8px 8px / 200px 200px 8px 8px;
     padding: clamp(1.2rem, 3vw, 2rem) clamp(0.4rem, 1.5vw, 1rem) 0.6rem;
   }
-  /* On a phone the whole window would shrink past legibility; better a
-     window you can pan than a window you cannot read. */
+  /* On a phone the window scales to fit the screen rather than forcing a
+     horizontal scroll (Showrunner's call, 18JUL2026). The text goes small, but
+     the whole shape is visible at a glance and the About prose names every
+     stage; pinch-zoom reads the fine print. Fitting beats panning here. */
   @media (max-width: 640px) {
-    .arch-diagram { overflow-x: auto; }
-    .arch-diagram svg { min-width: 560px; }
+    .arch-diagram { padding-inline: clamp(0.4rem, 2vw, 1rem); }
+    .arch-diagram svg { width: 100%; min-width: 0; }
   }
   .arch-diagram figcaption {
     text-align: center;
