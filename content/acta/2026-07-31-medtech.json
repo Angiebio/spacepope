@@ -1,0 +1,43 @@
+{
+  "runId": "2026-07-31-medtech",
+  "date": "2026-07-31",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.0003
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Latigo reports mid-stage success for would-be rival to Vertex's pain drug Journavx\": pass (1 redispatch) | \"FDA expert committee votes in favor of Replimune's melanoma treatment\": pass (0 redispatch) | \"FDA panel nixes Capricor's Duchenne drug over efficacy concerns\": pass (1 redispatch) | \"FTC sues Hims & Hers, alleging it misled consumers and violated privacy\": pass (0 redispatch) | \"Key Senate panel backs Trump's picks for CDC, pandemic preparedness\": pass (1 redispatch)",
+      "costUsd": 0.077632
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.20185
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032235
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Five Bedsides, One Long Night\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.312017
+}
