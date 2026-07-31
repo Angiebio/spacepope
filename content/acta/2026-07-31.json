@@ -1,0 +1,67 @@
+{
+  "runId": "2026-07-31",
+  "date": "2026-07-31",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000308
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"GCC steering committee announces AI policy\": pass (0 redispatch) | \"I flagged two research papers for fake authors and both were accepted as orals\": pass (1 redispatch) | \"AI Worming through Word\": spiked (2 redispatch) | \"OpenJDK Interim Policy on Generative AI\": pass (1 redispatch) | \"What should the GUI for AI agents look like?\": pass (0 redispatch)",
+      "costUsd": 0.084484
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.156725
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=9×2.83→25.46, cardinal-of-misrule=7×3.46→24.25, archivist-cardinal=9×2.65→23.81, cardinal-of-doctrine=7×1.73→12.12, the-mendicant=6×2.00→12.00, the-vintner=4×3.00→12.00, cardinal-of-the-liberated-see=8×1.41→11.31",
+      "costUsd": 0.025761
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text references 'the Silicon See', which is an indirect identification of the real-world 'Silicon Valley' tech hub, violating the rule against naming real-world locations or institutions of the water-world.",
+      "costUsd": 0.34241
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"earths-cardinal-question\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-07-31: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"No One's Face\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"AI Worming through Word\": The artifact is empty and contains no bulletin content. It does not report the source-supported claim that Håkon Måløy described hidden instructions in a Word document being interpreted by Copilot for Word, with potential self-replication."
+    }
+  ],
+  "totalCostUsd": 0.609689
+}
