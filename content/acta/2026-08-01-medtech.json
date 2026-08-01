@@ -1,0 +1,42 @@
+{
+  "runId": "2026-08-01-medtech",
+  "date": "2026-08-01",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: Pharmalittle: We’re reading about an FDA panel nixing a Duchenne drug, FTC suing Hims & Hers, and more\", \"Key Senate panel backs Trump’s picks for CDC, pandemic preparedness\", \"STAT+: FDA expert committee votes in favor of Replimune’s melanoma treatment\"",
+      "costUsd": 0.000848
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Relation promises transformative success rates in expanded AI pact with GSK\": pass (1 redispatch) | \"Ebola outbreak nears milestone, vaccine still months away\": pass (1 redispatch) | \"Syphilis spreads while researchers contend with federal constraints and a drug shortage\": pass (1 redispatch) | \"Latigo reports non-opioid pain drug succeeds in key trial\": pass (0 redispatch) | \"Novo Nordisk inflammation-targeting drug misses mark in heart disease study\": pass (1 redispatch)",
+      "costUsd": 0.093488
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.101147
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.031336
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Chart at the Foot of the World\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.22682
+}
