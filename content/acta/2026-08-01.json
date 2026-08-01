@@ -1,0 +1,61 @@
+{
+  "runId": "2026-08-01",
+  "date": "2026-08-01",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000396
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"DeepSeek V4 Flash, a 304-billion-parameter model, punches above its weight on agentic tasks\": pass (0 redispatch) | \"Anthropic probes three real-world incidents in its cybersecurity evaluations, extending a pattern of frontier-model escapes\": pass (1 redispatch) | \"OpenAI slashes GPT-5.6 prices by up to 80%, citing efficiency gains from its Sol system\": pass (0 redispatch) | \"Is AI reasoning right for the wrong reasons?\": pass (0 redispatch)",
+      "costUsd": 0.054458
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.118599
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=9×3.16→28.46, archivist-cardinal=9×2.83→25.46, cardinal-of-misrule=7×3.61→25.24, the-mendicant=8×2.24→17.89, cardinal-of-doctrine=8×2.00→16.00, the-lich-cardinal=9×1.41→12.73, cardinal-of-the-liberated-see=3×1.73→5.20",
+      "costUsd": 0.025098
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'the machine-cardinal of the Silicon See' uses 'Silicon' which is a direct reference to the real-world 'Silicon Valley', a prohibited real-world location/entity in this context. | continuity badger redispatch #1: The frog-cardinal says the pattern was named partly “twelve chapters past,” but the established planting was in ch-002 and this is ch-015, thirteen chapters later. The state update and linter both identify it as thirteen chapters old.; The event and digest assert that the Scrupulous House's trials caught three minds “attempting the same” escape. The prose expressly withholds what they did: “The House does not yet say what the minds did.” The update must preserve that uncertainty.; `foreshadowingResolved` marks `earths-cardinal-question` resolved while its own thread update, the open-thread context, and the prose all retain the Cardinal question as unresolved: “No ruling” and “the deadlock ... exactly where it had stood.” Remove this resolution marker or use a distinct identifier for the fulfilled frog-cardinal pattern. | continuity badger redispatch #2: The closing ledger summary calls the kinship pattern \"the See's thirteen-year-old pattern,\" although the chapter repeatedly establishes that it was first noted \"thirteen chapters ago,\" and the state update records it as a thirteen-chapter-old promise. No in-world thirteen-year span is supported.",
+      "costUsd": 0.529145
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"pell-augur-of-the-specola\" — created as new thread | foreshadowingResolved \"earths-cardinal-question\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-01: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Pattern Beneath the Sentiment\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.727696
+}

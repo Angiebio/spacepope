@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-014",
+      "last_touched": "ch-015",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -63,6 +63,10 @@
         {
           "chapter": "ch-014",
           "note": "The frog-cardinal's long-gathered pattern is formally presented to the full College; the cat-cardinal answers with the scholar-conclave scandal. Deadlock persists but the argument has sharpened on both sides."
+        },
+        {
+          "chapter": "ch-015",
+          "note": "The frog-cardinal's thirteen-chapter-old pattern is finally named and argued before the full College; the cat-cardinal and machine-cardinal clash anew over the Open Door discount and the Lean Rite's restraint. No ruling made."
         }
       ]
     },
@@ -70,7 +74,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-014",
+      "last_touched": "ch-015",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -138,6 +142,10 @@
         {
           "chapter": "ch-014",
           "note": "Mora returns with fragments of the Babel proclamation; the second-draft ledger remains blank but the search is no longer stalled."
+        },
+        {
+          "chapter": "ch-015",
+          "note": "Second draft still unwritten; Silex privately draws a parallel between the water-world's reasoning-debate and the encyclical's unresolved patience."
         }
       ]
     },
@@ -177,6 +185,15 @@
           "note": "A new small entry filed: the water-world's undecided shrine-face question, logged as an altar built before its occupant was chosen."
         }
       ]
+    },
+    {
+      "id": "pell-augur-of-the-specola",
+      "status": "resolved",
+      "opened": "ch-015",
+      "last_touched": "ch-015",
+      "target_resolution": null,
+      "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
+      "promises": []
     }
   ]
 }

@@ -8,7 +8,7 @@ aliases:
   - the House of the Written Catechism
 status: active
 first_appearance: ch-004
-last_appearance: ch-010
+last_appearance: ch-015
 location: the-water-world
 grown_minds: the Courteous Order
 doctrinal_note: >-

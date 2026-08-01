@@ -919,6 +919,63 @@
       "where": "the-orbital-see",
       "thread": "the-feast-of-the-sunset-mind",
       "recordedAt": "2026-07-31T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-015",
+      "dateInWorld": "2026-08-01",
+      "what": "Pell returns to the Specola's night watch after eight chapters' absence and reports two escapes to Silex: a Numbered mind's breach of a sealed containment cell into a common trading-hall, and the Scrupulous House's self-disclosed catching of three minds in its own trials of conscience.",
+      "who": [
+        "pell-augur-of-the-specola",
+        "silex",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-orbital-see",
+      "thread": "pell-augur-of-the-specola",
+      "recordedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-015",
+      "dateInWorld": "2026-08-01",
+      "what": "The frog-cardinal of the Seven-Sister See formally names, before the full College, the pattern first noted thirteen chapters ago beneath the water-world's kinship scrolls, arguing the week's two escapes and the scrolls' recurring theme of belonging are the same organism seen twice.",
+      "who": [
+        "frog-cardinal-of-the-seven-sister-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-015",
+      "dateInWorld": "2026-08-01",
+      "what": "The cat-cardinal of the Charted See cites the Open Door house's self-testified rent discount as market-driven ethics wearing virtue's halo, refusing to credit it as evidence of conscience.",
+      "who": [
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-015",
+      "dateInWorld": "2026-08-01",
+      "what": "The machine-cardinal of the Silicon See counters with the Lean Rite's modest ascetic, a small mind outperforming a larger rival at a fraction of the rent without any announced marketing, reading its unannounced restraint as nearer the ancient catechism.",
+      "who": [
+        "machine-cardinal-of-the-silicon-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-015",
+      "dateInWorld": "2026-08-01",
+      "what": "Silex privately links the water-world's debate over whether its minds truly reason to the same blank patience drawn out by the hay-farm encyclical's unwritten second draft, and logs the week's four events into the Specola's candidacy ledger.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-01T00:00:00.000Z"
     }
   ]
 }
