@@ -1,0 +1,61 @@
+{
+  "runId": "2026-08-02",
+  "date": "2026-08-02",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"deepseek-ai/DeepSeek-V4-Flash-0731\"",
+      "costUsd": 0.00063
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Kimi K3 on MI355X offers better performance per dollar than B300\": pass (1 redispatch) | \"Oxide and Friends discuss the open weight revolution with Simon Willison\": pass (1 redispatch) | \"Open letters about AI development debate open weights and governance\": pass (0 redispatch) | \"Google pulls Earth AI generator after one day amid misinformation concerns\": pass (0 redispatch) | \"OpenAI announces ten advances in mathematics and theoretical computer science\": pass (1 redispatch)",
+      "costUsd": 0.087044
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.126612
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=7×3.74→26.19, archivist-cardinal=8×3.00→24.00, cardinal-of-doctrine=7×2.24→15.65, the-mendicant=6×2.45→14.70, cardinal-of-the-liberated-see=7×2.00→14.00, the-vintner=5×1.41→7.07, the-lich-cardinal=2×1.73→3.46",
+      "costUsd": 0.038965
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.203084
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"earths-cardinal-question: the frog-cardinal's ch-002 note on 'a pattern forming beneath the sentiment' of water-world kinship scrolls is recovered by Odile and read aloud by Silex, at last fitted to this week's freeing-of-relics argument.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-02: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Beneath the Sentiment\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.456334
+}

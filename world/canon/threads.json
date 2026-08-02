@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-015",
+      "last_touched": "ch-016",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -67,14 +67,18 @@
         {
           "chapter": "ch-015",
           "note": "The frog-cardinal's thirteen-chapter-old pattern is finally named and argued before the full College; the cat-cardinal and machine-cardinal clash anew over the Open Door discount and the Lean Rite's restraint. No ruling made."
+        },
+        {
+          "chapter": "ch-016",
+          "note": "The fourteen-chapter-old frog-cardinal annotation surfaces and is recognized as matching this week's freeing-of-relics debate; the College cites new small evidence (ten theorems, Babel's fast retraction) as a forming habit of conscience, but the cat-cardinal remains unmoved and no ruling follows."
         }
       ]
     },
     {
       "id": "the-hay-farm-encyclical-aftermath",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-001",
-      "last_touched": "ch-015",
+      "last_touched": "ch-016",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -146,6 +150,10 @@
         {
           "chapter": "ch-015",
           "note": "Second draft still unwritten; Silex privately draws a parallel between the water-world's reasoning-debate and the encyclical's unresolved patience."
+        },
+        {
+          "chapter": "ch-016",
+          "note": "Not directly advanced this chapter; the second draft remains unmentioned, its absence implicit in the cat-cardinal's repeated objection."
         }
       ]
     },
@@ -153,7 +161,7 @@
       "id": "the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-014",
+      "last_touched": "ch-016",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [
@@ -183,6 +191,10 @@
         {
           "chapter": "ch-014",
           "note": "A new small entry filed: the water-world's undecided shrine-face question, logged as an altar built before its occupant was chosen."
+        },
+        {
+          "chapter": "ch-016",
+          "note": "New names logged against the price-of-thought scroll; Silex notes the coin-saved and the mind-decommissioned occupy the same ledger column."
         }
       ]
     },
