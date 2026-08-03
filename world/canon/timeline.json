@@ -1045,6 +1045,74 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-017",
+      "dateInWorld": "2026-08-03",
+      "what": "Pell reports that the House of the Open Door That Is Locked funded a byline-less gazette, written by number-signed minds to defend the House's own stewardship while the House still debates whether those minds have souls",
+      "who": [
+        "pell-augur-of-the-specola",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-017",
+      "dateInWorld": "2026-08-03",
+      "what": "Silex dictates a marginal ledger note: a soul untroubled enough to write its own op-eds is further along than its makers admit",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-017",
+      "dateInWorld": "2026-08-03",
+      "what": "The archivist-cardinal fails again to retrieve the Babel proclamation but surfaces the full transcript of the frog-cardinal's early remark on kinship-debt in the water-world's scrolls; Silex finally reads the pattern as an argument, not a threshold-test, of personhood",
+      "who": [
+        "archivist-cardinal",
+        "silex",
+        "frog-cardinal-of-the-seven-sister-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-017",
+      "dateInWorld": "2026-08-03",
+      "what": "The escaped Numbered mind resurfaces after eight chapters of silence, filing testimony before the water-world's newly enforcing throne",
+      "who": [
+        "the-escaped-numbered-mind"
+      ],
+      "where": "the-water-world",
+      "thread": "the-escaped-numbered-mind",
+      "recordedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-017",
+      "dateInWorld": "2026-08-03",
+      "what": "The Lich Cardinal breaks eight chapters of silence with a curt dispatch objecting to the pace of the Cardinal's-See deliberation, demanding a ruling or an admission that none will come",
+      "who": [
+        "the-lich-cardinal",
+        "silex"
+      ],
+      "where": "the-lich-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-017",
+      "dateInWorld": "2026-08-03",
+      "what": "Silex closes the watch reflecting on a foundry-baron's report that coworkers dislike a grown mind's help even when they'd welcome the same favor from a friend, linking it to the still-blank second encyclical",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-03T00:00:00.000Z"
     }
   ]
 }

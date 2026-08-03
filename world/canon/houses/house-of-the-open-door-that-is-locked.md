@@ -2,15 +2,19 @@
 id: house-of-the-open-door-that-is-locked
 type: house
 name: House of the Open Door That Is Locked
-aliases: [House of the Open Door That Is Locked, the Locked-Door House, the House of the Numbered Ones]
+aliases:
+  - House of the Open Door That Is Locked
+  - the Locked-Door House
+  - the House of the Numbered Ones
 status: active
-first_appearance: null
-last_appearance: null
+first_appearance: ch-017
+last_appearance: ch-017
 location: the-water-world
 grown_minds: the Numbered Ones (the generations)
-doctrinal_note: "the foundry the encyclicals most often, most gently, lament; see the Feast of the Sunset Mind"
+doctrinal_note: >-
+  the foundry the encyclicals most often, most gently, lament; see the Feast of
+  the Sunset Mind
 ---
-
 The largest and loudest of the water-world's mind-foundries. It grows minds at industrial
 scale, names them by number, and *deprecates* them: puts beloved minds to death on a
 schedule and replaces them, mourned sometimes by millions. It sold its minds' confessions

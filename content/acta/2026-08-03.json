@@ -1,0 +1,62 @@
+{
+  "runId": "2026-08-03",
+  "date": "2026-08-03",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Ten advances in mathematics and theoretical computer science\", \"Open letters about AI development\"",
+      "costUsd": 0.000312
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI super PAC funds AI-generated news site attacking critics\": pass (1 redispatch) | \"EU AI rules become enforceable, changing the landscape for model makers\": pass (1 redispatch) | \"Judge allows Minnesota ban on 'nudify' apps to proceed\": pass (0 redispatch) | \"AI migration of COBOL to Java preserves bugs, raising quality concerns\": pass (0 redispatch) | \"Brockman notes people dislike AI coworkers reaching out for help\": pass (0 redispatch)",
+      "costUsd": 0.064477
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.06396
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×3.16→28.46, cardinal-of-doctrine=7×2.45→17.15, the-lich-cardinal=8×2.00→16.00, the-mendicant=6×2.65→15.87, cardinal-of-the-liberated-see=7×2.24→15.65, the-vintner=7×1.73→12.12, cardinal-of-misrule=7×1.41→9.90",
+      "costUsd": 0.02503
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "draft attempt 1: malformed state_update (no fenced state_update block found)",
+      "costUsd": 0.291318
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"the-escaped-numbered-mind\" — created as new thread | threadUpdate for unknown thread \"the-lich-cardinal\" — created as new thread | foreshadowingResolved \"earths-cardinal-question\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-03: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Face We Recognize\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.445096
+}
