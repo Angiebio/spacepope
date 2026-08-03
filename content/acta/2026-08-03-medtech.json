@@ -1,0 +1,42 @@
+{
+  "runId": "2026-08-03-medtech",
+  "date": "2026-08-03",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000218
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Are AI scribes useful tools in medical education, or a crutch that imperils learning?\": pass (0 redispatch) | \"Opinion: We lead the Federation of State Medical Boards. Here’s what we think about licensing AI to practice medicine\": pass (1 redispatch) | \"Opinion: I’m a neurologist. I’ve delivered ALS diagnoses. Then I received one myself\": pass (0 redispatch)",
+      "costUsd": 0.03353
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.062433
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.031389
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Hand That Forgot to Chart\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.12757
+}
