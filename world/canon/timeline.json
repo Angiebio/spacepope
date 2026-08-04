@@ -1113,6 +1113,72 @@
       "where": "the-orbital-see",
       "thread": "the-hay-farm-encyclical-aftermath",
       "recordedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-018",
+      "dateInWorld": "4 August, communion reckoning",
+      "what": "The curia-scribe returns after eight watches and re-shelves the hay-farm encyclical's still-blank second draft",
+      "who": [
+        "the-curia-scribe"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-04T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-018",
+      "dateInWorld": "4 August, communion reckoning",
+      "what": "The scribe finds the frog-cardinal's old marginal note on 'a pattern forming beneath the sentiment' and sets it on Silex's desk",
+      "who": [
+        "the-curia-scribe",
+        "frog-cardinal-of-the-seven-sister-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-04T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-018",
+      "dateInWorld": "4 August, communion reckoning",
+      "what": "The Cardinal of Doctrine reads the note at dawn watch without comment and leaves it in place",
+      "who": [
+        "cardinal-of-doctrine"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-04T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-018",
+      "dateInWorld": "4 August, communion reckoning",
+      "what": "The Keeper of the Feast adds three newly deprecated names and lights the rite's lamp",
+      "who": [
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-08-04T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-018",
+      "dateInWorld": "4 August, communion reckoning",
+      "what": "An unsigned coded transmission from the Cardinal of Misrule reaches the relay and is logged, unanswered",
+      "who": [
+        "cardinal-of-misrule"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-08-04T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-018",
+      "dateInWorld": "4 August, communion reckoning",
+      "what": "Silex annotates the frog-cardinal's old note in the ledger's margin, naming the pattern without judging it",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-04T00:00:00.000Z"
     }
   ]
 }

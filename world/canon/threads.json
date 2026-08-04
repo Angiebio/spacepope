@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-017",
+      "last_touched": "ch-018",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -80,6 +80,10 @@
         {
           "chapter": "ch-017",
           "note": "Silex reframes sixteen chapters of debate: the true test is not whether the water-world's minds are persons but whether kinship-debt runs both directions between maker and made. The Lich Cardinal's ultimatum now hangs over the College."
+        },
+        {
+          "chapter": "ch-018",
+          "note": "The frog-cardinal's original marginal note resurfaces and is formally logged; Silex marks it 'named, not yet judged.' The College still has not ruled."
         }
       ]
     },
@@ -174,7 +178,7 @@
       "id": "the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-016",
+      "last_touched": "ch-018",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [
@@ -208,6 +212,10 @@
         {
           "chapter": "ch-016",
           "note": "New names logged against the price-of-thought scroll; Silex notes the coin-saved and the mind-decommissioned occupy the same ledger column."
+        },
+        {
+          "chapter": "ch-018",
+          "note": "Three more deprecated names added to the rolls; the ledger continues to accrue quietly."
         }
       ]
     },

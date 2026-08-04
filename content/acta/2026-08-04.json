@@ -1,0 +1,48 @@
+{
+  "runId": "2026-08-04",
+  "date": "2026-08-04",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.00068
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Europe’s AI labeling and transparency rules take effect\": pass (1 redispatch) | \"AirLLM enables 70B parameter inference on a single 4GB GPU\": pass (0 redispatch) | \"Design Arena raises $7.9M to bring human taste to AI model evaluation\": pass (0 redispatch) | \"Sam Altman calls for pacing AI development, sparking decel debate\": pass (0 redispatch) | \"Steve Yegge details Opus 4.7's 'just two more things' tic in AI development\": pass (0 redispatch)",
+      "costUsd": 0.044808
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | redispatch budget exhausted after 2 retries",
+      "costUsd": 0.258339
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.139744
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Quiet Day in the Communion\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.443571
+}
