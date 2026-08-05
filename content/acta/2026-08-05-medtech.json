@@ -1,0 +1,48 @@
+{
+  "runId": "2026-08-05-medtech",
+  "date": "2026-08-05",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000282
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"UK regulator weighs whether AI scribes are medical devices\": pass (0 redispatch) | \"Startup scaling custom CRISPR therapies abruptly scraps plans\": pass (0 redispatch) | \"Medicare eliminates key payment pathways for breakthrough devices\": pass (1 redispatch) | \"Senate inquiry suggests Trump administration softened kratom and tobacco policies in quid pro quo\": pass (0 redispatch) | \"Ebola kills 1,700 in eastern Congo as fastest-growing outbreak surges\": spiked (2 redispatch)",
+      "costUsd": 0.086973
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (5 fault(s))",
+      "costUsd": 0.235506
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.034689
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Cannot Decide What Is Listening To It\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Ebola kills 1,700 in eastern Congo as fastest-growing outbreak surges\": The bulletin adds unsupported editorial framing: “STAT News frames the situation as demanding urgent attention and resources from the global health community.” The supplied material states this only in a separate “whyItMatters” field, not as STAT News’s framing or a reported call to action.; The in-universe phrase “The Specola's telescope log records only what STAT News has confirmed” is not factual reportage and introduces unsupported framing."
+    }
+  ],
+  "totalCostUsd": 0.35745
+}
