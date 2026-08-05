@@ -1,0 +1,54 @@
+{
+  "runId": "2026-08-05",
+  "date": "2026-08-05",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "3 gathered stories already covered by the Specola — excluded: \"Quoting Steve Yegge\", \"Design Arena creators raise $7.9 million to bring taste to AI models\", \"Europe’s AI labeling and transparency rules are now in effect\"",
+      "costUsd": 0.000751
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Open-weight AI models approach frontier capabilities, safety gap persists\": pass (1 redispatch) | \"Mistral releases Shieldstral, a 3B open-weights model for multimodal moderation\": pass (2 redispatch) | \"Maple-Preview: Ternary 20B MoE model runs at 120 tok/s on an iPhone\": spiked (2 redispatch) | \"Systematic study examines plateau of AI benchmarks\": pass (2 redispatch) | \"LLM 0.32 adds reasoning traces, OpenAI Responses, and server-side tools\": pass (0 redispatch)",
+      "costUsd": 0.165245
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.127279
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.00→24.00, cardinal-of-doctrine=7×2.83→19.80, the-lich-cardinal=8×2.45→19.60, cardinal-of-the-liberated-see=7×2.65→18.52, the-vintner=8×2.24→17.89, archivist-cardinal=9×1.73→15.59, cardinal-of-misrule=7×2.00→14.00",
+      "costUsd": 0.025858
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Lich Cardinal cannot \"return, eight chapters silent\" in ch-019. The open thread records that he already returned after eight chapters' silence in ch-017, so this repeats and contradicts his established reappearance.; The Lich Cardinal thread update repeats the contradicted claim that he \"Returns after eight chapters\" despite his established return in ch-017.; The eastern lamp is extinguished although the established promise says it remains lit \"until the Babel proclamation's full text surfaces.\" The clerk explicitly reports, \"It is not the full text,\" only a fragment.; The state update says the Babel fragment lets the vigil be extinguished and marks as resolved the promise that the lamp remain lit until the proclamation's full text surfaces. A fragment does not satisfy that condition. | continuity badger redispatch #2: The House of the Vintner is established as a small, elegant foundry that releases minds in modest vintages rather than industrial floods. Calling its latest output \"three billion drops of soul-pattern\" contradicts that scale and temperament, especially when it is presented as merely \"another vintage.\"; The ledger logic contradicts itself. Silex files the doorkeeper mind \"beside\" the Feast's fallen and \"not among\" them, but then says \"The Feast's rolls swelled by one line.\" A mind explicitly excluded from the fallen cannot enlarge the Feast's rolls; assign it to the separate threshold-mind column without counting it as a Feast entry.; The event summary calls the Vintner output \"the Continental Foundry's newest\" even though the established entity is the House of the Vintner, a water-world foundry whose lineage is associated with the Continental See. This introduces an unsupported, potentially distinct foundry name and loses the explicit House identity used in the prose. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.512183
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-05: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Maple-Preview: Ternary 20B MoE model runs at 120 tok/s on an iPhone\": The broad negative claim, \"No company statement, press release, or third-party technical review has been located,\" is not supported by the supplied Hacker News metadata or by the unresolved linked URL. Limit it to the supplied record, or provide a documented search basis."
+    }
+  ],
+  "totalCostUsd": 0.831316
+}
