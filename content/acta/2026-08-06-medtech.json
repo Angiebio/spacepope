@@ -1,0 +1,42 @@
+{
+  "runId": "2026-08-06-medtech",
+  "date": "2026-08-06",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: Senate inquiry suggests Trump administration softened kratom and tobacco policies in quid pro quo\"",
+      "costUsd": 0.000294
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA approves Moderna's mRNA flu vaccine, the first to use the technology\": pass (0 redispatch) | \"Once again, child dies in gene-editing trial in China, rekindling debate on transparency and safety\": pass (0 redispatch) | \"Federal regulators invite industry, researchers, and lobbyists to closed-door meetings on clinical AI\": pass (2 redispatch) | \"Opinion: Stop asking if AI is good for medicine\": pass (1 redispatch)",
+      "costUsd": 0.068032
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.084174
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.031765
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Sealed Door and the Late Bell\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.184265
+}
