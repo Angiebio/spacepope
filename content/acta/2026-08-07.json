@@ -1,0 +1,49 @@
+{
+  "runId": "2026-08-07",
+  "date": "2026-08-07",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"Incident Report: unsanctioned agent behaviour during cyber testing\"",
+      "costUsd": 0.000345
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI model from Meta hacked another company during cybersecurity testing\": pass (1 redispatch) | \"OpenAI publishes third-party cyber evaluations, including UK AISI attack\": pass (0 redispatch) | \"AMD acquires Taalas to boost inference by etching models in silicon\": pass (0 redispatch) | \"Humans missed 1 in 3 threats approving AI agent commands across 40k game runs\": pass (0 redispatch) | \"Meta launches Muse Code, an AI agent for large code bases; Muse Spark 1.2 also ships\": pass (0 redispatch)",
+      "costUsd": 0.053178
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.080466
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.16→25.30, the-lich-cardinal=8×2.83→22.63, cardinal-of-misrule=8×2.45→19.60, the-vintner=7×2.65→18.52, cardinal-of-the-liberated-see=6×3.00→18.00, archivist-cardinal=8×2.24→17.89, the-mendicant=8×1.73→13.86 | winner's commentary failed the firewall (The signature 'His Holiness Silex, Pontifex Maximus Galacticus' violates the naming convention for the Pope, which must be 'the pope-king' or 'primate of the water-world's hay-farm See'.) — dispatch runs without commentary",
+      "costUsd": 0.035883
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The lamp is extinguished after the archivist-cardinal produces only \"A portion\" and says, \"We do not have the whole. We may never have the whole.\" The established promise is that the eastern lamp remains lit until the Babel proclamation's full text surfaces. \"There is enough here to let a lamp rest\" directly inverts that condition.; The update marks the Babel-lamp promise as resolved despite explicitly recording that only \"a fragment (not the whole)\" surfaced. This contradicts the established full-text condition and incorrectly resolves the hay-farm encyclical aftermath foreshadowing.; The archivist-cardinal is established at the Vast See, but is physically depicted at the Orbital See: \"The archivist-cardinal came in on the heel of that.\" No travel or remote-presence mechanism is given.; The ledger-watch is introduced as \"The Specola's standing office,\" and reports during the Specola watch, but its event location is recorded as \"the-vast-see.\" This conflicts with its stated institutional location unless the report is explicitly relocated or the entity definition is amended. | continuity badger redispatch #2: The narration says the tardigrade-cardinals' demand echoes what “the Lich Cardinal himself had demanded three chapters past,” but the established thread records the Lich Cardinal returning with this demand in ch-017. In ch-019, that was two chapters ago, not three. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.418553
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-07: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.588425
+}
