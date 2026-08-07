@@ -1,0 +1,15 @@
+{
+  "runId": "2026-08-07-medtech",
+  "date": "2026-08-07",
+  "status": "quiet-day",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"FDA approves Moderna’s mRNA flu vaccine, the first to use the technology\", \"Opinion: STAT+: Stop asking if AI is good for medicine\" | only 1 viable selections — quiet day declared",
+      "costUsd": 0.000248
+    }
+  ],
+  "totalCostUsd": 0.000248
+}
