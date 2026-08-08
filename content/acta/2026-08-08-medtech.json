@@ -1,0 +1,48 @@
+{
+  "runId": "2026-08-08-medtech",
+  "date": "2026-08-08",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000287
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI won't enhance physician autonomy. It will further diminish it\": pass (1 redispatch) | \"NIH plans to block international researchers on visas from accessing key funding avenue\": pass (0 redispatch) | \"FDA approves engineered viral immunotherapy for advanced melanoma\": spiked (2 redispatch) | \"Study reveals new role for tau, a top target for Alzheimer's drug development\": pass (0 redispatch)",
+      "costUsd": 0.088767
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.18041
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032859
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Mirror, the Corridor, and the Scaffold\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA approves engineered viral immunotherapy for advanced melanoma\": The central claim, “The U.S. Food and Drug Administration has granted accelerated approval to Tudriqev, generic name vusolimogene oderparepvec-wtpg,” cannot be verified because the sole cited FDA URL does not resolve. The bulletin itself acknowledges that the approval and drug designation “cannot at this writing be independently confirmed.”; The artifact presents the unverified approval as a factual lead before qualifying it later. “The U.S. Food and Drug Administration has granted accelerated approval” exceeds what the available, inaccessible source can support.; The in-universe and meta-reporting language, including “The Specola notes a citation problem” and “this observatory,” violates the required factual-reportage format."
+    }
+  ],
+  "totalCostUsd": 0.302322
+}
