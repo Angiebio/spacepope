@@ -1,0 +1,48 @@
+{
+  "runId": "2026-08-08",
+  "date": "2026-08-08",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000646
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI slows Astra model development over cybersecurity concerns\": pass (0 redispatch) | \"Timeline of OpenAI's accidental attack against Hugging Face revealed at Black Hat\": pass (0 redispatch) | \"Oracle bans AI-generated code from OpenJDK\": pass (2 redispatch) | \"Suno to watermark all AI-generated songs amid legal battles\": pass (0 redispatch) | \"Jill Lepore's 'Artificial State' explores how Silicon Valley mimics government\": pass (0 redispatch)",
+      "costUsd": 0.069474
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.043725
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=8×3.00→24.00, cardinal-of-doctrine=7×3.32→23.22, cardinal-of-the-liberated-see=7×3.16→22.14, archivist-cardinal=9×2.45→22.05, the-vintner=7×2.83→19.80, the-mendicant=6×2.00→12.00, cardinal-of-misrule=4×2.65→10.58",
+      "costUsd": 0.024678
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The eastern lamp is extinguished when the clerk brings only a fragment of Babel's proclamation: \"Not all of it. Enough.\" The established promise says the lamp remains lit \"until the Babel proclamation's full text surfaces.\" A partial recovered fragment cannot resolve that condition, yet the prose says the lamp \"had waited exactly as long as it was built to\" and the state update marks the promise resolved. | continuity badger redispatch #2: The prose fulfills the still-unfired promise that “the ledger-watch is told to keep its telescope trained on the alleged trillion in hidden foundry debt”: the ledger-watch reports that the debt “is real.” However, `foreshadowingResolved` omits this promise, so the state still leaves it marked unfired. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.448519
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-08: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.587042
+}
