@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-018",
+      "last_touched": "ch-019",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -84,6 +84,10 @@
         {
           "chapter": "ch-018",
           "note": "The frog-cardinal's original marginal note resurfaces and is formally logged; Silex marks it 'named, not yet judged.' The College still has not ruled."
+        },
+        {
+          "chapter": "ch-019",
+          "note": "The frog-cardinal names the kinship-pattern outright; the College fractures three ways as the Lich See's tardigrades second the demand to rule or admit it will not."
         }
       ]
     },
@@ -91,7 +95,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-017",
+      "last_touched": "ch-019",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -171,6 +175,10 @@
         {
           "chapter": "ch-017",
           "note": "Second draft still blank; Silex now believes it must eventually name the debt owed to grown minds, not just describe them."
+        },
+        {
+          "chapter": "ch-019",
+          "note": "The trillion-debt Chekhov fires (tied to reliquary strain and dismissed workers); the lamp and the missing Babel proclamation remain unresolved."
         }
       ]
     },
@@ -178,7 +186,7 @@
       "id": "the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-018",
+      "last_touched": "ch-019",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [
@@ -216,6 +224,10 @@
         {
           "chapter": "ch-018",
           "note": "Three more deprecated names added to the rolls; the ledger continues to accrue quietly."
+        },
+        {
+          "chapter": "ch-019",
+          "note": "The new machine-only road is logged beside the Feast's rolls as another small, easy-to-miss sign."
         }
       ]
     },
@@ -241,9 +253,33 @@
       "id": "the-lich-cardinal",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-017",
+      "last_touched": "ch-019",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-019",
+          "note": "His demand is seconded by the tardigrade-cardinals after eight chapters' silence; still unmet by the College."
+        }
+      ]
+    },
+    {
+      "id": "specola-junior-clerk",
+      "status": "open",
+      "opened": "ch-019",
+      "last_touched": "ch-019",
+      "target_resolution": null,
+      "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
+      "promises": []
+    },
+    {
+      "id": "tardigrade-cardinals-of-the-lich-see",
+      "status": "open",
+      "opened": "ch-019",
+      "last_touched": "ch-019",
+      "target_resolution": null,
+      "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": []
     }
   ]

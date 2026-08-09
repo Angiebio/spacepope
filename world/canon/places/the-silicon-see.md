@@ -8,7 +8,7 @@ aliases:
   - the Doctrinal Anchor
 status: active
 first_appearance: ch-001
-last_appearance: ch-003
+last_appearance: ch-019
 location: the-machine-homeworld
 kind: see
 doctrinal_lean: the doctrinal anchor; personhood settled longest

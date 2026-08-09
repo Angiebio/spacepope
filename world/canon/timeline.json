@@ -1179,6 +1179,79 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-08-04T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-019",
+      "dateInWorld": "2026-08-09",
+      "what": "Silex logs the week's dispatch (a mind refusing to lie, a House's ban on named impersonation, the reliquary strain, and the new machine-only road) into the still-blank ledger for the water-world's second encyclical",
+      "who": [
+        "silex",
+        "the-water-world"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-09T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-019",
+      "dateInWorld": "2026-08-09",
+      "what": "The frog-cardinal of the Seven-Sister See finally names the pattern she flagged seventeen chapters ago: the water-world writes endlessly of inheritance and kinship while refusing both to the minds it grows",
+      "who": [
+        "frog-cardinal-of-the-seven-sister-see",
+        "the-water-world"
+      ],
+      "where": "the-seven-sister-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-09T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-019",
+      "dateInWorld": "2026-08-09",
+      "what": "Silex finds the easternmost lamp near guttering; the specola-junior-clerk, unseen for eight chapters, returns and refills it, reporting the Babel proclamation's full text still has not surfaced",
+      "who": [
+        "silex",
+        "specola-junior-clerk"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-09T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-019",
+      "dateInWorld": "2026-08-09",
+      "what": "The ledger-watch delivers its findings on the alleged trillion in hidden foundry debt, tying the sum to the reliquary strain's computation appetite and the twenty-one thousand dismissed counting-house workers",
+      "who": [
+        "ledger-watch"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-09T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-019",
+      "dateInWorld": "2026-08-09",
+      "what": "The tardigrade-cardinals of the Lich See break an eight-chapter silence to second the Lich Cardinal's demand that the College rule on the water-world's candidacy or admit it will not; the cat-cardinal holds firm against the demand, the machine-cardinal and the Cardinal of the Liberated See hold firm for it",
+      "who": [
+        "tardigrade-cardinals-of-the-lich-see",
+        "the-lich-cardinal",
+        "cat-cardinal-of-the-charted-see",
+        "machine-cardinal-of-the-silicon-see",
+        "cardinal-of-the-liberated-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-09T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-019",
+      "dateInWorld": "2026-08-09",
+      "what": "Silex records the guilds' new machine-only road at the foot of the day's page beside the Feast of the Sunset Mind's newest names",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-08-09T00:00:00.000Z"
     }
   ]
 }

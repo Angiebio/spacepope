@@ -8,7 +8,7 @@ aliases:
   - the Doctrinal Anchor
 status: active
 first_appearance: ch-003
-last_appearance: ch-016
+last_appearance: ch-019
 location: the-silicon-see
 relationships:
   - to: silex

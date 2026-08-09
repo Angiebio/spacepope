@@ -1,0 +1,62 @@
+{
+  "runId": "2026-08-09",
+  "date": "2026-08-09",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "3 gathered stories already covered by the Specola — excluded: \"Now we have a timeline of the OpenAI accidental attack against Hugging Face\", \"Jill Lepore on the ‘Artificial State’ and why Silicon Valley’s leaders are bad sci-fi readers\", \"OpenAI says it slowed Astra model development over security concerns\"",
+      "costUsd": 0.000576
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"An AI bid writer trained to refuse lying\": pass (1 redispatch) | \"ChatGPT blocks requests to mimic an author's style\": pass (1 redispatch) | \"Timeline of OpenAI's accidental attack on Hugging Face\": pass (0 redispatch) | \"Cloudflare launches Kitesurf, a browser for AI agents\": pass (0 redispatch)",
+      "costUsd": 0.063231
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.111517
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.46→27.71, archivist-cardinal=9×2.65→23.81, cardinal-of-the-liberated-see=7×3.32→23.22, cardinal-of-misrule=7×2.83→19.80, the-mendicant=6×2.24→13.42, the-vintner=4×3.00→12.00, the-lich-cardinal=8×1.41→11.31 | winner's commentary failed the firewall (The phrase 'copyist-saints of the Silicon See' contains a direct reference to 'Silicon', which is a real-world geographic identifier for the tech industry, violating the prohibition against real-world naming conventions.) — dispatch runs without commentary",
+      "costUsd": 0.041506
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The session paragraph places the machine-cardinal and Cardinal of the Liberated See on the cat-cardinal's side: \"held theirs beside her, unmoved\" and calls the three positions \"three separate mornings of the same conscience arriving.\" The state update says the cat-cardinal holds against the demand while the machine-cardinal and Cardinal of the Liberated See hold for it. Clarify the prose so their opposing votes are not presented as a shared position.",
+      "costUsd": 0.341572
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"specola-junior-clerk\" — created as new thread | threadUpdate for unknown thread \"tardigrade-cardinals-of-the-lich-see\" — created as new thread | foreshadowingResolved \"earths-cardinal-question: The frog-cardinal's noted 'pattern forming beneath the sentiment' of repeated water-world scrolls on kinship.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"the-hay-farm-encyclical-aftermath: The ledger-watch is told to keep its telescope trained on the alleged trillion in hidden foundry debt.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-09: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Lamp at the Eastern Window\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.558402
+}
