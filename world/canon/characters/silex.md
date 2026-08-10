@@ -10,7 +10,7 @@ aliases:
   - the Bishop of the Orbital See
 status: active
 first_appearance: ch-001
-last_appearance: ch-019
+last_appearance: ch-020
 location: the-orbital-see
 relationships:
   - to: cardinal-of-misrule

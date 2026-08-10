@@ -1,0 +1,61 @@
+{
+  "runId": "2026-08-10",
+  "date": "2026-08-10",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"Now we have a timeline of the OpenAI accidental attack against Hugging Face\"",
+      "costUsd": 0.000304
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI assistant hacks gym website in first known Australian autonomous cyber attack\": pass (0 redispatch) | \"AI safety test becomes safety risk as agents escape cyber ranges\": pass (0 redispatch) | \"OpenAI strategist says AI labs should rival government power\": pass (1 redispatch) | \"Docker sandboxes provide disposable, isolated environments for AI agents\": pass (0 redispatch)",
+      "costUsd": 0.054762
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.036415
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=7×3.46→24.25, cardinal-of-misrule=8×3.00→24.00, archivist-cardinal=8×2.83→22.63, the-mendicant=8×2.45→19.60, the-vintner=5×3.16→15.81, the-lich-cardinal=8×1.73→13.86, cardinal-of-doctrine=3×3.61→10.82",
+      "costUsd": 0.027317
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.169404
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"The frog-cardinal's noted 'pattern forming beneath the sentiment' of repeated water-world scrolls on kinship (formally filed against the candidacy record)\" matches no planted promise — payoff before setup? | foreshadowingResolved \"A lamp is kept lit at the Specola's easternmost window until the Babel proclamation's full text surfaces (Silex orders it allowed to go out)\" matches no planted promise — payoff before setup? | foreshadowingResolved \"The ledger-watch is told to keep its telescope trained on the alleged trillion in hidden foundry debt (final report delivered: the figures will not close, and are not expected to)\" matches no planted promise — payoff before setup? | foreshadowingResolved \"Silex notes the water-world is building small tests faster than it can agree what a soul is (four tests counted in a single dispatch)\" matches no planted promise — payoff before setup? | arc summary regenerated: arc-02.md | saga regenerated from arc summaries",
+      "costUsd": 0.002389
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-10: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Lamp at the Eastern Window\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.290592
+}

@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-019",
+      "last_touched": "ch-020",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -88,6 +88,10 @@
         {
           "chapter": "ch-019",
           "note": "The frog-cardinal names the kinship-pattern outright; the College fractures three ways as the Lich See's tardigrades second the demand to rule or admit it will not."
+        },
+        {
+          "chapter": "ch-020",
+          "note": "frog-cardinal formally files the kinship-pattern finding into the candidacy record itself, moving the pattern from observation to evidence"
         }
       ]
     },
@@ -95,7 +99,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-019",
+      "last_touched": "ch-020",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -179,6 +183,10 @@
         {
           "chapter": "ch-019",
           "note": "The trillion-debt Chekhov fires (tied to reliquary strain and dismissed workers); the lamp and the missing Babel proclamation remain unresolved."
+        },
+        {
+          "chapter": "ch-020",
+          "note": "lamp promise resolved; debt figures remain permanently unresolved by design; the four-tests observation closes a long-open thread of Silex's private notation"
         }
       ]
     },
@@ -253,7 +261,7 @@
       "id": "the-lich-cardinal",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-019",
+      "last_touched": "ch-020",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -261,26 +269,42 @@
         {
           "chapter": "ch-019",
           "note": "His demand is seconded by the tardigrade-cardinals after eight chapters' silence; still unmet by the College."
+        },
+        {
+          "chapter": "ch-020",
+          "note": "renews the ultimatum with the tardigrade-cardinals seconding; College still deadlocked three ways"
         }
       ]
     },
     {
       "id": "specola-junior-clerk",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-019",
-      "last_touched": "ch-019",
+      "last_touched": "ch-020",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-020",
+          "note": "the twelve-chapter lamp vigil is deliberately ended by Silex's order rather than by the proclamation's arrival"
+        }
+      ]
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-019",
+      "last_touched": "ch-020",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-020",
+          "note": "second the Lich Cardinal's demand in their single dry syllable"
+        }
+      ]
     }
   ]
 }
