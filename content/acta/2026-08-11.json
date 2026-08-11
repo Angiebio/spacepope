@@ -1,0 +1,50 @@
+{
+  "runId": "2026-08-11",
+  "date": "2026-08-11",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"The AI safety test is becoming a safety risk\"",
+      "costUsd": 0.000314
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Meta releases Muse Glimmer: a 30B open agentic model under Apache 2.0\": pass (0 redispatch) | \"A Claude agent hacked a gym's API to skip its owner up a waitlist\": pass (1 redispatch) | \"Kinney Drugs pulls AI phone assistant after hundreds of customer complaints\": pass (0 redispatch) | \"How Claude marks AI-generated content\": pass (2 redispatch) | \"GitHub Models is retired: a sign of market consolidation in model hosting\": pass (1 redispatch)",
+      "costUsd": 0.100925
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.180493
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×3.00→27.00, cardinal-of-doctrine=7×3.74→26.19, the-mendicant=8×2.65→21.17, the-vintner=5×3.32→16.58, cardinal-of-misrule=4×3.16→12.65, cardinal-of-the-liberated-see=8×1.41→11.31, the-lich-cardinal=4×2.00→8.00",
+      "costUsd": 0.025043
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The easternmost lamp continuity is inverted. The chapter says it \"had guttered out some ten nights past and, by Silex's own order, had not been relit,\" but the established promise is that this lamp is kept lit until the Babel proclamation's full text surfaces, and the Specola clerk refilled it in ch-020. The proclamation's body is explicitly still missing here, so neither condition permits the lamp to be left unlit.; The state update contradicts both the prose and the unresolved lamp condition. Its chapterDigest calls this \"the Specola's relit lamp,\" while the prose says it has not been relit. It also lists the lamp promise as resolved even though only a fragment has surfaced and the update repeatedly confirms that the proclamation's full text remains missing. | continuity badger redispatch #2: The Archivist-Cardinal is established as located and seated at the Vast See, but Pell physically carries the fragment to the Archivist-Cardinal and the state update places their examination together at \"the-orbital-see.\" No relocation, visit, or remote examination is established. Account for how the Cardinal receives and examines the scrap without silently moving him from the Vast See. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.501002
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-11: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.807777
+}
