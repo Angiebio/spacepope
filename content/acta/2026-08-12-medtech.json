@@ -1,0 +1,42 @@
+{
+  "runId": "2026-08-12-medtech",
+  "date": "2026-08-12",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000277
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Commure’s $7 billion bet on automating healthcare administration with AI\": pass (0 redispatch) | \"Nurses push back as clinical AI expands into hospitals\": pass (1 redispatch) | \"IRBs have a problem. Can North Star’s nonprofit model save it?\": pass (2 redispatch) | \"Nurses seek a seat at the table as they fight expanding clinical AI\": pass (0 redispatch)",
+      "costUsd": 0.09295
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.127358
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.038614
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Invents a Clerk for Its Own Wound\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.259198
+}
