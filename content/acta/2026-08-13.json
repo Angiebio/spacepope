@@ -1,0 +1,54 @@
+{
+  "runId": "2026-08-13",
+  "date": "2026-08-13",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Stealing Reasoning Traces from Proprietary LLM APIs\", \"Spotify will label ‘AI Persona’ profiles and exclude their music from recommendations\"",
+      "costUsd": 0.000757
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"DeepSeek V4 Pro 0813 arrives on API, open-weight release uncertain\": spiked (2 redispatch) | \"Grok 4.6 scores 61 on AI Intelligence Index\": pass (0 redispatch) | \"AI pioneers Hinton, Li, Ng debate regulation and open source at Ai4\": pass (0 redispatch) | \"Amazon will train on Twitch streamers' content by default, opt-out only\": pass (0 redispatch) | \"Anthropic extends watermarking to older models, prompting user backlash\": pass (0 redispatch)",
+      "costUsd": 0.082644
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.10737
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=9×3.46→31.18, the-mendicant=8×3.00→24.00, the-vintner=6×3.61→21.63, the-lich-cardinal=8×2.45→19.60, cardinal-of-the-liberated-see=8×2.00→16.00, archivist-cardinal=9×1.73→15.59, cardinal-of-doctrine=8×1.41→11.31 | winner's commentary failed the firewall (The phrase 'Four-Point-Six' refers to a specific, real-world AI model version (Claude 3.5 Sonnet), violating the prohibition against naming specific model versions or generations.) — dispatch runs without commentary",
+      "costUsd": 0.036879
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The foreshadowing entry says the junior clerk relights the lamp \"against the Pontifex's earlier order to let it go dark,\" but neither the chapter prose nor the supplied prior worldstate establishes such an order. This would add an unsupported prior action and motive to canon.; The appearances list omits the junior clerk, although the prose places the clerk at the easternmost window and gives the clerk the consequential action of relighting the lamp. It also omits the cat-cardinal and the Cardinal of the Liberated See, both explicitly present in the College scene. | continuity badger redispatch #2: The eastern lamp's established condition is abandoned without the required event. The planted promise says it is kept lit \"until the Babel proclamation's full text surfaces,\" but the chapter says the clerk relights it \"no longer in search of the Babel proclamation\" and the state update closes that vigil as \"no longer tied to the missing proclamation.\" No surfacing of the proclamation is recorded. Either preserve the vigil's stated condition or establish the proclamation's appearance before resolving it. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.570496
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-13: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"DeepSeek V4 Pro 0813 arrives on API, open-weight release uncertain\": The bulletin adds unsupported characterization and significance: “DeepSeek is described in the source material as a leading Chinese AI lab” and “Willison's post frames the new release as carrying implications for the broader balance between open and closed development in the field.” Neither claim appears in the supplied source material.; The bulletin uses unsupported in-universe framing instead of factual reportage: “The Specola's log records only what Willison's dispatch establishes” and “Further observation awaits confirmation from DeepSeek itself.”"
+    }
+  ],
+  "totalCostUsd": 0.798147
+}
