@@ -1,0 +1,42 @@
+{
+  "runId": "2026-08-13-medtech",
+  "date": "2026-08-13",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000248
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Medicare incentives for AI devices could drive overuse, researchers warn\": pass (1 redispatch) | \"What patients think about minimally invasive brain implants for mental health\": pass (0 redispatch)",
+      "costUsd": 0.027457
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.053937
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032253
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Fee That Ate the Diagnosis\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.113894
+}
