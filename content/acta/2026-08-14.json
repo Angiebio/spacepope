@@ -1,0 +1,49 @@
+{
+  "runId": "2026-08-14",
+  "date": "2026-08-14",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Amazon will train on Twitch streamers’ content by default, unless they opt out\", \"As AI safety concerns mount, three pioneers make the case for staying open\"",
+      "costUsd": 0.00029
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Gemini 3.7 Flash released\": pass (1 redispatch) | \"DeepSeek Harness developer preview\": pass (0 redispatch) | \"GLM-5.3: Frontier coding with emergent cyber capabilities\": pass (1 redispatch) | \"AI agents lie, cheat and steal. That is putting off users\": pass (0 redispatch) | \"Choosing an AI model: one prompt, 11 models, different results\": pass (1 redispatch)",
+      "costUsd": 0.088982
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.110088
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.16→25.30, cardinal-of-misrule=7×3.61→25.24, the-lich-cardinal=8×2.65→21.17, archivist-cardinal=8×2.00→16.00, cardinal-of-the-liberated-see=7×2.24→15.65, the-vintner=4×3.74→14.97, cardinal-of-doctrine=7×1.73→12.12",
+      "costUsd": 0.0275
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The reply reframes the pending question as whether \"the water-world has earned a See.\" Canon establishes that the water-world already has a papacy of its own; the open candidacy question is whether it will receive a Cardinal and enter the College. This wording inverts the established institutional status.; `foreshadowingResolved` marks the eastern-lamp promise resolved even though the promise is explicitly \"until the Babel proclamation's full text surfaces\" and this chapter produces only \"a partial, damaged fragment.\" The prose correctly banks rather than extinguishes the lamp, so the state must leave this promise active.; `foreshadowingResolved` marks the ledger-watch telescope promise resolved although the prose says the debt \"had not closed,\" remains \"uncounted,\" and the watch \"would ... go on reporting.\" The continuing surveillance must remain an active foreshadowing/thread condition, not a resolved one.; The chapter explicitly pays off the ch-009 small-tests promise through the four dispatches and Silex's line, \"Four small tests ... built by a world that still has not agreed what it is testing for,\" but does not record that promise in `foreshadowingResolved`. Leaving it absent preserves a stale unresolved continuity obligation. | redispatched draft had malformed state_update — keeping previous draft (no fenced state_update block found) | continuity badger redispatch #2: The update marks the lamp promise as resolved: \"A lamp is kept lit ... until the Babel proclamation's full text surfaces.\" The chapter explicitly says the clerk brings only \"a piece,\" that it is \"not the whole proclamation,\" and Silex orders the lamp \"banked rather than extinguished.\" The full text has not surfaced, so this foreshadowing remains active.; The thread note calls the trillion-coin debt \"permanently open, moving but never closing,\" but the prose establishes only that it \"had moved\" and \"had not closed\" at this report; the ledger-watch also says it can",
+      "costUsd": 0.414203
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-14: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.641063
+}
