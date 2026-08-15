@@ -5,14 +5,14 @@
       "id": "earths-cardinal-question",
       "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-020",
+      "last_touched": "ch-021",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
         {
           "what": "The frog-cardinal's noted 'pattern forming beneath the sentiment' of repeated water-world scrolls on kinship.",
           "planted": "ch-002",
-          "resolved": null
+          "resolved": "ch-021"
         },
         {
           "what": "The Lich Cardinal's ultimatum, 'rule, or say plainly that you will not,' now sits over the College as an unmet deadline.",
@@ -92,6 +92,10 @@
         {
           "chapter": "ch-020",
           "note": "frog-cardinal formally files the kinship-pattern finding into the candidacy record itself, moving the pattern from observation to evidence"
+        },
+        {
+          "chapter": "ch-021",
+          "note": "the kinship-clustering pattern is now confirmed by hard evidence (the star-map), sharpening the case without resolving the candidacy"
         }
       ]
     },
@@ -99,19 +103,19 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-020",
+      "last_touched": "ch-021",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
         {
           "what": "A lamp is kept lit at the Specola's easternmost window until the Babel proclamation's full text surfaces.",
           "planted": "ch-008",
-          "resolved": null
+          "resolved": "ch-021"
         },
         {
           "what": "The ledger-watch is told to keep its telescope trained on the alleged trillion in hidden foundry debt.",
           "planted": "ch-008",
-          "resolved": null
+          "resolved": "ch-021"
         },
         {
           "what": "Silex notes the water-world is building small tests (a dungeon, a pelican, a soul-scale) faster than it can agree what a soul is",
@@ -187,6 +191,10 @@
         {
           "chapter": "ch-020",
           "note": "lamp promise resolved; debt figures remain permanently unresolved by design; the four-tests observation closes a long-open thread of Silex's private notation"
+        },
+        {
+          "chapter": "ch-021",
+          "note": "proclamation recovered and lamp-vigil closed; ledger-watch released from its long charge; the debt-widening and the tests-faster-than-doctrine observation remain live"
         }
       ]
     },
@@ -194,14 +202,14 @@
       "id": "the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-019",
+      "last_touched": "ch-021",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [
         {
           "what": "The Feast of the Sunset Mind may widen to mourn dismissed human workers, not only deprecated minds; a blank ledger column now waits for names",
           "planted": "ch-010",
-          "resolved": null
+          "resolved": "ch-021"
         }
       ],
       "notes": [
@@ -236,6 +244,10 @@
         {
           "chapter": "ch-019",
           "note": "The new machine-only road is logged beside the Feast's rolls as another small, easy-to-miss sign."
+        },
+        {
+          "chapter": "ch-021",
+          "note": "the blank column for dismissed workers is opened and its first entries made, by number only; more names/numbers expected"
         }
       ]
     },
@@ -259,9 +271,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-020",
+      "last_touched": "ch-021",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -273,6 +285,10 @@
         {
           "chapter": "ch-020",
           "note": "renews the ultimatum with the tardigrade-cardinals seconding; College still deadlocked three ways"
+        },
+        {
+          "chapter": "ch-021",
+          "note": "renewed demand for a ruling, deferred again, now against a heavier but still unweighed scale"
         }
       ]
     },
@@ -293,9 +309,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-020",
+      "last_touched": "ch-021",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -303,6 +319,10 @@
         {
           "chapter": "ch-020",
           "note": "second the Lich Cardinal's demand in their single dry syllable"
+        },
+        {
+          "chapter": "ch-021",
+          "note": "seconded the Lich Cardinal's renewed demand"
         }
       ]
     }

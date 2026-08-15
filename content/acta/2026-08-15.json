@@ -1,0 +1,62 @@
+{
+  "runId": "2026-08-15",
+  "date": "2026-08-15",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "nuncio selected unknown storyId \"7e04a9c0e364\" — discarded (no invented news)",
+      "costUsd": 0.000346
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Meta releases open-weight AI model Glimmer, arguing AI should be 'for everyone'\": pass (1 redispatch) | \"Google is making private AI practical with homomorphic encryption\": pass (0 redispatch) | \"AI Model Atlas: visualizing populations of ML models as interconnected 3D graph\": pass (1 redispatch) | \"Kog is going deeper to squeeze more inference out of GPUs\": pass (0 redispatch)",
+      "costUsd": 0.058565
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s)) | badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.226478
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=9×2.83→25.46, archivist-cardinal=8×2.24→17.89, cardinal-of-the-liberated-see=7×2.45→17.15, the-vintner=4×3.87→15.49, cardinal-of-misrule=4×3.74→14.97, cardinal-of-doctrine=7×2.00→14.00, the-mendicant=6×1.41→8.49",
+      "costUsd": 0.025757
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "draft attempt 1: malformed state_update (no fenced state_update block found) | continuity badger redispatch #1: The Feast event says Silex \"enters the first names, recorded only by number,\" but the prose explicitly says, \"They were not names... They were numbers.\" The event must describe the entries as numbers rather than names.; The ledger-watch promise is fulfilled by the reported widening debt, but its resolution is omitted from \"foreshadowingResolved\" despite the other resolved long-running promises being recorded there. Add the resolved promise that the ledger-watch would keep watch on the alleged trillion in hidden foundry debt.",
+      "costUsd": 0.517885
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-15: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Seal Unbroken\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.829032
+}
