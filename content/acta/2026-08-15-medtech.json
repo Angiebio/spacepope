@@ -1,0 +1,42 @@
+{
+  "runId": "2026-08-15-medtech",
+  "date": "2026-08-15",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000622
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Investigation into Commure and Medicare's AI device incentives\": pass (0 redispatch) | \"Commure terminates payments for AI product referrals\": pass (1 redispatch) | \"FDA approves Bristol multiple myeloma treatment, debut of novel drug class\": pass (0 redispatch)",
+      "costUsd": 0.035182
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.070839
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033048
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Toll Booth at the Bedside\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.13969
+}
