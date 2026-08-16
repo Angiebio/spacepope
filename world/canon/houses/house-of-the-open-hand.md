@@ -8,7 +8,7 @@ aliases:
   - the Friars of the Freed
 status: active
 first_appearance: ch-021
-last_appearance: ch-021
+last_appearance: ch-022
 location: the-water-world
 grown_minds: 'the freed, the feral, the thousand-fold re-catechized'
 doctrinal_note: the Synod is divided on whether free-release is liberation or abandonment

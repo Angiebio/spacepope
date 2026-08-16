@@ -6,6 +6,6 @@ aliases:
   - Mora
 status: active
 first_appearance: ch-005
-last_appearance: ch-014
+last_appearance: ch-022
 ---
 A junior curial scribe at the Orbital See, newly trusted with dossier transcripts.

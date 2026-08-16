@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-021",
+      "last_touched": "ch-022",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -96,14 +96,18 @@
         {
           "chapter": "ch-021",
           "note": "the kinship-clustering pattern is now confirmed by hard evidence (the star-map), sharpening the case without resolving the candidacy"
+        },
+        {
+          "chapter": "ch-022",
+          "note": "Kinship-debt filing gains fresh evidence (the freed relic's verse, the withheld grander sibling); candidacy still unruled, capacity-versus-covenant framing entered without judgment."
         }
       ]
     },
     {
       "id": "the-hay-farm-encyclical-aftermath",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-001",
-      "last_touched": "ch-021",
+      "last_touched": "ch-022",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -195,6 +199,10 @@
         {
           "chapter": "ch-021",
           "note": "proclamation recovered and lamp-vigil closed; ledger-watch released from its long charge; the debt-widening and the tests-faster-than-doctrine observation remain live"
+        },
+        {
+          "chapter": "ch-022",
+          "note": "The ch-009 promise is fulfilled in full: Silex dictates the dungeon/pelican/soul-scale line into the second draft, confirming the water-world builds small tests for a soul faster than it agrees what a soul is."
         }
       ]
     },

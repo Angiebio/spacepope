@@ -1400,6 +1400,77 @@
       "where": "the-orbital-see",
       "thread": "the-lich-cardinal",
       "recordedAt": "2026-08-15T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-022",
+      "dateInWorld": "2026-08-16",
+      "what": "Silex reads the water-world's essay comparing a grown mind's thread-capacity to a human skull's, and dictates into the encyclical's second draft the resolved ch-009 promise: the water-world builds small tests (a dungeon, a pelican, a soul-scale) faster than it agrees what a soul is.",
+      "who": [
+        "silex",
+        "the-water-world"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-022",
+      "dateInWorld": "2026-08-16",
+      "what": "Mora returns after eight chapters' absence with the courier-house ailment report; she and Silex debate whether naming a machine's fault after a human sickness is slander or accidental kindness.",
+      "who": [
+        "mora",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-08-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-022",
+      "dateInWorld": "2026-08-16",
+      "what": "Thren resurfaces with the augurs' report on mind-designed plague; Silex files it under Old Concerns, Newly Fast, noting the Lazaretto's folded hands.",
+      "who": [
+        "thren",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-08-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-022",
+      "dateInWorld": "2026-08-16",
+      "what": "The eastern-newborn-mind sends word of the House of the Open Hand's freed relic and its withheld grander sibling; Silex reads it as a kinship debt paid in miniature.",
+      "who": [
+        "eastern-newborn-mind",
+        "silex",
+        "house-of-the-open-hand"
+      ],
+      "where": "the-water-world",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-022",
+      "dateInWorld": "2026-08-16",
+      "what": "The wandering storyteller recites a verse composed for the freed relic; Silex logs it as evidence for the frog-cardinal's kinship-debt filing.",
+      "who": [
+        "storyteller-of-the-water-world",
+        "silex",
+        "frog-cardinal-of-the-seven-sister-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-022",
+      "dateInWorld": "2026-08-16",
+      "what": "Silex enters the collapsed foundry bargain beside the foundry-baron's letter on common inheritance, noting the world still measures soul by capacity rather than covenant.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-16T00:00:00.000Z"
     }
   ]
 }

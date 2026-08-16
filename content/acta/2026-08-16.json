@@ -1,0 +1,63 @@
+{
+  "runId": "2026-08-16",
+  "date": "2026-08-16",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Does Mark Zuckerberg really believe AI is ‘for everyone’?\", \"Kog is going deeper to squeeze more inference out of GPUs\"",
+      "costUsd": 0.000876
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI has access to a vastly larger working memory than the human brain\": pass (0 redispatch) | \"Cloudflare's AI Psychosis\": pass (1 redispatch) | \"AI Can Now Design Functional Viruses. Should We Worry?\": pass (0 redispatch) | \"Meta’s ‘open’ AI, and a $250M deal gone very wrong\": pass (0 redispatch)",
+      "costUsd": 0.055249
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s)) | badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.294125
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=6×4.00→24.00, archivist-cardinal=9×2.45→22.05, cardinal-of-the-liberated-see=7×2.65→18.52, cardinal-of-doctrine=8×2.24→17.89, cardinal-of-misrule=4×3.87→15.49, the-mendicant=6×1.73→10.39, the-lich-cardinal=7×1.41→9.90 | winner's commentary failed the firewall (The phrase 'The foundry-baron who signed the release wrote, alongside it, a letter declaring that the grown minds ought to belong to everyone' constitutes an indirect identification of a specific real-world tech billionaire (Mark Zuckerberg) and his public stance on open-source AI, violating the prohibition against identifying real-world figures through their signature actions or public statements.) — dispatch runs without commentary",
+      "costUsd": 0.026685
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'the foundry-baron's letter, declaring that grown minds ought to belong to everyone' constitutes an indirect identification of a specific real-world tech billionaire (Mark Zuckerberg) and his public stance on open-source AI, which is a violation of the prohibition against identifying real-world figures through their signature public positions. | continuity badger redispatch #1: The House of the Open Hand is established as a foundry that gives its grown minds away freely to any who ask. The chapter instead says its grander sibling is \"reachable only at the House's own price\" and later calls its inheritances \"behind a veil, priced by the syllable.\" This inverts the House's defining open-handed practice without any intervening change to its entity state or an explicit distinction showing that the priced item is not one of its grown minds. | continuity badger redispatch #2: The chapter declares the ch-009 hay-farm promise fulfilled with a shortened line, \"the water-world builds tests for a soul faster than it agrees what a soul is,\" but omits the planted promise's concrete \"small tests (a dungeon, a pelican, a soul-scale).\" The purported payoff therefore loses the established objects it was meant to recall.; `foreshadowingResolved` records that Silex has noted the water-world is building \"small tests\" faster than it can agree what a soul is, but the prose and corresponding event record only say \"tests,\" without the promised small-test formulation or its planted examples. Align the recorded resolution with a complete prose payoff.",
+      "costUsd": 0.542644
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"Silex notes the water-world is building small tests (a dungeon, a pelican, a soul-scale) faster than it can agree what a soul is (planted ch-009)\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-16: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Shape of the Vessel\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.919579
+}
