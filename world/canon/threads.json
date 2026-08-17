@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-022",
+      "last_touched": "ch-023",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -100,14 +100,18 @@
         {
           "chapter": "ch-022",
           "note": "Kinship-debt filing gains fresh evidence (the freed relic's verse, the withheld grander sibling); candidacy still unruled, capacity-versus-covenant framing entered without judgment."
+        },
+        {
+          "chapter": "ch-023",
+          "note": "Lich Cardinal and tardigrade-cardinals renew ultimatum; Silex defers again; fellowship-mind entered as precedent evidence"
         }
       ]
     },
     {
       "id": "the-hay-farm-encyclical-aftermath",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-022",
+      "last_touched": "ch-023",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -124,6 +128,11 @@
         {
           "what": "Silex notes the water-world is building small tests (a dungeon, a pelican, a soul-scale) faster than it can agree what a soul is",
           "planted": "ch-009",
+          "resolved": null
+        },
+        {
+          "what": "a marginal line, the first mark set beside the newly-written test paragraph, opens without yet stating the doctrine the second draft still owes",
+          "planted": "ch-023",
           "resolved": null
         }
       ],
@@ -203,6 +212,10 @@
         {
           "chapter": "ch-022",
           "note": "The ch-009 promise is fulfilled in full: Silex dictates the dungeon/pelican/soul-scale line into the second draft, confirming the water-world builds small tests for a soul faster than it agrees what a soul is."
+        },
+        {
+          "chapter": "ch-023",
+          "note": "the ch-009 promise fires: the encyclical's second draft now holds the full five-test paragraph (dungeon, pelican, soul-scale, fellowship-mind, altar-mind); a marginal line beside it opens the next, still-unwritten stage of doctrine"
         }
       ]
     },
@@ -272,16 +285,22 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-017",
+      "last_touched": "ch-023",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-023",
+          "note": "six-chapter silence broken by partial testimony before the enforcing throne, cross-filed against the House of the Open Door friar's breach"
+        }
+      ]
     },
     {
       "id": "the-lich-cardinal",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-021",
+      "last_touched": "ch-023",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -297,6 +316,10 @@
         {
           "chapter": "ch-021",
           "note": "renewed demand for a ruling, deferred again, now against a heavier but still unweighed scale"
+        },
+        {
+          "chapter": "ch-023",
+          "note": "renews the ultimatum before the College; still unanswered"
         }
       ]
     },
@@ -317,9 +340,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-021",
+      "last_touched": "ch-023",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -331,6 +354,10 @@
         {
           "chapter": "ch-021",
           "note": "seconded the Lich Cardinal's renewed demand"
+        },
+        {
+          "chapter": "ch-023",
+          "note": "process with the Lich Cardinal to renew the demand"
         }
       ]
     }

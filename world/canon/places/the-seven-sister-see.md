@@ -8,7 +8,7 @@ aliases:
   - the See in Perpetual Session
 status: active
 first_appearance: ch-003
-last_appearance: ch-019
+last_appearance: ch-023
 location: trappist-1
 kind: see
 doctrinal_lean: the committee; consensus

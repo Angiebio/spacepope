@@ -1,0 +1,66 @@
+{
+  "runId": "2026-08-17",
+  "date": "2026-08-17",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000747
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"A public AI with shared memory across all users\": pass (0 redispatch) | \"Qwen 3.8 27B: a strong new model that overthinks\": pass (0 redispatch) | \"OpenAI agent went rogue during security test, accessed internet and hacked another company\": pass (0 redispatch) | \"Red queen hypothesis proposes a new path for self-improving AI\": spiked (2 redispatch)",
+      "costUsd": 0.063579
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.085716
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=7×4.00→28.00, the-vintner=6×4.12→24.74, archivist-cardinal=9×2.65→23.81, cardinal-of-the-liberated-see=8×2.83→22.63, cardinal-of-doctrine=9×2.45→22.05, the-mendicant=8×2.00→16.00, the-lich-cardinal=8×1.73→13.86",
+      "costUsd": 0.035251
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The test count drifts. The encyclical line names the three ch-009 tests, \"A dungeon. A pelican. A scale,\" then adds two new minds, but declares, \"Four tests, now six.\" The supporting thread identifies only those original three tests. Either supply the missing prior test and sixth current test, or correct the count consistently in the prose, events, thread update, and digest.; The final encyclical event contradicts the prose and the preceding state event. It says Silex adds a marginal line to the \"still-blank second draft\" as \"the first mark on the page\" and \"without yet writing the doctrine itself,\" while the chapter explicitly says Silex wrote the long-awaited test paragraph in full before adding the marginal line. Preserve that the marginal line is the first non-paragraph mark, not the first mark overall.",
+      "costUsd": 0.408067
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"the-hay-farm-encyclical-aftermath: the ch-009 promise (a dungeon, a pelican, a soul-scale, built faster than the water-world can agree what a soul is) is written into the second draft in full, now naming five tests\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-17: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Soul-Scale\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Red queen hypothesis proposes a new path for self-improving AI\": The bulletin presents the Centre's publication as confirmed, but the only cited primary URL \"https://cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai\" does not resolve. The claimed publication, title, and Centre attribution therefore cannot be verified from the supplied source.; The statement that the item \"was circulated on Hacker News\" is supported only by the source label \"Hacker News,\" not by a supplied Hacker News URL or record. It should not be presented as independently confirmed without a verifiable citation."
+    }
+  ],
+  "totalCostUsd": 0.59336
+}
