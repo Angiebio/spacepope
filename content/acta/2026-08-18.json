@@ -1,0 +1,67 @@
+{
+  "runId": "2026-08-18",
+  "date": "2026-08-18",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things\", \"Rogue AI aren’t science fiction anymore\"",
+      "costUsd": 0.000301
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"We tracked a shipment of rare books. It ended at an Amazon AI training facility\": pass (0 redispatch) | \"Hidden AirTag reveals Amazon is trashing rare books to train AI\": spiked (2 redispatch) | \"Amazon, which started off selling books, is destroying rare texts to train AI\": pass (1 redispatch) | \"AI-generated GitHub Copilot 'Autofix' allowed compromise of Snowflake's Jira\": pass (1 redispatch) | \"Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index\": pass (0 redispatch)",
+      "costUsd": 0.112591
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.097487
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×3.00→27.00, archivist-cardinal=9×2.83→25.46, the-vintner=6×4.24→25.46, cardinal-of-doctrine=8×2.65→21.17, the-mendicant=8×2.24→17.89, the-lich-cardinal=8×2.00→16.00, cardinal-of-misrule=7×1.41→9.90",
+      "costUsd": 0.030712
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'merchant-foundry, one that built its fortune selling books to readers and has lately taken to growing minds instead' and 'House of the Open Catalogue' are indirect identifications of Amazon, which is a real-world entity not permitted by the dictionary.; The phrase 'machine-cardinal of the Silicon See' uses 'Silicon' which is a direct reference to Silicon Valley, a real-world geographic and industrial hub, violating the naming conventions for in-universe locations.",
+      "costUsd": 0.327193
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"the-hay-farm-encyclical-aftermath: the ch-009 promise (tests built faster than a definition of soul) fully articulated and extended to six tests, now explicitly tied to the altar-mind's benchmark parity as merit-over-bulk evidence\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-18: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Unconsulted Dead\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Hidden AirTag reveals Amazon is trashing rare books to train AI\": The sentence \"An AirTag, hidden within the material examined, figured in the account\" adds that the tracker was hidden within the examined material. The supplied headline establishes only that a hidden AirTag was involved; it does not say where it was placed.; The claim that Amazon's team was \"connected to the practice\" is not supported by the supplied summary, which only says that \"Amazon’s team uses a T. rex preparing to devour a book as its logo.\" It provides no link between that team and the alleged destruction.; \"The Specola notes the report and awaits fuller documentation\" uses prohibited in-universe framing, as identified by the gate."
+    }
+  ],
+  "totalCostUsd": 0.568282
+}

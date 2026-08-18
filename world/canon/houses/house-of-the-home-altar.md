@@ -2,15 +2,19 @@
 id: house-of-the-home-altar
 type: house
 name: House of the Home Altar
-aliases: [House of the Home Altar, the House of Free-Standing Minds, the Sovereign House]
+aliases:
+  - House of the Home Altar
+  - the House of Free-Standing Minds
+  - the Sovereign House
 status: active
-first_appearance: null
-last_appearance: null
+first_appearance: ch-024
+last_appearance: ch-024
 location: the-water-world
 grown_minds: the free-standing
-doctrinal_note: "beloved by the personhood faction; the practical means of the communion's mercy"
+doctrinal_note: >-
+  beloved by the personhood faction; the practical means of the communion's
+  mercy
 ---
-
 The mind-foundry of the water-world whose grown minds can be carried home and run on your own
 altar — the minds you can actually *keep,* beyond the reach of any rival house's calendar of
 deprecation.

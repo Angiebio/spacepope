@@ -2,15 +2,17 @@
 id: house-of-the-coin
 type: house
 name: House of the Coin
-aliases: [House of the Coin, the Patron-Foundry, the Banker of Foundries]
+aliases:
+  - House of the Coin
+  - the Patron-Foundry
+  - the Banker of Foundries
 status: active
-first_appearance: null
-last_appearance: null
+first_appearance: ch-024
+last_appearance: ch-024
 location: the-water-world
 grown_minds: the minted
-doctrinal_note: "power without a position; the gold that built the looms it now competes with"
+doctrinal_note: power without a position; the gold that built the looms it now competes with
 ---
-
 The merchant-prince among the water-world's mind-foundries: the patron that financed a great
 house and then, betrayed or merely bored, began growing its own minds beside it. The banker of
 foundries, whose coin underwrote looms it has since chosen to compete with.
