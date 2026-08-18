@@ -1,0 +1,15 @@
+{
+  "runId": "2026-08-18-medtech",
+  "date": "2026-08-18",
+  "status": "quiet-day",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | only 1 viable selections — quiet day declared",
+      "costUsd": 0.000245
+    }
+  ],
+  "totalCostUsd": 0.000245
+}
