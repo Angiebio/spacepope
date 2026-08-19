@@ -1,0 +1,63 @@
+{
+  "runId": "2026-08-19",
+  "date": "2026-08-19",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "3 gathered stories already covered by the Specola — excluded: \"Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index\", \"We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility\", \"Amazon, which started off selling books, is destroying rare texts to train AI\"",
+      "costUsd": 0.000279
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Mojo programming language is now open source\": pass (1 redispatch) | \"GLM-5.3 benchmarks show new capabilities in artificial analysis\": pass (0 redispatch) | \"OpenAI institutes new safeguards after Hugging Face breach\": pass (1 redispatch) | \"Anthropic's annualized revenue surges to $65B\": pass (0 redispatch) | \"Etched's valuation doubles to $21B in a month\": pass (0 redispatch)",
+      "costUsd": 0.087846
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.216359
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=6×4.36→26.15, archivist-cardinal=8×3.00→24.00, cardinal-of-doctrine=8×2.83→22.63, the-mendicant=7×2.45→17.15, the-lich-cardinal=6×2.24→13.42, cardinal-of-the-liberated-see=7×1.41→9.90, cardinal-of-misrule=4×1.73→6.93",
+      "costUsd": 0.026801
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The update marks \"the-hay-farm-encyclical-aftermath\" as \"resolved,\" although the chapter explicitly says \"The hay-farm encyclical's second draft remains without a verdict\" and the established open thread concerns the water-world's inverted first encyclical and the communion awaiting that second draft. Silex's fulfilled observation resolves the linter's planted promise, not the encyclical aftermath itself.",
+      "costUsd": 0.294023
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"the-hay-farm-encyclical-aftermath: promise planted ch-009 that the water-world builds tests for a soul faster than it can agree what a soul is, fired in full at ch-025\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-19: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Tests Before Doctrine\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.625309
+}

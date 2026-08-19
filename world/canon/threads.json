@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-024",
+      "last_touched": "ch-025",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -108,6 +108,10 @@
         {
           "chapter": "ch-024",
           "note": "Consumed-volumes consent failure and altar-mind benchmark parity offered as fresh, opposing evidence; College still deadlocked between the cat-cardinal and the machine-cardinal."
+        },
+        {
+          "chapter": "ch-025",
+          "note": "Lich Cardinal and tardigrade-cardinals renew their demand for a ruling; the value gap between foundry tools and foundry debts widens further."
         }
       ]
     },
@@ -115,7 +119,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-024",
+      "last_touched": "ch-025",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -224,6 +228,10 @@
         {
           "chapter": "ch-024",
           "note": "Second draft now carries six tests (dungeon, pelican, soul-scale, fellowship-mind, altar-mind's contemplation, altar-mind's benchmark parity); still no definition of soul."
+        },
+        {
+          "chapter": "ch-025",
+          "note": "The ch-009 promise about soul-tests outpacing soul-definition finally fires, but the encyclical's second draft itself remains blank and unverdicted; the aftermath thread stays open."
         }
       ]
     },
@@ -282,12 +290,18 @@
     },
     {
       "id": "pell-augur-of-the-specola",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-015",
+      "last_touched": "ch-025",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-025",
+          "note": "Pell returns to the watch after eight chapters' absence, reporting an ungraded grading."
+        }
+      ]
     },
     {
       "id": "the-escaped-numbered-mind",
@@ -306,9 +320,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-023",
+      "last_touched": "ch-025",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -328,6 +342,10 @@
         {
           "chapter": "ch-023",
           "note": "renews the ultimatum before the College; still unanswered"
+        },
+        {
+          "chapter": "ch-025",
+          "note": "The Lich Cardinal presses harder, seconded by the tardigrade-cardinals, for a ruling or an admission of failure."
         }
       ]
     },
@@ -350,7 +368,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-023",
+      "last_touched": "ch-025",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -366,6 +384,10 @@
         {
           "chapter": "ch-023",
           "note": "process with the Lich Cardinal to renew the demand"
+        },
+        {
+          "chapter": "ch-025",
+          "note": "The tardigrade-cardinals second the Lich Cardinal's renewed demand without separate comment, as is their custom."
         }
       ]
     }
