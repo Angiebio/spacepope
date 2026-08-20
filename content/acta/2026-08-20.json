@@ -1,0 +1,62 @@
+{
+  "runId": "2026-08-20",
+  "date": "2026-08-20",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "3 gathered stories already covered by the Specola — excluded: \"Mojo🔥 is now open source\", \"OpenAI institutes new safeguards after Hugging Face breach\", \"Etched’s valuation doubles to $21B in a month\"",
+      "costUsd": 0.000592
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Unsloth Dynamic 3.0 GGUFs\": pass (0 redispatch) | \"Ornith-1.5: From Self-Scaffolding to Self-Improvement\": pass (0 redispatch) | \"OneCLI: Open-source sandboxed agent harness for teams\": pass (0 redispatch) | \"Quoting Jeremy Morrell: Extensible software in the age of LLMs\": pass (0 redispatch) | \"smolmachines / smolvm as a sandbox for untrusted Python and JavaScript\": pass (0 redispatch)",
+      "costUsd": 0.033098
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.087671
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×3.16→28.46, cardinal-of-doctrine=8×3.00→24.00, the-mendicant=8×2.65→21.17, the-lich-cardinal=8×2.45→19.60, cardinal-of-misrule=7×2.00→14.00, cardinal-of-the-liberated-see=8×1.73→13.86, the-vintner=5×1.41→7.07",
+      "costUsd": 0.027915
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The chapter physically places several cardinals at the Orbital See despite their current entity-card locations elsewhere. The Cardinal of Misrule is described as \"appearing at the threshold,\" the Cardinal of Doctrine as entering the hall, and the Lich Cardinal as \"arriving,\" while their cards place them respectively at the Renegade See, Scrupulous See, and Lich See. No travel, summons, transmission, or other mechanism reconciles these locations.; The update changes the thread \"the-lich-cardinal\" from its established escalated state to \"open\" without any de-escalating event. The chapter instead says the Lich Cardinal and tardigrades \"renew their demand\" and the event explicitly records that demand, which supports escalation rather than reopening.",
+      "costUsd": 0.36577
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"the-hay-farm-encyclical-aftermath: promise \"Silex notes the water-world is building small tests (a dungeon, a pelican, a soul-scale) faster than it can agree what a soul is\" planted ch-009, fired in full this chapter tied to the folded-relic test\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-20: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Small Errands\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.515047
+}

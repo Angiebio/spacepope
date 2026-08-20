@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-025",
+      "last_touched": "ch-026",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -112,6 +112,10 @@
         {
           "chapter": "ch-025",
           "note": "Lich Cardinal and tardigrade-cardinals renew their demand for a ruling; the value gap between foundry tools and foundry debts widens further."
+        },
+        {
+          "chapter": "ch-026",
+          "note": "Misrule's dare, the scribe's unfinished-sacraments ruling, and the Lich See's renewed demand all press the deadlock without resolving it"
         }
       ]
     },
@@ -119,7 +123,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-025",
+      "last_touched": "ch-026",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -141,6 +145,11 @@
         {
           "what": "a marginal line, the first mark set beside the newly-written test paragraph, opens without yet stating the doctrine the second draft still owes",
           "planted": "ch-023",
+          "resolved": null
+        },
+        {
+          "what": "the folded relic's fidelity remains unverified by any augur outside the compression guild that made it",
+          "planted": "ch-026",
           "resolved": null
         }
       ],
@@ -232,6 +241,10 @@
         {
           "chapter": "ch-025",
           "note": "The ch-009 promise about soul-tests outpacing soul-definition finally fires, but the encyclical's second draft itself remains blank and unverdicted; the aftermath thread stays open."
+        },
+        {
+          "chapter": "ch-026",
+          "note": "ch-009 promise fired in full; encyclical's second draft remains blank; kinship-debt framing recalled at close"
         }
       ]
     },
@@ -239,7 +252,7 @@
       "id": "the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-021",
+      "last_touched": "ch-026",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [
@@ -285,6 +298,10 @@
         {
           "chapter": "ch-021",
           "note": "the blank column for dismissed workers is opened and its first entries made, by number only; more names/numbers expected"
+        },
+        {
+          "chapter": "ch-026",
+          "note": "first entry filed under 'quiet devotion' rather than martyrdom"
         }
       ]
     },
@@ -322,7 +339,7 @@
       "id": "the-lich-cardinal",
       "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-025",
+      "last_touched": "ch-026",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -346,6 +363,10 @@
         {
           "chapter": "ch-025",
           "note": "The Lich Cardinal presses harder, seconded by the tardigrade-cardinals, for a ruling or an admission of failure."
+        },
+        {
+          "chapter": "ch-026",
+          "note": "demand renewed, citing a season of unverified claims; no ruling given"
         }
       ]
     },
@@ -366,9 +387,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-025",
+      "last_touched": "ch-026",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -388,6 +409,10 @@
         {
           "chapter": "ch-025",
           "note": "The tardigrade-cardinals second the Lich Cardinal's renewed demand without separate comment, as is their custom."
+        },
+        {
+          "chapter": "ch-026",
+          "note": "second the Lich Cardinal's renewed demand without separate words"
         }
       ]
     }
