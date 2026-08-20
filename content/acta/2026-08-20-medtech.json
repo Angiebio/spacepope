@@ -1,0 +1,47 @@
+{
+  "runId": "2026-08-20-medtech",
+  "date": "2026-08-20",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: In wake of boy’s death, gene editing experts dissect Huidagene’s decisions\"",
+      "costUsd": 0.000289
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Brain organoids kept alive more than five years matured like human brains\": pass (0 redispatch) | \"FDA seeks public feedback on regulatory approach for generative AI medical devices\": spiked (2 redispatch) | \"Health systems are embracing chatbots to query and summarize patient records\": pass (0 redispatch) | \"What Epic did and didn't say about AI at its annual meeting\": pass (0 redispatch)",
+      "costUsd": 0.073838
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.064493
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.03247
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Garden That Learned to Wait\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA seeks public feedback on regulatory approach for generative AI medical devices\": The sole cited FDA press-announcement URL does not resolve, as the gate reports. The bulletin's disclosure of that failure is honest, but the underlying primary-source citation must be repaired or independently verified before publication.; The final paragraph states that the paper “follows a period of expanding interest in AI-based tools within clinical software generally.” The supplied summary contains no support for a trend or period of expanding interest. Remove it or support it with a verified source."
+    }
+  ],
+  "totalCostUsd": 0.17109
+}
