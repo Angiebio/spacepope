@@ -1,0 +1,48 @@
+{
+  "runId": "2026-08-21-medtech",
+  "date": "2026-08-21",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: How health systems are embracing chatbots to query and summarize patient records\"",
+      "costUsd": 0.000271
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA Authorizes First-of-Its-Kind Robotic Blood Draw Device\": spiked (2 redispatch) | \"FDA Approves Ultragenyx Gene Therapy\": pass (0 redispatch) | \"How a Trump Loyalist Got the FDA Nomination\": pass (0 redispatch)",
+      "costUsd": 0.070271
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.183495
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032958
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Two Sutures and a Loose Bandage\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA Authorizes First-of-Its-Kind Robotic Blood Draw Device\": The supplied FDA citation does not resolve, so the underlying announcement cannot be independently checked beyond the provided summary.; The statement that authorization marks \"the entry of an autonomous blood-draw robot into clinical use\" is not supported by the source summary. Authorization does not itself establish that the device has entered clinical use.; The claim that direct patient-contact procedures \"has historically required a human hand for even routine procedures\" is unsupported by the supplied FDA summary and accompanying commentary."
+    }
+  ],
+  "totalCostUsd": 0.286995
+}
