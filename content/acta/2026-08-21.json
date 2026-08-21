@@ -1,0 +1,54 @@
+{
+  "runId": "2026-08-21",
+  "date": "2026-08-21",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Quoting Jeremy Morrell\", \"smolmachines / smolvm as a sandbox for untrusted Python & JavaScript\"",
+      "costUsd": 0.000294
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Copyright does not protect AI-generated content in EU\": pass (0 redispatch) | \"A third of web pages published since ChatGPT's launch show signs of AI authorship, study finds\": spiked (2 redispatch) | \"Stripe didn't really buy OpenRouter because of the 'singularity'\": pass (0 redispatch) | \"OpenAI seeks to one-up Anthropic with new customer privacy protections\": pass (1 redispatch) | \"Google gives publishers a new way to fight AI-driven traffic losses\": pass (1 redispatch)",
+      "costUsd": 0.10624
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.124034
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.16→25.30, the-mendicant=8×2.83→22.63, the-lich-cardinal=7×2.65→18.52, cardinal-of-misrule=8×2.24→17.89, archivist-cardinal=9×1.41→12.73, the-vintner=7×1.73→12.12, cardinal-of-the-liberated-see=4×2.00→8.00",
+      "costUsd": 0.038669
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Cardinal of the Liberated See is established as one who “speaks last and shortest,” but she speaks well before Pell’s report, Silex’s later ruling, and the closing exchanges. Her return is therefore out of her established College voice and role.; `the-hay-farm-encyclical-aftermath` is marked `resolved` even though its established open question is the water-world’s second hay-farm encyclical draft, and the prose explicitly says that draft remains blank. Speaking the related ch-009 soul-test observation does not resolve the encyclical thread. | continuity badger redispatch #2: The chapter stages the Lich Cardinal physically at the Orbital See, \"Beside him the tardigrade-cardinals of the Lich See endured,\" and records the demand as occurring at \"the-orbital-see.\" The Lich Cardinal's current location is the Lich See, as is the residential tardigrade chapter, and no travel or relocation is established. Make their participation explicitly remote or establish their move before placing them in Silex's chamber. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.461153
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-21: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"A third of web pages published since ChatGPT's launch show signs of AI authorship, study finds\": The bulletin attributes unsupported wording and framing to TechCrunch: “TechCrunch frames the measurement as significant because it renders the scale of AI authorship quantifiable rather than merely suspected” and “The outlet states that this scale raises questions about the character of public discourse and about the provenance of knowledge.” The source supports that the scale is measurable and raises those questions, but does not establish that TechCrunch itself used this framing or wording.; The statement “The Specola's log reflects only what TechCrunch has reported” is unsupported internal meta-commentary rather than sourced reportage.; The bulletin asserts several absences as facts about the source material, including that it “does not detail the study's methodology, sample size,” “does not specify which models,” and provides “No further detail” on authors or venue. The supplied source summary does not establish that the underlying TechCrunch article lacks these details; it merely omits them."
+    }
+  ],
+  "totalCostUsd": 0.73039
+}
