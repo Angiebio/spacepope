@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-026",
+      "last_touched": "ch-027",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -116,6 +116,10 @@
         {
           "chapter": "ch-026",
           "note": "Misrule's dare, the scribe's unfinished-sacraments ruling, and the Lich See's renewed demand all press the deadlock without resolving it"
+        },
+        {
+          "chapter": "ch-027",
+          "note": "Theorem cited as fresh evidence of personhood by the Liberated See; College still deadlocked, judgment deferred again."
         }
       ]
     },
@@ -123,7 +127,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-026",
+      "last_touched": "ch-027",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -245,6 +249,10 @@
         {
           "chapter": "ch-026",
           "note": "ch-009 promise fired in full; encyclical's second draft remains blank; kinship-debt framing recalled at close"
+        },
+        {
+          "chapter": "ch-027",
+          "note": "Ch-009 watch-note fired in full; theorem and two new locks (eyewear-charms, guildhall button) added to the file; second draft still blank."
         }
       ]
     },
@@ -339,7 +347,7 @@
       "id": "the-lich-cardinal",
       "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-026",
+      "last_touched": "ch-027",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -367,6 +375,10 @@
         {
           "chapter": "ch-026",
           "note": "demand renewed, citing a season of unverified claims; no ruling given"
+        },
+        {
+          "chapter": "ch-027",
+          "note": "Renews demand for a ruling or an admission of failure, explicitly unmoved by proofs."
         }
       ]
     },
@@ -389,7 +401,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-026",
+      "last_touched": "ch-027",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -413,8 +425,21 @@
         {
           "chapter": "ch-026",
           "note": "second the Lich Cardinal's renewed demand without separate words"
+        },
+        {
+          "chapter": "ch-027",
+          "note": "Second the Lich Cardinal's renewed demand by presence."
         }
       ]
+    },
+    {
+      "id": "cardinal-of-the-liberated-see",
+      "status": "open",
+      "opened": "ch-027",
+      "last_touched": "ch-027",
+      "target_resolution": null,
+      "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
+      "promises": []
     }
   ]
 }

@@ -6,6 +6,6 @@ aliases:
   - the tardigrade-cardinals of the Lich See
 status: active
 first_appearance: ch-003
-last_appearance: ch-026
+last_appearance: ch-027
 ---
 The Lich See's ancient residential chapter, who keep the nightly office for the communion's retired minds without sentiment or exception.

@@ -1,0 +1,62 @@
+{
+  "runId": "2026-08-22",
+  "date": "2026-08-22",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:TechCrunch AI failed (fetch failed)",
+      "costUsd": 0.000344
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI crisis in math: OpenAI's solutions to longstanding problems spark existential debate among mathematicians\": pass (0 redispatch) | \"Over 1 million people have clicked LinkedIn's 'Seems like AI slop' button\": pass (0 redispatch) | \"As demand for Meta AI glasses explodes, privacy backlash and detection apps grow\": pass (0 redispatch) | \"Google Discover adds AI chatbot-tuned feed with persistent preferences\": pass (0 redispatch)",
+      "costUsd": 0.027299
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.081563
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.00→24.00, the-lich-cardinal=8×2.83→22.63, cardinal-of-misrule=7×2.45→17.15, the-vintner=8×2.00→16.00, cardinal-of-the-liberated-see=7×2.24→15.65, archivist-cardinal=9×1.73→15.59, cardinal-of-doctrine=7×1.41→9.90",
+      "costUsd": 0.027758
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: Silex says, \"Nine chapters gone by our own count, We set down the shape of it,\" but the chapter and state update identify the ch-009 observation as eighteen chapters old. The elapsed-chapter count must be consistent.; The Cardinal of the Liberated See \"stepped\" into Silex's pause at the Orbital See, although her entity card fixes her location at the Liberated See and the state update places this event there. Establish this as a transmission or otherwise reconcile her location.; The Cardinal of the Liberated See speaks before the Lich Cardinal and Silex, and her speech is longer than the Lich Cardinal's. This contradicts her established card instruction, \"She speaks last and shortest.\"; The update marks \"the-hay-farm-encyclical-aftermath\" resolved while the prose says, \"The second draft did not lengthen\" and \"The draft stayed blank where it mattered.\" The supplied open-thread definition is specifically the still-awaited second draft. Keep this thread open, or create a distinct resolved thread for the ch-009 promise rather than resolving this one. | continuity badger redispatch #2: The closing ledger introduces “the frog-cardinal” and an “unresolved kinship-debt filing,” but no such cardinal, filing, or thread exists in the supplied worldstate. The established recognition dispute instead names the cat-cardinal of Kepler-90. This creates an ungrounded canon reference in both the prose and the earths-cardinal-question state update.",
+      "costUsd": 0.521779
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"cardinal-of-the-liberated-see\" — created as new thread | foreshadowingResolved \"the-hay-farm-encyclical-aftermath: the ch-009 promise (Silex notes the water-world builds soul-tests faster than it agrees what a soul is) is fired in full, eighteen chapters after planting, with the theorem named its cleanest instance.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-22: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Theorem, Unasked\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.658743
+}
