@@ -1,0 +1,55 @@
+{
+  "runId": "2026-08-23",
+  "date": "2026-08-23",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"As demand for Meta AI glasses explodes, it’s harder to avoid creepy recordings\", \"Over 1 million people have clicked LinkedIn’s AI slop button\"",
+      "costUsd": 0.000745
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"DeepMind alumni lab says AI teammate outperforms rivals at research replication\": pass (0 redispatch) | \"OpenAI backs stronger California AI safety bill after previous opposition\": pass (1 redispatch) | \"Study finds leading AI labs lack public plans for containing rogue models\": spiked (2 redispatch) | \"Nvidia research shows fine-tuning harness can make weak AI agents perform well\": pass (0 redispatch)",
+      "costUsd": 0.075037
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.181594
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=8×3.00→24.00, cardinal-of-the-liberated-see=8×2.45→19.60, archivist-cardinal=8×2.00→16.00, cardinal-of-doctrine=8×1.73→13.86, the-mendicant=8×1.41→11.31, cardinal-of-misrule=4×2.65→10.58, the-vintner=4×2.24→8.94",
+      "costUsd": 0.02476
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: Pell is introduced as returning after an absence: \"Into this accounting walked Pell ... eight watches absent\" and the state update says \"Pell returns ... after eight chapters absent.\" The established Pell thread records that Pell already returned in ch-025 after that eight-chapter absence. Ch-028 cannot make the same return again without explaining a new departure and absence. | continuity badger redispatch #2: The Cardinal of the Liberated See is established to “speak last and shortest,” but after “The Cardinal of the Liberated See rose last” and delivered her argument, the cat-cardinal “answered.” This makes the Liberated Cardinal not the last speaker in the scene. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.488251
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-23: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Study finds leading AI labs lack public plans for containing rogue models\": The in-universe editorial framing, “The Specola's telescope, trained as always on the far side of the water...” is not supported by the supplied TechCrunch material and distracts from the source-limited report.; The description of a rogue model as one that “resist[s] human correction,” and the claim that behavior might be “could not easily reverse,” add specifics not present in the source summary, which refers only to unexpected, potentially dangerous, or misbehaving behavior.; “By extension harder to predict or restrain” goes beyond the supplied significance statement, which says only that the lack of containment plans is a preparedness gap as models grow more capable."
+    }
+  ],
+  "totalCostUsd": 0.770386
+}
