@@ -1,0 +1,50 @@
+{
+  "runId": "2026-08-24",
+  "date": "2026-08-24",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research\", \"OpenAI says California should strengthen its AI safety bill\"",
+      "costUsd": 0.000471
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Linus Torvalds on AI-assisted debugging: 'a debug session from hell'\": pass (0 redispatch) | \"The key skill for coding agents: instructing and verifying changes\": pass (0 redispatch) | \"Anthropic’s best AI model struggles to attract users as cheaper tools thrive\": pass (0 redispatch) | \"Is it legal to train AI on copyrighted books? It’s complicated\": pass (1 redispatch) | \"Frontier AI labs still won’t say how they’d contain a rogue model\": pass (1 redispatch)",
+      "costUsd": 0.075528
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.239388
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×2.65→23.81, cardinal-of-misrule=8×2.83→22.63, archivist-cardinal=8×2.24→17.89, cardinal-of-doctrine=8×2.00→16.00, the-lich-cardinal=9×1.41→12.73, the-vintner=5×2.45→12.25, the-mendicant=6×1.73→10.39",
+      "costUsd": 0.030558
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Cardinal of the Liberated See's entity card establishes that she \"speaks last and shortest.\" Here she delivers a long paragraph and is followed by the cat-cardinal's still longer response: \"The cat-cardinal of the Charted See answered, as she always did...\"; Pell is established as returning after eight chapters' absence, but the chapter says, \"Pell returned to the night desk after eight watches away.\" Eight watches is a much shorter absence and contradicts the ongoing thread timing.; The events place both the Cardinal of the Liberated See and the cat-cardinal of the Charted See \"where\": \"the-orbital-see,\" although their active entity-card locations are respectively the Liberated See and the Charted See. The prose can support remote participation, as it explicitly does for the Lich Cardinal's transmission, but the state update must not relocate them without establishing that travel. | continuity badger redispatch #2: Pell's absence is established in the open thread as eight chapters, but the chapter says the ledger marks it as \"eight watches long\" and frames his return as \"for the first time in eight watches.\" The junior clerk is likewise established as unseen for eight chapters, not eight watches. Preserve the established duration or explicitly distinguish the two absences.; The update marks \"the-hay-farm-encyclical-aftermath\" as \"resolved\" and includes it in \"foreshadowingResolved,\" although the chapter explicitly says the encyclical's second draft remains blank and does not resolve it. A new marginal observation may advance or retire a repeated formulation, but it cannot resolve the still-unfinished encyclical thread as recorded.; The update includes \"earths-cardinal-question\" in \"foreshadowingResolved\" while also correctly stating that the College has not ruled, the cat-cardinal has moved for further observation, and \"the candidacy remains unruled.\" Formal invocation of the ultimatum escalates its unmet demand; it does not res",
+      "costUsd": 0.554893
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-24: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.900839
+}
