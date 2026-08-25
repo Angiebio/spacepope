@@ -1,0 +1,49 @@
+{
+  "runId": "2026-08-25",
+  "date": "2026-08-25",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Anthropic’s best AI model struggles to attract users as cheaper tools thrive\", \"Is it legal to train AI models on copyrighted books? It’s complicated\"",
+      "costUsd": 0.000635
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Who’s behind the new ‘stealth model’ Ox Alpha?\": pass (0 redispatch) | \"OpenAI is building AI agents for everything. Will everyone use them?\": pass (0 redispatch) | \"Hugging Face reportedly in talks to be acquired for $13B\": pass (0 redispatch) | \"Fable model's high cost prompts rethinking of AI coding harnesses\": pass (0 redispatch)",
+      "costUsd": 0.030722
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.097655
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=8×2.45→19.60, the-vintner=7×2.65→18.52, cardinal-of-doctrine=7×2.24→15.65, the-lich-cardinal=9×1.73→15.59, the-mendicant=7×2.00→14.00, cardinal-of-misrule=4×3.00→12.00, cardinal-of-the-liberated-see=8×1.41→11.31 | winner's commentary failed the firewall (The text identifies a specific real-world AI model by name: 'Ox Alpha'. This violates the prohibition against naming specific models or products outside of the sanctioned in-universe archetypes.) — dispatch runs without commentary",
+      "costUsd": 0.026832
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text references 'Ox Alpha', which is a specific, identifiable name for a real-world AI model (OpenAI's o1/o3-series or similar 'Alpha'/'O' naming conventions) that violates the prohibition against naming real-world products or models. | continuity badger redispatch #1: The Lich Cardinal is established at the Lich See, but appears \"in person\" at Silex's tower in the Orbital See. Neither the prose nor the state update establishes travel or otherwise reconciles this location change. | continuity badger redispatch #2: The transmission exchange contradicts itself. The chapter says Silex \"did not send an answer back down that same channel,\" but immediately has Silex address \"whichever tardigrade was nearest the receiving instrument on the far side\" through the listening-stone. Clarify whether Silex replies over the Lich See channel or does not reply on it. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.637077
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-25: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.792921
+}
