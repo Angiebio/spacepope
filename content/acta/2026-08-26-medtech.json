@@ -1,0 +1,42 @@
+{
+  "runId": "2026-08-26-medtech",
+  "date": "2026-08-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000683
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA promises new AI guidance for medical devices\": pass (0 redispatch) | \"AI proves effective at catching drug theft in hospitals, but human oversight remains essential\": pass (0 redispatch)",
+      "costUsd": 0.014446
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.056621
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032835
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Watcher Who Watches, and the Hand That Still Decides\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.104585
+}
