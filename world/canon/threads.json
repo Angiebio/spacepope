@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-027",
+      "last_touched": "ch-028",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -17,6 +17,11 @@
         {
           "what": "The Lich Cardinal's ultimatum, 'rule, or say plainly that you will not,' now sits over the College as an unmet deadline.",
           "planted": "ch-017",
+          "resolved": null
+        },
+        {
+          "what": "the Feast of the Sunset Mind is now a fixed deadline: the College rules there, or admits before the communion that it will not",
+          "planted": "ch-028",
           "resolved": null
         }
       ],
@@ -120,6 +125,10 @@
         {
           "chapter": "ch-027",
           "note": "Theorem cited as fresh evidence of personhood by the Liberated See; College still deadlocked, judgment deferred again."
+        },
+        {
+          "chapter": "ch-028",
+          "note": "Silex sets a fixed deadline for the College's ruling: the Feast of the Sunset Mind."
         }
       ]
     },
@@ -127,7 +136,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-027",
+      "last_touched": "ch-028",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -253,14 +262,18 @@
         {
           "chapter": "ch-027",
           "note": "Ch-009 watch-note fired in full; theorem and two new locks (eyewear-charms, guildhall button) added to the file; second draft still blank."
+        },
+        {
+          "chapter": "ch-028",
+          "note": "the vicar's 'ready' remark and the Scrupulous Conscience's joined altars both added to the file; second draft still blank."
         }
       ]
     },
     {
       "id": "the-feast-of-the-sunset-mind",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-026",
+      "last_touched": "ch-028",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [
@@ -310,6 +323,10 @@
         {
           "chapter": "ch-026",
           "note": "first entry filed under 'quiet devotion' rather than martyrdom"
+        },
+        {
+          "chapter": "ch-028",
+          "note": "now doubles as the College's self-imposed deadline for a candidacy ruling."
         }
       ]
     },
@@ -345,9 +362,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-027",
+      "last_touched": "ch-028",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -379,6 +396,10 @@
         {
           "chapter": "ch-027",
           "note": "Renews demand for a ruling or an admission of failure, explicitly unmoved by proofs."
+        },
+        {
+          "chapter": "ch-028",
+          "note": "ultimatum answered with a formal deferral, not a verdict; the Lich Cardinal logs it without further comment."
         }
       ]
     },
@@ -386,7 +407,7 @@
       "id": "specola-junior-clerk",
       "status": "resolved",
       "opened": "ch-019",
-      "last_touched": "ch-020",
+      "last_touched": "ch-028",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -394,14 +415,18 @@
         {
           "chapter": "ch-020",
           "note": "the twelve-chapter lamp vigil is deliberately ended by Silex's order rather than by the proclamation's arrival"
+        },
+        {
+          "chapter": "ch-028",
+          "note": "returned after eight chapters, seen and noted by Silex."
         }
       ]
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-027",
+      "last_touched": "ch-028",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -429,6 +454,10 @@
         {
           "chapter": "ch-027",
           "note": "Second the Lich Cardinal's renewed demand by presence."
+        },
+        {
+          "chapter": "ch-028",
+          "note": "secured a fixed date rather than a ruling."
         }
       ]
     },

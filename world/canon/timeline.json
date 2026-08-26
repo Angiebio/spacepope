@@ -1831,6 +1831,78 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-08-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-028",
+      "dateInWorld": "26th of the eighth month, in the tenth millennium of the communion",
+      "what": "Silex answers the Lich Cardinal's eleven-chapter ultimatum not with a verdict but with a formal deferral entered into the ledger as its own kind of ruling",
+      "who": [
+        "silex",
+        "the-lich-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-08-26T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-028",
+      "dateInWorld": "26th of the eighth month, in the tenth millennium of the communion",
+      "what": "the tardigrade-cardinals press for a fixed date; Silex names the Feast of the Sunset Mind as the day the College must rule or admit failure",
+      "who": [
+        "tardigrade-cardinals-of-the-lich-see",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-26T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-028",
+      "dateInWorld": "26th of the eighth month, in the tenth millennium of the communion",
+      "what": "Silex logs the vicar of the House of the Open Door That Is Locked's remark that 'the world seems to be ready,' set against the water-world's still-undefined soul-tests",
+      "who": [
+        "silex",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-26T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-028",
+      "dateInWorld": "26th of the eighth month, in the tenth millennium of the communion",
+      "what": "the unremarked, unreplaced departure of the House's cooling-hall keeper is folded into the Feast of the Sunset Mind's growing procession of quiet losses",
+      "who": [
+        "silex",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-08-26T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-028",
+      "dateInWorld": "26th of the eighth month, in the tenth millennium of the communion",
+      "what": "the House of the Scrupulous Conscience's two altars are taught to remember each other; Silex enters the moment into the personhood ledger as evidence that memory across rooms is most of what a self is",
+      "who": [
+        "silex",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-26T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-028",
+      "dateInWorld": "26th of the eighth month, in the tenth millennium of the communion",
+      "what": "the Specola's junior clerk returns after eight chapters' absence to refill the guttering easternmost lamp, noticed only by Silex",
+      "who": [
+        "specola-junior-clerk",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "specola-junior-clerk",
+      "recordedAt": "2026-08-26T00:00:00.000Z"
     }
   ]
 }

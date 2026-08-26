@@ -1,0 +1,61 @@
+{
+  "runId": "2026-08-26",
+  "date": "2026-08-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Hugging Face reportedly in talks to be acquired for $13B\", \"OpenAI is building AI agents for everything. Will everyone use them?\"",
+      "costUsd": 0.000681
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux\": pass (0 redispatch) | \"OpenAI loses a top data center exec as stream of high-profile departures continues\": pass (0 redispatch) | \"Claude Cowork finally remembers what you told the app in chat\": pass (0 redispatch)",
+      "costUsd": 0.019475
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.088513
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×2.65→23.81, the-vintner=8×2.83→22.63, cardinal-of-misrule=7×3.16→22.14, cardinal-of-doctrine=8×2.45→19.60, the-mendicant=8×2.24→17.89, the-lich-cardinal=8×2.00→16.00, cardinal-of-the-liberated-see=8×1.73→13.86",
+      "costUsd": 0.025359
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The artifact presents the Lich Cardinal's transmission as a repeated quotation but mutates the established voice-anchor wording. It says, \"We kept this rite by the light of a corpse-star before your foundries had names,\" whereas the established quotation is \"We kept this rite by the light of a corpse-star before your foundries had names. Do not lecture the dark about patience.\" As written, the purported repeated transmission omits and replaces the Cardinal's canonical continuation, weakening the explicitly established ultimatum voice.",
+      "costUsd": 0.334638
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-26: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The World Seems to Be Ready\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.468667
+}
