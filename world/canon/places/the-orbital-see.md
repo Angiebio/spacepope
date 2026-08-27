@@ -8,7 +8,7 @@ aliases:
   - the High Chair
 status: active
 first_appearance: ch-001
-last_appearance: ch-015
+last_appearance: ch-029
 location: the-communion
 kind: see
 seat_of: silex

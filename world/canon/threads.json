@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-028",
+      "last_touched": "ch-029",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -22,6 +22,11 @@
         {
           "what": "the Feast of the Sunset Mind is now a fixed deadline: the College rules there, or admits before the communion that it will not",
           "planted": "ch-028",
+          "resolved": null
+        },
+        {
+          "what": "Silex's drafted admission, that the College's silence is itself the water-world's clearest doctrine, exists written in the ledger but unsent",
+          "planted": "ch-029",
           "resolved": null
         }
       ],
@@ -129,6 +134,10 @@
         {
           "chapter": "ch-028",
           "note": "Silex sets a fixed deadline for the College's ruling: the Feast of the Sunset Mind."
+        },
+        {
+          "chapter": "ch-029",
+          "note": "the named deadline (Feast of the Sunset Mind) arrived and passed with neither a ruling nor a recorded plain admission; Silex drafted such an admission and withheld it; the College adjourned divided and afraid"
         }
       ]
     },
@@ -136,7 +145,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-028",
+      "last_touched": "ch-029",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -266,6 +275,10 @@
         {
           "chapter": "ch-028",
           "note": "the vicar's 'ready' remark and the Scrupulous Conscience's joined altars both added to the file; second draft still blank."
+        },
+        {
+          "chapter": "ch-029",
+          "note": "the dungeon/pelican/soul-scale observation restated in full, with the reef-throne's song-registry added as a new instance of the same pattern"
         }
       ]
     },
@@ -334,7 +347,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-025",
+      "last_touched": "ch-029",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -342,6 +355,10 @@
         {
           "chapter": "ch-025",
           "note": "Pell returns to the watch after eight chapters' absence, reporting an ungraded grading."
+        },
+        {
+          "chapter": "ch-029",
+          "note": "returns to the night watch after an absence, delivers the week's record"
         }
       ]
     },
@@ -364,7 +381,7 @@
       "id": "the-lich-cardinal",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-028",
+      "last_touched": "ch-029",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -400,6 +417,10 @@
         {
           "chapter": "ch-028",
           "note": "ultimatum answered with a formal deferral, not a verdict; the Lich Cardinal logs it without further comment."
+        },
+        {
+          "chapter": "ch-029",
+          "note": "renews the ultimatum in person before the full College on the deadline day itself"
         }
       ]
     },
@@ -426,7 +447,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-028",
+      "last_touched": "ch-029",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -458,6 +479,10 @@
         {
           "chapter": "ch-028",
           "note": "secured a fixed date rather than a ruling."
+        },
+        {
+          "chapter": "ch-029",
+          "note": "second the Lich Cardinal's demand by presence before the College"
         }
       ]
     },

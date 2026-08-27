@@ -1,0 +1,61 @@
+{
+  "runId": "2026-08-27",
+  "date": "2026-08-27",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "costUsd": 0.000269
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"CEO fired developers to make room for AI. Developers create open source AI CEO\": pass (0 redispatch) | \"Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights\": pass (2 redispatch) | \"Qwen3.8-Flash-Next: a multimodal MoE preview of Qwen4 architecture\": pass (1 redispatch) | \"Fake US thinktank set up and funded by Israel sought to game AI for propaganda\": pass (0 redispatch) | \"Australia bans generative AI from official music charts\": pass (1 redispatch)",
+      "costUsd": 0.098126
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.253788
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "cardinal the-vintner failed to bid (OpenRouter 429 for college-bid.the-vintner (mistralai/mistral-small-3.2-24b-instruct): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"mistralai/mistral-small-3.2-24b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"DeepInfra\",\"is_byok\":false,\"provider_error_code\":\"engine_overloaded\",\"limit_source\":\"upstream_provider_shared) — seat silent today | adjudication: cardinal-of-misrule=7×3.32→23.22, the-mendicant=8×2.45→19.60, cardinal-of-doctrine=7×2.65→18.52, cardinal-of-the-liberated-see=7×2.00→14.00, archivist-cardinal=9×1.41→12.73, the-lich-cardinal=3×2.24→6.71",
+      "costUsd": 0.037026
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'machine-cardinal of the Silicon See' contains a direct reference to 'Silicon', which is a real-world material and a common shorthand for the real-world tech industry (Silicon Valley), violating the requirement to use only in-universe names for foundries and locations. | continuity badger redispatch #1: On the stated deadline day, Silex calls the unsent admission “a confession offered a day early.” The chapter has established that “tonight was the day” named for the ultimatum, so a confession drafted that night is not day-early. This reverses the chapter’s own chronology.; The first event says the Feast deadline was “named in ch-028,” but the prose says the ultimatum has waited for twelve chapters and the supplied thread history identifies it as planted in ch-017. ch-028 may have renewed or escalated the demand, but it cannot be the origin of a twelve-chapter-old deadline.; The update marks “earths-cardinal-question” resolved and says the ultimatum’s fallback was “satisfied in substance,” although the prose explicitly says Silex set the admission aside “unsent” and the College adjourned “still divided” and “afraid.” Neither a ruling nor a recorded/plain admission occurred. The thread must remain unresolved or escalated unless the prose is changed to make the fallback actually occur.",
+      "costUsd": 0.450822
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-27: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Rule, or Say Plainly\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.840031
+}
