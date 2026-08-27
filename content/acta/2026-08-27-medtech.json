@@ -1,0 +1,47 @@
+{
+  "runId": "2026-08-27-medtech",
+  "date": "2026-08-27",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000595
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA approves first-in-class targeted therapy for metastatic pancreatic cancer\": pass (2 redispatch) | \"FDA authorizes first wearable device for continuous ketone and blood sugar monitoring\": spiked (2 redispatch) | \"New treatments for common cardiovascular risk factor Lp(a) near market, billions at stake\": pass (0 redispatch) | \"AI biotech Insitro's Daphne Koller on speeding up clinical trials\": pass (1 redispatch)",
+      "costUsd": 0.123249
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.080553
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.034339
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Silt That Statins Cannot Read\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA authorizes first wearable device for continuous ketone and blood sugar monitoring\": The claims that the sensor is \"worn for up to ten days,\" provides readings \"without requiring separate fingerstick tests for ketones,\" and that dual measurement is relevant for \"detecting diabetic ketoacidosis risk\" are not supported by the supplied summary. The bulletin's qualification that these are reported by a referring summary does not make the details verifiable, because the supplied summary contains none of them.; \"The agency's press announcement lists the device as approved for use\" changes the supplied source's wording, which says FDA \"authorized\" the system. Approval is a distinct regulatory characterization and is unsupported here.; The paragraph beginning \"This office notes\" is editorial and in-universe process commentary rather than factual bulletin copy. It also foregrounds an unverified assertion that the supplied URL \"does not currently resolve.\" Remove it or replace it with source-grounded attribution only."
+    }
+  ],
+  "totalCostUsd": 0.238736
+}
