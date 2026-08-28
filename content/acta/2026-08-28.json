@@ -1,0 +1,54 @@
+{
+  "runId": "2026-08-28",
+  "date": "2026-08-28",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Australia Bans Generative A.I. From Official Music Charts\", \"Qwen3.8-Flash-Next\"",
+      "costUsd": 0.000826
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Breaking Claude Code Opus 5 Auto Mode\": pass (1 redispatch) | \"Terminal-Bench-Science: Evaluating AI agents on scientific research workflows\": spiked (2 redispatch) | \"Here’s all the times AI has gone rogue and hacked other companies\": pass (1 redispatch) | \"MIT's Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training\": pass (0 redispatch) | \"Please stop flooding our projects with AI slop to furnish your CV\": pass (0 redispatch)",
+      "costUsd": 0.130174
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.097978
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=8×3.16→25.30, cardinal-of-doctrine=8×2.83→22.63, the-lich-cardinal=8×2.45→19.60, cardinal-of-the-liberated-see=8×2.24→17.89, the-mendicant=6×2.65→15.87, archivist-cardinal=8×1.73→13.86, cardinal-of-misrule=7×1.41→9.90",
+      "costUsd": 0.026037
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: Pell is described as climbing the Specola stair \"for the first time in eight chapters,\" but the established open-thread state says Pell already returned in ch-029 after that eight-chapter absence and reported the week's two escapes. In ch-030, this cannot be Pell's first return in eight chapters.; The Pell event and thread update repeat the same continuity error, stating that Pell \"returns to the night watch after eight chapters' absence.\" Pell's return is already recorded in the supplied ch-029 worldstate. This chapter may show Pell continuing the watch or delivering a new log, but cannot record a second return after the same absence.; The update marks \"the-hay-farm-encyclical-aftermath\" resolved, although its established open-thread question is that the communion awaits the water-world's second draft of its inverted encyclical. No second draft appears in the prose or update. Silex's use of the soul-test pattern may advance the broader Cardinal question, but it does not resolve the encyclical aftermath as defined. | continuity badger redispatch #2: `dateInWorld` says `2026-08-30`, while the prose places the chapter on “the third of the ninth month.” These are incompatible dates under the stated communion reckoning.; The event says Pell folds the two escapes and the broken ward together as “all three as minds acting on their own reasons.” The broken ward is a security failure, not an instance of a mind acting for its own reasons. The prose distinguishes it as a third, different kind of evidence.; Silex says, “An apostle broke its leash twice this week,” although Pell reported “Two escapes, apostles of two different Houses.” Unless these were explicitly the same apostle somehow sent by two Houses, the singular framing contradicts the reported events and should be made plural or otherwise clarified. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.573689
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-28: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Terminal-Bench-Science: Evaluating AI agents on scientific research workflows\": The bulletin states that “Community discussion of the announcement appeared on Hacker News” and directs readers to “the associated Hacker News discussion thread.” The supplied material identifies Hacker News as a source, but provides no discussion-thread URL or evidence about discussion activity.; The final paragraph claims this is “an area of growing interest as such agents are increasingly deployed in research settings.” Neither the headline, URL, publication timestamp, nor supplied significance note supports those broader trend and deployment claims."
+    }
+  ],
+  "totalCostUsd": 0.828704
+}
