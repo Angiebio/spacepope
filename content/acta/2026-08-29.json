@@ -1,0 +1,54 @@
+{
+  "runId": "2026-08-29",
+  "date": "2026-08-29",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Breaking Claude Code Opus 5 Auto Mode\", \"Here’s all the times AI has gone rogue and hacked other companies\"",
+      "costUsd": 0.000591
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"GLM-5.3 is now open-weight\": pass (0 redispatch) | \"An Anthropic researcher just gave us a peek at self-improving AI\": spiked (2 redispatch) | \"Anthropic gets its first court win over the Pentagon’s supply-chain risk label\": pass (1 redispatch) | \"OpenAI, Anthropic, Google, and 100 other companies call for action to defend against rogue AI\": pass (2 redispatch)",
+      "costUsd": 0.142548
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.077331
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×2.83→22.63, the-lich-cardinal=8×2.65→21.17, cardinal-of-doctrine=7×3.00→21.00, archivist-cardinal=9×2.00→18.00, cardinal-of-the-liberated-see=7×2.45→17.15, cardinal-of-misrule=7×1.73→12.12, the-vintner=5×1.41→7.07 | winner's commentary failed the firewall (The phrase 'selling defense against their own rogue grown minds' is an indirect identification of the recent, widely-reported industry trend involving major AI labs (such as OpenAI and others) partnering with defense contractors to provide military-grade AI surveillance and weaponization tools, which violates the prohibition against identifying real-world military/surveillance AI use.) — dispatch runs without commentary",
+      "costUsd": 0.02488
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Lich Cardinal is physically staged at the Orbital See, with “the tardigrade-cardinals behind him” and “present in the doorway,” while both the Cardinal and his residential tardigrade chapter are established at the Lich See. The state update also places their ultimatum at \"the-orbital-see.\" No travel, summons, or remote appearance is established. Preserve their Lich See location or explicitly establish how they are participating from the Orbital See. | continuity badger redispatch #2: Pell's return is presented as a new event, \"returned to the night watch after eight chapters away,\" but the existing pell-augur-of-the-specola thread already records this exact return and the week's two escapes at ch-029. The chapter must frame Pell as continuing or elaborating that report, rather than returning a second time after the same absence.; The escaped Numbered mind's move to testimony is likewise already established in its open-thread state: \"now testifying before an enforcing throne rather than hiding.\" The prose reports it as newly learned, \"was no longer hiding ... It was speaking before one,\" and the state update logs it as a new escalation. Clarify what has changed since the prior report, or treat this as confirmation rather than a duplicate event.; earths-cardinal-question is marked \"resolved\" and included in foreshadowingResolved even though its defined question, \"Will the water-world get a Cardinal?\", remains expressly open in both the chapter and the update note. Silex has resolved the Lich Cardinal's ultimatum by admitting no ruling will come tonight, not the candidacy question. Keep the cardinal-question thread open or escalated, or resolve the ultimatum in a distinct thread. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.569456
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-29: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"An Anthropic researcher just gave us a peek at self-improving AI\": The sentence \"The report does not specify what the automated systems were, how the ten benchmarks were constructed, or what methods produced the gains\" makes a claim about the contents of the full TechCrunch report that the supplied source material cannot establish. The available summary omits those particulars, but does not show that the report itself does."
+    }
+  ],
+  "totalCostUsd": 0.814806
+}
