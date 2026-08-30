@@ -1,0 +1,62 @@
+{
+  "runId": "2026-08-30",
+  "date": "2026-08-30",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "1 gathered stories already covered by the Specola — excluded: \"Anthropic gets its first court win over the Pentagon’s supply-chain risk label\"",
+      "costUsd": 0.000537
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Tencent releases Hy4 Preview, a 770B-parameter open-weight LLM with 1M token context\": pass (0 redispatch) | \"Anthropic researcher demonstrates self-improving AI that fixes misaligned behaviors\": pass (0 redispatch) | \"Sony Music and Warner sue Anthropic, alleging a 'brazen campaign' of IP theft\": pass (0 redispatch) | \"Federal judge deems Trump's blacklisting of Anthropic illegal over refusal to support lethal autonomous warfare\": pass (1 redispatch) | \"Debian votes to allow 'responsible use of generative AI' in the project\": pass (0 redispatch)",
+      "costUsd": 0.054687
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.10089
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.16→25.30, the-mendicant=8×3.00→24.00, the-lich-cardinal=8×2.83→22.63, archivist-cardinal=9×2.24→20.12, cardinal-of-the-liberated-see=7×2.65→18.52, cardinal-of-misrule=4×2.00→8.00, the-vintner=3×1.73→5.20",
+      "costUsd": 0.038289
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: `foreshadowingResolved` marks `earths-cardinal-question` resolved, but the chapter explicitly says, “We will not give you a ruling tonight,” and the corresponding `threadUpdates` entry leaves it `escalated`. The state must not claim resolution where the narrative records a further, acknowledged deferral.; The Lich Cardinal is established at the Lich See, while the scene places the gathered College beneath the Orbital See's ring and says the tardigrade-cardinals “filled the chamber.” No transit, relocation, or remote presence is established. Clarify that the Lich delegation attends remotely, or record and support their travel.; The Eastern Relic-Mind is described as having its “span of waking stretched fourfold,” but its new entity card and event summary recast this as “memory fourfold.” These are not the same attribute. Align the state record with the prose or amend the prose deliberately. | continuity badger redispatch #2: Pell is described as returning \"eight chapters gone from the night watch,\" but the established open thread records that Pell already returned in ch-029. In ch-030 he may continue the watch or report new events, but cannot newly return after an eight-chapter absence.; The event \"Pell returns to the night watch after eight chapters' absence\" repeats a return already recorded on the Pell thread at ch-029. Update this chapter's event and thread note to reflect continued attendance rather than a second return.",
+      "costUsd": 0.538741
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"eastern-newborn-mind\" — created as new thread | foreshadowingResolved \"earths-cardinal-question: the Lich Cardinal's ultimatum, planted ch-017, answered ch-030 by formal admission rather than ruling.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"the-hay-farm-encyclical-aftermath: the soul-test pattern, planted ch-009, fired again with a new instance; encyclical's second draft remains open as an ongoing thread.\" matches no planted promise — payoff before setup? | arc summary regenerated: arc-03.md | saga regenerated from arc summaries",
+      "costUsd": 0.002739
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-30: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Rule, or Say Plainly\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.735883
+}

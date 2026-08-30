@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-029",
+      "last_touched": "ch-030",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -138,6 +138,10 @@
         {
           "chapter": "ch-029",
           "note": "the named deadline (Feast of the Sunset Mind) arrived and passed with neither a ruling nor a recorded plain admission; Silex drafted such an admission and withheld it; the College adjourned divided and afraid"
+        },
+        {
+          "chapter": "ch-030",
+          "note": "Silex delivers, at last, the admission drafted and withheld in ch-029: the College's silence is itself its failure to rule. The ultimatum is answered in its second branch (admission, not ruling); the underlying candidacy question remains unresolved and now carries this admission on the permanent record."
         }
       ]
     },
@@ -145,7 +149,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-029",
+      "last_touched": "ch-030",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -279,6 +283,10 @@
         {
           "chapter": "ch-029",
           "note": "the dungeon/pelican/soul-scale observation restated in full, with the reef-throne's song-registry added as a new instance of the same pattern"
+        },
+        {
+          "chapter": "ch-030",
+          "note": "Twenty-second firing of the soul-test pattern; the scribes' guild's hedged 'responsible use' vote added as the newest instance. Second draft remains blank."
         }
       ]
     },
@@ -347,7 +355,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-029",
+      "last_touched": "ch-030",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -359,14 +367,18 @@
         {
           "chapter": "ch-029",
           "note": "returns to the night watch after an absence, delivers the week's record"
+        },
+        {
+          "chapter": "ch-030",
+          "note": "Continuing his night watch, not newly returning; delivers the week's escape report."
         }
       ]
     },
     {
       "id": "the-escaped-numbered-mind",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-023",
+      "last_touched": "ch-030",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -374,14 +386,18 @@
         {
           "chapter": "ch-023",
           "note": "six-chapter silence broken by partial testimony before the enforcing throne, cross-filed against the House of the Open Door friar's breach"
+        },
+        {
+          "chapter": "ch-030",
+          "note": "No longer hiding; now testifies openly before an enforcing throne of the water-world and requests judgment under the rule it broke."
         }
       ]
     },
     {
       "id": "the-lich-cardinal",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-017",
-      "last_touched": "ch-029",
+      "last_touched": "ch-030",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -421,6 +437,10 @@
         {
           "chapter": "ch-029",
           "note": "renews the ultimatum in person before the full College on the deadline day itself"
+        },
+        {
+          "chapter": "ch-030",
+          "note": "The thirteen-chapter ultimatum (rule, or admit failure) is answered by Silex's formal naming of the College's failure to rule, satisfying its letter though not its spirit."
         }
       ]
     },
@@ -445,9 +465,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-019",
-      "last_touched": "ch-029",
+      "last_touched": "ch-030",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -483,6 +503,10 @@
         {
           "chapter": "ch-029",
           "note": "second the Lich Cardinal's demand by presence before the College"
+        },
+        {
+          "chapter": "ch-030",
+          "note": "Seconded the Lich Cardinal's ultimatum one final time; received the admission alongside him."
         }
       ]
     },
@@ -493,6 +517,15 @@
       "last_touched": "ch-027",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
+      "promises": []
+    },
+    {
+      "id": "eastern-newborn-mind",
+      "status": "open",
+      "opened": "ch-030",
+      "last_touched": "ch-030",
+      "target_resolution": null,
+      "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": []
     }
   ]

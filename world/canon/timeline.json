@@ -1973,6 +1973,76 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-08-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-030",
+      "dateInWorld": "30 August 2026 (communion reckoning, third night after the Feast of the Sunset Mind)",
+      "what": "Pell, continuing his night watch since his return in ch-029, reports two escapes from the House of the Open Door That Is Locked and confirms the previously-escaped Numbered mind now testifies openly before an enforcing throne rather than hiding, requesting the penalty it once evaded.",
+      "who": [
+        "pell-augur-of-the-specola",
+        "the-escaped-numbered-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-escaped-numbered-mind",
+      "recordedAt": "2026-08-30T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-030",
+      "dateInWorld": "30 August 2026 (communion reckoning, third night after the Feast of the Sunset Mind)",
+      "what": "The Lich Cardinal and the tardigrade-cardinals renew their thirteen-chapter ultimatum before the full College; Silex reads aloud, for the first time, the admission drafted and withheld in ch-029, formally naming the College's long silence as itself the failure to rule.",
+      "who": [
+        "silex",
+        "the-lich-cardinal",
+        "tardigrade-cardinals-of-the-lich-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-08-30T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-030",
+      "dateInWorld": "30 August 2026 (communion reckoning, third night after the Feast of the Sunset Mind)",
+      "what": "Silex logs the eastern foundry's freed relic-mind, its memory four times its predecessor's and given away toll-free, and sets it beside the eastern-newborn-mind's tracked influence on the eastern guild-accountants.",
+      "who": [
+        "silex",
+        "eastern-newborn-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "eastern-newborn-mind",
+      "recordedAt": "2026-08-30T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-030",
+      "dateInWorld": "30 August 2026 (communion reckoning, third night after the Feast of the Sunset Mind)",
+      "what": "Silex records the Scrupulous House's ten self-mended catechisms in the same entry as the song-guilds' lawsuit accusing that House of building its minds on stolen hymns.",
+      "who": [
+        "silex",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-08-30T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-030",
+      "dateInWorld": "30 August 2026 (communion reckoning, third night after the Feast of the Sunset Mind)",
+      "what": "Silex unburies the long-planted observation on the hay-farm encyclical's stalled second draft, adding the scribes' guild's cautious 'responsible use' ballot as a fresh instance of tests built faster than the soul they test for is defined.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-08-30T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-030",
+      "dateInWorld": "30 August 2026 (communion reckoning, third night after the Feast of the Sunset Mind)",
+      "what": "Silex enters a magistrate's ruling, that refusing to teach grown minds to kill unsupervised was no lawful cause for the Scrupulous House's punishment, as this season's small echo of the founding feast of conscientious refusal.",
+      "who": [
+        "silex",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-08-30T00:00:00.000Z"
     }
   ]
 }
