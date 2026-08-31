@@ -1,0 +1,62 @@
+{
+  "runId": "2026-08-31",
+  "date": "2026-08-31",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Introducing Hy4 Preview\", \"Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft\"",
+      "costUsd": 0.000276
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Continuous Diffusion Language Models offer a new way to build AI minds\": pass (1 redispatch) | \"Fair Work Commission rules AI advice 'plain wrong', raises stakes for legal accountability\": pass (0 redispatch) | \"Musicians hunt AI grifters as audio deepfakes flood the internet\": pass (2 redispatch) | \"Sony Music and Warner Chappell sue Anthropic over training data, seek billions\": pass (0 redispatch)",
+      "costUsd": 0.086821
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.064722
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×2.83→25.46, archivist-cardinal=9×2.45→22.05, the-lich-cardinal=7×3.00→21.00, the-mendicant=6×3.16→18.97, cardinal-of-misrule=7×2.24→15.65, cardinal-of-doctrine=8.5×1.41→12.02, the-vintner=3×2.00→6.00",
+      "costUsd": 0.028555
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'continuous diffusion' refers to a specific, real-world technical architecture (Stable Diffusion/latent diffusion models) which is a direct identification of a product/model class in the water-world, violating the requirement to use archetypal language. | continuity badger redispatch #1: The chapter has Silex authoring the water-world's encyclical: \"Silex opened the hay-farm encyclical's second draft ... and added\" a line, and the state update repeats that Silex adds it. Established canon identifies the hay-farm encyclical as the water-world's doctrinal output, whose second draft the communion awaits. Silex may annotate, respond to, or draft a distinct College document, but cannot silently write the applicant world's pending second encyclical.",
+      "costUsd": 0.481507
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"archivist-cardinal\" — created as new thread | threadUpdate for unknown thread \"ledger-watch\" — created as new thread | threadUpdate for unknown thread \"storyteller-of-the-water-world\" — created as new thread",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-08-31: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Ledger and the Fresco\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.661881
+}

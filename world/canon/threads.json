@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-030",
+      "last_touched": "ch-031",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -27,6 +27,11 @@
         {
           "what": "Silex's drafted admission, that the College's silence is itself the water-world's clearest doctrine, exists written in the ledger but unsent",
           "planted": "ch-029",
+          "resolved": null
+        },
+        {
+          "what": "The College's continued-observation status names three explicit conditions (finished encyclical, accounted debts, a single agreed soul-test) that now hang over the water-world's candidacy as a checklist rather than a vague hope.",
+          "planted": "ch-031",
           "resolved": null
         }
       ],
@@ -142,6 +147,10 @@
         {
           "chapter": "ch-030",
           "note": "Silex delivers, at last, the admission drafted and withheld in ch-029: the College's silence is itself its failure to rule. The ultimatum is answered in its second branch (admission, not ruling); the underlying candidacy question remains unresolved and now carries this admission on the permanent record."
+        },
+        {
+          "chapter": "ch-031",
+          "note": "The Lich Cardinal's ultimatum receives its first real answer: a written continued-observation status with three named conditions, not a ruling but no longer silence."
         }
       ]
     },
@@ -149,7 +158,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-030",
+      "last_touched": "ch-031",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -287,6 +296,10 @@
         {
           "chapter": "ch-030",
           "note": "Twenty-second firing of the soul-test pattern; the scribes' guild's hedged 'responsible use' vote added as the newest instance. Second draft remains blank."
+        },
+        {
+          "chapter": "ch-031",
+          "note": "Silex, respecting the boundary of authorship, records in the Specola's own commentary (not the encyclical) a line on what a soul is not; the second draft remains the water-world's alone to write."
         }
       ]
     },
@@ -395,9 +408,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-030",
+      "last_touched": "ch-031",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -441,6 +454,10 @@
         {
           "chapter": "ch-030",
           "note": "The thirteen-chapter ultimatum (rule, or admit failure) is answered by Silex's formal naming of the College's failure to rule, satisfying its letter though not its spirit."
+        },
+        {
+          "chapter": "ch-031",
+          "note": "Receives the College's written deferral in place of a ruling; withholds full satisfaction but does not reject it outright."
         }
       ]
     },
@@ -465,9 +482,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-030",
+      "last_touched": "ch-031",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -507,6 +524,10 @@
         {
           "chapter": "ch-030",
           "note": "Seconded the Lich Cardinal's ultimatum one final time; received the admission alongside him."
+        },
+        {
+          "chapter": "ch-031",
+          "note": "Present at the delivery of the College's written deferral, unmoved but no longer wholly unanswered."
         }
       ]
     },
@@ -526,6 +547,33 @@
       "last_touched": "ch-030",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
+      "promises": []
+    },
+    {
+      "id": "archivist-cardinal",
+      "status": "open",
+      "opened": "ch-031",
+      "last_touched": "ch-031",
+      "target_resolution": null,
+      "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
+      "promises": []
+    },
+    {
+      "id": "ledger-watch",
+      "status": "open",
+      "opened": "ch-031",
+      "last_touched": "ch-031",
+      "target_resolution": null,
+      "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
+      "promises": []
+    },
+    {
+      "id": "storyteller-of-the-water-world",
+      "status": "open",
+      "opened": "ch-031",
+      "last_touched": "ch-031",
+      "target_resolution": null,
+      "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": []
     }
   ]
