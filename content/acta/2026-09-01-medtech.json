@@ -1,0 +1,42 @@
+{
+  "runId": "2026-09-01-medtech",
+  "date": "2026-09-01",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000247
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Three deaths in CAR-T trials prompt halt by Novartis; Bristol Myers programs also paused\": pass (1 redispatch) | \"NIH proposal to cap research grants draws mixed reception, agency says\": pass (0 redispatch)",
+      "costUsd": 0.043066
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.052985
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.036079
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Leash That Comes Too Late\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.132378
+}
