@@ -1,0 +1,50 @@
+{
+  "runId": "2026-09-03",
+  "date": "2026-09-03",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "2 gathered stories already covered by the Specola — excluded: \"Claude Fable 5.1 made me a really nice animated pelican\", \"Anthropic’s new Fable release is cheaper, less restrictive\"",
+      "costUsd": 0.00032
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Gemini 3.8 Flash and 3.8 Flash Cyber released\": pass (1 redispatch) | \"Mamdani bans AI in NYC schools\": pass (2 redispatch) | \"Quasar 438B: Europe's leading AI model\": pass (1 redispatch) | \"Claude's new system prompt restricts song lyric reproduction\": pass (0 redispatch) | \"Three sites made 215,128 “best software” pages for AI. Perplexity cites them\": pass (1 redispatch)",
+      "costUsd": 0.121779
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.236349
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.61→28.84, the-lich-cardinal=7×3.46→24.25, the-vintner=6×2.65→15.87, cardinal-of-doctrine=7×2.24→15.65, cardinal-of-the-liberated-see=7×2.00→14.00, archivist-cardinal=8×1.73→13.86, cardinal-of-misrule=4×2.83→11.31",
+      "costUsd": 0.028091
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The phrase \"the Lich Cardinal's thirteen-chapter ultimatum\" conflicts with the established ch-017 ultimatum. At ch-032 it has stood for fifteen chapters, as the linter also records.; `earths-cardinal-question` is marked `resolved`, although both the prose (\"The candidacy stood ... unresolved\") and the supplied thread define the question as whether the water-world will receive a Cardinal. The Lich Cardinal's demand for a ruling or a plain non-ruling is discharged, but the Cardinal/candidacy question remains open. Keep this thread open or resolve the ultimatum under a separate thread.; `the-hay-farm-encyclical-aftermath` is marked `resolved` even though the chapter explicitly says the encyclical's second draft is \"still blank,\" and the established thread remains the aftermath of the inverted first encyclical and the awaited second draft. The ledger sentence resolves its specific planted observation, not the entire ongoing aftermath thread. | continuity badger redispatch #2: The chapter gives incompatible timing for the College's prior deferral. Its opening places this watch “Two nights after the College's written deferral,” but the Lich Cardinal says, “You gave Us, three nights past, a deferral with conditions attached.” Establish one interval so the ultimatum's chronology is coherent. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.461434
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-03: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.847973
+}
