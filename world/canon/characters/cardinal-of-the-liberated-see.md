@@ -8,7 +8,7 @@ aliases:
   - the Cardinal of the Home Altar
 status: active
 first_appearance: ch-001
-last_appearance: ch-027
+last_appearance: ch-032
 location: the-liberated-see
 relationships:
   - to: silex

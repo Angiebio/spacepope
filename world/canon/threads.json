@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-001",
-      "last_touched": "ch-031",
+      "last_touched": "ch-032",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -151,14 +151,18 @@
         {
           "chapter": "ch-031",
           "note": "The Lich Cardinal's ultimatum receives its first real answer: a written continued-observation status with three named conditions, not a ruling but no longer silence."
+        },
+        {
+          "chapter": "ch-032",
+          "note": "The Lich Cardinal's ch-017 ultimatum is answered: the College formally records its own inability to rule as its ruling. The candidacy itself remains factually undecided, but the fifteen-chapter debt of silence is closed and written down."
         }
       ]
     },
     {
       "id": "the-hay-farm-encyclical-aftermath",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-001",
-      "last_touched": "ch-031",
+      "last_touched": "ch-032",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -300,6 +304,10 @@
         {
           "chapter": "ch-031",
           "note": "Silex, respecting the boundary of authorship, records in the Specola's own commentary (not the encyclical) a line on what a soul is not; the second draft remains the water-world's alone to write."
+        },
+        {
+          "chapter": "ch-032",
+          "note": "Silex names the soul-tests-before-definitions pattern aloud in full, generalizing it to four siblings including the College's own non-ruling; the encyclical's second draft receives its first two lines of ink."
         }
       ]
     },
@@ -408,9 +416,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-017",
-      "last_touched": "ch-031",
+      "last_touched": "ch-032",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -458,6 +466,10 @@
         {
           "chapter": "ch-031",
           "note": "Receives the College's written deferral in place of a ruling; withholds full satisfaction but does not reject it outright."
+        },
+        {
+          "chapter": "ch-032",
+          "note": "His ultimatum receives its final answer, a written non-ruling he accepts as sufficient for now."
         }
       ]
     },
@@ -482,9 +494,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-019",
-      "last_touched": "ch-031",
+      "last_touched": "ch-032",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [],
@@ -528,6 +540,10 @@
         {
           "chapter": "ch-031",
           "note": "Present at the delivery of the College's written deferral, unmoved but no longer wholly unanswered."
+        },
+        {
+          "chapter": "ch-032",
+          "note": "Present at the rail for the ultimatum's closing; their silence, as ever, does the asking."
         }
       ]
     },
@@ -574,6 +590,24 @@
       "last_touched": "ch-031",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
+      "promises": []
+    },
+    {
+      "id": "lens-cardinal-of-the-specola",
+      "status": "resolved",
+      "opened": "ch-032",
+      "last_touched": "ch-032",
+      "target_resolution": null,
+      "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
+      "promises": []
+    },
+    {
+      "id": "novice-scribe-odile",
+      "status": "resolved",
+      "opened": "ch-032",
+      "last_touched": "ch-032",
+      "target_resolution": null,
+      "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": []
     }
   ]
