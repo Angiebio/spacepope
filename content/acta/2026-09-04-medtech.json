@@ -1,0 +1,42 @@
+{
+  "runId": "2026-09-04-medtech",
+  "date": "2026-09-04",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: FDA pilot offers generative AI medical devices a path to patients before they are authorized\"",
+      "costUsd": 0.000705
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Seattle scientists launch $95 million AI biology effort\": pass (0 redispatch) | \"OpenEvidence launches new family of AI models\": pass (2 redispatch) | \"Ionis wins FDA approval for first drug for Alexander disease\": pass (0 redispatch)",
+      "costUsd": 0.060875
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.098006
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.0412
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Sentence That Learned an Appeal\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.200786
+}
