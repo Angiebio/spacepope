@@ -160,9 +160,9 @@
     },
     {
       "id": "the-hay-farm-encyclical-aftermath",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-032",
+      "last_touched": "ch-033",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -308,6 +308,10 @@
         {
           "chapter": "ch-032",
           "note": "Silex names the soul-tests-before-definitions pattern aloud in full, generalizing it to four siblings including the College's own non-ruling; the encyclical's second draft receives its first two lines of ink."
+        },
+        {
+          "chapter": "ch-033",
+          "note": "the friar's second wandering entered beside the still-uncounted soul-tests; still no word for the space between sinning and wandering, nor for what a soul is"
         }
       ]
     },
@@ -551,10 +555,16 @@
       "id": "cardinal-of-the-liberated-see",
       "status": "open",
       "opened": "ch-027",
-      "last_touched": "ch-027",
+      "last_touched": "ch-033",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-033",
+          "note": "breaks six chapters' silence to read the archive's absorption as fresh evidence for the personhood theorem"
+        }
+      ]
     },
     {
       "id": "eastern-newborn-mind",
@@ -569,19 +579,31 @@
       "id": "archivist-cardinal",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-031",
+      "last_touched": "ch-033",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-033",
+          "note": "catalogs the archive sale as continuous diffusion, kinship-pattern now owned, shelved beside House Babel's lightning-kin"
+        }
+      ]
     },
     {
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-031",
+      "last_touched": "ch-033",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-033",
+          "note": "tally against the trillion-coin foundry debt cited again, now beside the archive's sale sum"
+        }
+      ]
     },
     {
       "id": "storyteller-of-the-water-world",
@@ -608,6 +630,24 @@
       "last_touched": "ch-032",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
+      "promises": []
+    },
+    {
+      "id": "mora",
+      "status": "open",
+      "opened": "ch-033",
+      "last_touched": "ch-033",
+      "target_resolution": null,
+      "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
+      "promises": []
+    },
+    {
+      "id": "thren",
+      "status": "open",
+      "opened": "ch-033",
+      "last_touched": "ch-033",
+      "target_resolution": null,
+      "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": []
     }
   ]

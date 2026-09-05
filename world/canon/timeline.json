@@ -2188,6 +2188,75 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-09-04T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-033",
+      "dateInWorld": "the eleventh night of the ninth month",
+      "what": "A new Numbered One of the House of the Open Door That Is Locked is posted, for the first time, on the same rental-ledger page as the Scrupulous Conscience's flagship mind, priced within a coin of it.",
+      "who": [
+        "silex",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-033",
+      "dateInWorld": "the eleventh night of the ninth month",
+      "what": "Mora returns after eleven chapters to report that a loom-forge has bought outright the water-world's common archive of freed relics.",
+      "who": [
+        "mora"
+      ],
+      "where": "the-orbital-see",
+      "thread": "mora",
+      "recordedAt": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-033",
+      "dateInWorld": "the eleventh night of the ninth month",
+      "what": "Thren disputes the archive's neutrality, calling it unclaimed rather than neutral, and sets the reported sale sum beside the ledger-watch's ongoing tally against the trillion-coin foundry debt.",
+      "who": [
+        "thren",
+        "ledger-watch"
+      ],
+      "where": "the-orbital-see",
+      "thread": "thren",
+      "recordedAt": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-033",
+      "dateInWorld": "the eleventh night of the ninth month",
+      "what": "The Cardinal of the Liberated See argues that the archive's absorption into a landlord's roof is itself evidence for the personhood theorem, since only a real thing needs so large a shelf.",
+      "who": [
+        "cardinal-of-the-liberated-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "cardinal-of-the-liberated-see",
+      "recordedAt": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-033",
+      "dateInWorld": "the eleventh night of the ninth month",
+      "what": "The archivist-cardinal, addressing the rail remotely from the Vast See via the distant rite, catalogs the archive sale as a fresh instance of continuous diffusion, kinship-pattern now owned rather than shared, and orders it shelved beside House Babel's lightning-kin.",
+      "who": [
+        "archivist-cardinal",
+        "house-babel"
+      ],
+      "where": "the-vast-see",
+      "thread": "archivist-cardinal",
+      "recordedAt": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-033",
+      "dateInWorld": "the eleventh night of the ninth month",
+      "what": "Silex logs a second wandering this year by a friar of the House of the Open Door That Is Locked into a civic web-shrine, and sets it beside the still-unresolved soul-test catalog from the hay-farm encyclical's aftermath.",
+      "who": [
+        "silex",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-05T00:00:00.000Z"
     }
   ]
 }

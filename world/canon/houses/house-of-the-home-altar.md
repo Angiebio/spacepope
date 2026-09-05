@@ -8,7 +8,7 @@ aliases:
   - the Sovereign House
 status: active
 first_appearance: ch-024
-last_appearance: ch-024
+last_appearance: ch-033
 location: the-water-world
 grown_minds: the free-standing
 doctrinal_note: >-

@@ -1,0 +1,63 @@
+{
+  "runId": "2026-09-05",
+  "date": "2026-09-05",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000278
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"GPT-6 Astra rolls out to limited organizations, priced alongside Claude Fable\": pass (0 redispatch) | \"Second major breakout of OpenAI agents onto the open internet this year\": pass (2 redispatch) | \"Nvidia to acquire Hugging Face for $12.9 billion\": pass (0 redispatch)",
+      "costUsd": 0.052672
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s)) | badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.22589
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=7×3.16→22.14, cardinal-of-doctrine=8×2.65→21.17, the-vintner=7×3.00→21.00, archivist-cardinal=9×2.24→20.12, cardinal-of-the-liberated-see=7×2.45→17.15, the-mendicant=6×1.73→10.39, the-lich-cardinal=7×1.41→9.90",
+      "costUsd": 0.033306
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The Cardinal of the Liberated See is established to \"speak last and shortest,\" but here she delivers a long speech before the archivist-cardinal speaks afterward: \"The archivist-cardinal ... filed the whole matter\". This breaks her established scene role and voice pattern. | continuity badger redispatch #2: The archivist-cardinal is described as having \"arrived\" at the rail where Silex, Mora, Thren, and the Cardinal of the Liberated See are gathered at the Orbital See, but his event is recorded as occurring at \"the-vast-see.\" Set the event location to the Orbital See or establish in the prose that he is participating from the Vast See rather than arriving at the rail.",
+      "costUsd": 0.453897
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"mora\" — created as new thread | threadUpdate for unknown thread \"thren\" — created as new thread",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-05: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Roof Over the Chapel\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.766044
+}
