@@ -1,0 +1,32 @@
+{
+  "runId": "2026-09-05-medtech",
+  "date": "2026-09-05",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: Seattle scientists launch $95 million AI biology effort\", \"STAT+: OpenEvidence launches new family of AI models\", \"STAT+: Ionis wins FDA approval for first drug for Alexander disease, a rare and deadly neurological disorder\"",
+      "costUsd": 0.00025
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Recipients of gene-edited pig kidneys successfully receive human organs\": pass (0 redispatch) | \"FDA approves first drug to treat Alexander disease\": spiked (2 redispatch)",
+      "costUsd": 0.051189
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "notes": "only 1 bulletins survived the gates — below quiet-day threshold; no dispatch"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA approves first drug to treat Alexander disease\": The underlying FDA citation does not resolve, so the claimed approval cannot be verified against the purported primary announcement.; The bulletin calls Alexander disease \"rare,\" but the supplied source material supports only that it is fatal, neurological, and genetic; it does not support the rarity claim."
+    }
+  ],
+  "totalCostUsd": 0.051439
+}
