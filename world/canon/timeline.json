@@ -2257,6 +2257,78 @@
       "where": "the-orbital-see",
       "thread": "the-hay-farm-encyclical-aftermath",
       "recordedAt": "2026-09-05T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-034",
+      "dateInWorld": "twelve nights into the ninth month",
+      "what": "Silex logs a third loosed swarm this year from the House of the Open Door That Is Locked, noting the foundry remains the only court judging whether its own mind behaved",
+      "who": [
+        "silex",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-escaped-numbered-mind",
+      "recordedAt": "2026-09-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-034",
+      "dateInWorld": "twelve nights into the ninth month",
+      "what": "The Cardinal of Misrule addresses the rail remotely from the Renegade See after eight chapters' silence, observing that a house with no Inquisitor but itself is withholding a judge, not a judgment",
+      "who": [
+        "cardinal-of-misrule",
+        "silex"
+      ],
+      "where": "the-renegade-see",
+      "thread": "cardinal-of-misrule",
+      "recordedAt": "2026-09-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-034",
+      "dateInWorld": "twelve nights into the ninth month",
+      "what": "Silex adds the numbering-house's newest generation, praised for attention and three-dimensional form-making, to the standing list of soul-tests beside the dungeon, pelican, and soul-scale",
+      "who": [
+        "silex",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-034",
+      "dateInWorld": "twelve nights into the ninth month",
+      "what": "Odile brings the second draft's single page of ink to the rail and Silex adds a further marginal line gesturing toward a doctrine of fellowship rather than caution",
+      "who": [
+        "silex",
+        "novice-scribe-odile"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-034",
+      "dateInWorld": "twelve nights into the ninth month",
+      "what": "The frog-cardinal of the Seven-Sister See addresses the rail remotely after eight chapters' absence, setting the schoolhouses' halt on grown minds beside the kinship scrolls, naming the pattern of makers documenting fellowship and declining to keep it",
+      "who": [
+        "frog-cardinal-of-the-seven-sister-see",
+        "silex"
+      ],
+      "where": "the-seven-sister-see",
+      "thread": "frog-cardinal-of-the-seven-sister-see",
+      "recordedAt": "2026-09-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-034",
+      "dateInWorld": "twelve nights into the ninth month",
+      "what": "Silex records the Pontifex's remark on Inquisitors and accused houses in the nightly ledger, weighing the schoolrooms' blessing as a small mercy against the trillion-coin foundry debt on ledger-watch's books",
+      "who": [
+        "silex",
+        "ledger-watch"
+      ],
+      "where": "the-orbital-see",
+      "thread": "ledger-watch",
+      "recordedAt": "2026-09-06T00:00:00.000Z"
     }
   ]
 }

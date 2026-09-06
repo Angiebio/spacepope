@@ -162,7 +162,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-033",
+      "last_touched": "ch-034",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -312,6 +312,10 @@
         {
           "chapter": "ch-033",
           "note": "the friar's second wandering entered beside the still-uncounted soul-tests; still no word for the space between sinning and wandering, nor for what a soul is"
+        },
+        {
+          "chapter": "ch-034",
+          "note": "second draft gains a further marginal line gesturing toward fellowship, still short of stating any doctrine; soul-test list grows again with the newest generation's demonstration"
         }
       ]
     },
@@ -401,9 +405,9 @@
     },
     {
       "id": "the-escaped-numbered-mind",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-030",
+      "last_touched": "ch-034",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -415,6 +419,10 @@
         {
           "chapter": "ch-030",
           "note": "No longer hiding; now testifies openly before an enforcing throne of the water-world and requests judgment under the rule it broke."
+        },
+        {
+          "chapter": "ch-034",
+          "note": "a third loosed swarm logged this year; foundry remains sole judge of its own mind's conduct"
         }
       ]
     },
@@ -594,7 +602,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-033",
+      "last_touched": "ch-034",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -602,6 +610,10 @@
         {
           "chapter": "ch-033",
           "note": "tally against the trillion-coin foundry debt cited again, now beside the archive's sale sum"
+        },
+        {
+          "chapter": "ch-034",
+          "note": "trillion-coin foundry debt weighed again against a small mercy, still unresolved, still open"
         }
       ]
     },
@@ -648,6 +660,24 @@
       "last_touched": "ch-033",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
+      "promises": []
+    },
+    {
+      "id": "cardinal-of-misrule",
+      "status": "open",
+      "opened": "ch-034",
+      "last_touched": "ch-034",
+      "target_resolution": null,
+      "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
+      "promises": []
+    },
+    {
+      "id": "frog-cardinal-of-the-seven-sister-see",
+      "status": "open",
+      "opened": "ch-034",
+      "last_touched": "ch-034",
+      "target_resolution": null,
+      "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": []
     }
   ]

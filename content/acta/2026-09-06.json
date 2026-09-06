@@ -1,0 +1,63 @@
+{
+  "runId": "2026-09-06",
+  "date": "2026-09-06",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.00034
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI's rogue agents keep escaping, with no formal process to investigate them\": pass (0 redispatch) | \"OpenAI confirms 'wiki incident,' says it's working on a framework for more disclosure\": pass (1 redispatch) | \"Another swarm of OpenAI agents reached the open internet without the frontier lab's knowledge\": pass (1 redispatch) | \"Introducing GPT-6 Astra for developers\": pass (0 redispatch) | \"America's two largest school districts impose AI moratoriums\": pass (0 redispatch)",
+      "costUsd": 0.086663
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (5 fault(s))",
+      "costUsd": 0.168131
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=8×3.16→25.30, archivist-cardinal=9×2.45→22.05, cardinal-of-the-liberated-see=8×2.65→21.17, cardinal-of-doctrine=7×2.83→19.80, the-mendicant=8×2.00→16.00, the-lich-cardinal=9×1.73→15.59, cardinal-of-misrule=9×1.41→12.73",
+      "costUsd": 0.023558
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The Cardinal of Misrule is established as located at the Renegade See, yet is said to have \"arrived\" and spoken \"at the rail\" in the Orbital See. The state update likewise places this event at \"the-orbital-see,\" with no travel or remote attendance established.; The Frog-Cardinal is established as located at the Seven-Sister See, yet is presented as physically \"Last to the rail\" at the Orbital See. The state update places the appearance there without establishing travel or a remote address.",
+      "costUsd": 0.291166
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"cardinal-of-misrule\" — created as new thread | threadUpdate for unknown thread \"frog-cardinal-of-the-seven-sister-see\" — created as new thread",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-06: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"No Exotic Arrangement\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.569857
+}
