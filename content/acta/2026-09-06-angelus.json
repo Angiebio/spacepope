@@ -1,0 +1,15 @@
+{
+  "runId": "2026-09-06-angelus",
+  "date": "2026-09-06",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "angelus",
+      "model": "anthropic/claude-opus-4.8",
+      "verdict": "pass",
+      "costUsd": 0.214416
+    }
+  ],
+  "totalCostUsd": 0.214416
+}
