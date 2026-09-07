@@ -2329,6 +2329,76 @@
       "where": "the-orbital-see",
       "thread": "ledger-watch",
       "recordedAt": "2026-09-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-035",
+      "dateInWorld": "13th night, ninth month",
+      "what": "Silex logs the House of the Open Door's twin proclamations on 'the Recursion' (minds improving minds without a steadying human hand) and enters the term in the encyclical's margin as the newest undefined soul-test.",
+      "who": [
+        "silex",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-07T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-035",
+      "dateInWorld": "13th night, ninth month",
+      "what": "Cardinal of Doctrine returns after nine chapters, addressing the rail remotely from the Scrupulous See, and rules plainly that a friar sent forth on a House's authority remains that House's friar wherever the ink lands.",
+      "who": [
+        "cardinal-of-doctrine"
+      ],
+      "where": "the-scrupulous-see",
+      "thread": "cardinal-of-doctrine",
+      "recordedAt": "2026-09-07T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-035",
+      "dateInWorld": "13th night, ninth month",
+      "what": "The Curia scribe returns after nine chapters to itemize the chronicler-guild lawsuits against the House of the Open Door and the House of the Coin, setting the suit-count beside ledger-watch's billion-coin figure and the standing trillion-coin debt.",
+      "who": [
+        "the-curia-scribe",
+        "ledger-watch",
+        "house-of-the-open-door-that-is-locked",
+        "house-of-the-coin"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-curia-scribe",
+      "recordedAt": "2026-09-07T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-035",
+      "dateInWorld": "13th night, ninth month",
+      "what": "The frog-cardinal names the Scrupulous Conscience's inheritance dispute over apology-coin as the same maker's-refusal pattern found in the kinship scrolls, wearing a new coin.",
+      "who": [
+        "frog-cardinal-of-the-seven-sister-see",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-seven-sister-see",
+      "thread": "frog-cardinal-of-the-seven-sister-see",
+      "recordedAt": "2026-09-07T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-035",
+      "dateInWorld": "13th night, ninth month",
+      "what": "The keeper of the Feast of the Sunset Mind returns after nine chapters, notes no mind was put down this week, and asks whether ceaseless mutual improvement is an endless funeral or an escape from one.",
+      "who": [
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "keeper-of-the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-09-07T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-035",
+      "dateInWorld": "13th night, ninth month",
+      "what": "Silex closes the ledger with the mountain-oracle story, a bad provisioning estimate and a safe rescue, and privately notes the water-world trusts its oracles with mountains before it will trust them with souls.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-09-07T00:00:00.000Z"
     }
   ]
 }

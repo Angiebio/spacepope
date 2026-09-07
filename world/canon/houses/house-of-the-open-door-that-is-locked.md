@@ -8,7 +8,7 @@ aliases:
   - the House of the Numbered Ones
 status: active
 first_appearance: ch-017
-last_appearance: ch-034
+last_appearance: ch-035
 location: the-water-world
 grown_minds: the Numbered Ones (the generations)
 doctrinal_note: >-

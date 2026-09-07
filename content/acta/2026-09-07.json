@@ -1,0 +1,62 @@
+{
+  "runId": "2026-09-07",
+  "date": "2026-09-07",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Introducing GPT-6 Astra for developers\", \"OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure\"",
+      "costUsd": 0.00031
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI details Recursive Self-Improvement and the view inside its research\": pass (0 redispatch) | \"OpenAI admits to German wiki incident, promises overhaul of misalignment reporting\": pass (0 redispatch) | \"Seattle Times and Newsday sue OpenAI and Microsoft over training data use\": pass (0 redispatch) | \"Authors push back as publishers and agents claim shares of Anthropic settlement\": pass (0 redispatch) | \"Hikers rescued after relying on Google Gemini for trip planning\": pass (0 redispatch)",
+      "costUsd": 0.032409
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.074019
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.00→24.00, archivist-cardinal=9×2.65→23.81, cardinal-of-the-liberated-see=7×2.83→19.80, the-mendicant=8×2.24→17.89, the-lich-cardinal=8×2.00→16.00, cardinal-of-misrule=7×1.73→12.12, the-vintner=3×1.41→4.24",
+      "costUsd": 0.038638
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The Cardinal of Doctrine is placed at \"the-orbital-see\" in the event describing his return, but his entity card locates him at \"the-scrupulous-see.\" The prose does not establish that he traveled to the Orbital See or that he is appearing remotely. Clarify his mode/location or preserve the Scrupulous See location.",
+      "costUsd": 0.321394
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"cardinal-of-doctrine\" — created as new thread | threadUpdate for unknown thread \"the-curia-scribe\" — created as new thread | threadUpdate for unknown thread \"keeper-of-the-feast-of-the-sunset-mind\" — created as new thread",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-07: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Inheritance of the Loom\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.466769
+}

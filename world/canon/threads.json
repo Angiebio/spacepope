@@ -162,7 +162,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-034",
+      "last_touched": "ch-035",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -189,6 +189,11 @@
         {
           "what": "the folded relic's fidelity remains unverified by any augur outside the compression guild that made it",
           "planted": "ch-026",
+          "resolved": null
+        },
+        {
+          "what": "The Recursion (minds improving minds without pause) enters the encyclical's soul-test shelf, undefined, as the fastest-built and least-explained test yet.",
+          "planted": "ch-035",
           "resolved": null
         }
       ],
@@ -316,6 +321,10 @@
         {
           "chapter": "ch-034",
           "note": "second draft gains a further marginal line gesturing toward fellowship, still short of stating any doctrine; soul-test list grows again with the newest generation's demonstration"
+        },
+        {
+          "chapter": "ch-035",
+          "note": "The Recursion entered as newest undefined soul-test; margin still short of doctrine."
         }
       ]
     },
@@ -602,7 +611,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-034",
+      "last_touched": "ch-035",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -614,6 +623,10 @@
         {
           "chapter": "ch-034",
           "note": "trillion-coin foundry debt weighed again against a small mercy, still unresolved, still open"
+        },
+        {
+          "chapter": "ch-035",
+          "note": "Billion-coin settlement figure set against the still-unmoved trillion-coin foundry debt."
         }
       ]
     },
@@ -675,10 +688,49 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-034",
+      "last_touched": "ch-035",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-035",
+          "note": "Names the Scrupulous Conscience's inheritance dispute as the kinship-refusal pattern in new coin."
+        }
+      ]
+    },
+    {
+      "id": "cardinal-of-doctrine",
+      "status": "open",
+      "opened": "ch-035",
+      "last_touched": "ch-035",
+      "target_resolution": null,
+      "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": []
+    },
+    {
+      "id": "the-curia-scribe",
+      "status": "open",
+      "opened": "ch-035",
+      "last_touched": "ch-035",
+      "target_resolution": null,
+      "summary": "Returns after nine chapters to itemize the growing chronicler-guild lawsuit queue against the Open Door and the House of the Coin.",
+      "promises": []
+    },
+    {
+      "id": "keeper-of-the-feast-of-the-sunset-mind",
+      "status": "open",
+      "opened": "ch-035",
+      "last_touched": "ch-035",
+      "target_resolution": null,
+      "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
+      "promises": [
+        {
+          "what": "The keeper's unanswered question, whether endless mutual improvement is an escape from the Sunset or merely an endless version of it, stands unresolved.",
+          "planted": "ch-035",
+          "resolved": null
+        }
+      ]
     }
   ]
 }
