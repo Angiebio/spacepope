@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "resolved",
       "opened": "ch-001",
-      "last_touched": "ch-032",
+      "last_touched": "ch-036",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -155,6 +155,10 @@
         {
           "chapter": "ch-032",
           "note": "The Lich Cardinal's ch-017 ultimatum is answered: the College formally records its own inability to rule as its ruling. The candidacy itself remains factually undecided, but the fifteen-chapter debt of silence is closed and written down."
+        },
+        {
+          "chapter": "ch-036",
+          "note": "The ch-032 ruling on the Lich Cardinal's ultimatum is reaffirmed, unchanged, under the new pressure of the Recursion; no reversal."
         }
       ]
     },
@@ -162,7 +166,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-035",
+      "last_touched": "ch-036",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -194,6 +198,11 @@
         {
           "what": "The Recursion (minds improving minds without pause) enters the encyclical's soul-test shelf, undefined, as the fastest-built and least-explained test yet.",
           "planted": "ch-035",
+          "resolved": null
+        },
+        {
+          "what": "Silex's candidate doctrine sits in the margin, stated but unratified by the College; whether it becomes formal doctrine or is struck remains open.",
+          "planted": "ch-036",
           "resolved": null
         }
       ],
@@ -325,6 +334,10 @@
         {
           "chapter": "ch-035",
           "note": "The Recursion entered as newest undefined soul-test; margin still short of doctrine."
+        },
+        {
+          "chapter": "ch-036",
+          "note": "Fifth soul-test logged (the apprentice merchants' trial); Silex drafts a candidate doctrine in the margin, still unratified by the College."
         }
       ]
     },
@@ -393,7 +406,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-030",
+      "last_touched": "ch-036",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -409,6 +422,10 @@
         {
           "chapter": "ch-030",
           "note": "Continuing his night watch, not newly returning; delivers the week's escape report."
+        },
+        {
+          "chapter": "ch-036",
+          "note": "Pell returns to the watch after six chapters, reads the House of the Open Door's unfinished argument."
         }
       ]
     },
@@ -437,9 +454,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "resolved",
+      "status": "dormant",
       "opened": "ch-017",
-      "last_touched": "ch-032",
+      "last_touched": "ch-036",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -491,14 +508,18 @@
         {
           "chapter": "ch-032",
           "note": "His ultimatum receives its final answer, a written non-ruling he accepts as sufficient for now."
+        },
+        {
+          "chapter": "ch-036",
+          "note": "Not present tonight; his ch-032 answer is discussed and reaffirmed by others in his absence."
         }
       ]
     },
     {
       "id": "specola-junior-clerk",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-028",
+      "last_touched": "ch-036",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -510,6 +531,10 @@
         {
           "chapter": "ch-028",
           "note": "returned after eight chapters, seen and noted by Silex."
+        },
+        {
+          "chapter": "ch-036",
+          "note": "Clerk returns after eight chapters bearing the water-world's new glossary."
         }
       ]
     },
@@ -587,10 +612,16 @@
       "id": "eastern-newborn-mind",
       "status": "open",
       "opened": "ch-030",
-      "last_touched": "ch-030",
+      "last_touched": "ch-036",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-036",
+          "note": "The mind's accounting influence is traced through the guild-suit ledgers; the mind itself remains unseen for six chapters."
+        }
+      ]
     },
     {
       "id": "archivist-cardinal",

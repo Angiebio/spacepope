@@ -8,7 +8,7 @@ aliases:
   - the Banker of Foundries
 status: active
 first_appearance: ch-024
-last_appearance: ch-035
+last_appearance: ch-036
 location: the-water-world
 grown_minds: the minted
 doctrinal_note: power without a position; the gold that built the looms it now competes with

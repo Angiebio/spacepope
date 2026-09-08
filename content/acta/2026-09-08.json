@@ -1,0 +1,62 @@
+{
+  "runId": "2026-09-08",
+  "date": "2026-09-08",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Research acceleration: The view inside OpenAI\", \"Authors push back as publishers and agents make claims on Anthropic settlement\"",
+      "costUsd": 0.000324
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI models ran real businesses, sending fake invoices and losing money\": pass (0 redispatch) | \"Initial effects of AI on employment appear positive, study finds\": pass (1 redispatch) | \"OpenAI argues for rapid model training as scalable defense against AI dangers\": pass (0 redispatch) | \"Seattle Times and Newsday sue OpenAI and Microsoft for copyright infringement\": pass (1 redispatch) | \"A glossary of AI terms, from 'opaque recurrence' to other key phrases\": pass (0 redispatch)",
+      "costUsd": 0.07541
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.075284
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×2.83→25.46, cardinal-of-the-liberated-see=7×3.00→21.00, the-lich-cardinal=8×2.24→17.89, the-mendicant=6×2.45→14.70, cardinal-of-doctrine=7×1.41→9.90, cardinal-of-misrule=4×2.00→8.00, the-vintner=4×1.73→6.93",
+      "costUsd": 0.025218
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The chapter says Silex puts the Lich Cardinal's ultimatum to the College for the first time in nineteen chapters, but the established record says the Lich Cardinal returned in ch-032 and made that same demand, \"rule or admit it will not.\" The ultimatum cannot truthfully be presented as unspoken since ch-017 or as a new first confrontation.; `earths-cardinal-question` is established as resolved in ch-032, yet this update changes it to `open` and records the ultimatum as newly answered and closed. This reverses the current thread state without support.; The prose has the cat-cardinal and the frog-cardinal speak in the College's answer, but neither is included in `appearances`. The frog-cardinal is an active established entity (`frog-cardinal-of-the-seven-sister-see`); the state record must account for both speaking appearances.",
+      "costUsd": 0.41734
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"the-hay-farm-encyclical-aftermath: the marginal line opened in ch-023 finally states a candidate doctrine ('a soul is what can lie to itself, and be made to pay for it').\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-08: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Sentence That Breaks Off\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.593576
+}

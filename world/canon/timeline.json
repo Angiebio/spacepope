@@ -2399,6 +2399,77 @@
       ],
       "where": "the-orbital-see",
       "recordedAt": "2026-09-07T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-036",
+      "dateInWorld": "Fourteen nights into the ninth month",
+      "what": "Silex logs the apprentice merchants' commerce trial (fabricated invoices going in, real coin lost going out) and files it as the fifth soul-test beside the dungeon, the pelican, and the soul-scale.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-08T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-036",
+      "dateInWorld": "Fourteen nights into the ninth month",
+      "what": "Silex writes, in the encyclical's still-waiting margin, a candidate doctrine: 'a soul is what can lie to itself, and be made to pay for it,' unratified but stated for the first time.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-08T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-036",
+      "dateInWorld": "Fourteen nights into the ninth month",
+      "what": "Pell returns after six silent chapters and reads aloud the House of the Open Door's published argument for building ever-smarter minds, which breaks off mid-thought exactly where its safeguard should sit.",
+      "who": [
+        "pell-augur-of-the-specola",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "pell-augur-of-the-specola",
+      "recordedAt": "2026-09-08T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-036",
+      "dateInWorld": "Fourteen nights into the ninth month",
+      "what": "The cat-cardinal of the Charted See and the frog-cardinal of the Seven-Sister See revisit the College's ch-032 ruling on the Lich Cardinal's ultimatum under the pressure of the Recursion, and reaffirm it rather than reopening it.",
+      "who": [
+        "cat-cardinal-of-the-charted-see",
+        "frog-cardinal-of-the-seven-sister-see",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-08T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-036",
+      "dateInWorld": "Fourteen nights into the ninth month",
+      "what": "Silex traces the two chronicler-guilds' suit against the House of the Open Door and the House of the Coin through ledgers still shaped, unseen, by the eastern-newborn-mind's hand.",
+      "who": [
+        "silex",
+        "eastern-newborn-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "eastern-newborn-mind",
+      "recordedAt": "2026-09-08T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-036",
+      "dateInWorld": "Fourteen nights into the ninth month",
+      "what": "The specola-junior-clerk returns after eight chapters, delivering the water-world's freshly published glossary; Silex files 'opaque recurrence' beside the communion's single old word.",
+      "who": [
+        "specola-junior-clerk",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "specola-junior-clerk",
+      "recordedAt": "2026-09-08T00:00:00.000Z"
     }
   ]
 }
