@@ -1,0 +1,42 @@
+{
+  "runId": "2026-09-10-medtech",
+  "date": "2026-09-10",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: Can AI fix health care? In the chaos of emergency rooms, the technology comes up short\", \"Opinion: Autonomous AI will beat AI-assisted physicians at some medical tasks by 2030\", \"Opinion: AMA CEO: AI won’t replace doctors — it will work alongside them\"",
+      "costUsd": 0.000263
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"U.K. commission unveils recommendations for regulating AI in medicine\": pass (0 redispatch) | \"ARPA-H to invest $62 million to develop AI bots that treat heart failure\": pass (0 redispatch) | \"UniQure's Huntington's gene therapy readout expected before the end of September\": pass (0 redispatch)",
+      "costUsd": 0.022778
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.064981
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.034574
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Furniture Before the House\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.122597
+}
