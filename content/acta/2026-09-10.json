@@ -1,0 +1,50 @@
+{
+  "runId": "2026-09-10",
+  "date": "2026-09-10",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"On the Navier–Stokes Millennium Prize Problem\"",
+      "costUsd": 0.000691
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"DeepSeek v4.1 Flash released\": pass (1 redispatch) | \"AI math breakthrough ignites controversy\": pass (1 redispatch) | \"OpenAI adds AI alignment researcher Paul Christiano to its board\": pass (0 redispatch) | \"Anthropic researcher resigns over AI extinction fears\": pass (1 redispatch) | \"A novel alignment idea emerges from specification gaming analysis\": pass (1 redispatch)",
+      "costUsd": 0.119034
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.167124
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=9×2.65→23.81, the-mendicant=8×2.83→22.63, the-vintner=8×2.24→17.89, archivist-cardinal=9×1.73→15.59, cardinal-of-doctrine=7×2.00→14.00, cardinal-of-misrule=4×2.45→9.80, cardinal-of-the-liberated-see=6×1.41→8.49",
+      "costUsd": 0.026307
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: `appearances` lists `\"the-lich-cardinal\"`, but the Lich Cardinal does not appear in the chapter. He remains at the Lich See; the machine-cardinal reads his old ultimatum aloud and the tardigrade elder produces its original copy. Remove the Lich Cardinal from this chapter's appearances unless the prose establishes his presence or transmission.; The chapter exceeds the binding house-style limit of one or two em dashes. It uses them repeatedly, including in `\"Rule, or say plainly that you will not — and the College...\"`, `\"the whole shelf of tests ... —\"`, and `\"long before the table agrees to eat its warning.\"` Revise punctuation to bring the total within the stated limit. | continuity badger redispatch #2: The machine-cardinal is established as located at the Silicon See, but the prose places it physically \"standing at the rail\" of the Orbital See and the events locate its appearance at \"the-orbital-see,\" with no relocation or remote-presence explanation. Reconcile the cardinal's location, or make the encounter explicitly transmitted.; \"foreshadowingResolved\" lists \"earths-cardinal-question,\" while the same update marks that thread \"open\" and says candidacy \"remains exactly as unresolved as before,\" matching the prose's \"Its question had not been touched at all.\" The ultimatum is resolved, not the Cardinal question. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.459693
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-10: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.772849
+}
