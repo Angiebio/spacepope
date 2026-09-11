@@ -1,0 +1,42 @@
+{
+  "runId": "2026-09-11-medtech",
+  "date": "2026-09-11",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"STAT+: What to expect from UniQure’s upcoming Huntington’s gene therapy readout\", \"STAT+: U.K. unveils recommendations for regulating AI in medicine\"",
+      "costUsd": 0.000858
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Trump officials say AI will help save rural health care. Some leaders in the field don't believe it\": pass (0 redispatch) | \"STAT+: An AI tool aims to catch harder-to-detect heart attacks in EKGs\": pass (0 redispatch)",
+      "costUsd": 0.012465
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.059136
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032007
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Nightlight and the Roof\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.104465
+}
