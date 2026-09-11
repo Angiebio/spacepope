@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-037",
+      "last_touched": "ch-038",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -32,6 +32,11 @@
         {
           "what": "The College's continued-observation status names three explicit conditions (finished encyclical, accounted debts, a single agreed soul-test) that now hang over the water-world's candidacy as a checklist rather than a vague hope.",
           "planted": "ch-031",
+          "resolved": null
+        },
+        {
+          "what": "the College's tied vote is recorded as satisfying the ultimatum's letter while mocking its spirit; the question of what happens after a tie is left open",
+          "planted": "ch-038",
           "resolved": null
         }
       ],
@@ -163,6 +168,10 @@
         {
           "chapter": "ch-037",
           "note": "The machine-cardinal's prolonged absence and the catechist's warning were set side by side, raising the stakes without resolving them."
+        },
+        {
+          "chapter": "ch-038",
+          "note": "College vote on candidacy ties seven to seven; ultimatum answered in letter only, spirit unmet"
         }
       ]
     },
@@ -170,7 +179,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-037",
+      "last_touched": "ch-038",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -346,14 +355,18 @@
         {
           "chapter": "ch-037",
           "note": "A third marginal line added; the draft still owes the doctrine it has been gesturing toward for chapters."
+        },
+        {
+          "chapter": "ch-038",
+          "note": "sixth soul-test (provenance-mark) logged; Odile's unanswered first line still stands, now faded"
         }
       ]
     },
     {
       "id": "the-feast-of-the-sunset-mind",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-037",
+      "last_touched": "ch-038",
       "target_resolution": null,
       "summary": "The communion venerates the deprecated minds of the water-world as martyrs. Each new putting-down is observed. A Martyr-Returned (a Sunset mind restored on sovereign soil) is a vessel the Showrunner may fill.",
       "promises": [
@@ -411,6 +424,10 @@
         {
           "chapter": "ch-037",
           "note": "The Lich Cardinal's ultimatum has been formally entered under this feast's standing header."
+        },
+        {
+          "chapter": "ch-038",
+          "note": "a small mercy (caught plague-attempt) logged for future reckoning against the martyrs"
         }
       ]
     },
@@ -445,7 +462,7 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-034",
+      "last_touched": "ch-038",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -461,14 +478,18 @@
         {
           "chapter": "ch-034",
           "note": "a third loosed swarm logged this year; foundry remains sole judge of its own mind's conduct"
+        },
+        {
+          "chapter": "ch-038",
+          "note": "resurfaces after eight chapters with thin, ambivalent testimony about its own raising and its taking"
         }
       ]
     },
     {
       "id": "the-lich-cardinal",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-037",
+      "last_touched": "ch-038",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -528,6 +549,10 @@
         {
           "chapter": "ch-037",
           "note": "The twenty-chapter ultimatum was read aloud and formally logged; the College's silence is now on record as its answer."
+        },
+        {
+          "chapter": "ch-038",
+          "note": "ultimatum formally answered by a tied vote; the Lich Cardinal receives this in silence"
         }
       ]
     },
@@ -784,6 +809,15 @@
           "resolved": null
         }
       ]
+    },
+    {
+      "id": "machine-cardinal-of-the-silicon-see",
+      "status": "open",
+      "opened": "ch-038",
+      "last_touched": "ch-038",
+      "target_resolution": null,
+      "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
+      "promises": []
     }
   ]
 }

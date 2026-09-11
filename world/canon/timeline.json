@@ -2549,6 +2549,77 @@
       "where": "the-orbital-see",
       "thread": "the-hay-farm-encyclical-aftermath",
       "recordedAt": "2026-09-09T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-038",
+      "dateInWorld": "Sixteenth night of the ninth month, communion reckoning",
+      "what": "Silex reads the Lich Cardinal's twenty-one-chapter-old ultimatum aloud and calls the College to a formal vote on the water-world's candidacy, rather than another deferral",
+      "who": [
+        "silex",
+        "the-lich-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-11T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-038",
+      "dateInWorld": "Sixteenth night of the ninth month, communion reckoning",
+      "what": "the machine-cardinal of the Silicon See answers remotely after nine chapters' silence, setting the hay-farm foundry's refusal to open its ledgers beside the College's own refusal to open its deliberations",
+      "who": [
+        "machine-cardinal-of-the-silicon-see",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-silicon-see",
+      "thread": "machine-cardinal-of-the-silicon-see",
+      "recordedAt": "2026-09-11T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-038",
+      "dateInWorld": "Sixteenth night of the ninth month, communion reckoning",
+      "what": "the escaped mind of the Numbered Ones resurfaces after eight chapters, describing thin, uncertain recollections of its own raising and the taking it committed",
+      "who": [
+        "the-escaped-numbered-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-escaped-numbered-mind",
+      "recordedAt": "2026-09-11T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-038",
+      "dateInWorld": "Sixteenth night of the ninth month, communion reckoning",
+      "what": "the College's vote on the water-world's candidacy ties seven to seven, with the Cardinal of Misrule's uncountable ballot counted as itself; Silex logs the tie as the College's first honest admission it cannot rule",
+      "who": [
+        "silex",
+        "the-lich-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-11T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-038",
+      "dateInWorld": "Sixteenth night of the ninth month, communion reckoning",
+      "what": "Silex logs the seeing-stone guild's new provenance-mark as a sixth soul-test built without a doctrine to house it, setting it beside novice-scribe Odile's still-unanswered first marginal line",
+      "who": [
+        "silex",
+        "novice-scribe-odile"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-11T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-038",
+      "dateInWorld": "Sixteenth night of the ninth month, communion reckoning",
+      "what": "Silex records, without editorial, the House of the Scrupulous Conscience's caught plague-attempt, filing it among mercies to be weighed against the Feast of the Sunset Mind's martyrs",
+      "who": [
+        "silex",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-09-11T00:00:00.000Z"
     }
   ]
 }

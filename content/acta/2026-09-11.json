@@ -1,0 +1,66 @@
+{
+  "runId": "2026-09-11",
+  "date": "2026-09-11",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"OpenAI adds a prominent AI doomer to its board of directors\"",
+      "costUsd": 0.000314
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Mathematicians challenge OpenAI over use of unpublished work\": pass (0 redispatch) | \"Anthropic says it blocked possible biological weapons efforts\": pass (1 redispatch) | \"WeWorm: first zero-click worm spreads through WeChat calls on iOS and Android\": spiked (2 redispatch) | \"Apple introduces Reference Image to prove iPhone photos aren't AI slop\": pass (1 redispatch)",
+      "costUsd": 0.064609
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.090697
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=7×2.65→18.52, the-mendicant=6×3.00→18.00, cardinal-of-doctrine=8×2.24→17.89, archivist-cardinal=8×2.00→16.00, cardinal-of-the-liberated-see=8×1.73→13.86, the-lich-cardinal=6×1.41→8.49, the-vintner=3×2.45→7.35",
+      "costUsd": 0.035255
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.196701
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"machine-cardinal-of-the-silicon-see\" — created as new thread",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-11: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Unopened Ledger\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"WeWorm: first zero-click worm spreads through WeChat calls on iOS and Android\": The artifact is empty. It does not report the source-supported claim that Calif Research released a demo of WeWorm, described as a zero-click worm spreading through WeChat calls on iOS and Android."
+    }
+  ],
+  "totalCostUsd": 0.387575
+}
