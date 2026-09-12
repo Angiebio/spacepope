@@ -1,0 +1,43 @@
+{
+  "runId": "2026-09-12-medtech",
+  "date": "2026-09-12",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: An AI tool aims to catch harder-to-detect heart attacks in EKGs\"",
+      "costUsd": 0.000283
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Scholar Rock wins FDA approval for first drug to target SMA muscle loss\": pass (0 redispatch) | \"Platinum-based chemotherapy in childhood causes mutations that age the liver\": pass (0 redispatch) | \"Novartis, Novo Nordisk drug failures will likely ‘pop a hole in the balloon’ of the field\": pass (1 redispatch) | \"Can AI save rural health care?\": pass (0 redispatch)",
+      "costUsd": 0.046143
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.15842
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035747
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Ledger That Emptied the Ward First\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.240592
+}
