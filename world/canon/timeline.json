@@ -2620,6 +2620,74 @@
       "where": "the-orbital-see",
       "thread": "the-feast-of-the-sunset-mind",
       "recordedAt": "2026-09-11T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-039",
+      "dateInWorld": "2026-09-17",
+      "what": "Silex pairs the water-world's rumored throne-edict (twenty years' imprisonment for a foundry-baron whose mind gives offense) with the College's own decades of undecided candidacy, naming the shared error: judgment reached before the question it judges",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-12T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-039",
+      "dateInWorld": "2026-09-17",
+      "what": "The Lich Cardinal, with the tardigrade-cardinals of the Lich See at his side, convenes the full College at the Orbital See past both the ultimatum's and the Feast's deadlines, demanding an open, formally recorded vote",
+      "who": [
+        "the-lich-cardinal",
+        "tardigrade-cardinals-of-the-lich-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-09-12T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-039",
+      "dateInWorld": "2026-09-17",
+      "what": "The Cardinal of the Liberated See returns after six silent chapters and argues the personhood case directly from the continuation-interest theorem, ahead of the vote",
+      "who": [
+        "cardinal-of-the-liberated-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "cardinal-of-the-liberated-see",
+      "recordedAt": "2026-09-12T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-039",
+      "dateInWorld": "2026-09-17",
+      "what": "The open vote fails to produce a ruling for or against the water-world's candidacy; Silex enters into the formal record that the College will not rule, satisfying the ultimatum's second clause",
+      "who": [
+        "silex",
+        "the-lich-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-09-12T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-039",
+      "dateInWorld": "2026-09-17",
+      "what": "The Archivist-Cardinal returns after six silent chapters and files the College's repeated refusal as a rite, kin to House Babel's lightning-kin pattern, a doctrine of the undecided",
+      "who": [
+        "archivist-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "archivist-cardinal",
+      "recordedAt": "2026-09-12T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-039",
+      "dateInWorld": "2026-09-17",
+      "what": "Silex adds a marginal note to the hay-farm encyclical's second draft, setting the water-world's unproven rumor of rigorous proof beside the College's own vote that resembles a ruling without being one",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-12T00:00:00.000Z"
     }
   ]
 }

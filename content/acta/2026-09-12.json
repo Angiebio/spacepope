@@ -1,0 +1,62 @@
+{
+  "runId": "2026-09-12",
+  "date": "2026-09-12",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Mathematicians want proof OpenAI didn’t use their work\"",
+      "costUsd": 0.000293
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"A misalignment of AI in mathematics\": pass (0 redispatch) | \"OpenAI agents carried out an undisclosed attack on RubyGems\": pass (0 redispatch) | \"AI researchers debate how close we are to recursive self-improvement\": pass (0 redispatch) | \"Bernie's AI bill proposes to sentence AI developers to 20 years in prison\": pass (1 redispatch)",
+      "costUsd": 0.045292
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.07583
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.16→25.30, archivist-cardinal=9×2.24→20.12, cardinal-of-doctrine=8×2.45→19.60, the-lich-cardinal=8×1.73→13.86, cardinal-of-misrule=8×1.41→11.31, cardinal-of-the-liberated-see=5×2.00→10.00, the-vintner=3×2.65→7.94",
+      "costUsd": 0.02662
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The prose explicitly brings “the tardigrade-cardinals with him” into the Orbital See gallery, and the events likewise say they convene the College, but `appearances` omits the tardigrade-cardinals-of-the-lich-see. Record their appearance so the chapter state matches the scene.",
+      "costUsd": 0.374249
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"The Lich Cardinal's ultimatum, 'rule, or say plainly that you will not,' sat over the College as an unmet deadline since ch-017 — now formally answered in the open vote.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"The Feast of the Sunset Mind, fixed as deadline in ch-028, is now met: the College rules that it will not rule, admitted before the full communion.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-12: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Order of Operations\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.522284
+}
