@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-039",
+      "last_touched": "ch-040",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -17,17 +17,17 @@
         {
           "what": "The Lich Cardinal's ultimatum, 'rule, or say plainly that you will not,' now sits over the College as an unmet deadline.",
           "planted": "ch-017",
-          "resolved": null
+          "resolved": "ch-040"
         },
         {
           "what": "the Feast of the Sunset Mind is now a fixed deadline: the College rules there, or admits before the communion that it will not",
           "planted": "ch-028",
-          "resolved": null
+          "resolved": "ch-040"
         },
         {
           "what": "Silex's drafted admission, that the College's silence is itself the water-world's clearest doctrine, exists written in the ledger but unsent",
           "planted": "ch-029",
-          "resolved": null
+          "resolved": "ch-040"
         },
         {
           "what": "The College's continued-observation status names three explicit conditions (finished encyclical, accounted debts, a single agreed soul-test) that now hang over the water-world's candidacy as a checklist rather than a vague hope.",
@@ -176,6 +176,10 @@
         {
           "chapter": "ch-039",
           "note": "Candidacy remains unresolved even after a full open vote; the College's refusal is now itself formally recorded."
+        },
+        {
+          "chapter": "ch-040",
+          "note": "the Lich Cardinal's ultimatum formally answered; the College ratifies perpetual observation as the water-world's doctrine rather than resolving candidacy"
         }
       ]
     },
@@ -183,7 +187,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-039",
+      "last_touched": "ch-040",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -367,6 +371,10 @@
         {
           "chapter": "ch-039",
           "note": "Seventh marginal pairing added: the water-world's unproven proof-rumor beside the College's own vote that only resembles a ruling."
+        },
+        {
+          "chapter": "ch-040",
+          "note": "second draft gains a second marginal line; doctrine still unwritten"
         }
       ]
     },
@@ -499,9 +507,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-017",
-      "last_touched": "ch-039",
+      "last_touched": "ch-040",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [],
@@ -569,6 +577,10 @@
         {
           "chapter": "ch-039",
           "note": "Ultimatum's second clause satisfied; the Lich Cardinal and tardigrade-cardinals accept the formal admission without further demand, for now."
+        },
+        {
+          "chapter": "ch-040",
+          "note": "absent from this sitting; his ultimatum answered by the tardigrade-cardinals and the vote in his stead"
         }
       ]
     },
@@ -749,12 +761,18 @@
     },
     {
       "id": "lens-cardinal-of-the-specola",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-032",
+      "last_touched": "ch-040",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-040",
+          "note": "present and tending the instruments without incident"
+        }
+      ]
     },
     {
       "id": "novice-scribe-odile",
@@ -769,28 +787,46 @@
       "id": "mora",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-033",
+      "last_touched": "ch-040",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-040",
+          "note": "returns to the night watch with Thren to report the commons-library raid"
+        }
+      ]
     },
     {
       "id": "thren",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-033",
+      "last_touched": "ch-040",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-040",
+          "note": "returns to the night watch with Mora"
+        }
+      ]
     },
     {
       "id": "cardinal-of-misrule",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-034",
+      "last_touched": "ch-040",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-040",
+          "note": "speaks remotely from the Renegade See on the unexplained agentic workshop-tool"
+        }
+      ]
     },
     {
       "id": "frog-cardinal-of-the-seven-sister-see",
