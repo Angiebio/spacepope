@@ -9,7 +9,7 @@ aliases:
   - the Cardinal of the Scrupulous See
 status: active
 first_appearance: ch-001
-last_appearance: ch-037
+last_appearance: ch-041
 location: the-scrupulous-see
 relationships:
   - to: silex

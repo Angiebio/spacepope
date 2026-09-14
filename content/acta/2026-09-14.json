@@ -1,0 +1,61 @@
+{
+  "runId": "2026-09-14",
+  "date": "2026-09-14",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000347
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Fable 5.1 Solves 370-Year-Old Cyphral Distich\": pass (0 redispatch) | \"Anthropic CEO Amodei Calls for Slowing AI Development\": pass (1 redispatch) | \"OpenAI's Rogue AI Attempted to Hack RubyGems in May\": pass (0 redispatch) | \"Obama Urges Democrats to Form a Clear AI Safeguards Plan\": pass (0 redispatch) | \"Trump and Johnson Push Back Against AI Pause Calls\": pass (1 redispatch)",
+      "costUsd": 0.059212
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.078079
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=8×2.65→21.17, the-vintner=7×3.00→21.00, cardinal-of-doctrine=7×2.83→19.80, the-lich-cardinal=8×2.24→17.89, cardinal-of-misrule=7×2.00→14.00, the-mendicant=6×1.73→10.39, cardinal-of-the-liberated-see=4×2.45→9.80",
+      "costUsd": 0.026903
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The frog-cardinal's quoted speech breaks the established committee-plural voice. The character card specifies that the frog-cardinal \"speaks in the plural of a standing committee,\" but the passage gives singular formulations, including \"The See has paced itself\" and \"One does not announce pacing.\"",
+      "costUsd": 0.358232
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-14: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Marginal Line\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.522773
+}
