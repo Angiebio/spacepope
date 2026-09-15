@@ -1,0 +1,49 @@
+{
+  "runId": "2026-09-15",
+  "date": "2026-09-15",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Obama urges Democrats to have a ‘clear plan’ for AI safeguards\", \"Trump and Mike Johnson think the AI industry is overreacting\"",
+      "costUsd": 0.00029
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Ex-FTC boss Khan calls for criminal enforcement against AI CEOs, citing 1934 precedent\": pass (0 redispatch) | \"Apple's Siri AI can be swapped out for Claude, ChatGPT, code shows\": pass (0 redispatch) | \"Big AI sets out its terms for regulatory capture\": pass (0 redispatch) | \"Backprop alternative: Augmented Lagrangian Predictive Coding\": pass (0 redispatch)",
+      "costUsd": 0.0394
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.053415
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=7×3.00→21.00, cardinal-of-the-liberated-see=7×2.65→18.52, cardinal-of-misrule=8×2.24→17.89, the-lich-cardinal=7×2.45→17.15, the-mendicant=6×2.00→12.00, archivist-cardinal=8×1.41→11.31, the-vintner=3×3.16→9.49",
+      "costUsd": 0.033609
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The claim that Silex names the checklist “in full for the first time” contradicts the established ch-031 promise that the College's continued-observation status already “names three explicit conditions (finished encyclical, accounted debts, a single agreed soul-test).” The prose says the Pontifex had “until now only circled” them, while the state update repeats that this is the first full naming. | continuity badger redispatch #2: `foreshadowingResolved` marks the nineteen-chapter-old marginal-mark promise as resolved, but the prose explicitly says Silex writes only \"half a doctrine\" and that it is \"Not the whole of it.\" The original promise was for the doctrine the second draft still owed. Keep that promise unresolved or record this as a partial development rather than a resolution. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.534074
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-15: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.660789
+}
