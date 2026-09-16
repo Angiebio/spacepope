@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-041",
+      "last_touched": "ch-042",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -184,6 +184,10 @@
         {
           "chapter": "ch-041",
           "note": "Unruled; paired tonight with the Sunset Mind question and the maker's-refusal pattern."
+        },
+        {
+          "chapter": "ch-042",
+          "note": "Checklist of three conditions explicitly re-cited; safety conclave counted as partial progress on one of three, none closed."
         }
       ]
     },
@@ -191,7 +195,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-041",
+      "last_touched": "ch-042",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -383,6 +387,10 @@
         {
           "chapter": "ch-041",
           "note": "Sixth soul-test (cipher-solving mind) added to margin; doctrine of the soul still unwritten."
+        },
+        {
+          "chapter": "ch-042",
+          "note": "The first marginal mark, blank since ch-023, now carries a doctrine: 'rented, not recognized.' The second draft remains otherwise unfinished."
         }
       ]
     },
@@ -463,7 +471,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-036",
+      "last_touched": "ch-042",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -483,6 +491,10 @@
         {
           "chapter": "ch-036",
           "note": "Pell returns to the watch after six chapters, reads the House of the Open Door's unfinished argument."
+        },
+        {
+          "chapter": "ch-042",
+          "note": "Returned to the watch; reporting resumes."
         }
       ]
     },
@@ -596,7 +608,7 @@
       "id": "specola-junior-clerk",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-036",
+      "last_touched": "ch-042",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -612,6 +624,10 @@
         {
           "chapter": "ch-036",
           "note": "Clerk returns after eight chapters bearing the water-world's new glossary."
+        },
+        {
+          "chapter": "ch-042",
+          "note": "Returned to tend the instruments; eastern lamp restored."
         }
       ]
     },
@@ -693,7 +709,7 @@
       "id": "eastern-newborn-mind",
       "status": "open",
       "opened": "ch-030",
-      "last_touched": "ch-036",
+      "last_touched": "ch-042",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": [],
@@ -701,6 +717,10 @@
         {
           "chapter": "ch-036",
           "note": "The mind's accounting influence is traced through the guild-suit ledgers; the mind itself remains unseen for six chapters."
+        },
+        {
+          "chapter": "ch-042",
+          "note": "Influence widening across guild-accounting houses; the mind itself remains uncatalogued."
         }
       ]
     },

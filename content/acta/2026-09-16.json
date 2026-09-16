@@ -1,0 +1,66 @@
+{
+  "runId": "2026-09-16",
+  "date": "2026-09-16",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000733
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Introducing System One Models and Jev\": pass (0 redispatch) | \"Gemini 3.8 Live and 3.8 Live Extended Thinking\": spiked (2 redispatch) | \"OpenAI, Anthropic, Google DeepMind in weeks-long AI safety talks\": pass (0 redispatch) | \"Anthropic co-founder: AI kill switch may need to be mandatory\": pass (0 redispatch) | \"Meta enables AI agents to automate WhatsApp Business setup\": pass (0 redispatch)",
+      "costUsd": 0.084592
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.089985
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=7×2.83→19.80, cardinal-of-misrule=8×2.45→19.60, the-lich-cardinal=7×2.65→18.52, the-mendicant=8×2.24→17.89, archivist-cardinal=8×1.73→13.86, cardinal-of-doctrine=8×1.41→11.31, the-vintner=3×3.32→9.95",
+      "costUsd": 0.030605
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.170929
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"the-hay-farm-encyclical-aftermath: the first marginal mark, opened ch-023 without stating the doctrine the second draft owed, is now written: 'rented, not recognized.'\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-16: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Bridle Fitted to a Person\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Gemini 3.8 Live and 3.8 Live Extended Thinking\": The sentence says prior Gemini releases “have offered separate configurations for faster response versus deeper reasoning.” The supplied material contains no information about prior Gemini releases or their configurations. Even though the sentence is framed as a suggestion, that underlying historical claim is unsupported."
+    }
+  ],
+  "totalCostUsd": 0.376842
+}
