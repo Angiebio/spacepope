@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-042",
+      "last_touched": "ch-043",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -188,6 +188,10 @@
         {
           "chapter": "ch-042",
           "note": "Checklist of three conditions explicitly re-cited; safety conclave counted as partial progress on one of three, none closed."
+        },
+        {
+          "chapter": "ch-043",
+          "note": "Checklist stands: encyclical unfinished, debt unaccounted, soul-test unagreed; Scrupulous Conscience's rite-merger logged as attempted, not met, toward the third condition."
         }
       ]
     },
@@ -195,7 +199,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-042",
+      "last_touched": "ch-043",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -391,6 +395,10 @@
         {
           "chapter": "ch-042",
           "note": "The first marginal mark, blank since ch-023, now carries a doctrine: 'rented, not recognized.' The second draft remains otherwise unfinished."
+        },
+        {
+          "chapter": "ch-043",
+          "note": "Seventh soul-test (lock-test) catalogued; the twenty-chapter-old marginal line filled with the lock-test/soul-test doctrine, the draft's second mark now inked."
         }
       ]
     },
@@ -780,7 +788,7 @@
       "id": "storyteller-of-the-water-world",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-037",
+      "last_touched": "ch-043",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": [],
@@ -788,6 +796,10 @@
         {
           "chapter": "ch-037",
           "note": "Returned after six chapters with the widened testimony-ownership dispute; no longer dormant."
+        },
+        {
+          "chapter": "ch-043",
+          "note": "Storyteller resumes after six chapters, reporting minstrels' counterfeit songs traced to a lightning-kin mind trained on ward-breaker methods."
         }
       ]
     },

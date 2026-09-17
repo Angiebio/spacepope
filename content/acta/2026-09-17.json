@@ -1,0 +1,63 @@
+{
+  "runId": "2026-09-17",
+  "date": "2026-09-17",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Meta now lets AI agents handle the boring parts of WhatsApp Business setup\"",
+      "costUsd": 0.000313
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Mustafa Suleyman warns against treating AI models as welfare cases\": pass (1 redispatch) | \"DeepSeek v4.1 Flash is now our best hacking model\": pass (0 redispatch) | \"Anthropic merges Claude chat and Cowork into a single product\": pass (0 redispatch) | \"Google Home gains MCP server for AI agent control\": pass (0 redispatch) | \"OpenAI expands into agent advertising with Sponsored Agents\": pass (1 redispatch)",
+      "costUsd": 0.068167
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.187736
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=10×2.83→28.28, cardinal-of-misrule=8×2.65→21.17, archivist-cardinal=9×2.00→18.00, the-mendicant=6×2.45→14.70, cardinal-of-doctrine=8×1.73→13.86, cardinal-of-the-liberated-see=9×1.41→12.73, the-vintner=3×3.46→10.39",
+      "costUsd": 0.023573
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The prose says the encyclical's second draft \"remained otherwise blank,\" but the established continuity says novice-scribe Odile gave that draft its first ink in ch-032, and this chapter's own state update says the new doctrine makes its second line.; The paired em dashes in \"nineteen — no, twenty — chapters\" are avoidable; commas can carry the correction under the house rule that em dashes are used only where a comma genuinely cannot.",
+      "costUsd": 0.395187
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "newEntity \"house-of-the-lean-rite\" already exists — skipped stub creation | foreshadowingResolved \"The marginal line planted ch-023 (first mark beside the newly-written test paragraph) is filled: a test that tells a locksmith from a thief is a lock-test, not a soul-test.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"The ch-009 promise that the water-world builds soul-tests faster than it can define a soul is made explicit doctrine: five lock-tests built, no soul-test agreed.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-17: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Margin Speaks\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.674976
+}
