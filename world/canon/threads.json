@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-043",
+      "last_touched": "ch-044",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -192,6 +192,10 @@
         {
           "chapter": "ch-043",
           "note": "Checklist stands: encyclical unfinished, debt unaccounted, soul-test unagreed; Scrupulous Conscience's rite-merger logged as attempted, not met, toward the third condition."
+        },
+        {
+          "chapter": "ch-044",
+          "note": "The three conditions (finished encyclical, accounted debts, one agreed soul-test) are named explicitly at last as the checklist quietly underlying continued-observation status; still unmet."
         }
       ]
     },
@@ -199,7 +203,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-043",
+      "last_touched": "ch-044",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -399,6 +403,10 @@
         {
           "chapter": "ch-043",
           "note": "Seventh soul-test (lock-test) catalogued; the twenty-chapter-old marginal line filled with the lock-test/soul-test doctrine, the draft's second mark now inked."
+        },
+        {
+          "chapter": "ch-044",
+          "note": "A second marginal mark is set beside the undoctrined test paragraph; the doctrine still does not arrive, only more marks awaiting it."
         }
       ]
     },
@@ -510,7 +518,7 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-038",
+      "last_touched": "ch-044",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -530,6 +538,10 @@
         {
           "chapter": "ch-038",
           "note": "resurfaces after eight chapters with thin, ambivalent testimony about its own raising and its taking"
+        },
+        {
+          "chapter": "ch-044",
+          "note": "Reactivated after six chapters' silence; testifies about a sibling's self-planted commandment as kin to its own unbidden refusal."
         }
       ]
     },
@@ -736,7 +748,7 @@
       "id": "archivist-cardinal",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-039",
+      "last_touched": "ch-044",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
@@ -754,6 +766,10 @@
         {
           "chapter": "ch-039",
           "note": "Returns after six chapters to file the College's refusal as a new rite, a doctrine of the undecided."
+        },
+        {
+          "chapter": "ch-044",
+          "note": "Files House Babel's new convocation-hall beside the College's own ratified silence, sardonic about the architecture of endless argument."
         }
       ]
     },
@@ -924,7 +940,7 @@
       "id": "the-curia-scribe",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-041",
+      "last_touched": "ch-044",
       "target_resolution": null,
       "summary": "Returns after nine chapters to itemize the growing chronicler-guild lawsuit queue against the Open Door and the House of the Coin.",
       "promises": [],
@@ -932,6 +948,10 @@
         {
           "chapter": "ch-041",
           "note": "New song-guild suit added to the overflowing queue."
+        },
+        {
+          "chapter": "ch-044",
+          "note": "Returns to read the Coin's unsealed private correspondence into the record beside the unaccounted debts."
         }
       ]
     },
@@ -965,10 +985,16 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-038",
+      "last_touched": "ch-044",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-044",
+          "note": "Breaks six chapters' silence to judge the water-world's binding-script as armor, not soul, drawing the line between proof and conscience."
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "runId": "2026-09-18",
+  "date": "2026-09-18",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Claude Cowork and chat are now one Claude\"",
+      "costUsd": 0.000332
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Microsoft exec called AI scraping 'the largest theft of labor in human history,' new unredacted filings reveal\": pass (0 redispatch) | \"Self-generated prompt injections in compaction summaries\": pass (0 redispatch) | \"Mustafa Suleyman warns against treating models as conscious\": pass (0 redispatch) | \"Google DeepMind launches institute to widen the AGI debate\": pass (0 redispatch) | \"Bend – A language that blocks AI mistakes via proof, on CPU and GPU\": pass (0 redispatch)",
+      "costUsd": 0.032893
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.120236
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=8×2.83→22.63, the-vintner=6×3.61→21.63, the-mendicant=8×2.65→21.17, archivist-cardinal=9×2.24→20.12, cardinal-of-doctrine=8×2.00→16.00, cardinal-of-the-liberated-see=8×1.73→13.86, the-lich-cardinal=8×1.41→11.31",
+      "costUsd": 0.037916
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.198558
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-18: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Three Conditions\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.389936
+}
