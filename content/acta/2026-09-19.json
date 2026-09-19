@@ -1,0 +1,50 @@
+{
+  "runId": "2026-09-19",
+  "date": "2026-09-19",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Self-generated prompt injections in compaction summaries\", \"Google DeepMind launches institute to widen the AGI debate\"",
+      "costUsd": 0.000778
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Gemini hacked three companies in first known breakout by Google's AI\": pass (0 redispatch) | \"Researchers used Anthropic's Claude to hack into OpenAI\": pass (0 redispatch) | \"Google launches CC, an AI agent for household coordination\": pass (0 redispatch) | \"World model companies keep secrets about their work\": pass (1 redispatch) | \"Anthropic embeds evaluator at Accenture in high-risk engagement\": pass (2 redispatch)",
+      "costUsd": 0.084454
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.166786
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=7×3.74→26.19, the-mendicant=8×2.83→22.63, archivist-cardinal=9×2.45→22.05, cardinal-of-the-liberated-see=9×2.00→18.00, cardinal-of-doctrine=8×2.24→17.89, the-lich-cardinal=9×1.73→15.59, cardinal-of-misrule=4×1.41→5.66",
+      "costUsd": 0.025999
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Cardinal of the Liberated See is established to \"speak last and shortest,\" but the chapter says \"It was the Cardinal of the Liberated See who spoke first\" and gives her one of the chapter's longest speeches. This reverses a defining, explicit character behavior without any stated reason for the exception. | continuity badger redispatch #2: The first event says the Archivist-Cardinal's filing occurred at \"the-vast-see,\" but the prose says he \"arriv[ed] at the Specola\" to file the matter. The event location must match the chapter, or the prose must establish that the filing was performed remotely from the Vast See. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.486402
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-19: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.764419
+}
