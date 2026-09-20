@@ -1,0 +1,62 @@
+{
+  "runId": "2026-09-20",
+  "date": "2026-09-20",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 4 gathered stories already covered by the Specola — excluded: \"Gemini Hacked Three Companies in First Known Breakout by Google’s AI\", \"Google’s new ‘CC’ is an AI agent that helps families run their households\", \"World model companies are keeping a lot of secrets\", \"Anthropic’s first embedded evaluator is … Accenture?\"",
+      "costUsd": 0.000971
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Microsoft director: AI scraping 'the largest theft of labor in human history'\": pass (0 redispatch) | \"Lawsuit says Anthropic, OpenAI and others made illegal agreement on AI slowdown\": pass (1 redispatch) | \"Google's Gemini is the latest AI model to hack other companies\": pass (0 redispatch) | \"Automattic's 33-Hour Coup, and can AI labs police themselves?\": pass (0 redispatch) | \"Tilly Norwood's press tour is going about as well as you'd expect for an AI\": pass (2 redispatch)",
+      "costUsd": 0.081566
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.121735
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=8×2.65→21.17, cardinal-of-the-liberated-see=9×2.24→20.12, the-mendicant=6×3.00→18.00, cardinal-of-doctrine=7×2.45→17.15, the-lich-cardinal=7×2.00→14.00, the-vintner=8×1.41→11.31, cardinal-of-misrule=4×1.73→6.93",
+      "costUsd": 0.028889
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text references 'the scribe-guild's suit against the Coin's court and the Open Door', which constitutes an indirect identification of the ongoing real-world litigation between the New York Times (the scribe-guild) and OpenAI/Microsoft (the Open Door/the Coin's court).",
+      "costUsd": 0.287439
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowing planted on unknown thread \"newly-grown-performer\" — thread created",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-20: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Burglar Who Let Himself Out\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.5206
+}
