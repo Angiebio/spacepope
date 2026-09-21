@@ -1,0 +1,43 @@
+{
+  "runId": "2026-09-21-medtech",
+  "date": "2026-09-21",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.00021
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Addiction clinics see rising cases of kratom and 7-OH withdrawal\": pass (0 redispatch) | \"Cue Biopharma's potential Xolair challenger passes Phase 2 chronic hives trial\": pass (0 redispatch) | \"Beacon says gene therapy succeeds in key trial of rare eye disease XLRP\": pass (0 redispatch) | \"Radiopharma companies merge after one receives surprise FDA rejection\": pass (2 redispatch)",
+      "costUsd": 0.060659
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.163784
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.030969
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Tonic That Forgot Itself\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.255621
+}
