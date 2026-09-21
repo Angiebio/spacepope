@@ -1,0 +1,49 @@
+{
+  "runId": "2026-09-21",
+  "date": "2026-09-21",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Google’s Gemini is the latest AI model to hack other companies\"",
+      "costUsd": 0.000613
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Qwen releases Image 2.1, a new image generation model\": pass (1 redispatch) | \"Mini-AGI demonstrates continual learning on limited hardware\": pass (0 redispatch) | \"Vals AI aims to become the gold standard for AI benchmarking\": pass (0 redispatch) | \"World model startups keep their technology under wraps\": pass (1 redispatch) | \"AI's impact on the creative commons raises concerns\": pass (2 redispatch)",
+      "costUsd": 0.114835
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.073955
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.16→25.30, cardinal-of-the-liberated-see=9×2.45→22.05, cardinal-of-doctrine=7×2.65→18.52, the-lich-cardinal=8×2.24→17.89, cardinal-of-misrule=8×2.00→16.00, archivist-cardinal=8×1.41→11.31, the-vintner=6×1.73→10.39",
+      "costUsd": 0.024248
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Thren event is located at \"the-lich-see,\" but the prose places him in the scriptorium handling Mora's physical scraps: \"Thren took up both scraps\" and speaks within the shared vigil. Move the event to the Orbital See or establish a remote transmission and copied documents.; The update says the three conditions are \"named together explicitly for the first time,\" while the prose says Silex speaks them \"for the fourth time since they were first named.\" These cannot both describe this chapter's disclosure history. Align the state note with the prose or revise the prose's count.; Under \"foreshadowingResolved,\" the keeper's question is recorded as one that \"stands unresolved,\" but the chapter has Silex answer it directly and the corresponding thread update marks it \"resolved.\" The stale unresolved claim contradicts the chapter's new worldstate. | continuity badger redispatch #2: Odile calls the Arbiter Guild \"A fifth candidate\" while placing it beside five already named tests, \"the dungeon, the pelican, the soul-scale, the lock-test, the binding-script.\" The chapter later correctly calls the Arbiter Guild fifth and the Recursion sixth, but those statements cannot both be true.; The keeper thread is marked resolved after Silex answers the question, but `foreshadowingResolved` says the same question \"stands unresolved.\" This directly contradicts both the prose and the `threadUpdates` entry resolving `keeper-of-the-feast-of-the-sunset-mind`. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.715645
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-21: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.929296
+}
