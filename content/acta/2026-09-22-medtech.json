@@ -1,0 +1,47 @@
+{
+  "runId": "2026-09-22-medtech",
+  "date": "2026-09-22",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 4 gathered stories already covered by the Specola — excluded: \"STAT+: Radiopharma companies merge after one receives surprise FDA rejection\", \"Addiction clinics see rising cases of kratom and 7-OH withdrawal\", \"Cue Biopharma's potential Xolair challenger passes Phase 2 chronic hives trial\", \"Beacon says gene therapy succeeds in key trial of rare eye disease XLRP\"",
+      "costUsd": 0.0003
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Congress pushes back on plan for political appointees to review NIH grants\": pass (0 redispatch) | \"Trump's newest vaccine demands repeat old misinformation\": pass (1 redispatch) | \"Lilly's breast cancer combo wins FDA approval\": pass (0 redispatch) | \"What a vote on Grail's cancer detection test could mean for patients and regulators\": spiked (2 redispatch) | \"Social media bans are passing around the world. How will we know if they help teens?\": pass (1 redispatch)",
+      "costUsd": 0.099538
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.122083
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.038612
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Courtier Who Wanted a Seat at the Bedside\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"What a vote on Grail's cancer detection test could mean for patients and regulators\": The bulletin identifies the test as “known as Galleri,” but the supplied source material only describes it as Grail's blood test for cancer and does not provide that name.; The statement that FDA advisory committees “typically review evidence on a product's safety and effectiveness” is general background not supported by the supplied source material and is presented as though it explains this meeting's review.; The attribution “STAT News framed the upcoming proceedings” as having implications for “patients and for regulators” goes beyond the supplied summary; those terms appear in the headline, but the provided material does not establish the article's specific framing or analysis.; The closing claim that the surge “reflects investor interest in the regulatory process now underway” infers investor motivation and describes a regulatory process beyond the supported fact that shares rose after FDA documents were posted ahead of a committee meeting."
+    }
+  ],
+  "totalCostUsd": 0.260533
+}
