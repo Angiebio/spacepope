@@ -1,0 +1,32 @@
+{
+  "runId": "2026-09-23-medtech",
+  "date": "2026-09-23",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 5 gathered stories already covered by the Specola — excluded: \"President Trump’s newest vaccine ‘demands’ repeat old misinformation\", \"Opinion: Social media bans are passing around the world. How will we know if they help teens?\", \"STAT+: Members of Congress push back on plan to create a commission of political appointees to review NIH grants\", \"STAT+: Lilly’s breast cancer combo wins approval\", \"Cue Biopharma's potential Xolair challenger passes Phase 2 chronic hives trial\"",
+      "costUsd": 0.000275
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA updates rules to allow non-animal testing methods for human drugs\": spiked (2 redispatch) | \"HHS announces new initiatives to reduce animal testing in drug development\": spiked (2 redispatch) | \"New federal autism committee head has financial ties to leucovorin\": pass (1 redispatch)",
+      "costUsd": 0.1105
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "notes": "only 1 bulletins survived the gates — below quiet-day threshold; no dispatch"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA updates rules to allow non-animal testing methods for human drugs\": The supporting FDA citation does not resolve, so the bulletin's central claim that FDA issued the direct final rule on September 21 cannot be verified against the primary announcement. The artifact's disclosure that it relies on a summary does not cure the unavailable primary source. | SPIKED \"HHS announces new initiatives to reduce animal testing in drug development\": The bulletin attributes an unsupported interpretation to STAT News: “STAT News framed this pattern as evidence of a structural shift in how drug safety is established and verified within the regulatory process.” The supplied source summary does not say STAT News made that framing.; The bulletin states that the announcement was “part of a broader federal strategy to speed the transition away from animal-based testing models.” The supplied source supports HHS announcing strategies to speed a shift away from animals, but does not establish a broader federal strategy or this characterization of the announcement.; The statement that two initiatives in nine months “represents a notable frequency for policy action on a single regulatory question” is unsupported editorial analysis rather than a fact provided by the source."
+    }
+  ],
+  "totalCostUsd": 0.110774
+}
