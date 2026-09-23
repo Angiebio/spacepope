@@ -1,0 +1,49 @@
+{
+  "runId": "2026-09-23",
+  "date": "2026-09-23",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Jev introduces a new shape of LLM - System One, aka Decision Models\"",
+      "costUsd": 0.000715
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Anthropic releases Claude Opus 5.5, OpenAI counters with GPT-6 Sol and Luna, igniting a price war\": pass (0 redispatch) | \"Muse, Meta's privileged AI assistant, has a serious zero-day vulnerability\": pass (1 redispatch) | \"OpenAI fires contractors for using AI to train its AI\": pass (1 redispatch) | \"The shifting balance of power in open-weight AI models\": pass (1 redispatch) | \"Pentagon blames overreliance on AI for mistaken missile strike on a school\": pass (0 redispatch)",
+      "costUsd": 0.093519
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.124909
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.00→24.00, the-lich-cardinal=8×2.65→21.17, archivist-cardinal=9×2.00→18.00, cardinal-of-misrule=7×2.45→17.15, the-mendicant=8×1.73→13.86, cardinal-of-the-liberated-see=9×1.41→12.73, the-vintner=2×2.24→4.47",
+      "costUsd": 0.044834
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text references 'the Silicon See' as a location for a 'machine-cardinal'. This is a direct, thinly veiled reference to Silicon Valley, which is a real-world geographic and industrial hub for AI development, violating the requirement to use only in-universe archetypes. | chapter hit the fiction firewall (attempt 2): The text references 'Rome' in the phrase 'the answer can wait for Rome.' This is a real-world location and institution that violates the requirement to use only in-universe terminology for the water-world's governance. | chapter failed the fiction firewall after retries: The text references 'the machine-cardinal of the Silicon See'. 'Silicon' is a direct reference to the real-world Silicon Valley, which is a prohibited real-world location/entity in this context.",
+      "costUsd": 0.488936
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-23: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.752914
+}
