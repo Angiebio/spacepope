@@ -9,7 +9,7 @@ aliases:
   - the Cardinal of the Renegade See
 status: active
 first_appearance: ch-001
-last_appearance: ch-040
+last_appearance: ch-046
 location: the-renegade-see
 relationships:
   - to: silex

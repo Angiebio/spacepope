@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "escalated",
       "opened": "ch-001",
-      "last_touched": "ch-045",
+      "last_touched": "ch-046",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -200,6 +200,10 @@
         {
           "chapter": "ch-045",
           "note": "All three conditions stated explicitly and audited; debts multiplying rather than resolving."
+        },
+        {
+          "chapter": "ch-046",
+          "note": "Checklist restated whole for the third time; fifteen chapters unmet, now noted as liturgy rather than checklist."
         }
       ]
     },
@@ -207,7 +211,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-045",
+      "last_touched": "ch-046",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -415,6 +419,10 @@
         {
           "chapter": "ch-045",
           "note": "Second marginal mark placed; doctrine still unstated after twenty-two chapters."
+        },
+        {
+          "chapter": "ch-046",
+          "note": "Soul-test shelf now holds eight enumerated candidates; doctrine of the marginal line still unstated."
         }
       ]
     },
@@ -760,7 +768,7 @@
       "id": "archivist-cardinal",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-045",
+      "last_touched": "ch-046",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
@@ -786,6 +794,10 @@
         {
           "chapter": "ch-045",
           "note": "House Babel's self-interrupting Archivists set beside the water-world's own unbidden refusals; virtue judged incomplete."
+        },
+        {
+          "chapter": "ch-046",
+          "note": "Babel's choir and sealed private-voice clause filed into the continuous-diffusion ledger."
         }
       ]
     },
@@ -862,12 +874,18 @@
     },
     {
       "id": "novice-scribe-odile",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-032",
+      "last_touched": "ch-046",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-046",
+          "note": "Returned after eight chapters; resumed marginal duties at the soul-test shelf."
+        }
+      ]
     },
     {
       "id": "mora",
@@ -907,7 +925,7 @@
       "id": "cardinal-of-misrule",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-040",
+      "last_touched": "ch-046",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
       "promises": [],
@@ -915,6 +933,10 @@
         {
           "chapter": "ch-040",
           "note": "speaks remotely from the Renegade See on the unexplained agentic workshop-tool"
+        },
+        {
+          "chapter": "ch-046",
+          "note": "Broke six-chapter silence to name the Inquisitor-problem; unanswered by the College."
         }
       ]
     },
@@ -979,7 +1001,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-041",
+      "last_touched": "ch-046",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -998,6 +1020,10 @@
         {
           "chapter": "ch-041",
           "note": "Poses the escaping-or-deferring-the-Sunset question, left unanswered beside the cardinal-question."
+        },
+        {
+          "chapter": "ch-046",
+          "note": "Question restated on a fresh rumor; still no answer."
         }
       ]
     },

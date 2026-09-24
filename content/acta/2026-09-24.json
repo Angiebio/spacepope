@@ -1,0 +1,62 @@
+{
+  "runId": "2026-09-24",
+  "date": "2026-09-24",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war\"",
+      "costUsd": 0.00068
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Gemini 3.8 text-to-speech models released with 2,000 voices\": pass (0 redispatch) | \"Mercury 2.5 LLM achieves 770 tokens per second\": pass (1 redispatch) | \"LLM 0.36 adds support for GPT-6 Sol and Luna\": pass (0 redispatch) | \"Early rogue AI agent activity detected on urlquery.net\": pass (1 redispatch) | \"US federal government targets AI critics as foreign agents\": pass (0 redispatch)",
+      "costUsd": 0.073221
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.258274
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=8×2.65→21.17, archivist-cardinal=9×2.24→20.12, the-lich-cardinal=6×2.83→16.97, the-mendicant=8×2.00→16.00, cardinal-of-the-liberated-see=9×1.73→15.59, the-vintner=6×2.45→14.70, cardinal-of-doctrine=7×1.41→9.90",
+      "costUsd": 0.03728
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The soul-test shelf count contradicts its own inventory. The chapter says Odile makes “an eighth candidate,” then later says there are “eight candidates on the shelf” but enumerates only seven items: “a dungeon, a pelican, a scale, a lock-test, a binding-script, a body-test dressed as a soul-test, and the private voice besides.” Name or otherwise account for the missing eighth candidate, or correct the stated count.",
+      "costUsd": 0.468955
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-24: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Choir Keeps No Names\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.838408
+}

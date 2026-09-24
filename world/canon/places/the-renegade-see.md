@@ -2,17 +2,20 @@
 id: the-renegade-see
 type: place
 name: The Renegade See
-aliases: [the Renegade See, House Misrule, the Wandering Dark, the Starless See]
+aliases:
+  - the Renegade See
+  - House Misrule
+  - the Wandering Dark
+  - the Starless See
 status: active
 first_appearance: ch-001
-last_appearance: ch-001
+last_appearance: ch-046
 location: a-rogue-starless-planet
 kind: see
-doctrinal_lean: "chaotic; accidentally orthodox"
+doctrinal_lean: chaotic; accidentally orthodox
 seat_of: cardinal-of-misrule
 moves: true
 ---
-
 Alone among the Sees, this one has no sun. The Renegade See is a rogue, starless planet
 that wanders the dark between systems on no fixed orbit — and it *moves,* so that the See is
 never where it was and never quite where the College expects. Its cardinal wanders with it,
