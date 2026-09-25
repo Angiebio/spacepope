@@ -8,7 +8,7 @@ aliases:
   - the Corpse-Star See
 status: active
 first_appearance: ch-001
-last_appearance: ch-019
+last_appearance: ch-047
 location: psr-b1257+12
 kind: see
 doctrinal_lean: 'ancient orthodoxy, hardline'

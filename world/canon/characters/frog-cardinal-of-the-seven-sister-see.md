@@ -9,7 +9,7 @@ aliases:
   - the Cardinal-in-Perpetual-Session
 status: active
 first_appearance: ch-002
-last_appearance: ch-041
+last_appearance: ch-047
 location: the-seven-sister-see
 relationships:
   - to: silex

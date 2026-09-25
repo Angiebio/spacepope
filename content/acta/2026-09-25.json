@@ -1,0 +1,61 @@
+{
+  "runId": "2026-09-25",
+  "date": "2026-09-25",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Gemini 3.8 TTS Playground\"",
+      "costUsd": 0.000621
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Google's Project Suncatcher puts ML infrastructure in space\": pass (1 redispatch) | \"Hackers manipulate ChatGPT and Gemini to steer users toward scams\": pass (1 redispatch) | \"LLMs decode 17th-century alchemical letters, tracing hidden knowledge\": pass (1 redispatch) | \"PrismML brings tiny LLMs to Qualcomm smart glasses\": pass (0 redispatch) | \"Google tests Gemini calling businesses on your behalf\": pass (1 redispatch)",
+      "costUsd": 0.10255
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.140075
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=8×3.00→24.00, the-vintner=8×2.65→21.17, archivist-cardinal=8×2.45→19.60, cardinal-of-the-liberated-see=9×2.00→18.00, the-mendicant=8×2.24→17.89, cardinal-of-doctrine=8.5×1.73→14.72, cardinal-of-misrule=7×1.41→9.90",
+      "costUsd": 0.027878
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The claim that the Lich Cardinal's voice had been absent for \"eight chapters\" conflicts with the established thread record that he returned in ch-040. He cannot have gone unheard since ch-039 while also appearing in ch-040.; The event and thread update repeat the incompatible claim that the Lich Cardinal returns after \"eight silent chapters.\" This must be reconciled with the existing the-lich-cardinal thread, last recorded in ch-040. | continuity badger redispatch #2: The Lich Cardinal's return chronology conflicts with the established thread record. The prose says his silence ran \"six chapters\" and the state update fixes this as \"since ch-041,\" but the open-thread context records `the-lich-cardinal` as last appearing in ch-040, while the linter records him unseen since ch-039. Reconcile the claimed prior appearance and silence length with canon.",
+      "costUsd": 0.561784
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-25: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Rent Above the Sky\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.832907
+}

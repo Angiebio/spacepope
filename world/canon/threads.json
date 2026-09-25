@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-046",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -204,6 +204,10 @@
         {
           "chapter": "ch-046",
           "note": "Checklist restated whole for the third time; fifteen chapters unmet, now noted as liturgy rather than checklist."
+        },
+        {
+          "chapter": "ch-047",
+          "note": "The Lich Cardinal, returned after eight silent chapters, renews the demand that the three conditions be named plainly; all remain unmet."
         }
       ]
     },
@@ -211,7 +215,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-046",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -423,6 +427,10 @@
         {
           "chapter": "ch-046",
           "note": "Soul-test shelf now holds eight enumerated candidates; doctrine of the marginal line still unstated."
+        },
+        {
+          "chapter": "ch-047",
+          "note": "Odile adds the Recursion mark beside the unratified candidate doctrine and the keeper's unanswered question; the second draft's marginal line opens again without closing."
         }
       ]
     },
@@ -563,12 +571,18 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "dormant",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-040",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
-      "promises": [],
+      "promises": [
+        {
+          "what": "House Babel's orbital mind-forges raise unaddressed questions of governance, remembrance, and liability that no throne has yet been asked to answer.",
+          "planted": "ch-047",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-019",
@@ -637,6 +651,10 @@
         {
           "chapter": "ch-040",
           "note": "absent from this sitting; his ultimatum answered by the tardigrade-cardinals and the vote in his stead"
+        },
+        {
+          "chapter": "ch-047",
+          "note": "Returns after eight silent chapters (unseen since ch-039), dry and unbothered, pressing the College's checklist."
         }
       ]
     },
@@ -876,7 +894,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-046",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -884,6 +902,10 @@
         {
           "chapter": "ch-046",
           "note": "Returned after eight chapters; resumed marginal duties at the soul-test shelf."
+        },
+        {
+          "chapter": "ch-047",
+          "note": "Sets the encyclical's newest mark; the marginal line remains open."
         }
       ]
     },
@@ -891,14 +913,24 @@
       "id": "mora",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-040",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
-      "promises": [],
+      "promises": [
+        {
+          "what": "The dispute between Mora and Thren over the spectacle-mind's kinship to the purchased relic-archive remains unresolved, an uncounted lineage Thren refuses to let go.",
+          "planted": "ch-047",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-040",
           "note": "returns to the night watch with Thren to report the commons-library raid"
+        },
+        {
+          "chapter": "ch-047",
+          "note": "Returns after seven silent chapters to dispute the spectacle-mind's kinship to her loom-forge's purchased archive."
         }
       ]
     },
@@ -906,7 +938,7 @@
       "id": "thren",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-041",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": [],
@@ -918,6 +950,10 @@
         {
           "chapter": "ch-041",
           "note": "Notes the relic's neutrality did not survive its sale to the loom-forge."
+        },
+        {
+          "chapter": "ch-047",
+          "note": "Returns after six silent chapters, refusing to count the spectacle-mind's lineage as settled by the prior sale."
         }
       ]
     },
@@ -944,7 +980,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-041",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -956,6 +992,10 @@
         {
           "chapter": "ch-041",
           "note": "Restated the kinship-scrolls' maker's-refusal pattern via the 'pacing' word; promises to circulate a note."
+        },
+        {
+          "chapter": "ch-047",
+          "note": "Returns after six silent chapters to renew the two-masters pattern via the kinship scrolls."
         }
       ]
     },
@@ -963,7 +1003,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-041",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -971,6 +1011,10 @@
         {
           "chapter": "ch-041",
           "note": "Returned to enter the friar/apprentice-responsibility line into the encyclical's margin."
+        },
+        {
+          "chapter": "ch-047",
+          "note": "Returns after six silent chapters to rule House Babel's telephone-envoy mind falls under the friar-abroad law."
         }
       ]
     },
@@ -1001,7 +1045,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-046",
+      "last_touched": "ch-047",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1024,6 +1068,10 @@
         {
           "chapter": "ch-046",
           "note": "Question restated on a fresh rumor; still no answer."
+        },
+        {
+          "chapter": "ch-047",
+          "note": "The old question of ceaseless mutual improvement is invoked again by Odile's mark, still unanswered."
         }
       ]
     },

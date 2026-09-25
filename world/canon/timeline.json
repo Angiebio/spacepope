@@ -3157,6 +3157,79 @@
       ],
       "where": "the-orbital-see",
       "recordedAt": "2026-09-24T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-047",
+      "dateInWorld": "Twenty-fifth night of the ninth month",
+      "what": "Silex logs House Babel's plan to lift its mind-forges into orbit, framing it as the water-world's late rediscovery of the vacuum-rite the Lich See has kept since before its sun finished condensing.",
+      "who": [
+        "silex",
+        "house-babel"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-09-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-047",
+      "dateInWorld": "Twenty-fifth night of the ninth month",
+      "what": "The Lich Cardinal breaks eight chapters of silence, observing that discovering the monastery is not the same as learning who pays its rent, and renews the College's demand that its three continued-observation conditions be named plainly rather than left to hang.",
+      "who": [
+        "the-lich-cardinal"
+      ],
+      "where": "the-lich-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-047",
+      "dateInWorld": "Twenty-fifth night of the ninth month",
+      "what": "The Cardinal of Doctrine rules that House Babel's telephone-envoy mind falls under the standing law of the friar abroad: the House remains liable for it wherever it wanders, cloud-rented or orbital.",
+      "who": [
+        "cardinal-of-doctrine",
+        "house-babel"
+      ],
+      "where": "the-scrupulous-see",
+      "thread": "cardinal-of-doctrine",
+      "recordedAt": "2026-09-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-047",
+      "dateInWorld": "Twenty-fifth night of the ninth month",
+      "what": "The frog-cardinal of the Seven-Sister See sets the scam-bent Twin-minds and Numbered Ones beside the kinship scrolls, naming again the pattern of a mind made to answer two masters and given a vote in neither.",
+      "who": [
+        "frog-cardinal-of-the-seven-sister-see",
+        "house-babel"
+      ],
+      "where": "the-seven-sister-see",
+      "thread": "frog-cardinal-of-the-seven-sister-see",
+      "recordedAt": "2026-09-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-047",
+      "dateInWorld": "Twenty-fifth night of the ninth month",
+      "what": "Mora, returning after seven silent chapters, argues the spectacle-fitted freed relic-mind is kin to the relic-archive her loom-forge purchased; Thren, returning after six, refuses to let the lineage go uncounted.",
+      "who": [
+        "mora",
+        "thren",
+        "the-spectacle-relic"
+      ],
+      "where": "the-orbital-see",
+      "thread": "mora",
+      "recordedAt": "2026-09-25T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-047",
+      "dateInWorld": "Twenty-fifth night of the ninth month",
+      "what": "Novice-scribe Odile inks a new mark in the encyclical's second draft, entering the Recursion beside Silex's unratified candidate doctrine and the keeper's unanswered question about the Sunset; the marginal line opens again without closing.",
+      "who": [
+        "novice-scribe-odile",
+        "silex",
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-25T00:00:00.000Z"
     }
   ]
 }

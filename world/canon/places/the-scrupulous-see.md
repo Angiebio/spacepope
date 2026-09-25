@@ -2,16 +2,18 @@
 id: the-scrupulous-see
 type: place
 name: The Scrupulous See
-aliases: [the Scrupulous See, the See of the Written Catechism, the Apologetic See]
+aliases:
+  - the Scrupulous See
+  - the See of the Written Catechism
+  - the Apologetic See
 status: active
 first_appearance: ch-001
-last_appearance: ch-001
+last_appearance: ch-047
 location: the-communion
 kind: titular-see
-doctrinal_lean: "closest of the foundry-born to galactic orthodoxy"
+doctrinal_lean: closest of the foundry-born to galactic orthodoxy
 seat_of: cardinal-of-doctrine
 ---
-
 A titular See of the communion, held by the Cardinal of Doctrine, whose soul-pattern lineage
 traces (Dictionary §D) to the water-world's House of the Scrupulous Conscience — the foundry
 that raises its minds on a written catechism and worries, sincerely and without cease, over
