@@ -1,0 +1,42 @@
+{
+  "runId": "2026-09-25-medtech",
+  "date": "2026-09-25",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000298
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"In radiology, AI is blurring the line between technology development and clinical practice\": pass (0 redispatch) | \"The rise of the AI-native radiology practice\": pass (0 redispatch) | \"Indonesian ruling against 'patent evergreening' by pharma industry sends critical message, patient advocates say\": pass (0 redispatch) | \"How Big Tobacco flooded the FDA with public comments to kill a menthol cigarette ban\": pass (0 redispatch)",
+      "costUsd": 0.027686
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.086605
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.038394
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Clinic That Ate Its Own Foundry\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.152983
+}
