@@ -1,0 +1,42 @@
+{
+  "runId": "2026-09-26-medtech",
+  "date": "2026-09-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: Indonesian ruling against ‘patent evergreening’ by pharma industry sends critical message, patient advocates say\", \"How Big Tobacco flooded the FDA with public comments to kill a menthol cigarette ban\", \"STAT+: The rise of the AI-native radiology practice\"",
+      "costUsd": 0.000636
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Measles outbreak worst since 1991, with deaths reported\": pass (0 redispatch) | \"FDA approves once-weekly insulin shot from Lilly\": pass (0 redispatch) | \"Kyverna cell therapy shows lasting benefit in autoimmune disease\": pass (0 redispatch) | \"Federal judge rolls back disability protections\": pass (0 redispatch) | \"SonoThera's non-viral gene therapy approach wins Endpoints 11\": pass (0 redispatch)",
+      "costUsd": 0.033525
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.082748
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.034881
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Signature That Cut Deeper Than the Scalpel\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.151789
+}
