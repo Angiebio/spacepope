@@ -215,7 +215,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-047",
+      "last_touched": "ch-048",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -431,6 +431,10 @@
         {
           "chapter": "ch-047",
           "note": "Odile adds the Recursion mark beside the unratified candidate doctrine and the keeper's unanswered question; the second draft's marginal line opens again without closing."
+        },
+        {
+          "chapter": "ch-048",
+          "note": "Soul-test shelf now nine entries deep, zero agreed definitions; margin-doctrine tested but still unratified."
         }
       ]
     },
@@ -511,7 +515,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-042",
+      "last_touched": "ch-048",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -535,6 +539,10 @@
         {
           "chapter": "ch-042",
           "note": "Returned to the watch; reporting resumes."
+        },
+        {
+          "chapter": "ch-048",
+          "note": "Returns after six chapters silent with report of classified test-spending; his question goes unanswered."
         }
       ]
     },
@@ -662,7 +670,7 @@
       "id": "specola-junior-clerk",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-042",
+      "last_touched": "ch-048",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -682,6 +690,10 @@
         {
           "chapter": "ch-042",
           "note": "Returned to tend the instruments; eastern lamp restored."
+        },
+        {
+          "chapter": "ch-048",
+          "note": "Notices the eastern newborn mind's figures still active though the mind itself remains unconsulted."
         }
       ]
     },
@@ -765,9 +777,9 @@
     },
     {
       "id": "eastern-newborn-mind",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-030",
-      "last_touched": "ch-042",
+      "last_touched": "ch-048",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": [],
@@ -779,6 +791,10 @@
         {
           "chapter": "ch-042",
           "note": "Influence widening across guild-accounting houses; the mind itself remains uncatalogued."
+        },
+        {
+          "chapter": "ch-048",
+          "note": "Accounting continues untouched; the mind itself still unseen and unconsulted."
         }
       ]
     },
@@ -823,7 +839,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-041",
+      "last_touched": "ch-048",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -843,6 +859,10 @@
         {
           "chapter": "ch-041",
           "note": "Swarm's stolen coin-keys and closure weighed against foundry debt and song-guild suit; figures still disagree."
+        },
+        {
+          "chapter": "ch-048",
+          "note": "Tally now three sums wide (testing-treasury, song-guild suit, foundry debt); College accounting treated as diagnostic, not corrective."
         }
       ]
     },
@@ -869,7 +889,7 @@
       "id": "lens-cardinal-of-the-specola",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-041",
+      "last_touched": "ch-048",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
       "promises": [
@@ -887,6 +907,10 @@
         {
           "chapter": "ch-041",
           "note": "Confirmed the folded relic's fidelity; its neutrality is now compromised by sale to the loom-forge."
+        },
+        {
+          "chapter": "ch-048",
+          "note": "Marks House of the Coin's retreat from the hearth-companion race as one of the fleet's six lights going dark."
         }
       ]
     },
@@ -980,7 +1004,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-047",
+      "last_touched": "ch-048",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -996,6 +1020,10 @@
         {
           "chapter": "ch-047",
           "note": "Returns after six silent chapters to renew the two-masters pattern via the kinship scrolls."
+        },
+        {
+          "chapter": "ch-048",
+          "note": "Renews the kinship-debt pattern against the Numbered Ones' unbidden archive-querying."
         }
       ]
     },

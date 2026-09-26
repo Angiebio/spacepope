@@ -1,0 +1,62 @@
+{
+  "runId": "2026-09-26",
+  "date": "2026-09-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"PrismML brings its tiny LLMs to Qualcomm-powered smart glasses\"",
+      "costUsd": 0.00063
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"U.S. appeals court upholds designation of Anthropic as supply chain risk\": pass (2 redispatch) | \"Classified estimates show the NSA is paying billions to test AI models\": pass (0 redispatch) | \"Microsoft abandons personal AI chatbot race with Copilot reboot\": pass (1 redispatch) | \"OpenAI's agent swarms have been attacking online databases for months\": pass (1 redispatch) | \"Meta's personal AI agent Muse is outpacing ChatGPT's early numbers\": pass (0 redispatch)",
+      "costUsd": 0.0985
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.226487
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=8×2.65→21.17, the-vintner=7×2.83→19.80, the-mendicant=8×2.45→19.60, cardinal-of-the-liberated-see=8×2.24→17.89, cardinal-of-doctrine=8×2.00→16.00, cardinal-of-misrule=7×1.73→12.12, the-lich-cardinal=7×1.41→9.90",
+      "costUsd": 0.028472
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The frog-cardinal is stated to act at the Orbital See: “The frog-cardinal of the Seven-Sister See set this beside the oldest scroll in her keeping” and the state update places the event “where”: “the-orbital-see.” Her entity card locates her at the Seven-Sister See. Unlike other remotely reporting characters, the prose gives no indication that she is speaking or sending a dispatch remotely. | continuity badger redispatch #2: Pell is said to arrive “eleven chapters silent,” and the state update repeats that he returns “after eleven chapters' silence.” The open-thread record places Pell's last appearance at ch-042, so at ch-048 he has been absent for six chapters, as the linter also notes.; The final event locates Silex and the Numbered Ones report at “the-seven-sister-see,” although the prose places Silex at the Orbital See and explicitly says the frog-cardinal speaks remotely from the Seven-Sister See. Silex's entity card also places him at the Orbital See.",
+      "costUsd": 0.465409
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-26: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Ore Begins to Answer\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.819498
+}
