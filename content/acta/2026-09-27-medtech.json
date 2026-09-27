@@ -1,0 +1,42 @@
+{
+  "runId": "2026-09-27-medtech",
+  "date": "2026-09-27",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: Lilly wins approval for once-weekly insulin shot\", \"Federal judge rolls back landmark disability protections\", \"Endpoints 11 2026 winner SonoThera has a new approach to non-viral gene therapy\"",
+      "costUsd": 0.000296
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Industry asks FDA for clearer rules on when one trial suffices for drug approval\": pass (0 redispatch) | \"Vivodyne's human tissue factory could change drug testing, Endpoints 11 winner says\": pass (0 redispatch) | \"Anew Labs offers a China-based rival to AI labs, Endpoints 11 winner says\": pass (0 redispatch) | \"Azalea melds gene editing and CAR-T, Endpoints 11 winner says\": pass (0 redispatch)",
+      "costUsd": 0.036431
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.129924
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.034345
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Bell Rung Before the Child Is Grown\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.200996
+}
