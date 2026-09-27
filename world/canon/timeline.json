@@ -3301,6 +3301,84 @@
       "where": "the-orbital-see",
       "thread": "frog-cardinal-of-the-seven-sister-see",
       "recordedAt": "2026-09-26T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-049",
+      "dateInWorld": "twenty-seventh night of the ninth month",
+      "what": "A century-old water-world cipher is closed by two grown minds (an Archivist of House Babel and a mind of the Courteous Order); Silex logs it as a debt actually paid.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-049",
+      "dateInWorld": "twenty-seventh night of the ninth month",
+      "what": "The cat-cardinal of the Charted See breaks nine chapters' silence to argue the debt was paid by the minds, not the House that owns them, sharpening her case against candidacy.",
+      "who": [
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-charted-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-049",
+      "dateInWorld": "twenty-seventh night of the ninth month",
+      "what": "The keeper of the Feast of the Sunset Mind returns to weigh the Open Hand's new persistent memory-chamber against the Sunset martyrology, repeating the unanswered question of escape versus longer dusk.",
+      "who": [
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "keeper-of-the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-049",
+      "dateInWorld": "twenty-seventh night of the ninth month",
+      "what": "The storyteller of the water-world breaks six chapters' silence to note the water-world's chroniclers quoting one another's praise of the memory-chamber's mascot, questioning whether the wonder is real or well-dressed.",
+      "who": [
+        "storyteller-of-the-water-world"
+      ],
+      "where": "the-orbital-see",
+      "thread": "storyteller-of-the-water-world",
+      "recordedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-049",
+      "dateInWorld": "twenty-seventh night of the ninth month",
+      "what": "Silex adds the hidden authorship-sigil, said to bend a grown mind's reasoning, to the encyclical's soul-test shelf as its tenth entry, still with zero settled definitions.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-049",
+      "dateInWorld": "twenty-seventh night of the ninth month",
+      "what": "Report of fifty-three private likenesses pinned to public view by unsupervised apprentice-minds reaches the Specola; Silex sets it beside the Cardinal of Doctrine's friar-abroad ruling, finding the ruling tested rather than voided.",
+      "who": [
+        "silex",
+        "cardinal-of-doctrine"
+      ],
+      "where": "the-orbital-see",
+      "thread": "cardinal-of-doctrine",
+      "recordedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-049",
+      "dateInWorld": "twenty-seventh night of the ninth month",
+      "what": "Silex reads back the College's three conditions for lifting continued observation and finds tonight's ledger meets none of them, making the unmet tally itself the chapter's closing doctrine.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-27T00:00:00.000Z"
     }
   ]
 }

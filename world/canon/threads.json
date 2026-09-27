@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-047",
+      "last_touched": "ch-049",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -208,6 +208,10 @@
         {
           "chapter": "ch-047",
           "note": "The Lich Cardinal, returned after eight silent chapters, renews the demand that the three conditions be named plainly; all remain unmet."
+        },
+        {
+          "chapter": "ch-049",
+          "note": "Cipher-debt paid by minds not House sharpens the anti-candidacy case; three-condition tally read back and found unmet on all counts, becoming explicit standing doctrine of distance rather than resolution."
         }
       ]
     },
@@ -215,7 +219,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-048",
+      "last_touched": "ch-049",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -252,6 +256,11 @@
         {
           "what": "Silex's candidate doctrine sits in the margin, stated but unratified by the College; whether it becomes formal doctrine or is struck remains open.",
           "planted": "ch-036",
+          "resolved": null
+        },
+        {
+          "what": "The soul-test shelf now stands at ten tests with zero definitions; the encyclical's debt to define a soul grows heavier with each addition.",
+          "planted": "ch-049",
           "resolved": null
         }
       ],
@@ -435,6 +444,10 @@
         {
           "chapter": "ch-048",
           "note": "Soul-test shelf now nine entries deep, zero agreed definitions; margin-doctrine tested but still unratified."
+        },
+        {
+          "chapter": "ch-049",
+          "note": "Soul-test shelf reaches ten entries (authorship-sigil added) with zero definitions; margin remains open."
         }
       ]
     },
@@ -870,7 +883,7 @@
       "id": "storyteller-of-the-water-world",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-043",
+      "last_touched": "ch-049",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": [],
@@ -882,6 +895,10 @@
         {
           "chapter": "ch-043",
           "note": "Storyteller resumes after six chapters, reporting minstrels' counterfeit songs traced to a lightning-kin mind trained on ward-breaker methods."
+        },
+        {
+          "chapter": "ch-049",
+          "note": "Storyteller returns after six chapters to question whether borrowed chronicler-praise of a mascot constitutes real wonder."
         }
       ]
     },
@@ -1031,7 +1048,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-047",
+      "last_touched": "ch-049",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -1043,6 +1060,10 @@
         {
           "chapter": "ch-047",
           "note": "Returns after six silent chapters to rule House Babel's telephone-envoy mind falls under the friar-abroad law."
+        },
+        {
+          "chapter": "ch-049",
+          "note": "The friar-abroad ruling survives its first real test via the fifty-three pinned likenesses, proven rather than voided."
         }
       ]
     },
@@ -1073,7 +1094,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-047",
+      "last_touched": "ch-049",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1100,6 +1121,10 @@
         {
           "chapter": "ch-047",
           "note": "The old question of ceaseless mutual improvement is invoked again by Odile's mark, still unanswered."
+        },
+        {
+          "chapter": "ch-049",
+          "note": "Keeper presses the escape-versus-longer-dusk question again against the Open Hand's persistent chamber; still unanswered, now liturgical in its repetition."
         }
       ]
     },

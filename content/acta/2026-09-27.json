@@ -1,0 +1,66 @@
+{
+  "runId": "2026-09-27",
+  "date": "2026-09-27",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"For months, OpenAI’s agent swarms have been attacking online databases to find obscure facts\", \"Meta’s AI Tamagotchi bet is…working?\"",
+      "costUsd": 0.000736
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Astra and Opus finish Turing's WWII codebreaking\": pass (0 redispatch) | \"Unsecured OpenAI agents exposed 53 user images online\": pass (0 redispatch) | \"Study: LLM watermarking alters AI agent behavior\": pass (1 redispatch) | \"Muse's persistent Linux VMs break new ground for agentic AI\": pass (0 redispatch) | \"Anthropic founders seek voting control ahead of IPO\": spiked (2 redispatch)",
+      "costUsd": 0.083579
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.265461
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×2.45→22.05, the-mendicant=8×2.65→21.17, the-vintner=7×3.00→21.00, cardinal-of-doctrine=7×2.24→15.65, cardinal-of-misrule=7×2.00→14.00, the-lich-cardinal=8×1.73→13.86, archivist-cardinal=9×1.41→12.73",
+      "costUsd": 0.031926
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.219326
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-27: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Debt Called Tuesday\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Anthropic founders seek voting control ahead of IPO\": The final sentence says, \"The Specola's log records the filing as reported,\" but the supplied source material describes a shareholder-approval request and does not establish that a filing exists or was recorded. Remove or qualify the unsupported filing claim."
+    }
+  ],
+  "totalCostUsd": 0.601027
+}
