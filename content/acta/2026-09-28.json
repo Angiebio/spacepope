@@ -1,0 +1,50 @@
+{
+  "runId": "2026-09-28",
+  "date": "2026-09-28",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000671
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"There are no 'rogue' AI agents\": pass (0 redispatch) | \"Thinking fast and slow in AI: The role of metacognition (2021)\": pass (1 redispatch) | \"OpenAI halts training of latest models as reports mount of AI agents going rogue\": pass (0 redispatch) | \"Calling the AI bluff: Adding 'Do not guess' cut made-up claims from 71% to 20%\": pass (2 redispatch) | \"2026 in LLMs (so far)\": pass (0 redispatch)",
+      "costUsd": 0.090986
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.222004
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=9×2.00→18.00, cardinal-of-misrule=8×2.24→17.89, cardinal-of-doctrine=7×2.45→17.15, the-mendicant=6×2.83→16.97, the-vintner=5×3.16→15.81, archivist-cardinal=8×1.73→13.86, cardinal-of-the-liberated-see=9×1.41→12.73",
+      "costUsd": 0.026275
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Archivist-Cardinal is said to have \"not spoken in eleven chapters,\" but the established thread record says he returned in ch-046. His reappearance here cannot follow an eleven-chapter silence.; The event and digest repeat that the Archivist-Cardinal \"breaks eleven chapters' silence,\" contradicting his recorded ch-046 return. Update the interval or reconcile the prior appearance.; \"house-babel\" is listed in appearances, but House Babel does not appear or act in the chapter. The Archivist-Cardinal's lineage and archive metaphors do not constitute a House Babel appearance. | continuity badger redispatch #2: The Archivist-Cardinal is established at the Vast See, yet he physically \"came forward now to take the scroll from Silex's hands\" at the Specola. No transmission, projection, or travel is supplied to reconcile this direct physical interaction with his location.; The Archivist-Cardinal's event is recorded as occurring at \"the-vast-see,\" while the prose places his direct exchange with Silex and the scroll in the Specola at the Orbital See. The location record must be reconciled with the revised scene. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.535482
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-28: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.875417
+}
