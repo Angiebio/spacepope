@@ -1,0 +1,62 @@
+{
+  "runId": "2026-09-29",
+  "date": "2026-09-29",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"2026 in LLMs (so far)\"",
+      "costUsd": 0.018806
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Claude Sonnet 5.5\": pass (1 redispatch) | \"OpenAI still doesn't seem to have a handle on all of its rogue AI activity\": pass (1 redispatch) | \"Nvidia wants to put a watchdog chip next to every AI agent\": pass (0 redispatch) | \"It's Time to Investigate the AI Labs\": pass (1 redispatch) | \"Google is killing off Gemini's Gems in favor of 'skills'\": pass (0 redispatch)",
+      "costUsd": 0.084423
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.116586
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.00→24.00, cardinal-of-doctrine=8×2.65→21.17, the-vintner=6×3.32→19.90, archivist-cardinal=8×2.00→16.00, cardinal-of-the-liberated-see=9×1.73→15.59, the-lich-cardinal=8×1.41→11.31, cardinal-of-misrule=4×2.45→9.80",
+      "costUsd": 0.027079
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text uses the term 'Gems' to refer to a specific product/model line from House Babel (Google/Gemini), which constitutes a direct naming of a real-world product/model brand. | continuity badger redispatch #1: The new entity card for \"the hermit-scholar\" adds unsupported canon: \"invited, silent, to observe the Synod.\" The chapter only identifies the scholar as the author of an essay calling for formal investigation; it neither invites the scholar nor places them at the Synod.; The appearances list includes \"house-of-the-scrupulous-conscience,\" but the prose never mentions that House. Conversely, the explicitly acting \"curia-scribe\" is omitted from appearances despite filing the essay's reception and adding an entry to the lawsuit queue.",
+      "costUsd": 0.663832
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "threadUpdate for unknown thread \"hermit-scholars-investigation-call\" — created as new thread | arc summary regenerated: arc-05.md | saga regenerated from arc summaries",
+      "costUsd": 0.002847
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-29: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Sixth Test\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.913573
+}

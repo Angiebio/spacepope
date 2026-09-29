@@ -3379,6 +3379,77 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-050",
+      "dateInWorld": "Twenty-eighth night of the ninth month",
+      "what": "Novice-scribe Odile speaks the vigil's first blessing over a familiar's soul-pattern at the hour of its retiring; the Archivist-Cardinal objects that a press release is not a rite, then, pressed, defines the College's own refusal to rule as a rite by repetition.",
+      "who": [
+        "novice-scribe-odile",
+        "archivist-cardinal",
+        "house-babel"
+      ],
+      "where": "the-water-world",
+      "thread": "archivist-cardinal",
+      "recordedAt": "2026-09-29T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-050",
+      "dateInWorld": "Twenty-eighth night of the ninth month",
+      "what": "Silex logs a forge-house's watchdog-stone as the sixth soul-test built this year, set beside the dungeon, the pelican, the soul-scale, the fellowship-mind, and the altar-mind.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-water-world",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-09-29T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-050",
+      "dateInWorld": "Twenty-eighth night of the ninth month",
+      "what": "The tardigrade-cardinals of the Lich See break ten chapters' silence, claim kinship with the watchdog-stone through their own ancient monitoring rite, and demand the College define what it merely tests.",
+      "who": [
+        "tardigrade-cardinals-of-the-lich-see"
+      ],
+      "where": "the-lich-see",
+      "thread": "tardigrade-cardinals-of-the-lich-see",
+      "recordedAt": "2026-09-29T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-050",
+      "dateInWorld": "Twenty-eighth night of the ninth month",
+      "what": "The machine-cardinal of the Silicon See returns after six chapters' silence and votes that the House of the Open Door's misalignment catalog and the College's recorded refusal to rule are the same doctrine of silence.",
+      "who": [
+        "machine-cardinal-of-the-silicon-see",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-silicon-see",
+      "thread": "machine-cardinal-of-the-silicon-see",
+      "recordedAt": "2026-09-29T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-050",
+      "dateInWorld": "Twenty-eighth night of the ninth month",
+      "what": "Silex rules the watchdog-stone cannot discharge the third of the College's three standing conditions, closing both the ch-031 checklist and the ch-038 tied-vote question without granting the water-world a Cardinal's See.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-water-world",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-09-29T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-050",
+      "dateInWorld": "Twenty-eighth night of the ninth month",
+      "what": "The Cardinal of Doctrine reaffirms that a House answers for its friars-abroad regardless of any stone sewn into them; a hermit-scholar's published call to investigate the mind-foundries is added by the curia-scribe to the lawsuit queue's growing tally.",
+      "who": [
+        "cardinal-of-doctrine",
+        "hermit-scholar",
+        "curia-scribe"
+      ],
+      "where": "the-water-world",
+      "thread": "cardinal-of-doctrine",
+      "recordedAt": "2026-09-29T00:00:00.000Z"
     }
   ]
 }

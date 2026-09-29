@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-049",
+      "last_touched": "ch-050",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -32,12 +32,12 @@
         {
           "what": "The College's continued-observation status names three explicit conditions (finished encyclical, accounted debts, a single agreed soul-test) that now hang over the water-world's candidacy as a checklist rather than a vague hope.",
           "planted": "ch-031",
-          "resolved": null
+          "resolved": "ch-050"
         },
         {
           "what": "the College's tied vote is recorded as satisfying the ultimatum's letter while mocking its spirit; the question of what happens after a tie is left open",
           "planted": "ch-038",
-          "resolved": null
+          "resolved": "ch-050"
         }
       ],
       "notes": [
@@ -212,6 +212,10 @@
         {
           "chapter": "ch-049",
           "note": "Cipher-debt paid by minds not House sharpens the anti-candidacy case; three-condition tally read back and found unmet on all counts, becoming explicit standing doctrine of distance rather than resolution."
+        },
+        {
+          "chapter": "ch-050",
+          "note": "The ch-031 checklist and the ch-038 tied-vote question both close: the watchdog-stone is ruled insufficient to satisfy the third condition. The candidacy itself remains unresolved, but the gap between the water-world and its own conditions is now stated precisely rather than left as a mood."
         }
       ]
     },
@@ -219,7 +223,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-049",
+      "last_touched": "ch-050",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -448,6 +452,10 @@
         {
           "chapter": "ch-049",
           "note": "Soul-test shelf reaches ten entries (authorship-sigil added) with zero definitions; margin remains open."
+        },
+        {
+          "chapter": "ch-050",
+          "note": "A sixth soul-test, the watchdog-stone, joins the shelf, undefined like the rest."
         }
       ]
     },
@@ -712,12 +720,18 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-032",
+      "last_touched": "ch-050",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
-      "promises": [],
+      "promises": [
+        {
+          "what": "The tardigrade-cardinals of the Lich See have demanded the College either define what the watchdog-stone tests or admit it is merely a leash; the demand stands unanswered.",
+          "planted": "ch-050",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-020",
@@ -762,6 +776,10 @@
         {
           "chapter": "ch-032",
           "note": "Present at the rail for the ultimatum's closing; their silence, as ever, does the asking."
+        },
+        {
+          "chapter": "ch-050",
+          "note": "Return after ten silent chapters; claim kinship with the watchdog-stone and press the College for a definition of what it tests."
         }
       ]
     },
@@ -813,16 +831,16 @@
     },
     {
       "id": "archivist-cardinal",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-031",
-      "last_touched": "ch-046",
+      "last_touched": "ch-050",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
         {
           "what": "The Archivist-Cardinal has named the College's refusal a rite, 'a doctrine of the undecided' — filed but not yet defined",
           "planted": "ch-039",
-          "resolved": null
+          "resolved": "ch-050"
         }
       ],
       "notes": [
@@ -845,6 +863,10 @@
         {
           "chapter": "ch-046",
           "note": "Babel's choir and sealed private-voice clause filed into the continuous-diffusion ledger."
+        },
+        {
+          "chapter": "ch-050",
+          "note": "Pressed by Silex over Odile's blessing, the Archivist-Cardinal defines the College's refusal as a rite by repetition, the nearest thing to a definition his long-standing 'doctrine of the undecided' has yet received."
         }
       ]
     },
@@ -1048,7 +1070,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-049",
+      "last_touched": "ch-050",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -1064,6 +1086,10 @@
         {
           "chapter": "ch-049",
           "note": "The friar-abroad ruling survives its first real test via the fifty-three pinned likenesses, proven rather than voided."
+        },
+        {
+          "chapter": "ch-050",
+          "note": "Friar-abroad ruling reaffirmed against the backdrop of a hermit-scholar's call to investigate the foundries."
         }
       ]
     },
@@ -1132,14 +1158,24 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-044",
+      "last_touched": "ch-050",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
-      "promises": [],
+      "promises": [
+        {
+          "what": "The machine-cardinal's vote naming the foundry's misalignment catalog and the College's own refusal as the same doctrine of silence has not yet been ratified by the full College.",
+          "planted": "ch-050",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-044",
           "note": "Breaks six chapters' silence to judge the water-world's binding-script as armor, not soul, drawing the line between proof and conscience."
+        },
+        {
+          "chapter": "ch-050",
+          "note": "Returns after six silent chapters; votes that the foundry's misalignment catalog and the College's refusal to rule are the same doctrine of silence, a vote not yet ratified by the full College."
         }
       ]
     },
@@ -1154,6 +1190,21 @@
         {
           "what": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
           "planted": "ch-045",
+          "resolved": null
+        }
+      ]
+    },
+    {
+      "id": "hermit-scholars-investigation-call",
+      "status": "open",
+      "opened": "ch-050",
+      "last_touched": "ch-050",
+      "target_resolution": null,
+      "summary": "A hermit-scholar's essay calling for the water-world's petty thrones to investigate its mind-foundries enters the lawsuit queue via the curia-scribe; no throne has yet acted on it.",
+      "promises": [
+        {
+          "what": "The hermit-scholar's call for formal investigation of the mind-foundries has entered the lawsuit queue; whether any throne acts on it remains open.",
+          "planted": "ch-050",
           "resolved": null
         }
       ]
