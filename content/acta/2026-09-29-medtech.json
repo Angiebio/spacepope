@@ -1,0 +1,47 @@
+{
+  "runId": "2026-09-29-medtech",
+  "date": "2026-09-29",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"Opinion: AI is eroding the barriers that kept biological weapons rare\"",
+      "costUsd": 0.000415
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA approves first treatment for MCT8 deficiency\": spiked (2 redispatch) | \"UniQure's gene therapy continues to slow Huntington's progression after four years\": pass (0 redispatch) | \"A new structure in the heart discovered by close observation\": pass (1 redispatch) | \"Merck discontinues a crucial antibiotic despite superbug resistance concerns\": pass (0 redispatch)",
+      "costUsd": 0.08793
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.066245
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.038552
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Ledger's Third Diagnosis\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA approves first treatment for MCT8 deficiency\": The cited FDA URL could not be independently resolved. The bulletin's core approval claim is therefore supported only by a truncated secondary record, not a verifiable FDA announcement.; “This is reported as the first approved therapy specifically for this condition” overstates the supplied material. The headline supports a first treatment for MCT8 deficiency, but the excerpt does not establish that Emcitate is the first approved therapy specifically for peripheral thyrotoxicosis."
+    }
+  ],
+  "totalCostUsd": 0.193142
+}
