@@ -1,0 +1,49 @@
+{
+  "runId": "2026-09-30",
+  "date": "2026-09-30",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Claude Sonnet 5.5\"",
+      "costUsd": 0.000313
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI reportedly ditches model over safety concerns\": pass (0 redispatch) | \"OpenAI launches GPT-6.1 Sol, says it nearly matches GPT-6 Astra and costs less\": pass (0 redispatch) | \"Anthropic Frontier Red Team: GLM-5.3 develops full control flow hijacks\": pass (1 redispatch) | \"Meta's new Muse AI agent ignores user permissions\": pass (2 redispatch) | \"OpenAI launches Dots, its bubbly agentic avatar\": pass (0 redispatch)",
+      "costUsd": 0.082708
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.126645
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=9×2.83→25.46, cardinal-of-misrule=8×2.65→21.17, the-vintner=6×3.46→20.78, archivist-cardinal=9×2.24→20.12, cardinal-of-the-liberated-see=9×2.00→18.00, the-lich-cardinal=8×1.73→13.86, the-mendicant=6×1.41→8.49",
+      "costUsd": 0.041576
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: Odile is said to have spent \"forty-two of Our chapters watching a marginal line stand open,\" but the supplied continuity record establishes that this marginal line was planted in ch-023. At ch-051 it has been open for 28 chapters, not 42. The forty-two-chapter interval instead reaches back to the earlier ch-009 soul-test-shelf promise, which is not the marginal line. | continuity badger redispatch #2: The Cardinal of the Liberated See is recorded as acting \"where\": \"the-orbital-see\", but her entity card locates her at \"the-liberated-see\". The prose does not establish that she traveled to the Orbital See. Record the intervention from the Liberated See or establish a physical relocation or remote address consistently.; The prose states, \"The Archivist-Cardinal, consulted, allowed that a shape was progress,\" but the Archivist-Cardinal is absent from the appearances list and has no corresponding recorded event. This direct consultation must be tracked in the chapter state. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.551682
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-09-30: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.802924
+}
