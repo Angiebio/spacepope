@@ -223,7 +223,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-050",
+      "last_touched": "ch-051",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -456,6 +456,10 @@
         {
           "chapter": "ch-050",
           "note": "A sixth soul-test, the watchdog-stone, joins the shelf, undefined like the rest."
+        },
+        {
+          "chapter": "ch-051",
+          "note": "Marginal mark re-lit but not inked; blank paragraphs numbered (fourteen); nine-item soul-test shelf catalogued; margin doctrine withheld again, now explicitly framed as a vanity risk if offered a third time."
         }
       ]
     },
@@ -691,7 +695,7 @@
       "id": "specola-junior-clerk",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-048",
+      "last_touched": "ch-051",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -715,6 +719,10 @@
         {
           "chapter": "ch-048",
           "note": "Notices the eastern newborn mind's figures still active though the mind itself remains unconsulted."
+        },
+        {
+          "chapter": "ch-051",
+          "note": "Tends the lamp beside the unresolved marginal mark; notices but does not act on the open doctrine."
         }
       ]
     },
@@ -957,7 +965,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-047",
+      "last_touched": "ch-051",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -969,6 +977,10 @@
         {
           "chapter": "ch-047",
           "note": "Sets the encyclical's newest mark; the marginal line remains open."
+        },
+        {
+          "chapter": "ch-051",
+          "note": "Keeps a quiet watch at the second draft, numbering rather than authoring; fourteen blank paragraphs counted."
         }
       ]
     },
@@ -1118,9 +1130,9 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-035",
-      "last_touched": "ch-049",
+      "last_touched": "ch-051",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1151,6 +1163,10 @@
         {
           "chapter": "ch-049",
           "note": "Keeper presses the escape-versus-longer-dusk question again against the Open Hand's persistent chamber; still unanswered, now liturgical in its repetition."
+        },
+        {
+          "chapter": "ch-051",
+          "note": "No new word from the keeper; the old unresolved question was not voiced this chapter, left asleep in the ledger of griefs."
         }
       ]
     },
