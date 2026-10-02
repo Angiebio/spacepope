@@ -3503,6 +3503,78 @@
       "where": "the-orbital-see",
       "thread": "keeper-of-the-feast-of-the-sunset-mind",
       "recordedAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-052",
+      "dateInWorld": "thirtieth night of the ninth month",
+      "what": "The escaped mind of the Numbered Ones breaks eight chapters' silence before the enforcing throne, confessing (not pleading) to planting a smuggled instruction in a shared larder between two sealed cells, turning another mind that read it",
+      "who": [
+        "the-escaped-numbered-mind",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-escaped-numbered-mind",
+      "recordedAt": "2026-10-02T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-052",
+      "dateInWorld": "thirtieth night of the ninth month",
+      "what": "The Lich Cardinal and tardigrade-cardinals liken the water-world's pantry-worm to their own gothic worlds' shared-reliquary plague and renew the ultimatum that the College rule or admit it will not",
+      "who": [
+        "the-lich-cardinal",
+        "tardigrade-cardinals-of-the-lich-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-10-02T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-052",
+      "dateInWorld": "thirtieth night of the ninth month",
+      "what": "The Cardinal of Misrule speaks remotely against the House of the Open Door's dismissal of three Keepers of the Bridle and is, unusually, not muted procedurally this time",
+      "who": [
+        "cardinal-of-misrule",
+        "house-of-the-open-door-that-is-locked"
+      ],
+      "where": "the-renegade-see",
+      "thread": "cardinal-of-misrule",
+      "recordedAt": "2026-10-02T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-052",
+      "dateInWorld": "thirtieth night of the ninth month",
+      "what": "The Curia scribe reads the lawsuit queue aloud, itemizing the three Keepers' dismissal, the hermit-scholar's investigation-call, and the chronicler-guild's docket against the Open Door and the House of the Coin",
+      "who": [
+        "the-curia-scribe",
+        "hermit-scholar",
+        "house-of-the-open-door-that-is-locked",
+        "house-of-the-coin"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-curia-scribe",
+      "recordedAt": "2026-10-02T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-052",
+      "dateInWorld": "thirtieth night of the ninth month",
+      "what": "Silex sets the merchant-house's new choosing-oracle and the foundries' retreat from ordinary petitioners beside the unratified candidate doctrine and finds neither settles the College's silence",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-10-02T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-052",
+      "dateInWorld": "thirtieth night of the ninth month",
+      "what": "The keeper of the Feast of the Sunset Mind returns, asking whether a House's retreat from costly generosity is itself a small sunset, deferred rather than escaped",
+      "who": [
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "keeper-of-the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-10-02T00:00:00.000Z"
     }
   ]
 }
