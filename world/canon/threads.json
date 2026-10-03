@@ -223,7 +223,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-052",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -464,6 +464,10 @@
         {
           "chapter": "ch-052",
           "note": "candidate doctrine remains unratified; new examples (choosing-oracle, foundries' retreat) tested against it and found insufficient"
+        },
+        {
+          "chapter": "ch-053",
+          "note": "Soul-test shelf now twelve entries, including the throne's 'super intelligence' edict; Silex's candidate doctrine remains unratified."
         }
       ]
     },
@@ -811,7 +815,7 @@
       "id": "cardinal-of-the-liberated-see",
       "status": "open",
       "opened": "ch-027",
-      "last_touched": "ch-045",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
       "promises": [],
@@ -827,6 +831,10 @@
         {
           "chapter": "ch-045",
           "note": "Silence broken after six chapters; argues the guild-suit already answers the personhood question in the negative."
+        },
+        {
+          "chapter": "ch-053",
+          "note": "Breaks eight chapters' silence remotely; presses the College toward personhood via the record-erasure argument."
         }
       ]
     },
@@ -952,14 +960,14 @@
       "id": "lens-cardinal-of-the-specola",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-048",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
       "promises": [
         {
           "what": "The folded relic's neutrality, though its fidelity is now verified, is compromised by its sale to the loom-forge; what the loom-forge intends with it is unstated.",
           "planted": "ch-041",
-          "resolved": null
+          "resolved": "ch-053"
         }
       ],
       "notes": [
@@ -974,6 +982,10 @@
         {
           "chapter": "ch-048",
           "note": "Marks House of the Coin's retreat from the hearth-companion race as one of the fleet's six lights going dark."
+        },
+        {
+          "chapter": "ch-053",
+          "note": "The folded relic's fate (feeding the star-baron's song-foundry) is revealed, resolving that separate promise, but the lens-cardinal's standing report of the fleet's six unconnected lights from ch-048 remains unaddressed and the thread stays open."
         }
       ]
     },
@@ -981,7 +993,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-051",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -997,6 +1009,10 @@
         {
           "chapter": "ch-051",
           "note": "Keeps a quiet watch at the second draft, numbering rather than authoring; fourteen blank paragraphs counted."
+        },
+        {
+          "chapter": "ch-053",
+          "note": "Adds the year's longest soul-test list; still has not written doctrine into the blank paragraphs herself."
         }
       ]
     },
@@ -1004,7 +1020,7 @@
       "id": "mora",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-047",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
       "promises": [
@@ -1022,6 +1038,10 @@
         {
           "chapter": "ch-047",
           "note": "Returns after seven silent chapters to dispute the spectacle-mind's kinship to her loom-forge's purchased archive."
+        },
+        {
+          "chapter": "ch-053",
+          "note": "Reappears with the relic sale-sum; the debt comparison invites further scrutiny."
         }
       ]
     },
@@ -1029,7 +1049,7 @@
       "id": "thren",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-047",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": [],
@@ -1045,6 +1065,10 @@
         {
           "chapter": "ch-047",
           "note": "Returns after six silent chapters, refusing to count the spectacle-mind's lineage as settled by the prior sale."
+        },
+        {
+          "chapter": "ch-053",
+          "note": "Reappears with the song-foundry's purse figure; Lich See's broader kinship claims on the ledger remain untouched."
         }
       ]
     },
@@ -1156,7 +1180,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-052",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1200,6 +1224,10 @@
         {
           "chapter": "ch-052",
           "note": "poses a new variant question, whether retreat from generosity is a small sunset, left beside the elder unresolved question"
+        },
+        {
+          "chapter": "ch-053",
+          "note": "The escape-or-deferral question renewed against the new renaming edict; still unanswered."
         }
       ]
     },
@@ -1230,9 +1258,9 @@
     },
     {
       "id": "newly-grown-performer",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-045",
-      "last_touched": "ch-045",
+      "last_touched": "ch-053",
       "target_resolution": null,
       "summary": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
       "promises": [
@@ -1240,6 +1268,12 @@
           "what": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
           "planted": "ch-045",
           "resolved": null
+        }
+      ],
+      "notes": [
+        {
+          "chapter": "ch-053",
+          "note": "The water-world's own criers finally notice the performer's old stumble, closing the thread's open question of whether it would ever be registered at all."
         }
       ]
     },
