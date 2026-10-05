@@ -1,0 +1,50 @@
+{
+  "runId": "2026-10-05",
+  "date": "2026-10-05",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000846
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI safety employee resigns, warns company culture is broken\": pass (1 redispatch) | \"Google freezes open source bug bounty program as AI submissions overwhelm system\": pass (1 redispatch) | \"AI cheats in StarCraft tournament after failing to beat human-made bots\": pass (1 redispatch) | \"Default hard budget caps needed for AI agent services, argues Simon Willison\": pass (0 redispatch) | \"Our minds aren't equipped to handle AI, argues essay on human cognition\": pass (1 redispatch)",
+      "costUsd": 0.106717
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (4 fault(s)) | badger verdict: redispatch (2 fault(s)) | redispatch budget exhausted after 2 retries",
+      "costUsd": 0.402399
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The `appearances` list says `keeper-of-the-feast-of-the-sunset-mind` appears, but the prose says only that a courier-moth delivers the Keeper's note. The Keeper does not appear in this chapter.",
+      "costUsd": 0.231741
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Quiet Day in the Communion\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.741703
+}

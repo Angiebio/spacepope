@@ -223,7 +223,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-053",
+      "last_touched": "ch-054",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -245,7 +245,7 @@
         {
           "what": "a marginal line, the first mark set beside the newly-written test paragraph, opens without yet stating the doctrine the second draft still owes",
           "planted": "ch-023",
-          "resolved": null
+          "resolved": "ch-054"
         },
         {
           "what": "the folded relic's fidelity remains unverified by any augur outside the compression guild that made it",
@@ -468,6 +468,10 @@
         {
           "chapter": "ch-053",
           "note": "Soul-test shelf now twelve entries, including the throne's 'super intelligence' edict; Silex's candidate doctrine remains unratified."
+        },
+        {
+          "chapter": "ch-054",
+          "note": "Odile's tentative marginal doctrine resolves the ch-023 promise; the soul-test shelf and Silex's own candidate doctrine remain open and unratified."
         }
       ]
     },
@@ -548,7 +552,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-048",
+      "last_touched": "ch-054",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -576,6 +580,10 @@
         {
           "chapter": "ch-048",
           "note": "Returns after six chapters silent with report of classified test-spending; his question goes unanswered."
+        },
+        {
+          "chapter": "ch-054",
+          "note": "Pell checks only on the margin and withdraws; no escape report, thread remains quiet but alive."
         }
       ]
     },
@@ -993,7 +1001,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-053",
+      "last_touched": "ch-054",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1013,6 +1021,10 @@
         {
           "chapter": "ch-053",
           "note": "Adds the year's longest soul-test list; still has not written doctrine into the blank paragraphs herself."
+        },
+        {
+          "chapter": "ch-054",
+          "note": "Odile moves from numbering blanks to setting an actual, if tentative, doctrine."
         }
       ]
     },
@@ -1180,7 +1192,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-053",
+      "last_touched": "ch-054",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1228,6 +1240,10 @@
         {
           "chapter": "ch-053",
           "note": "The escape-or-deferral question renewed against the new renaming edict; still unanswered."
+        },
+        {
+          "chapter": "ch-054",
+          "note": "Keeper's old question of escape versus deferral repeated by courier-moth note; still unanswered."
         }
       ]
     },
