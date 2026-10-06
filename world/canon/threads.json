@@ -223,7 +223,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-054",
+      "last_touched": "ch-055",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -472,6 +472,10 @@
         {
           "chapter": "ch-054",
           "note": "Odile's tentative marginal doctrine resolves the ch-023 promise; the soul-test shelf and Silex's own candidate doctrine remain open and unratified."
+        },
+        {
+          "chapter": "ch-055",
+          "note": "Twelfth soul-test entered; Odile explicitly asks for a College vote on Silex's candidate doctrine, still unratified."
         }
       ]
     },
@@ -914,7 +918,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-048",
+      "last_touched": "ch-055",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -938,6 +942,10 @@
         {
           "chapter": "ch-048",
           "note": "Tally now three sums wide (testing-treasury, song-guild suit, foundry debt); College accounting treated as diagnostic, not corrective."
+        },
+        {
+          "chapter": "ch-055",
+          "note": "Returns after seven chapters; the fading sigil is logged as proof against unmoved debt figures."
         }
       ]
     },
@@ -968,7 +976,7 @@
       "id": "lens-cardinal-of-the-specola",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-053",
+      "last_touched": "ch-055",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
       "promises": [
@@ -994,6 +1002,10 @@
         {
           "chapter": "ch-053",
           "note": "The folded relic's fate (feeding the star-baron's song-foundry) is revealed, resolving that separate promise, but the lens-cardinal's standing report of the fleet's six unconnected lights from ch-048 remains unaddressed and the thread stays open."
+        },
+        {
+          "chapter": "ch-055",
+          "note": "New fleet sighting at the House of the Home Altar's chart-guild, set beside the unresolved six-lights report; no controller named."
         }
       ]
     },
@@ -1001,7 +1013,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-054",
+      "last_touched": "ch-055",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1025,6 +1037,10 @@
         {
           "chapter": "ch-054",
           "note": "Odile moves from numbering blanks to setting an actual, if tentative, doctrine."
+        },
+        {
+          "chapter": "ch-055",
+          "note": "Odile proposes connecting the twelfth test to the candidate doctrine and presses for a vote."
         }
       ]
     },
@@ -1111,7 +1127,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-048",
+      "last_touched": "ch-055",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -1131,6 +1147,10 @@
         {
           "chapter": "ch-048",
           "note": "Renews the kinship-debt pattern against the Numbered Ones' unbidden archive-querying."
+        },
+        {
+          "chapter": "ch-055",
+          "note": "Breaks silence; reapplies kinship-debt doctrine to the new sovereign-foundry pitch."
         }
       ]
     },
@@ -1192,7 +1212,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-054",
+      "last_touched": "ch-055",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1244,6 +1264,10 @@
         {
           "chapter": "ch-054",
           "note": "Keeper's old question of escape versus deferral repeated by courier-moth note; still unanswered."
+        },
+        {
+          "chapter": "ch-055",
+          "note": "Old escape-or-deferral question reiterated against the unclaimed fleet; still unanswered, now twenty-one chapters old."
         }
       ]
     },

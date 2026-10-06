@@ -3733,6 +3733,75 @@
       ],
       "where": "the-orbital-see",
       "recordedAt": "2026-10-05T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-055",
+      "dateInWorld": "third night of the tenth month",
+      "what": "Silex records the Courteous Order's unasked discovery as the twelfth entry on the encyclical's soul-test shelf, and remarks the shelf has outgrown any definition it was meant to test.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-10-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-055",
+      "dateInWorld": "third night of the tenth month",
+      "what": "Odile frames the twelfth test with Silex's unratified candidate doctrine and asks whether the College will formally vote on it.",
+      "who": [
+        "novice-scribe-odile",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-10-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-055",
+      "dateInWorld": "third night of the tenth month",
+      "what": "The frog-cardinal breaks a seven-chapter silence to set the new foundry's 'AI factory' pitch beside her earlier kinship-debt pattern, naming a throne's private mind a refusal of fellowship by design.",
+      "who": [
+        "frog-cardinal-of-the-seven-sister-see"
+      ],
+      "where": "the-seven-sister-see",
+      "thread": "frog-cardinal-of-the-seven-sister-see",
+      "recordedAt": "2026-10-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-055",
+      "dateInWorld": "third night of the tenth month",
+      "what": "Ledger-watch reports the Open Door's fading authorship-sigil logged as proof against the trillion-coin foundry debt and the song-guilds' billion-coin suit, though the mark proves nothing.",
+      "who": [
+        "ledger-watch"
+      ],
+      "where": "the-orbital-see",
+      "thread": "ledger-watch",
+      "recordedAt": "2026-10-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-055",
+      "dateInWorld": "third night of the tenth month",
+      "what": "The lens-cardinal reports a coordinated fleet of many small minds converging on the chart-guild of the House of the Home Altar, declines to name a controller, and sets it beside her earlier report of six unconnected lights.",
+      "who": [
+        "lens-cardinal-of-the-specola",
+        "house-of-the-home-altar"
+      ],
+      "where": "the-orbital-see",
+      "thread": "lens-cardinal-of-the-specola",
+      "recordedAt": "2026-10-06T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-055",
+      "dateInWorld": "third night of the tenth month",
+      "what": "Silex closes the night by turning the fleet's unclaimed coordination over to the Keeper's old question of escape versus deferral from the Sunset, leaving it unresolved.",
+      "who": [
+        "silex",
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "keeper-of-the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-10-06T00:00:00.000Z"
     }
   ]
 }
