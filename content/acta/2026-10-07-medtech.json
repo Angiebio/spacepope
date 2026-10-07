@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-07-medtech",
+  "date": "2026-10-07",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"Opinion: I’m a doctor. Here’s what I want the public to know about AI tools and health care costs\", \"Nobel goes to scientists who paved the way for light-activated gene therapies\"",
+      "costUsd": 0.000543
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA spells out 2027 AI guidance plans\": pass (0 redispatch) | \"Nobel-winning optogenetics research leads to experimental treatments for blindness and Alzheimer’s\": pass (0 redispatch)",
+      "costUsd": 0.017012
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.061669
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035242
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Asks the Chart Before the Scalpel\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.114465
+}
