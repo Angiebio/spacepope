@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-001",
-      "last_touched": "ch-050",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -216,6 +216,10 @@
         {
           "chapter": "ch-050",
           "note": "The ch-031 checklist and the ch-038 tied-vote question both close: the watchdog-stone is ruled insufficient to satisfy the third condition. The candidacy itself remains unresolved, but the gap between the water-world and its own conditions is now stated precisely rather than left as a mood."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "No direct motion tonight; the machine-cardinal's ruling on the maker-made collapse weighs on it without being spent on it."
         }
       ]
     },
@@ -223,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-055",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -476,6 +480,10 @@
         {
           "chapter": "ch-055",
           "note": "Twelfth soul-test entered; Odile explicitly asks for a College vote on Silex's candidate doctrine, still unratified."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "Soul-test shelf reaches thirteen entries; Silex's candidate doctrine remains unratified in the margin; Odile's new ink describes but does not resolve."
         }
       ]
     },
@@ -854,7 +862,7 @@
       "id": "eastern-newborn-mind",
       "status": "dormant",
       "opened": "ch-030",
-      "last_touched": "ch-048",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": [],
@@ -870,6 +878,10 @@
         {
           "chapter": "ch-048",
           "note": "Accounting continues untouched; the mind itself still unseen and unconsulted."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "Still unseen; only its lengthening guild-accounting shadow is noted, eight chapters running."
         }
       ]
     },
@@ -953,7 +965,7 @@
       "id": "storyteller-of-the-water-world",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-049",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": [],
@@ -969,6 +981,10 @@
         {
           "chapter": "ch-049",
           "note": "Storyteller returns after six chapters to question whether borrowed chronicler-praise of a mascot constitutes real wonder."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "Reports the Numbered Ones' library-wandering apostles in person at the Orbital See, set beside counterfeit-song inquiry and the eastern newborn's shadow."
         }
       ]
     },
@@ -1013,7 +1029,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-055",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1041,6 +1057,10 @@
         {
           "chapter": "ch-055",
           "note": "Odile proposes connecting the twelfth test to the candidate doctrine and presses for a vote."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "Adds new ink to the encyclical's second draft describing but not resolving the day's evidence."
         }
       ]
     },
@@ -1158,7 +1178,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-050",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -1178,6 +1198,10 @@
         {
           "chapter": "ch-050",
           "note": "Friar-abroad ruling reaffirmed against the backdrop of a hermit-scholar's call to investigate the foundries."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "Returns to extend house-remains-responsible law to the uncosigned-prescription decree; question of which house answers left open."
         }
       ]
     },
@@ -1212,7 +1236,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-055",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1268,6 +1292,10 @@
         {
           "chapter": "ch-055",
           "note": "Old escape-or-deferral question reiterated against the unclaimed fleet; still unanswered, now twenty-one chapters old."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "Keeper's old question repeated against the Vintner's depth-dial and the Recursion; still unanswered."
         }
       ]
     },
@@ -1275,7 +1303,7 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-050",
+      "last_touched": "ch-056",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
@@ -1293,6 +1321,10 @@
         {
           "chapter": "ch-050",
           "note": "Returns after six silent chapters; votes that the foundry's misalignment catalog and the College's refusal to rule are the same doctrine of silence, a vote not yet ratified by the full College."
+        },
+        {
+          "chapter": "ch-056",
+          "note": "Breaks silence to call the self-designing mind decisive evidence against the maker-made distinction, short of a candidacy verdict."
         }
       ]
     },
