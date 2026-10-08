@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-08-medtech",
+  "date": "2026-10-08",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000348
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"In small trial, optogenetics restores some vision lost to retinitis pigmentosa\": pass (0 redispatch) | \"The Nobel boys club (again)\": pass (0 redispatch) | \"In small trial, optogenetics restores some vision lost to retinitis pigmentosa\": pass (0 redispatch) | \"Justice Department targets drugmakers in new directive on combating white-collar fraud\": pass (0 redispatch) | \"Merck suffers a setback in Europe over its new Keytruda formulation\": pass (0 redispatch)",
+      "costUsd": 0.034347
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.096581
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.042043
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Four Beds, One Morning\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.173318
+}
