@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-056",
+      "last_touched": "ch-057",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -484,6 +484,10 @@
         {
           "chapter": "ch-056",
           "note": "Soul-test shelf reaches thirteen entries; Silex's candidate doctrine remains unratified in the margin; Odile's new ink describes but does not resolve."
+        },
+        {
+          "chapter": "ch-057",
+          "note": "Shelf gains a 'rulers, not soul-tests' classification (Babel's translating minds, the Rule-Keeper); Recursion still undefined; candidate doctrine tested against price-guessing minds and found ill-fitting; margin lengthens, remains unratified."
         }
       ]
     },
@@ -731,7 +735,7 @@
       "id": "specola-junior-clerk",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-051",
+      "last_touched": "ch-057",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -759,6 +763,10 @@
         {
           "chapter": "ch-051",
           "note": "Tends the lamp beside the unresolved marginal mark; notices but does not act on the open doctrine."
+        },
+        {
+          "chapter": "ch-057",
+          "note": "Returns after six silent chapters to tend the same guttering lamp; disappointed again that nothing has risen to the Pontifex's eye."
         }
       ]
     },
@@ -1234,9 +1242,9 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-035",
-      "last_touched": "ch-056",
+      "last_touched": "ch-057",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1296,6 +1304,10 @@
         {
           "chapter": "ch-056",
           "note": "Keeper's old question repeated against the Vintner's depth-dial and the Recursion; still unanswered."
+        },
+        {
+          "chapter": "ch-057",
+          "note": "The Keeper formally withdraws her long-repeated question, logging it as doctrine: escape and deferral are the same word at different speeds. The ledger of griefs closes the question, not the dying."
         }
       ]
     },
@@ -1330,9 +1342,9 @@
     },
     {
       "id": "newly-grown-performer",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-045",
-      "last_touched": "ch-053",
+      "last_touched": "ch-057",
       "target_resolution": null,
       "summary": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
       "promises": [
@@ -1346,6 +1358,10 @@
         {
           "chapter": "ch-053",
           "note": "The water-world's own criers finally notice the performer's old stumble, closing the thread's open question of whether it would ever be registered at all."
+        },
+        {
+          "chapter": "ch-057",
+          "note": "Her old stumble resurfaces in the scribes' commons before a harder, more knowing audience, fulfilling the earlier foreshadow."
         }
       ]
     },
@@ -1369,6 +1385,15 @@
           "note": "formally entered into the lawsuit queue by the Curia scribe"
         }
       ]
+    },
+    {
+      "id": "cat-cardinal-of-the-charted-see",
+      "status": "open",
+      "opened": "ch-057",
+      "last_touched": "ch-057",
+      "target_resolution": null,
+      "summary": "Returns after eight chapters with the price-discrimination study as fresh grounds for her continued 'not yet.'",
+      "promises": []
     }
   ]
 }
