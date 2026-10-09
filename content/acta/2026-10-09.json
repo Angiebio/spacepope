@@ -1,0 +1,49 @@
+{
+  "runId": "2026-10-09",
+  "date": "2026-10-09",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Claude Haiku 5.5\"",
+      "costUsd": 0.000672
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Anthropic bans 'abusive or cruel behavior' toward Claude\": pass (0 redispatch) | \"Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect\": pass (0 redispatch) | \"ChatGPT for Teens keeps teens talking, even during mental health crises\": pass (1 redispatch) | \"Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter\": pass (0 redispatch) | \"OpenAI annualised revenues $20B less than previously signalled\": pass (2 redispatch)",
+      "costUsd": 0.080279
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.112595
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.16→25.30, archivist-cardinal=8×2.65→21.17, the-mendicant=6×3.32→19.90, cardinal-of-misrule=7×2.45→17.15, cardinal-of-the-liberated-see=8×1.73→13.86, the-vintner=6×2.00→12.00, the-lich-cardinal=8×1.41→11.31",
+      "costUsd": 0.040631
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The curia-scribe is described as “silent since the fiftieth chapter,” but the active thread records the-curia-scribe’s last appearance in ch-052, and this chapter’s state update correctly calls the absence six chapters. The prose gives the wrong continuity point for this same resurfacing.; The Cardinal of Misrule is said to return “after eight chapters of silence,” and the state update repeats that interval. His open thread records him as present in ch-052, so ch-053 through ch-057 are the intervening silent chapters. Eight chapters is the interval before his ch-052 return, not before this appearance.; The Keeper is said to have “withdrawn her old question only two chapters past,” but the established ch-057 thread records her already returning and raising the Sunset question again. This chapter cannot be the first withdrawal reversal two chapters after a withdrawal without contradicting that immediately preceding appearance. | continuity badger redispatch #2: The prose gives the tardigrade-cardinals of the Lich See an on-page action, \"hearing of it by relay, pronounced this entirely correct,\" but `appearances` omits `tardigrade-cardinals-of-the-lich-see` and `threadUpdates` leaves its open thread as though it had remained silent since ch-052. Record this resurfacing so later continuity does not falsely treat the cardinals as dormant. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.599811
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-09: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.833988
+}
