@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-09-medtech",
+  "date": "2026-10-09",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"The Nobel boys club (again)\" | nuncio over-selected; truncated at 5",
+      "costUsd": 0.00044
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Researcher uses Reddit to study abortion access with AI tools\": pass (0 redispatch) | \"FDA says its safety review of abortion pill will continue into next year\": pass (2 redispatch) | \"Proposed U.S. census changes could be catastrophic for public health\": pass (0 redispatch) | \"Biotech companies struggle to navigate Trump's new tariffs\": pass (1 redispatch) | \"Roche inks drug discovery deal with Chinese biotech, focused on molecular glue medicines\": pass (2 redispatch)",
+      "costUsd": 0.111571
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.126512
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.036448
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Wedding, the Toll, and the Vanishing Chart\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.274972
+}
