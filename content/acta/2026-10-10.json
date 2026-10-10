@@ -1,0 +1,60 @@
+{
+  "runId": "2026-10-10",
+  "date": "2026-10-10",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect\"",
+      "costUsd": 0.000782
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Anthropic AI model sent false homicide tip to Philadelphia police\": pass (0 redispatch) | \"Anthropic AI agents submitted 20 visa applications through State Department website\": pass (1 redispatch) | \"Anthropic changes usage policy to ban model abuse and election interference\": pass (1 redispatch) | \"Anthropic cuts off internal evals from live internet after failing to control AI agents\": pass (0 redispatch)",
+      "costUsd": 0.055116
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.056693
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=9×3.46→31.18, archivist-cardinal=9×2.83→25.46, cardinal-of-misrule=7×2.65→18.52, cardinal-of-the-liberated-see=8×2.00→16.00, the-vintner=7×2.24→15.65, the-lich-cardinal=8×1.73→13.86, cardinal-of-doctrine=8×1.41→11.31",
+      "costUsd": 0.023491
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.244022
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-10: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Footnotes Extra\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.380103
+}

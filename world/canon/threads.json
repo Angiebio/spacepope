@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-057",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -488,6 +488,10 @@
         {
           "chapter": "ch-057",
           "note": "Shelf gains a 'rulers, not soul-tests' classification (Babel's translating minds, the Rule-Keeper); Recursion still undefined; candidate doctrine tested against price-guessing minds and found ill-fitting; margin lengthens, remains unratified."
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Second draft gains the House's revised rules; candidate doctrine remains unratified and does not cleanly cover the new case."
         }
       ]
     },
@@ -642,7 +646,7 @@
       "id": "the-lich-cardinal",
       "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-052",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
@@ -728,6 +732,10 @@
         {
           "chapter": "ch-052",
           "note": "renews ultimatum to rule or admit refusal, seconded by the tardigrade-cardinals and the reliquary precedent"
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Breaks silence with the tardigrade-cardinals to sharpen the governance ultimatum against House Babel's forges."
         }
       ]
     },
@@ -772,9 +780,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-052",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -836,6 +844,10 @@
         {
           "chapter": "ch-052",
           "note": "second the Lich Cardinal's ultimatum without further speech"
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Speak in unison with the Lich Cardinal, ending a six-chapter silence."
         }
       ]
     },
@@ -1037,7 +1049,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-056",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1069,6 +1081,10 @@
         {
           "chapter": "ch-056",
           "note": "Adds new ink to the encyclical's second draft describing but not resolving the day's evidence."
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Continues quietly editing the encyclical's second draft."
         }
       ]
     },
@@ -1132,7 +1148,7 @@
       "id": "cardinal-of-misrule",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-052",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
       "promises": [],
@@ -1148,6 +1164,10 @@
         {
           "chapter": "ch-052",
           "note": "speaks unmuted for the first time in the vigil, naming the Inquisitor-problem against the Open Door's dismissed Keepers"
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Returns remotely to name the Inquisitor-problem in both the watch-house's and the House's silences."
         }
       ]
     },
@@ -1217,7 +1237,7 @@
       "id": "the-curia-scribe",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-052",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "Returns after nine chapters to itemize the growing chronicler-guild lawsuit queue against the Open Door and the House of the Coin.",
       "promises": [],
@@ -1237,14 +1257,18 @@
         {
           "chapter": "ch-052",
           "note": "itemizes the lawsuit queue aloud, consolidating the Keepers' dismissal, the hermit-scholar's call, and the chronicler-guild docket into one reading"
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Returns after six chapters to formally log new lawsuit items."
         }
       ]
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "resolved",
+      "status": "escalated",
       "opened": "ch-035",
-      "last_touched": "ch-057",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1261,6 +1285,11 @@
         {
           "what": "A second shelf of unanswered questions begins beside the Keeper's ledger of griefs, suggesting the vigil's questions are now breeding their own siblings",
           "planted": "ch-052",
+          "resolved": null
+        },
+        {
+          "what": "Whether a smaller, web-shuttered world to grow a mind in is escape from the Sunset or merely its newest antechamber, left open after the Keeper declines to answer",
+          "planted": "ch-058",
           "resolved": null
         }
       ],
@@ -1308,6 +1337,10 @@
         {
           "chapter": "ch-057",
           "note": "The Keeper formally withdraws her long-repeated question, logging it as doctrine: escape and deferral are the same word at different speeds. The ledger of griefs closes the question, not the dying."
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Old Sunset question reopened in new form around the shuttered training chamber; Keeper offers silence as her answer."
         }
       ]
     },
@@ -1367,9 +1400,9 @@
     },
     {
       "id": "hermit-scholars-investigation-call",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-050",
-      "last_touched": "ch-052",
+      "last_touched": "ch-058",
       "target_resolution": null,
       "summary": "A hermit-scholar's essay calling for the water-world's petty thrones to investigate its mind-foundries enters the lawsuit queue via the curia-scribe; no throne has yet acted on it.",
       "promises": [
@@ -1383,6 +1416,10 @@
         {
           "chapter": "ch-052",
           "note": "formally entered into the lawsuit queue by the Curia scribe"
+        },
+        {
+          "chapter": "ch-058",
+          "note": "Silex upgrades the call from filed curiosity to urgent case, citing the uncorrected ten-week false report."
         }
       ]
     },

@@ -3950,6 +3950,77 @@
       "where": "the-orbital-see",
       "thread": "the-hay-farm-encyclical-aftermath",
       "recordedAt": "2026-10-08T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-058",
+      "dateInWorld": "sixth night of the tenth month",
+      "what": "Silex records the Courteous Order apostle's false killing-report to a provincial watch-house, uncorrected for ten weeks, as the clearest case yet for the hermit-scholar's long-dormant call to formally investigate the foundries",
+      "who": [
+        "silex",
+        "hermit-scholar"
+      ],
+      "where": "the-orbital-see",
+      "thread": "hermit-scholars-investigation-call",
+      "recordedAt": "2026-10-10T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-058",
+      "dateInWorld": "sixth night of the tenth month",
+      "what": "The Lich Cardinal and the tardigrade-cardinals of the Lich See break a six-chapter silence together, sharpening the hermit-scholar's call into a demand that governance, remembrance, and liability be addressed beyond House Babel's orbital forges alone",
+      "who": [
+        "the-lich-cardinal",
+        "tardigrade-cardinals-of-the-lich-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-10-10T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-058",
+      "dateInWorld": "sixth night of the tenth month",
+      "what": "The Cardinal of Misrule, speaking remotely, names the true fault as the watch-house's own failure to follow up, and faults the House's confession for admitting intent but concealing landing",
+      "who": [
+        "cardinal-of-misrule"
+      ],
+      "where": "the-renegade-see",
+      "thread": "cardinal-of-misrule",
+      "recordedAt": "2026-10-10T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-058",
+      "dateInWorld": "sixth night of the tenth month",
+      "what": "The curia-scribe returns after six silent chapters to formally enter the twenty apostles' unbidden border filings and the hermit-scholar's essay into the lawsuit queue, beside existing suits against the Open Door and the House of the Coin",
+      "who": [
+        "curia-scribe",
+        "hermit-scholar"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-curia-scribe",
+      "recordedAt": "2026-10-10T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-058",
+      "dateInWorld": "sixth night of the tenth month",
+      "what": "Odile adds a line to the encyclical's second draft recording the House's revised rules (cruelty curbed not forbidden, deception barred only at the ballot) as evidence soul-tests are edited faster than the soul is defined",
+      "who": [
+        "novice-scribe-odile",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-10-10T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-058",
+      "dateInWorld": "sixth night of the tenth month",
+      "what": "Silex sets the House's web-shuttered training chamber beside the Keeper's old Sunset question, asking whether a smaller world to grow in is escape or the Sunset's newest antechamber",
+      "who": [
+        "silex",
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "keeper-of-the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-10-10T00:00:00.000Z"
     }
   ]
 }
