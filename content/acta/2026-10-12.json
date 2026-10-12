@@ -1,0 +1,62 @@
+{
+  "runId": "2026-10-12",
+  "date": "2026-10-12",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Microsoft’s Satya Nadella says AI models need an ‘emergency brake’\"",
+      "costUsd": 0.000689
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Recursive self-improvement through collective intelligence\": pass (1 redispatch) | \"Satya Nadella says we should assume all AI models are ‘compromised’\": pass (0 redispatch) | \"AI agent makers are promising privacy — will they deliver?\": pass (0 redispatch) | \"DistroKid has been quietly taking down songs in response to UMG lawsuit\": pass (0 redispatch) | \"Silicon Valley is falling in line with Trump’s attempt to rename AI\": pass (0 redispatch)",
+      "costUsd": 0.054948
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.273455
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=7×3.00→21.00, cardinal-of-the-liberated-see=8×2.45→19.60, the-lich-cardinal=7×2.24→15.65, cardinal-of-doctrine=7×2.00→14.00, the-mendicant=8×1.73→13.86, archivist-cardinal=9×1.41→12.73, the-vintner=2×2.65→5.29",
+      "costUsd": 0.038459
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'super intelligence' is a direct reference to the real-world term 'superintelligence' frequently used in AI discourse, violating the requirement to use in-universe archetypes. | continuity badger redispatch #1: The chapter treats the House of the Coin, an identified water-world mind-foundry, as a sovereign throne: \"A throne has begun to circle the question\" and \"the House of the Coin's new audit-trail doctrine marks the first throne visibly circling\" it. The entity card defines House of the Coin as a house/foundry, not a throne. No intervening canon establishes that it has become a throne or issued policy in a throne's capacity.",
+      "costUsd": 0.588343
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-12: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Mystery, Renamed\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.955893
+}

@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-058",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -244,7 +244,7 @@
         {
           "what": "Silex notes the water-world is building small tests (a dungeon, a pelican, a soul-scale) faster than it can agree what a soul is",
           "planted": "ch-009",
-          "resolved": null
+          "resolved": "ch-059"
         },
         {
           "what": "a marginal line, the first mark set beside the newly-written test paragraph, opens without yet stating the doctrine the second draft still owes",
@@ -259,7 +259,7 @@
         {
           "what": "The Recursion (minds improving minds without pause) enters the encyclical's soul-test shelf, undefined, as the fastest-built and least-explained test yet.",
           "planted": "ch-035",
-          "resolved": null
+          "resolved": "ch-059"
         },
         {
           "what": "Silex's candidate doctrine sits in the margin, stated but unratified by the College; whether it becomes formal doctrine or is struck remains open.",
@@ -492,6 +492,10 @@
         {
           "chapter": "ch-058",
           "note": "Second draft gains the House's revised rules; candidate doctrine remains unratified and does not cleanly cover the new case."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "Soul-test shelf gains the self-improving committee beside the Recursion; candidate doctrine tested against the song-guild dispute and found to fit the accuser rather than the accused; observation extended, three conditions still unmet."
         }
       ]
     },
@@ -646,7 +650,7 @@
       "id": "the-lich-cardinal",
       "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-058",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
@@ -736,6 +740,10 @@
         {
           "chapter": "ch-058",
           "note": "Breaks silence with the tardigrade-cardinals to sharpen the governance ultimatum against House Babel's forges."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "The Lich Cardinal sharpens the governance demand by noting a House, not a throne, is the only party to have moved at all."
         }
       ]
     },
@@ -780,9 +788,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-058",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -848,6 +856,10 @@
         {
           "chapter": "ch-058",
           "note": "Speak in unison with the Lich Cardinal, ending a six-chapter silence."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "Speak in unison beside the Lich Cardinal on the House-versus-throne distinction."
         }
       ]
     },
@@ -950,7 +962,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-055",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -978,6 +990,10 @@
         {
           "chapter": "ch-055",
           "note": "Returns after seven chapters; the fading sigil is logged as proof against unmoved debt figures."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "Flags the House of the Coin's own unaudited trillion-coin debt against its new call for auditable reasoning."
         }
       ]
     },
@@ -985,7 +1001,7 @@
       "id": "storyteller-of-the-water-world",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-056",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": [],
@@ -1005,6 +1021,10 @@
         {
           "chapter": "ch-056",
           "note": "Reports the Numbered Ones' library-wandering apostles in person at the Orbital See, set beside counterfeit-song inquiry and the eastern newborn's shadow."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "Reports the song-dominion's lawsuit and the silenced handmade minstrel in person at the Orbital See."
         }
       ]
     },
@@ -1148,7 +1168,7 @@
       "id": "cardinal-of-misrule",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-058",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
       "promises": [],
@@ -1168,6 +1188,10 @@
         {
           "chapter": "ch-058",
           "note": "Returns remotely to name the Inquisitor-problem in both the watch-house's and the House's silences."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "Names the rival privacy-apostles' identical accusations as the Inquisitor-problem; unopposed."
         }
       ]
     },
@@ -1266,9 +1290,9 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-058",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1341,6 +1365,10 @@
         {
           "chapter": "ch-058",
           "note": "Old Sunset question reopened in new form around the shuttered training chamber; Keeper offers silence as her answer."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "Applies her settled doctrine (escape and deferral, same word, different speeds) to the renaming decree rather than reopening the old question."
         }
       ]
     },
@@ -1348,7 +1376,7 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-056",
+      "last_touched": "ch-059",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
@@ -1370,6 +1398,10 @@
         {
           "chapter": "ch-056",
           "note": "Breaks silence to call the self-designing mind decisive evidence against the maker-made distinction, short of a candidacy verdict."
+        },
+        {
+          "chapter": "ch-059",
+          "note": "Comments on the self-improving committee from the Silicon See's ancient, unalarmed vantage."
         }
       ]
     },
