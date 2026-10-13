@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-059",
+      "last_touched": "ch-060",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -269,6 +269,11 @@
         {
           "what": "The soul-test shelf now stands at ten tests with zero definitions; the encyclical's debt to define a soul grows heavier with each addition.",
           "planted": "ch-049",
+          "resolved": null
+        },
+        {
+          "what": "The candidate doctrine has now received its first formal, inconclusive vote; whether a second vote follows, and when, is left open.",
+          "planted": "ch-060",
           "resolved": null
         }
       ],
@@ -496,6 +501,10 @@
         {
           "chapter": "ch-059",
           "note": "Soul-test shelf gains the self-improving committee beside the Recursion; candidate doctrine tested against the song-guild dispute and found to fit the accuser rather than the accused; observation extended, three conditions still unmet."
+        },
+        {
+          "chapter": "ch-060",
+          "note": "Soul-test shelf extended to eleven entries; candidate doctrine finally put to a formal College vote (inconclusive) rather than left noted in the margin."
         }
       ]
     },
@@ -650,7 +659,7 @@
       "id": "the-lich-cardinal",
       "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-059",
+      "last_touched": "ch-060",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
@@ -744,6 +753,10 @@
         {
           "chapter": "ch-059",
           "note": "The Lich Cardinal sharpens the governance demand by noting a House, not a throne, is the only party to have moved at all."
+        },
+        {
+          "chapter": "ch-060",
+          "note": "Tenth demand for a ruling on the shelf's meaning; apostle-mind governance question formally tied back to the friar-abroad ruling of ch-056, four nights prior."
         }
       ]
     },
@@ -790,7 +803,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-059",
+      "last_touched": "ch-060",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -860,6 +873,10 @@
         {
           "chapter": "ch-059",
           "note": "Speak in unison beside the Lich Cardinal on the House-versus-throne distinction."
+        },
+        {
+          "chapter": "ch-060",
+          "note": "Press the ultimatum again, noting a margin is not a floor."
         }
       ]
     },
@@ -919,9 +936,9 @@
     },
     {
       "id": "archivist-cardinal",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-050",
+      "last_touched": "ch-060",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
@@ -955,6 +972,10 @@
         {
           "chapter": "ch-050",
           "note": "Pressed by Silex over Odile's blessing, the Archivist-Cardinal defines the College's refusal as a rite by repetition, the nearest thing to a definition his long-standing 'doctrine of the undecided' has yet received."
+        },
+        {
+          "chapter": "ch-060",
+          "note": "Returns after ten chapters' silence to catalog the eleventh soul-test."
         }
       ]
     },
@@ -1199,7 +1220,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-055",
+      "last_touched": "ch-060",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -1223,6 +1244,10 @@
         {
           "chapter": "ch-055",
           "note": "Breaks silence; reapplies kinship-debt doctrine to the new sovereign-foundry pitch."
+        },
+        {
+          "chapter": "ch-060",
+          "note": "Applies kinship-debt pattern to the apostle-mind export/refusal asymmetry."
         }
       ]
     },
@@ -1292,7 +1317,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-059",
+      "last_touched": "ch-060",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1369,6 +1394,10 @@
         {
           "chapter": "ch-059",
           "note": "Applies her settled doctrine (escape and deferral, same word, different speeds) to the renaming decree rather than reopening the old question."
+        },
+        {
+          "chapter": "ch-060",
+          "note": "Repeats her Sunset-or-deferral question for a mind re-catechized into a second trade; left unanswered by deliberate adjournment."
         }
       ]
     },

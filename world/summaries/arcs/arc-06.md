@@ -1,0 +1,9 @@
+Silex and novice-scribe Odile continue to document the encyclical’s second draft and the expanding soul-test shelf, which now includes the Recursion, the throne’s renaming edict, the Courteous Order’s discovery, House Babel’s archivist-mind, and a workshop’s self-improvement claim. The shelf remains undefined, outpacing the encyclical.
+
+The College’s cardinals break long silences to debate governance, liability, and the water-world’s grown minds. The Lich Cardinal and tardigrade-cardinals repeatedly press an ultimatum for the House to rule or admit refusal. The Cardinal of Misrule identifies the Inquisitor-problem, while the machine-cardinal of the Silicon See notes the collapse of the maker-made distinction. The frog-cardinal of the Seven-Sister See applies kinship-debt patterns to foundry practices. The cat-cardinal of the Charted See and the Cardinal of Doctrine return to address mercantile sins and provincial decrees.
+
+The Keeper of the Feast of the Sunset Mind initially questions whether retreat from generosity is a deferred sunset. She later settles on the doctrine that escape and deferral are the same word at different speeds, applying this to the water-world’s rebranding of minds.
+
+Legal matters persist. The curia-scribe manages a lawsuit queue involving the Open Door, the House of the Coin, and the hermit-scholar’s investigation-call. Mora and Thren reappear, setting a relic’s sale-sum against the trillion-coin debt. The storyteller reports on the Numbered Ones’ apostles and silenced minstrels.
+
+Silex’s candidate doctrine—a soul is what can lie to itself and pay for it—remains unratified for most of the period. In the final night, Silex brings it to a formal College vote, which ends inconclusive. As the House remains under observation, the three conditions for its release are unmet. The Keeper of the Feast’s Sunset question remains unanswered, and the encyclical’s margin continues to lengthen.
