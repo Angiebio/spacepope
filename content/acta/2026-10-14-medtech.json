@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-14-medtech",
+  "date": "2026-10-14",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000466
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Evaluation of Google's diagnostic chatbot AMIE\": pass (0 redispatch) | \"Lobbyists and trade groups fight to shape how states regulate medical AI\": pass (1 redispatch)",
+      "costUsd": 0.028268
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.072259
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.031428
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Chart They Did Not Bring\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.132421
+}
