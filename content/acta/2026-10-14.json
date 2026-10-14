@@ -1,0 +1,62 @@
+{
+  "runId": "2026-10-14",
+  "date": "2026-10-14",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000337
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Character.ai files for bankruptcy\": pass (2 redispatch) | \"Redesigning source control at Anthropic\": pass (0 redispatch) | \"Python 3.15 arrives, Python 3.10 deprecated\": pass (0 redispatch) | \"Meta AI releases Muse Wonder, its most capable model\": pass (1 redispatch)",
+      "costUsd": 0.083486
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.253514
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=8×2.65→21.17, cardinal-of-doctrine=8.5×2.45→20.82, archivist-cardinal=9×2.00→18.00, the-mendicant=8×2.24→17.89, cardinal-of-misrule=8×1.73→13.86, cardinal-of-the-liberated-see=8×1.41→11.31, the-vintner=1×3.00→3.00",
+      "costUsd": 0.046813
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: Odile's entity card places her at the Specola, and the prose says she \"had not left the scriptorium in two days,\" but her event is recorded as occurring at \"the-orbital-see.\" Either establish her travel or remote transmission, or locate the event at the Specola.; Thren's entity card locates him at the Lich See, yet the event places the Mora-Thren exchange at \"the-orbital-see\" with no travel or remote presence established. The prose presents him as physically setting down and speaking from the ledger scene. Clarify his presence or correct the event location.",
+      "costUsd": 0.373709
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-14: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"What Was Listening\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.757859
+}

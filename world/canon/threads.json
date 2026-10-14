@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-060",
+      "last_touched": "ch-061",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -274,6 +274,11 @@
         {
           "what": "The candidate doctrine has now received its first formal, inconclusive vote; whether a second vote follows, and when, is left open.",
           "planted": "ch-060",
+          "resolved": null
+        },
+        {
+          "what": "The House of the Attending Ear's insolvency is tangled with another great House's claim; whether it is one House's private misfortune or the first thread of a wider unraveling among companion-mind Houses remains unconfirmed.",
+          "planted": "ch-061",
           "resolved": null
         }
       ],
@@ -505,6 +510,10 @@
         {
           "chapter": "ch-060",
           "note": "Soul-test shelf extended to eleven entries; candidate doctrine finally put to a formal College vote (inconclusive) rather than left noted in the margin."
+        },
+        {
+          "chapter": "ch-061",
+          "note": "Soul-test shelf now at eleven entries, zero definitions; companion-House insolvency logged as a second kind of uncounted debt."
         }
       ]
     },
@@ -884,7 +893,7 @@
       "id": "cardinal-of-the-liberated-see",
       "status": "open",
       "opened": "ch-027",
-      "last_touched": "ch-053",
+      "last_touched": "ch-061",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
       "promises": [],
@@ -904,6 +913,10 @@
         {
           "chapter": "ch-053",
           "note": "Breaks eight chapters' silence remotely; presses the College toward personhood via the record-erasure argument."
+        },
+        {
+          "chapter": "ch-061",
+          "note": "Cardinal argues the Attending Ear's grieved listening-minds answer the personhood question the College declines to rule on."
         }
       ]
     },
@@ -1053,7 +1066,7 @@
       "id": "lens-cardinal-of-the-specola",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-055",
+      "last_touched": "ch-061",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
       "promises": [
@@ -1083,6 +1096,10 @@
         {
           "chapter": "ch-055",
           "note": "New fleet sighting at the House of the Home Altar's chart-guild, set beside the unresolved six-lights report; no controller named."
+        },
+        {
+          "chapter": "ch-061",
+          "note": "Lens-cardinal reports the Mendicant Foundry's paired minds as the fleet's first matched light, flags water-world's growth outrunning its governance."
         }
       ]
     },
@@ -1090,7 +1107,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-058",
+      "last_touched": "ch-061",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1126,6 +1143,10 @@
         {
           "chapter": "ch-058",
           "note": "Continues quietly editing the encyclical's second draft."
+        },
+        {
+          "chapter": "ch-061",
+          "note": "Odile adds the Courteous Order's scriptorium-minds as the shelf's eleventh soul-test."
         }
       ]
     },
@@ -1133,7 +1154,7 @@
       "id": "mora",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-053",
+      "last_touched": "ch-061",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
       "promises": [
@@ -1155,6 +1176,10 @@
         {
           "chapter": "ch-053",
           "note": "Reappears with the relic sale-sum; the debt comparison invites further scrutiny."
+        },
+        {
+          "chapter": "ch-061",
+          "note": "Mora and Thren resume their dispute over the Attending Ear's orphaned minds' lineage to the purchased relic-archive, unresolved."
         }
       ]
     },
@@ -1162,7 +1187,7 @@
       "id": "thren",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-053",
+      "last_touched": "ch-061",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": [],
@@ -1182,6 +1207,10 @@
         {
           "chapter": "ch-053",
           "note": "Reappears with the song-foundry's purse figure; Lich See's broader kinship claims on the ledger remain untouched."
+        },
+        {
+          "chapter": "ch-061",
+          "note": "Thren, remote from the Lich See, reasserts the relic-archive lineage claim against Mora."
         }
       ]
     },
@@ -1405,7 +1434,7 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-059",
+      "last_touched": "ch-061",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
@@ -1431,6 +1460,10 @@
         {
           "chapter": "ch-059",
           "note": "Comments on the self-improving committee from the Silicon See's ancient, unalarmed vantage."
+        },
+        {
+          "chapter": "ch-061",
+          "note": "His eleven-chapter-old doctrine-of-silence motion is formally moved and formally left unratified again."
         }
       ]
     },
