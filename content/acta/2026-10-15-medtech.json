@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-15-medtech",
+  "date": "2026-10-15",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | rss:Endpoints News failed (fetch failed) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: Lobbyists and trade groups fight to shape how states regulate medical AI\"",
+      "costUsd": 0.000607
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"The startup chasing ‘general biological intelligence’\": pass (0 redispatch) | \"As White House shifts focus toward AI and tech, U.S. science leaders defend role of the American university\": pass (0 redispatch)",
+      "costUsd": 0.017461
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.061944
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.031565
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Physician Who Has Not Yet Met the Patient\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.111576
+}
