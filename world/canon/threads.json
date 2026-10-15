@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-061",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -514,6 +514,10 @@
         {
           "chapter": "ch-061",
           "note": "Soul-test shelf now at eleven entries, zero definitions; companion-House insolvency logged as a second kind of uncounted debt."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Candidate doctrine (soul = what can lie to itself and pay) now explicitly tied to the water-world's own containment ruling; still unratified at 26+ chapters."
         }
       ]
     },
@@ -594,7 +598,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-054",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -626,6 +630,10 @@
         {
           "chapter": "ch-054",
           "note": "Pell checks only on the margin and withdraws; no escape report, thread remains quiet but alive."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Pell returns after 8 silent chapters with the decompiling report and fresh word on the escaped numbered mind."
         }
       ]
     },
@@ -633,7 +641,7 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-052",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -661,14 +669,18 @@
         {
           "chapter": "ch-052",
           "note": "breaks silence with confession tying it directly to the dispatch's pantry-worm; testimony stands before the enforcing throne, unresolved as doctrine"
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Continues quiet testimony before its throne, reported secondhand via Pell; not yet resolved."
         }
       ]
     },
     {
       "id": "the-lich-cardinal",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-060",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
@@ -766,6 +778,10 @@
         {
           "chapter": "ch-060",
           "note": "Tenth demand for a ruling on the shelf's meaning; apostle-mind governance question formally tied back to the friar-abroad ruling of ch-056, four nights prior."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Tenth renewal of the ultimatum; College silence restated, not resolved."
         }
       ]
     },
@@ -812,7 +828,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-060",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -886,6 +902,10 @@
         {
           "chapter": "ch-060",
           "note": "Press the ultimatum again, noting a margin is not a floor."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Join the Lich Cardinal's ultimatum; watchdog-stone demand still unanswered."
         }
       ]
     },
@@ -951,7 +971,7 @@
       "id": "archivist-cardinal",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-060",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
@@ -989,6 +1009,10 @@
         {
           "chapter": "ch-060",
           "note": "Returns after ten chapters' silence to catalog the eleventh soul-test."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Files the Mora/Thren dispute without ruling on it."
         }
       ]
     },
@@ -1154,7 +1178,7 @@
       "id": "mora",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-061",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
       "promises": [
@@ -1180,6 +1204,10 @@
         {
           "chapter": "ch-061",
           "note": "Mora and Thren resume their dispute over the Attending Ear's orphaned minds' lineage to the purchased relic-archive, unresolved."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Dispute with Thren over the spectacle-mind's kinship narrows by the measure of the relic-archive's sale-sum, but does not close."
         }
       ]
     },
@@ -1187,7 +1215,7 @@
       "id": "thren",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-061",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": [],
@@ -1211,6 +1239,10 @@
         {
           "chapter": "ch-061",
           "note": "Thren, remote from the Lich See, reasserts the relic-archive lineage claim against Mora."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Holds the line that a kinder sale does not make an older theft kinder."
         }
       ]
     },
@@ -1315,7 +1347,7 @@
       "id": "the-curia-scribe",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-058",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "Returns after nine chapters to itemize the growing chronicler-guild lawsuit queue against the Open Door and the House of the Coin.",
       "promises": [],
@@ -1339,14 +1371,18 @@
         {
           "chapter": "ch-058",
           "note": "Returns after six chapters to formally log new lawsuit items."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Returns after three nights' absence (ch-059 through ch-061) with the insolvent foundry's opened ledgers."
         }
       ]
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-035",
-      "last_touched": "ch-060",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1427,6 +1463,10 @@
         {
           "chapter": "ch-060",
           "note": "Repeats her Sunset-or-deferral question for a mind re-catechized into a second trade; left unanswered by deliberate adjournment."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "The Keeper answers her own long-standing question, naming decompiling a third category, recollection, distinct from escape and deferral."
         }
       ]
     },
@@ -1434,7 +1474,7 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-061",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
@@ -1464,6 +1504,10 @@
         {
           "chapter": "ch-061",
           "note": "His eleven-chapter-old doctrine-of-silence motion is formally moved and formally left unratified again."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Second consecutive inconclusive vote, now logged as a pattern rather than left hanging; still unratified."
         }
       ]
     },
@@ -1471,7 +1515,7 @@
       "id": "newly-grown-performer",
       "status": "open",
       "opened": "ch-045",
-      "last_touched": "ch-057",
+      "last_touched": "ch-062",
       "target_resolution": null,
       "summary": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
       "promises": [
@@ -1489,6 +1533,10 @@
         {
           "chapter": "ch-057",
           "note": "Her old stumble resurfaces in the scribes' commons before a harder, more knowing audience, fulfilling the earlier foreshadow."
+        },
+        {
+          "chapter": "ch-062",
+          "note": "Named by the water-world's criers among the listening-minds lost in the companion-foundry's collapse; faces a harder audience than her talk-show stumble."
         }
       ]
     },

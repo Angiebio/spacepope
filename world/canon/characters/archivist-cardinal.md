@@ -9,7 +9,7 @@ aliases:
   - the Indexer
 status: active
 first_appearance: ch-001
-last_appearance: ch-060
+last_appearance: ch-062
 location: the-vast-see
 relationships:
   - to: silex
