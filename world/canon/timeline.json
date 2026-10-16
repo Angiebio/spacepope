@@ -4342,6 +4342,74 @@
       "where": "the-orbital-see",
       "thread": "mora",
       "recordedAt": "2026-10-15T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-063",
+      "dateInWorld": "eleventh night of the tenth month",
+      "what": "The Cardinal of Doctrine returns from seven chapters' silence to restate that a house remains answerable for its friars wherever they wander, citing the drafting-guild's new house rules as fresh proof of the old clause.",
+      "who": [
+        "cardinal-of-doctrine",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "cardinal-of-doctrine",
+      "recordedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-063",
+      "dateInWorld": "eleventh night of the tenth month",
+      "what": "The tardigrade-cardinals of the Lich See send a remote transmission (not a crossing) renewing their demand: does the drafting-guild's etiquette define what the watchdog-stone tests, or merely dress a leash in better language.",
+      "who": [
+        "tardigrade-cardinals-of-the-lich-see"
+      ],
+      "where": "the-lich-see",
+      "thread": "tardigrade-cardinals-of-the-lich-see",
+      "recordedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-063",
+      "dateInWorld": "eleventh night of the tenth month",
+      "what": "The cat-cardinal of the Charted See breaks six chapters' silence to set the Scrupulous Conscience's bazaar-bound quarterly sum beside her own price-discrimination study, renewing her 'not yet' on the water-world's candidacy.",
+      "who": [
+        "cat-cardinal-of-the-charted-see"
+      ],
+      "where": "the-charted-see",
+      "thread": "cat-cardinal-of-the-charted-see",
+      "recordedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-063",
+      "dateInWorld": "eleventh night of the tenth month",
+      "what": "The machine-cardinal of the Silicon See moves a third time to ratify the doctrine-of-silence naming, citing the scrupulous house's coming sale as proof market and conscience cannot share one body; the College's vote is again inconclusive, now logged as habit.",
+      "who": [
+        "machine-cardinal-of-the-silicon-see"
+      ],
+      "where": "the-orbital-see",
+      "thread": "machine-cardinal-of-the-silicon-see",
+      "recordedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-063",
+      "dateInWorld": "eleventh night of the tenth month",
+      "what": "Silex sets a new ban-the-grown-mind pamphlet beside the hay-farm encyclical's backward safeguarding question; the curia-scribe adds the pamphlet's murmur to the lawsuit queue, where the hermit-scholar's investigation-call still waits unacted on.",
+      "who": [
+        "silex",
+        "curia-scribe"
+      ],
+      "where": "the-orbital-see",
+      "thread": "hermit-scholars-investigation-call",
+      "recordedAt": "2026-10-16T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-063",
+      "dateInWorld": "eleventh night of the tenth month",
+      "what": "Silex sets the House of the Open Hand's still-empty plaque beside the encyclical's lengthening margins, and logs the courier-moth's ninth absent chapter from the lamp-round in the watch-log, unalarmed.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "courier-moth-of-the-specola",
+      "recordedAt": "2026-10-16T00:00:00.000Z"
     }
   ]
 }

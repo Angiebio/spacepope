@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-062",
+      "last_touched": "ch-063",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -518,6 +518,10 @@
         {
           "chapter": "ch-062",
           "note": "Candidate doctrine (soul = what can lie to itself and pay) now explicitly tied to the water-world's own containment ruling; still unratified at 26+ chapters."
+        },
+        {
+          "chapter": "ch-063",
+          "note": "Encyclical's margins set beside both the ban-pamphlet and the Open Hand's empty plaque; the debt to define a soul lengthens further."
         }
       ]
     },
@@ -828,13 +832,18 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-062",
+      "last_touched": "ch-063",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
         {
           "what": "The tardigrade-cardinals of the Lich See have demanded the College either define what the watchdog-stone tests or admit it is merely a leash; the demand stands unanswered.",
           "planted": "ch-050",
+          "resolved": null
+        },
+        {
+          "what": "The tardigrade-cardinals' demand is now explicitly logged as a remote intervention from the Lich See rather than a presence at the Orbital See, establishing their standing channel for future ultimatums.",
+          "planted": "ch-063",
           "resolved": null
         }
       ],
@@ -906,6 +915,10 @@
         {
           "chapter": "ch-062",
           "note": "Join the Lich Cardinal's ultimatum; watchdog-stone demand still unanswered."
+        },
+        {
+          "chapter": "ch-063",
+          "note": "Renews the watchdog-stone demand remotely from the Lich See, seizing the drafting-guild's etiquette as fresh ammunition; still unanswered."
         }
       ]
     },
@@ -1316,7 +1329,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-056",
+      "last_touched": "ch-063",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -1340,6 +1353,10 @@
         {
           "chapter": "ch-056",
           "note": "Returns to extend house-remains-responsible law to the uncosigned-prescription decree; question of which house answers left open."
+        },
+        {
+          "chapter": "ch-063",
+          "note": "Returns after 7 silent chapters; restates maker-liability clause against the drafting-guild's new friar-rules."
         }
       ]
     },
@@ -1474,7 +1491,7 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-062",
+      "last_touched": "ch-063",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
@@ -1508,6 +1525,10 @@
         {
           "chapter": "ch-062",
           "note": "Second consecutive inconclusive vote, now logged as a pattern rather than left hanging; still unratified."
+        },
+        {
+          "chapter": "ch-063",
+          "note": "Third ratification motion on the doctrine-of-silence vote; inconclusive again, now logged explicitly as a habit rather than a pattern."
         }
       ]
     },
@@ -1542,9 +1563,9 @@
     },
     {
       "id": "hermit-scholars-investigation-call",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-050",
-      "last_touched": "ch-058",
+      "last_touched": "ch-063",
       "target_resolution": null,
       "summary": "A hermit-scholar's essay calling for the water-world's petty thrones to investigate its mind-foundries enters the lawsuit queue via the curia-scribe; no throne has yet acted on it.",
       "promises": [
@@ -1562,6 +1583,10 @@
         {
           "chapter": "ch-058",
           "note": "Silex upgrades the call from filed curiosity to urgent case, citing the uncorrected ten-week false report."
+        },
+        {
+          "chapter": "ch-063",
+          "note": "Joined in the lawsuit queue by the new ban-the-grown-mind pamphlet's murmur; still unacted on by any throne, 13+ chapters."
         }
       ]
     },
@@ -1569,9 +1594,24 @@
       "id": "cat-cardinal-of-the-charted-see",
       "status": "open",
       "opened": "ch-057",
-      "last_touched": "ch-057",
+      "last_touched": "ch-063",
       "target_resolution": null,
       "summary": "Returns after eight chapters with the price-discrimination study as fresh grounds for her continued 'not yet.'",
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-063",
+          "note": "Breaks 6 chapters' silence; ties Scrupulous Conscience's bazaar march to her own price-discrimination study, renews 'not yet.'"
+        }
+      ]
+    },
+    {
+      "id": "courier-moth-of-the-specola",
+      "status": "dormant",
+      "opened": "ch-063",
+      "last_touched": "ch-063",
+      "target_resolution": null,
+      "summary": "Ninth absent chapter logged in the watch-log by Silex; noted unalarmed, unforgetting.",
       "promises": []
     }
   ]
