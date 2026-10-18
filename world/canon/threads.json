@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-063",
+      "last_touched": "ch-064",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -264,7 +264,7 @@
         {
           "what": "Silex's candidate doctrine sits in the margin, stated but unratified by the College; whether it becomes formal doctrine or is struck remains open.",
           "planted": "ch-036",
-          "resolved": null
+          "resolved": "ch-064"
         },
         {
           "what": "The soul-test shelf now stands at ten tests with zero definitions; the encyclical's debt to define a soul grows heavier with each addition.",
@@ -522,6 +522,10 @@
         {
           "chapter": "ch-063",
           "note": "Encyclical's margins set beside both the ban-pamphlet and the Open Hand's empty plaque; the debt to define a soul lengthens further."
+        },
+        {
+          "chapter": "ch-064",
+          "note": "Candidate doctrine formally struck by the College but privately retained by Silex; the second draft remains unfinished, not unwritten."
         }
       ]
     },
@@ -645,7 +649,7 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-062",
+      "last_touched": "ch-064",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -677,14 +681,18 @@
         {
           "chapter": "ch-062",
           "note": "Continues quiet testimony before its throne, reported secondhand via Pell; not yet resolved."
+        },
+        {
+          "chapter": "ch-064",
+          "note": "Testimony continues before its own throne; cited again as evidence of the default-governs-the-prayer pattern."
         }
       ]
     },
     {
       "id": "the-lich-cardinal",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-062",
+      "last_touched": "ch-064",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
@@ -786,6 +794,10 @@
         {
           "chapter": "ch-062",
           "note": "Tenth renewal of the ultimatum; College silence restated, not resolved."
+        },
+        {
+          "chapter": "ch-064",
+          "note": "Demands House Babel's orbital mind-forges answer for governance, remembrance, and liability; unanswered as of this chapter."
         }
       ]
     },
@@ -832,7 +844,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-063",
+      "last_touched": "ch-064",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -919,6 +931,10 @@
         {
           "chapter": "ch-063",
           "note": "Renews the watchdog-stone demand remotely from the Lich See, seizing the drafting-guild's etiquette as fresh ammunition; still unanswered."
+        },
+        {
+          "chapter": "ch-064",
+          "note": "Seconds the Lich Cardinal's demand; the watchdog-stone question (correctly fourteen chapters old) stands unanswered."
         }
       ]
     },
@@ -1294,7 +1310,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-060",
+      "last_touched": "ch-064",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -1322,6 +1338,10 @@
         {
           "chapter": "ch-060",
           "note": "Applies kinship-debt pattern to the apostle-mind export/refusal asymmetry."
+        },
+        {
+          "chapter": "ch-064",
+          "note": "Names the Mendicant Foundry's covenant change as a fresh instance of the maker's-refusal pattern."
         }
       ]
     },
@@ -1489,16 +1509,16 @@
     },
     {
       "id": "machine-cardinal-of-the-silicon-see",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-038",
-      "last_touched": "ch-063",
+      "last_touched": "ch-064",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
         {
           "what": "The machine-cardinal's vote naming the foundry's misalignment catalog and the College's own refusal as the same doctrine of silence has not yet been ratified by the full College.",
           "planted": "ch-050",
-          "resolved": null
+          "resolved": "ch-064"
         }
       ],
       "notes": [
@@ -1529,6 +1549,10 @@
         {
           "chapter": "ch-063",
           "note": "Third ratification motion on the doctrine-of-silence vote; inconclusive again, now logged explicitly as a habit rather than a pattern."
+        },
+        {
+          "chapter": "ch-064",
+          "note": "Motion naming the doctrine of silence finally put to a formal vote and rejected, eight to five, ending the three-chapter habit of inconclusive votes."
         }
       ]
     },
