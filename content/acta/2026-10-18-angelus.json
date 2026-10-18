@@ -1,0 +1,16 @@
+{
+  "runId": "2026-10-18-angelus",
+  "date": "2026-10-18",
+  "status": "spiked",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "angelus",
+      "model": "anthropic/claude-opus-4.8",
+      "verdict": "spiked",
+      "notes": "badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | redispatch budget exhausted after 2 retries | angelus spiked at the firewall",
+      "costUsd": 0.755308
+    }
+  ],
+  "totalCostUsd": 0.755308
+}
