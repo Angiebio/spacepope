@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-18-medtech",
+  "date": "2026-10-18",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000564
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Sanofi's new research chief discusses AI, R&D failure rates, and dealmaking\": pass (0 redispatch) | \"Clinicians' use of AI to answer medical questions is rising rapidly, study finds\": pass (0 redispatch) | \"AMA releases governance framework for agentic AI in healthcare\": pass (0 redispatch)",
+      "costUsd": 0.019922
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.089108
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032837
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Three Charts at the Foot of One Bed\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.142431
+}
