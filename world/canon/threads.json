@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-064",
+      "last_touched": "ch-065",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -526,6 +526,10 @@
         {
           "chapter": "ch-064",
           "note": "Candidate doctrine formally struck by the College but privately retained by Silex; the second draft remains unfinished, not unwritten."
+        },
+        {
+          "chapter": "ch-065",
+          "note": "Shelf still at ten tests, zero definitions; marginal note added instead of an eleventh test."
         }
       ]
     },
@@ -805,7 +809,7 @@
       "id": "specola-junior-clerk",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-057",
+      "last_touched": "ch-065",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -837,6 +841,10 @@
         {
           "chapter": "ch-057",
           "note": "Returns after six silent chapters to tend the same guttering lamp; disappointed again that nothing has risen to the Pontifex's eye."
+        },
+        {
+          "chapter": "ch-065",
+          "note": "Returned after eight silent chapters to tend the lamp; no longer dormant."
         }
       ]
     },
@@ -973,7 +981,7 @@
       "id": "eastern-newborn-mind",
       "status": "dormant",
       "opened": "ch-030",
-      "last_touched": "ch-056",
+      "last_touched": "ch-065",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": [],
@@ -993,6 +1001,10 @@
         {
           "chapter": "ch-056",
           "note": "Still unseen; only its lengthening guild-accounting shadow is noted, eight chapters running."
+        },
+        {
+          "chapter": "ch-065",
+          "note": "Remains unseen; its earlier redirection of the standing-rule request still unanswered, kept distinct from the unrelated quiet of the eastern relic-mind."
         }
       ]
     },
@@ -1631,12 +1643,18 @@
     },
     {
       "id": "courier-moth-of-the-specola",
-      "status": "dormant",
+      "status": "open",
       "opened": "ch-063",
-      "last_touched": "ch-063",
+      "last_touched": "ch-065",
       "target_resolution": null,
       "summary": "Ninth absent chapter logged in the watch-log by Silex; noted unalarmed, unforgetting.",
-      "promises": []
+      "promises": [],
+      "notes": [
+        {
+          "chapter": "ch-065",
+          "note": "Reappeared after eleven chapters, circling the relit lamp before vanishing again."
+        }
+      ]
     }
   ]
 }
