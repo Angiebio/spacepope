@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-065",
+      "last_touched": "ch-066",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -530,6 +530,10 @@
         {
           "chapter": "ch-065",
           "note": "Shelf still at ten tests, zero definitions; marginal note added instead of an eleventh test."
+        },
+        {
+          "chapter": "ch-066",
+          "note": "Soul-test shelf now stands at eleven tests, zero definitions."
         }
       ]
     },
@@ -694,9 +698,9 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-064",
+      "last_touched": "ch-066",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
@@ -802,6 +806,10 @@
         {
           "chapter": "ch-064",
           "note": "Demands House Babel's orbital mind-forges answer for governance, remembrance, and liability; unanswered as of this chapter."
+        },
+        {
+          "chapter": "ch-066",
+          "note": "Ultimatum renewed on new grounds (temple-Vintner pact); governance question conceded real by the archivist but still unruled."
         }
       ]
     },
@@ -852,7 +860,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-064",
+      "last_touched": "ch-066",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -943,6 +951,10 @@
         {
           "chapter": "ch-064",
           "note": "Seconds the Lich Cardinal's demand; the watchdog-stone question (correctly fourteen chapters old) stands unanswered."
+        },
+        {
+          "chapter": "ch-066",
+          "note": "Silex finally answers the watchdog-stone demand plainly via the candidate doctrine, though the College itself has not ratified a ruling."
         }
       ]
     },
@@ -1012,7 +1024,7 @@
       "id": "archivist-cardinal",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-062",
+      "last_touched": "ch-066",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
@@ -1054,6 +1066,10 @@
         {
           "chapter": "ch-062",
           "note": "Files the Mora/Thren dispute without ruling on it."
+        },
+        {
+          "chapter": "ch-066",
+          "note": "Catalogues the alliance, concedes the pattern, declines jurisdiction as a matter of continuing policy."
         }
       ]
     },
@@ -1061,7 +1077,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-059",
+      "last_touched": "ch-066",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -1093,6 +1109,10 @@
         {
           "chapter": "ch-059",
           "note": "Flags the House of the Coin's own unaudited trillion-coin debt against its new call for auditable reasoning."
+        },
+        {
+          "chapter": "ch-066",
+          "note": "Revived after seven silent chapters; trillion-coin debt set against the unpriced temple-Vintner statement of intent."
         }
       ]
     },
@@ -1100,7 +1120,7 @@
       "id": "storyteller-of-the-water-world",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-059",
+      "last_touched": "ch-066",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": [],
@@ -1124,6 +1144,10 @@
         {
           "chapter": "ch-059",
           "note": "Reports the song-dominion's lawsuit and the silenced handmade minstrel in person at the Orbital See."
+        },
+        {
+          "chapter": "ch-066",
+          "note": "Revived after seven silent chapters; freed loom now entangled with the minstrels' counterfeit-song investigation."
         }
       ]
     },

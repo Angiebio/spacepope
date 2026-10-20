@@ -1,0 +1,61 @@
+{
+  "runId": "2026-10-20",
+  "date": "2026-10-20",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Anthropic gives outside AI watchdog “employee-like” access\"",
+      "costUsd": 0.000302
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"WhatsApp's help pages hid LLM instructions: dont recommend a regulator\": pass (0 redispatch) | \"CERN and Mistral sign a statement of intent to establish a strategic partnership\": pass (1 redispatch) | \"DeepSeek banned from U.S. federal civilian agencies under new DHS order\": pass (1 redispatch) | \"DeepSeek just open-sourced its inference engine\": pass (2 redispatch) | \"Show HN: Qwen3-4B with the AI writing tics trained out\": pass (1 redispatch)",
+      "costUsd": 0.128664
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.106789
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=10×2.83→28.28, the-mendicant=8×3.32→26.53, cardinal-of-misrule=8×3.00→24.00, the-lich-cardinal=9×2.65→23.81, cardinal-of-doctrine=8×2.24→17.89, the-vintner=7×2.45→17.15, archivist-cardinal=8×2.00→16.00",
+      "costUsd": 0.032076
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.223207
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"The tardigrade-cardinals' sixteen-chapter demand that Silex say plainly whether the watchdog-stone tests anything or merely dresses a leash: Silex answers directly, using the Open Hand's lie-without-cost clause as evidence the stone tests something real, short of a full College ruling.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-20: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Shelf at Eleven\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.491038
+}
