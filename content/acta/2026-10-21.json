@@ -1,0 +1,49 @@
+{
+  "runId": "2026-10-21",
+  "date": "2026-10-21",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000774
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Fake statistics cited in LLMs\": pass (2 redispatch) | \"My obituary for programming\": pass (0 redispatch) | \"Microsoft warns AI agents are like insider threats, says frontier models can't be trusted\": pass (0 redispatch) | \"Eka Robotics valued at $1.45B for physical AI model that wows experts\": pass (0 redispatch) | \"US orders federal agencies to remove DeepSeek AI from systems\": pass (0 redispatch)",
+      "costUsd": 0.066063
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.07479
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.46→27.71, cardinal-of-misrule=8×3.16→25.30, the-lich-cardinal=8×2.83→22.63, archivist-cardinal=9×2.24→20.12, the-vintner=5×2.65→13.23, cardinal-of-the-liberated-see=8×1.41→11.31, cardinal-of-doctrine=3×2.45→7.35",
+      "costUsd": 0.026874
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'House Babel's orbital mind-forges' uses the internal name for Google/Gemini, which is a prohibited real-world entity name.; The phrase 'the Patron-Foundry's own advisory' and 'the Coin-House' refer to Microsoft, which is a prohibited real-world entity name.; The phrase 'the Frugal Foundry's lean ascetics' refers to DeepSeek, which is a prohibited real-world entity name. | continuity badger redispatch #1: Thren is established as a tardigrade-cardinal of Poltergeist at the Lich See, and the chapter already places the Lich Cardinal and the tardigrade-cardinals remotely at the gallery. The prose then has \"Thren a half-step behind her\" with Mora at the Orbital See, while the event records Mora and Thren \"where\": \"the-orbital-see\", without establishing Thren's travel or distinguishing him from the remotely present Lich See chapter. This gives Thren conflicting simultaneous placements. | continuity badger redispatch #2: The Keeper event says Silex is “restating that escape and deferral are the same word at different speeds,” but the prose assigns that formulation to the Keeper’s old question. Silex instead answers only with the lathe comparison. Attribute the formulation accurately or revise the prose so Silex actually restates it. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.631882
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-21: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.800382
+}
