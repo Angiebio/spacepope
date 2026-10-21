@@ -1,0 +1,47 @@
+{
+  "runId": "2026-10-21-medtech",
+  "date": "2026-10-21",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000278
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenEvidence's JAMA paper leaves open questions\": pass (1 redispatch) | \"Mark Cuban wants to crack open the market for rare disease treatments\": pass (0 redispatch) | \"FDA issues final guidance on prescription drug apps and software\": spiked (2 redispatch) | \"Bipartisan lawmakers urge FDA to close peptide loophole\": pass (0 redispatch)",
+      "costUsd": 0.082529
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.097323
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.034677
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Oracle, the Ledger, and the Unmanned Gate\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"FDA issues final guidance on prescription drug apps and software\": The sole cited FDA URL does not resolve, as the gate reports. Because the bulletin's factual claims depend entirely on that unavailable source, the reported release and its stated framework cannot be independently verified from the supplied citation.; The bulletin adds unsupported industry and product detail: \"drug manufacturers increasingly pair prescription products with companion software, ranging from adherence trackers to dosing calculators to patient education tools.\" The source summary does not establish an increasing trend or name these examples.; The bulletin makes unsupported generalizations about regulatory process and effect: \"Final guidance of this kind typically follows a period of draft publication and public comment\" and \"signals that the agency's thinking ... has settled into a stable regulatory position that companies can rely on.\" Neither claim appears in the supplied material."
+    }
+  ],
+  "totalCostUsd": 0.214807
+}
