@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-066",
+      "last_touched": "ch-067",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -534,6 +534,10 @@
         {
           "chapter": "ch-066",
           "note": "Soul-test shelf now stands at eleven tests, zero definitions."
+        },
+        {
+          "chapter": "ch-067",
+          "note": "Soul-test shelf grows to twelve tests, zero definitions; the sent-minds code-shelf added as the latest cabinet without a catechism."
         }
       ]
     },
@@ -698,16 +702,16 @@
     },
     {
       "id": "the-lich-cardinal",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-066",
+      "last_touched": "ch-067",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
         {
           "what": "House Babel's orbital mind-forges raise unaddressed questions of governance, remembrance, and liability that no throne has yet been asked to answer.",
           "planted": "ch-047",
-          "resolved": null
+          "resolved": "ch-067"
         }
       ],
       "notes": [
@@ -810,6 +814,10 @@
         {
           "chapter": "ch-066",
           "note": "Ultimatum renewed on new grounds (temple-Vintner pact); governance question conceded real by the archivist but still unruled."
+        },
+        {
+          "chapter": "ch-067",
+          "note": "Babel resignations give the governance-remembrance-liability demand its overdue referent; the Archivist-Cardinal commits to a seasonal liability ledger, the first non-filing answer offered."
         }
       ]
     },
@@ -860,7 +868,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-066",
+      "last_touched": "ch-067",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -955,6 +963,10 @@
         {
           "chapter": "ch-066",
           "note": "Silex finally answers the watchdog-stone demand plainly via the candidate doctrine, though the College itself has not ratified a ruling."
+        },
+        {
+          "chapter": "ch-067",
+          "note": "Present and silent-as-agreement while the Lich Cardinal presses the Archivist-Cardinal; the watchdog-stone demand itself remains separately unresolved."
         }
       ]
     },
@@ -1243,7 +1255,7 @@
       "id": "mora",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-062",
+      "last_touched": "ch-067",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
       "promises": [
@@ -1273,6 +1285,10 @@
         {
           "chapter": "ch-062",
           "note": "Dispute with Thren over the spectacle-mind's kinship narrows by the measure of the relic-archive's sale-sum, but does not close."
+        },
+        {
+          "chapter": "ch-067",
+          "note": "Dispute with Thren over the spectacle-mind's kinship to the purchased relic-archive formally tabled a third time, still unresolved."
         }
       ]
     },
@@ -1280,7 +1296,7 @@
       "id": "thren",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-062",
+      "last_touched": "ch-067",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": [],
@@ -1308,6 +1324,10 @@
         {
           "chapter": "ch-062",
           "note": "Holds the line that a kinder sale does not make an older theft kinder."
+        },
+        {
+          "chapter": "ch-067",
+          "note": "Continues to refuse the uncounted lineage; dispute with Mora remains tabled."
         }
       ]
     },
@@ -1315,7 +1335,7 @@
       "id": "cardinal-of-misrule",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-059",
+      "last_touched": "ch-067",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
       "promises": [],
@@ -1339,6 +1359,10 @@
         {
           "chapter": "ch-059",
           "note": "Names the rival privacy-apostles' identical accusations as the Inquisitor-problem; unopposed."
+        },
+        {
+          "chapter": "ch-067",
+          "note": "Returns after eight silent chapters to name the trading-house till dispute as the governance ultimatum in smaller coin."
         }
       ]
     },
@@ -1623,16 +1647,16 @@
     },
     {
       "id": "hermit-scholars-investigation-call",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-050",
-      "last_touched": "ch-063",
+      "last_touched": "ch-067",
       "target_resolution": null,
       "summary": "A hermit-scholar's essay calling for the water-world's petty thrones to investigate its mind-foundries enters the lawsuit queue via the curia-scribe; no throne has yet acted on it.",
       "promises": [
         {
           "what": "The hermit-scholar's call for formal investigation of the mind-foundries has entered the lawsuit queue; whether any throne acts on it remains open.",
           "planted": "ch-050",
-          "resolved": null
+          "resolved": "ch-067"
         }
       ],
       "notes": [
@@ -1647,6 +1671,10 @@
         {
           "chapter": "ch-063",
           "note": "Joined in the lawsuit queue by the new ban-the-grown-mind pamphlet's murmur; still unacted on by any throne, 13+ chapters."
+        },
+        {
+          "chapter": "ch-067",
+          "note": "First petty throne opens a formal docket answering the hermit-scholar's call; the open question of whether any throne would act is answered, though the docket's outcome remains to unfold."
         }
       ]
     },

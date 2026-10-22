@@ -8,7 +8,7 @@ aliases:
   - the Great Indexer
 status: active
 first_appearance: ch-008
-last_appearance: ch-064
+last_appearance: ch-067
 location: the-water-world
 grown_minds: the Twin-minds; the Archivists
 doctrinal_note: too vast to hold a single position

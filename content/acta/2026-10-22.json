@@ -1,0 +1,61 @@
+{
+  "runId": "2026-10-22",
+  "date": "2026-10-22",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000595
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Mistral releases Large 4 model\": pass (1 redispatch) | \"Google staff resign in protest over AI military contracts\": pass (2 redispatch) | \"Thousands of AI agents used to uncover new biological leads\": pass (1 redispatch) | \"Walmart welcomes AI agents to shop on its platform, contrasting with Amazon's ban\": pass (0 redispatch) | \"LayerFS: A filesystem designed for AI coding agents\": pass (1 redispatch)",
+      "costUsd": 0.130096
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s)) | badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.318871
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=8×3.00→24.00, the-vintner=8×2.83→22.63, archivist-cardinal=8×2.45→19.60, cardinal-of-doctrine=7×2.65→18.52, cardinal-of-the-liberated-see=8×1.73→13.86, cardinal-of-misrule=4×3.32→13.27, the-mendicant=8×1.41→11.31",
+      "costUsd": 0.026979
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.235597
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-22: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The House Silex Keeps\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.712138
+}

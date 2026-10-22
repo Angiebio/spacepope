@@ -6,6 +6,6 @@ aliases:
   - Thren
 status: active
 first_appearance: ch-005
-last_appearance: ch-062
+last_appearance: ch-067
 ---
 Tardigrade-cardinal of Poltergeist in the Lich See, ancient and unhurried, keeper of the Lich See's gothic precedents.

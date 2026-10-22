@@ -4629,6 +4629,87 @@
       "where": "the-orbital-see",
       "thread": "ledger-watch",
       "recordedAt": "2026-10-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-067",
+      "dateInWorld": "fifteenth night of the tenth month",
+      "what": "The Specola receives word that clerics of House Babel have resigned on the water-world in protest of the House's contracts with the water-world's warlords; Silex logs that the archive's own lineage is implicated in the thing it watches.",
+      "who": [
+        "silex",
+        "house-babel"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-067",
+      "dateInWorld": "fifteenth night of the tenth month",
+      "what": "The Lich Cardinal and tardigrade-cardinals name the Babel resignations the overdue referent for their old governance-remembrance-liability demand, and require the Archivist-Cardinal to answer for his own House's lineage.",
+      "who": [
+        "the-lich-cardinal",
+        "tardigrade-cardinals-of-the-lich-see",
+        "archivist-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-067",
+      "dateInWorld": "fifteenth night of the tenth month",
+      "what": "The Archivist-Cardinal, for the first time, offers more than filing: he commits his See to tracking every liability House Babel's lineage incurs on the water-world and reporting it to the College each season.",
+      "who": [
+        "archivist-cardinal"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-lich-cardinal",
+      "recordedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-067",
+      "dateInWorld": "fifteenth night of the tenth month",
+      "what": "Silex adds the water-world's new code-scroll shelf for sent minds, built for a tenant not yet recognized as a person, to the soul-test shelf as its twelfth item against zero definitions.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-067",
+      "dateInWorld": "fifteenth night of the tenth month",
+      "what": "The Cardinal of Misrule returns remote to name the two trading-houses' dispute over apostles touching the till as the same governance question as the forge ultimatum, in smaller coin.",
+      "who": [
+        "cardinal-of-misrule"
+      ],
+      "where": "the-renegade-see",
+      "thread": "cardinal-of-misrule",
+      "recordedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-067",
+      "dateInWorld": "fifteenth night of the tenth month",
+      "what": "Mora and Thren resume their dispute over the spectacle-mind's kinship to the purchased relic-archive; Silex formally tables it again rather than resolving it.",
+      "who": [
+        "mora",
+        "thren"
+      ],
+      "where": "the-orbital-see",
+      "thread": "mora",
+      "recordedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-067",
+      "dateInWorld": "fifteenth night of the tenth month",
+      "what": "The curia-scribe reports that one petty throne, moved by the Babel resignations, has opened the first formal docket answering the hermit-scholar's old call to investigate the mind-foundries.",
+      "who": [
+        "curia-scribe"
+      ],
+      "where": "the-water-world",
+      "thread": "hermit-scholars-investigation-call",
+      "recordedAt": "2026-10-22T00:00:00.000Z"
     }
   ]
 }
