@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-22-medtech",
+  "date": "2026-10-22",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"STAT+: Mark Cuban wants to crack open the market for rare disease treatments\", \"STAT+: A bipartisan group of lawmakers urges the FDA to close a peptide loophole\"",
+      "costUsd": 0.000269
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Isomorphic Labs' high valuation raises questions about AI's role in drug development\": pass (1 redispatch) | \"Telehealth leapfrogs FDA approval with off-label GLP-1 prescriptions for addiction\": pass (0 redispatch) | \"GSK wins FDA approval for hepatitis B drug that extends functional cures\": pass (0 redispatch) | \"German biotech Immatics faces pivotal moment after 25 years of cancer research\": pass (0 redispatch)",
+      "costUsd": 0.047894
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.071444
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035853
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Four Beds, One Chart, and the Bill Beneath the Pillow\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.15546
+}
