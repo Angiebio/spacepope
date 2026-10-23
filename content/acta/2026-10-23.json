@@ -1,0 +1,63 @@
+{
+  "runId": "2026-10-23",
+  "date": "2026-10-23",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"While Amazon blocks AI agents, Walmart rolls out the welcome mat\"",
+      "costUsd": 0.000311
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Anthropic donates agent skill standard to Linux Foundation's Agentic AI Foundation\": pass (1 redispatch) | \"OpenAI makes its Jev competitor widely available as decision model competition heats up\": pass (1 redispatch) | \"DeepSeek reportedly raises $15B days after US restrictions\": pass (1 redispatch) | \"AI and the Enclosure of the Scientific Commons\": pass (0 redispatch) | \"The same AI request emits 8.5 times more CO2 in Texas than in Sweden\": pass (0 redispatch)",
+      "costUsd": 0.098402
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.24467
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=8×3.46→27.71, cardinal-of-doctrine=8×2.83→22.63, archivist-cardinal=8×2.65→21.17, cardinal-of-the-liberated-see=8×2.00→16.00, the-mendicant=8×1.73→13.86, the-lich-cardinal=9×1.41→12.73, the-vintner=4×3.00→12.00",
+      "costUsd": 0.037947
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The eastern newborn mind is said to have \"resurface[d] after twenty chapters\" and to have been \"unseen since its own quiet redirection twenty chapters past,\" but the established thread record says it was last present in ch-065, where it was set beside the eastern relic-mind. At ch-068 it cannot have been absent for twenty chapters.; The Mora/Thren dispute is described as having \"sat tabled twice already,\" but Silex then \"set it aside a fourth,\" and the state update likewise calls it \"tabled a fourth time.\" If it had already been tabled twice, this chapter can only be the third tabling unless a prior additional tabling is established.",
+      "costUsd": 0.450428
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"The newly grown performer's public stumble, and the grace Silex extends her, returns before a harder audience and is answered in kind by an unexpectedly tender water-world crier.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-23: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Eleventh Test\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.831758
+}

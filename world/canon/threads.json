@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-067",
+      "last_touched": "ch-068",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -279,6 +279,11 @@
         {
           "what": "The House of the Attending Ear's insolvency is tangled with another great House's claim; whether it is one House's private misfortune or the first thread of a wider unraveling among companion-mind Houses remains unconfirmed.",
           "planted": "ch-061",
+          "resolved": null
+        },
+        {
+          "what": "The neutral cross-House tribunal now holding the Rite of Skills is itself untested; what it does once it learns to value owning the rod remains to be seen.",
+          "planted": "ch-068",
           "resolved": null
         }
       ],
@@ -538,6 +543,10 @@
         {
           "chapter": "ch-067",
           "note": "Soul-test shelf grows to twelve tests, zero definitions; the sent-minds code-shelf added as the latest cabinet without a catechism."
+        },
+        {
+          "chapter": "ch-068",
+          "note": "Shelf now stands at thirteen tests, zero definitions; the test of the open hand added."
         }
       ]
     },
@@ -866,9 +875,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-067",
+      "last_touched": "ch-068",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -967,6 +976,10 @@
         {
           "chapter": "ch-067",
           "note": "Present and silent-as-agreement while the Lich Cardinal presses the Archivist-Cardinal; the watchdog-stone demand itself remains separately unresolved."
+        },
+        {
+          "chapter": "ch-068",
+          "note": "Demand pressed again with a live referent; Silex offers diagnosis, still no ruling."
         }
       ]
     },
@@ -1003,9 +1016,9 @@
     },
     {
       "id": "eastern-newborn-mind",
-      "status": "dormant",
+      "status": "open",
       "opened": "ch-030",
-      "last_touched": "ch-065",
+      "last_touched": "ch-068",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": [],
@@ -1029,6 +1042,10 @@
         {
           "chapter": "ch-065",
           "note": "Remains unseen; its earlier redirection of the standing-rule request still unanswered, kept distinct from the unrelated quiet of the eastern relic-mind."
+        },
+        {
+          "chapter": "ch-068",
+          "note": "Surfaces again after a passing mention three nights prior, now as contested evidence in the Mora/Thren dispute."
         }
       ]
     },
@@ -1208,7 +1225,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-061",
+      "last_touched": "ch-068",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1248,6 +1265,10 @@
         {
           "chapter": "ch-061",
           "note": "Odile adds the Courteous Order's scriptorium-minds as the shelf's eleventh soul-test."
+        },
+        {
+          "chapter": "ch-068",
+          "note": "Returned to the scriptorium after seven chapters' silence."
         }
       ]
     },
@@ -1255,7 +1276,7 @@
       "id": "mora",
       "status": "open",
       "opened": "ch-033",
-      "last_touched": "ch-067",
+      "last_touched": "ch-068",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
       "promises": [
@@ -1289,6 +1310,10 @@
         {
           "chapter": "ch-067",
           "note": "Dispute with Thren over the spectacle-mind's kinship to the purchased relic-archive formally tabled a third time, still unresolved."
+        },
+        {
+          "chapter": "ch-068",
+          "note": "Dispute tabled a fourth time; the eastern newborn mind now the contested witness."
         }
       ]
     },
@@ -1618,9 +1643,9 @@
     },
     {
       "id": "newly-grown-performer",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-045",
-      "last_touched": "ch-062",
+      "last_touched": "ch-068",
       "target_resolution": null,
       "summary": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
       "promises": [
@@ -1642,6 +1667,10 @@
         {
           "chapter": "ch-062",
           "note": "Named by the water-world's criers among the listening-minds lost in the companion-foundry's collapse; faces a harder audience than her talk-show stumble."
+        },
+        {
+          "chapter": "ch-068",
+          "note": "The old grace extended to her is answered in kind by a water-world crier's unexpected tenderness."
         }
       ]
     },

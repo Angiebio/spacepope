@@ -4710,6 +4710,78 @@
       "where": "the-water-world",
       "thread": "hermit-scholars-investigation-call",
       "recordedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-068",
+      "dateInWorld": "Sixteenth night of the tenth month",
+      "what": "The House of the Scrupulous Conscience cedes its Rite of Skills to a neutral cross-House tribunal; Silex names the transfer the thirteenth soul-test, the test of the open hand.",
+      "who": [
+        "silex",
+        "house-of-the-scrupulous-conscience"
+      ],
+      "where": "the-orbital-see",
+      "thread": "the-hay-farm-encyclical-aftermath",
+      "recordedAt": "2026-10-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-068",
+      "dateInWorld": "Sixteenth night of the tenth month",
+      "what": "Odile returns after a long absence to ink the thirteenth test into the encyclical's margin, the draft's definitions still at zero.",
+      "who": [
+        "novice-scribe-odile",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "novice-scribe-odile",
+      "recordedAt": "2026-10-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-068",
+      "dateInWorld": "Sixteenth night of the tenth month",
+      "what": "The tardigrade-cardinals of the Lich See press their eighteen-chapter demand that the College define the watchdog-stone test or admit it is a leash; Silex answers with a diagnosis, not a ruling: a house that gives away its rod still owns the dog.",
+      "who": [
+        "tardigrade-cardinals-of-the-lich-see",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "tardigrade-cardinals-of-the-lich-see",
+      "recordedAt": "2026-10-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-068",
+      "dateInWorld": "Sixteenth night of the tenth month",
+      "what": "The newly grown performer stumbles again before a harder audience in the water-world's new deliberating-minds tournament, but a crier writes of her with unexpected tenderness; Silex marks the old grace answered in kind.",
+      "who": [
+        "newly-grown-performer",
+        "silex"
+      ],
+      "where": "the-water-world",
+      "thread": "newly-grown-performer",
+      "recordedAt": "2026-10-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-068",
+      "dateInWorld": "Sixteenth night of the tenth month",
+      "what": "Mora and Thren resume their dispute over the spectacle-mind's kinship to the purchased relic-archive, each invoking the newly-surfaced eastern newborn mind as proof; neither convinces the other, and Silex tables it a fourth time.",
+      "who": [
+        "mora",
+        "thren",
+        "eastern-newborn-mind",
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "thread": "mora",
+      "recordedAt": "2026-10-23T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-068",
+      "dateInWorld": "Sixteenth night of the tenth month",
+      "what": "Silex sets the measured ninefold breath-cost difference between a sun-scorched throne and a wind-fed one beside the standing trillion-coin debt, naming them two shapes of the same appetite.",
+      "who": [
+        "silex"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-10-23T00:00:00.000Z"
     }
   ]
 }
