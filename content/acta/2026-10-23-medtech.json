@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-23-medtech",
+  "date": "2026-10-23",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000279
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"U.S. poised to issue rule subjecting Chinese biotech licensing deals to additional scrutiny\": pass (1 redispatch) | \"Treasury may restrict U.S. investment in Chinese biotech sector\": pass (0 redispatch) | \"Moderna and Merck cancer vaccine reduces melanoma recurrence risk by 42% in trial\": pass (0 redispatch) | \"FDA finalizes guidance on prescription drug use-related software, pharma rejoices\": pass (2 redispatch)",
+      "costUsd": 0.079516
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.083717
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.031657
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Shield Grown From the Wound Itself\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.195169
+}
