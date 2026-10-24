@@ -1,0 +1,47 @@
+{
+  "runId": "2026-10-24-medtech",
+  "date": "2026-10-24",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000273
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI drug firm Pathos raises $237 million, pushing valuation to $3 billion\": pass (1 redispatch) | \"Moderna-Merck personalized mRNA cancer vaccine shows reduced recurrence in melanoma\": spiked (2 redispatch) | \"Patient dies in Bristol Myers Squibb autoimmune CAR-T trial\": pass (0 redispatch) | \"Tango reports 82% tumor response rate in trial of combo therapy for advanced pancreatic cancer\": pass (0 redispatch)",
+      "costUsd": 0.076753
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.073316
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035814
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Three Complaints on One Chart\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Moderna-Merck personalized mRNA cancer vaccine shows reduced recurrence in melanoma\": The bulletin says the vaccine \"was associated with reduced recurrence-free survival.\" This reverses the reported benefit. The source says it reduced recurrence, while reduced recurrence-free survival would mean patients remained recurrence-free for less time."
+    }
+  ],
+  "totalCostUsd": 0.186156
+}
