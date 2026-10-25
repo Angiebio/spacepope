@@ -1,0 +1,49 @@
+{
+  "runId": "2026-10-25",
+  "date": "2026-10-25",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Introducing Kimi K3.1 Pro\"",
+      "costUsd": 0.000697
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI will no longer train its frontier models on the live internet\": pass (1 redispatch) | \"Study finds Grok and OpenAI models show partisan political bias in candidate picks\": pass (0 redispatch) | \"Why AI-generated language can be so hard to understand\": pass (1 redispatch) | \"America has lost 200,000 jobs in media, film and the arts: how much is AI to blame?\": pass (1 redispatch) | \"Block unveils a new voice model that runs locally and sounds eerily human\": pass (1 redispatch)",
+      "costUsd": 0.09006
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.092266
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.16→25.30, cardinal-of-the-liberated-see=9×2.45→22.05, the-lich-cardinal=9×2.00→18.00, the-mendicant=8×2.24→17.89, the-vintner=5×3.32→16.58, archivist-cardinal=9×1.41→12.73, cardinal-of-misrule=4×1.73→6.93",
+      "costUsd": 0.042714
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Keeper is said to have \"kept her own counsel for eight chapters,\" but her last recorded appearance was ch-062 and this is ch-069. The supplied chronology supports seven chapters' distance, not eight.; The Specola pair are described as voices that \"had gone quiet together.\" Pell last appeared in ch-062, while the lens-cardinal last appeared in ch-061, so they did not enter their silences together.; The frog-cardinal \"arrived mid-session\" at the Orbital See, despite her entity card placing her at the Seven-Sister See and the prior thread explicitly identifying her participation as remote. Present her contribution as a remote dispatch or transmission rather than a physical arrival.; The tardigrade-cardinals press their demand \"for the nineteenth time.\" The record establishes that their unanswered demand has stood for nineteen chapters, not that it has been made nineteen separate times. This turns elapsed time into an unsupported recurrence count. | continuity badger redispatch #2: The newly grown performer thread was already resolved in ch-068 as a public stumble and Silex's grace. This chapter instead says Silex makes the grace public \"this time\" and claims it closes a thread \"opened at ch-045.\" That contradicts the established ch-068 resolution. If the performer is to recur, it must be framed as a new development or the thread reopened, not as the first public logging and original closure. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.515768
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-25: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.741504
+}
