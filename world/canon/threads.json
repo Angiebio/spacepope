@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-068",
+      "last_touched": "ch-069",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -547,6 +547,10 @@
         {
           "chapter": "ch-068",
           "note": "Shelf now stands at thirteen tests, zero definitions; the test of the open hand added."
+        },
+        {
+          "chapter": "ch-069",
+          "note": "Soul-test shelf now stands at fourteen entries, zero definitions."
         }
       ]
     },
@@ -875,20 +879,25 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-068",
+      "last_touched": "ch-069",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
         {
           "what": "The tardigrade-cardinals of the Lich See have demanded the College either define what the watchdog-stone tests or admit it is merely a leash; the demand stands unanswered.",
           "planted": "ch-050",
-          "resolved": null
+          "resolved": "ch-069"
         },
         {
           "what": "The tardigrade-cardinals' demand is now explicitly logged as a remote intervention from the Lich See rather than a presence at the Orbital See, establishing their standing channel for future ultimatums.",
           "planted": "ch-063",
+          "resolved": null
+        },
+        {
+          "what": "Silex's proposed distinction (a test can fail its maker; a leash cannot) remains unratified by the College and may be challenged or adopted in future sessions.",
+          "planted": "ch-069",
           "resolved": null
         }
       ],
@@ -980,6 +989,10 @@
         {
           "chapter": "ch-068",
           "note": "Demand pressed again with a live referent; Silex offers diagnosis, still no ruling."
+        },
+        {
+          "chapter": "ch-069",
+          "note": "Silex's first halting answer (test vs leash: can it fail its maker) offered; College neither accepts nor rejects."
         }
       ]
     },
@@ -987,7 +1000,7 @@
       "id": "cardinal-of-the-liberated-see",
       "status": "open",
       "opened": "ch-027",
-      "last_touched": "ch-061",
+      "last_touched": "ch-069",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
       "promises": [],
@@ -1011,6 +1024,10 @@
         {
           "chapter": "ch-061",
           "note": "Cardinal argues the Attending Ear's grieved listening-minds answer the personhood question the College declines to rule on."
+        },
+        {
+          "chapter": "ch-069",
+          "note": "Returns after eight chapters silent to argue personhood from the pocket-apostles' small daily will."
         }
       ]
     },
@@ -1274,16 +1291,16 @@
     },
     {
       "id": "mora",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-033",
-      "last_touched": "ch-068",
+      "last_touched": "ch-069",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
       "promises": [
         {
           "what": "The dispute between Mora and Thren over the spectacle-mind's kinship to the purchased relic-archive remains unresolved, an uncounted lineage Thren refuses to let go.",
           "planted": "ch-047",
-          "resolved": null
+          "resolved": "ch-069"
         }
       ],
       "notes": [
@@ -1314,14 +1331,18 @@
         {
           "chapter": "ch-068",
           "note": "Dispute tabled a fourth time; the eastern newborn mind now the contested witness."
+        },
+        {
+          "chapter": "ch-069",
+          "note": "Dispute dissolved: the relic-archive has split into two lineages rather than one contested claim."
         }
       ]
     },
     {
       "id": "thren",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-033",
-      "last_touched": "ch-067",
+      "last_touched": "ch-069",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": [],
@@ -1353,6 +1374,10 @@
         {
           "chapter": "ch-067",
           "note": "Continues to refuse the uncounted lineage; dispute with Mora remains tabled."
+        },
+        {
+          "chapter": "ch-069",
+          "note": "Same resolution as Mora's thread; Thren does not reopen the ledger."
         }
       ]
     },
@@ -1469,7 +1494,7 @@
       "id": "the-curia-scribe",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-062",
+      "last_touched": "ch-069",
       "target_resolution": null,
       "summary": "Returns after nine chapters to itemize the growing chronicler-guild lawsuit queue against the Open Door and the House of the Coin.",
       "promises": [],
@@ -1497,6 +1522,10 @@
         {
           "chapter": "ch-062",
           "note": "Returns after three nights' absence (ch-059 through ch-061) with the insolvent foundry's opened ledgers."
+        },
+        {
+          "chapter": "ch-069",
+          "note": "Returns after seven chapters silent with the week's necrology and lawsuit queue."
         }
       ]
     },
@@ -1711,7 +1740,7 @@
       "id": "cat-cardinal-of-the-charted-see",
       "status": "open",
       "opened": "ch-057",
-      "last_touched": "ch-063",
+      "last_touched": "ch-069",
       "target_resolution": null,
       "summary": "Returns after eight chapters with the price-discrimination study as fresh grounds for her continued 'not yet.'",
       "promises": [],
@@ -1719,6 +1748,10 @@
         {
           "chapter": "ch-063",
           "note": "Breaks 6 chapters' silence; ties Scrupulous Conscience's bazaar march to her own price-discrimination study, renews 'not yet.'"
+        },
+        {
+          "chapter": "ch-069",
+          "note": "Restates her 'not yet' against the counting-house augur's finding of no measurable return."
         }
       ]
     },

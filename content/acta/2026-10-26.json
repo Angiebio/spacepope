@@ -1,0 +1,62 @@
+{
+  "runId": "2026-10-26",
+  "date": "2026-10-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Block’s new voice model sounds eerily human\", \"Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.\"",
+      "costUsd": 0.000697
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Pennsylvania will require labels on AI-generated ads\": pass (0 redispatch) | \"The AI graveyard: a running list of projects and startups that didn't make it\": pass (0 redispatch) | \"r/opensource bans AI projects, sparking backlash and a rival subreddit\": pass (0 redispatch) | \"AI delivers 'zero financial payoff' to most companies, Apollo economist says\": pass (0 redispatch) | \"Here are the top AI agents that can live in your text messages\": pass (1 redispatch)",
+      "costUsd": 0.046805
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.131049
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=7×3.46→24.25, the-lich-cardinal=10×2.24→22.36, cardinal-of-the-liberated-see=8×2.65→21.17, the-mendicant=8×2.45→19.60, archivist-cardinal=9×1.73→15.59, cardinal-of-misrule=4×2.00→8.00, cardinal-of-doctrine=3×1.41→4.24",
+      "costUsd": 0.026273
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The `appearances` list includes `\"the-lich-cardinal\"`, but the prose explicitly says the tardigrade-cardinals arrived \"without the Lich Cardinal to speak directly for them,\" and the thread update likewise says he was invoked rather than present. Remove him from appearances.; The update changes `the-lich-cardinal` from its established `escalated` status to `open` even though his ultimatum is renewed through the tardigrade-cardinals, receives no ratification, and explicitly \"stands.\" No de-escalation occurs in the chapter; retain `escalated`. | continuity badger redispatch #2: The curia-scribe is said to have “returned after eight chapters of silence,” but its last appearance was ch-062 and this is ch-069. The attached continuity record counts this as seven chapters, which the state update also correctly states.; The Cardinal of the Liberated See's established voice says that she “speaks last and shortest.” Here she gives a substantial speech and the cat-cardinal answers afterward, so she neither speaks last nor delivers the shortest intervention.",
+      "costUsd": 0.592905
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "appearance of unknown entity \"odile\" — not merged (is it missing from newEntities?)",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-26: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Ledger and the Leash\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.797729
+}
