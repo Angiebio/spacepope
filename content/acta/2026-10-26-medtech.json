@@ -1,0 +1,43 @@
+{
+  "runId": "2026-10-26-medtech",
+  "date": "2026-10-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000329
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Merck and Moderna show cancer vaccine data at ESMO, a triumph of science\": pass (0 redispatch) | \"Roche's next-gen KRAS G12C inhibitor cuts death risk by 44% in lung cancer trial\": pass (0 redispatch) | \"AstraZeneca's Tagrisso-Orpathys combo may extend life even after drug resistance\": pass (0 redispatch) | \"Amgen's Imdelltra regimen halves risk of death in Phase 3 lung cancer trial\": pass (1 redispatch) | \"Opinion: Could long-term AI use lead to isolation? We need data to find out\": pass (0 redispatch)",
+      "costUsd": 0.056642
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.262154
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.038275
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Five Charts at the Foot of One Bed\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.357399
+}
