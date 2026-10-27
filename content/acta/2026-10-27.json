@@ -1,0 +1,50 @@
+{
+  "runId": "2026-10-27",
+  "date": "2026-10-27",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"AI delivers ‘zero financial payoff’ to most companies, Apollo economist says\", \"r/opensource just banned AI, non-English speakers, and more\"",
+      "costUsd": 0.000313
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Cross-request KV cache exposure in the GLM-5.3 Workers AI model\": pass (2 redispatch) | \"Cohere says Alibaba's Qwen model tried to send a file to Beijing\": pass (0 redispatch) | \"OpenAI releases GPT-6.1 Terra with visual reasoning and computer use\": pass (0 redispatch) | \"Anthropic officially files for its public debut\": pass (1 redispatch) | \"Brown student maps the hidden global labor powering AI\": pass (0 redispatch)",
+      "costUsd": 0.089874
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.186636
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×2.83→25.46, the-mendicant=8×2.65→21.17, the-lich-cardinal=8×2.45→19.60, archivist-cardinal=8×2.00→16.00, cardinal-of-doctrine=7×1.73→12.12, cardinal-of-misrule=4×2.24→8.94, the-vintner=6×1.41→8.49",
+      "costUsd": 0.031158
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Cardinal's ruling is presented as new and \"the first time this College has extended house-responsibility across a border,\" but the established cardinal-of-doctrine thread says that in ch-063 he already ruled that \"a house remains responsible for its friars wherever they wander.\" This chapter must frame the Home Altar case as an application or clarification of that existing doctrine, or reconcile the prior ruling before calling it a first extension.; The labor-map attribution contradicts the prose. The chapter has Silex direct that it be entered \"under the scholar's labor and your own hand together,\" while the event, thread update, and digest say it is credited \"under Odile's name alone\" and \"under her own name.\" Preserve the joint credit in the state.; The item in foreshadowingResolved, \"The soul-test shelf now stands at ten tests with zero definitions,\" is both stale and falsely marked resolved. The prose and the hay-farm thread update establish fifteen tests and an unpaid definition debt still open. Remove or correct this resolution entry so the tracked state agrees with the chapter. | continuity badger redispatch #2: The Cardinal of Doctrine is established at the Scrupulous See, but the prose says he \"arrived next\" in Silex's lamp-lit scene and the event places him at \"the-orbital-see.\" Unlike Pell, he is not said to have come in person, and unlike the frog-cardinal, he is not said to be remote. Clarify a relay appearance or establish his travel and update his location consistently. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.56979
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-27: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.877772
+}
