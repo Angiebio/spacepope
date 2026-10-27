@@ -1,0 +1,44 @@
+{
+  "runId": "2026-10-27-medtech",
+  "date": "2026-10-27",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 4 gathered stories already covered by the Specola — excluded: \"Opinion: Could long-term AI use lead to isolation? We need to find out — but researchers need better access to data\", \"#ESMO26: Merck and Moderna's cancer vaccine data were 'a triumph of science.' And now, the work begins\", \"#ESMO26: Roche details magnitude of its KRAS G12C inhibitor’s win over rivals in lung cancer trial\", \"#ESMO26: AstraZeneca's Tagrisso-Orpathys combo may extend Tagrisso's life in lung cancer\"",
+      "costUsd": 0.00053
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Five biotech updates from ESMO: personalized cancer vaccine nears FDA submission\": pass (0 redispatch) | \"Merck ADC cuts death risk by one-third in advanced endometrial cancer\": pass (0 redispatch) | \"Incyte pancreatic cancer drug combination induces lasting tumor responses\": pass (0 redispatch) | \"Roche's KRAS drug divarasib shows impressive lung cancer data at ESMO\": pass (0 redispatch)",
+      "costUsd": 0.027519
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.161543
+    },
+    {
+      "retries": 1,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.075115
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Four Sutures and a Caution\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.264706
+}
