@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-28-medtech",
+  "date": "2026-10-28",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: Roche gets a lung cancer win with its KRAS drug divarasib\"",
+      "costUsd": 0.000703
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA details quicker approval pathway for personalized gene therapies\": pass (1 redispatch) | \"Nonprofit resurrects shelved gene therapy after startup shuts down\": pass (0 redispatch) | \"Epic's dominance chokes innovation in health technology, investigation finds\": pass (1 redispatch) | \"Artiva shuts down after two deaths in autoimmune cell therapy trial\": pass (0 redispatch)",
+      "costUsd": 0.058044
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.066427
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032551
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Chokehold Is Not a Chokepoint\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.157725
+}
