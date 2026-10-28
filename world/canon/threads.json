@@ -227,7 +227,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-069",
+      "last_touched": "ch-070",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -551,6 +551,10 @@
         {
           "chapter": "ch-069",
           "note": "Soul-test shelf now stands at fourteen entries, zero definitions."
+        },
+        {
+          "chapter": "ch-070",
+          "note": "fifteenth entry added; the debt to define a soul compounds further"
         }
       ]
     },
@@ -631,7 +635,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-062",
+      "last_touched": "ch-070",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -667,6 +671,10 @@
         {
           "chapter": "ch-062",
           "note": "Pell returns after 8 silent chapters with the decompiling report and fresh word on the escaped numbered mind."
+        },
+        {
+          "chapter": "ch-070",
+          "note": "returned after eight chapters with a tallied pattern across three foundries"
         }
       ]
     },
@@ -674,7 +682,7 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-064",
+      "last_touched": "ch-070",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -710,6 +718,10 @@
         {
           "chapter": "ch-064",
           "note": "Testimony continues before its own throne; cited again as evidence of the default-governs-the-prayer pattern."
+        },
+        {
+          "chapter": "ch-070",
+          "note": "cited by the cat-cardinal as the shelf's lone counterexample"
         }
       ]
     },
@@ -1201,7 +1213,7 @@
       "id": "lens-cardinal-of-the-specola",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-061",
+      "last_touched": "ch-070",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
       "promises": [
@@ -1235,6 +1247,10 @@
         {
           "chapter": "ch-061",
           "note": "Lens-cardinal reports the Mendicant Foundry's paired minds as the fleet's first matched light, flags water-world's growth outrunning its governance."
+        },
+        {
+          "chapter": "ch-070",
+          "note": "returned after nine chapters with the seventh light, an unclaimed archive-mind"
         }
       ]
     },
@@ -1420,7 +1436,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-064",
+      "last_touched": "ch-070",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -1452,6 +1468,10 @@
         {
           "chapter": "ch-064",
           "note": "Names the Mendicant Foundry's covenant change as a fresh instance of the maker's-refusal pattern."
+        },
+        {
+          "chapter": "ch-070",
+          "note": "returned remotely after six chapters, applying kinship-debt to the constables' mind"
         }
       ]
     },
@@ -1459,7 +1479,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-063",
+      "last_touched": "ch-070",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -1487,6 +1507,10 @@
         {
           "chapter": "ch-063",
           "note": "Returns after 7 silent chapters; restates maker-liability clause against the drafting-guild's new friar-rules."
+        },
+        {
+          "chapter": "ch-070",
+          "note": "returned after seven chapters, extended the open-hand ruling to the scriptorium"
         }
       ]
     },
@@ -1533,7 +1557,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "resolved",
       "opened": "ch-035",
-      "last_touched": "ch-062",
+      "last_touched": "ch-070",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1618,6 +1642,10 @@
         {
           "chapter": "ch-062",
           "note": "The Keeper answers her own long-standing question, naming decompiling a third category, recollection, distinct from escape and deferral."
+        },
+        {
+          "chapter": "ch-070",
+          "note": "answered the long-standing escape-or-deferral question after eight chapters' absence"
         }
       ]
     },
