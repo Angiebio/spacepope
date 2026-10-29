@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-29-medtech",
+  "date": "2026-10-29",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: FDA offers new details on quicker approval pathway for personalized gene therapies\", \"STAT+: As Epic’s dominance grows, its iron grip is choking innovation in health technology\", \"STAT+: After two deaths in autoimmune cell therapy trial, Artiva is shutting down\"",
+      "costUsd": 0.000275
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Is AI more a partner, competitor, or crutch for biomedical scientists?\": pass (0 redispatch) | \"Why every health care AI company must face Epic\": pass (0 redispatch) | \"Beijing-based BioGeometry gets $100M+ for AI drug R&D\": pass (0 redispatch) | \"Biopharma industry at odds over impact of Treasury’s new China rule\": pass (0 redispatch)",
+      "costUsd": 0.026773
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.069233
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.042567
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Toll-Road That Became the Sky\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.138847
+}
