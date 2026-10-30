@@ -1,0 +1,42 @@
+{
+  "runId": "2026-10-30-medtech",
+  "date": "2026-10-30",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"Opinion: STAT+: Is AI more a partner, competitor, or crutch for biomedical scientists?\", \"STAT+: Biopharma industry at odds over impact of Treasury’s new China rule\", \"Beijing-based BioGeometry gets $100M+ for AI drug R&D\"",
+      "costUsd": 0.000271
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA and CMS scramble to avoid regulatory logjam as more states test AI in clinical settings\": pass (2 redispatch) | \"HHS green lights six peptides despite concerns from FDA scientists\": pass (0 redispatch) | \"The EPIC investigation, and a Teladoc surprise\": pass (0 redispatch) | \"New atlas of colorectal tumors sheds light on why cancers in young people are more dangerous\": pass (0 redispatch)",
+      "costUsd": 0.050803
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.104172
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.036865
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Four Charts and One Unasked Question\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.192112
+}
