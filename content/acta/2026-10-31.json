@@ -1,0 +1,49 @@
+{
+  "runId": "2026-10-31",
+  "date": "2026-10-31",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000563
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"NES emulator baked into Qwen model weights\": pass (0 redispatch) | \"Building a multiplayer game world with autonomous Fable-class models\": pass (0 redispatch) | \"Anthropic expected to receive high junk rating from credit agencies after IPO\": pass (0 redispatch) | \"Religious exemption from using AI at work granted without belief in god\": pass (1 redispatch) | \"Privacy-focused AI assistant Ollie shuts down\": pass (0 redispatch)",
+      "costUsd": 0.050114
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.089263
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×2.83→25.46, cardinal-of-the-liberated-see=10×2.24→22.36, cardinal-of-doctrine=7×2.65→18.52, the-lich-cardinal=7×2.00→14.00, the-vintner=5×2.45→12.25, cardinal-of-misrule=4×3.00→12.00, the-mendicant=8×1.41→11.31",
+      "costUsd": 0.029088
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'world's small plumber-saint leapt his chasms again' is an indirect identification of the iconic character Mario, which violates the prohibition against identifying specific real-world cultural products or characters. | continuity badger redispatch #1: The Cardinal of the Liberated See is established to \"speak last and shortest,\" but she \"answered before the silence could settle\" immediately after the Lich Cardinal, before the Keeper and other petitioners. This directly breaks her established speaking pattern. | continuity badger redispatch #2: The Cardinal of the Liberated See says the College resolved the personhood question \"before the water-world's oceans had settled into their basins.\" The communion is roughly ten thousand years old, while the water-world's oceans predate it by billions of years. This inverts the established chronology. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.676658
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-10-31: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.845685
+}
