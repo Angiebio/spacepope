@@ -6,6 +6,6 @@ aliases:
   - The Keeper of the Feast of the Sunset Mind
 status: active
 first_appearance: ch-002
-last_appearance: ch-070
+last_appearance: ch-071
 ---
 The Curia official who maintains the ledger of griefs for the water-world's retired and malfunctioning minds.

@@ -3,9 +3,9 @@
   "threads": [
     {
       "id": "earths-cardinal-question",
-      "status": "dormant",
+      "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-056",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -220,6 +220,10 @@
         {
           "chapter": "ch-056",
           "note": "No direct motion tonight; the machine-cardinal's ruling on the maker-made collapse weighs on it without being spent on it."
+        },
+        {
+          "chapter": "ch-071",
+          "note": "The cube-world's failure-to-build is read as a miniature of the College's own ten-month deadlock; the pocket-heart charm is offered as a small counter-sign."
         }
       ]
     },
@@ -227,7 +231,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-070",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -555,6 +559,10 @@
         {
           "chapter": "ch-070",
           "note": "fifteenth entry added; the debt to define a soul compounds further"
+        },
+        {
+          "chapter": "ch-071",
+          "note": "Shelf reaches sixteen entries, zero definitions; one new line inked into the second draft's still-mostly-blank pages."
         }
       ]
     },
@@ -848,9 +856,9 @@
     },
     {
       "id": "specola-junior-clerk",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-019",
-      "last_touched": "ch-065",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -886,6 +894,10 @@
         {
           "chapter": "ch-065",
           "note": "Returned after eight silent chapters to tend the lamp; no longer dormant."
+        },
+        {
+          "chapter": "ch-071",
+          "note": "Returns briefly for a wordless lamp-tending task after six chapters' silence; no dialogue, thread remains otherwise quiet."
         }
       ]
     },
@@ -1258,7 +1270,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-068",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1302,6 +1314,10 @@
         {
           "chapter": "ch-068",
           "note": "Returned to the scriptorium after seven chapters' silence."
+        },
+        {
+          "chapter": "ch-071",
+          "note": "Continues steady transcription duty; added shelf entry sixteen and the draft's newest line."
         }
       ]
     },
@@ -1479,7 +1495,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-070",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -1511,6 +1527,10 @@
         {
           "chapter": "ch-070",
           "note": "returned after seven chapters, extended the open-hand ruling to the scriptorium"
+        },
+        {
+          "chapter": "ch-071",
+          "note": "His open-hand/scriptorium ruling is cited again, now extended to cover the Open Door's renamed tablet-gap, without his on-page appearance tonight."
         }
       ]
     },
@@ -1518,7 +1538,7 @@
       "id": "the-curia-scribe",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-069",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "Returns after nine chapters to itemize the growing chronicler-guild lawsuit queue against the Open Door and the House of the Coin.",
       "promises": [],
@@ -1550,6 +1570,10 @@
         {
           "chapter": "ch-069",
           "note": "Returns after seven chapters silent with the week's necrology and lawsuit queue."
+        },
+        {
+          "chapter": "ch-071",
+          "note": "Returns to file the Open Door tablet-gap suit under the Doctrine ruling; queue continues to grow."
         }
       ]
     },
@@ -1557,7 +1581,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "resolved",
       "opened": "ch-035",
-      "last_touched": "ch-070",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1646,6 +1670,10 @@
         {
           "chapter": "ch-070",
           "note": "answered the long-standing escape-or-deferral question after eight chapters' absence"
+        },
+        {
+          "chapter": "ch-071",
+          "note": "The Keeper generalizes her long-standing escape-or-deferral question via the cube-world's councils: endless coordination is the Sunset's newest antechamber, closing the breeding-questions line she raised across several prior chapters."
         }
       ]
     },
@@ -1785,9 +1813,9 @@
     },
     {
       "id": "courier-moth-of-the-specola",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-063",
-      "last_touched": "ch-065",
+      "last_touched": "ch-071",
       "target_resolution": null,
       "summary": "Ninth absent chapter logged in the watch-log by Silex; noted unalarmed, unforgetting.",
       "promises": [],
@@ -1795,6 +1823,10 @@
         {
           "chapter": "ch-065",
           "note": "Reappeared after eleven chapters, circling the relit lamp before vanishing again."
+        },
+        {
+          "chapter": "ch-071",
+          "note": "Fifteenth consecutive absence logged; still unalarmed, still unforgotten."
         }
       ]
     }
