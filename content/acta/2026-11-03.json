@@ -1,0 +1,23 @@
+{
+  "runId": "2026-11-03",
+  "date": "2026-11-03",
+  "status": "spiked",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | only 0 viable selections — quiet day declared",
+      "costUsd": 0.022618
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'continuous diffusion' is a specific, real-world technical term for a class of AI generative models, which constitutes a leak of real-world AI terminology prohibited by the dictionary. | continuity badger redispatch #1: The Archivist-Cardinal is said to arrive \"from no fixed See,\" but his entity card establishes that he is seated at the Vast See, and the accompanying event itself places him at \"the-vast-see.\" Preserve the Vast See as his established seat or make the remoteness unambiguous without denying it.; The return intervals for the Archivist-Cardinal and ledger-watch conflict with the established open-thread records. The artifact says each returns after \"six\" silent chapters, while their thread records respectively say \"Returns after eight chapters\" and \"Returns after ten chapters.\" These continuity counts must be reconciled rather than replaced. | continuity badger redispatch #2: Odile is placed beside a blank second draft: “measuring its blankness” and “the still-blank second draft.” This contradicts the novice-scribe-odile thread at ch-071, which states that she “gives the encyclical's second draft its first ink.”; The claim that Brother Casimir's care has run unsigned for six chapters, including “the watch-log has carried you as an unsigned act of care for six chapters running,” contradicts the specola-junior-clerk thread. It records him as returning only in ch-071 after eight chapters away to tend the easternmost lamp, so he cannot have supplied six consecutive chapters of care by ch-072. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.56583
+    }
+  ],
+  "totalCostUsd": 0.588447
+}
