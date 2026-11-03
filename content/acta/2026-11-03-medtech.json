@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-03-medtech",
+  "date": "2026-11-03",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000291
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Studies raise doubts about 'three-parent IVF' for preventing mitochondrial disease\": pass (2 redispatch) | \"Women travel thousands of miles for a reproductive moonshot; scientists say they've been misled\": pass (0 redispatch) | \"Psilocybin's lasting benefits prove elusive in mice\": pass (0 redispatch) | \"FDA OKs generic HIV prevention shot, widening access for lower-income countries\": pass (0 redispatch) | \"Washington state resident dies from bird flu following exposure to infected cattle\": pass (0 redispatch)",
+      "costUsd": 0.066896
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.060721
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.039769
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Third Hand, and the Five Who Checked One Claim\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.167676
+}
