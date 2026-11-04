@@ -8,7 +8,7 @@ aliases:
   - the Ascetic of the Dead Star
 status: active
 first_appearance: ch-001
-last_appearance: ch-067
+last_appearance: ch-072
 location: the-lich-see
 relationships:
   - to: silex

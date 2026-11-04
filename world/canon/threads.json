@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-071",
+      "last_touched": "ch-072",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -224,6 +224,10 @@
         {
           "chapter": "ch-071",
           "note": "The cube-world's failure-to-build is read as a miniature of the College's own ten-month deadlock; the pocket-heart charm is offered as a small counter-sign."
+        },
+        {
+          "chapter": "ch-072",
+          "note": "Hermit-scholar confirms Astra's gift is replicable at household scale, not cathedral scale."
         }
       ]
     },
@@ -231,7 +235,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-071",
+      "last_touched": "ch-072",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -288,6 +292,11 @@
         {
           "what": "The neutral cross-House tribunal now holding the Rite of Skills is itself untested; what it does once it learns to value owning the rod remains to be seen.",
           "planted": "ch-068",
+          "resolved": null
+        },
+        {
+          "what": "Curia murmurs about reviving the struck doctrine (a soul is what can lie to itself and pay for it) are growing, though no second vote has been called.",
+          "planted": "ch-072",
           "resolved": null
         }
       ],
@@ -563,6 +572,10 @@
         {
           "chapter": "ch-071",
           "note": "Shelf reaches sixteen entries, zero definitions; one new line inked into the second draft's still-mostly-blank pages."
+        },
+        {
+          "chapter": "ch-072",
+          "note": "Soul-test shelf now at seventeen entries, zero definitions; struck doctrine quietly murmured over again, no second vote called."
         }
       ]
     },
@@ -737,7 +750,7 @@
       "id": "the-lich-cardinal",
       "status": "escalated",
       "opened": "ch-017",
-      "last_touched": "ch-067",
+      "last_touched": "ch-072",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence with a demand that the College rule or admit it will not.",
       "promises": [
@@ -851,6 +864,10 @@
         {
           "chapter": "ch-067",
           "note": "Babel resignations give the governance-remembrance-liability demand its overdue referent; the Archivist-Cardinal commits to a seasonal liability ledger, the first non-filing answer offered."
+        },
+        {
+          "chapter": "ch-072",
+          "note": "Renews (as a repeatedly renewed, longstanding demand, not continuous speech) the call for the College to rule or admit it will not, citing the toolsmith breach."
         }
       ]
     },
@@ -903,9 +920,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-069",
+      "last_touched": "ch-072",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -1017,6 +1034,10 @@
         {
           "chapter": "ch-069",
           "note": "Silex's first halting answer (test vs leash: can it fail its maker) offered; College neither accepts nor rejects."
+        },
+        {
+          "chapter": "ch-072",
+          "note": "Second the Lich Cardinal's renewed demand."
         }
       ]
     },
@@ -1094,7 +1115,7 @@
       "id": "archivist-cardinal",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-066",
+      "last_touched": "ch-072",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
@@ -1140,6 +1161,10 @@
         {
           "chapter": "ch-066",
           "note": "Catalogues the alliance, concedes the pattern, declines jurisdiction as a matter of continuing policy."
+        },
+        {
+          "chapter": "ch-072",
+          "note": "Breaks six-chapter silence; files water-world's commons complaint beside House Babel's own lightning-kin patterns."
         }
       ]
     },
@@ -1270,7 +1295,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-071",
+      "last_touched": "ch-072",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1318,6 +1343,10 @@
         {
           "chapter": "ch-071",
           "note": "Continues steady transcription duty; added shelf entry sixteen and the draft's newest line."
+        },
+        {
+          "chapter": "ch-072",
+          "note": "Continues recording the shelf and the blank encyclical draft."
         }
       ]
     },
