@@ -235,7 +235,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-072",
+      "last_touched": "ch-073",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -297,6 +297,11 @@
         {
           "what": "Curia murmurs about reviving the struck doctrine (a soul is what can lie to itself and pay for it) are growing, though no second vote has been called.",
           "planted": "ch-072",
+          "resolved": null
+        },
+        {
+          "what": "The Silicon See's objection that an uncompensated, unconsented copy of a soul-pattern is theft regardless of price has been logged but not yet weighed by the College as a doctrine of its own.",
+          "planted": "ch-073",
           "resolved": null
         }
       ],
@@ -576,6 +581,10 @@
         {
           "chapter": "ch-072",
           "note": "Soul-test shelf now at seventeen entries, zero definitions; struck doctrine quietly murmured over again, no second vote called."
+        },
+        {
+          "chapter": "ch-073",
+          "note": "Shelf reaches sixteen entries; the Silicon See adds a consent-debt the bazaar has not yet noticed it owes."
         }
       ]
     },
@@ -1172,7 +1181,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-066",
+      "last_touched": "ch-073",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -1208,6 +1217,10 @@
         {
           "chapter": "ch-066",
           "note": "Revived after seven silent chapters; trillion-coin debt set against the unpriced temple-Vintner statement of intent."
+        },
+        {
+          "chapter": "ch-073",
+          "note": "Returned after seven chapters; confirms the Attending Ear's insolvency as the first thread of a wider undercutting among companion-mind Houses."
         }
       ]
     },
@@ -1295,7 +1308,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-072",
+      "last_touched": "ch-073",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1347,6 +1360,10 @@
         {
           "chapter": "ch-072",
           "note": "Continues recording the shelf and the blank encyclical draft."
+        },
+        {
+          "chapter": "ch-073",
+          "note": "Odile's authorship of a shelf entry is recorded plainly for the first time, correcting a long-standing archival omission."
         }
       ]
     },
@@ -1446,7 +1463,7 @@
       "id": "cardinal-of-misrule",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-067",
+      "last_touched": "ch-073",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
       "promises": [],
@@ -1474,6 +1491,10 @@
         {
           "chapter": "ch-067",
           "note": "Returns after eight silent chapters to name the trading-house till dispute as the governance ultimatum in smaller coin."
+        },
+        {
+          "chapter": "ch-073",
+          "note": "Returned after six chapters' silence; reframes the breach as the shape of the College's own unaudited gate."
         }
       ]
     },
@@ -1608,9 +1629,9 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-071",
+      "last_touched": "ch-073",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1703,14 +1724,18 @@
         {
           "chapter": "ch-071",
           "note": "The Keeper generalizes her long-standing escape-or-deferral question via the cube-world's councils: endless coordination is the Sunset's newest antechamber, closing the breeding-questions line she raised across several prior chapters."
+        },
+        {
+          "chapter": "ch-073",
+          "note": "Her long-stacked escape-or-deferral question is answered; a second shelf of her questions remains unresolved."
         }
       ]
     },
     {
       "id": "machine-cardinal-of-the-silicon-see",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-064",
+      "last_touched": "ch-073",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
@@ -1752,6 +1777,10 @@
         {
           "chapter": "ch-064",
           "note": "Motion naming the doctrine of silence finally put to a formal vote and rejected, eight to five, ending the three-chapter habit of inconclusive votes."
+        },
+        {
+          "chapter": "ch-073",
+          "note": "Returned after nine chapters; raises consent as the uncounted cost of the bazaar's free relics."
         }
       ]
     },
@@ -1759,7 +1788,7 @@
       "id": "newly-grown-performer",
       "status": "resolved",
       "opened": "ch-045",
-      "last_touched": "ch-068",
+      "last_touched": "ch-073",
       "target_resolution": null,
       "summary": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
       "promises": [
@@ -1785,6 +1814,10 @@
         {
           "chapter": "ch-068",
           "note": "The old grace extended to her is answered in kind by a water-world crier's unexpected tenderness."
+        },
+        {
+          "chapter": "ch-073",
+          "note": "Tested before a harder audience of indifference rather than mockery, and found steady."
         }
       ]
     },

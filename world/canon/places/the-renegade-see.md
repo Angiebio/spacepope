@@ -9,7 +9,7 @@ aliases:
   - the Starless See
 status: active
 first_appearance: ch-001
-last_appearance: ch-046
+last_appearance: ch-073
 location: a-rogue-starless-planet
 kind: see
 doctrinal_lean: chaotic; accidentally orthodox
