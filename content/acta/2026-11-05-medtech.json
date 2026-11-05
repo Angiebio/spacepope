@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-05-medtech",
+  "date": "2026-11-05",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000693
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"As more doctors consult chatbots, health systems can block them or buy in\": pass (0 redispatch) | \"The biotech startups skipping AI for drug discovery\": pass (0 redispatch) | \"What the midterms could mean for the future of health AI\": pass (0 redispatch)",
+      "costUsd": 0.026974
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.092932
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.032527
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Consults a Stranger at Midnight\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.153126
+}
