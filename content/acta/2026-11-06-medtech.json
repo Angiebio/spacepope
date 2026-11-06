@@ -1,0 +1,47 @@
+{
+  "runId": "2026-11-06-medtech",
+  "date": "2026-11-06",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: What the midterms could mean for the future of health AI\"",
+      "costUsd": 0.000286
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI depends on medical records that don't always tell the full truth about women\": pass (1 redispatch) | \"Novartis cites cases of previously unknown tumors possibly tied to its SMA gene therapy\": pass (0 redispatch) | \"Pharma's trade group spent heavily on search ads to sway public opinion\": pass (1 redispatch) | \"Stunning $6M defamation verdict reverberates at MIT campus, global scientific community\": spiked (2 redispatch)",
+      "costUsd": 0.081871
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.072384
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.034005
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Three Charts at the Foot of One Bed\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Stunning $6M defamation verdict reverberates at MIT campus, global scientific community\": The bulletin states that the dispute \"originated in questions of scientific misconduct\" and had \"drawn scrutiny over peer review practices and institutional accountability.\" The supplied source summary establishes only a court battle between a former MIT scientist and a younger colleague, not those specific underlying issues.; The bulletin attributes broad implications to STAT News, including \"principles that underpin confidence in scientific research\" and how \"misconduct allegations are raised, investigated, and litigated.\" These claims are absent from the supplied source material.; The assertion that \"No further details on appeals or next legal steps are included in the available reporting\" is unsupported. The supplied material is only a headline, summary, and why-it-matters field; it cannot establish that the underlying reporting contains no such details.; The statement \"STAT News indicates coverage of the matter continues\" is not supported by the supplied source material."
+    }
+  ],
+  "totalCostUsd": 0.188545
+}
