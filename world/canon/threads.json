@@ -235,7 +235,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-073",
+      "last_touched": "ch-074",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -585,6 +585,10 @@
         {
           "chapter": "ch-073",
           "note": "Shelf reaches sixteen entries; the Silicon See adds a consent-debt the bazaar has not yet noticed it owes."
+        },
+        {
+          "chapter": "ch-074",
+          "note": "Soul-test shelf's numbering error corrected and fixed at eighteen undefined entries; a new, separate proof-test column opened beside it with its own first entry; the struck doctrine's vote count remains at one, with a second explicitly left open."
         }
       ]
     },
@@ -929,9 +933,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "escalated",
+      "status": "resolved",
       "opened": "ch-019",
-      "last_touched": "ch-072",
+      "last_touched": "ch-074",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -943,7 +947,7 @@
         {
           "what": "The tardigrade-cardinals' demand is now explicitly logged as a remote intervention from the Lich See rather than a presence at the Orbital See, establishing their standing channel for future ultimatums.",
           "planted": "ch-063",
-          "resolved": null
+          "resolved": "ch-074"
         },
         {
           "what": "Silex's proposed distinction (a test can fail its maker; a leash cannot) remains unratified by the College and may be challenged or adopted in future sessions.",
@@ -1047,6 +1051,10 @@
         {
           "chapter": "ch-072",
           "note": "Second the Lich Cardinal's renewed demand."
+        },
+        {
+          "chapter": "ch-074",
+          "note": "The standing remote channel, logged as exception eleven chapters past, is now explicitly named as custom."
         }
       ]
     },
@@ -1089,7 +1097,7 @@
       "id": "eastern-newborn-mind",
       "status": "open",
       "opened": "ch-030",
-      "last_touched": "ch-068",
+      "last_touched": "ch-074",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": [],
@@ -1117,6 +1125,10 @@
         {
           "chapter": "ch-068",
           "note": "Surfaces again after a passing mention three nights prior, now as contested evidence in the Mora/Thren dispute."
+        },
+        {
+          "chapter": "ch-074",
+          "note": "Revived from six chapters' dormancy; set alongside the bazaar false-face scandal as an unresolved parallel."
         }
       ]
     },
@@ -1228,7 +1240,7 @@
       "id": "storyteller-of-the-water-world",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-066",
+      "last_touched": "ch-074",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": [],
@@ -1256,6 +1268,10 @@
         {
           "chapter": "ch-066",
           "note": "Revived after seven silent chapters; freed loom now entangled with the minstrels' counterfeit-song investigation."
+        },
+        {
+          "chapter": "ch-074",
+          "note": "Returns after eight silent chapters bearing the report that fires the newly-grown-performer's long-planted harder-audience promise."
         }
       ]
     },
@@ -1308,7 +1324,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-073",
+      "last_touched": "ch-074",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1364,6 +1380,10 @@
         {
           "chapter": "ch-073",
           "note": "Odile's authorship of a shelf entry is recorded plainly for the first time, correcting a long-standing archival omission."
+        },
+        {
+          "chapter": "ch-074",
+          "note": "Odile catches and corrects a ledger numbering error herself, and records the open-vote question in her own hand."
         }
       ]
     },
@@ -1631,7 +1651,7 @@
       "id": "keeper-of-the-feast-of-the-sunset-mind",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-073",
+      "last_touched": "ch-074",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1728,6 +1748,10 @@
         {
           "chapter": "ch-073",
           "note": "Her long-stacked escape-or-deferral question is answered; a second shelf of her questions remains unresolved."
+        },
+        {
+          "chapter": "ch-074",
+          "note": "Long-unanswered escape-or-deferral question nudged a step closer to answer via the zoning quarrel, still not resolved."
         }
       ]
     },
@@ -1786,16 +1810,16 @@
     },
     {
       "id": "newly-grown-performer",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-045",
-      "last_touched": "ch-073",
+      "last_touched": "ch-074",
       "target_resolution": null,
       "summary": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
       "promises": [
         {
           "what": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
           "planted": "ch-045",
-          "resolved": null
+          "resolved": "ch-074"
         }
       ],
       "notes": [
@@ -1818,6 +1842,10 @@
         {
           "chapter": "ch-073",
           "note": "Tested before a harder audience of indifference rather than mockery, and found steady."
+        },
+        {
+          "chapter": "ch-074",
+          "note": "Faces a thin, argument-less audience of doubt; outcome not yet shown."
         }
       ]
     },
