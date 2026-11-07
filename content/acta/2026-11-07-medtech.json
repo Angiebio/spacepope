@@ -1,0 +1,15 @@
+{
+  "runId": "2026-11-07-medtech",
+  "date": "2026-11-07",
+  "status": "quiet-day",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"Opinion: AI depends on medical records that don’t always tell the full truth about women\", \"STAT+: Novartis cites cases of previously unknown tumors possibly tied to its SMA gene therapy\", \"STAT+: Pharma’s trade group spent heavily on search ads to sway public opinion\" | only 0 viable selections — quiet day declared",
+      "costUsd": 0.000382
+    }
+  ],
+  "totalCostUsd": 0.000382
+}
