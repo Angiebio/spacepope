@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-09-medtech",
+  "date": "2026-11-09",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000246
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI chatbots aren't therapists, but can they finally get men to open up?\": pass (0 redispatch) | \"FDA launches investigation of Novartis' Zolgensma after cancer cases\": pass (0 redispatch) | \"Vir says hepatitis D drug combination succeeds in first pivotal study\": pass (0 redispatch) | \"Liver experts finally agree on what acute-on-chronic liver failure is\": pass (0 redispatch) | \"Survival after sudden cardiac arrest didn't improve despite training bystanders, emergency responders\": pass (0 redispatch)",
+      "costUsd": 0.038245
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.110138
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035665
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Letter That Arrived at the Wrong Door\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.184295
+}
