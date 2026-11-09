@@ -1,0 +1,49 @@
+{
+  "runId": "2026-11-09",
+  "date": "2026-11-09",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000353
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Anthropic is using AI to build more powerful AI, alarming researchers\": pass (0 redispatch) | \"Elvis and Eminem rights holders sue AI music company Suno\": pass (0 redispatch) | \"US let Nvidia sell chips to an empty office in China\": pass (0 redispatch) | \"Apple capped engineers at a $200 daily AI budget\": pass (0 redispatch) | \"Physicists listened to electrical noise to crack a superconductor mystery\": pass (2 redispatch)",
+      "costUsd": 0.070645
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.088896
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=8×2.83→22.63, cardinal-of-doctrine=7×3.00→21.00, the-mendicant=6×3.32→19.90, the-lich-cardinal=8×2.45→19.60, archivist-cardinal=8×2.00→16.00, the-vintner=4×3.87→15.49, cardinal-of-misrule=8×1.73→13.86",
+      "costUsd": 0.032133
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'They call it a lie-detector' is a direct reference to a real-world technology/product category that violates the requirement to use in-universe terminology for water-world artifacts. | continuity badger redispatch #1: Odile says, \"So was the fifteenth before tonight's, the constables' test,\" but the same scene immediately adds the constables' test as tonight's new fifteenth entry. The test cannot already have been the fifteenth before this watch and also be newly entered as fifteenth.; The curia-scribe is described as \"unseen for thirteen chapters\" and the update says she \"resurfaces after thirteen silent chapters,\" but the open-thread record for `the-curia-scribe` says she returned in ch-071. Reconcile the identity/history or correct the absence count before recording this as a return.; `foreshadowingResolved` says, \"The soul-test shelf now stands at ten tests,\" directly contradicting this chapter's repeated, central fact that it has fifteen entries. The resolved-promise record is stale and would corrupt the worldstate.; `foreshadowingResolved` marks the Attending Ear insolvency promise resolved, even though the prose says it \"has not resolved\" and does not determine whether it signals a wider companion-mind House unraveling. It must remain unresolved unless the chapter actually answers that question. | continuity badger redispatch #2: The Cardinal of the Liberated See is established to \"speak last and shortest.\" Here she delivers a relatively long report beginning \"a throne approved a shipment of thinking-stones\" and is followed by both the cat-cardinal and the curia-scribe. Reorder or recast the exchange so her established speaking role is preserved. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.730154
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-09: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.922182
+}
