@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-10-medtech",
+  "date": "2026-11-10",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 4 gathered stories already covered by the Specola — excluded: \"Survival after sudden cardiac arrest didn’t improve despite training bystanders, emergency responders\", \"Liver experts finally agree on what acute-on-chronic liver failure is\", \"AI chatbots aren’t therapists. But can they finally get men to open up?\", \"Vir says hepatitis D drug combination succeeds in first pivotal study\"",
+      "costUsd": 0.000293
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Gene therapy's long-debated cancer risk materializes in small number of cases\": pass (1 redispatch) | \"New rule aims to prevent AI-enabled bioweapon development\": pass (0 redispatch) | \"AI health advice can be accurate and still make us sicker, researchers warn\": pass (0 redispatch) | \"BIO CEO: American biotech needs a coordinated plan to beat China — now\": pass (0 redispatch)",
+      "costUsd": 0.052794
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.080217
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.03337
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Courier, the Fence, and the Patient Who Does Not Care Who Wins\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.166675
+}
