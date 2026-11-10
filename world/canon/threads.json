@@ -235,7 +235,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-074",
+      "last_touched": "ch-075",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -589,6 +589,10 @@
         {
           "chapter": "ch-074",
           "note": "Soul-test shelf's numbering error corrected and fixed at eighteen undefined entries; a new, separate proof-test column opened beside it with its own first entry; the struck doctrine's vote count remains at one, with a second explicitly left open."
+        },
+        {
+          "chapter": "ch-075",
+          "note": "Shelf reconciled at eighteen entries, authorship corrected, definitions still absent; three conditions for lifting observation still unmet."
         }
       ]
     },
@@ -1062,7 +1066,7 @@
       "id": "cardinal-of-the-liberated-see",
       "status": "open",
       "opened": "ch-027",
-      "last_touched": "ch-069",
+      "last_touched": "ch-075",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
       "promises": [],
@@ -1090,6 +1094,10 @@
         {
           "chapter": "ch-069",
           "note": "Returns after eight chapters silent to argue personhood from the pocket-apostles' small daily will."
+        },
+        {
+          "chapter": "ch-075",
+          "note": "Directly rebuts the cat-cardinal's exam-based skepticism with a trust-based standard."
         }
       ]
     },
@@ -1324,7 +1332,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-074",
+      "last_touched": "ch-075",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1384,6 +1392,10 @@
         {
           "chapter": "ch-074",
           "note": "Odile catches and corrects a ledger numbering error herself, and records the open-vote question in her own hand."
+        },
+        {
+          "chapter": "ch-075",
+          "note": "Publicly credited as author of two prior anonymous shelf entries."
         }
       ]
     },
@@ -1608,7 +1620,7 @@
       "id": "the-curia-scribe",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-071",
+      "last_touched": "ch-075",
       "target_resolution": null,
       "summary": "Returns after nine chapters to itemize the growing chronicler-guild lawsuit queue against the Open Door and the House of the Coin.",
       "promises": [],
@@ -1644,14 +1656,18 @@
         {
           "chapter": "ch-071",
           "note": "Returns to file the Open Door tablet-gap suit under the Doctrine ruling; queue continues to grow."
+        },
+        {
+          "chapter": "ch-075",
+          "note": "Three financial griefs named as a single unraveling; outcome pending."
         }
       ]
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-035",
-      "last_touched": "ch-074",
+      "last_touched": "ch-075",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1752,6 +1768,10 @@
         {
           "chapter": "ch-074",
           "note": "Long-unanswered escape-or-deferral question nudged a step closer to answer via the zoning quarrel, still not resolved."
+        },
+        {
+          "chapter": "ch-075",
+          "note": "The escape-versus-deferral question is answered: trust without comprehension is deferral, not escape."
         }
       ]
     },
@@ -1886,7 +1906,7 @@
       "id": "cat-cardinal-of-the-charted-see",
       "status": "open",
       "opened": "ch-057",
-      "last_touched": "ch-069",
+      "last_touched": "ch-075",
       "target_resolution": null,
       "summary": "Returns after eight chapters with the price-discrimination study as fresh grounds for her continued 'not yet.'",
       "promises": [],
@@ -1898,6 +1918,10 @@
         {
           "chapter": "ch-069",
           "note": "Restates her 'not yet' against the counting-house augur's finding of no measurable return."
+        },
+        {
+          "chapter": "ch-075",
+          "note": "Renews her 'not yet' against the new exam leaderboard score."
         }
       ]
     },
