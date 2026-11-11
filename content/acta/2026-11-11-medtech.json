@@ -1,0 +1,30 @@
+{
+  "runId": "2026-11-11-medtech",
+  "date": "2026-11-11",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"Opinion: STAT+: BIO CEO: American biotech needs a coordinated plan to beat China — now\", \"Opinion: AI’s health advice can be accurate and still make us sicker\"",
+      "costUsd": 0.000287
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"MDCalc launches a 'rumble strip' for doctors using generative AI tools\": pass (0 redispatch) | \"Men's use of chatbots for therapy, and earnings season highlights\": pass (0 redispatch) | \"Oura to acquire Counsel Health for $625 million, placing a big bet on AI care\": pass (0 redispatch) | \"GLP-1s are given an FDA warning for rare eye condition risk\": pass (0 redispatch)",
+      "costUsd": 0.037238
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (2 fault(s)) | redispatch budget exhausted after 2 retries",
+      "costUsd": 0.357422
+    }
+  ],
+  "totalCostUsd": 0.394947
+}
