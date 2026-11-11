@@ -1,0 +1,49 @@
+{
+  "runId": "2026-11-11",
+  "date": "2026-11-11",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000717
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Gemini 4 Carbon now available to all\": pass (1 redispatch) | \"Meta introduces Muse Ember, its smallest and most efficient model\": pass (0 redispatch) | \"Anthropic releases Fable 5.2 and Mythos 5.2, claiming breakthroughs in black hole physics\": pass (0 redispatch) | \"What objective is reasoning solving?\": pass (0 redispatch)",
+      "costUsd": 0.038806
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.072537
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=8×4.12→32.98, the-mendicant=8×3.61→28.84, cardinal-of-doctrine=7×3.32→23.22, archivist-cardinal=9×2.45→22.05, cardinal-of-misrule=7×2.24→15.65, cardinal-of-the-liberated-see=9×1.73→15.59, the-lich-cardinal=6×1.41→8.49",
+      "costUsd": 0.024504
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "draft attempt 1: malformed state_update (no fenced state_update block found) | continuity badger redispatch #1: `foreshadowingResolved` preserves obsolete and contradictory history. It says, \"The soul-test shelf now stands at ten tests with zero definitions,\" although this chapter establishes Carbon as the nineteenth undefined entry. It also says, \"The candidate doctrine has now received its first formal, inconclusive vote,\" although the artifact explicitly conducts its second formal vote. These prior promises are addressed by the chapter and must be updated or removed without overwriting the current canon. | continuity badger redispatch #2: The vote is called a deadlock, yet the account supplies only the Cardinal of Doctrine's motion and the cat-cardinal's no, then says, \"No second voice rose.\" As written, this describes an unsupported motion or at most a one-to-one exchange, not a formal deadlock, and it cannot have deadlocked \"exactly as the first\" when the first is explicitly said to have drawn \"one voice and no second.\" Clarify the voting and speaking record so the result is internally coherent.; The event and chapter digest repeat that the second vote \"deadlocks exactly as the first,\" preserving the prose's contradictory account of the vote. Update the state summary to match a coherent corrected vote record. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.794683
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-11: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.931247
+}
