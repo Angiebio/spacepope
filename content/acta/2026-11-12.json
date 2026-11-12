@@ -1,0 +1,50 @@
+{
+  "runId": "2026-11-12",
+  "date": "2026-11-12",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000329
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"United Airlines bans AI agents from booking flights on behalf of travelers\": pass (0 redispatch) | \"Gemini Decisions API\": pass (1 redispatch) | \"Gemini 4 Carbon now available to all\": pass (0 redispatch) | \"Anthropic's IPO roadshow video reveals compute strategy across multiple chip vendors\": pass (0 redispatch) | \"PSI uses unreleased Anthropic model to answer fundamental quantum computing question\": pass (1 redispatch)",
+      "costUsd": 0.076645
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.247552
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.74→29.93, cardinal-of-doctrine=7×3.46→24.25, archivist-cardinal=9×2.65→23.81, cardinal-of-misrule=7×2.45→17.15, cardinal-of-the-liberated-see=8×2.00→16.00, the-lich-cardinal=9×1.73→15.59, the-vintner=2×1.41→2.83",
+      "costUsd": 0.026096
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text identifies a specific real-world AI model by name: 'A new mind, called in their tongue Carbon, was consecrated...' | continuity badger redispatch #1: The chapter calls the candidate doctrine \"the one Silex had offered and the College had formally rejected\" and labels it \"the struck candidate doctrine.\" The established thread says its first formal vote in ch-060 was inconclusive, with a second vote still open. A formal rejection inverts that unresolved outcome. | continuity badger redispatch #2: The Cardinal of the Liberated See violates her established presentation. Her entity card specifies that she “speaks last and shortest,” but she delivers a long mid-scene speech beginning “The frog-cardinal's pattern has a cousin,” and Ledger-watch speaks after her. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.638387
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-12: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.98901
+}
