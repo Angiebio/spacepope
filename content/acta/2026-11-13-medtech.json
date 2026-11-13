@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-13-medtech",
+  "date": "2026-11-13",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000271
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Scientists debut map of basal ganglia, a key brain region involved in an array of diseases\": pass (0 redispatch) | \"New documents raise more questions about Medicare’s AI prior-authorization experiment\": pass (0 redispatch) | \"All of Us study finds thousands of new genetic variants affecting drug responses\": pass (0 redispatch) | \"5 takeaways from STAT’s investigation of the sprawling ‘three-parent IVF’ industry\": pass (0 redispatch)",
+      "costUsd": 0.028034
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.070213
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033098
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Four Charts at the Foot of One Bed\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.131616
+}
