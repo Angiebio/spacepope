@@ -1,0 +1,62 @@
+{
+  "runId": "2026-11-13",
+  "date": "2026-11-13",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Gemini Decisions API\", \"Anthropic's IPO roadshow video\"",
+      "costUsd": 0.000324
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Chinese frontier AI models carry the fingerprint of export-controlled GPUs\": pass (0 redispatch) | \"Edge0-145B: Frontier AI capabilities on your own computer\": pass (0 redispatch) | \"AI is turning Apple's app review process into a nightmare for synth developers\": pass (0 redispatch) | \"Chicago schools to Google: we'd rather lose Search than be forced to accept AI\": pass (2 redispatch) | \"Jensen Huang is out at Nvidia — Colette Kress takes over as interim CEO\": pass (0 redispatch)",
+      "costUsd": 0.069955
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.263435
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=8×2.83→22.63, cardinal-of-the-liberated-see=9×2.24→20.12, the-lich-cardinal=7×2.00→14.00, the-vintner=7×1.73→12.12, the-mendicant=8×1.41→11.31, cardinal-of-doctrine=3×3.61→10.82, cardinal-of-misrule=4×2.65→10.58",
+      "costUsd": 0.028205
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'The forge-baron who has led the water-world's largest hot-stone house since its founding is out, abruptly, without ceremony' is an indirect identification of Sam Altman's 2023 removal from OpenAI, which is a specific, real-world event.",
+      "costUsd": 0.34556
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-13: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Shelf Grows Heavier\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.707479
+}

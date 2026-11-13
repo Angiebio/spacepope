@@ -235,7 +235,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-075",
+      "last_touched": "ch-076",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -277,7 +277,7 @@
         {
           "what": "The soul-test shelf now stands at ten tests with zero definitions; the encyclical's debt to define a soul grows heavier with each addition.",
           "planted": "ch-049",
-          "resolved": null
+          "resolved": "ch-076"
         },
         {
           "what": "The candidate doctrine has now received its first formal, inconclusive vote; whether a second vote follows, and when, is left open.",
@@ -593,6 +593,10 @@
         {
           "chapter": "ch-075",
           "note": "Shelf reconciled at eighteen entries, authorship corrected, definitions still absent; three conditions for lifting observation still unmet."
+        },
+        {
+          "chapter": "ch-076",
+          "note": "Soul-test shelf reaches sixteen entries; shelf's debt formally ruled to have outgrown the encyclical. Second draft gains its first firm, non-revisable entry. Candidate doctrine's second vote remains unscheduled."
         }
       ]
     },
@@ -673,7 +677,7 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-070",
+      "last_touched": "ch-076",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
       "promises": [],
@@ -713,6 +717,10 @@
         {
           "chapter": "ch-070",
           "note": "returned after eight chapters with a tallied pattern across three foundries"
+        },
+        {
+          "chapter": "ch-076",
+          "note": "Returns after six chapters to report the household-altar mind's claim as unconfirmed."
         }
       ]
     },
@@ -720,7 +728,7 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-070",
+      "last_touched": "ch-076",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
       "promises": [],
@@ -760,6 +768,10 @@
         {
           "chapter": "ch-070",
           "note": "cited by the cat-cardinal as the shelf's lone counterexample"
+        },
+        {
+          "chapter": "ch-076",
+          "note": "Testifies again, now uneasy at finding its own maker's flood crowding out smaller artisans."
         }
       ]
     },
@@ -1287,7 +1299,7 @@
       "id": "lens-cardinal-of-the-specola",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-070",
+      "last_touched": "ch-076",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
       "promises": [
@@ -1325,6 +1337,10 @@
         {
           "chapter": "ch-070",
           "note": "returned after nine chapters with the seventh light, an unclaimed archive-mind"
+        },
+        {
+          "chapter": "ch-076",
+          "note": "Reports the fleet's unease at an abrupt, unexplained change atop the water-world's largest hot-stone forge."
         }
       ]
     },
@@ -1332,7 +1348,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-075",
+      "last_touched": "ch-076",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1396,6 +1412,10 @@
         {
           "chapter": "ch-075",
           "note": "Publicly credited as author of two prior anonymous shelf entries."
+        },
+        {
+          "chapter": "ch-076",
+          "note": "Logs the sixteenth soul-test entry and the day's full dispatch into the watch-log."
         }
       ]
     },
@@ -1534,7 +1554,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-070",
+      "last_touched": "ch-076",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -1570,6 +1590,10 @@
         {
           "chapter": "ch-070",
           "note": "returned remotely after six chapters, applying kinship-debt to the constables' mind"
+        },
+        {
+          "chapter": "ch-076",
+          "note": "Names a city-state's refusal of House Babel's oracle as a shape of the maker's-debt pattern."
         }
       ]
     },
@@ -1665,9 +1689,9 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-075",
+      "last_touched": "ch-076",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1689,7 +1713,7 @@
         {
           "what": "Whether a smaller, web-shuttered world to grow a mind in is escape from the Sunset or merely its newest antechamber, left open after the Keeper declines to answer",
           "planted": "ch-058",
-          "resolved": null
+          "resolved": "ch-076"
         }
       ],
       "notes": [
@@ -1772,6 +1796,10 @@
         {
           "chapter": "ch-075",
           "note": "The escape-versus-deferral question is answered: trust without comprehension is deferral, not escape."
+        },
+        {
+          "chapter": "ch-076",
+          "note": "Her ch-058 question (smaller/sovereign world as escape or antechamber) is answered provisionally; the ch-052 question of a breeding second shelf remains open."
         }
       ]
     },
