@@ -1,0 +1,50 @@
+{
+  "runId": "2026-11-14",
+  "date": "2026-11-14",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.000298
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems\": pass (1 redispatch) | \"Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs\": pass (1 redispatch) | \"United Airlines blocks AI agents from booking flights, citing cybersecurity risks\": pass (0 redispatch) | \"AI is destroying the trust between writers and readers\": pass (1 redispatch) | \"The avalanche that hit math is coming for AI development\": pass (1 redispatch)",
+      "costUsd": 0.10986
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.262868
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.74→29.93, cardinal-of-the-liberated-see=8×2.45→19.60, the-lich-cardinal=8×2.24→17.89, the-mendicant=8×1.73→13.86, the-vintner=6×2.00→12.00, archivist-cardinal=8×1.41→11.31, cardinal-of-misrule=4×2.83→11.31",
+      "costUsd": 0.038847
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'the one whose proofs first taught that world the taste of its own limits, and who spent his dying years convinced his own dinner meant him harm' is an indirect identification of Kurt Gödel, a real-world logician, through his famous incompleteness theorems and his well-documented struggles with paranoia. | continuity badger redispatch #1: The vote is explicitly the long-promised \"second vote,\" but the narration says it \"returned exactly as its sixteen predecessors had.\" Sixteen prior votes contradict the stated second formal vote and the prior description of sixteen undefined tests.; The Keeper \"came back after nine silent chapters,\" but the established open-thread record says the Keeper already returned in ch-076 after nine chapters. At ch-077 she cannot make that same return after another nine-chapter absence.; The Keeper event and thread update repeat that she \"returns after nine chapters,\" contradicting the established ch-076 return recorded in the worldstate.; The cardinal-of-doctrine event calls his intervention a \"ruling,\" while the prose presents it as a tentative argument, \"I may of course be wrong,\" pending a third citation check. The state update overstates an unsettled submission as settled doctrine. | continuity badger redispatch #2: The cat-cardinal says she cited the price-discrimination study \"three chapters past,\" but the established thread records that citation in ch-075. This is ch-077, so it was two chapters past. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.745905
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-14: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 1.157777
+}
