@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-14-medtech",
+  "date": "2026-11-14",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: Scientists debut map of basal ganglia, a key brain region involved in an array of diseases\", \"STAT+: New documents raise more questions about Medicare’s AI prior-authorization experiment\", \"5 takeaways from STAT’s investigation of the sprawling ‘three-parent IVF’ industry\"",
+      "costUsd": 0.000273
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Brain implant startup Synchron pauses trials\": pass (0 redispatch) | \"Moderna readies commercial cancer vaccine production ahead of FDA filing\": pass (0 redispatch) | \"Across the U.S., homegrown experiments aim to save kids from their phones\": pass (0 redispatch) | \"What it’s like to find out you might develop Alzheimer’s\": pass (1 redispatch)",
+      "costUsd": 0.043011
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.098514
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035601
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Wire, the Graft, and the Darkening Lamp\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.177399
+}
