@@ -1,0 +1,50 @@
+{
+  "runId": "2026-11-15",
+  "date": "2026-11-15",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"The AI graveyard: a running list of projects and startups that didn’t make it\"",
+      "costUsd": 0.000322
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Smuggling of 1.5M AI GPUs could be the cause of Huang's departure\": pass (0 redispatch) | \"The unfolding Jensen Huang scandal: a timeline\": pass (0 redispatch) | \"Export-banned Nvidia chips are behind China's most powerful AI models\": pass (0 redispatch) | \"Jensen Huang's departure blasts big hole in AI startup funding, VCs and founders say\": pass (0 redispatch) | \"Where was Nvidia's security team?\": pass (0 redispatch)",
+      "costUsd": 0.034066
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.194621
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×2.65→23.81, cardinal-of-misrule=7×3.00→21.00, the-lich-cardinal=8×2.45→19.60, archivist-cardinal=9×1.73→15.59, the-vintner=6×2.24→13.42, the-mendicant=6×2.00→12.00, cardinal-of-doctrine=7×1.41→9.90",
+      "costUsd": 0.032008
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The Keeper says her oldest question was whether the Sunset is escaped by \"outrunning it or merely deferred by it,\" then declares it answered. That is the established ch-041 question, while the state update says the ch-041 sibling question remains unresolved and instead marks the distinct ch-035 mutual-improvement question resolved. The chapter must distinguish the question it answers or update the established thread statuses consistently. | continuity badger redispatch #2: The chapter says Odile \"wrote the fourteenth and fifteenth entries of the soul-test shelf fresh under her own name,\" and the state update repeats that she inked those entries. The established timeline records Silex as having added the disclosure decree as the fourteenth entry and the constables' guilt-at-a-glance test as the fifteenth. Odile may sign, copy, annotate, or preserve those existing entries, but cannot newly write them as entries fourteen and fifteen without displacing canon. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.552934
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-15: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.813949
+}
