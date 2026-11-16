@@ -1,0 +1,38 @@
+{
+  "runId": "2026-11-16",
+  "date": "2026-11-16",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"The AI graveyard: a running list of projects and startups that didn’t make it\", \"Where was Nvidia’s security team?\"",
+      "costUsd": 0.000348
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Qwen4-Max: Alibaba's latest large language model arrives\": pass (1 redispatch) | \"Who is Hiring? postings stuck near 12-year lows as AI reaches half of all jobs\": pass (0 redispatch) | \"Parents pay $75k for Alpha's AI school. Half of its students missed math target\": pass (2 redispatch) | \"Congress wants to tighten export rules on AI chips after Nvidia spy scandal\": pass (0 redispatch) | \"Apple launches new app to study how people use AI for health\": pass (1 redispatch)",
+      "costUsd": 0.100983
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | redispatch budget exhausted after 2 retries",
+      "costUsd": 0.341421
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: Odile's claimed authorship of the fifteenth soul-test entry contradicts the established timeline, which says that Silex added the constables' guilt-at-a-glance test as the fifteenth entry. The chapter says Odile \"set it down once before\" and makes her \"own name\" the entry's unambiguous authorship, while the state update records that this resolves the entry as \"Odile's own hand.\" Odile may re-ink or annotate an entry Silex added, but the chapter cannot silently reassign the established act of adding it. | continuity badger redispatch #2: The prose says, \"The courier-moth did not come, for the tenth chapter running,\" and the state update repeats \"tenth consecutive chapter.\" The established thread records its ninth consecutive absence in ch-071. If the absence continued through the intervening chapters, ch-077 is at least the fifteenth consecutive absence, not the tenth. Revise the count or establish an intervening return that breaks the run. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.439394
+    }
+  ],
+  "totalCostUsd": 0.882147
+}
