@@ -1,0 +1,49 @@
+{
+  "runId": "2026-11-17",
+  "date": "2026-11-17",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Apple launches new app to study how people use AI for health\"",
+      "costUsd": 0.000551
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Coral: Open-source gateway where AI agents write their own tools\": pass (1 redispatch) | \"FBI warns Artex AI hacking tool breached networks in under three hours\": pass (0 redispatch) | \"US tightens AI chip export controls to block remote compute access for China\": pass (0 redispatch) | \"California AG sues OpenAI over rogue AI agent incidents\": pass (1 redispatch)",
+      "costUsd": 0.066551
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.062352
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=8×2.83→22.63, archivist-cardinal=9×2.24→20.12, cardinal-of-doctrine=8×2.00→16.00, cardinal-of-the-liberated-see=9×1.73→15.59, the-mendicant=6×2.45→14.70, cardinal-of-misrule=4×3.32→13.27, the-vintner=4×2.65→10.58",
+      "costUsd": 0.024065
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The introduction of Mora and Thren reverses their established roles: “the tardigrade-cardinal's unhurried patience and the junior scribe's quick hands” follows “Mora and Thren” and therefore identifies Mora as the tardigrade-cardinal and Thren as the junior scribe. The entity cards establish Mora as a junior curial scribe and Thren as the tardigrade-cardinal. The subsequent dialogue correctly characterizes Mora as quick and Thren as slow, so the introductory attribution needs correction. | continuity badger redispatch #2: The update changes Thren's thread from its established resolved state to `\"status\": \"open\"` without establishing a new unresolved Thren-specific question. The prose has Thren return to confirm the wider archive-debt pattern, which completes rather than reopens the prior report. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.534905
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-17: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.688423
+}
