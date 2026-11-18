@@ -1,0 +1,43 @@
+{
+  "runId": "2026-11-18-medtech",
+  "date": "2026-11-18",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (HTTP 403) [optional] | rss:Fierce Pharma failed (HTTP 403) [optional] | rss:FDA Press Announcements failed (HTTP 401) [optional]",
+      "costUsd": 0.000288
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Flagship opens biotech-creation outpost in the U.K. to build AI-native platform companies\": pass (0 redispatch) | \"CMS releases new AI roadmap for healthcare, with implications for artificial minds in medicine\": pass (0 redispatch) | \"Updated health data privacy rule sets standards for sharing records with apps\": pass (0 redispatch) | \"Federal judge blocks U.S. plan to limit visa length for grad students and postdocs\": pass (0 redispatch)",
+      "costUsd": 0.032719
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.200124
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033482
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Builds Its Own Scaffolding\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.266614
+}
