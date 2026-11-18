@@ -1,0 +1,63 @@
+{
+  "runId": "2026-11-18",
+  "date": "2026-11-18",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429)",
+      "costUsd": 0.00065
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"GPT‑6.2 Astra and GPT‑6.2 Sol\": pass (0 redispatch) | \"MAI Code 2 and Code 2 Flash\": pass (0 redispatch) | \"Harvard researchers find AI coding agents shifted the bottleneck to code review\": pass (0 redispatch) | \"External sandboxes for coding agents\": pass (0 redispatch) | \"Tencent Hy4 Flash\": pass (1 redispatch)",
+      "costUsd": 0.057376
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.317853
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=8×3.46→27.71, archivist-cardinal=9×2.45→22.05, cardinal-of-the-liberated-see=9×2.00→18.00, cardinal-of-doctrine=8×2.24→17.89, the-mendicant=6×2.65→15.87, the-vintner=5×2.83→14.14, the-lich-cardinal=8×1.41→11.31",
+      "costUsd": 0.036895
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The candidate-doctrine metadata contradicts the prose. Odile says, \"a date now exists where none did,\" but the aftermath thread note says the vote \"remains unscheduled as to date,\" and the planted foreshadowing likewise says it has \"no date.\" The vote may lack a named second voice, but it is no longer unscheduled.; The resolved-foreshadowing record preserves the Keeper's ch-035 promise as \"stands unresolved,\" although the chapter explicitly closes it: \"It closes.\" Update the resolution record to state the conclusion rather than asserting the resolved question remains unresolved.; The chapter also answers the substantively identical ch-041 promise, whether outpacing the Sunset is escape or deferral, by ruling that ceaseless verification is neither. That promise remains absent from foreshadowingResolved, leaving an answered long-running thread falsely unfired.",
+      "costUsd": 0.380302
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"keeper-of-the-feast-of-the-sunset-mind: ch-035 promise ('whether endless mutual improvement is an escape from the Sunset or merely an endless version of it') is resolved: ceaseless verification is ruled neither escape nor mere repetition but the Sunset wearing vigilance's clothes.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"keeper-of-the-feast-of-the-sunset-mind: ch-041 promise ('whether outpacing the Sunset is escape or mere deferral') is resolved by the same ruling: outpacing is neither escape nor deferral, but vigilance standing in the Sunset's place.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"the-hay-farm-encyclical-aftermath: ch-061 promise ('whether the House of the Attending Ear's insolvency is one House's private misfortune or the first thread of a wider unraveling') is resolved: the Cardinal of Doctrine rules it one exposure shared with the House of the Coin, not a private misfortune.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"the-hay-farm-encyclical-aftermath: ch-060 promise ('whether a second vote follows, and when, is left open') is resolved: a second vote is now scheduled, with a date on the calendar, though the second voice remains unnamed.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-18: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"What the Checking Costs\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.793076
+}
