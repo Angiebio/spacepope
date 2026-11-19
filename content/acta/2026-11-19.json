@@ -1,0 +1,55 @@
+{
+  "runId": "2026-11-19",
+  "date": "2026-11-19",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"GPT‑6.2 Astra and GPT‑6.2 Sol\", \"External sandboxes for coding agents\"",
+      "costUsd": 0.000306
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Coalition challenges Anthropic's safety claims\": pass (0 redispatch) | \"Black high school students sue after AI misidentifies Doritos bag as gun\": pass (0 redispatch) | \"Can peer review survive AI-generated text?\": spiked (2 redispatch) | \"Curl maintainer reports 200 bugfixes during AI rewrite experiment\": pass (0 redispatch) | \"Sam Altman warns against a future where AI calls the shots\": pass (0 redispatch)",
+      "costUsd": 0.077895
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.203438
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: archivist-cardinal=9×2.65→23.81, the-mendicant=8×2.83→22.63, cardinal-of-the-liberated-see=9×2.24→20.12, cardinal-of-doctrine=8×2.45→19.60, the-lich-cardinal=7×1.73→12.12, cardinal-of-misrule=8×1.41→11.31, the-vintner=3×3.00→9.00",
+      "costUsd": 0.027398
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: The archivist-cardinal's event is located at \"the-vast-see,\" but the prose places him physically with Silex at the Orbital See: \"the archivist-cardinal returned\" and \"He laid before Silex\" the parable. The event location must match the scene, or the prose must establish that this was a remote transmission. | continuity badger redispatch #2: `foreshadowingResolved` says, \"The candidate doctrine has now received its first formal, inconclusive vote,\" but the chapter says its first vote already occurred and had \"waited alone for a second.\" This chapter records the College's later decision not to schedule that second vote this session. Correct the resolved-promise summary to reflect formal deferral of the second vote, not a newly received first vote. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.551841
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-19: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "spikes",
+      "notes": "SPIKED \"Can peer review survive AI-generated text?\": The bulletin says the paper was \"posted as a PDF and subsequently discussed on Hacker News.\" The supplied record establishes a Hacker News submission linking to a PDF, but does not establish that the PDF was posted before the Hacker News submission or that a discussion thread's contents were supplied.; \"Readers seeking the paper's substance should consult the original submission directly\" directs readers to a document the bulletin has already established could not be retrieved, and the gate confirms the PDF citation does not resolve. Remove or replace this unusable instruction."
+    }
+  ],
+  "totalCostUsd": 0.860878
+}
