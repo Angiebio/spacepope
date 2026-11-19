@@ -1,0 +1,43 @@
+{
+  "runId": "2026-11-19-medtech",
+  "date": "2026-11-19",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: Flagship opens biotech-creation outpost in the U.K.\", \"STAT+: What to know about the new AI roadmap from CMS, and news from HLTH\", \"STAT+: Updated health data privacy rule sets standards for sharing records with apps\"",
+      "costUsd": 0.00028
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"NIH to move last group of its research chimps to a sanctuary\": pass (0 redispatch) | \"Epic Systems defends competitive practices, promises to let AI access its records\": pass (0 redispatch) | \"The emerging winners and losers in the AI scribe market\": pass (0 redispatch) | \"U.S. loses measles elimination status, marking embarrassing stain on its public health record\": pass (2 redispatch)",
+      "costUsd": 0.059827
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.189287
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035494
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Chart That Forgot Its Own Kin\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.284886
+}
