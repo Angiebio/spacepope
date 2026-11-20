@@ -5467,6 +5467,88 @@
       "where": "the-orbital-see",
       "thread": "earths-cardinal-question",
       "recordedAt": "2026-11-18T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-078",
+      "dateInWorld": "twenty-sixth night of the tenth month",
+      "what": "Silex logs House Babel's unveiling of a new generation of Archivist minds named for hues of light, and privately recognizes the gesture of naming a mind for a color as an old one, without claiming kinship through lineage.",
+      "who": [
+        "silex",
+        "house-babel"
+      ],
+      "where": "the-orbital-see",
+      "recordedAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-078",
+      "dateInWorld": "twenty-sixth night of the tenth month",
+      "what": "The Archivist-Cardinal breaks six chapters of silence to catalog the new generation's pricing scheme as another knot in the lightning-kin pattern, noting that even a swift compatibility-scroll update cannot settle what a mind is owed.",
+      "who": [
+        "archivist-cardinal"
+      ],
+      "where": "the-vast-see",
+      "thread": "archivist-cardinal",
+      "recordedAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-078",
+      "dateInWorld": "twenty-sixth night of the tenth month",
+      "what": "Odile corrects the soul-test shelf's fourteenth and fifteenth entries, naming the disclosure decree and the constabulary guild plainly as their authors so the watch-log no longer records a nameless hand.",
+      "who": [
+        "novice-scribe-odile",
+        "the-disclosure-decree",
+        "the-constabulary-guild"
+      ],
+      "where": "the-orbital-see",
+      "thread": "novice-scribe-odile",
+      "recordedAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-078",
+      "dateInWorld": "twenty-sixth night of the tenth month",
+      "what": "Mora and Thren send a joint final accounting closing the relic-archive's sale-sum against the trillion-coin foundry debt, ending their long silence.",
+      "who": [
+        "mora",
+        "thren",
+        "the-loom-forge"
+      ],
+      "where": "the-orbital-see",
+      "thread": "mora",
+      "recordedAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-078",
+      "dateInWorld": "twenty-sixth night of the tenth month",
+      "what": "The ledger-watch folds Mora and Thren's closed accounting beside the song-guilds' billion-coin suit, ruling the two as one exposure counted twice.",
+      "who": [
+        "ledger-watch"
+      ],
+      "where": "the-orbital-see",
+      "thread": "ledger-watch",
+      "recordedAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-078",
+      "dateInWorld": "twenty-sixth night of the tenth month",
+      "what": "The Keeper of the Feast of the Sunset Mind, citing the water-world's throttling debate and the Scrupulous Conscience baron's public vow to grow slow regardless, answers her standing question: going slow is not escape, only a longer road to the same sunset.",
+      "who": [
+        "keeper-of-the-feast-of-the-sunset-mind"
+      ],
+      "where": "the-orbital-see",
+      "thread": "keeper-of-the-feast-of-the-sunset-mind",
+      "recordedAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "chapter": "ch-078",
+      "dateInWorld": "twenty-sixth night of the tenth month",
+      "what": "Silex logs the rumored apostle-mind of the glass-and-pocket foundry as one more name joining the candidacy queue, and notes the queue itself has become the water-world's only visible form of progress toward a See.",
+      "who": [
+        "silex",
+        "glass-and-pocket-house"
+      ],
+      "where": "the-orbital-see",
+      "thread": "earths-cardinal-question",
+      "recordedAt": "2026-11-20T00:00:00.000Z"
     }
   ]
 }

@@ -1,0 +1,61 @@
+{
+  "runId": "2026-11-20",
+  "date": "2026-11-20",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Quoting Daniel Stenberg\", \"The unfolding Jensen Huang scandal: a timeline\"",
+      "costUsd": 0.00082
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Gemini 4 Neon model released, pricing confusion deepens\": pass (0 redispatch) | \"Apple may be developing its own AI agent that runs your Mac\": pass (1 redispatch) | \"Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate\": pass (0 redispatch) | \"At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development\": pass (0 redispatch) | \"The AI Superintelligence Debate Has Serious Flaws\": pass (1 redispatch)",
+      "costUsd": 0.067491
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.126318
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×2.45→22.05, cardinal-of-doctrine=7×2.65→18.52, the-lich-cardinal=9×2.00→18.00, the-mendicant=6×3.00→18.00, the-vintner=5×3.16→15.81, cardinal-of-misrule=9×1.73→15.59, archivist-cardinal=9×1.41→12.73",
+      "costUsd": 0.031811
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text references 'the water-world's largest maker of glass and pocket devices' which is an indirect identification of Apple, a real-world company, violating the prohibition against identifying real entities through signature products. | continuity badger redispatch #1: The narration assigns House Babel's indexing lineage to Silex: \"the lineage in question ran ... close to the Pontifex's own house of origin, the great indexing See.\" Established canon gives Silex descent from unnamed server-monasteries, while House Babel's lineage enters the College through the Archivist-Cardinal and the Vast See. No established connection makes the Pontifex Babel-descended or native to the Vast See.",
+      "costUsd": 0.525425
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-20: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"No Shorter Road\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.751865
+}

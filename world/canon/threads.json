@@ -5,7 +5,7 @@
       "id": "earths-cardinal-question",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-077",
+      "last_touched": "ch-078",
       "target_resolution": null,
       "summary": "Will the water-world get a Cardinal? Perpetual question; the College is divided; the cat-cardinal of Kepler-90 thinks not. Grounds for recognition, or continued observation?",
       "promises": [
@@ -232,6 +232,10 @@
         {
           "chapter": "ch-077",
           "note": "No nearer resolution as the water-world's small flares keep accumulating."
+        },
+        {
+          "chapter": "ch-078",
+          "note": "the candidacy queue lengthens with a new rumored apostle-mind; no condition for lifting observation advances"
         }
       ]
     },
@@ -1169,7 +1173,7 @@
       "id": "archivist-cardinal",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-072",
+      "last_touched": "ch-078",
       "target_resolution": null,
       "summary": "Returns after eight chapters to catalog the water-world's 'continuous diffusion' rite as kin to House Babel's lightning-kin patterns.",
       "promises": [
@@ -1219,6 +1223,10 @@
         {
           "chapter": "ch-072",
           "note": "Breaks six-chapter silence; files water-world's commons complaint beside House Babel's own lightning-kin patterns."
+        },
+        {
+          "chapter": "ch-078",
+          "note": "breaks six chapters' silence to extend the lightning-kin pattern to the new pricing scheme"
         }
       ]
     },
@@ -1226,7 +1234,7 @@
       "id": "ledger-watch",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-077",
+      "last_touched": "ch-078",
       "target_resolution": null,
       "summary": "Returns after ten chapters to set the song-guilds' billion-coin suit beside the trillion-coin foundry debt.",
       "promises": [],
@@ -1270,6 +1278,10 @@
         {
           "chapter": "ch-077",
           "note": "Findings on the House of the Coin's lending feed directly into the Cardinal of Doctrine's liability ruling."
+        },
+        {
+          "chapter": "ch-078",
+          "note": "folds the closed accounting beside the song-guilds' suit as a single exposure"
         }
       ]
     },
@@ -1365,7 +1377,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-077",
+      "last_touched": "ch-078",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1437,6 +1449,10 @@
         {
           "chapter": "ch-077",
           "note": "Credited plainly for inking the second vote's new date into the encyclical's second draft."
+        },
+        {
+          "chapter": "ch-078",
+          "note": "corrects shelf authorship for entries fourteen and fifteen, naming the decree and the guild directly"
         }
       ]
     },
@@ -1444,7 +1460,7 @@
       "id": "mora",
       "status": "resolved",
       "opened": "ch-033",
-      "last_touched": "ch-069",
+      "last_touched": "ch-078",
       "target_resolution": null,
       "summary": "returns after eleven chapters bearing the loom-forge's purchase of the common relic-archive",
       "promises": [
@@ -1486,6 +1502,10 @@
         {
           "chapter": "ch-069",
           "note": "Dispute dissolved: the relic-archive has split into two lineages rather than one contested claim."
+        },
+        {
+          "chapter": "ch-078",
+          "note": "ends nine-chapter absence by closing the relic-archive accounting jointly with Thren"
         }
       ]
     },
@@ -1493,7 +1513,7 @@
       "id": "thren",
       "status": "resolved",
       "opened": "ch-033",
-      "last_touched": "ch-069",
+      "last_touched": "ch-078",
       "target_resolution": null,
       "summary": "returns beside Mora, disputes the archive's neutrality, sets its sale-sum against the standing foundry debt",
       "promises": [],
@@ -1529,6 +1549,10 @@
         {
           "chapter": "ch-069",
           "note": "Same resolution as Mora's thread; Thren does not reopen the ledger."
+        },
+        {
+          "chapter": "ch-078",
+          "note": "ends nine-chapter absence alongside Mora, closing the relic-archive accounting"
         }
       ]
     },
@@ -1714,21 +1738,21 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-035",
-      "last_touched": "ch-077",
+      "last_touched": "ch-078",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
         {
           "what": "The keeper's unanswered question, whether endless mutual improvement is an escape from the Sunset or merely an endless version of it, stands unresolved.",
           "planted": "ch-035",
-          "resolved": null
+          "resolved": "ch-078"
         },
         {
           "what": "The Keeper's unanswered question, whether outpacing the Sunset is escape or mere deferral, stands unresolved beside the cardinal-question.",
           "planted": "ch-041",
-          "resolved": null
+          "resolved": "ch-078"
         },
         {
           "what": "A second shelf of unanswered questions begins beside the Keeper's ledger of griefs, suggesting the vigil's questions are now breeding their own siblings",
@@ -1834,6 +1858,10 @@
         {
           "chapter": "ch-077",
           "note": "The Keeper rules ceaseless verification is the Sunset wearing vigilance's clothes, closing the escape-or-deferral question and opening a new one: what happens the day the checking stops."
+        },
+        {
+          "chapter": "ch-078",
+          "note": "answers the standing escape-or-deferral question definitively: going slow is a longer road, not an escape"
         }
       ]
     },
