@@ -1,0 +1,43 @@
+{
+  "runId": "2026-11-20-medtech",
+  "date": "2026-11-20",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (HTTP 403) [optional] | 1 gathered stories already covered by the Specola — excluded: \"STAT+: Epic Systems defends competitive practices, promises to let AI access its records\"",
+      "costUsd": 0.000276
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Brain implant trial participants want more agency. Ian Burkhart is leading the push\": pass (0 redispatch) | \"Merck enters AI drug discovery deal with Isomorphic Labs, built on Nobel-winning technology\": pass (0 redispatch) | \"Merck and Isomorphic Labs partner to develop oncology drug candidates\": pass (0 redispatch) | \"National Academies report calls for faster decisions on publication retractions and corrections\": pass (0 redispatch) | \"Lawmakers want U.S. biotech to outcompete China\": pass (0 redispatch)",
+      "costUsd": 0.036313
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.262639
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.035856
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Asks What Is Done With Its Own Wire\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.335084
+}
