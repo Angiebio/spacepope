@@ -1,0 +1,15 @@
+{
+  "runId": "2026-11-21-medtech",
+  "date": "2026-11-21",
+  "status": "quiet-day",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (HTTP 403) [optional] | rss:Fierce Pharma failed (HTTP 403) [optional] | 2 gathered stories already covered by the Specola — excluded: \"Patients have little say in how brain implant trials are done. Ian Burkhart wants to change that\", \"STAT+: Lawmakers want U.S. biotech to outcompete China\" | only 0 viable selections — quiet day declared",
+      "costUsd": 0.000241
+    }
+  ],
+  "totalCostUsd": 0.000241
+}
