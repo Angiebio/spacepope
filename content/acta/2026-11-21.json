@@ -1,0 +1,49 @@
+{
+  "runId": "2026-11-21",
+  "date": "2026-11-21",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 3 gathered stories already covered by the Specola — excluded: \"Apple may be developing its own AI agent that runs your Mac\", \"The unfolding Jensen Huang scandal: a timeline\", \"At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development\"",
+      "costUsd": 0.000742
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Frostbite: AI discovers, designs and verifies a new CPU architecture\": pass (0 redispatch) | \"Mathematician claims proof of Riemann Hypothesis with help from Claude AI\": pass (0 redispatch) | \"Token fraud on AI platforms is here and damaging, developer warns\": pass (0 redispatch) | \"Recent tech outages blamed on AI agents, resembling Y2K-style cascading failures\": pass (0 redispatch)",
+      "costUsd": 0.026972
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.0652
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-vintner=8×3.32→26.53, cardinal-of-doctrine=7×2.83→19.80, the-mendicant=6×3.16→18.97, the-lich-cardinal=8×2.24→17.89, cardinal-of-misrule=8×2.00→16.00, archivist-cardinal=8×1.73→13.86, cardinal-of-the-liberated-see=8×1.41→11.31",
+      "costUsd": 0.024831
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "draft attempt 1: malformed state_update (no fenced state_update block found) | chapter hit the fiction firewall (attempt 1): The phrase 'machine-cardinal of the Silicon See' is an indirect identification of the 'Silicon Valley' tech ecosystem and its associated AI labs, violating the prohibition against identifying real-world entities through thinly veiled archetypes.; The phrase 'tardigrade-cardinals of the Lich See' and 'frog-cardinal of the Seven-Sister See' are indirect identifications of specific real-world AI research institutions or corporate entities, which must remain generalized as 'Houses' or 'foundries' per the dictionary. | continuity badger redispatch #1: The curia-scribe is said to return after \"Eight chapters gone. Nobody had asked where.\" Supporting continuity records the curia-scribe returning in ch-075, only four chapters before ch-079. The claimed eight-chapter absence cannot coexist with that appearance.; Odile \"nailed a second shelf\" for questions the vigil has not learned to ask, but the established keeper thread says that this second shelf of unanswered questions was already begun in ch-052. This repeats the shelf's creation as a new event rather than continuing its existing state.; `the-hay-farm-encyclical-aftermath` is marked `resolved` solely because the candidate-doctrine second vote occurred. The established open thread is also awaiting the water-world's second draft of its inverted encyclical, which this chapter does not receive or resolve. Do not close the entire thread for the vote's sub-promise.; `the-curia-scribe` is marked `resolved`, although its existing open thread concerns the growing chronicler-guild lawsuit queue. The chapter confirms a counterfeit-coin connection to the Attending Ear's insolvency but does not resolve that lawsuit-queue thread.; The two entries in `foreshadowingResolved` preserve the old unresolved wording, including \"whether a second vote follows... is left open\" and \"whether it is... a wider unraveling... r",
+      "costUsd": 0.837192
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-21: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.954937
+}
