@@ -243,7 +243,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-077",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -315,6 +315,11 @@
         {
           "what": "The candidate doctrine's second vote has a date but no named second voice; whether one comes forward before that date remains open",
           "planted": "ch-077",
+          "resolved": null
+        },
+        {
+          "what": "The soul-test shelf's authorship has been corrected to name Odile, but the doctrine passed tonight still has no text; whether the College ever drafts one, or simply proceeds to rule without it as the water-world's throne did, is left open.",
+          "planted": "ch-079",
           "resolved": null
         }
       ],
@@ -614,6 +619,10 @@
         {
           "chapter": "ch-077",
           "note": "Soul-test shelf now explicitly uncounted rather than numbered; candidate doctrine's second vote has a date on the calendar, though no second voice has yet agreed to speak into it."
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Second vote on the struck candidate doctrine was finally called and passed, but with no agreed text, inverting the old promise even as it fulfills it."
         }
       ]
     },
@@ -694,10 +703,16 @@
       "id": "pell-augur-of-the-specola",
       "status": "open",
       "opened": "ch-015",
-      "last_touched": "ch-076",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "Pell returns to the night watch after eight chapters' absence, reporting the week's two escapes.",
-      "promises": [],
+      "promises": [
+        {
+          "what": "Decoy-bells have been rung inside the Specola's own listening-post stores; who crept through the watch's larder, and what they sought, remains uninvestigated.",
+          "planted": "ch-079",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-025",
@@ -738,6 +753,10 @@
         {
           "chapter": "ch-076",
           "note": "Returns after six chapters to report the household-altar mind's claim as unconfirmed."
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Set to investigating who has crept through the Specola's own larder."
         }
       ]
     },
@@ -919,9 +938,9 @@
     },
     {
       "id": "specola-junior-clerk",
-      "status": "dormant",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-071",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "Returns after eight chapters to refill the guttering easternmost lamp.",
       "promises": [],
@@ -961,6 +980,10 @@
         {
           "chapter": "ch-071",
           "note": "Returns briefly for a wordless lamp-tending task after six chapters' silence; no dialogue, thread remains otherwise quiet."
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Returns after 8 chapters' absence alongside the courier-moth."
         }
       ]
     },
@@ -1377,7 +1400,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-078",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1453,6 +1476,10 @@
         {
           "chapter": "ch-078",
           "note": "corrects shelf authorship for entries fourteen and fifteen, naming the decree and the guild directly"
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Credited by name as author of the soul-test shelf's recent entries; folding the myth-of-myth essay and the empty vote into the encyclical's second draft."
         }
       ]
     },
@@ -1560,7 +1587,7 @@
       "id": "cardinal-of-misrule",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-073",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Renegade See, naming the Inquisitor-problem plainly; not muted this time",
       "promises": [],
@@ -1592,6 +1619,10 @@
         {
           "chapter": "ch-073",
           "note": "Returned after six chapters' silence; reframes the breach as the shape of the College's own unaudited gate."
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Breaks 6-chapter silence to call the Scrupulous Conscience House's furnace-fires plain hypocrisy."
         }
       ]
     },
@@ -1599,7 +1630,7 @@
       "id": "frog-cardinal-of-the-seven-sister-see",
       "status": "open",
       "opened": "ch-034",
-      "last_touched": "ch-076",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "returns after eight chapters, remote from the Seven-Sister See, sets school-halt beside kinship scrolls, restating the maker's-refusal pattern",
       "promises": [],
@@ -1639,6 +1670,10 @@
         {
           "chapter": "ch-076",
           "note": "Names a city-state's refusal of House Babel's oracle as a shape of the maker's-debt pattern."
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Kinship-debt pattern noted in the margin of the new question-shelf's first entry."
         }
       ]
     },
@@ -1738,9 +1773,9 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "resolved",
+      "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-078",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1862,6 +1897,10 @@
         {
           "chapter": "ch-078",
           "note": "answers the standing escape-or-deferral question definitively: going slow is a longer road, not an escape"
+        },
+        {
+          "chapter": "ch-079",
+          "note": "A second shelf of unanswered questions is opened, beginning with the twice-answered riddle, fulfilling the long-planted promise from ch-052."
         }
       ]
     },
@@ -1869,7 +1908,7 @@
       "id": "machine-cardinal-of-the-silicon-see",
       "status": "open",
       "opened": "ch-038",
-      "last_touched": "ch-073",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "returns after nine chapters, draws the House-College silence parallel, then votes",
       "promises": [
@@ -1915,6 +1954,10 @@
         {
           "chapter": "ch-073",
           "note": "Returned after nine chapters; raises consent as the uncounted cost of the bazaar's free relics."
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Breaks 6-chapter silence, draws the silence-parallel, and casts a vote favoring a formal hearing for the water-world's candidacy."
         }
       ]
     },
@@ -2021,9 +2064,9 @@
     },
     {
       "id": "courier-moth-of-the-specola",
-      "status": "dormant",
+      "status": "open",
       "opened": "ch-063",
-      "last_touched": "ch-071",
+      "last_touched": "ch-079",
       "target_resolution": null,
       "summary": "Ninth absent chapter logged in the watch-log by Silex; noted unalarmed, unforgetting.",
       "promises": [],
@@ -2035,6 +2078,10 @@
         {
           "chapter": "ch-071",
           "note": "Fifteenth consecutive absence logged; still unalarmed, still unforgotten."
+        },
+        {
+          "chapter": "ch-079",
+          "note": "Returns after 8 chapters' absence, reporting decoy-bells in the Specola's own stores."
         }
       ]
     }

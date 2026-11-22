@@ -1,0 +1,63 @@
+{
+  "runId": "2026-11-22",
+  "date": "2026-11-22",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 2 gathered stories already covered by the Specola — excluded: \"Quoting Levent Alpöge\", \"Here are the top AI agents that can live in your text messages\"",
+      "costUsd": 0.000583
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Pandex – Official European Law for AI Agents, over MCP\": pass (2 redispatch) | \"The Mythology of Conscious AI\": pass (1 redispatch) | \"AI claims solution to 167-year-old Riemann hypothesis, alongside human proof\": pass (1 redispatch) | \"Anthropic's 2028 power mix: 87% gas and 11% coal\": pass (1 redispatch) | \"AI Supply Chain Security: What Canary Tokens Found\": pass (1 redispatch)",
+      "costUsd": 0.120979
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (3 fault(s))",
+      "costUsd": 0.201268
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-doctrine=8×3.00→24.00, the-mendicant=6×3.32→19.90, archivist-cardinal=8×2.00→16.00, cardinal-of-the-liberated-see=7×1.73→12.12, the-lich-cardinal=4×2.45→9.80, cardinal-of-misrule=4×2.24→8.94, the-vintner=3×1.41→4.24",
+      "costUsd": 0.037315
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The phrase 'Silicon See' is an indirect identification of the real-world tech industry/Silicon Valley, which is not a sanctioned in-universe name for a See. | chapter hit the fiction firewall (attempt 2): The phrase 'A House that catechizes its minds toward gentleness, writes them careful rules of conscience, apologizes on their behalf before they have done anything wrong' is an unmistakable, specific description of the real-world entity Anthropic (House of the Scrupulous Conscience), violating the prohibition against indirect identification of real-world AI labs. | continuity badger redispatch #1: `foreshadowingResolved` says the candidate doctrine “has now received its first formal, inconclusive vote” and that “whether a second vote follows ... is left open,” but the chapter explicitly performs the long-deferred second vote: “Call the second vote,” followed by the College passing it. The stale resolution note inverts the event just recorded and will corrupt subsequent continuity.",
+      "costUsd": 0.658101
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "foreshadowingResolved \"The candidate doctrine's long-deferred second vote is finally called and passes the College, though it ratifies the doctrine in principle with no agreed text, leaving the doctrine's wording as undefined as before.\" matches no planted promise — payoff before setup? | foreshadowingResolved \"The second shelf of unanswered questions beside the Keeper's ledger of griefs has now taken written shape, beginning with the twice-answered riddle.\" matches no planted promise — payoff before setup?",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-22: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Vote With No Text\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 1.018246
+}
