@@ -90,6 +90,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # The bell needs its rope. `--label pipeline` fails when the label was
+          # never created, and it never was, so the 21-22NOV2026 alarms died
+          # with the runs they were meant to report. --force makes this idempotent.
+          gh label create pipeline --color B60205 --description "Scheduled pipeline alarms" --force
           gh issue create \
             --title "Daily run failed: $(date -u +%F)" \
             --body "The daily-dispatch workflow failed. The Acta (if written) has the crash note in content/acta/. Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \

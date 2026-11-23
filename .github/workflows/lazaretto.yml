@@ -92,6 +92,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # The bell needs its rope (see daily.yml): create the label before using it.
+          gh label create pipeline --color B60205 --description "Scheduled pipeline alarms" --force
           gh issue create \
             --title "Lazaretto run failed: $(date -u +%F)" \
             --body "The lazaretto-rounds workflow (--beat=medtech) failed. The Acta (if written) has the crash note in content/acta/*-medtech.json. Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \

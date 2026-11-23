@@ -46,6 +46,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # The bell needs its rope (see daily.yml): create the label before using it.
+          gh label create pipeline --color B60205 --description "Scheduled pipeline alarms" --force
           # liveness.mjs prints one JSON line per vacancy.
           grep '^{' roll-call.txt | while read -r line; do
             member=$(echo "$line" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).sedeVacante))")

@@ -1,7 +1,7 @@
 ---
 title: 'Frostbite: AI discovers, designs and verifies a new CPU architecture'
 date: '2026-11-21'
-storyId: 000028228240
+storyId: '000028228240'
 citations:
   - title: 'Frostbite: A new CPU architecture discovered, designed and verified by AI'
     url: 'https://architectlabs.com/blog/frostbite'

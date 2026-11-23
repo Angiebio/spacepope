@@ -75,6 +75,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # The bell needs its rope (see daily.yml): create the label before using it.
+          gh label create pipeline --color B60205 --description "Scheduled pipeline alarms" --force
           gh issue create \
             --title "Angelus failed: week of $(date -u +%F)" \
             --body "The angelus-galacticus workflow failed. Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \

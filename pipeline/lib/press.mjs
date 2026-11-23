@@ -1,4 +1,5 @@
-// pipeline/lib/press.mjs — v1.2 — 18JUL2026 (beat-aware: writeLazaretto + writeRounds for the body-beat)
+// pipeline/lib/press.mjs — v1.3 — 22NOV2026 (one YAML tongue: frontmatter is written by the same js-yaml 4 that Astro reads with)
+//   v1.2 — 18JUL2026 (beat-aware: writeLazaretto + writeRounds for the body-beat)
 //
 // The press room: the only door through which anything reaches content/.
 // Every writer here emits frontmatter that satisfies src/content.config.ts
@@ -15,6 +16,29 @@
 import { writeFileSync, mkdirSync, existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import matter from 'gray-matter';
+import yaml from 'js-yaml';
+
+// Practical: gray-matter's built-in YAML engine is js-yaml 3, but Astro parses
+// frontmatter with js-yaml 4, and the two disagree about leading zeros. js-yaml 3
+// reads `000028228240` as a failed octal, so it calls it a string and writes it
+// bare. js-yaml 4 reads the same bare token as the integer 28228240, and the
+// zod schema rejects the number. That one storyId (a 12-hex hash that happened
+// to draw no letters, roughly a 1-in-50 day) stopped the build and every deploy
+// from 21NOV2026 on.
+// Philosophical: a scribe and a reader who speak different dialects will agree
+// on almost every word, and the press stops on the one they don't. So the
+// scribe now speaks the reader's tongue. js-yaml 4's dump quotes exactly the
+// strings that js-yaml 4's load would turn into something else, so whatever we
+// write comes back as we wrote it. Keep this engine in step with the js-yaml
+// that astro depends on (see package.json).
+const FRONTMATTER = {
+  engines: {
+    yaml: {
+      parse: (str) => yaml.load(str),
+      stringify: (data) => yaml.dump(data),
+    },
+  },
+};
 
 /** Map a fal content-type to the file extension the darkroom will re-encode from. */
 function extForContentType(contentType = 'image/jpeg') {
@@ -58,7 +82,7 @@ function clean(obj) {
 function writeDoc(dir, filename, frontmatter, body) {
   mkdirSync(dir, { recursive: true });
   const path = join(dir, filename);
-  writeFileSync(path, matter.stringify(`\n${body.trim()}\n`, frontmatter), 'utf8');
+  writeFileSync(path, matter.stringify(`\n${body.trim()}\n`, frontmatter, FRONTMATTER), 'utf8');
   return path;
 }
 

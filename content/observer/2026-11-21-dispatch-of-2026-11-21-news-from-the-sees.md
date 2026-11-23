@@ -2,7 +2,7 @@
 title: 'Dispatch of 2026-11-21: News from the Sees'
 date: '2026-11-21'
 storyIds:
-  - 000028228240
+  - '000028228240'
   - b8e1839046bc
   - e486efe85b2a
   - 52653ae3ad73
