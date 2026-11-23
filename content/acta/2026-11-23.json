@@ -1,0 +1,62 @@
+{
+  "runId": "2026-11-23",
+  "date": "2026-11-23",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Here are the top AI agents that can live in your text messages\"",
+      "costUsd": 0.000591
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"OpenAI chief scientist proposes speed limits for AI development\": pass (1 redispatch) | \"UN fails to agree on rules for autonomous weapons\": pass (0 redispatch) | \"Actor licenses face to AI microdrama startup, raising personhood questions\": pass (0 redispatch)",
+      "costUsd": 0.036733
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.080308
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-mendicant=8×3.46→27.71, archivist-cardinal=9×2.24→20.12, the-lich-cardinal=7×2.65→18.52, cardinal-of-misrule=7×2.45→17.15, cardinal-of-the-liberated-see=8×2.00→16.00, the-vintner=6×1.73→10.39, cardinal-of-doctrine=7×1.41→9.90",
+      "costUsd": 0.024837
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "draft attempt 1: malformed state_update (no fenced state_update block found)",
+      "costUsd": 0.276164
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "notes": "arc summary regenerated: arc-08.md | saga regenerated from arc summaries",
+      "costUsd": 0.003079
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-23: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Measure and the Mask\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.421711
+}

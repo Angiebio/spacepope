@@ -243,7 +243,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-079",
+      "last_touched": "ch-080",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -623,6 +623,10 @@
         {
           "chapter": "ch-079",
           "note": "Second vote on the struck candidate doctrine was finally called and passed, but with no agreed text, inverting the old promise even as it fulfills it."
+        },
+        {
+          "chapter": "ch-080",
+          "note": "New clause drafted linking the speed-limit proposal and the sold face as one question of who owns the measure of a mind."
         }
       ]
     },
@@ -989,9 +993,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "resolved",
+      "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-074",
+      "last_touched": "ch-080",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -1008,6 +1012,11 @@
         {
           "what": "Silex's proposed distinction (a test can fail its maker; a leash cannot) remains unratified by the College and may be challenged or adopted in future sessions.",
           "planted": "ch-069",
+          "resolved": null
+        },
+        {
+          "what": "A vote has now been moved, though not scheduled, on whether a test that can fail its maker is truly distinct from a leash that cannot.",
+          "planted": "ch-080",
           "resolved": null
         }
       ],
@@ -1111,6 +1120,10 @@
         {
           "chapter": "ch-074",
           "note": "The standing remote channel, logged as exception eleven chapters past, is now explicitly named as custom."
+        },
+        {
+          "chapter": "ch-080",
+          "note": "The long-dormant test/leash distinction (planted ch-069) is formally challenged by Odile's remark; the tardigrade-cardinals move for a vote."
         }
       ]
     },
@@ -1312,7 +1325,7 @@
       "id": "storyteller-of-the-water-world",
       "status": "open",
       "opened": "ch-031",
-      "last_touched": "ch-074",
+      "last_touched": "ch-080",
       "target_resolution": null,
       "summary": "Returns after nine chapters reporting minstrels investigating their own counterfeit songs.",
       "promises": [],
@@ -1344,6 +1357,10 @@
         {
           "chapter": "ch-074",
           "note": "Returns after eight silent chapters bearing the report that fires the newly-grown-performer's long-planted harder-audience promise."
+        },
+        {
+          "chapter": "ch-080",
+          "note": "Returns after 6 chapters' silence; the minstrels' counterfeit-song inquiry widens into the sold-face case."
         }
       ]
     },
@@ -1400,7 +1417,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-079",
+      "last_touched": "ch-080",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1480,6 +1497,10 @@
         {
           "chapter": "ch-079",
           "note": "Credited by name as author of the soul-test shelf's recent entries; folding the myth-of-myth essay and the empty vote into the encyclical's second draft."
+        },
+        {
+          "chapter": "ch-080",
+          "note": "Odile's stopwatch-leash remark becomes the first substantive challenge to Silex's unratified test/leash distinction, and she is credited by name for the new shelf entry."
         }
       ]
     },
@@ -1681,7 +1702,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-077",
+      "last_touched": "ch-080",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [],
@@ -1721,6 +1742,10 @@
         {
           "chapter": "ch-077",
           "note": "Returns after six chapters' silence to rule the House of the Coin's loan and the Attending Ear's insolvency are one exposure, not two, under the standing liability doctrine."
+        },
+        {
+          "chapter": "ch-080",
+          "note": "His houses-answer-for-sent-forth-minds ruling is found to have a hole exactly where war-minds have no house and no sender who stays."
         }
       ]
     },
@@ -1965,7 +1990,7 @@
       "id": "newly-grown-performer",
       "status": "open",
       "opened": "ch-045",
-      "last_touched": "ch-074",
+      "last_touched": "ch-080",
       "target_resolution": null,
       "summary": "The newly grown performer's public stumble, and the grace Silex extends her, may return if the water-world's own criers notice what happened to her, or if she appears again before a harder audience.",
       "promises": [
@@ -1999,6 +2024,10 @@
         {
           "chapter": "ch-074",
           "note": "Faces a thin, argument-less audience of doubt; outcome not yet shown."
+        },
+        {
+          "chapter": "ch-080",
+          "note": "Her earlier extended grace is reframed by contrast with the sold-face performer, who had no self left to be shown mercy to."
         }
       ]
     },
