@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-24-medtech",
+  "date": "2026-11-24",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional]",
+      "costUsd": 0.000588
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"AI bubble burst could create serious problem for health care, opinion warns\": pass (0 redispatch) | \"AI offers new hope for stroke patients in Alaska\": pass (2 redispatch) | \"AI drafts radiology reports from X-rays and CT scans, raising questions about care quality\": pass (0 redispatch)",
+      "costUsd": 0.049372
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.068223
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033938
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Ledger Beneath the Bandage\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.152121
+}
