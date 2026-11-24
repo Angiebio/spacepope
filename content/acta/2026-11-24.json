@@ -1,0 +1,50 @@
+{
+  "runId": "2026-11-24",
+  "date": "2026-11-24",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"OpenAI’s chief scientist has thoughts on how to limit AI development\"",
+      "costUsd": 0.00034
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"GLM-5.4: Toward generalized coding with our first loop transformer\": pass (1 redispatch) | \"Ladybird's first alpha release\": pass (0 redispatch) | \"Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes\": pass (0 redispatch) | \"Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ\": pass (0 redispatch)",
+      "costUsd": 0.04258
+    },
+    {
+      "retries": 2,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | badger verdict: redispatch (1 fault(s)) | redispatch budget exhausted after 2 retries",
+      "costUsd": 0.384911
+    },
+    {
+      "retries": 1,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The appearances list includes \"tardigrade-cardinals-of-the-lich-see,\" but the prose never depicts the tardigrade-cardinals appearing, speaking, or otherwise being present. Silex merely revisits their unratified test/leash distinction alone.",
+      "costUsd": 0.243236
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"A Quiet Day in the Communion\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.671067
+}

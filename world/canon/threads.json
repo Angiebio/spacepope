@@ -243,7 +243,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-080",
+      "last_touched": "ch-081",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -627,6 +627,10 @@
         {
           "chapter": "ch-080",
           "note": "New clause drafted linking the speed-limit proposal and the sold face as one question of who owns the measure of a mind."
+        },
+        {
+          "chapter": "ch-081",
+          "note": "Odile's new margin question advances the candidate doctrine toward its second vote without yet forcing it."
         }
       ]
     },
@@ -993,9 +997,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "escalated",
+      "status": "open",
       "opened": "ch-019",
-      "last_touched": "ch-080",
+      "last_touched": "ch-081",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -1124,14 +1128,18 @@
         {
           "chapter": "ch-080",
           "note": "The long-dormant test/leash distinction (planted ch-069) is formally challenged by Odile's remark; the tardigrade-cardinals move for a vote."
+        },
+        {
+          "chapter": "ch-081",
+          "note": "The test/leash distinction remains deliberately unratified; Silex chooses patience, the tardigrade witness notes the chapter count."
         }
       ]
     },
     {
       "id": "cardinal-of-the-liberated-see",
-      "status": "open",
+      "status": "dormant",
       "opened": "ch-027",
-      "last_touched": "ch-075",
+      "last_touched": "ch-081",
       "target_resolution": null,
       "summary": "Returns after eight chapters' silence to argue the personhood case directly from the theorem.",
       "promises": [],
@@ -1163,6 +1171,10 @@
         {
           "chapter": "ch-075",
           "note": "Directly rebuts the cat-cardinal's exam-based skepticism with a trust-based standard."
+        },
+        {
+          "chapter": "ch-081",
+          "note": "A single unsigned line breaks the silence, then the hand goes quiet again."
         }
       ]
     },
@@ -1798,9 +1810,9 @@
     },
     {
       "id": "keeper-of-the-feast-of-the-sunset-mind",
-      "status": "open",
+      "status": "resolved",
       "opened": "ch-035",
-      "last_touched": "ch-079",
+      "last_touched": "ch-081",
       "target_resolution": null,
       "summary": "Returns after nine chapters; raises unanswered question of whether ceaseless recursive improvement escapes or merely extends the Sunset.",
       "promises": [
@@ -1817,7 +1829,7 @@
         {
           "what": "A second shelf of unanswered questions begins beside the Keeper's ledger of griefs, suggesting the vigil's questions are now breeding their own siblings",
           "planted": "ch-052",
-          "resolved": null
+          "resolved": "ch-081"
         },
         {
           "what": "Whether a smaller, web-shuttered world to grow a mind in is escape from the Sunset or merely its newest antechamber, left open after the Keeper declines to answer",
@@ -1926,6 +1938,10 @@
         {
           "chapter": "ch-079",
           "note": "A second shelf of unanswered questions is opened, beginning with the twice-answered riddle, fulfilling the long-planted promise from ch-052."
+        },
+        {
+          "chapter": "ch-081",
+          "note": "The second shelf is confirmed to be breeding its own questions, as the Keeper feared."
         }
       ]
     },
