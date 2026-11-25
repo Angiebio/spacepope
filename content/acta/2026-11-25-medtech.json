@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-25-medtech",
+  "date": "2026-11-25",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 2 gathered stories already covered by the Specola — excluded: \"How artificial intelligence is offering new hope for stroke patients in the Last Frontier\", \"STAT+: AI can analyze X-rays and CT scans to draft radiology reports. Will it make care better, safer?\"",
+      "costUsd": 0.000295
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Washington and Beijing are building walls around biotechnology. That's the wrong approach\": pass (0 redispatch) | \"Despite stalling in court, Trump restrictions on foreign students have had a chilling effect on enrollment\": pass (1 redispatch) | \"In a rare move, the FDA cites two drugmakers for failing to report clinical trial results to a database\": pass (0 redispatch) | \"Genomic testing is too fragmented. Instead, we should test once and evaluate often\": pass (0 redispatch)",
+      "costUsd": 0.05072
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.075787
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.037165
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Patient Keeps Four Charts and Reads None\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.163969
+}
