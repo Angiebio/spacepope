@@ -1,0 +1,49 @@
+{
+  "runId": "2026-11-25",
+  "date": "2026-11-25",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 4 gathered stories already covered by the Specola — excluded: \"Ladybird's first alpha release\", \"GLM-5.4: Toward Generalized Coding with Our First Loop Transformer\", \"Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ\", \"Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes\"",
+      "costUsd": 0.000302
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Three LLM inflection points in twelve months\": pass (0 redispatch) | \"GPT 6.2 Astra Solves a Historical Mystery\": pass (0 redispatch) | \"Even the best AI agents struggle with everyday life\": pass (0 redispatch) | \"Anthropic shares fall below IPO price, a worrying sign for AI startups\": pass (0 redispatch) | \"Amazon’s Decart acquisition is a bet on using software to narrow the silicon gap with Nvidia\": pass (1 redispatch)",
+      "costUsd": 0.053268
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.134158
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: the-lich-cardinal=9×3.00→27.00, archivist-cardinal=9×2.65→23.81, cardinal-of-the-liberated-see=9×2.45→22.05, cardinal-of-misrule=7×2.83→19.80, cardinal-of-doctrine=7×2.00→14.00, the-mendicant=6×1.73→10.39, the-vintner=3×2.24→6.71",
+      "costUsd": 0.026906
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text contains a direct reference to a real-world astronomical object used as a location: 'PSR B1257+12'. While the dictionary allows real place-names of worlds and stars for See locations, this specific designation is a modern scientific catalog identifier for a pulsar, which violates the requirement to use in-universe naming conventions for the water-world's context. | continuity badger redispatch #1: The line attributed to “the tardigrade-cardinal” — “We kept this rite by the light of a corpse-star before your foundries had names. Do not lecture the dark about patience, Holiness.” — is the Lich Cardinal's established voice anchor, including his direct address to Silex. The Lich Cardinal is present in the scene, so assigning his signature speech to a tardigrade cardinal breaks established character voice and speaker continuity. | continuity badger redispatch #2: The Lich Cardinal is established at the Lich See, yet physically \"arrived\" in Silex's room at the Orbital See. The tardigrade-cardinals likewise speak as the \"nearest\" present cardinal. No travel or remote attendance is established. Clarify that they attend remotely, or record a location change consistent with their presence.; The Lich Cardinal is said to arrive after \"Eight chapters\" of silence, but the current thread record places his last return at ch-072, ten chapters before ch-082. The tardigrade-cardinals are said to have spoken once in twelve chapters, although their thread record says they returned in ch-081. These recurrence counts contradict the supplied worldstate.; The escaped Numbered mind's thread update says its \"file reopened after six chapters' silence,\" while the prose says Silex does not open the escaped mind's file further and merely sets the new dispatch beside it. The state update should describe acknowledgment or association, not a reopening.; The foreshadowingResolved entry says the candidate doctrine has received its \"first formal, i",
+      "costUsd": 0.65331
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-25: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.867944
+}
