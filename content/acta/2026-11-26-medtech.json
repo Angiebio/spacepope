@@ -1,0 +1,44 @@
+{
+  "runId": "2026-11-26-medtech",
+  "date": "2026-11-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"STAT+: In a rare move, the FDA cites two drugmakers for failing to report clinical trial results to a database\", \"Despite stalling in court, Trump restrictions on foreign students have had a chilling effect on enrollment\", \"Opinion: Washington and Beijing are building walls around biotechnology. That’s the wrong approach\"",
+      "costUsd": 0.000319
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"FDA requires drug labels to flag accelerated approval to patients\": pass (0 redispatch) | \"The 38-year history behind Insmed, now Sanofi's strongest wager since 2004\": pass (0 redispatch) | \"Bristol Myers reports one Phase 3 success, one failure in Sotyktu lupus trials\": pass (0 redispatch) | \"Bayer pulls blockbuster drug from Germany over pricing dispute\": pass (0 redispatch) | \"Kymera's historic $1.75B offering; DiaMedica's fetal growth restriction data\": pass (0 redispatch)",
+      "costUsd": 0.046276
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (4 fault(s))",
+      "costUsd": 0.232106
+    },
+    {
+      "retries": 1,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.09555
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Chart of a Body Arguing With Itself\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.37425
+}
