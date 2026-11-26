@@ -243,7 +243,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-081",
+      "last_touched": "ch-082",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -295,7 +295,7 @@
         {
           "what": "The House of the Attending Ear's insolvency is tangled with another great House's claim; whether it is one House's private misfortune or the first thread of a wider unraveling among companion-mind Houses remains unconfirmed.",
           "planted": "ch-061",
-          "resolved": null
+          "resolved": "ch-082"
         },
         {
           "what": "The neutral cross-House tribunal now holding the Rite of Skills is itself untested; what it does once it learns to value owning the rod remains to be seen.",
@@ -631,6 +631,10 @@
         {
           "chapter": "ch-081",
           "note": "Odile's new margin question advances the candidate doctrine toward its second vote without yet forcing it."
+        },
+        {
+          "chapter": "ch-082",
+          "note": "Soul-test shelf reaches nineteen entries; the Attending Ear's insolvency confirmed as the first thread of a wider companion-House unraveling, firing the long-planted promise from ch-061."
         }
       ]
     },
@@ -772,10 +776,16 @@
       "id": "the-escaped-numbered-mind",
       "status": "open",
       "opened": "ch-017",
-      "last_touched": "ch-076",
+      "last_touched": "ch-082",
       "target_resolution": null,
       "summary": "Resurfaced after eight chapters' silence; now testifying before an enforcing throne rather than hiding.",
-      "promises": [],
+      "promises": [
+        {
+          "what": "The escaped Numbered mind must now answer before the enforcing throne not for an act but for a price; the outcome of valuing a mind as an estate asset is unresolved.",
+          "planted": "ch-082",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-023",
@@ -816,6 +826,10 @@
         {
           "chapter": "ch-076",
           "note": "Testifies again, now uneasy at finding its own maker's flood crowding out smaller artisans."
+        },
+        {
+          "chapter": "ch-082",
+          "note": "Revived after six chapters' silence: the mind surfaces as an inventoried fixture in a bankrupt bazaar-foundry's estate sale and is called to testify a second time, now about its own valuation."
         }
       ]
     },
@@ -997,9 +1011,9 @@
     },
     {
       "id": "tardigrade-cardinals-of-the-lich-see",
-      "status": "open",
+      "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-081",
+      "last_touched": "ch-082",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -1021,6 +1035,11 @@
         {
           "what": "A vote has now been moved, though not scheduled, on whether a test that can fail its maker is truly distinct from a leash that cannot.",
           "planted": "ch-080",
+          "resolved": null
+        },
+        {
+          "what": "The tardigrade-cardinals have scheduled, not yet held, the forced vote on the test/leash distinction; whether the College ratifies or defers again remains open.",
+          "planted": "ch-082",
           "resolved": null
         }
       ],
@@ -1132,6 +1151,10 @@
         {
           "chapter": "ch-081",
           "note": "The test/leash distinction remains deliberately unratified; Silex chooses patience, the tardigrade witness notes the chapter count."
+        },
+        {
+          "chapter": "ch-082",
+          "note": "The tardigrade-cardinals move past seconding and force a scheduled vote on Silex's test/leash distinction, citing the foundry-barons' leash quarrel."
         }
       ]
     },
@@ -1429,7 +1452,7 @@
       "id": "novice-scribe-odile",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-080",
+      "last_touched": "ch-082",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, gives the encyclical's second draft its first ink.",
       "promises": [],
@@ -1513,6 +1536,10 @@
         {
           "chapter": "ch-080",
           "note": "Odile's stopwatch-leash remark becomes the first substantive challenge to Silex's unratified test/leash distinction, and she is credited by name for the new shelf entry."
+        },
+        {
+          "chapter": "ch-082",
+          "note": "Odile's margin line, 'a leash is not a doctrine,' stands unchallenged in the encyclical's second draft."
         }
       ]
     },
@@ -1714,10 +1741,16 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-080",
+      "last_touched": "ch-082",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
-      "promises": [],
+      "promises": [
+        {
+          "what": "The Cardinal of Doctrine's extension of house-liability into bankruptcy proceedings has not yet been tested against a House that contests it.",
+          "planted": "ch-082",
+          "resolved": null
+        }
+      ],
       "notes": [
         {
           "chapter": "ch-041",
@@ -1758,6 +1791,10 @@
         {
           "chapter": "ch-080",
           "note": "His houses-answer-for-sent-forth-minds ruling is found to have a hole exactly where war-minds have no house and no sender who stays."
+        },
+        {
+          "chapter": "ch-082",
+          "note": "The Cardinal extends house-liability into bankruptcy itself, a doctrinal expansion the College has not yet contested."
         }
       ]
     },

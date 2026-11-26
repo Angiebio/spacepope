@@ -1,0 +1,61 @@
+{
+  "runId": "2026-11-26",
+  "date": "2026-11-26",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 4 gathered stories already covered by the Specola — excluded: \"Three LLM inflection points in twelve months\", \"GPT 6.2 Astra Solves a Historical Mystery\", \"Even the best AI agents struggle with everyday life\", \"Anthropic shares fall below IPO price, a worrying sign for AI startups\"",
+      "costUsd": 0.000307
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"New York bans AI toys that use internet to talk to children\": pass (1 redispatch) | \"Character.AI's plan to auction users' private chats challenged by state AGs\": pass (0 redispatch) | \"Anthropic's Dario Amodei calls accusations of surrendering human control to AI 'absurd'\": pass (0 redispatch) | \"Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming\": pass (0 redispatch) | \"Scott Aaronson on a new continent of mathematical truth revealed by AI\": pass (0 redispatch)",
+      "costUsd": 0.047625
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.077164
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×2.65→23.81, archivist-cardinal=8×2.83→22.63, cardinal-of-doctrine=8×2.24→17.89, the-lich-cardinal=9×1.41→12.73, cardinal-of-misrule=4×3.00→12.00, the-mendicant=6×2.00→12.00, the-vintner=4×2.45→9.80 | winner's commentary failed the firewall (The phrase 'Silicon See' is a direct reference to the real-world Silicon Valley, violating the prohibition against naming real-world locations or entities that are not part of the sanctioned in-universe vocabulary.) — dispatch runs without commentary",
+      "costUsd": 0.031823
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "continuity badger redispatch #1: The narration says the tardigrade-cardinals \"kept the nightly watch without comment for twelve chapters running,\" but the established thread record says they broke their silence in ch-081 to second the Lich Cardinal's ultimatum. They cannot have remained without comment through the preceding twelve chapters. | continuity badger redispatch #2: The tardigrade-cardinals are described as having been \"waiting twelve silent chapters\" before they \"second\" the ultimatum and call the vote. Continuity records that they already broke an eight-chapter silence in ch-081 to second the Lich Cardinal's ultimatum. Their ch-082 intervention must be framed as a further escalation or new action, not as the long-silent initial seconding repeated from ch-081.",
+      "costUsd": 0.533174
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-26: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Filed Among the Furniture\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.690093
+}
