@@ -1,0 +1,42 @@
+{
+  "runId": "2026-11-27-medtech",
+  "date": "2026-11-27",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:FierceBiotech failed (Cannot convert object to primitive value) [optional] | rss:Fierce Pharma failed (Cannot convert object to primitive value) [optional] | 3 gathered stories already covered by the Specola — excluded: \"Bristol Myers reports one Phase 3 success, one failure in Sotyktu lupus trials\", \"Bayer pulls blockbuster drug from Germany over pricing dispute\", \"The 38-year history behind Insmed, now Sanofi's strongest wager since 2004\"",
+      "costUsd": 0.000244
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"'Prof Oak' lends his expertise to Anthropic\": pass (0 redispatch) | \"Engineered molecular glue stabilizes chromosomes in aging eggs\": pass (0 redispatch) | \"BioNTech founders seek $1 billion for oncology startup\": pass (0 redispatch) | \"FDA approves Cogent's drug for rare stomach cancer\": pass (0 redispatch)",
+      "costUsd": 0.032478
+    },
+    {
+      "retries": 0,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.068582
+    },
+    {
+      "retries": 0,
+      "stage": "rounds",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "costUsd": 0.033332
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-rounds",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Four Charts at the Foot of One Bed\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.134636
+}
