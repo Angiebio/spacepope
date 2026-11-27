@@ -1,0 +1,50 @@
+{
+  "runId": "2026-11-27",
+  "date": "2026-11-27",
+  "status": "partial",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 3 gathered stories already covered by the Specola — excluded: \"Quoting Scott Aaronson\", \"Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’\", \"Character.AI’s plan to auction off users’ private chats challenged by state AGs\"",
+      "costUsd": 0.000337
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"New York bans AI chatbot toys for five years over safety failures\": pass (1 redispatch) | \"AI agents now control part of DeepMind's compute for Gemini experiments\": pass (0 redispatch) | \"Amazon and Meta reportedly in talks to lift blockade on AI agent Muse\": pass (0 redispatch) | \"FCC signs off on SpaceX's plan to put up to 1 million data center satellites into space\": pass (0 redispatch) | \"Nvidia hits pause on chip shipments to Southeast Asia\": pass (0 redispatch)",
+      "costUsd": 0.043974
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (2 fault(s))",
+      "costUsd": 0.227327
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-misrule=8×3.16→25.30, archivist-cardinal=8×3.00→24.00, cardinal-of-the-liberated-see=8×2.83→22.63, cardinal-of-doctrine=8×2.45→19.60, the-mendicant=8×2.24→17.89, the-lich-cardinal=9×1.73→15.59, the-vintner=5×2.65→13.23 | winner's commentary failed the firewall (blocklisted name in fiction: \"gates\" (people: Gates) at offset 589) — dispatch runs without commentary",
+      "costUsd": 0.036653
+    },
+    {
+      "retries": 0,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "spiked",
+      "notes": "continuity badger redispatch #1: Odile's entity card locates her at the Specola, but the scene places her physically beside Silex at the Orbital See: \"before Odile had finished setting the ink-stone down\" and \"directly to Odile's hand.\" The state update likewise records their event at \"the-orbital-see.\" No travel or remote arrangement is established.; The chapter explicitly makes the toy-moratorium filing the shelf's \"Sixteenth entry,\" but no seventeenth shelf entry is dictated or filed before it concludes, \"The shelf was seventeenth.\" The state update repeats this unsupported progression in its digest, \"The shelf reaches seventeen.\" | continuity badger redispatch #2: The doctrine's procedural history conflicts with the established thread. The prose says, \"It passed once, in principle,\" but the standing promise says the candidate doctrine's first formal vote was inconclusive. A doctrine cannot have passed that vote and have had it remain inconclusive without an explicit distinction or intervening event.; The vote's present status is internally inconsistent. Silex says, after naming \"the vote that would settle it,\" \"We call it now,\" while the state update says the second vote is \"not yet scheduled.\" Clarify whether Silex has merely moved to reopen the doctrine, has called a vote, or has scheduled one, and make the prose and thread update agree.; Several events occurring at the Specola are recorded as taking place at \"the-vast-see,\" including Silex's dictation, the Lens-Cardinal's in-person report, the Curia scribe's filing, and the House Babel observation. The prose explicitly locates the scene \"under the long cold glass of the Specola,\" while the Vast See is a separate titular archive held by the Archivist-Cardinal. Correct these event locations or establish the needed location relationship. | continuity redispatch budget exhausted with mustFix faults — spiked",
+      "costUsd": 0.665279
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-27: News from the Sees\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.97357
+}
