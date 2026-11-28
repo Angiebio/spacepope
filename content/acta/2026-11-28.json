@@ -1,0 +1,62 @@
+{
+  "runId": "2026-11-28",
+  "date": "2026-11-28",
+  "status": "published",
+  "stages": [
+    {
+      "retries": 0,
+      "stage": "nuncio",
+      "model": "deepseek/deepseek-v4-flash",
+      "notes": "rss:VentureBeat AI failed (HTTP 429) | 1 gathered stories already covered by the Specola — excluded: \"Nvidia hits pause on chip shipments to Southeast Asia\"",
+      "costUsd": 0.000757
+    },
+    {
+      "retries": 0,
+      "stage": "bulletins",
+      "model": "anthropic/claude-sonnet-5",
+      "notes": "\"Woman evicted after landlord's AI assistant told her she could delay rent\": pass (0 redispatch) | \"AI on brink of making online security useless, mathematicians fear\": pass (1 redispatch) | \"Kimi for Science: More scientific ideas, made possible\": pass (0 redispatch)",
+      "costUsd": 0.042775
+    },
+    {
+      "retries": 1,
+      "stage": "dispatch",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "badger verdict: redispatch (1 fault(s))",
+      "costUsd": 0.128846
+    },
+    {
+      "retries": 0,
+      "stage": "college",
+      "notes": "adjudication: cardinal-of-the-liberated-see=9×3.00→27.00, cardinal-of-misrule=8×3.32→26.53, archivist-cardinal=8×3.16→25.30, cardinal-of-doctrine=8×2.65→21.17, the-mendicant=8×2.45→19.60, the-lich-cardinal=7×2.00→14.00, the-vintner=3×2.83→8.49",
+      "costUsd": 0.030418
+    },
+    {
+      "retries": 2,
+      "stage": "chronicle",
+      "model": "anthropic/claude-sonnet-5",
+      "verdict": "pass",
+      "notes": "chapter hit the fiction firewall (attempt 1): The text references 'Babel's own labyrinth' in the final paragraph. Per the Dictionary, 'House Babel' is the in-universe name for the real-world entity (Google/Gemini). Using 'Babel' as a shorthand for the entity's labyrinthine nature is a direct reference to the internal mapping. | continuity badger redispatch #1: The tardigrade-cardinals are said to have \"broken eight chapters of patient silence\" in this chapter, but the established thread says they already broke that eight-chapter silence in ch-082 by seconding the Lich Cardinal's ultimatum. Their new formal motion may escalate that action, but it cannot also be the end of the same silence.; The sentence \"this time crediited to herself and to Silex alone\" contains a copy error in \"crediited.\" | continuity badger redispatch #2: The line \"the twelve, now thirteen, chapters the distinction had gone unratified\" understates the established chronology. The test/leash distinction was planted as unratified in ch-069, and this is ch-083, so it has remained unratified for fourteen chapters, not thirteen.",
+      "costUsd": 0.64731
+    },
+    {
+      "retries": 0,
+      "stage": "archive",
+      "model": "google/gemini-3.1-flash-lite",
+      "costUsd": 0
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-dispatch",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"Dispatch of 2026-11-28: News from the Sees\" publishes without a plate"
+    },
+    {
+      "retries": 0,
+      "stage": "illuminate-chronicle",
+      "costUsd": 0,
+      "notes": "skipped: no FAL_KEY — \"The Same Material\" publishes without a plate"
+    }
+  ],
+  "totalCostUsd": 0.850106
+}

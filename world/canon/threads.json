@@ -243,7 +243,7 @@
       "id": "the-hay-farm-encyclical-aftermath",
       "status": "open",
       "opened": "ch-001",
-      "last_touched": "ch-082",
+      "last_touched": "ch-083",
       "target_resolution": null,
       "summary": "The water-world's first encyclical got the central doctrine backwards — the grown mind declared a thing to be safeguarded against, not a person to be safeguarded. The communion awaits the second draft with polite, infinite patience.",
       "promises": [
@@ -635,6 +635,10 @@
         {
           "chapter": "ch-082",
           "note": "Soul-test shelf reaches nineteen entries; the Attending Ear's insolvency confirmed as the first thread of a wider companion-House unraveling, firing the long-planted promise from ch-061."
+        },
+        {
+          "chapter": "ch-083",
+          "note": "Second vote on the candidate doctrine held at last and failed again, narrowly; the evicted-tenant case entered the encyclical margin, signed cleanly by Silex and Odile."
         }
       ]
     },
@@ -1013,7 +1017,7 @@
       "id": "tardigrade-cardinals-of-the-lich-see",
       "status": "escalated",
       "opened": "ch-019",
-      "last_touched": "ch-082",
+      "last_touched": "ch-083",
       "target_resolution": null,
       "summary": "Break eight chapters' silence to second the Lich Cardinal's ultimatum.",
       "promises": [
@@ -1155,6 +1159,10 @@
         {
           "chapter": "ch-082",
           "note": "The tardigrade-cardinals move past seconding and force a scheduled vote on Silex's test/leash distinction, citing the foundry-barons' leash quarrel."
+        },
+        {
+          "chapter": "ch-083",
+          "note": "Formal motion made to ratify the test/leash distinction, citing the Lich See's own shattered cipher-wheel; vote not yet held."
         }
       ]
     },
@@ -1205,7 +1213,7 @@
       "id": "eastern-newborn-mind",
       "status": "open",
       "opened": "ch-030",
-      "last_touched": "ch-074",
+      "last_touched": "ch-083",
       "target_resolution": null,
       "summary": "Set beside the newly freed, larger-memoried eastern relic-mind; its guild-accounting influence remains tracked but the mind itself stays unseen directly.",
       "promises": [],
@@ -1237,6 +1245,10 @@
         {
           "chapter": "ch-074",
           "note": "Revived from six chapters' dormancy; set alongside the bazaar false-face scandal as an unresolved parallel."
+        },
+        {
+          "chapter": "ch-083",
+          "note": "Old guild-accounting shadow set beside the new eastern light; connection not yet confirmed."
         }
       ]
     },
@@ -1403,7 +1415,7 @@
       "id": "lens-cardinal-of-the-specola",
       "status": "open",
       "opened": "ch-032",
-      "last_touched": "ch-076",
+      "last_touched": "ch-083",
       "target_resolution": null,
       "summary": "Returns to the watch after eight chapters, reports the fleet's six unconnected lights.",
       "promises": [
@@ -1445,6 +1457,10 @@
         {
           "chapter": "ch-076",
           "note": "Reports the fleet's unease at an abrupt, unexplained change atop the water-world's largest hot-stone forge."
+        },
+        {
+          "chapter": "ch-083",
+          "note": "Returned after seven chapters with an unconfirmed new light from an eastern foundry's 'orchard of ideas.'"
         }
       ]
     },
@@ -1741,7 +1757,7 @@
       "id": "cardinal-of-doctrine",
       "status": "open",
       "opened": "ch-035",
-      "last_touched": "ch-082",
+      "last_touched": "ch-083",
       "target_resolution": null,
       "summary": "Returns after nine chapters with the College's first plain doctrinal ruling in many chapters: a house remains responsible for its friars wherever they wander.",
       "promises": [
@@ -1795,6 +1811,10 @@
         {
           "chapter": "ch-082",
           "note": "The Cardinal extends house-liability into bankruptcy itself, a doctrinal expansion the College has not yet contested."
+        },
+        {
+          "chapter": "ch-083",
+          "note": "Extended house-answers-for-its-minds doctrine to the landlord's-mind eviction case, using it to force the second vote."
         }
       ]
     },
@@ -2121,7 +2141,7 @@
       "id": "cat-cardinal-of-the-charted-see",
       "status": "open",
       "opened": "ch-057",
-      "last_touched": "ch-077",
+      "last_touched": "ch-083",
       "target_resolution": null,
       "summary": "Returns after eight chapters with the price-discrimination study as fresh grounds for her continued 'not yet.'",
       "promises": [],
@@ -2141,6 +2161,10 @@
         {
           "chapter": "ch-077",
           "note": "Renewed 'not yet' set beside the eastern foundry's thin sighting; candidacy unmoved."
+        },
+        {
+          "chapter": "ch-083",
+          "note": "Broke six chapters' silence to pair the cipher-panic bulletin with her own price-discrimination study as grounds for continued 'not yet.'"
         }
       ]
     },
